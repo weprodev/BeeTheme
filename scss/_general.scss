@@ -1,0 +1,183 @@
+/*========================================================================================
+*********   PUBLIC STYLES 
+*******      
+*****       
+***         
+*/
+
+    html{
+        direction       : $dir;
+        overflow-x      : hidden;
+    }
+
+    body{
+        overflow-x      : hidden;
+
+    }
+
+    * , *::after , *::before {
+        outline         : none;
+    }
+
+    .center-block{
+        margin : 0 auto;
+    }
+    
+
+    .clearfix{
+        clear : both;
+    }
+    
+    a{
+        text-decoration : none;
+        color           : $colorLink;
+        transition      : $transitionLink; 
+
+        &:hover{
+            background  : $hoverBgLink;
+            color       : $hoverColorLink;
+        }
+    }
+
+    .float-left{
+        float : $left !important;
+    }
+
+    .float-right {
+        float : $right !important;
+    }
+
+    .text-right{
+        text-align  : $right;
+    }
+
+    .rext-left{
+        text-align  : $left;
+    }
+
+    .text-center {
+        text-align  : center;
+    }    
+
+    .block{
+        display: block;
+    }
+
+    .inline-block{
+        display : inline-block;
+    }
+
+    .hidden{
+        display: none;
+    }
+
+    ul{
+        margin          : 0;
+        padding         : 0;
+        list-style-type : none;
+    }
+
+    select{
+    border          : 1px solid rgba(0, 0, 0, 0.1);
+    background      : transparent;
+    font-size       : 0.75em;
+    padding         : 0px 10px;
+    border-radius   : 3px;
+    outline         : none;
+    margin          : 0 5px; 
+    transition      : all 0.3s; 
+
+        &:focus{
+            transition  : all 0.3s;
+            border      : 1px solid rgba(0, 0, 0, 0.5); 
+        }
+        
+    }//select
+
+    .displayOnSmallDevice{
+        display : none;
+
+        @include tablet{
+            display : block;
+        }
+    }
+
+    input {
+        padding         : 1em;
+        border          : 1px solid rgba(0, 0, 0, 0.1);
+        border-radius   : 3px;
+        font-size       : 0.9em;
+        transition      : all 0.6s;
+
+        &[type="submit"]{
+            background  : $secondColrSite;
+            padding     : 1em 1.5em;
+            border      : 1px solid $WHITE;
+            color       : $WHITE;
+            
+            &:hover{
+                cursor      : pointer;
+                background  : darken($color:  $secondColrSite , $amount: 10%);
+            }
+
+        }//type=submit
+    }
+
+    // 
+
+    .form{
+
+
+
+    }
+
+
+
+    a.btn{
+        display         : inline-block; 
+        margin          : 2em 0 1em;
+        padding         : 1em 2em;
+        transition      : all 0.7s;
+        background      : $mainColorSite;
+        color           : $WHITE;
+        font-size       : 1.2rem;
+        border-radius   : 3px;
+        text-align      : center;
+        width           : 60%;
+
+        &.redBtn{
+            background: $ALIZARIN;
+
+            &:hover{
+                background      : $POMEGRANATE;
+                color           : $WHITE;
+            }
+        }
+
+        /*--------------------------------
+        ***   
+        **   RESPONSIVE SECTION
+        */
+
+        @include laptop{
+            width  : 70%;
+        }
+        
+        @include mobile {
+            width  : 100%;
+        }
+        
+    }//a.btn
+
+    /*--------------------------------
+    ***   
+    **   RESPONSIVE SECTION
+    */
+
+    @include led4k{
+        
+        html,body{
+            font-size: 1.2em;
+        }
+
+    }
