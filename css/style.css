@@ -1422,7 +1422,7 @@ body {
 body header {
   background-color: white;
   width: 100vw;
-  /* height: 5em; */
+  height: 5em;
   /* border-bottom: 1px solid #ecf0f1; */
   /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
   /* position: fixed; */
@@ -1660,8 +1660,9 @@ body header .search-active .search-active-content .icon-searchh:hover {
 body header .section-responsive {
   display: none;
   position: absolute;
-  top: 0.8em;
+  /* top: 0.8em; */
   right: 2.5em;
+  padding-top: 0.6em;
   color: #59468c;
   font-size: 2em;
   transition: all 0.5s;

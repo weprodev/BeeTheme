@@ -32,9 +32,9 @@
     </head>
 
     <body>
-        <div class="blog">
+    <div class="blog">
             <div class="section-header">
-                <div class="section-contant-header">
+           <div class="section-contant-header">
                 <div class="select-lang">
                      <span class="icon-globe1 icon"></span>
                     <ul class="menu">
@@ -57,9 +57,10 @@
                         <button class="button2"><a href="#">Free Template</a></button>
                     </div>
                 </div><!--section login-->
-                </div><!--section content header-->
-            </div><!--section header-->
+           </div><!--section content header-->
+        </div><!--section header-->
 
+        <!-- <div class="home-page--weprodev"> -->
             <!--------------------------------- START HEADER SECTION --------------------------->
             
 
@@ -108,7 +109,7 @@
             </header>
 
             <!--------------------------------- END HEADER SECTION --------------------------->
-        </div> <!-- </div> -->
+        <!-- </div> -->
         <script src="js/jquery.min.js"></script>
         <script src="js/main.js"></script>
         <script src="js/tiny-slider.js"></script>
@@ -119,9 +120,9 @@
                 var sticky = navbar.offsetTop;
     
             function myFunction() {
-                if (window.pageYOffset >= sticky) {
+                if (window.pageYOffset > sticky) {
                     navbar.classList.add("sticky");
-                    $(".content").css("padding-top","3em");
+                    $(".content").css("padding-top","5.5em");
                 }
                 else {
                     navbar.classList.remove("sticky");
@@ -183,7 +184,8 @@
             });
     
         </script>
-    </body>
+
+    </div>
         
         
         
