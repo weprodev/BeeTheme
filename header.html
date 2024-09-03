@@ -120,9 +120,9 @@
                 var sticky = navbar.offsetTop;
     
             function myFunction() {
-                if (window.pageYOffset > sticky) {
+                if (window.pageYOffset >= sticky) {
                     navbar.classList.add("sticky");
-                    $(".content").css("padding-top","0.5em");
+                    $(".content").css("padding-top","3em");
                 }
                 else {
                     navbar.classList.remove("sticky");
