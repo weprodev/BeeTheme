@@ -2203,7 +2203,7 @@ body .content .latest-posts-section .card-for-latest .m-l-r {
   }
 }
 .auth-form .section-login {
-  width: 50%;
+  width: 70%;
   margin: 0 auto;
   background-color: white;
   border-radius: 6%;
@@ -2223,8 +2223,15 @@ body .content .latest-posts-section .card-for-latest .m-l-r {
   display: flex;
   justify-content: center;
 }
+@media screen and (max-width: 64em) {
+  .auth-form .section-login spam {
+    
+    padding: 0.5em;
+    font-size: 2em;
+  }
+}
 .auth-form .section-login .section-label-input {
-  width: 50%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2234,7 +2241,7 @@ body .content .latest-posts-section .card-for-latest .m-l-r {
 .auth-form .section-login .section-label-input input {
   border: 1px solid black;
   border: 1px solid rgba(0, 0, 0, 0.38);
-  width: 80%;
+  width: 90%;
   border-radius: 30px;
   transition: all 0.7s;
 }
@@ -2247,6 +2254,12 @@ body .content .latest-posts-section .card-for-latest .m-l-r {
   display: flex;
   margin: 1em 0em;
 }
+@media screen and (max-width: 64em) {
+  .auth-form .section-login .section-label-input label {
+    font-size: 15px;
+  }
+}
+
 .auth-form .section-login .section-label-input .showpass {
   display: block;
   position: relative;
@@ -2306,7 +2319,7 @@ body .content .latest-posts-section .card-for-latest .m-l-r {
 }
 .auth-form .section-login .section-label-input .button {
   background: #FF5B32;
-  margin-top: 2em;
+  margin-top: 1em;
   border: 1px solid transparent;
   transition: all 0.5s;
 }
