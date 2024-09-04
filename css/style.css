@@ -3293,7 +3293,9 @@ body .content .latest-posts-section .card-for-latest .m-l-r {
 
 .basket {
   width: 100%;
-  z-index: -1;
+  height: 100vh;
+  overflow: hidden;
+  /* z-index: -1; */
 }
 .basket .section-header {
   width: 100%;
@@ -3329,7 +3331,7 @@ body .content .latest-posts-section .card-for-latest .m-l-r {
 .basket .content-basket h2 {
   text-align: center;
   font-size: 2em;
-  margin: 1em 0em 1.5em;
+  margin-top: 1em;
 }
 @media screen and (max-width: 40em) {
   .basket .content-basket h2 {
@@ -3543,7 +3545,7 @@ body .content .latest-posts-section .card-for-latest .m-l-r {
   align-items: center;
   flex-direction: column;
   margin: 0 auto;
-  width: 47%;
+  width: 50%;
   text-align: left;
   margin-bottom: 3em;
   /* When the checkbox is checked, add a blue background */
@@ -5162,8 +5164,8 @@ body .content .latest-posts-section .card-for-latest .m-l-r {
 
 .btn {
   text-align: center;
-  margin-top: 7em;
-  margin-bottom: 3em;
+  /* margin-top: 7em; */
+  margin: 2.5em;
 }
 .btn a {
   border-radius: 3em;
