@@ -2187,6 +2187,7 @@ body .content .latest-posts-section .card-for-latest .m-l-r {
 */
 .auth-form {
   width: 100%;
+  height: 100vh;
   position: relative;
   overflow: hidden;
   display: flex;
