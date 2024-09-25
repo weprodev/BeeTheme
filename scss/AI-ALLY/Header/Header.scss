@@ -1,0 +1,73 @@
+header {
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    position: relative;
+
+    .center-header ul {
+      display: flex;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+    }
+
+    .left-haeder {
+      display: flex;
+      align-items: center;
+
+      .logo {
+        position: relative;
+      }
+
+      p {
+        margin-left: 10px;
+      }
+    }
+
+    .right-header {
+      left: -3rem;
+      position: relative;
+      button {
+        padding: 0.5rem 1rem;
+      }
+    }
+  }
+
+@include mobile {
+  .row {
+    flex-direction: column;
+    align-items: center;
+
+    .center-header ul {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+}
+
+@include tablet {
+  .row {
+    .center-header ul {
+      gap: 10px;
+    }
+
+    .right-header {
+      button {
+        padding: 0.4rem 0.8rem;
+      }
+    }
+  }
+}
+
+@include laptop {
+  .row {
+    width: 100%;
+    .center-header ul {
+      gap: 15px;
+    }
+  }
+}
+}
