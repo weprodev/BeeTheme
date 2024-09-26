@@ -1,0 +1,170 @@
+header {
+  background-color: rgb(255, 255, 255);
+  width: 100vw;
+  height: 5.5em;
+  border-bottom: 1px solid rgb(236, 240, 241);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  z-index: 5000;
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 75rem;
+    top: 1rem;
+    position: relative;
+    left: 1rem;
+
+    .center-header {
+      ul {
+        display: flex;
+        gap: 20px;
+        padding: 0px;
+        margin: 0px;
+        li a:hover {
+          background-color: none;
+          color: $GREEN-BUTTON-BASKET;
+        }
+      }
+    }
+
+    .left-haeder {
+      display: flex;
+
+      img {
+        position: relative !important;
+      }
+    }
+  }
+
+  @include mobile {
+    .row {
+      flex-direction: column;
+      align-items: center;
+
+      .center-header ul {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  }
+
+  @include tablet {
+    .row {
+      .center-header ul {
+        gap: 10px;
+      }
+
+      .right-header {
+        button {
+          padding: 0.4rem 0.8rem;
+        }
+      }
+    }
+  }
+
+  @include laptop {
+    .row {
+      width: 100%;
+      .center-header ul {
+        gap: 15px;
+      }
+    }
+  }
+}
+
+.heroSection {
+  width: 100%;
+  height: 42rem;
+  background-color: $Dark_Gray;
+  border-radius: 3rem;
+  color: $WHITE;
+  display: flex;
+
+  .fas {
+    position: relative;
+    top: 2px;
+  }
+
+  .heroContent {
+    width: 45%;
+    left: 10rem;
+    position: relative;
+    height: 29rem;
+    top: 9rem;
+
+    h1 {
+      max-width: 70%;
+      font-size: 3rem;
+    }
+
+    p {
+      max-width: 65%;
+    }
+
+    .getTheApp {
+      width: 10rem;
+      height: 2rem;
+      border: none;
+      border-radius: 5px;
+      background: lightgreen;
+    }
+
+    .appStatus {
+      display: flex;
+      gap: 2rem;
+
+      .ratingInfo,
+      .userCount {
+        .statNumber {
+          font-size: 2rem;
+          font-weight: bold;
+          height: 3rem;
+        }
+
+        .statText {
+          font-size: 20px;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  .rightSection {
+    width: 25%;
+    position: relative;
+    left: 10rem;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      background: #4d4d4d;
+      border-radius: 30px;
+      box-shadow: 0rem 0rem 24rem #dbdbdb;
+      top: 5rem;
+      position: relative;
+    }
+  }
+
+  .students {
+    .paragraphs {
+      display: flex;
+
+      p {
+        max-width: 28%;
+      }
+    }
+  }
+}
+
+.right-header {
+  .signInBtn {
+    width: 10rem;
+    height: 2rem;
+    border: none;
+    border-radius: 5px;
+    background: lightgreen;
+    cursor: pointer;
+  }
+}
