@@ -10,16 +10,24 @@
 	**	 COMPASS , SUSY , CSS3 , CLEARFIX
 	*/
 
-	// @import "compass";
-	// @import "compass/reset";
-	// @import "compass/css3";
-	// @import "compass/utilities/general/clearfix";
-
-	
-
 	.container{
 		width : 90%;
 	}
+
+	#container{
+		position: absolute;
+		width: 97%;
+		left: 1rem;
+	}
+
+	.spacer8 {
+		margin-top: 8rem;
+	}
+	  
+	.spacer2 {
+		margin-top: 2rem;
+	}
+	  
 
 /*========================================================================================*\
 *----------------------------          MEDIA QUERY              ----------------------------        

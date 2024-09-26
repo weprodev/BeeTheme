@@ -4,27 +4,103 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" media="all" />
-    <title>Document</title>
+    <title>AI ALLY</title>
   </head>
   <body>
-    <header>
-      <div class="row">
-        <div class="left-haeder">
-          <img src="img/Ninja Turtles icon.svg" class="logo" />
-          <p>AI ALLY</p>
+    <div class="header">
+      <nav>
+        <ul class="sidebar">
+          <li onclick="closeSidebar()">
+            <a href="">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="26px"
+                viewBox="0 -960 960 960"
+                width="26px"
+                fill="rgb(0 0 0)"
+              >
+                <path
+                  d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">Log in</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">AI ALLY</a></li>
+          <li class="hideOnMobile"><a href="#">Home</a></li>
+          <li class="hideOnMobile"><a href="#">Features</a></li>
+          <li class="hideOnMobile"><a href="#">Pricing</a></li>
+          <li class="hideOnMobile"><a href="#">Testimonials</a></li>
+          <li class="hideOnMobile"><a href="#">Log in</a></li>
+          <li class="menu-icon" onclick="showSidebar()">
+            <a href="#">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="26px"
+                viewBox="0 -960 960 960"
+                width="26px"
+                fill="rgb(0 0 0)"
+              >
+                <path
+                  d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div id="container">
+      <div class="heroSection spacer2">
+        <div class="heroContent">
+          <h1>Unleash the full potential of AI</h1>
+          <p class="spacer2">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus
+            nostrum vitae doloremque corporis ex distinctio architecto in
+            incidunt ut aspernatur soluta, nobis enim pariatur quidem odio
+            aliquam nihil, quae error.
+          </p>
+
+          <button class="getTheApp spacer2">
+            Get the app <i class="fas fa-arrow-right"></i>
+          </button>
+          more...
+
+          <div class="appStatus spacer2R">
+            <div class="ratingInfo">
+              <p class="statNumber">4.8</p>
+              <p class="statText">Rating on AppStore</p>
+            </div>
+            <div class="userCount">
+              <p class="statNumber">700k+</p>
+              <p class="statText">Active users</p>
+            </div>
+          </div>
         </div>
-        <div class="center-header">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Testimonials</a></li>
-          </ul>
-        </div>
-        <div class="right-header">
-          <button class="signInBtn">sign in</button>
+
+        <div class="rightSection">
+          <img src="img/ai-ally.png" alt="" />
         </div>
       </div>
-    </header>
+    </div>
+
+    <script>
+      function showSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "flex";
+      }
+
+      function closeSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "none";
+      }
+    </script>
   </body>
 </html>

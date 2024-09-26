@@ -1,0 +1,187 @@
+.header {
+  nav {
+    background-color: $WHITE;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 1);
+
+    ul {
+      width: 100%;
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    li {
+      height: 50px;
+    }
+
+    a {
+      height: 100%;
+      padding: 0 30px;
+      display: flex;
+      align-items: center;
+      color: $BLACK;
+    }
+
+    a:hover {
+      background-color: #f0f0f0;
+    }
+
+    & li:first-child {
+      margin-right: auto;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100vh;
+      width: 250px;
+      z-index: 13;
+      backdrop-filter: blur(10px);
+      background-color: rgba(255, 255, 255, 0.2);
+      box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+
+      & li {
+        width: 100%;
+      }
+
+      & a {
+        width: 100%;
+      }
+    }
+
+    .menu-icon {
+      display: none;
+    }
+
+    @include mini_mobile {
+      .sidebar {
+        width: 100%;
+      }
+
+      .menu-icon {
+        display: block;
+      }
+    }
+
+    @include retinaMobile {
+      .hideOnMobile {
+        display: none;
+      }
+
+      .menu-icon {
+        display: block;
+      }
+    }
+
+    @include mobile {
+      .hideOnMobile {
+        display: none;
+      }
+
+      .menu-icon {
+        display: block;
+      }
+    }
+  }
+}
+
+.heroSection {
+  width: 100%;
+  height: 42rem;
+  background-color: $Dark_Gray;
+  border-radius: 3rem;
+  color: $WHITE;
+  display: flex;
+
+  .fas {
+    position: relative;
+    top: 2px;
+  }
+
+  .heroContent {
+    width: 45%;
+    left: 10rem;
+    position: relative;
+    height: 29rem;
+    top: 9rem;
+
+    h1 {
+      max-width: 70%;
+      font-size: 3rem;
+    }
+
+    p {
+      max-width: 65%;
+    }
+
+    .getTheApp {
+      width: 10rem;
+      height: 2rem;
+      border: none;
+      border-radius: 5px;
+      background: lightgreen;
+    }
+
+    .appStatus {
+      display: flex;
+      gap: 2rem;
+
+      .ratingInfo,
+      .userCount {
+        .statNumber {
+          font-size: 2rem;
+          font-weight: bold;
+          height: 3rem;
+        }
+
+        .statText {
+          font-size: 20px;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  .rightSection {
+    width: 25%;
+    position: relative;
+    left: 10rem;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      background: #4d4d4d;
+      border-radius: 30px;
+      box-shadow: 0rem 0rem 24rem #dbdbdb;
+      top: 5rem;
+      position: relative;
+    }
+  }
+
+  .students {
+    .paragraphs {
+      display: flex;
+
+      p {
+        max-width: 28%;
+      }
+    }
+  }
+}
+
+.right-header {
+  .signInBtn {
+    width: 10rem;
+    height: 2rem;
+    border: none;
+    border-radius: 5px;
+    background: lightgreen;
+    cursor: pointer;
+  }
+}
