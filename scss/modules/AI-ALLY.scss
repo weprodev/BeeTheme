@@ -109,7 +109,7 @@
     left: 10rem;
     position: relative;
     height: 29rem;
-    top: 9rem;
+    top: 5rem;
 
     h1 {
       max-width: 70%;
@@ -175,13 +175,74 @@
   }
 }
 
-.right-header {
-  .signInBtn {
-    width: 10rem;
-    height: 2rem;
+.different-destinations {
+  .intro-text {
+    display: flex;
+    gap: 7rem;
+
+    p {
+      max-width: 25%;
+
+      svg {
+        top: 0.3rem;
+        position: relative;
+      }
+    }
+  }
+
+  .target-groups {
+    display: flex;
+    justify-content: space-between;
+
+    .group-item {
+      position: relative;
+      width: 24rem;
+      display: inline-block;
+      background-color: $lightGrayTransparent;
+      border-radius: 30px;
+
+      h3 {
+        left: 1rem;
+        position: relative;
+      }
+
+      p {
+        left: 1rem;
+        position: relative;
+        max-width: 90%;
+      }
+
+      img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 1.8rem;
+        height: 20rem;
+      }
+
+      .cta-btn {
+        position: absolute;
+        top: 10px;
+        left: 20%;
+        transform: translateX(-50%);
+        padding: 10px 20px;
+        background-color: $semiTransparentWhite;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        z-index: 10;
+      }
+    }
+  }
+
+  .special-cta-btn {
+    width: 20rem;
+    height: 3rem;
     border: none;
-    border-radius: 5px;
-    background: lightgreen;
+    border-radius: 10px;
+    background: $GREEN-BUTTON-BASKET;
+    position: relative;
+    left: 26rem;
     cursor: pointer;
   }
 }

@@ -5241,7 +5241,7 @@ body .content .latest-posts-section .card-for-latest .m-l-r {
   left: 10rem;
   position: relative;
   height: 29rem;
-  top: 9rem;
+  top: 5rem;
 }
 .heroSection .heroContent h1 {
   max-width: 70%;
@@ -5293,12 +5293,64 @@ body .content .latest-posts-section .card-for-latest .m-l-r {
   max-width: 28%;
 }
 
-.right-header .signInBtn {
-  width: 10rem;
-  height: 2rem;
+.different-destinations .intro-text {
+  display: flex;
+  gap: 7rem;
+}
+.different-destinations .intro-text p {
+  max-width: 25%;
+}
+.different-destinations .intro-text p svg {
+  top: 0.3rem;
+  position: relative;
+}
+.different-destinations .target-groups {
+  display: flex;
+  justify-content: space-between;
+}
+.different-destinations .target-groups .group-item {
+  position: relative;
+  width: 24rem;
+  display: inline-block;
+  background-color: rgba(235, 235, 235, 0.8);
+  border-radius: 30px;
+}
+.different-destinations .target-groups .group-item h3 {
+  left: 1rem;
+  position: relative;
+}
+.different-destinations .target-groups .group-item p {
+  left: 1rem;
+  position: relative;
+  max-width: 90%;
+}
+.different-destinations .target-groups .group-item img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1.8rem;
+  height: 20rem;
+}
+.different-destinations .target-groups .group-item .cta-btn {
+  position: absolute;
+  top: 10px;
+  left: 20%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.8);
   border: none;
   border-radius: 5px;
-  background: lightgreen;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 10;
+}
+.different-destinations .special-cta-btn {
+  width: 20rem;
+  height: 3rem;
+  border: none;
+  border-radius: 10px;
+  background: #1dc973;
+  position: relative;
+  left: 26rem;
   cursor: pointer;
 }
 
