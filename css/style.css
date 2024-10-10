@@ -5421,4 +5421,84 @@ body .content .latest-posts-section .card-for-latest .m-l-r {
   align-items: center;
 }
 
+/*--------------------------------
+***  
+**   appLand
+*/
+body {
+  font-family: "Poppins", sans-serif;
+}
+body a:hover {
+  background: bottom;
+}
+body .header .mainHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+body .header .mainHeader nav ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  list-style: none;
+}
+body .header .mainHeader nav ul li {
+  margin: 0 15px;
+}
+body .header .mainHeader nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+body .header .hiddenHeader {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 13;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: none;
+}
+body .header .hiddenHeader .logo {
+  height: 2rem;
+  width: 100%;
+}
+body .header .hiddenHeader nav {
+  top: 2rem;
+  position: relative;
+}
+body .header .hiddenHeader nav ul li {
+  height: 3rem;
+  width: 100%;
+}
+body .header .ctaButton button {
+  width: 7rem;
+  height: 3rem;
+  background: #54ea54;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+body .header .ctaButton button:hover {
+  transition: 0.3s ease-in-out;
+  background: #47c647;
+}
+body .header .hideOnLaptop {
+  display: none;
+}
+@media screen and (max-width: 40em) {
+  body .header .hideOnMobile {
+    display: none;
+  }
+}
+@media screen and (max-width: 40em) {
+  body .header .hideOnLaptop {
+    display: block;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
