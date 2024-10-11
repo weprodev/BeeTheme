@@ -69,7 +69,19 @@
 
     $ShadowBlack    : rgb(024, 026, 027); // #181a1b
     $VibrantGreen   : rgb(084, 234, 084); // #54ea54
+    
+    $LimeGreen      : rgb(071, 198, 071); // #47c647
+    $LightGray      : rgb(170, 170, 170); // #aaa
 
+    /*--------------------------------
+    *** SHADOW 
+    **
+    */
+
+    $SemiTransparentBlack            : rgba(000, 000, 000, 0.5);
+    $VeryLightTransparentBlack       : rgba(000, 000, 000, 0.1);
+    $SemiTransparentWhite            : rgba(255, 255, 255, 0.2);
+    
     /*--------------------------------
     *** GENERAL ATTRIBUTES 
     **
