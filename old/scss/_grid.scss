@@ -1,0 +1,73 @@
+/*========================================================================================
+*********   GRIDS COL
+*******     MEDIA QUERY 
+*****       
+***         
+*/
+.row{
+    width: 100%;
+    display: block;
+    clear: both;
+}
+$column : 12;
+$calc_percent : 100% / 12;
+$col_name : "col";
+
+// @for $i from 1 through $column {
+    
+//     .#{$col_name}-#{$i}{
+
+//         width: $i * $calc_percent;
+//         float: left;
+
+//     }
+// }
+
+@include lcd{
+    @for $i from 1 through $column {
+        
+        .#{$col_name}-xl-#{$i}{
+
+            width: $i * $calc_percent;
+            float: left;
+
+        }
+    }
+}
+
+@include laptop{
+    @for $i from 1 through $column {
+        
+        .#{$col_name}-lg-#{$i}{
+
+            width: $i * $calc_percent;
+            float: left;
+
+        }
+    }
+}
+
+@media screen and (max-width : 62em){
+    @for $i from 1 through $column {
+        
+        .#{$col_name}-md-#{$i}{
+
+            width: $i * $calc_percent;
+            float: left;
+
+        }
+    }
+}
+
+@media screen and (max-width : 47.9375em){
+    @for $i from 1 through $column {
+    
+        .#{$col_name}-sm-#{$i}{
+
+            width: $i * $calc_percent;
+            float: left;
+
+        }
+    }
+}
+

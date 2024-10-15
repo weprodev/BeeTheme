@@ -1,0 +1,103 @@
+/*========================================================================================
+*********    
+*******      
+*****       DIV PICTURE HEADER
+***         
+*/
+.picture-header{
+    width                   : 100%;
+    height                  : 37em;
+    overflow                : hidden;
+    position                : relative;
+   
+
+
+    
+    .section-pic{
+        width               : 100%;
+        height              : 37em; 
+        object-fit          : cover;
+        float               : left;
+        
+    }//section pic
+
+    .section-text{
+       width                : 30%;
+       height               : 100%;
+       position             : absolute;
+       top                  : 0%;
+       right                : 0%;
+       line-height          : 1.6em;
+       font-weight          : bold;
+       color                : white;
+       background-color     : rgba($color: #000000, $alpha: 0.7);
+       padding              : 2em 3em;
+
+       @include mobile{
+           width            : 100%;
+           padding          : 0em;
+       }
+
+        h1{
+            margin-bottom       : 0.8em;
+            font-size           : 2.4em;
+            line-height         : 1.2em;  
+           
+            @include tablet{
+                font-size       : 2em;
+            }
+            @include mobile{
+                margin          : 1em;
+                margin-bottom   : 1em;
+            }
+        }//h1
+
+        p{
+            font-size           : 1.3em;
+            line-height         : 2em;
+
+            @include led{
+                font-size       : 1.3em;
+            }
+            @include lcd{
+                font-size       : 1.2em;
+            }
+            @include laptop{
+                font-size       : 1.2em;
+            }
+            @include mini-laptop{
+                font-size       : 1.1em;
+            }
+            @include mobile{
+                font-size       : 1em;
+                margin          : 2em;
+            }
+        }//p
+        
+    }//section text
+    
+    
+    .button{
+        border              : none;
+        color               : $WHITE;  
+        position            : absolute;
+        font-size           : 1.3em;
+        font-weight         : bold;
+        padding             : 0.5em 1.7em;
+        bottom              : 3em;
+        right               : 3em;
+        background          : $mainColorWeprodev;
+        border-radius       : 6px;
+        transition          : all 0.2s;
+        cursor              : pointer;
+        &:hover{
+            background-color: rgba($color: $mainColorWeprodev, $alpha: 0.85);
+        }
+
+        @include tablet{
+            bottom          : 2em;
+            right           : 2em;
+        }
+    }//button
+
+}//picture header

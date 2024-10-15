@@ -1,0 +1,1001 @@
+/*========================================================================================
+*********    
+*******      
+*****       DIV BLOG
+***         
+*/
+.blog{
+    width                       : 100vw;
+    background                  : $WHITE;
+    a{
+        &:hover{
+            background-color    : transparent;
+            color               : $BLACK;
+        }
+    }
+   
+   .section-header{
+    width                       : 100vw;
+    height                      : 5.5em;
+    position                    : relative;
+    border-bottom               : 1px solid rgba($color: #000000, $alpha: 0.3);
+
+
+        
+        .section-contant-header{
+            display                     : flex;
+            flex-direction              : row;
+            align-items                 : center;
+            justify-content             : space-between;
+            width                       : 70%;
+            margin                      : 0 auto;
+            position                    : relative;
+            top                         : 30%;
+
+            &.cont2{
+                @include mini_laptop{
+                    width: 86%;
+                }
+            }
+
+            @include mobile{
+                width                   : 80%;
+
+            }
+            
+
+            .select-lang{
+                
+                .icon{
+                    font-size           : 1.8em;
+                    color               : $BLACK;
+                    display             : inline-block;
+                    vertical-align      : middle;
+                }
+                 &>ul{
+                    display                 : flex;
+                    display                 : inline-block;
+                    vertical-align          : middle;
+
+                    @include mini_laptop{
+                        display             : inline;
+                        background-color    : $WHITE;
+                        max-width           : 64em;
+                        position            : absolute;
+
+                    }
+                    
+                    
+                    li{
+                        list-style      : none;
+                        position        : relative;
+                        transition      : 0.5s;
+                        box-sizing      : border-box;
+                        display         : flex;
+
+                        @include mini_laptop{
+                            display             : inline;
+                            // width               : 100vw;
+                            background-color    : $WHITE;
+                        } 
+                        .icon-chevron-down{
+                            display             : flex;
+                            align-items         : center;
+                            font-size           : 1.2em;
+
+                        }
+                       
+                        @include mini_laptop {
+                            .icon-chevron-down{
+                                position        : absolute;
+                                top             : 0em;
+                                right           : -1em;
+                                font-size       : 1.7em;
+                                margin-top      : 0em;
+                                display         : block;
+                                color           : $secondColorWeprodev;
+                                z-index         : 200;
+                                border-radius   : 1em;
+                                @include tablet{
+                                    right               : 0em;
+                                }
+                            }
+                            
+                        }
+
+                        &:hover{
+                            ul{
+                                top                 : 2.1em;
+                                display             : block;
+                                z-index             : 9999;
+                                // border              : 1px solid $mainColorWeprodev;
+                                position            : absolute;
+                                box-shadow          : 0px 0px 10px 0px rgba($color: #000000, $alpha: 0.3);
+                        
+    
+                            }
+                            .l-one{
+                                color               : $mainColorWeprodev;
+                                background-color    : transparent;
+                                cursor              : pointer;
+                            }
+                            .icon-chevron-down{
+                                display             : flex;
+                                align-items         : center;
+                                color               : $mainColorWeprodev;
+    
+                            }
+                        }
+                        a{
+                            text-decoration     : none;
+                            color               : $secondColorWeprodev;
+                            font-size           : 1.1em;
+                            font-weight         : 500;
+                            display             : inline;
+                            padding             : 0.5em;
+                            padding-top         : 0.3em;
+                            padding-left        : 1em;
+                            padding-right       : 0.5em;
+                            
+                            
+                            .show{
+                                @include  tablet{
+                                    display     : none;
+                                }
+                            }
+                            
+                        }
+                       
+                        ul{
+                            background-color            : $WHITE;
+                            position                    : absolute;
+                            top                         : 5em;
+                            left                        : 0em;
+                            display                     : none;
+                            width                       : 9em;
+                            transition                  : 0.6s;
+                            margin-top                  : 0em;
+                            height                      : auto;
+                            padding                     : 0em;
+                            z-index                     : 1500;
+                            
+                            // &::before{
+                            //         content             : '';
+                            //         position            : absolute;
+                            //         top                 : -0.8em;
+                            //         right               : 4.1em;
+                            //         width               : 0;
+                            //         height              : 0;
+                            //         border-left         : 10px solid transparent;
+                            //         border-right        : 10px solid transparent;
+                            //         border-bottom       : 12px solid $mainColorWeprodev;
+
+                            //         @include tablet{
+                            //             right           : 10.7em;
+                            //         }
+                            // }
+
+                            @include mini_laptop {
+                                transition              : 0.2s;
+                                box-shadow              : none;
+                                position                : static;
+                            }
+                            li{
+                                // width                   : 13em;
+                                margin-top              : 0;
+                                padding                 : 0.5em;
+                               
+                                @include mini_laptop{
+                                     transition         : 0.3s;
+                                     display            : block;
+                                }
+                                
+                                &:hover{
+                                    .l-two{
+                                        color           : $mainColorWeprodev;
+                                        background-color: transparent;
+                                        cursor          : pointer;
+                                        .Circle{
+                                            opacity     : 1;
+                                            visibility  : visible;
+                                        }
+                                    }
+                                }
+                                a{
+                                    line-height         : 2em;
+                                    width               : 100vw;
+                                    padding-left        : 0.5em;
+                                    // padding             : 1em;
+                                }
+    
+                            }//li
+                        }//ul
+                    }//li
+                }//ul
+  
+            }//select lang
+            .section-login{
+                
+                display                 : flex;
+                flex-direction          : row;
+                align-content           : center;
+                justify-content         : center;
+                flex-flow               : wrap;
+                .search-box{
+                    margin-right        : 1em;
+                    background          : $mainColorWeprodev;
+                    height              : 40px;
+                    border-radius       : 40px;
+                    padding             : 4px;
+                    
+                  }//search box
+                .search-txt {
+                    border              : none;
+                    background          : none;
+                    outline             : none;
+                    float               : left;
+                    padding             : 0;
+                    color               : white;
+                    font-size           : 16px;
+                    transition          : 0.4s;
+                    line-height         : 40px;
+                    width               : 0px;
+                  }
+                  .search-btn {
+                    color               : $WHITE;
+                    float               : right;
+                    width               : 40px;
+                    height              : 40px;
+                    border-radius       : 50%;
+                    background          : $mainColorWeprodev;
+                    display             : flex;
+                    justify-content     : center;
+                    align-items         : center;
+                    transition          : 0.4s;
+                   
+                  }
+                  
+               
+                
+                    .click-search-txt{
+                            width           : 200px;
+                            padding         : 0 6px;
+                            @include retinaMobile{
+                                 width       : 190px;
+                             }
+                            @include mobile{
+                                width       : 8em;
+                            }
+                            @include mini-mobile{
+                                width       : 5em;
+                            }
+                        
+                    }
+                    .click-search-btn{
+                            background          : white;
+                            color               : $BLACK;
+                          
+                    }
+                  .section-button{
+                        
+                      button{
+                        background-color        : $WHITE;
+                        padding                 : 0.9em 2em;
+                        color                   : $mainColorWeprodev;
+                        border-color            : $mainColorWeprodev;
+                        border-radius           : 4px;
+                        cursor                  : pointer;
+                        border-width            : 1px;
+                        @include retinaMobile{
+                            padding             : 0.9em 1em;
+                        }
+                        @include mobile{
+                            padding             : 0.9em 1em;
+                        }
+
+                        &:hover{
+                            background-color    : rgba($color: #ff5e57, $alpha: 0.4);
+                        }
+
+                        a{
+                            color               : $mainColorWeprodev;
+                        }
+                      }
+                      .button2{
+                        background-color        :$mainColorWeprodev;
+                        padding                 : 0.9em 2em;
+                        color                   : $WHITE;
+                        border-color            : $mainColorWeprodev;
+                        border-radius           : 4px;
+                        border-width            : 1px;
+
+                        @include tablet{
+                            padding             : 0.9em 0.7em;
+                        }
+                        @include retinaMobile{
+                            display             : none;
+                        }
+                        @include mobile{
+                            display             : none;
+                        }
+                        &:hover{
+                            background-color    : rgba($color: #ff5e57, $alpha: 0.5);
+                        }
+                        
+                        a{
+                            color: $WHITE;
+                        }
+                      }
+                  }
+            }//section-login
+           
+        }//section contant header
+       
+    }//section-header
+    header{
+        background-color: $WHITE;
+        width           : 100vw;
+        height          : 5.5em;
+        border-bottom   : 1px solid $CLOUDS;
+        box-shadow      : 0px 4px 8px rgba($color: $BLACK, $alpha: 0.1);
+        position        : relative;
+        z-index         : 5000;
+        transition      : all 1s;
+        // margin-top: 5.6em;
+        .logo{
+            position: absolute;
+            left    : 13%;
+            top     : -0.5em;
+            @include retinaMobile {
+                left: 9%;
+            }
+            img{
+                max-width: 9em;
+            }
+        }
+        
+        &>ul{
+            display     : flex;
+            margin-left : auto;
+            margin-right: auto;
+            padding     : 0em;
+            max-width   : 30em;
+            height      : 88%;
+            padding-top : 0.6em;
+            @include mini_laptop{
+                display         : none;
+                background-color: $WHITE;
+                max-width       : 64em;
+                position        : absolute;
+                top             : 5.5em;
+                .last-li-menu{
+                    box-shadow  : 0px 3px 6px #ecf0f1;
+                }
+
+            }
+            
+            li{
+                list-style      : none;
+                position        : relative;
+                transition      : 0.5s;
+                box-sizing      : border-box;
+                display         : flex;
+                @include mini_laptop{
+                    display             : block;
+                    width               : 100vw;
+                    background-color    : $WHITE;
+                }   
+                .Circle{
+                    opacity             : 0;
+                    visibility          : hidden;
+                    margin-right        : 1em;
+                }
+                .icon-circle-down{
+                    display             : none;
+                }
+                @include mini_laptop {
+                    .icon-circle-down , .icon-circle-up{
+                        position        : absolute;
+                        top             : 1.3em;
+                        right           : 1.2em;
+                        font-size       : 1.7em;
+                        margin-top      : 0em;
+                        display         : block;
+                        color           : $secondColorWeprodev;
+                        z-index         : 200;
+                        border-radius   : 1em;
+                    }
+                    .icon-circle-up{
+                        background-color: $mainColorWeprodev;
+                        color           : $WHITE;
+                    }
+                }
+                &:hover{
+                    ul{
+                        top     : 4.8em;
+                        display : block;
+                        @include mini_laptop{
+                            display: none;
+                        }
+
+                    }
+                    .l-one{
+                        color           : $mainColorWeprodev;
+                        background-color: transparent;
+                        cursor          : pointer;
+                        .Circle{
+                            opacity     : 1;
+                            visibility  : visible;
+                        }
+                    }
+                }
+                a{
+                    text-decoration : none;
+                    color           : $secondColorWeprodev;
+                    font-size       : 1.1em;
+                    font-weight     : 500;
+                    width           : 100%;
+                    height          : 100%;
+                    display         : block;
+                    line-height     : 5.5em;
+                    padding         : 0em 1em 0em 0.5em;
+                }
+                ul{
+                    background-color: $WHITE;
+                    position        : absolute;
+                    top             : 5em;
+                    display         : none;
+                    width           : 13em;
+                    transition      : 0.6s;
+                    margin-top      : 0em;
+                    height          : auto;
+                    padding         : 0em;
+                    border-radius   : 0em 0em 0.5em 0.5em;
+                    z-index         : 1500;
+                    @include mini_laptop {
+                        width       : 60em;                         
+                        transition  : 0.2s;
+                        box-shadow  : none;
+                        position    : static;
+                        padding-left: 5vw;
+                    }
+                    li{
+                        height      : 3.5em;
+                        width       : 13em;
+                        margin-top  : 0;
+                        @include mini_laptop{
+                             transition: 0.3s;
+                        }
+                        
+                        &:hover{
+                            .l-two{
+                                color           : $mainColorWeprodev;
+                                background-color: transparent;
+                                cursor          : pointer;
+                                .Circle{
+                                    opacity     : 1;
+                                    visibility  : visible;
+                                }
+                            }
+                        }
+                        a{
+                            line-height : 2em;
+                            width       : 100vw;
+                            padding-left: 0.5em;
+                        }
+
+                    }//li
+                }//ul
+            }//li
+        }//ul
+
+        .search{
+            position    : absolute;
+            right       : 17%;
+            top         : 3em;
+            height      : 2.5em;
+            transition  : all 0.5s;
+            cursor      : pointer;
+            display     : none;
+            @include laptop{
+                right: 6%;
+            }
+            &:hover{
+                .icon-search{
+                    color: $mainColorWeprodev;
+                }
+            }
+
+            .icon-search{
+                font-size   : 1.3em;
+                color       : $secondColorWeprodev;
+                transition  : all 0.2s;
+                display     : block; 
+            }
+            @include mini_laptop{
+                display: none;
+            }
+        }//search
+        .search-active{
+            width           : 100vw;
+            height          : 100%;
+            position        : absolute;
+            top             : -9em;
+            background-color: $WHITE;
+            border-radius   : 0em 0em 0.5em 0.5em;
+            display         : none;
+
+            .search-active-content{
+                height      : 2em;
+                width       : 70%;
+                margin-left : auto;
+                margin-right: auto;
+                margin-top  : 2.5em;
+                display     : flex;
+                color       : $secondColorWeprodev;
+
+                .text-search{
+                    width           : 90%;
+                    margin-top      : 0.2em;
+                    justify-content : center;
+                    color           : $secondColorWeprodev;
+                    font-size       : 1.2em;
+                    font-weight     : 500;
+                    border          : none;
+                    transition      : all 0.4s;
+                }
+                .icon-search{
+                    font-size       : 1.3em;
+                    justify-content : start;
+                    padding         : 0.25em;
+                    padding-top     : 0.6em;
+                    border-radius   : 0.1em;
+                    transition      : all 0.4s;
+                    cursor          : pointer;
+                    &:hover{
+                        color: $mainColorWeprodev;
+                    }
+                }
+                .icon-searchh{
+                    justify-content : end;
+                    font-size       : 1.3em;
+                    padding         : 0.25em;
+                    padding-top     : 0.7em;
+                    border-radius   : 0.1em;
+                    transition      : all 0.4s;
+                    cursor          : pointer;
+                    &:hover{
+                        color       : $mainColorWeprodev;
+                    }
+                }
+            }//search-active-content
+        }//search-active
+        .section-responsive{
+            display     : none;
+            position    : absolute;
+            top         : 1.2em;
+            right       : 5em;
+            color       : $secondColorWeprodev;
+            font-size   : 2em;
+            transition  : all 0.5s;
+            opacity     : 0;
+            &:hover{
+                color: $mainColorWeprodev;
+            }
+            @include mini_laptop{
+                opacity : 1;
+                display : inline;
+            }
+            @include retinaMobile{
+                right   : 3em;
+            }
+            @include mobile{
+                right   : 2em;
+            }
+        }
+        
+    }//header
+   
+    .sticky {
+        position        : fixed;
+        top             : 0;
+        width           : 100%;
+        transition      : top 1s;
+      }
+      
+      .sticky + .content {
+        padding-top     : 5em;
+      }
+    .content{
+
+        .section-article{
+            width                   : 60%;
+            display                 : flex;
+            flex-direction          : column;
+            margin                  : 0 auto;
+
+            @include lcd{
+                width               : 73%;
+            }
+            @include led{
+                width               : 64%;
+            }
+            @include mobile{
+                width               : 100%;
+            }
+
+            .post-header{
+                display             : flex;
+                flex-direction      : row;
+                width               : 100%;
+                padding-top         : 1em;
+                padding-bottom      : 0em;
+
+                @include tablet{
+                    flex-direction: column;
+                    padding         : 0em;
+                    padding-top     : 1em;
+                }
+            }
+            article{
+                position            : relative;
+                margin              : 0.8em;
+                margin-left         : 0;
+                cursor              : pointer;
+                background-color    : #f5f8fa;
+                border-radius       :  5px;  
+
+                &.sub{
+                    background-color    : $mainColorWeprodev;
+                        &:hover{
+                            box-shadow  : unset;
+                            transition  : unset;
+                            transform   : scale(1);
+                        }
+                
+                }//sub 
+                &.sub2{     
+                    background-color    : $mainColorWeprodev;
+    
+                    &:hover{
+                    box-shadow         : 0 10px 50px -5px rgba(51,71,91,0.12);
+                    transition         : all 0.6s;
+                    transform          : scale(1.01);
+                    }
+                }//sub2
+
+                &:hover{
+                    box-shadow          : 0 10px 50px -5px rgba(51,71,91,0.12);
+                    transition          : all 0.6s;
+                    transform           : scale(1.01);
+                }
+
+            .txt-sub-arti{
+                font-size        : 1.5em;
+                display          : flex;
+                align-items      : center;
+                flex-direction   : column;
+                color            : $WHITE;
+                text-align       : center;
+                position         : relative;
+                padding          : 2em;
+
+                @include laptop{
+                    font-size        : 1.2em;
+                }
+
+                
+                &.hover-underline{
+                    height           : 100%;
+                    &:hover{
+                        text-decoration : underline;
+                    }
+                }
+                h3{
+                        font-size       : 1.5em;
+                        font-weight     : bold;
+                        padding         : 1.5em 0em;
+                
+                }
+                h1{
+                    font-size        : 2em;
+                    line-height      : 1.5;
+                    font-weight      : unset;
+                    padding          : 2em 0;
+
+                    @include laptop{
+                        font-size    : 1.5em;
+                    }
+                }
+                span{
+                        border          : 1px solid white;
+                        padding         : 1.5em 1em;
+                        display         : block;
+                        width           : 100%;
+                        white-space     : pre-line;
+                        font-size       : 0.8em;
+                }
+                .class-p{
+                    font-weight      : unset;
+                    padding          : 0;
+                    font-size        : 0.8em;
+                    line-height      : 1.5;
+                    padding-bottom   : 1.5em;
+                }
+                button{
+                    width               : 100%;
+                    font-size           : 0.8em;
+                    height              : 3.5em;
+                    background          : transparent;
+                    border-color        : $WHITE;
+                    color               : $WHITE;
+                    font-weight         : bold;
+                    margin-bottom       : 1em;
+                    
+
+                    &:hover{
+                        background-color    : rgba($color: #fff, $alpha: 0.2);
+                        font-weight         : bold;
+                        transition          : all 0.6s;
+                    
+                        }
+            
+                }
+                }
+            }//article
+            .big-card{
+                position        : relative;
+                width           : 64.5%; 
+                margin-top      : 0em; 
+
+                @include led{
+                    width       : 64.5%;
+                }
+                @include laptop{
+                    width       : 64.5%;
+                }
+                @include tablet{
+                    width       : 100%;
+                }
+                figure{
+                    padding-bottom      : 56%;
+                    position            : relative;
+                    img{
+                        position        : absolute;
+                        width           : 100%;
+                        height          : 100%;
+                        object-fit      : cover;
+                        border-radius   : 5px 5px 0px 0px;
+                    }
+                }
+                
+            }
+            .middle-card{
+                position                : relative;
+                width                   : 31.5%;
+                margin-top              : 0em;
+
+                @include laptop{
+                    width               : 30.5%;
+                }
+                @include tablet{
+                    width               : 100%;
+                }
+                figure{
+                    padding-bottom      : 0%;
+                    position            : relative;
+                    img{
+                        position        : relative;
+                        width           : 100%;
+                        height          : 15em;
+                        object-fit      : cover;
+                        border-radius   : 5px 5px 0px 0px;
+                    }
+                }
+
+            }
+            
+        
+            p{
+                padding         : 1em;
+                font-size       : 1em;
+                padding-left    : 1.5em;
+            }
+        
+            h2{
+                padding         : 1em 1.5em 9em;
+                margin          : 0;
+                font-size       : 1em;
+                a{
+                    font-size   : 1.5em;
+                    font-weight : unset;
+                }
+            }
+            .blog-meta{
+                display             : flex;
+                flex-direction      : row;
+                justify-content     : flex-start;
+                position            : absolute;
+                bottom              : 0;
+                a{
+                    font-size       : 0.7em;
+                    &:first-child{
+                        padding     : 2em 0 1.5em 1.5em;
+
+                    }
+                    &:last-child{
+                        padding     : 2em 1em 1.5em 0;
+                    }
+                }
+            }//blog meta
+
+            .most-popular{
+                width               : 34%;
+                margin-left         : 0;
+
+            
+                @include tablet{
+                    width           : 100%;
+                    border-bottom   : 1px solid $BLACK;
+                    margin-bottom   : 1em;
+                }
+                
+                h3{
+                    display         : inline-block;
+                    padding         : 0.2em 5em 0.2em 1em;
+                    background      : $mainColorWeprodev;
+                    margin-bottom   : 1em;
+                    font-size       : 1.1em;
+                    white-space     : pre;
+                    color           : $WHITE;
+
+                    @include tablet{
+                    margin-left  : 1em;
+                    }
+                
+                }
+                .post-compact{
+                    background              : #f5f8fa;
+                    margin-bottom           : 1em;
+                    position                : relative;
+                    width                   : 100%;
+                    height                  : auto;
+                    display                 : inline-block;
+                    border-radius           : 5px;
+
+                    &:hover{
+                        box-shadow          : 0 10px 50px -5px rgba(51,71,91,0.12);
+                        transition          : all 0.6s;
+                        transform           : scale(1.01);
+                    }
+                    
+                    h4{
+                        padding             : 1em;
+                        font-size           : 1.3em;
+                        margin-bottom       : 1em;
+                        padding-bottom      : 1em;
+                        a{
+                            font-size       : 0.7em;
+                        }
+                    }
+                    
+                }//post compact
+            }//most popular
+
+            .post-list{
+                padding             : 1em;
+                padding-top         : 0;
+                display             : flex;
+                flex-direction      : row;
+                flex-wrap           : wrap;
+                width               : 100%; 
+                
+                @include tablet{
+                    flex-direction  : column;
+                    padding         : 0em;
+                }
+            
+            }//post list
+            .under-border{
+                margin              : 1em 0em;
+                border-bottom       : 1px solid black;  
+            }
+        }//section article
+        .section-topic{
+        width                : 60%;
+        text-align           : center;
+        margin               : 1em auto 2em;
+        @include lcd{
+            width               : 75%;
+        }
+            @include led{
+                width           : 66%;
+            }
+            @include tablet{
+                width           : 75%;
+            }
+            @include mobile{
+                width           : 100%;
+            }
+        h2{
+            margin           : 0 auto;
+            padding          : 1em 0em;
+            font-size        : 2.5em; 
+        }
+        p{
+                margin          : 0 auto;
+                font-size       : 1.5em;
+                padding-bottom  : 2em;
+                max-width       : 35em;
+        }
+        .more-topic{
+            padding-bottom       : 1em;
+
+            
+            .topic{
+                    margin          : 1.5em auto 1em;
+                    display         : flex;
+                    flex-wrap       : wrap;
+                    text-align      : left;
+                    justify-content : space-between;
+                    align-items     : center;
+
+                    @include mini_laptop{
+                        flex-wrap       : unset;
+                        flex-direction  : column;
+                    }
+                    
+                    a{
+                            padding                 : 1.5em 1em;
+                            width                   : 27%;
+                            min-width               : 16em;
+                            height                  : 1em;
+                            margin                  : 0.5em 0.5em;
+                            background-color        : #f5f8fa;
+                            float                   : left;
+                            text-align              : left;
+                            border                  : 1px solid rgba($color: red, $alpha: 0.2);
+                            border-left             : 5px solid red;
+                            border-radius           : 7px;
+                            font-weight             : bold;
+
+                            @include laptop{
+                                min-width           : 15em;
+                            }
+                            @include mini_laptop{
+                                min-width           : 20em;
+                            }
+                            &:hover{
+                                transform           : scale(1.01);
+                                box-shadow          : 0px 12px 14px 1px rgba(51, 71, 91, 0.12);
+                            }
+
+                            
+                        }// a
+                        .color-line{
+                            border                  : 1px solid rgba($color: green, $alpha: 0.5);
+                            border-left             : 5px solid green;
+                        }
+                        .color-line2{
+                            border                  : 1px solid rgba($color: yellow,$alpha: 0.5);
+                            border-left             : 5px solid yellow;
+                        }
+                        .color-line3{
+                            border                  : 1px solid rgba($color: orange, $alpha: 0.5);
+                            border-left             : 5px solid orange;
+                        }
+                        .color-line4
+                        {   border                  : 1px solid rgba($color: blue, $alpha: 0.5);
+                            border-left             : 5px solid blue;
+                        }
+                        .icon-chevron-right{
+                            float                   : right;
+                            color                   : lightblue;
+                            font-size               : 1.5em;
+                            
+                        }
+                }//topic 
+        }//more topic
+         }//section topic
+    }//content
+}//blog

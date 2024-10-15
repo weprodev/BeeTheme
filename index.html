@@ -1,0 +1,62 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.2.1/css/all.css"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>AppLand</title>
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="mainHeader">
+        <div class="logo">AppLand</div>
+
+        <nav class="nav">
+          <ul>
+            <li class="hideOnLaptop" onclick="showSidebar()">
+              <a href="#"><i class="fa-solid fa-bars-staggered"></i></a>
+            </li>
+            <li class="hideOnMobile"><a href="#">Home</a></li>
+            <li class="hideOnMobile"><a href="#">features</a></li>
+            <li class="hideOnMobile"><a href="#">pricing</a></li>
+            <li class="hideOnMobile"><a href="#">testimonials</a></li>
+          </ul>
+        </nav>
+
+        <div class="ctaButton hideOnMobile">
+          <button>Sign in</button>
+        </div>
+      </div>
+
+      <div class="hiddenHeader">
+        <nav class="nav">
+          <ul>
+            <li class="" onclick="closeSidebar()">
+              <a href="#"><i class="fa-solid fa-x"></i></a>
+            </li>
+            <li class=""><a href="#">Home</a></li>
+            <li class=""><a href="#">features</a></li>
+            <li class=""><a href="#">pricing</a></li>
+            <li class=""><a href="#">testimonials</a></li>
+            <div class="ctaButton">
+              <button>Sign in</button>
+            </div>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </body>
+</html>

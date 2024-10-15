@@ -1,0 +1,80 @@
+/*========================================================================================
+*********   
+*******     FONT DIFINITION AND SOME OF THE CLASS FOR SIZE OF THE TEXT
+*****       
+***         
+*/
+
+	/*--------------------------------
+	***  
+	**	 SET FONT FAMILY
+	*/
+
+	@import "_muliFont.scss";
+
+	/*--------------------------------
+	***  
+	**	 GENERAL STYLE FONT TYPOGRAPHY
+	*/
+
+	body , html , *{
+		font-family :  $fontFamily;
+	}
+
+	h1, h2, h3, h4, h5, h6,input, textarea , button , select , option , label , p , span{
+		font-family : $fontFamily;
+	}
+
+	h1{
+		font-weight: bold;
+	}
+
+	.ltr{
+		direction: ltr;
+	}
+
+	.text-small{
+		font-size 	: 0.8em;
+	}
+
+	.text-xsmall{
+		font-size 	: 0.6em;
+	}
+
+	.text-large{
+		font-size 	: 1.2em;
+	}
+
+	.text-xlarge{
+		font-size 	: 1.4em;
+	}
+
+	.text-ultralight{
+		font-weight : 200;
+	}
+
+	.text-light{
+		font-weight : 300;
+	}
+
+	.text-medium{
+		font-weight : 500;
+	}
+
+	.text-bold{
+		font-weight : bold;
+	}
+
+	.text-regular{
+		font-weight : normal;
+	}
+
+	.text-underline{
+		text-decoration : underline;
+	}
+
+	blockquote{
+		font-weight : 500;
+		padding 	: 10px;
+	}
+

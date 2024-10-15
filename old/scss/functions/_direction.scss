@@ -1,0 +1,81 @@
+/*========================================================================================
+*********   SET DIRECTION ALL PROJECT LIKE : DIRECTION ,
+*******     MARGIN / PADDING / TRANSLATE , 
+*****       LEFT AND RIGHT POSITION ,
+***         BORDER RADIUS / ARROWS.
+*/
+
+
+    /*--------------------------------
+    ***     FIRST , SET DIRECTION
+    **	    SET DEFAULT VALUE
+    */
+    
+    @function setDirection( $value : ltr )
+    {
+
+        $dir 	: $value;
+        @return $dir;
+        
+    }// setDirection
+
+
+    /*--------------------------------
+    ***     RE-ORDER MARGIN / PADDING
+    **	    SET POSITION
+    */
+
+    @function dirSpace($values) 
+    {
+        
+        @if $dir == rtl and length($values) == 4 
+        {
+            @return nth($values, 1) nth($values, 4) nth($values, 3) nth($values, 2);
+        }
+        @else 
+        {
+            @return $values;
+        }
+        
+    }//dirSpace
+
+    /*--------------------------------
+    ***     RE-ORDER BORDER RADIUS
+    **	    SET RADIUS POSITION
+    */
+
+    @function dirRadius($values) 
+    {
+
+        @if $dir == rtl and length($values) == 4 
+        {
+            @return nth($values, 2) nth($values, 1) nth($values, 4) nth($values, 3);
+        }
+        @else 
+        {
+            @return $values;
+        }
+        
+    }//dirRadius
+
+    /*--------------------------------
+    ***     SET THE VALUE INVERSE
+    **	    LIKE TRANSLATE TAG
+    */    
+
+    @function dirTransform( $value ) 
+    {
+
+        @if $dir == rtl and $value < 0 
+        {
+            $value 	: $value*(-1);
+            @return $value;
+        }
+        @else 
+        {
+            @return $value;
+        }
+        
+    }//dirTransform
+
+
