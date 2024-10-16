@@ -6,9 +6,24 @@
 */
 
     /*--------------------------------
-    ***  
-    **   AppLand     
+    ***  SET DIRECTION BEFORE ANYTHING
+    **   DEFAULT VALUE : LTR     
     */
 
-    @import "appLand.scss";
+        @import "typography";
         
+        
+    /*--------------------------------
+    ***  IMPORT GENERAL AND IMPORTANT
+    **   VARIABLES
+    */
+
+        @import "_variables";
+
+    /*--------------------------------
+    ***  
+    **   appLand
+    */   
+
+    @import "appLand";
+    

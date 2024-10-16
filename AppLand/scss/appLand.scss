@@ -11,20 +11,20 @@ body {
 
   a {
     text-decoration: none;
-    color: black;
+    color: $BLACK;
   }
 
   button {
     width: 7rem;
     height: 3rem;
-    background: rgb(84, 234, 84); /* #54ea54 */
+    background: $VibrantGreen;
     border: none;
     border-radius: 2rem;
     cursor: pointer;
 
     &:hover {
       transition: 0.3s ease-in-out;
-      background: rgb(71, 198, 71); /* #47c647 */
+      background: $LimeGreen;
     }
   }
 
@@ -46,7 +46,7 @@ body {
 
           a {
             text-decoration: none;
-            color: rgb(000, 000, 000); // #000
+            color: $BLACK;
           }
         }
       }

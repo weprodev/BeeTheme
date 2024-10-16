@@ -6,7 +6,41 @@
 */
 /*--------------------------------
 ***  
-**   AppLand     
+**  MEDIA QUERIES  
+*/
+/*========================================================================================
+*********   ALL OF THE VARIABLES TYPE 
+*******     COLORS 
+*****       GRIDS
+***         
+*/
+/*========================================================================================*\
+*----------------------------               COLORE              ----------------------------        
+\*========================================================================================*/
+/*--------------------------------
+*** FLAT UI COLORS 
+**  flatuicolors.com/palette/defo
+*/
+/*--------------------------------
+***  IMPORT GENERAL AND IMPORTANT
+**   VARIABLES , GRIDS , PLACEHOLDERS 
+*/
+/*========================================================================================
+*********   ALL OF THE VARIABLES TYPE 
+*******     COLORS 
+*****       GRIDS
+***         
+*/
+/*========================================================================================*\
+*----------------------------               COLORE              ----------------------------        
+\*========================================================================================*/
+/*--------------------------------
+*** FLAT UI COLORS 
+**  flatuicolors.com/palette/defo
+*/
+/*--------------------------------
+***  
+**   appLand
 */
 body {
   font-family: "Poppins", sans-serif;
@@ -19,19 +53,19 @@ body li {
 }
 body a {
   text-decoration: none;
-  color: black;
+  color: rgb(0, 0, 0);
 }
 body button {
   width: 7rem;
   height: 3rem;
-  background: rgb(84, 234, 84); /* #54ea54 */
+  background: rgb(84, 234, 84);
   border: none;
   border-radius: 2rem;
   cursor: pointer;
 }
 body button:hover {
   transition: 0.3s ease-in-out;
-  background: rgb(71, 198, 71); /* #47c647 */
+  background: rgb(71, 198, 71);
 }
 body .header .mainHeader {
   display: flex;
