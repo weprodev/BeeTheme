@@ -25,7 +25,53 @@
   </head>
 
   <body>
+    <div class="header">
+      <div class="mainHeader">
+        <div class="logo">AppLand</div>
 
+        <nav class="nav">
+          <ul>
+            <li class="hideOnLaptop" onclick="showSidebar()">
+              <a href="#"><i class="fa-solid fa-bars-staggered"></i></a>
+            </li>
+
+            <li class="hideOnMobile"><a href="#">Home</a></li>
+
+            <li class="hideOnMobile"><a href="#">features</a></li>
+
+            <li class="hideOnMobile"><a href="#">pricing</a></li>
+
+            <li class="hideOnMobile"><a href="#">testimonials</a></li>
+          </ul>
+        </nav>
+
+        <div class="ctaButton hideOnMobile">
+          <button>Sign in</button>
+        </div>
+      </div>
+
+      <div class="hiddenHeader">
+        <nav class="nav">
+          <ul>
+            <li class="" onclick="closeSidebar()">
+              <a href="#"><i class="fa-solid fa-x"></i></a>
+            </li>
+
+            <li class=""><a href="#">Home</a></li>
+
+            <li class=""><a href="#">features</a></li>
+
+            <li class=""><a href="#">pricing</a></li>
+
+            <li class=""><a href="#">testimonials</a></li>
+
+            <div class="ctaButton">
+              <button>Sign in</button>
+            </div>
+          </ul>
+        </nav>
+      </div>
+    </div>
     <script src="js/mian.js"></script>
   </body>
 </html>
