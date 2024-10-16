@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -58,5 +59,42 @@
         </nav>
       </div>
     </div>
+
+    <div class="imgContainer">
+      <img src="img/heroImg.jpg" alt="" />
+      <div class="textOverlay">
+        <h1>Unleash the full potential of app</h1>
+        <p>
+          Empower your vision, elevate your experience—unlock the true
+          capabilities of your app and watch it transform the way you connect,
+          create, and conquer.
+        </p>
+        <button>Get the App <i class="fa-solid fa-arrow-right"></i></button>
+        <p class="more">more</p>
+
+        <div class="stats-container">
+          <div class="stat-item">
+            <h2>4.8</h2>
+            <p>Rating on AppStore</p>
+          </div>
+          <div class="stat-item">
+            <h2>700k+</h2>
+            <p>Active users</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const sidebar = document.querySelector(".hiddenHeader");
+
+      function showSidebar() {
+        sidebar.style.display = "block";
+      }
+
+      function closeSidebar() {
+        sidebar.style.display = "none";
+      }
+    </script>
   </body>
 </html>
