@@ -14,20 +14,24 @@ body {
 body a:hover {
   background: bottom;
 }
+body li {
+  list-style-type: none;
+}
+body a {
+  text-decoration: none;
+  color: black;
+}
 body button {
   width: 7rem;
   height: 3rem;
-  background: rgb(84, 234, 84);
+  background: rgb(84, 234, 84); /* #54ea54 */
   border: none;
   border-radius: 2rem;
   cursor: pointer;
 }
 body button:hover {
   transition: 0.3s ease-in-out;
-  background: rgb(71, 198, 71);
-}
-body button .hideOnLaptop {
-  display: none;
+  background: rgb(71, 198, 71); /* #47c647 */
 }
 body .header .mainHeader {
   display: flex;
@@ -55,6 +59,8 @@ body .header .hiddenHeader {
   height: 100vh;
   width: 250px;
   z-index: 13;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   background-color: rgba(255, 255, 255, 0.2);
   box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -74,6 +80,22 @@ body .header .hiddenHeader nav ul li {
 }
 body .header .hideOnLaptop {
   display: none;
+}
+@media (max-width: 576px) {
+  body .header .hideOnLaptop {
+    display: block;
+  }
+  body .header .hideOnMobile {
+    display: none;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  body .header .hideOnLaptop {
+    display: block;
+  }
+  body .header .hideOnMobile {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
