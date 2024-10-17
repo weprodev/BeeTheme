@@ -1,33 +1,6 @@
+@import "../../shared/scss/import.scss";
+
 body {
-  font-family: "Poppins", sans-serif;
-
-  a:hover {
-    background: bottom;
-  }
-
-  li {
-    list-style-type: none;
-  }
-
-  a {
-    text-decoration: none;
-    color: $BLACK;
-  }
-
-  button {
-    width: 7rem;
-    height: 3rem;
-    background: $VibrantGreen;
-    border: none;
-    border-radius: 2rem;
-    cursor: pointer;
-
-    &:hover {
-      transition: 0.3s ease-in-out;
-      background: $LimeGreen;
-    }
-  }
-
   .header {
     .mainHeader {
       display: flex;
@@ -43,11 +16,6 @@ body {
 
         li {
           margin: 0 15px;
-
-          a {
-            text-decoration: none;
-            color: $BLACK;
-          }
         }
       }
     }
@@ -84,11 +52,7 @@ body {
       }
     }
 
-    .hideOnLaptop {
-      display: none;
-    }
-
-    @media (max-width: 576px) {
+    @include mobile {
       .hideOnLaptop {
         display: block;
       }
@@ -97,7 +61,7 @@ body {
       }
     }
 
-    @media (min-width: 576px) and (max-width: 768px) {
+    @include retinaMobile {
       .hideOnLaptop {
         display: block;
       }

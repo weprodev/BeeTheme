@@ -1,0 +1,13 @@
+button {
+  width: 7rem;
+  height: 3rem;
+  background: $VibrantGreen;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+
+  &:hover {
+    transition: 0.3s ease-in-out;
+    background: $LimeGreen;
+  }
+}
