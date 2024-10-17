@@ -1,0 +1,29 @@
+/*========================================================================================
+*********   
+*******     IMPORT ALL OF THE STYLES HERE
+*****       
+***         
+*/
+
+    /*--------------------------------
+    ***  SET DIRECTION BEFORE ANYTHING
+    **   DEFAULT VALUE : LTR     
+    */
+
+        @import "typography";
+        
+        
+    /*--------------------------------
+    ***  IMPORT GENERAL AND IMPORTANT
+    **   VARIABLES
+    */
+
+        @import "_variables";
+
+    /*--------------------------------
+    ***  
+    **   appLand
+    */   
+
+    @import "appLand";
+    
