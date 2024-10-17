@@ -1,0 +1,85 @@
+// Variabels (only used in this file)
+$_items-padding: $space-3;
+
+.top-bar {
+  padding: 0 $container-side-padding;
+  color: $secondary-color;
+  background-color: $tertiary-color;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: capitalize;
+  gap: $space-8;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+  @include mobile() {
+    display: none;
+  }
+  @include tablet {
+    justify-content: center;
+  }
+
+  &__business {
+    display: flex;
+    // To make a thin space between the two span elements
+    gap: 1px;
+    // To give that thin space a color and make it look like a line
+    background-color: $secondary-color-darker;
+
+    @include tablet {
+      display: none;
+    }
+
+    span {
+      // To cover the background color of parentof
+      background-color: $tertiary-color;
+      padding: $_items-padding;
+    }
+    span:first-child {
+      padding-left: 0;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: $space-8;
+    li {
+      padding: $_items-padding 0;
+      a {
+        color: inherit;
+        text-decoration: none;
+        transition: all $duration-150;
+        &:hover {
+          opacity: 80%;
+        }
+      }
+    }
+  }
+
+  &__phone-number {
+    display: flex;
+    align-items: center;
+    gap: $space-3;
+    &:hover {
+      .top-bar__chevron-icon {
+        transition: all $duration-150;
+        transform: rotate(180deg);
+      }
+    }
+    &.dropdown {
+      .dropdown__content {
+        width: 100%;
+        text-align: center;
+        background-color: $secondary-color;
+        color: $tertiary-color;
+        box-shadow: $shadow-sm;
+        border-radius: $rounded-md;
+        flex-direction: column;
+        padding: $space-2;
+        li:not(:last-child) {
+          margin-bottom: $space-2;
+        }
+      }
+    }
+  }
+}

@@ -8,10 +8,41 @@
       name="viewport"
       content="initial-scale=1.0, user-scalable=no, width=device-width"
     />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <nav class="top-bar">Top bar</nav>
+    <nav class="top-bar">
+      <div class="top-bar__business">
+        <span>small business</span>
+        <span>company</span>
+      </div>
+      <ul class="top-bar__actions">
+        <li><a href="#">contact us</a></li>
+        <li class="top-bar__phone-number dropdown">
+          <span> (423) 323-3382</span>
+          <ion-icon
+            name="chevron-down-outline"
+            class="top-bar__chevron-icon"
+          ></ion-icon>
+          <ul class="dropdown__content">
+            <li><a href="#">Lorem Ipsum </a></li>
+            <li><a href="#">Lorem Ipsum </a></li>
+            <li><a href="#">Lorem Ipsum </a></li>
+          </ul>
+        </li>
+        <li><a href="#">support</a></li>
+        <li><a href="#">download</a></li>
+        <li><a href="#">sign in</a></li>
+      </ul>
+    </nav>
 
     <header class="main-navigation">Navigation</header>
 
