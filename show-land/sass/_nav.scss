@@ -1,0 +1,28 @@
+
+.main-nav{
+    &-list{
+display: flex;
+padding-top: 1rem;
+gap: 1.5rem;
+list-style: none;
+align-items: center;
+    }
+&-link:link,
+&-link:visited{
+    text-decoration: none;
+    font-size: 1rem;
+    color: $color-wihte;
+    text-transform: uppercase;
+    font-weight: 700;
+ 
+}
+
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+  
+}
+.logo{
+    padding-top: 0.8rem;
+}

@@ -1,0 +1,27 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+
+body {
+  box-sizing: border-box;
+  font-size: 95%;
+
+ 
+
+}
+.container{
+
+  background-image: linear-gradient(to right ,$color-secondary,$color-tertiary , $color-primary);
+  height: 100vh;
+}
+
+.container-1{
+ 
+  width: 80rem;
+  margin: 0 auto;
+}
