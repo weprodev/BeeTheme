@@ -37,18 +37,18 @@ $kappa: 25em;
 /*------------------------------------*\
   #SPACES (padding & margin & gap) 
 \*------------------------------------*/
-$space-1: calc(0.25rem * 1);
-$space-2: calc(0.25rem * 2);
-$space-3: calc(0.25rem * 3);
-$space-4: calc(0.25rem * 4);
-$space-5: calc(0.25rem * 5);
-$space-6: calc(0.25rem * 6);
-$space-7: calc(0.25rem * 7);
-$space-8: calc(0.25rem * 8);
-$space-9: calc(0.25rem * 9);
-$space-10: calc(0.25rem * 10);
-$space-11: calc(0.25rem * 11);
-$space-12: calc(0.25rem * 12);
+$space-1: calc(0.25em * 1);
+$space-2: calc(0.25em * 2);
+$space-3: calc(0.25em * 3);
+$space-4: calc(0.25em * 4);
+$space-5: calc(0.25em * 5);
+$space-6: calc(0.25em * 6);
+$space-7: calc(0.25em * 7);
+$space-8: calc(0.25em * 8);
+$space-9: calc(0.25em * 9);
+$space-10: calc(0.25em * 10);
+$space-11: calc(0.25em * 11);
+$space-12: calc(0.25em * 12);
 // To be continued...
 
 /*------------------------------------*\
@@ -74,6 +74,6 @@ $shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   #BORDER RADIUS
 \*------------------------------------*/
 
-$rounded-sm: 0.125rem;
-$rounded: 0.25rem;
-$rounded-md: 0.375rem;
+$rounded-sm: 0.125em;
+$rounded: 0.25em;
+$rounded-md: 0.375em;
