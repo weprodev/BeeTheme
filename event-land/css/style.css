@@ -138,7 +138,7 @@ a {
   justify-content: space-between;
   text-transform: capitalize;
   gap: 2em;
-  font-size: 0.875rem;
+  font-size: 0.875em;
   font-weight: 600;
 }
 @media screen and (max-width: 40em) {
@@ -184,6 +184,84 @@ a {
   opacity: 70%;
 }
 
+.main-navigation {
+  display: flex;
+  align-items: center;
+  gap: 3em;
+  padding: 1em 3em;
+  border-bottom: 2px solid #f1f1f1;
+  font-weight: 600;
+  color: #24222c;
+}
+@media screen and (max-width: 64em) {
+  .main-navigation {
+    padding: 1em;
+    justify-content: space-between;
+    font-size: 1.25em;
+  }
+}
+.main-navigation__logo {
+  width: 8rem;
+}
+.main-navigation__menu-button-divider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+@media screen and (max-width: 64em) {
+  .main-navigation__menu-button-divider {
+    display: none;
+    justify-content: flex-start;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    left: 0;
+    background-color: #ffffff;
+    width: 100%;
+    flex-direction: column;
+    align-items: start;
+    padding: 1em;
+    min-height: 100vh;
+    gap: 3em;
+  }
+  .main-navigation__menu-button-divider.open {
+    display: flex;
+  }
+  .main-navigation__menu-button-divider.close {
+    display: none;
+  }
+}
+.main-navigation__close-menu-button {
+  align-self: flex-end;
+}
+.main-navigation__menu {
+  display: flex;
+  gap: 2em;
+}
+@media screen and (max-width: 64em) {
+  .main-navigation__menu {
+    flex-direction: column;
+  }
+}
+.main-navigation__menu > li > a {
+  transition: all 150ms;
+}
+.main-navigation__menu > li > a:hover {
+  opacity: 70%;
+}
+.main-navigation__close-menu-button, .main-navigation__open-menu-button {
+  display: none;
+  background-color: transparent;
+  border: none;
+  font-size: 2.25em;
+}
+@media screen and (max-width: 64em) {
+  .main-navigation__close-menu-button, .main-navigation__open-menu-button {
+    display: flex;
+  }
+}
+
 /*------------------------------------*\
   #COMPONENTS
 \*------------------------------------*/
@@ -223,6 +301,23 @@ a {
 }
 .dropdown:hover .dropdown__icon {
   transform: rotate(180deg);
+}
+
+.button {
+  border-radius: 9999px;
+  padding: 1em 1.5em;
+  font-size: 0.875em;
+  transition: all 150ms;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+}
+.button--primary {
+  background-color: #50cb8b;
+  color: #ffffff;
+}
+.button:hover {
+  opacity: 70%;
 }
 
 /*# sourceMappingURL=style.css.map */
