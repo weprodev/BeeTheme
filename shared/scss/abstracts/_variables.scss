@@ -7,14 +7,14 @@ $fontWeightMedium: 500;
 $fontWeightSemibold: 600;
 $fontWeightBold: 700;
 
-$font-size-xs: 0.75rem;
-$font-size-sm: 0.875rem;
-$font-size-base: 1rem;
-$font-size-lg: 1.125rem;
-$font-size-xl: 1.25rem;
-$font-size-2xl: 1.5rem;
-$font-size-3xl: 1.875rem;
-$font-size-4xl: 2.25rem;
+$fontSizeXs: 0.75em;
+$fontSizeSm: 0.875em;
+$fontSizeBase: 1em;
+$fontSizeLg: 1.125em;
+$fontSizeXl: 1.25em;
+$fontSize2Xl: 1.5em;
+$fontSize3Xl: 1.875em;
+$fontSize4Xl: 2.25em;
 // To be continued...
 
 /*------------------------------------*\
@@ -23,56 +23,56 @@ $font-size-4xl: 2.25rem;
 
 $led4k: 160em;
 $alpha: 87.5em;
-$pre-alpha: 75.0625em;
+$preAlpha: 75.0625em;
 $beta: 75em;
-$pre-beta: 64em;
+$preBeta: 64em;
 $gamma: 62em;
 $lota: 31.25em;
-$pre-zeta: 47.9375em;
+$preZeta: 47.9375em;
 $eta: 40em;
 $kappa: 25em;
 
 /*------------------------------------*\
   #SPACES (padding & margin & gap) 
 \*------------------------------------*/
-$space-1: calc(0.25em * 1);
-$space-2: calc(0.25em * 2);
-$space-3: calc(0.25em * 3);
-$space-4: calc(0.25em * 4);
-$space-5: calc(0.25em * 5);
-$space-6: calc(0.25em * 6);
-$space-7: calc(0.25em * 7);
-$space-8: calc(0.25em * 8);
-$space-9: calc(0.25em * 9);
-$space-10: calc(0.25em * 10);
-$space-11: calc(0.25em * 11);
-$space-12: calc(0.25em * 12);
+$space1: calc(0.25em * 1);
+$space2: calc(0.25em * 2);
+$space3: calc(0.25em * 3);
+$space4: calc(0.25em * 4);
+$space5: calc(0.25em * 5);
+$space6: calc(0.25em * 6);
+$space7: calc(0.25em * 7);
+$space8: calc(0.25em * 8);
+$space9: calc(0.25em * 9);
+$space10: calc(0.25em * 10);
+$space11: calc(0.25em * 11);
+$space12: calc(0.25em * 12);
 // To be continued...
 
 /*------------------------------------*\
   #TRANSITION DURATION
 \*------------------------------------*/
 
-$duration-75: 75ms;
-$duration-100: 100ms;
-$duration-150: 150ms;
-$duration-200: 200ms;
-$duration-300: 300ms;
-$duration-500: 500ms;
-$duration-700: 700ms;
-$duration-1000: 1000ms;
+$duration75: 75ms;
+$duration100: 100ms;
+$duration150: 150ms;
+$duration200: 200ms;
+$duration300: 300ms;
+$duration500: 500ms;
+$duration700: 700ms;
+$duration1000: 1000ms;
 
 /*------------------------------------*\
   #BOX SHADOW
 \*------------------------------------*/
 
-$shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+$shadowSm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
 
 /*------------------------------------*\
   #BORDER RADIUS
 \*------------------------------------*/
 
-$rounded-sm: 0.125em;
+$roundedSm: 0.125em;
 $rounded: 0.25em;
-$rounded-md: 0.375em;
+$roundedMd: 0.375em;
 

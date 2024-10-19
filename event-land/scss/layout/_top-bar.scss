@@ -1,17 +1,17 @@
 // Variabels (only used in this file)
-$_items-padding: $space-3;
+$_itemsPadding: $space3;
 
 .top-bar {
-  padding: 0 $container-side-padding;
-  color: $secondary-color;
-  background-color: $tertiary-color;
+  padding: 0 $containerSidePadding;
+  color: $secondaryColor;
+  background-color: $tertiaryColor;
   display: flex;
   align-items: center;
   justify-content: space-between;
   text-transform: capitalize;
-  gap: $space-8;
-  font-size: $font-size-sm;
-  font-weight: $font-weight-semibold;
+  gap: $space8;
+  font-size: $fontSizeSm;
+  font-weight: $fontWeightSemibold;
   @include mobile() {
     display: none;
   }
@@ -24,7 +24,7 @@ $_items-padding: $space-3;
     // To make a thin space between the two span elements
     gap: 1px;
     // To give that thin space a color and make it look like a line
-    background-color: $secondary-color-darker;
+    background-color: $secondaryColorDarker;
 
     @include tablet {
       display: none;
@@ -32,8 +32,8 @@ $_items-padding: $space-3;
 
     span {
       // To cover the background color of parentof
-      background-color: $tertiary-color;
-      padding: $_items-padding;
+      background-color: $tertiaryColor;
+      padding: $_itemsPadding;
     }
     span:first-child {
       padding-left: 0;
@@ -42,13 +42,13 @@ $_items-padding: $space-3;
 
   &__actions {
     display: flex;
-    gap: $space-8;
+    gap: $space8;
     & > li {
-      padding: $_items-padding 0;
+      padding: $_itemsPadding 0;
       & > a {
         color: inherit;
         text-decoration: none;
-        transition: all $duration-150;
+        transition: all $duration150;
         &:hover {
           opacity: 70%;
         }

@@ -3,19 +3,19 @@
 .dropdown {
     display: flex;
     align-items: center;
-    gap: $space-3;
+    gap: $space3;
     &__content {
-      background-color: $secondary-color;
-      color: $tertiary-color;
-      border-radius: $rounded-md;
-      box-shadow: $shadow-sm;
-      padding: $space-4;
-      gap: $space-2;
+      background-color: $secondaryColor;
+      color: $tertiaryColor;
+      border-radius: $roundedMd;
+      box-shadow: $shadowSm;
+      padding: $space4;
+      gap: $space2;
       flex-direction: column;
       text-wrap: nowrap;
     }
     &__icon {
-      transition: transform $duration-150;
+      transition: transform $duration150;
     }
   
     &:hover {
