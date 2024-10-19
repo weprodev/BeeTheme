@@ -1,0 +1,30 @@
+// This customizes the generic dropdown component for this project
+
+.dropdown {
+    display: flex;
+    align-items: center;
+    gap: $space-3;
+    &__content {
+      background-color: $secondary-color;
+      color: $tertiary-color;
+      border-radius: $rounded-md;
+      box-shadow: $shadow-sm;
+      padding: $space-4;
+      gap: $space-2;
+      flex-direction: column;
+      text-wrap: nowrap;
+    }
+    &__icon {
+      transition: transform $duration-150;
+    }
+  
+    &:hover {
+      .dropdown__content {
+        display: flex;
+      }
+      .dropdown__icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  
