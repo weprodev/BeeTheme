@@ -1,0 +1,15 @@
+@import "variables";
+
+body {
+  font-family: "Poppins", sans-serif;
+  li {
+    list-style-type: none;
+  }
+  a {
+    text-decoration: none;
+    color: $BLACK;
+  }
+  .hideOnLaptop {
+    display: none;
+  }
+}
