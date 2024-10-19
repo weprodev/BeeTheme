@@ -1,0 +1,16 @@
+.button {
+  border-radius: $roundedFull;
+  padding: $space4 $space6;
+  font-size: $fontSizeSm;
+  transition: all $duration150;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  &--primary {
+    background-color: $primaryColor;
+    color: $secondaryColor;
+  }
+  &:hover {
+    opacity: 70%;
+  }
+}
