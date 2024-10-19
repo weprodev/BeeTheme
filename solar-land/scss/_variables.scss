@@ -1,10 +1,10 @@
 // _variables.scss
 
 // defining colors
-$primary-color: #0dd47e;
-$text-color: #1e1e1e;
-$secondary-color: #8d959d;
-$background-color: #f2f4f4;
+$primaryColor: #0dd47e; // Used for buttons, active states, and highlights.
+$darkTextColor: #1e1e1e; // Used for main text and headings.
+$secondaryTextColor: #8d959d; // Used for descriptions and subtexts.
+$backgroundLightColor: #f2f4f4; // Used for section backgrounds and lighter containers.
 
 // Importing Quicksand font from Google Fonts
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
