@@ -2,13 +2,11 @@
   #FONT
 \*------------------------------------*/
 
-// font weight
-$font-weight-regular: 400;
-$font-weight-medium: 500;
-$font-weight-semibold: 600;
-$font-weight-bold: 700;
+$fontWeightRegular: 400;
+$fontWeightMedium: 500;
+$fontWeightSemibold: 600;
+$fontWeightBold: 700;
 
-// font size
 $font-size-xs: 0.75rem;
 $font-size-sm: 0.875rem;
 $font-size-base: 1rem;
@@ -77,3 +75,4 @@ $shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
 $rounded-sm: 0.125em;
 $rounded: 0.25em;
 $rounded-md: 0.375em;
+
