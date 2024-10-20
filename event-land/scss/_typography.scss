@@ -7,3 +7,15 @@
 body {
   font-family: $primaryFontFamily;
 }
+
+.heading-1 {
+  font-size: $fontSize7Xl;
+  font-weight: $fontWeightBold;
+  text-transform: uppercase;
+  @include laptop{
+    font-size: $fontSize5Xl;
+  }
+  @include mobile{
+    font-size: $fontSize4Xl;
+  }
+}
