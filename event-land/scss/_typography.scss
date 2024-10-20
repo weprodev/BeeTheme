@@ -24,3 +24,15 @@ body {
   color: $tertiaryColor;
   font-weight: $fontWeightSemibold;
 }
+
+.tag{
+  padding: $space2 $space5;
+  border-radius: $roundedFull;
+  font-weight: $fontWeightBold;
+  text-transform: uppercase;
+  text-align: center;
+  &--primary{
+    color: $primaryColor;
+    background-color: $primaryColorLighter;
+  }
+}
