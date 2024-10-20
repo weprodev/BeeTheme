@@ -1,14 +1,33 @@
 .button {
   border-radius: $roundedFull;
   padding: $space4 $space6;
-  font-size: $fontSizeSm;
   transition: all $duration150;
   text-align: center;
+  display: flex;
+  align-items: center;
   cursor: pointer;
   border: none;
+  font-weight: $fontWeightSemibold;
+  @include mobile {
+    padding: $space3 $space4;
+  }
+
   &--primary {
     background-color: $primaryColor;
     color: $secondaryColor;
+  }
+  &--secondary {
+    background-color: $secondaryColor;
+    color: $tertiaryColor;
+    border: 2px solid $tertiaryColor;
+    gap: $space3;
+    .button__icon {
+      transform: rotate(-45deg);
+      font-size: $fontSize3Xl;
+      @include mobile {
+        font-size: $fontSizeXl;
+      }
+    }
   }
   &:hover {
     opacity: 70%;
