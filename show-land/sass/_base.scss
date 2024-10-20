@@ -5,3 +5,22 @@
   padding: 0;
   box-sizing: inherit;
 }
+body {
+  box-sizing: border-box;
+  font-size: 95%;
+
+ 
+
+}
+.background-color{
+
+  background-image: linear-gradient(to right ,$colorSecondary,$colorTertiary , $colorPrimary);
+  height: 100vh;
+ 
+}
+
+.container{
+
+  width: 80rem;
+  margin: 0 auto;
+}
