@@ -1,0 +1,25 @@
+/* ===================================
+   🌐 MAIN IMPORT FILE  
+   Collects and imports all SASS modules
+====================================== */
+
+/* ~~~~~~~~~~~~~~🔹 ABSTRACTS 🔹~~~~~~~~~~~~~~ */
+/* Variables, Mixins, Media Queries, and Functions */
+@import './abstracts/functions';
+@import './abstracts/media-query';
+@import './abstracts/mixins';
+@import './abstracts/variables';
+
+/* ~~~~~~~~~~~~~~🔸 BASE 🔸~~~~~~~~~~~~~~ */
+/* Global styles, Resets, and Utilities */
+@import './base/animation';
+@import './base/reset';
+@import './base/utilities';
+
+/* ~~~~~~~~~~~~~~🟢 COMPONENTS 🟢~~~~~~~~~~~~~~ */
+/* Reusable components and UI elements */
+@import './components/button';
+
+/* ~~~~~~~~~~~~~~⚙️ LAYOUT ⚙️~~~~~~~~~~~~~~ */
+/* Grid systems, structure, and layout styles */
+@import './layout/grid';
