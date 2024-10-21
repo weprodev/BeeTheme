@@ -1,8 +1,10 @@
+@use "sass:list";
+
 .button {
   border-radius: $roundedFull;
-  padding: $space4 $space6;
+  padding: list.nth($spaces, 4) list.nth($spaces, 6);
   font-size: $fontSizeSm;
-  transition: all $duration150;
+  transition: all map-get($durations, 150);
   text-align: center;
   cursor: pointer;
   border: none;

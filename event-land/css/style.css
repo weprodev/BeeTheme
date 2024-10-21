@@ -1,5 +1,5 @@
 /*------------------------------------*\
-  #TYPOGRAPHY & VARIABLES & MEDIA QUERIES 
+  #ABSTRACTS
 \*------------------------------------*/
 /*------------------------------------*\
   #FONT
@@ -265,6 +265,10 @@ a {
 /*------------------------------------*\
   #COMPONENTS
 \*------------------------------------*/
+/*=========================================================
+*********   Generic DropDown Component
+*******     Whenever .dropdown is hovered .dropdown__content appears
+*/
 .dropdown {
   position: relative;
 }
@@ -278,6 +282,10 @@ a {
   top: 100%;
 }
 
+/*=========================================================
+*********  This customizes the generic dropdown for this project
+*******  
+*/
 .dropdown {
   display: flex;
   align-items: center;
