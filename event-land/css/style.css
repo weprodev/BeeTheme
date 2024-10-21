@@ -1,5 +1,5 @@
 /*------------------------------------*\
-  #TYPOGRAPHY & VARIABLES & MEDIA QUERIES 
+  #ABSTRACTS
 \*------------------------------------*/
 /*------------------------------------*\
   #FONT
@@ -200,6 +200,10 @@ a {
   top: 100%;
 }
 
+/*=========================================================
+*********  This customizes the generic dropdown for this project
+*******  
+*/
 .dropdown {
   display: flex;
   align-items: center;
