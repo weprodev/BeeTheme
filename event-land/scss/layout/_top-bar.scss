@@ -1,6 +1,3 @@
-// Variabels (only used in this file)
-$_itemsPadding: $space3;
-
 .top-bar {
   padding: 0 $containerSidePadding;
   color: $secondaryColor;
@@ -31,9 +28,9 @@ $_itemsPadding: $space3;
     }
 
     span {
-      // To cover the background color of parentof
+      // To cover the background color of parent
       background-color: $tertiaryColor;
-      padding: $_itemsPadding;
+      padding: $space3;
     }
     span:first-child {
       padding-left: 0;
@@ -44,7 +41,7 @@ $_itemsPadding: $space3;
     display: flex;
     gap: $space8;
     & > li {
-      padding: $_itemsPadding 0;
+      padding: $space3 0;
       & > a {
         color: inherit;
         text-decoration: none;
