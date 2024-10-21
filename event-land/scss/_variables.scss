@@ -1,3 +1,5 @@
+@use "sass:list";
+
 /*------------------------------------*\
   #COLORS
 \*------------------------------------*/
@@ -14,3 +16,8 @@ $tertiaryColor: #24222c;
 
 $primaryFontFamily: "Inter", sans-serif;
 
+/*------------------------------------*\
+  #SPACE
+\*------------------------------------*/
+
+$containerSidePadding: list.nth($spaces, 12);
