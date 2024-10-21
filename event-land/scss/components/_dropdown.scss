@@ -1,21 +1,22 @@
 // This customizes the generic dropdown component for this project
+@use "sass:list";
 
 .dropdown {
     display: flex;
     align-items: center;
-    gap: $space3;
+    gap: list.nth($spaces, 3);
     &__content {
       background-color: $secondaryColor;
       color: $tertiaryColor;
       border-radius: $roundedMd;
       box-shadow: $shadowSm;
-      padding: $space4;
-      gap: $space2;
+      padding: list.nth($spaces, 4);
+      gap: list.nth($spaces, 2);
       flex-direction: column;
       text-wrap: nowrap;
     }
     &__icon {
-      transition: transform $duration150;
+      transition: transform map-get($durations , 150);
     }
   
     &:hover {
