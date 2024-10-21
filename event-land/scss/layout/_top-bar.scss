@@ -1,5 +1,4 @@
-// Variabels (only used in this file)
-$_itemsPadding: $space3;
+@use "sass:list";
 
 .top-bar {
   padding: 0 $containerSidePadding;
@@ -9,7 +8,7 @@ $_itemsPadding: $space3;
   align-items: center;
   justify-content: space-between;
   text-transform: capitalize;
-  gap: $space8;
+  gap: list.nth($spaces, 8);
   font-size: $fontSizeSm;
   font-weight: $fontWeightSemibold;
   @include mobile() {
@@ -31,9 +30,9 @@ $_itemsPadding: $space3;
     }
 
     span {
-      // To cover the background color of parentof
+      // To cover the background color of parent
       background-color: $tertiaryColor;
-      padding: $_itemsPadding;
+      padding: list.nth($spaces, 3);
     }
     span:first-child {
       padding-left: 0;
@@ -42,13 +41,13 @@ $_itemsPadding: $space3;
 
   &__actions {
     display: flex;
-    gap: $space8;
+    gap: list.nth($spaces, 8);
     & > li {
-      padding: $_itemsPadding 0;
+      padding: list.nth($spaces, 3) 0;
       & > a {
         color: inherit;
         text-decoration: none;
-        transition: all $duration150;
+        transition: all map-get($durations, 150);
         &:hover {
           opacity: 70%;
         }

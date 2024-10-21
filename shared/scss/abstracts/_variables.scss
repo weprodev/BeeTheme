@@ -38,36 +38,26 @@ $kappa: 25em;
 /*------------------------------------*\
   #SPACES (padding & margin & gap) 
 \*------------------------------------*/
-$space1: calc(0.25em * 1);
-$space2: calc(0.25em * 2);
-$space3: calc(0.25em * 3);
-$space4: calc(0.25em * 4);
-$space5: calc(0.25em * 5);
-$space6: calc(0.25em * 6);
-$space7: calc(0.25em * 7);
-$space8: calc(0.25em * 8);
-$space9: calc(0.25em * 9);
-$space10: calc(0.25em * 10);
-$space11: calc(0.25em * 11);
-$space12: calc(0.25em * 12);
-$space13: calc(0.25em * 13);
-$space14: calc(0.25em * 14);
-$space15: calc(0.25em * 15);
 
-// To be continued...
+$spaces: [];
+@for $i from 1 through 16 {
+  $spaces: append($spaces, #{0.25 * $i}em);
+}
 
 /*------------------------------------*\
   #TRANSITION DURATION
 \*------------------------------------*/
 
-$duration75: 75ms;
-$duration100: 100ms;
-$duration150: 150ms;
-$duration200: 200ms;
-$duration300: 300ms;
-$duration500: 500ms;
-$duration700: 700ms;
-$duration1000: 1000ms;
+$durations: (
+  75: 75ms,
+  100: 100ms,
+  150: 150ms,
+  200: 200ms,
+  300: 300ms,
+  500: 500ms,
+  700: 700ms,
+  1000: 1000ms,
+);
 
 /*------------------------------------*\
   #BOX SHADOW

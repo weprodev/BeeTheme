@@ -1,13 +1,15 @@
+@use "sass:list";
+
 .main-navigation {
   display: flex;
   align-items: center;
-  gap: $space12;
-  padding: $space4 $containerSidePadding;
+  gap: list.nth($spaces, 12);
+  padding: list.nth($spaces, 4) $containerSidePadding;
   border-bottom: 2px solid $secondaryColorDarker;
   font-weight: $fontWeightSemibold;
   color: $tertiaryColor;
   @include mini_laptop {
-    padding: $space4;
+    padding: list.nth($spaces, 4);
     justify-content: space-between;
     font-size: $fontSizeXl;
   }
@@ -32,9 +34,9 @@
       width: 100%;
       flex-direction: column;
       align-items: start;
-      padding: $space4;
+      padding: list.nth($spaces, 4);
       min-height: 100vh;
-      gap: $space12;
+      gap: list.nth($spaces, 12);
 
       &.open {
         display: flex;
@@ -51,14 +53,14 @@
 
   &__menu {
     display: flex;
-    gap: $space8;
+    gap: list.nth($spaces, 8);
     @include mini_laptop {
       flex-direction: column;
     }
 
     & > li {
       & > a {
-        transition: all $duration150;
+        transition: all map-get($durations, 150);
         &:hover {
           opacity: 70%;
         }
