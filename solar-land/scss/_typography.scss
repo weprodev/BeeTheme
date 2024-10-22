@@ -1,40 +1,34 @@
-/*------------------------------------*\
-  #COLORS
-\*------------------------------------*/
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 .quicksand-light {
-  font-family: "Quicksand", sans-serif;
+  font-family: $primaryFontFamily, sans-serif;
   font-weight: 300;
   font-optical-sizing: auto;
   font-style: normal;
 }
 
 .quicksand-regular {
-  font-family: "Quicksand", sans-serif;
+  font-family: $primaryFontFamily, sans-serif;
   font-weight: 400;
   font-optical-sizing: auto;
   font-style: normal;
 }
 
 .quicksand-medium {
-  font-family: "Quicksand", sans-serif;
+  font-family: $primaryFontFamily, sans-serif;
   font-weight: 500;
   font-optical-sizing: auto;
   font-style: normal;
 }
 
 .quicksand-semibold {
-  font-family: "Quicksand", sans-serif;
+  font-family: $primaryFontFamily, sans-serif;
   font-weight: 600;
   font-optical-sizing: auto;
   font-style: normal;
 }
 
 .quicksand-bold {
-  font-family: "Quicksand", sans-serif;
+  font-family: $primaryFontFamily, sans-serif;
   font-weight: 700;
   font-optical-sizing: auto;
   font-style: normal;
 }
-
-/*# sourceMappingURL=style.css.map */
