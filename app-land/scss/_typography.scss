@@ -1,0 +1,35 @@
+body {
+  font-family: "Poppins", sans-serif;
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  a:hover {
+    transition: 0.5s;
+    color: gray;
+  }
+
+  .hideOnLaptop {
+    display: none;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  button {
+    width: 7rem;
+    height: 3rem;
+    background: $vibrantGreen;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+
+    &:hover {
+      transition: 0.3s ease-in-out;
+      background: $limeGreen;
+    }
+  }
+}
