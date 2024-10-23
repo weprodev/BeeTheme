@@ -5,7 +5,7 @@
   align-items: center;
   gap: list.nth($spaces, 12);
   padding: list.nth($spaces, 4) $containerSidePadding;
-  border-bottom: 2px solid $secondaryColorDarker;
+  border-bottom: $primaryBorder;
   font-weight: $fontWeightSemibold;
   color: $tertiaryColor;
   @include mini_laptop {
