@@ -20,11 +20,25 @@ body {
   @include mobile{
     font-size: $fontSize4Xl;
   }
+  
+  &--primary{
+    color: $tertiaryColor;
+  }
+  &--secondary{
+    color: $secondaryColor;
+  }
 }
 
 .paragraph {
   color: $tertiaryColor;
   font-weight: $fontWeightSemibold;
+  
+  &--primary{
+    color: $tertiaryColor;
+  }
+  &--secondary{
+    color: $secondaryColorDarker;
+  }
 }
 
 .tag{
