@@ -27,7 +27,7 @@
   &__reviews {
     align-self: stretch;
     border-radius: $rounded3Xl;
-    border: 2px solid $secondaryColorDarker;
+    border:$primaryBorder;
     padding: list.nth($spaces, 8);
     margin-top: list.nth($spaces, 15);
     display: flex;
