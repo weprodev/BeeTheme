@@ -37,4 +37,60 @@
   font-style: normal;
 }
 
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.header .logo img {
+  height: 40px;
+  width: auto;
+}
+.header .navigation ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+.header .navigation ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.header .navigation ul li a:hover {
+  color: #00a870;
+}
+.header .action-buttons {
+  display: flex;
+  gap: 1rem;
+}
+.header .action-buttons .login {
+  background: none;
+  border: 1px solid #ccc;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.header .action-buttons .login:hover {
+  background-color: #f0f0f0;
+}
+.header .action-buttons .get-in-touch {
+  background-color: #00a870;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.header .action-buttons .get-in-touch:hover {
+  background-color: #008e5b;
+}
+
 /*# sourceMappingURL=style.css.map */
