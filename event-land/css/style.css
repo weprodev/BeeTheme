@@ -83,16 +83,34 @@
   #SPACE
 \*------------------------------------*/
 /*------------------------------------*\
+  #BORDER
+\*------------------------------------*/
+/*------------------------------------*\
   #FORNT
 \*------------------------------------*/
 body {
   font-family: "Inter", sans-serif;
 }
 
-.heading-1 {
-  font-size: 4.5em;
+.heading-1,
+.heading-2,
+.heading-3 {
   font-weight: 700;
   text-transform: uppercase;
+}
+.heading-1--primary,
+.heading-2--primary,
+.heading-3--primary {
+  color: #24222c;
+}
+.heading-1--secondary,
+.heading-2--secondary,
+.heading-3--secondary {
+  color: #ffffff;
+}
+
+.heading-1 {
+  font-size: 4.5em;
 }
 @media screen and (max-width: 75em) {
   .heading-1 {
@@ -105,9 +123,43 @@ body {
   }
 }
 
+.heading-2 {
+  font-size: 3em;
+}
+@media screen and (max-width: 75em) {
+  .heading-2 {
+    font-size: 2.25em;
+  }
+}
+@media screen and (max-width: 40em) {
+  .heading-2 {
+    font-size: 1.875em;
+  }
+}
+
+.heading-3 {
+  font-size: 2.25em;
+}
+@media screen and (max-width: 75em) {
+  .heading-3 {
+    font-size: 1.875em;
+  }
+}
+@media screen and (max-width: 40em) {
+  .heading-3 {
+    font-size: 1.5em;
+  }
+}
+
 .paragraph {
   color: #24222c;
   font-weight: 600;
+}
+.paragraph--primary {
+  color: #24222c;
+}
+.paragraph--secondary {
+  color: #f1f1f1;
 }
 
 .tag {
@@ -120,6 +172,17 @@ body {
 .tag--primary {
   color: #50cb8b;
   background-color: #effff7;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+.title__arrow {
+  transform: rotate(-45deg);
 }
 
 /*------------------------------------*\
@@ -383,6 +446,82 @@ a {
   border-radius: 1em;
 }
 
+.about-section {
+  display: flex;
+  flex-direction: column;
+  background-color: #effff7;
+  padding: 3em;
+  gap: 3em;
+}
+.about-section__top {
+  display: flex;
+  align-items: flex-start;
+  gap: 2em;
+  justify-content: space-between;
+}
+@media screen and (max-width: 64em) {
+  .about-section__top {
+    flex-direction: column;
+  }
+}
+.about-section__mid-title {
+  flex-basis: 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+.about-section__bottom {
+  display: flex;
+  gap: 2em;
+}
+@media screen and (max-width: 64em) {
+  .about-section__bottom {
+    flex-direction: column;
+  }
+}
+.about-section__feature {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding: 2em;
+  border-radius: 1.5em;
+}
+@media screen and (max-width: 64em) {
+  .about-section__feature {
+    gap: 1.5em;
+    padding: 1.5em;
+  }
+}
+.about-section__feature--polling-vote {
+  flex-basis: 30%;
+  background-color: #f1f1f1;
+}
+.about-section__feature--virtual-events {
+  flex-basis: 70%;
+  background-color: #24222c;
+  background: linear-gradient(16deg, #24222c 80%, #50cb8b 120%);
+}
+.about-section__feature--virtual-events p {
+  width: 75%;
+}
+@media screen and (max-width: 64em) {
+  .about-section__feature--virtual-events p {
+    width: auto;
+  }
+}
+.about-section__feature img {
+  border-radius: 1.5em 1.5em 0 0;
+  margin: auto 0 -2em 0;
+  height: 40rem;
+  object-fit: cover;
+}
+@media screen and (max-width: 64em) {
+  .about-section__feature img {
+    height: 20rem;
+    margin: auto 0 -1.5em 0;
+  }
+}
+
 /*------------------------------------*\
   #COMPONENTS
 \*------------------------------------*/
@@ -401,6 +540,16 @@ a {
   position: absolute;
   z-index: 1;
   top: 100%;
+}
+
+/*=========================================================
+*********   Generic Button Component
+*******  
+*/
+.button {
+  text-align: center;
+  cursor: pointer;
+  border: none;
 }
 
 /*=========================================================
@@ -432,16 +581,17 @@ a {
   transform: rotate(180deg);
 }
 
+/*=========================================================
+*********  This customizes the generic button for this project
+*******  
+*/
 .button {
   border-radius: 9999px;
   padding: 1em 1.5em;
   font-size: 0.875em;
   transition: all 150ms;
-  text-align: center;
   display: flex;
   align-items: center;
-  cursor: pointer;
-  border: none;
   font-weight: 600;
 }
 @media screen and (max-width: 40em) {
