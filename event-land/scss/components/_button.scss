@@ -1,3 +1,8 @@
+/*=========================================================
+*********  This customizes the generic button for this project
+*******  
+*/
+
 @use "sass:list";
 
 .button {
@@ -5,9 +10,6 @@
   padding: list.nth($spaces, 4) list.nth($spaces, 6);
   font-size: $fontSizeSm;
   transition: all map-get($durations, 150);
-  text-align: center;
-  cursor: pointer;
-  border: none;
   &--primary {
     background-color: $primaryColor;
     color: $secondaryColor;
