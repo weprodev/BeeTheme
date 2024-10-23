@@ -76,3 +76,15 @@ body {
     background-color: $primaryColorLighter;
   }
 }
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: list.nth($spaces, 2);
+  font-size: $fontSize2Xl;
+  font-weight: $fontWeightSemibold;
+
+  &__arrow {
+    transform: rotate(-45deg);
+  }
+}
