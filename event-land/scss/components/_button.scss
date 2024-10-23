@@ -1,3 +1,8 @@
+/*=========================================================
+*********  This customizes the generic button for this project
+*******  
+*/
+
 @use "sass:list";
 
 .button {
@@ -5,11 +10,8 @@
   padding: list.nth($spaces, 4) list.nth($spaces, 6);
   font-size: $fontSizeSm;
   transition: all map-get($durations, 150);
-  text-align: center;
   display: flex;
   align-items: center;
-  cursor: pointer;
-  border: none;
   font-weight: $fontWeightSemibold;
   @include mobile {
     padding: list.nth($spaces, 3) list.nth($spaces, 4);
