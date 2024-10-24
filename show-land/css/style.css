@@ -4,6 +4,78 @@
 /*------------------------------------*\
   #FONTS
 \*------------------------------------*/
+.btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem 4rem;
+  display: inline-block;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+.btn:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+.btn:active {
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+.btn-buttom {
+  background-image: linear-gradient(to right, #364fc7, #6741d9, #37b24d);
+  color: #fff;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+.nav-cta {
+  padding: 1rem 2.4rem !important;
+  align-items: center;
+}
+
+.main-nav__list {
+  display: flex;
+  padding-top: 1rem;
+  gap: 1.5rem;
+  list-style: none;
+  align-items: center;
+}
+.main-nav__link:link, .main-nav__link:visited {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  padding-top: 0.8rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: #fff;
+  font-size: 95%;
+}
+
+.background-color {
+  background-image: linear-gradient(to right, #364fc7, #6741d9, #37b24d);
+  height: 100vh;
+}
+
+.container {
+  width: 80rem;
+  margin: 0 auto;
+}
+
 *,
 *::before,
 *::after {
