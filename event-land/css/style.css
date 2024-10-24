@@ -83,6 +83,9 @@
   #SPACE
 \*------------------------------------*/
 /*------------------------------------*\
+  #BORDER
+\*------------------------------------*/
+/*------------------------------------*\
   #FORNT
 \*------------------------------------*/
 body {
@@ -213,7 +216,7 @@ a {
   .main-navigation__menu-button-divider {
     display: none;
     justify-content: flex-start;
-    position: absolute;
+    position: fixed;
     top: 0;
     z-index: 2;
     left: 0;
@@ -283,6 +286,16 @@ a {
 }
 
 /*=========================================================
+*********   Generic Button Component
+*******  
+*/
+.button {
+  text-align: center;
+  cursor: pointer;
+  border: none;
+}
+
+/*=========================================================
 *********  This customizes the generic dropdown for this project
 *******  
 */
@@ -311,14 +324,15 @@ a {
   transform: rotate(180deg);
 }
 
+/*=========================================================
+*********  This customizes the generic button for this project
+*******  
+*/
 .button {
   border-radius: 9999px;
   padding: 1em 1.5em;
   font-size: 0.875em;
   transition: all 150ms;
-  text-align: center;
-  cursor: pointer;
-  border: none;
 }
 .button--primary {
   background-color: #50cb8b;
