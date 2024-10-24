@@ -6,10 +6,6 @@
 ***         
 */
 /*--------------------------------
-***  SET DIRECTION BEFORE ANYTHING
-**   
-*/
-/*--------------------------------
 ***  IMPORT GENERAL AND IMPORTANT
 **   VARIABLES
 */
@@ -27,9 +23,101 @@
 **  flatuicolors.com/palette/defo
 */
 /*--------------------------------
-***  
-**   appLand
+***  SET DIRECTION BEFORE ANYTHING
+**   
 */
+body {
+  font-family: "Poppins", sans-serif;
+}
+body a {
+  text-decoration: none;
+  color: black;
+}
+body a:hover {
+  transition: 0.5s;
+  color: gray;
+}
+body .hideOnLaptop {
+  display: none;
+}
+body li {
+  list-style-type: none;
+}
+body button {
+  width: 7rem;
+  height: 3rem;
+  background: rgb(84, 234, 84);
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+body button:hover {
+  transition: 0.3s ease-in-out;
+  background: rgb(71, 198, 71);
+}
+
+/*--------------------------------
+***  
+**   Header
+*/
+.header .mainHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.header .mainHeader nav ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  list-style: none;
+}
+.header .mainHeader nav ul li {
+  margin: 0 15px;
+}
+.header .hiddenHeader {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 13;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: none;
+}
+.header .hiddenHeader .logo {
+  height: 2rem;
+  width: 100%;
+}
+.header .hiddenHeader nav {
+  top: 2rem;
+  position: relative;
+}
+.header .hiddenHeader nav ul li {
+  height: 3rem;
+  width: 100%;
+}
+@media screen and (max-width: 576px) {
+  .header .hideOnLaptop {
+    display: block;
+  }
+  .header .hideOnMobile {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header .hideOnLaptop {
+    display: block;
+  }
+  .header .hideOnMobile {
+    display: none;
+  }
+}
+
 /*--------------------------------
 ***  shared files 
 **  
@@ -48,7 +136,7 @@
 */
 /*--------------------------------
 ***  GENERAL DIFINITIONS
-**	 SUSY , CSS3 , CLEARFIX
+**	 CSS3 , CLEARFIX
 */
 .container {
   width: 90%;
