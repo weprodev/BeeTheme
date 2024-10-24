@@ -4,33 +4,6 @@
 /*------------------------------------*\
   #FONTS
 \*------------------------------------*/
-.btn:link, .btn:visited {
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 1rem 4rem;
-  display: inline-block;
-  border-radius: 8px;
-  transition: all 0.2s;
-}
-.btn:hover {
-  transform: translateY(-0.3rem);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-}
-.btn:active {
-  transform: translateY(-0.1rem);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-}
-.btn-buttom {
-  background-image: linear-gradient(to right, #364fc7, #6741d9, #37b24d);
-  color: #fff;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
-}
-
-.nav-cta {
-  padding: 1rem 2.4rem !important;
-  align-items: center;
-}
-
 .main-nav__list {
   display: flex;
   padding-top: 1rem;
@@ -76,6 +49,87 @@ body {
   margin: 0 auto;
 }
 
+.text-box {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.header-primary__sub {
+  display: block;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+.header-primary__main {
+  display: block;
+  font-size: 5rem;
+  margin-bottom: -3rem;
+}
+.header-primary_main__1 {
+  display: block;
+  font-size: 5rem;
+}
+
+.text-img {
+  outline-offset: 2rem;
+  outline: 2px solid #777;
+  border-radius: 10px;
+}
+.text-img__1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30rem;
+  gap: 1rem;
+}
+.text-img__2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.text-img__box {
+  border-radius: 9px;
+}
+
+.border__1 {
+  border-bottom-left-radius: 0;
+}
+.border__2 {
+  border-bottom-right-radius: 0;
+}
+
+.btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem 4rem;
+  display: inline-block;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+.btn:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+.btn:active {
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+.btn-buttom {
+  background-image: linear-gradient(to right, #364fc7, #6741d9, #37b24d);
+  color: #fff;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+.nav-cta {
+  padding: 1rem 2.4rem !important;
+  align-items: center;
+}
+
 *,
 *::before,
 *::after {
@@ -102,7 +156,7 @@ picture,
 svg,
 video {
   display: block;
-  width: 100%;
+ 
 }
 
 a {
