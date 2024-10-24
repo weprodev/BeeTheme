@@ -6,6 +6,13 @@
 */
 
     /*--------------------------------
+    ***  shared files 
+    **  
+    */   
+    @import "../../shared/scss/shared.scss";
+
+
+    /*--------------------------------
     ***  IMPORT GENERAL AND IMPORTANT
     **   VARIABLES
     */
@@ -18,20 +25,22 @@
     */
 
     @import "typography";
+
+    /*--------------------------------
+    ***  
+    **   Buttons
+    */   
+
+    // @import "button";
+    @import "header";
+
         
     /*--------------------------------
     ***  
     **   Header
     */   
 
-    @import "_header.scss";
-    
-    /*--------------------------------
-    ***  shared files 
-    **  
-    */   
-
-    @import "../../shared/scss/shared.scss";
+    @import "header";
 
 /*
 ***         

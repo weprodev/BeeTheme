@@ -1,5 +1,9 @@
 .header {
-  .mainHeader {
+  .hide-on-laptop {
+    display: none;
+  }
+
+  &__main {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -16,7 +20,8 @@
       }
     }
   }
-  .hiddenHeader {
+
+  &__hidden {
     position: fixed;
     top: 0;
     right: 0;
@@ -35,7 +40,7 @@
       width: 100%;
     }
 
-    nav {
+    &--nav {
       top: 2rem;
       position: relative;
 
@@ -48,20 +53,22 @@
     }
   }
 
-  @media screen and (max-width: 576px) {
-    .hideOnLaptop {
+  // Responsive
+
+  @include mobile {
+    .hide-on-laptop {
       display: block;
     }
-    .hideOnMobile {
+    .hide-on-mobile {
       display: none;
     }
   }
 
-  @media screen and (max-width: 768px) {
-    .hideOnLaptop {
+  @include retinaMobile {
+    .hide-on-laptop {
       display: block;
     }
-    .hideOnMobile {
+    .hide-on-mobile {
       display: none;
     }
   }

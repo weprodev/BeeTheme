@@ -6,119 +6,6 @@
 ***         
 */
 /*--------------------------------
-***  IMPORT GENERAL AND IMPORTANT
-**   VARIABLES
-*/
-/*========================================================================================
-*********   ALL OF THE VARIABLES TYPE 
-*******     COLORS 
-*****       GRIDS
-***         
-*/
-/*========================================================================================*\
-*----------------------------               COLORE              ----------------------------        
-\*========================================================================================*/
-/*--------------------------------
-*** FLAT UI COLORS 
-**  flatuicolors.com/palette/defo
-*/
-/*--------------------------------
-***  SET DIRECTION BEFORE ANYTHING
-**   
-*/
-body {
-  font-family: "Poppins", sans-serif;
-}
-body a {
-  text-decoration: none;
-  color: black;
-}
-body a:hover {
-  transition: 0.5s;
-  color: gray;
-}
-body .hideOnLaptop {
-  display: none;
-}
-body li {
-  list-style-type: none;
-}
-body button {
-  width: 7rem;
-  height: 3rem;
-  background: rgb(84, 234, 84);
-  border: none;
-  border-radius: 2rem;
-  cursor: pointer;
-}
-body button:hover {
-  transition: 0.3s ease-in-out;
-  background: rgb(71, 198, 71);
-}
-
-/*--------------------------------
-***  
-**   Header
-*/
-.header .mainHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-}
-.header .mainHeader nav ul {
-  padding: 0;
-  margin: 0;
-  display: flex;
-  list-style: none;
-}
-.header .mainHeader nav ul li {
-  margin: 0 15px;
-}
-.header .hiddenHeader {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100vh;
-  width: 250px;
-  z-index: 13;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  background-color: rgba(255, 255, 255, 0.2);
-  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  display: none;
-}
-.header .hiddenHeader .logo {
-  height: 2rem;
-  width: 100%;
-}
-.header .hiddenHeader nav {
-  top: 2rem;
-  position: relative;
-}
-.header .hiddenHeader nav ul li {
-  height: 3rem;
-  width: 100%;
-}
-@media screen and (max-width: 576px) {
-  .header .hideOnLaptop {
-    display: block;
-  }
-  .header .hideOnMobile {
-    display: none;
-  }
-}
-@media screen and (max-width: 768px) {
-  .header .hideOnLaptop {
-    display: block;
-  }
-  .header .hideOnMobile {
-    display: none;
-  }
-}
-
-/*--------------------------------
 ***  shared files 
 **  
 */
@@ -190,6 +77,34 @@ body button:hover {
 \*------------------------------------*/
 /* ~~~~~~~~~~~~~~🔸 BASE 🔸~~~~~~~~~~~~~~ */
 /* Global styles, Resets, and Utilities */
+li {
+  list-style-type: none;
+}
+
+.card {
+  width: 300px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.card__header {
+  background-color: #3498db;
+  color: #fff;
+  padding: 16px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+.card__content {
+  padding: 16px;
+}
+.card__footer {
+  background-color: #f4f4f4;
+  padding: 8px;
+  text-align: center;
+}
+
 /* ~~~~~~~~~~~~~~🟢 COMPONENTS 🟢~~~~~~~~~~~~~~ */
 /* Reusable components and UI elements */
 /* ~~~~~~~~~~~~~~⚙️ LAYOUT ⚙️~~~~~~~~~~~~~~ */
@@ -406,6 +321,169 @@ body button:hover {
     float: left;
   }
 }
+/*--------------------------------
+***  IMPORT GENERAL AND IMPORTANT
+**   VARIABLES
+*/
+/*========================================================================================
+*********   ALL OF THE VARIABLES TYPE 
+*******     COLORS 
+*****       GRIDS
+***         
+*/
+/*========================================================================================*\
+*----------------------------               COLORE              ----------------------------        
+\*========================================================================================*/
+/*--------------------------------
+*** FLAT UI COLORS 
+**  flatuicolors.com/palette/defo
+*/
+/*--------------------------------
+***  SET DIRECTION BEFORE ANYTHING
+**   
+*/
+body {
+  font-family: "Poppins", sans-serif;
+}
+body a {
+  text-decoration: none;
+  color: black;
+}
+body a:hover {
+  transition: 0.5s;
+  color: gray;
+}
+
+/*--------------------------------
+***  
+**   Buttons
+*/
+.header .hide-on-laptop {
+  display: none;
+}
+.header__main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.header__main nav ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  list-style: none;
+}
+.header__main nav ul li {
+  margin: 0 15px;
+}
+.header__hidden {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 13;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: none;
+}
+.header__hidden .logo {
+  height: 2rem;
+  width: 100%;
+}
+.header__hidden--nav {
+  top: 2rem;
+  position: relative;
+}
+.header__hidden--nav ul li {
+  height: 3rem;
+  width: 100%;
+}
+@media screen and (max-width: 40em) {
+  .header .hide-on-laptop {
+    display: block;
+  }
+  .header .hide-on-mobile {
+    display: none;
+  }
+}
+@media screen and (min-width: 31.25em) and (max-width: 47.9375em) {
+  .header .hide-on-laptop {
+    display: block;
+  }
+  .header .hide-on-mobile {
+    display: none;
+  }
+}
+
+/*--------------------------------
+***  
+**   Header
+*/
+.header .hide-on-laptop {
+  display: none;
+}
+.header__main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.header__main nav ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  list-style: none;
+}
+.header__main nav ul li {
+  margin: 0 15px;
+}
+.header__hidden {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 13;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: none;
+}
+.header__hidden .logo {
+  height: 2rem;
+  width: 100%;
+}
+.header__hidden--nav {
+  top: 2rem;
+  position: relative;
+}
+.header__hidden--nav ul li {
+  height: 3rem;
+  width: 100%;
+}
+@media screen and (max-width: 40em) {
+  .header .hide-on-laptop {
+    display: block;
+  }
+  .header .hide-on-mobile {
+    display: none;
+  }
+}
+@media screen and (min-width: 31.25em) and (max-width: 47.9375em) {
+  .header .hide-on-laptop {
+    display: block;
+  }
+  .header .hide-on-mobile {
+    display: none;
+  }
+}
+
 /*
 ***         
 *****       

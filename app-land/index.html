@@ -25,39 +25,41 @@
   </head>
 
   <body>
+    <!-- HEADER -->
+     
     <div class="header">
-      <div class="mainHeader">
-        <div class="logo">AppLand</div>
+      <div class="header__main">
+        <div class="header__logo">AppLand</div>
 
-        <nav class="nav">
+        <nav class="header__nav">
           <ul>
-            <li class="hideOnLaptop" onclick="showSidebar()">
+            <li class="hide-on-laptop" onclick="showSidebar()">
               <a href="#"><i class="fa-solid fa-bars-staggered"></i></a>
             </li>
-            <li class="hideOnMobile"><a href="#">Home</a></li>
-            <li class="hideOnMobile"><a href="#">features</a></li>
-            <li class="hideOnMobile"><a href="#">pricing</a></li>
-            <li class="hideOnMobile"><a href="#">testimonials</a></li>
+            <li class="hide-on-mobile"><a href="#">Home</a></li>
+            <li class="hide-on-mobile"><a href="#">features</a></li>
+            <li class="hide-on-mobile"><a href="#">pricing</a></li>
+            <li class="hide-on-mobile"><a href="#">testimonials</a></li>
           </ul>
         </nav>
 
-        <div class="ctaButton hideOnMobile">
-          <button>Sign in</button>
+        <div class="cta__button hide-on-mobile">
+          <button class="cta__button--button">Sign in</button>
         </div>
       </div>
 
-      <div class="hiddenHeader">
-        <nav class="nav">
+      <div class="header__hidden">
+        <nav class="header__hidden--nav">
           <ul>
             <li class="" onclick="closeSidebar()">
               <a href="#"><i class="fa-solid fa-x"></i></a>
             </li>
-            <li class=""><a href="#">Home</a></li>
-            <li class=""><a href="#">features</a></li>
-            <li class=""><a href="#">pricing</a></li>
-            <li class=""><a href="#">testimonials</a></li>
-            <div class="ctaButton">
-              <button>Sign in</button>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">features</a></li>
+            <li><a href="#">pricing</a></li>
+            <li><a href="#">testimonials</a></li>
+            <div class="cta__button">
+              <button class="cta__button--button">Sign in</button>
             </div>
           </ul>
         </nav>
