@@ -1,8 +1,15 @@
 .cta__button {
   &--button {
+    width: 7rem;
+    height: 3rem;
+    background: rgb(084, 234, 084);
     border: none;
     border-radius: 2rem;
     cursor: pointer;
-    transition: 0.3s ease-in-out;
+
+    &:hover {
+      transition: 0.3s ease-in-out;
+      background: rgb(071, 198, 071);
+    }
   }
 }
