@@ -107,6 +107,19 @@ li {
 
 /* ~~~~~~~~~~~~~~🟢 COMPONENTS 🟢~~~~~~~~~~~~~~ */
 /* Reusable components and UI elements */
+.cta__button--button {
+  width: 7rem;
+  height: 3rem;
+  background: rgb(84, 234, 84);
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+.cta__button--button:hover {
+  transition: 0.3s ease-in-out;
+  background: rgb(71, 198, 71);
+}
+
 /* ~~~~~~~~~~~~~~⚙️ LAYOUT ⚙️~~~~~~~~~~~~~~ */
 /* Grid systems, structure, and layout styles */
 /*=======================
@@ -356,72 +369,7 @@ body a:hover {
 
 /*--------------------------------
 ***  
-**   Buttons
-*/
-.header .hide-on-laptop {
-  display: none;
-}
-.header__main {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-}
-.header__main nav ul {
-  padding: 0;
-  margin: 0;
-  display: flex;
-  list-style: none;
-}
-.header__main nav ul li {
-  margin: 0 15px;
-}
-.header__hidden {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100vh;
-  width: 250px;
-  z-index: 13;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  background-color: rgba(255, 255, 255, 0.2);
-  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  display: none;
-}
-.header__hidden .logo {
-  height: 2rem;
-  width: 100%;
-}
-.header__hidden--nav {
-  top: 2rem;
-  position: relative;
-}
-.header__hidden--nav ul li {
-  height: 3rem;
-  width: 100%;
-}
-@media screen and (max-width: 40em) {
-  .header .hide-on-laptop {
-    display: block;
-  }
-  .header .hide-on-mobile {
-    display: none;
-  }
-}
-@media screen and (min-width: 31.25em) and (max-width: 47.9375em) {
-  .header .hide-on-laptop {
-    display: block;
-  }
-  .header .hide-on-mobile {
-    display: none;
-  }
-}
-
-/*--------------------------------
-***  
-**   Header
+**   HEADER
 */
 .header .hide-on-laptop {
   display: none;
