@@ -1,6 +1,24 @@
 /*------------------------------------*\
-  #TYPOGRAPHY & VARIABLES
+  #ABSTRACTS
 \*------------------------------------*/
 @import "../../shared/scss/abstracts/variables";
+@import "../../shared/scss/abstracts/media-query";
 @import "variables";
 @import "typography";
+
+/*------------------------------------*\
+  #BASE
+\*------------------------------------*/
+@import "../../shared/scss/base/reset";
+
+/*------------------------------------*\
+  #LAYOUTS
+\*------------------------------------*/
+@import "layout/top-bar";
+
+
+/*------------------------------------*\
+  #COMPONENTS
+\*------------------------------------*/
+@import "../../shared/scss/components/dropdown";
+@import "components/dropdown";

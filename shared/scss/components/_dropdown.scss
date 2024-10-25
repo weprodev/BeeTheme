@@ -1,0 +1,19 @@
+/*=========================================================
+*********   Generic DropDown Component
+*******     Whenever .dropdown is hovered .dropdown__content appears
+*/
+
+.dropdown {
+  position: relative;
+  &:hover {
+    .dropdown__content {
+      display: unset;
+    }
+  }
+  .dropdown__content{
+    display: none ; 
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+  }
+}
