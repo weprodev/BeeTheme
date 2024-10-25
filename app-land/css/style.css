@@ -336,7 +336,7 @@ li {
 }
 /*--------------------------------
 ***  IMPORT GENERAL AND IMPORTANT
-**   VARIABLES
+**   VARIABLES, MIXINS
 */
 /*========================================================================================
 *********   ALL OF THE VARIABLES TYPE 
@@ -430,6 +430,62 @@ body a:hover {
   .header .hide-on-mobile {
     display: none;
   }
+}
+
+/*--------------------------------
+***  
+**   Hero Section
+*/
+.hero__section {
+  border-radius: 2rem;
+  position: relative;
+  left: 1.2rem;
+  width: 97%;
+}
+.hero__section--img {
+  width: 100%;
+  height: 43.3rem;
+  object-fit: cover;
+  border-radius: 2rem;
+}
+.hero__section--text-Overlay {
+  background: rgba(0, 0, 0, 0.5);
+  max-width: 40%;
+  height: 24rem;
+  top: 10rem;
+  position: absolute;
+  left: 5rem;
+  border-radius: 2rem;
+  color: white;
+}
+.hero__section--text-Overlay > * {
+  padding-left: 1rem;
+}
+.hero__section--text-Overlay h1 {
+  text-align: center;
+}
+.hero__section .cta__button {
+  position: relative;
+  text-align: center;
+  display: flex;
+  width: 15rem;
+  gap: 2rem;
+  left: 6rem;
+}
+.hero__section .cta__button--button {
+  width: 9rem;
+}
+.hero__section .cta__button--button .fa-solid {
+  position: relative;
+  font-size: 15px;
+  top: 2px;
+  left: 4px;
+}
+.hero__section .stats-container {
+  position: relative;
+  display: flex;
+  left: 6rem;
+  gap: 2rem;
 }
 
 /*

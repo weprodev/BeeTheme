@@ -14,10 +14,11 @@
 
     /*--------------------------------
     ***  IMPORT GENERAL AND IMPORTANT
-    **   VARIABLES
+    **   VARIABLES, MIXINS
     */
 
         @import "variables";
+        @import "_mixins.scss";
 
     /*--------------------------------
     ***  SET DIRECTION BEFORE ANYTHING
@@ -32,6 +33,13 @@
     */   
 
     @import "layout/header";
+
+    /*--------------------------------
+    ***  
+    **   Hero Section
+    */   
+
+    @import "layout/heroSection";
 
 /*
 ***         
