@@ -11,7 +11,7 @@
     border-radius: 2rem;
   }
 
-  &--text-Overlay {
+  &--text-overlay {
     @include add-padding-left(1rem);
     background: rgba(0, 0, 0, 0.5);
     max-width: 40%;
@@ -52,5 +52,27 @@
     display: flex;
     left: 6rem;
     gap: 2rem;
+  }
+
+  @include tablet {
+    .hero__section--text-Overlay {
+      max-width: 50%;
+    }
+  }
+
+  @include retinaMobile {
+    & {
+      left: 0.9rem;
+
+      &--text-overlay {
+        max-width: 70%;
+      }
+    }
+  }
+
+  @include mobile {
+    & {
+      left: 0.7rem;
+    }
   }
 }

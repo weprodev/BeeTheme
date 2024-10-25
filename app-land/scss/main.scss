@@ -14,11 +14,17 @@
 
     /*--------------------------------
     ***  IMPORT GENERAL AND IMPORTANT
-    **   VARIABLES, MIXINS
+    **   VARIABLES
     */
 
-        @import "variables";
-        @import "_mixins.scss";
+    @import "variables"; 
+    
+    /*--------------------------------
+    ***  IMPORT GENERAL AND IMPORTANT
+    **   MIXINS
+    */
+
+    @import "./mixins/mixins";
 
     /*--------------------------------
     ***  SET DIRECTION BEFORE ANYTHING

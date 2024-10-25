@@ -336,7 +336,7 @@ li {
 }
 /*--------------------------------
 ***  IMPORT GENERAL AND IMPORTANT
-**   VARIABLES, MIXINS
+**   VARIABLES
 */
 /*========================================================================================
 *********   ALL OF THE VARIABLES TYPE 
@@ -350,6 +350,10 @@ li {
 /*--------------------------------
 *** FLAT UI COLORS 
 **  flatuicolors.com/palette/defo
+*/
+/*--------------------------------
+***  IMPORT GENERAL AND IMPORTANT
+**   MIXINS
 */
 /*--------------------------------
 ***  SET DIRECTION BEFORE ANYTHING
@@ -448,7 +452,7 @@ body a:hover {
   object-fit: cover;
   border-radius: 2rem;
 }
-.hero__section--text-Overlay {
+.hero__section--text-overlay {
   background: rgba(0, 0, 0, 0.5);
   max-width: 40%;
   height: 24rem;
@@ -458,10 +462,10 @@ body a:hover {
   border-radius: 2rem;
   color: white;
 }
-.hero__section--text-Overlay > * {
+.hero__section--text-overlay > * {
   padding-left: 1rem;
 }
-.hero__section--text-Overlay h1 {
+.hero__section--text-overlay h1 {
   text-align: center;
 }
 .hero__section .cta__button {
@@ -486,6 +490,24 @@ body a:hover {
   display: flex;
   left: 6rem;
   gap: 2rem;
+}
+@media screen and (max-width: 62em) {
+  .hero__section .hero__section--text-Overlay {
+    max-width: 50%;
+  }
+}
+@media screen and (min-width: 31.25em) and (max-width: 47.9375em) {
+  .hero__section {
+    left: 0.9rem;
+  }
+  .hero__section--text-overlay {
+    max-width: 70%;
+  }
+}
+@media screen and (max-width: 40em) {
+  .hero__section {
+    left: 0.7rem;
+  }
 }
 
 /*
