@@ -27,7 +27,7 @@
 */
 /*--------------------------------
 ***  GENERAL DIFINITIONS
-**	 COMPASS , SUSY , CSS3 , CLEARFIX
+**	 CSS3 , CLEARFIX
 */
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 .container {
@@ -289,12 +289,6 @@ a {
 *********   Generic Button Component
 *******  
 */
-.button {
-  text-align: center;
-  cursor: pointer;
-  border: none;
-}
-
 /*=========================================================
 *********  This customizes the generic dropdown for this project
 *******  
@@ -333,6 +327,10 @@ a {
   padding: 1em 1.5em;
   font-size: 0.875em;
   transition: all 150ms;
+  background: transparent;
+  border: none;
+  text-align: center;
+  cursor: pointer;
 }
 .button--primary {
   background-color: #50cb8b;
