@@ -77,10 +77,6 @@
 \*------------------------------------*/
 /* ~~~~~~~~~~~~~~🔸 BASE 🔸~~~~~~~~~~~~~~ */
 /* Global styles, Resets, and Utilities */
-li {
-  list-style-type: none;
-}
-
 .card {
   width: 300px;
   background-color: #fff;
@@ -107,19 +103,6 @@ li {
 
 /* ~~~~~~~~~~~~~~🟢 COMPONENTS 🟢~~~~~~~~~~~~~~ */
 /* Reusable components and UI elements */
-.cta__button--button {
-  width: 7rem;
-  height: 3rem;
-  background: rgb(84, 234, 84);
-  border: none;
-  border-radius: 2rem;
-  cursor: pointer;
-}
-.cta__button--button:hover {
-  transition: 0.3s ease-in-out;
-  background: rgb(71, 198, 71);
-}
-
 /* ~~~~~~~~~~~~~~⚙️ LAYOUT ⚙️~~~~~~~~~~~~~~ */
 /* Grid systems, structure, and layout styles */
 /*=======================
@@ -352,8 +335,8 @@ li {
 **  flatuicolors.com/palette/defo
 */
 /*--------------------------------
-***  IMPORT GENERAL AND IMPORTANT
-**   MIXINS
+*** Font 
+**  
 */
 /*--------------------------------
 ***  SET DIRECTION BEFORE ANYTHING
@@ -364,13 +347,34 @@ body {
 }
 body a {
   text-decoration: none;
-  color: black;
+  color: rgb(0, 0, 0);
 }
 body a:hover {
   transition: 0.5s;
-  color: gray;
+  color: rgb(170, 170, 170);
 }
 
+/*--------------------------------
+***  SET DIRECTION BEFORE ANYTHING
+**   
+*/
+.cta__button--button {
+  width: 7rem;
+  height: 3rem;
+  background: rgb(84, 234, 84);
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+.cta__button--button:hover {
+  transition: 0.3s ease-in-out;
+  background: rgb(71, 198, 71);
+}
+
+/*--------------------------------
+***  IMPORT GENERAL AND IMPORTANT
+**   MIXINS
+*/
 /*--------------------------------
 ***  
 **   HEADER
