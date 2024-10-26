@@ -1,0 +1,22 @@
+@mixin button(
+  $bg-color: #000,
+  $text-color: #fff,
+  $padding: 0.5rem 1rem,
+  $border: none,
+  $border-radius: 5px,
+  $font-weight: 500,
+  $hover-bg-color: darken($bg-color, 10%)
+) {
+  background-color: $bg-color;
+  color: $text-color;
+  padding: $padding;
+  border: $border;
+  border-radius: $border-radius;
+  font-weight: $font-weight;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($hover-bg-color, 10%);
+  }
+}
