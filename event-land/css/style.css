@@ -27,7 +27,7 @@
 */
 /*--------------------------------
 ***  GENERAL DIFINITIONS
-**	 COMPASS , SUSY , CSS3 , CLEARFIX
+**	 CSS3 , CLEARFIX
 */
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 .container {
@@ -83,6 +83,9 @@
   #SPACE
 \*------------------------------------*/
 /*------------------------------------*\
+  #BORDER
+\*------------------------------------*/
+/*------------------------------------*\
   #FORNT
 \*------------------------------------*/
 body {
@@ -104,10 +107,22 @@ body {
     font-size: 2.25em;
   }
 }
+.heading-1--primary {
+  color: #24222c;
+}
+.heading-1--secondary {
+  color: #ffffff;
+}
 
 .paragraph {
   color: #24222c;
   font-weight: 600;
+}
+.paragraph--primary {
+  color: #24222c;
+}
+.paragraph--secondary {
+  color: #f1f1f1;
 }
 
 .tag {
@@ -246,7 +261,7 @@ a {
   .main-navigation__menu-button-divider {
     display: none;
     justify-content: flex-start;
-    position: absolute;
+    position: fixed;
     top: 0;
     z-index: 2;
     left: 0;
@@ -404,6 +419,10 @@ a {
 }
 
 /*=========================================================
+*********   Generic Button Component
+*******  
+*/
+/*=========================================================
 *********  This customizes the generic dropdown for this project
 *******  
 */
@@ -432,16 +451,21 @@ a {
   transform: rotate(180deg);
 }
 
+/*=========================================================
+*********  This customizes the generic button for this project
+*******  
+*/
 .button {
   border-radius: 9999px;
   padding: 1em 1.5em;
   font-size: 0.875em;
   transition: all 150ms;
+  background: transparent;
+  border: none;
   text-align: center;
+  cursor: pointer;
   display: flex;
   align-items: center;
-  cursor: pointer;
-  border: none;
   font-weight: 600;
 }
 @media screen and (max-width: 40em) {
