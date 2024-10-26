@@ -37,13 +37,41 @@
   font-style: normal;
 }
 
+.container {
+  width: 100%;
+}
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
   background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .header .logo img {
   height: 40px;
@@ -56,31 +84,32 @@
 }
 .header .navigation ul li a {
   text-decoration: none;
-  color: #333;
-  font-weight: 500;
+  color: #1e1e1e;
+  font-weight: 400;
   transition: color 0.3s ease;
 }
 .header .navigation ul li a:hover {
-  color: #00a870;
+  color: #0dd47e;
 }
 .header .action-buttons {
   display: flex;
   gap: 1rem;
 }
 .header .action-buttons .login {
-  background: none;
-  border: 1px solid #ccc;
+  background-color: none;
+  color: #1e1e1e;
   padding: 0.5rem 1rem;
+  border: 1px solid #f2f4f4;
   border-radius: 20px;
-  font-weight: 500;
+  font-weight: 400;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 .header .action-buttons .login:hover {
-  background-color: #f0f0f0;
+  background-color: rgb(186.75, 197.25, 197.25);
 }
 .header .action-buttons .get-in-touch {
-  background-color: #00a870;
+  background-color: #0dd47e;
   color: #fff;
   padding: 0.5rem 1rem;
   border: none;
@@ -90,7 +119,7 @@
   transition: background-color 0.3s ease;
 }
 .header .action-buttons .get-in-touch:hover {
-  background-color: #008e5b;
+  background-color: rgb(10.0533333333, 163.9466666667, 97.44);
 }
 
 /*# sourceMappingURL=style.css.map */
