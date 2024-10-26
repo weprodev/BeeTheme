@@ -184,6 +184,9 @@ body {
 .title__arrow {
   transform: rotate(-45deg);
 }
+.title--primary {
+  color: #24222c;
+}
 
 /*------------------------------------*\
   #BASE
