@@ -1,0 +1,62 @@
+@import "../../../shared/scss/components/button";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #fff;
+
+  .logo {
+    img {
+      height: 40px;
+      width: auto;
+    }
+  }
+
+  .navigation {
+    ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+
+      li {
+        a {
+          text-decoration: none;
+          color: $darkColor;
+          font-weight: 400;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: $primaryColor;
+          }
+        }
+      }
+    }
+  }
+
+  .action-buttons {
+    display: flex;
+    gap: 1rem;
+
+    .login {
+      @include button(
+        $bg-color: none,
+        $text-color: $darkColor,
+        $border: 1px solid $lightColor,
+        $border-radius: 20px,
+        $font-weight: 400,
+        $hover-bg-color: darken($lightColor, 20%)
+      );
+    }
+
+    .get-in-touch {
+      @include button(
+        $bg-color: $primaryColor,
+        $text-color: #fff,
+        $border-radius: 20px,
+        $hover-bg-color: darken($primaryColor, 10%)
+      );
+    }
+  }
+}
