@@ -1,6 +1,78 @@
 /*------------------------------------*\
-  #TYPOGRAPHY & VARIABLES
+  #ABSTRACTS
 \*------------------------------------*/
+/*------------------------------------*\
+  #FONT
+\*------------------------------------*/
+/*------------------------------------*\
+  #BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+  #SPACES (padding & margin & gap) 
+\*------------------------------------*/
+/*------------------------------------*\
+  #TRANSITION DURATION
+\*------------------------------------*/
+/*------------------------------------*\
+  #BOX SHADOW
+\*------------------------------------*/
+/*------------------------------------*\
+  #BORDER RADIUS
+\*------------------------------------*/
+/*========================================================================================
+*********   GRIDS BASE SUSY
+*******     MEDIA QUERY 
+*****       
+***         
+*/
+/*--------------------------------
+***  GENERAL DIFINITIONS
+**	 COMPASS , SUSY , CSS3 , CLEARFIX
+*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+.container {
+  width: 90%;
+}
+
+/*========================================================================================*\
+*----------------------------          MEDIA QUERY              ----------------------------        
+\*========================================================================================*/
+/*--------------------------------
+*** 4K AND HIGH RESOULOTIONS 
+**	MIN-WIDTH : 2560px OR 160em
+*/
+/*--------------------------------
+*** LAPTOP OR DESKTOP 
+**	MIN-WIDTH : 1400px OR 87.5em
+*/
+/*--------------------------------
+*** FOR SOM OF THE DEVICES
+**	MIN-WIDTH : 1201px OR 75.0625em
+*/
+/*--------------------------------
+*** FOR ANY DEVICE MAX SIZE UNTIL
+**	MAX-WIDTH : 1200px OR 75em
+*/
+/*--------------------------------
+*** FOR ANY DEVICE MAX SIZE UNTIL
+**	MAX-WIDTH : 1024px OR 64em
+*/
+/*--------------------------------
+*** FOR ANY DEVICE MAX SIZE UNTIL
+**	MAX-WIDTH : 992px OR 62em
+*/
+/*--------------------------------
+*** FOR RETINA MOBILE AND LANSCAPE
+**	MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
+*/
+/*--------------------------------
+*** FOR MOBILE
+**	MAX : 640PX / 40em
+*/
+/*--------------------------------
+*** FOR MINI MOBILE
+**	MAX : 400PX / 25em
+*/
 /*------------------------------------*\
   #COLORS
 \*------------------------------------*/
@@ -8,11 +80,153 @@
   #FONT
 \*------------------------------------*/
 /*------------------------------------*\
+  #SPACE
+\*------------------------------------*/
+/*------------------------------------*\
   #FORNT
 \*------------------------------------*/
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 body {
-  font-family: "Inter", serif;
+  font-family: "Inter", sans-serif;
+}
+
+/*------------------------------------*\
+  #BASE
+\*------------------------------------*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+}
+
+body {
+  min-height: 100vh;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/*------------------------------------*\
+  #LAYOUTS
+\*------------------------------------*/
+.top-bar {
+  padding: 0 3em;
+  color: #ffffff;
+  background-color: #24222c;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: capitalize;
+  gap: 2em;
+  font-size: 0.875em;
+  font-weight: 600;
+}
+@media screen and (max-width: 40em) {
+  .top-bar {
+    display: none;
+  }
+}
+@media screen and (max-width: 62em) {
+  .top-bar {
+    justify-content: center;
+  }
+}
+.top-bar__business {
+  display: flex;
+  gap: 1px;
+  background-color: #f1f1f1;
+}
+@media screen and (max-width: 62em) {
+  .top-bar__business {
+    display: none;
+  }
+}
+.top-bar__business span {
+  background-color: #24222c;
+  padding: 0.75em;
+}
+.top-bar__business span:first-child {
+  padding-left: 0;
+}
+.top-bar__actions {
+  display: flex;
+  gap: 2em;
+}
+.top-bar__actions > li {
+  padding: 0.75em 0;
+}
+.top-bar__actions > li > a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 150ms;
+}
+.top-bar__actions > li > a:hover {
+  opacity: 70%;
+}
+
+/*------------------------------------*\
+  #COMPONENTS
+\*------------------------------------*/
+.dropdown {
+  position: relative;
+}
+.dropdown:hover .dropdown__content {
+  display: unset;
+}
+.dropdown .dropdown__content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+}
+
+/*=========================================================
+*********  This customizes the generic dropdown for this project
+*******  
+*/
+.dropdown {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+}
+.dropdown__content {
+  background-color: #ffffff;
+  color: #24222c;
+  border-radius: 0.375em;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  padding: 1em;
+  gap: 0.5em;
+  flex-direction: column;
+  text-wrap: nowrap;
+}
+.dropdown__icon {
+  transition: transform 150ms;
+}
+.dropdown:hover .dropdown__content {
+  display: flex;
+}
+.dropdown:hover .dropdown__icon {
+  transform: rotate(180deg);
 }
 
 /*# sourceMappingURL=style.css.map */

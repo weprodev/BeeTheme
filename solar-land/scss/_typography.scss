@@ -1,34 +1,26 @@
-.quicksand-light {
+@mixin quicksand-font($weight) {
   font-family: $primaryFontFamily, sans-serif;
-  font-weight: 300;
+  font-weight: $weight;
   font-optical-sizing: auto;
   font-style: normal;
+}
+
+.quicksand-light {
+  @include quicksand-font(300);
 }
 
 .quicksand-regular {
-  font-family: $primaryFontFamily, sans-serif;
-  font-weight: 400;
-  font-optical-sizing: auto;
-  font-style: normal;
+  @include quicksand-font(400);
 }
 
 .quicksand-medium {
-  font-family: $primaryFontFamily, sans-serif;
-  font-weight: 500;
-  font-optical-sizing: auto;
-  font-style: normal;
+  @include quicksand-font(500);
 }
 
 .quicksand-semibold {
-  font-family: $primaryFontFamily, sans-serif;
-  font-weight: 600;
-  font-optical-sizing: auto;
-  font-style: normal;
+  @include quicksand-font(600);
 }
 
 .quicksand-bold {
-  font-family: $primaryFontFamily, sans-serif;
-  font-weight: 700;
-  font-optical-sizing: auto;
-  font-style: normal;
+  @include quicksand-font(700);
 }

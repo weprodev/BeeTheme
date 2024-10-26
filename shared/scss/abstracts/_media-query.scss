@@ -7,15 +7,8 @@
 
 	/*--------------------------------
 	***  GENERAL DIFINITIONS
-	**	 COMPASS , SUSY , CSS3 , CLEARFIX
+	**	 CSS3 , CLEARFIX
 	*/
-
-	// @import "compass";
-	// @import "compass/reset";
-	// @import "compass/css3";
-	// @import "compass/utilities/general/clearfix";
-
-	
 
 	.container{
 		width : 90%;
@@ -53,7 +46,7 @@
 	*/
 
 	@mixin lcd{
-		@media screen and (min-width : $pre-alpha){
+		@media screen and (min-width : $preAlpha){
 			@content;
 		}
 	}
@@ -75,7 +68,7 @@
 	*/
 
 	@mixin mini_laptop{
-		@media screen and (max-width : $pre-beta){
+		@media screen and (max-width : $preBeta){
 			@content;
 		}
 	}
@@ -97,7 +90,7 @@
 	*/
 
 	@mixin retinaMobile{
-		@media screen and ( min-width : $lota ) and ( max-width : $pre-zeta ){
+		@media screen and ( min-width : $lota ) and ( max-width : $preZeta ){
 			@content;
 		}
 	}
