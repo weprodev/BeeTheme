@@ -11,6 +11,11 @@ body {
         background-image: linear-gradient(to right ,$colorSecondary,$colorTertiary , $colorPrimary);
         height: 100vh;
        
+
+        &__1{
+          background-color: $colorSixth;
+        }
+        
       }
       
       .container{
