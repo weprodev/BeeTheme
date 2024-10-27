@@ -472,11 +472,13 @@ a {
   .button {
     padding: 0.75em 1em;
   }
+
 }
 .button--primary {
   background-color: #50cb8b;
   color: #ffffff;
 }
+
 .button--secondary {
   background-color: #ffffff;
   color: #24222c;
@@ -492,6 +494,7 @@ a {
     font-size: 1.25em;
   }
 }
+
 .button:hover {
   opacity: 70%;
 }
