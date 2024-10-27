@@ -32,7 +32,8 @@ body {
 .paragraph {
   color: $tertiaryColor;
   font-weight: $fontWeightSemibold;
-  
+  line-height: 1.8;  
+
   &--primary{
     color: $tertiaryColor;
   }
