@@ -1,3 +1,7 @@
+/*=========================================================
+*********   Generic Button Component
+*******  
+*/
 @mixin button(
   $bg: transparent,
   $color: #fff,
@@ -23,4 +27,3 @@
   &:hover {
     background-color: $hoverBgColor;
   }
-}
