@@ -1,0 +1,24 @@
+/*=========================================================
+*********  This customizes the generic button for this project
+*******  
+*/
+
+@use "sass:list";
+
+.button {
+  @include button(
+    transparent,
+    $roundedFull,
+    list.nth($spaces, 4) list.nth($spaces, 6),
+    none,
+    $fontSizeSm,
+    all map-get($durations, 150)
+  );
+  &--primary {
+    background-color: $primaryColor;
+    color: $secondaryColor;
+  }
+  &:hover {
+    opacity: 70%;
+  }
+}
