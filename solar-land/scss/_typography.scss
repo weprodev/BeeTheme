@@ -1,0 +1,26 @@
+@mixin quicksand-font($weight) {
+  font-family: $primaryFontFamily, sans-serif;
+  font-weight: $weight;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.quicksand-light {
+  @include quicksand-font(300);
+}
+
+.quicksand-regular {
+  @include quicksand-font(400);
+}
+
+.quicksand-medium {
+  @include quicksand-font(500);
+}
+
+.quicksand-semibold {
+  @include quicksand-font(600);
+}
+
+.quicksand-bold {
+  @include quicksand-font(700);
+}

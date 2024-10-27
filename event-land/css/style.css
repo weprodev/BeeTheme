@@ -154,6 +154,7 @@ body {
 .paragraph {
   color: #24222c;
   font-weight: 600;
+  line-height: 1.8;
 }
 .paragraph--primary {
   color: #24222c;
