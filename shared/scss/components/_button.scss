@@ -1,22 +1,26 @@
 @mixin button(
-  $bg-color: #000,
-  $text-color: #fff,
-  $padding: 0.5rem 1rem,
+  $bg: transparent,
+  $color: #fff,
+  $radius: 0,
   $border: none,
-  $border-radius: 5px,
-  $font-weight: 500,
-  $hover-bg-color: darken($bg-color, 10%)
+  $padding: 1em 2em,
+  $fontSize: 1em,
+  $fontWeight: 400,
+  $transition: none,
+  $hoverBgColor: darken($bg-color, 10%)
 ) {
-  background-color: $bg-color;
-  color: $text-color;
-  padding: $padding;
+  background: $bg;
+  color: $color;
+  border-radius: $radius;
   border: $border;
-  border-radius: $border-radius;
-  font-weight: $font-weight;
+  padding: $padding;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  transition: $transition;
+  text-align: center;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: darken($hover-bg-color, 10%);
+    background-color: $hoverBgColor;
   }
 }

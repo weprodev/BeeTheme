@@ -96,27 +96,31 @@
   gap: 1rem;
 }
 .header .action-buttons .login {
-  background-color: none;
+  background: none;
   color: #1e1e1e;
-  padding: 0.5rem 1rem;
-  border: 1px solid #f2f4f4;
   border-radius: 20px;
+  border: 1px solid #f2f4f4;
+  padding: 0.5rem 1rem;
+  font-size: 1em;
   font-weight: 400;
+  transition: none;
+  text-align: center;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 .header .action-buttons .login:hover {
   background-color: rgb(186.75, 197.25, 197.25);
 }
 .header .action-buttons .get-in-touch {
-  background-color: #0dd47e;
+  background: #0dd47e;
   color: #fff;
-  padding: 0.5rem 1rem;
-  border: none;
   border-radius: 20px;
-  font-weight: 500;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1em;
+  font-weight: 400;
+  transition: none;
+  text-align: center;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 .header .action-buttons .get-in-touch:hover {
   background-color: rgb(10.0533333333, 163.9466666667, 97.44);

@@ -41,21 +41,23 @@
 
     .login {
       @include button(
-        $bg-color: none,
-        $text-color: $darkColor,
+        $bg: none,
+        $color: $darkColor,
         $border: 1px solid $lightColor,
-        $border-radius: 20px,
-        $font-weight: 400,
-        $hover-bg-color: darken($lightColor, 20%)
+        $radius: 20px,
+        $fontWeight: 400,
+        $hoverBgColor: darken($lightColor, 20%),
+        $padding: 0.5rem 1rem
       );
     }
 
     .get-in-touch {
       @include button(
-        $bg-color: $primaryColor,
-        $text-color: #fff,
-        $border-radius: 20px,
-        $hover-bg-color: darken($primaryColor, 10%)
+        $bg: $primaryColor,
+        $color: #fff,
+        $radius: 20px,
+        $hoverBgColor: darken($primaryColor, 10%),
+        $padding: 0.5rem 1rem
       );
     }
   }
