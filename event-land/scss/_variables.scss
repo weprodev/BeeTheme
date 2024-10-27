@@ -21,3 +21,9 @@ $primaryFontFamily: "Inter", sans-serif;
 \*------------------------------------*/
 
 $containerSidePadding: list.nth($spaces, 12);
+
+/*------------------------------------*\
+  #BORDER
+\*------------------------------------*/
+
+$primaryBorder : 2px solid $secondaryColorDarker;

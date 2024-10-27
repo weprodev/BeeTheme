@@ -1,0 +1,22 @@
+/*=========================================================
+*********   Generic Button Component
+*******  
+*/
+
+@mixin button(
+  $bg: transparent,
+  $radius: 0,
+  $padding: 1em 2em,
+  $border : none,
+  $fontSize: 1em,
+  $transition: none
+) {
+  border-radius: $radius;
+  padding: $padding;
+  font-size: $fontSize;
+  transition: $transition;
+  background: $bg;
+  border: $border;
+  text-align: center;
+  cursor: pointer;
+}
