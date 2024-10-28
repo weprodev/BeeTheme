@@ -1,0 +1,43 @@
+.home-page {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  &__headline {
+    text-align: center;
+    font-size: 4.2rem;
+    font-weight: 900;
+    background-image: linear-gradient(to right, $colorNinth, $colorEighth);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  &__headline_1 {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, $colorEighth, $colorSeventh);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  &__description {
+    text-align: center;
+    font-size: 1rem;
+    padding-bottom: 4rem;
+  }
+  &__imgs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 3rem;
+    column-gap: 3rem;
+  }
+  &__img_boxs {
+    outline: 0.1px solid #ffffff48;
+    outline-offset: 0.8rem;
+    border-radius: 0.2rem;
+  }
+  &__number {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 1rem 0 1rem 0;
+  }
+}

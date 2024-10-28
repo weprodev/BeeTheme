@@ -22,36 +22,4 @@
   cursor: pointer;
 }
 =======
-.btn{
 
-    &:link,  
-    &:visited{
-        text-transform: uppercase;
-        text-decoration: none;
-        padding: 1rem 4rem;
-        display: inline-block;
-      border-radius: 8px;
-      transition: all 0.2s;
-    }
-
-   
-    &:hover {
-        transform: translateY(-0.3rem);
-        box-shadow: 0 1rem 2rem rgba($colorBlack, 0.2);
-      }
-    &:active {
-        transform: translateY(-0.1rem);
-        box-shadow: 0 0.5rem 1rem rgba($colorBlack, 0.2);
-      }
-
-    &-buttom{
-        background-image: linear-gradient(to right,$colorSecondary,$colorTertiary,$colorPrimary);
-        color:$colorWihte ;
-        box-shadow: 0 1rem 2rem rgba($colorBlack, 0.1);
-    }
-}
-.nav-cta{
-    padding: 1rem 2.4rem !important;
-    align-items: center;
-}
->>>>>>> BC1-21-Super-fast-section-ShowLand

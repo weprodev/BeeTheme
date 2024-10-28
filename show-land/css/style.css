@@ -44,7 +44,10 @@ body {
   height: 100vh;
 }
 .background-color__1 {
-  background-color: #0a152e;
+  background-color: #0e1523;
+}
+.background-color__2 {
+  background-color: #0f1429;
 }
 
 .container {
@@ -203,6 +206,49 @@ body {
   stroke: #37b24d;
   width: 2rem;
   height: 2rem;
+}
+
+.home-page {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.home-page__headline {
+  text-align: center;
+  font-size: 4.2rem;
+  font-weight: 900;
+  background-image: linear-gradient(to right, #364fc7, #087f5b);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.home-page__headline_1 {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 700;
+  background-image: linear-gradient(to right, #087f5b, #c92a2a);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.home-page__description {
+  text-align: center;
+  font-size: 1rem;
+  padding-bottom: 4rem;
+}
+.home-page__imgs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 3rem;
+  column-gap: 3rem;
+}
+.home-page__img_boxs {
+  outline: 0.1px solid rgba(255, 255, 255, 0.2823529412);
+  outline-offset: 0.8rem;
+  border-radius: 0.2rem;
+}
+.home-page__number {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding: 1rem 0 1rem 0;
 }
 
 .btn:link, .btn:visited {
