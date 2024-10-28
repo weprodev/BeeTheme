@@ -10,4 +10,8 @@ body {
     transition: 0.5s;
     color: $lightGray;
   }
+
+  li {
+    list-style-type: none;
+  }
 }

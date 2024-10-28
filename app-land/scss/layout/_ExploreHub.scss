@@ -1,0 +1,82 @@
+.explore__hub {
+  position: relative;
+  padding-top: 5rem;
+  width: 97%;
+  left: 1rem;
+
+  .header__section {
+    display: flex;
+    gap: 1rem;
+
+    p {
+      max-width: 33%;
+    }
+
+    .cta__button {
+      &--button {
+        width: 15rem;
+        font-size: 18px;
+        background-color: rgba(229, 229, 229, 0.81);
+        border-radius: 1rem;
+
+        &:hover {
+          background-color: rgba(193, 193, 193, 0.81);
+        }
+      }
+    }
+  }
+
+  .card__section {
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+
+    .card {
+      width: 24rem;
+      border-radius: 2rem;
+      background-color: #f1f1f1;
+
+      &__img {
+        img {
+          width: 100%;
+          height: 20rem;
+          object-fit: cover;
+          border-top-left-radius: 2rem;
+          border-top-right-radius: 2rem;
+        }
+      }
+
+      &__text-box {
+        padding-top: 1rem;
+        @include add-padding-left(1rem);
+
+        p {
+          font-size: 25px;
+        }
+
+        .paragraph {
+          top: -1rem;
+          position: relative;
+        }
+
+        .btn {
+          background: rgba(229, 229, 229, 0.81);
+          position: relative;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 15px;
+          height: 1.5rem;
+          border: none;
+          top: -26rem;
+          width: 6rem;
+          left: 1rem;
+
+          &:hover {
+            background: rgb(193 193 193 / 81%);
+            transition: 0.5s;
+          }
+        }
+      }
+    }
+  }
+}

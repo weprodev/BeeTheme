@@ -42,18 +42,15 @@
     @import "./mixins/mixins";
 
     /*--------------------------------
-    ***  
-    **   HEADER
+    ***  LAYOUT
+    **   HEADER, HERO SECTION, EXPLORE HUB
     */   
 
     @import "layout/header";
 
-    /*--------------------------------
-    ***  
-    **   Hero Section
-    */   
-
     @import "layout/heroSection";
+
+    @import "layout/ExploreHub";
 
 /*
 ***         
