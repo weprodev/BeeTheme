@@ -2,6 +2,7 @@
 
 .features-section {
   background-color: $tertiaryColor;
+  background-image: radial-gradient(at left top , $primaryColor -6%, $tertiaryColor 20%);
   display: flex;
   flex-direction: column;
   gap: list.nth($spaces, 8);

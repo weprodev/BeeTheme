@@ -531,6 +531,7 @@ a {
 
 .features-section {
   background-color: #24222c;
+  background-image: radial-gradient(at left top, #50cb8b -6%, #24222c 20%);
   display: flex;
   flex-direction: column;
   gap: 2em;
