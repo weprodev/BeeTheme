@@ -1,6 +1,21 @@
-@import"variables";
+/*------------------------------------*\
+  #ABSTRACTS
+\*------------------------------------*/
+@import "variables";
+@import "typography";
 
-@import"top-nav";
-@import"typography";
-@import"../../shared/scss/components/button";
-@import"../../shared/scss/base/reset";
+/*------------------------------------*\
+  #LAYOUTS
+\*------------------------------------*/
+@import "layout/top-nav";
+
+/*------------------------------------*\
+  #BASE
+\*------------------------------------*/
+@import "../../shared/scss/base/reset";
+
+/*------------------------------------*\
+  #COMPONENTS
+\*------------------------------------*/
+@import "../../shared/scss/components/button";
+@import "components/button";
