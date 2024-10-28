@@ -77,30 +77,6 @@
 \*------------------------------------*/
 /* ~~~~~~~~~~~~~~🔸 BASE 🔸~~~~~~~~~~~~~~ */
 /* Global styles, Resets, and Utilities */
-.card {
-  width: 300px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-}
-.card__header {
-  background-color: #3498db;
-  color: #fff;
-  padding: 16px;
-  text-align: center;
-  font-size: 18px;
-  font-weight: bold;
-}
-.card__content {
-  padding: 16px;
-}
-.card__footer {
-  background-color: #f4f4f4;
-  padding: 8px;
-  text-align: center;
-}
-
 /* ~~~~~~~~~~~~~~🟢 COMPONENTS 🟢~~~~~~~~~~~~~~ */
 /* Reusable components and UI elements */
 /* ~~~~~~~~~~~~~~⚙️ LAYOUT ⚙️~~~~~~~~~~~~~~ */
@@ -344,6 +320,7 @@
 */
 body {
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 body a {
   text-decoration: none;
@@ -449,6 +426,9 @@ body a:hover {
   position: relative;
   left: 1.2rem;
   width: 97%;
+  /* mobile */
+  /* tablet */
+  /* laptop */
 }
 .hero__section--img {
   width: 100%;
@@ -458,7 +438,7 @@ body a:hover {
 }
 .hero__section--text-overlay {
   background: rgba(0, 0, 0, 0.5);
-  max-width: 40%;
+  max-width: 42%;
   height: 24rem;
   top: 10rem;
   position: absolute;
@@ -468,6 +448,9 @@ body a:hover {
 }
 .hero__section--text-overlay > * {
   padding-left: 1rem;
+}
+.hero__section--text-overlay > * {
+  padding-right: 1rem;
 }
 .hero__section--text-overlay h1 {
   text-align: center;
@@ -495,22 +478,49 @@ body a:hover {
   left: 6rem;
   gap: 2rem;
 }
-@media screen and (max-width: 62em) {
-  .hero__section .hero__section--text-Overlay {
+@media (max-width: 480px) {
+  .hero__section {
+    left: 0.4rem;
+    text-align: center;
+    font-size: 14px;
+  }
+  .hero__section .hero__section--text-overlay {
+    max-width: 100%;
+    height: 99.6%;
+    top: 0rem;
+    left: 0rem;
+    overflow-x: hidden;
+  }
+  .hero__section .stats-container {
+    left: 2rem;
+  }
+  .hero__section h1,
+  .hero__section p,
+  .hero__section .cta__button,
+  .hero__section .stats-container {
+    top: 8rem;
+    position: relative;
+  }
+  .hero__section .cta__button,
+  .hero__section .stat-item {
+    left: 3rem;
+  }
+  .hero__section .cta__button p,
+  .hero__section .stat-item p {
+    top: 0rem;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .hero__section {
+    left: 0.4rem;
+  }
+  .hero__section .hero__section--text-overlay {
+    max-width: 64%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero__section .hero__section--text-overlay {
     max-width: 50%;
-  }
-}
-@media screen and (min-width: 31.25em) and (max-width: 47.9375em) {
-  .hero__section {
-    left: 0.9rem;
-  }
-  .hero__section--text-overlay {
-    max-width: 70%;
-  }
-}
-@media screen and (max-width: 40em) {
-  .hero__section {
-    left: 0.7rem;
   }
 }
 

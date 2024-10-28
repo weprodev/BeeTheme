@@ -13,8 +13,9 @@
 
   &--text-overlay {
     @include add-padding-left(1rem);
+    @include add-padding-right(1rem);
     background: rgba(0, 0, 0, 0.5);
-    max-width: 40%;
+    max-width: 42%;
     height: 24rem;
     top: 10rem;
     position: absolute;
@@ -54,25 +55,53 @@
     gap: 2rem;
   }
 
-  @include tablet {
-    .hero__section--text-Overlay {
-      max-width: 50%;
+  /* mobile */
+  @media (max-width: 480px) {
+    left: 0.4rem;
+    text-align: center;
+    font-size: 14px;
+
+    .hero__section--text-overlay {
+      max-width: 100%;
+      height: 99.6%;
+      top: 0rem;
+      left: 0rem;
+      overflow-x: hidden;
     }
-  }
 
-  @include retinaMobile {
-    & {
-      left: 0.9rem;
+    .stats-container {
+      left: 2rem;
+    }
 
-      &--text-overlay {
-        max-width: 70%;
+    h1,
+    p,
+    .cta__button,
+    .stats-container {
+      top: 8rem;
+      position: relative;
+    }
+    .cta__button,
+    .stat-item {
+      left: 3rem;
+      p {
+        top: 0rem;
       }
     }
   }
 
-  @include mobile {
-    & {
-      left: 0.7rem;
+  /* tablet */
+  @media (min-width: 481px) and (max-width: 768px) {
+    left: 0.4rem;
+
+    .hero__section--text-overlay {
+      max-width: 64%;
+    }
+  }
+
+  /* laptop */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .hero__section--text-overlay {
+      max-width: 50%;
     }
   }
 }
