@@ -594,6 +594,66 @@ a {
   border-radius: 9999px;
 }
 
+.advantage-section {
+  display: flex;
+  flex-direction: column;
+  background-color: #24222c;
+  padding: 3em;
+  gap: 3em;
+}
+@media screen and (max-width: 40em) {
+  .advantage-section {
+    padding: 3.75em 1.5em;
+  }
+}
+.advantage-section__top {
+  display: flex;
+  align-items: flex-start;
+  gap: 2em;
+  justify-content: space-between;
+}
+@media screen and (max-width: 64em) {
+  .advantage-section__top {
+    flex-direction: column;
+  }
+}
+.advantage-section__mid-title {
+  flex-basis: 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+.advantage-section__bottom {
+  display: flex;
+  gap: 2em;
+}
+@media screen and (max-width: 64em) {
+  .advantage-section__bottom {
+    flex-direction: column;
+  }
+}
+.advantage-section__card {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  flex-basis: 33%;
+}
+.advantage-section__card img {
+  height: 45rem;
+  border-radius: 1.5em;
+  object-fit: cover;
+}
+@media screen and (max-width: 64em) {
+  .advantage-section__card img {
+    height: 35rem;
+  }
+}
+@media screen and (max-width: 40em) {
+  .advantage-section__card img {
+    height: 25rem;
+  }
+}
+
 /*------------------------------------*\
   #COMPONENTS
 \*------------------------------------*/
