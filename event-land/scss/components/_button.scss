@@ -14,10 +14,34 @@
     $fontSizeSm,
     all map-get($durations, 150)
   );
+  
+  display: flex;
+  align-items: center;
+  font-weight: $fontWeightSemibold;
+  
+  @include mobile {
+    padding: list.nth($spaces, 3) list.nth($spaces, 4);
+  }
+
   &--primary {
     background-color: $primaryColor;
     color: $secondaryColor;
   }
+  
+  &--secondary {
+    background-color: $secondaryColor;
+    color: $tertiaryColor;
+    border: 2px solid $tertiaryColor;
+    gap: list.nth($spaces, 3);
+    .button__icon {
+      transform: rotate(-45deg);
+      font-size: $fontSize3Xl;
+      @include mobile {
+        font-size: $fontSizeXl;
+      }
+    }
+  }
+
   &:hover {
     opacity: 70%;
   }

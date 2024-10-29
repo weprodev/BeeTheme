@@ -1,3 +1,5 @@
+@use "sass:list";
+
 /*------------------------------------*\
   #FORNT
 \*------------------------------------*/
@@ -6,4 +8,48 @@
 
 body {
   font-family: $primaryFontFamily;
+}
+
+.heading-1 {
+  font-size: $fontSize7Xl;
+  font-weight: $fontWeightBold;
+  text-transform: uppercase;
+  @include laptop{
+    font-size: $fontSize5Xl;
+  }
+  @include mobile{
+    font-size: $fontSize4Xl;
+  }
+  
+  &--primary{
+    color: $tertiaryColor;
+  }
+  &--secondary{
+    color: $secondaryColor;
+  }
+}
+
+.paragraph {
+  color: $tertiaryColor;
+  font-weight: $fontWeightSemibold;
+  line-height: 1.8;  
+
+  &--primary{
+    color: $tertiaryColor;
+  }
+  &--secondary{
+    color: $secondaryColorDarker;
+  }
+}
+
+.tag{
+  padding: list.nth($spaces, 2) list.nth($spaces, 5);
+  border-radius: $roundedFull;
+  font-weight: $fontWeightBold;
+  text-transform: uppercase;
+  text-align: center;
+  &--primary{
+    color: $primaryColor;
+    background-color: $primaryColorLighter;
+  }
 }
