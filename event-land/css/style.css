@@ -457,6 +457,11 @@ a {
   padding: 3em;
   gap: 3em;
 }
+@media screen and (max-width: 40em) {
+  .about-section {
+    padding: 3.75em 1.5em;
+  }
+}
 .about-section__top {
   display: flex;
   align-items: flex-start;
