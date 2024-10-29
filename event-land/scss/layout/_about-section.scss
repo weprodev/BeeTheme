@@ -6,6 +6,9 @@
   background-color: $primaryColorLighter;
   padding: $containerSidePadding;
   gap: list.nth($spaces, 12);
+  @include mobile {
+    padding: list.nth($spaces, 15) $containerSidePaddingMobile;
+  }
 
   &__top {
     display: flex;
