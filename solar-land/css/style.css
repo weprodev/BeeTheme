@@ -1,4 +1,22 @@
 /*------------------------------------*\
+  #FONT
+\*------------------------------------*/
+/*------------------------------------*\
+  #BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+  #SPACES (padding & margin & gap) 
+\*------------------------------------*/
+/*------------------------------------*\
+  #TRANSITION DURATION
+\*------------------------------------*/
+/*------------------------------------*\
+  #BOX SHADOW
+\*------------------------------------*/
+/*------------------------------------*\
+  #BORDER RADIUS
+\*------------------------------------*/
+/*------------------------------------*\
   #COLORS
 \*------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
@@ -66,21 +84,25 @@
   }
 }
 
+/*=========================================================
+*********   Generic Button Component
+*******  
+*/
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 2rem;
+  padding: 1em 2em;
   background-color: #fff;
 }
 .header .logo img {
-  height: 40px;
+  height: 2.5rem;
   width: auto;
 }
 .header .navigation ul {
   display: flex;
   list-style: none;
-  gap: 2rem;
+  gap: 2em;
 }
 .header .navigation ul li a {
   text-decoration: none;
@@ -98,9 +120,9 @@
 .header .action-buttons .login {
   background: none;
   color: #1e1e1e;
-  border-radius: 20px;
+  border-radius: 9999px;
   border: 1px solid #f2f4f4;
-  padding: 0.5rem 1rem;
+  padding: 0.5em 1em;
   font-size: 1em;
   font-weight: 400;
   transition: none;
@@ -108,14 +130,14 @@
   cursor: pointer;
 }
 .header .action-buttons .login:hover {
-  background-color: rgb(186.75, 197.25, 197.25);
+  background-color: #f2f4f4;
 }
 .header .action-buttons .get-in-touch {
   background: #0dd47e;
   color: #fff;
-  border-radius: 20px;
+  border-radius: 9999px;
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 0.5em 1em;
   font-size: 1em;
   font-weight: 400;
   transition: none;
@@ -123,7 +145,7 @@
   cursor: pointer;
 }
 .header .action-buttons .get-in-touch:hover {
-  background-color: rgb(10.0533333333, 163.9466666667, 97.44);
+  background-color: #0dd47e;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -11,7 +11,7 @@
   $fontSize: 1em,
   $fontWeight: 400,
   $transition: none,
-  $hoverBgColor: darken($bg-color, 10%)
+  $hoverBgColor: color.adjust($bg, $lightness: -10%)
 ) {
   background: $bg;
   color: $color;

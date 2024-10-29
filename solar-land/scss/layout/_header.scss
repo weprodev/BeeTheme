@@ -1,15 +1,16 @@
+@use "sass:list";
 @import "../../../shared/scss/components/button";
 
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 2rem;
+  padding: list.nth($spaces, 4) list.nth($spaces, 8); 
   background-color: #fff;
 
   .logo {
     img {
-      height: 40px;
+      height: 2.5rem;
       width: auto;
     }
   }
@@ -18,13 +19,13 @@
     ul {
       display: flex;
       list-style: none;
-      gap: 2rem;
+      gap: list.nth($spaces, 8);
 
       li {
         a {
           text-decoration: none;
           color: $darkColor;
-          font-weight: 400;
+          font-weight: $fontWeightRegular;
           transition: color 0.3s ease;
 
           &:hover {
@@ -44,10 +45,10 @@
         $bg: none,
         $color: $darkColor,
         $border: 1px solid $lightColor,
-        $radius: 20px,
-        $fontWeight: 400,
-        $hoverBgColor: darken($lightColor, 20%),
-        $padding: 0.5rem 1rem
+        $radius: $roundedFull,
+        $fontWeight: $fontWeightRegular,
+        $hoverBgColor: $lightColor,
+        $padding: list.nth($spaces, 2) list.nth($spaces, 4)
       );
     }
 
@@ -55,9 +56,9 @@
       @include button(
         $bg: $primaryColor,
         $color: #fff,
-        $radius: 20px,
-        $hoverBgColor: darken($primaryColor, 10%),
-        $padding: 0.5rem 1rem
+        $radius: $roundedFull,
+        $hoverBgColor: $primaryColor,
+        $padding: list.nth($spaces, 2) list.nth($spaces, 4)
       );
     }
   }
