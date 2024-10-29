@@ -94,7 +94,9 @@
     left: 0.4rem;
 
     .hero__section--text-overlay {
-      max-width: 64%;
+      max-width: 80%;
+      overflow-x: hidden;
+      left: 3rem;
     }
   }
 

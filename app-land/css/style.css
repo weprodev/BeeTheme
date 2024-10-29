@@ -515,7 +515,9 @@ body a:hover {
     left: 0.4rem;
   }
   .hero__section .hero__section--text-overlay {
-    max-width: 64%;
+    max-width: 80%;
+    overflow-x: hidden;
+    left: 3rem;
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
