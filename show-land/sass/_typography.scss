@@ -1,20 +1,22 @@
 body {
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    /* font-size: 16px; */
-    line-height: 1.7;
-    color: $colorWihte;
-    font-size: 95%;
-    }
-    .background-color{
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: $colorwhite;
+  font-size: 95%;
+}
+.background-color {
+  background-image: linear-gradient(
+    to right,
+    $colorSecondary,
+    $colorTertiary,
+    $colorPrimary
+  );
+  height: 100vh;
+}
 
-        background-image: linear-gradient(to right ,$colorSecondary,$colorTertiary , $colorPrimary);
-        height: 100vh;
-       
-      }
-      
-      .container{
-      
-        width: 80rem;
-        margin: 0 auto;
-      }
+.container {
+  width: 80rem;
+  margin: 0 auto;
+}
