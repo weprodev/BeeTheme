@@ -1,57 +1,59 @@
-.super-fast{
-display: flex;
-align-items: center;
-gap: 5rem;
-padding-top: 8rem;
+.super-fast {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  padding-top: 8rem;
 
-    &__icone{
-        stroke:$colorWihte ;
-        width: 1rem;
-        height: 1rem;
-        margin-bottom: -2px;
+  &__icone {
+    stroke: $colorWihte;
+    width: 1rem;
+    height: 1rem;
+    margin-bottom: -2px;
+  }
 
-     
-    }
+  &__button {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 4px;
+    background-image: linear-gradient(
+      to right,
+      $colorSecondary,
+      $colorTertiary,
+      $colorPrimary
+    );
+    padding: 0.2rem 1rem 0.2rem 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 100px;
+    cursor: pointer;
+  }
 
-    &__button{
-        display: inline-flex;
-        align-items: baseline;
-        gap: 4px;
-        background-image: linear-gradient(to right , $colorSecondary,$colorTertiary , $colorPrimary) ;
-        padding: 0.2rem 1rem 0.2rem 1rem;
-        text-transform: uppercase;
-        font-weight: 700;
-        border-radius: 100px;
-        cursor: pointer;
-    }
+  &__headline {
+    font-size: 2.8rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, $colorEighth, $colorSeventh);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-top: 1rem;
+  }
 
-    &__headline{
-       
-        font-size: 2.8rem;
-        font-weight: 700;
-        background-image: linear-gradient(to right ,$colorEighth ,$colorSeventh);
-        -webkit-background-clip: text;
-        color: transparent;
-        margin-top: 1rem;
-     }
+  &__paragraph {
+    font-size: 1.2rem;
+  }
+  &__performance {
+    display: inline-flex;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
 
-     &__paragraph{
-        font-size: 1.2rem;       
-     }
- &__performance{
-display: inline-flex;
-gap: 0.5rem;
-font-size: 1.2rem;
-margin-top: 1rem;
- }
-
- &__feature{
+  &__feature {
     display: flex;
     gap: 3rem;
- }
+  }
 
- &__feature-1{
-    background-image: linear-gradient(to right ,$colorEighth ,$colorSeventh);
+  &__feature-1 {
+    background-image: linear-gradient(to right, $colorEighth, $colorSeventh);
     -webkit-background-clip: text;
     color: transparent;
     font-weight: 900;
@@ -60,11 +62,10 @@ margin-top: 1rem;
     outline-offset: 0.5rem;
     border-radius: 100px;
     font-size: 5rem;
-    
- }
+  }
 
- &__feature-2{
-    background-image: linear-gradient(to right ,$colorEighth,$colorSeventh);
+  &__feature-2 {
+    background-image: linear-gradient(to right, $colorEighth, $colorSeventh);
     -webkit-background-clip: text;
     color: transparent;
     font-size: 3rem;
@@ -72,43 +73,41 @@ margin-top: 1rem;
     outline: 1px solid $colorWihte;
     outline-offset: 0.5rem;
     border-radius: 100px;
- }
+  }
 
-&__feature-3{
+  &__feature-3 {
     display: flex;
     justify-content: center;
     margin-top: 1rem;
-    background-image: linear-gradient(to right ,$colorEighth ,$colorSeventh);
+    background-image: linear-gradient(to right, $colorEighth, $colorSeventh);
     -webkit-background-clip: text;
     color: transparent;
     font-size: 1.2rem;
-}
+  }
 
-&_performance{
+  &_performance {
     text-align: center;
     margin-top: 2rem;
     margin-bottom: -2rem;
-}
+  }
 
-&__icones{
-display: flex;
-gap: 2rem;
-justify-content: center;
-align-items: center;
-padding-bottom: 4rem;
-}
-&__icone-google{
+  &__icones {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 4rem;
+  }
+  &__icone-google {
     width: 10rem;
-}
-&__icone-gtmetrix{
+  }
+  &__icone-gtmetrix {
     width: 12rem;
+  }
 }
 
+.icone-1 {
+  stroke: $colorPrimary;
+  width: 2rem;
+  height: 2rem;
 }
-
-.icone-1{
-stroke:$colorPrimary;
-width: 2rem;
-height: 2rem;
-}
-

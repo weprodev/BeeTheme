@@ -1,7 +1,21 @@
+/*------------------------------------*\
+  #ABSTRACTS
+\*------------------------------------*/
 @import "variables";
-@import "top-nav";
 @import "typography";
-@import "super-fast";
 @import "home-page";
-@import "button";
+@import "super-fast";
+/*------------------------------------*\
+  #LAYOUTS
+\*------------------------------------*/
+@import "layout/top-nav";
+
+/*------------------------------------*\
+  #BASE
+\*------------------------------------*/
 @import "../../shared/scss/base/reset";
+
+/*------------------------------------*\
+  #COMPONENTS
+\*------------------------------------*/
+@import "../sass/components/button";
