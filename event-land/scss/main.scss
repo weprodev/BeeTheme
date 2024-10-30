@@ -15,10 +15,14 @@
   #LAYOUTS
 \*------------------------------------*/
 @import "layout/top-bar";
-
+@import "layout/main-navigation";
+@import "layout/hero-header";
+@import "layout/about-section";
 
 /*------------------------------------*\
   #COMPONENTS
 \*------------------------------------*/
 @import "../../shared/scss/components/dropdown";
+@import "../../shared/scss/components/button";
 @import "components/dropdown";
+@import "components/button";
