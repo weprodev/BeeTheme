@@ -10,22 +10,46 @@ body {
   font-family: $primaryFontFamily;
 }
 
-.heading-1 {
-  font-size: $fontSize7Xl;
+.heading-1,
+.heading-2,
+.heading-3 {
   font-weight: $fontWeightBold;
   text-transform: uppercase;
-  @include laptop{
-    font-size: $fontSize5Xl;
-  }
-  @include mobile{
-    font-size: $fontSize4Xl;
-  }
-  
-  &--primary{
+  &--primary {
     color: $tertiaryColor;
   }
-  &--secondary{
+  &--secondary {
     color: $secondaryColor;
+  }
+}
+
+.heading-1 {
+  font-size: $fontSize7Xl;
+  @include laptop {
+    font-size: $fontSize5Xl;
+  }
+  @include mobile {
+    font-size: $fontSize4Xl;
+  }
+}
+
+.heading-2 {
+  font-size: $fontSize5Xl;
+  @include laptop {
+    font-size: $fontSize4Xl;
+  }
+  @include mobile {
+    font-size: $fontSize3Xl;
+  }
+}
+
+.heading-3 {
+  font-size: $fontSize4Xl;
+  @include laptop {
+    font-size: $fontSize3Xl;
+  }
+  @include mobile {
+    font-size: $fontSize2Xl;
   }
 }
 
@@ -37,19 +61,34 @@ body {
   &--primary{
     color: $tertiaryColor;
   }
-  &--secondary{
+  &--secondary {
     color: $secondaryColorDarker;
   }
 }
 
-.tag{
+.tag {
   padding: list.nth($spaces, 2) list.nth($spaces, 5);
   border-radius: $roundedFull;
   font-weight: $fontWeightBold;
   text-transform: uppercase;
   text-align: center;
-  &--primary{
+  &--primary {
     color: $primaryColor;
     background-color: $primaryColorLighter;
+  }
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: list.nth($spaces, 2);
+  font-size: $fontSize2Xl;
+  font-weight: $fontWeightSemibold;
+
+  &__arrow {
+    transform: rotate(-45deg);
+  }
+  &--primary{
+    color: $tertiaryColor;
   }
 }
