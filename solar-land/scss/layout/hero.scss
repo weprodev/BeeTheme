@@ -1,0 +1,120 @@
+@use "sass:list";
+@use 'sass:color';
+@import "../../../shared/scss/components/button";
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60vh;
+  background: url('../images/main-hero.jpg') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: list.nth($spaces, 4) list.nth($spaces, 8);
+
+  .hero-content {
+    z-index: 1;
+    max-width: 80%;
+
+    .tagline {
+      font-size: $fontSizeLg;
+      font-weight: $fontWeightMedium;
+      margin-bottom: list.nth($spaces, 2);
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .title {
+      font-size: $fontSize4Xl;
+      font-weight: $fontWeightBold;
+      margin-bottom: list.nth($spaces, 4);
+    }
+
+    .actions {
+      display: flex;
+      gap: list.nth($spaces, 4);
+      justify-content: center;
+      margin-top: list.nth($spaces, 4);
+
+      .get-in-touch {
+        @include button(
+          $bg: $primaryColor,
+          $color: #fff,
+          $radius: $roundedFull,
+          $hoverBgColor: color.adjust($primaryColor, $lightness: -10%),
+          $padding: list.nth($spaces, 2) list.nth($spaces, 4)
+        );
+      }
+
+      .our-services {
+        @include button(
+          $bg: none,
+          $color: #fff,
+          $border: 1px solid rgba(255, 255, 255, 0.5),
+          $radius: $roundedFull,
+          $hoverBgColor: rgba(255, 255, 255, 0.1),
+          $padding: list.nth($spaces, 2) list.nth($spaces, 4)
+        );
+      }
+    }
+  }
+
+  .carousel {
+    position: absolute;
+    top: 50%;
+    right: list.nth($spaces, 8);
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: list.nth($spaces, 4);
+    width: 300px;
+    height: 300px;
+
+    .carousel-item {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: list.nth($spaces, 2);
+      border-radius: $roundedMd;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      img {
+        width: 80%;
+        height: auto;
+        border-radius: $roundedSm;
+        left: 10%;
+      }
+
+      .caption {
+        color: #fff;
+        font-size: $fontSizeSm;
+        text-align: center;
+        margin-top: list.nth($spaces, 2);
+      }
+    }
+  }
+
+  .statistics {
+    background-color: #FFF;
+    color: $darkColor;
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    right: 0;
+    padding: list.nth($spaces, 6);
+    border-radius: $roundedMd 0 0 0;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+  }
+}
