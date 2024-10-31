@@ -230,6 +230,104 @@ a {
 }
 
 /*------------------------------------*\
+  #COMPONENTS
+\*------------------------------------*/
+/*=========================================================
+*********   Generic DropDown Component
+*******     Whenever .dropdown is hovered .dropdown__content appears
+*/
+.dropdown {
+  position: relative;
+}
+.dropdown:hover .dropdown__content {
+  display: unset;
+}
+.dropdown .dropdown__content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+}
+
+/*=========================================================
+*********   Generic Button Component
+*******  
+*/
+/*=========================================================
+*********  This customizes the generic dropdown for this project
+*******  
+*/
+.dropdown {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+}
+.dropdown__content {
+  background-color: #ffffff;
+  color: #24222c;
+  border-radius: 0.375em;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  padding: 1em;
+  gap: 0.5em;
+  flex-direction: column;
+  text-wrap: nowrap;
+}
+.dropdown__icon {
+  transition: transform 150ms;
+}
+.dropdown:hover .dropdown__content {
+  display: flex;
+}
+.dropdown:hover .dropdown__icon {
+  transform: rotate(180deg);
+}
+
+/*=========================================================
+*********  This customizes the generic button for this project
+*******  
+*/
+.button {
+  border-radius: 9999px;
+  padding: 1em 1.5em;
+  font-size: 0.875em;
+  transition: all 150ms;
+  background: transparent;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+@media screen and (max-width: 40em) {
+  .button {
+    padding: 0.75em 1em;
+  }
+}
+.button--primary {
+  background-color: #50cb8b;
+  color: #ffffff;
+}
+.button--secondary {
+  background-color: #ffffff;
+  color: #24222c;
+  border: 2px solid #24222c;
+  gap: 0.75em;
+}
+.button--secondary .button__icon {
+  transform: rotate(-45deg);
+  font-size: 1.875em;
+}
+@media screen and (max-width: 40em) {
+  .button--secondary .button__icon {
+    font-size: 1.25em;
+  }
+}
+.button:hover {
+  opacity: 70%;
+}
+
+/*------------------------------------*\
   #LAYOUTS
 \*------------------------------------*/
 .top-bar {
@@ -659,102 +757,90 @@ a {
   }
 }
 
-/*------------------------------------*\
-  #COMPONENTS
-\*------------------------------------*/
-/*=========================================================
-*********   Generic DropDown Component
-*******     Whenever .dropdown is hovered .dropdown__content appears
-*/
-.dropdown {
-  position: relative;
-}
-.dropdown:hover .dropdown__content {
-  display: unset;
-}
-.dropdown .dropdown__content {
-  display: none;
-  position: absolute;
-  z-index: 1;
-  top: 100%;
-}
-
-/*=========================================================
-*********   Generic Button Component
-*******  
-*/
-/*=========================================================
-*********  This customizes the generic dropdown for this project
-*******  
-*/
-.dropdown {
+.testimonial-section {
   display: flex;
-  align-items: center;
-  gap: 0.75em;
-}
-.dropdown__content {
-  background-color: #ffffff;
-  color: #24222c;
-  border-radius: 0.375em;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  padding: 1em;
-  gap: 0.5em;
   flex-direction: column;
-  text-wrap: nowrap;
+  background-color: #f1f1f1;
+  background-image: radial-gradient(circle at 0 35%, #50cb8b -19%, transparent 10%), radial-gradient(circle at 100% 0%, #50cb8b -19%, transparent 10%);
+  padding: 3em;
+  gap: 4em;
 }
-.dropdown__icon {
-  transition: transform 150ms;
+@media screen and (max-width: 40em) {
+  .testimonial-section {
+    padding: 3.75em 1.5em;
+  }
 }
-.dropdown:hover .dropdown__content {
+.testimonial-section__top {
   display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
-.dropdown:hover .dropdown__icon {
-  transform: rotate(180deg);
+.testimonial-section__heading {
+  width: 38%;
 }
-
-/*=========================================================
-*********  This customizes the generic button for this project
-*******  
-*/
-.button {
+@media screen and (max-width: 75em) {
+  .testimonial-section__heading {
+    width: 80%;
+  }
+}
+.testimonial-section__bottom {
+  display: flex;
+  gap: 3em;
+}
+@media screen and (max-width: 64em) {
+  .testimonial-section__bottom {
+    flex-direction: column;
+  }
+}
+.testimonial-section__review {
+  display: flex;
+  gap: 3em;
+}
+@media screen and (max-width: 40em) {
+  .testimonial-section__review {
+    gap: 1.5em;
+    flex-direction: column;
+  }
+}
+.testimonial-section__review-profile {
   border-radius: 9999px;
-  padding: 1em 1.5em;
-  font-size: 0.875em;
-  transition: all 150ms;
-  background: transparent;
-  border: none;
-  text-align: center;
-  cursor: pointer;
+  width: 7rem;
+  height: 7rem;
+}
+@media screen and (max-width: 75em) {
+  .testimonial-section__review-profile {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+.testimonial-section__review-info {
+  font-size: 1.5em;
+}
+@media screen and (max-width: 75em) {
+  .testimonial-section__review-info {
+    font-size: 1em;
+  }
+}
+.testimonial-section__review-text {
+  line-height: 1.7;
+  margin-bottom: 1em;
+}
+.testimonial-section__review-person-info {
+  font-weight: 700;
+}
+.testimonial-section__move-btns-container {
   display: flex;
-  align-items: center;
-  font-weight: 600;
+  gap: 1.25em;
+  align-self: flex-start;
 }
-@media screen and (max-width: 40em) {
-  .button {
-    padding: 0.75em 1em;
+@media screen and (max-width: 64em) {
+  .testimonial-section__move-btns-container {
+    align-self: center;
   }
 }
-.button--primary {
-  background-color: #50cb8b;
-  color: #ffffff;
-}
-.button--secondary {
-  background-color: #ffffff;
-  color: #24222c;
-  border: 2px solid #24222c;
-  gap: 0.75em;
-}
-.button--secondary .button__icon {
-  transform: rotate(-45deg);
-  font-size: 1.875em;
-}
-@media screen and (max-width: 40em) {
-  .button--secondary .button__icon {
-    font-size: 1.25em;
-  }
-}
-.button:hover {
-  opacity: 70%;
+.testimonial-section__move-btn {
+  padding: 0.5em;
+  font-size: 1.5em;
 }
 
 /*# sourceMappingURL=style.css.map */
