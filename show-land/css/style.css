@@ -22,36 +22,34 @@ body {
 }
 
 .container {
-  width: 80rem;
+  width: 75rem;
   margin: 0 auto;
 }
 
 /*------------------------------------*\
   #LAYOUTS
 \*------------------------------------*/
-.main-nav__list {
+.container .header {
+  display: flex;
+  justify-content: space-between;
+}
+.container .logo {
+  padding-top: 0.8rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.container .main-nav__list {
   display: flex;
   padding-top: 1rem;
   gap: 1.5rem;
   list-style: none;
   align-items: center;
 }
-.main-nav__link:link, .main-nav__link:visited {
+.container .main-nav__link:link, .container .main-nav__link:visited {
   text-decoration: none;
   font-size: 1rem;
   color: #fff;
   text-transform: uppercase;
-  font-weight: 700;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-}
-
-.logo {
-  padding-top: 0.8rem;
-  font-size: 2rem;
   font-weight: 700;
 }
 
@@ -98,7 +96,7 @@ a {
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 1rem 4rem;
+  padding: 1rem 2.5rem;
   display: inline-block;
   border-radius: 8px;
   transition: all 0.2s;
@@ -111,15 +109,10 @@ a {
   transform: translateY(-0.1rem);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
-.btn-buttom {
+.btn-button {
   background-image: linear-gradient(to right, #364fc7, #6741d9, #37b24d);
   color: #fff;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
-}
-
-.nav-cta {
-  padding: 1rem 2.4rem !important;
-  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */
