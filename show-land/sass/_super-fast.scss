@@ -5,7 +5,7 @@
   padding-top: 8rem;
 
   &__icone {
-    stroke: $colorWihte;
+    stroke: $colorWhite;
     width: 1rem;
     height: 1rem;
     margin-bottom: -2px;
@@ -14,7 +14,7 @@
   &__button {
     display: inline-flex;
     align-items: baseline;
-    gap: 4px;
+    gap: 0.4rem;
     background-image: linear-gradient(
       to right,
       $colorSecondary,
@@ -58,7 +58,7 @@
     color: transparent;
     font-weight: 900;
     padding: 0 2.5rem 0 2.5rem;
-    outline: 1px solid $colorWihte;
+    outline: 1px solid $colorWhite;
     outline-offset: 0.5rem;
     border-radius: 100px;
     font-size: 5rem;
@@ -70,7 +70,7 @@
     color: transparent;
     font-size: 3rem;
     padding: 1.8rem 1.5rem 1.8rem 1.5rem;
-    outline: 1px solid $colorWihte;
+    outline: 1px solid $colorWhite;
     outline-offset: 0.5rem;
     border-radius: 100px;
   }
