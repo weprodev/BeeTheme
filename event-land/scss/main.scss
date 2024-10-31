@@ -12,6 +12,14 @@
 @import "../../shared/scss/base/reset";
 
 /*------------------------------------*\
+  #COMPONENTS
+\*------------------------------------*/
+@import "../../shared/scss/components/dropdown";
+@import "../../shared/scss/components/button";
+@import "components/dropdown";
+@import "components/button";
+
+/*------------------------------------*\
   #LAYOUTS
 \*------------------------------------*/
 @import "layout/top-bar";
@@ -20,11 +28,3 @@
 @import "layout/about-section";
 @import "layout/features-section";
 @import "layout/advantage-section";
-
-/*------------------------------------*\
-  #COMPONENTS
-\*------------------------------------*/
-@import "../../shared/scss/components/dropdown";
-@import "../../shared/scss/components/button";
-@import "components/dropdown";
-@import "components/button";
