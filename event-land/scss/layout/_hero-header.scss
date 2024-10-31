@@ -1,0 +1,79 @@
+@use "sass:list";
+
+.hero-header {
+  background-color: $secondaryColor;
+  padding: list.nth($spaces, 15) $containerSidePadding;
+  display: flex;
+  gap: list.nth($spaces, 12);
+  @include mobile {
+    font-size: $fontSizeBase;
+    padding: list.nth($spaces, 15) $containerSidePaddingMobile;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: list.nth($spaces, 8);
+    flex-basis: 50%;
+    @include tablet {
+      flex-basis: 100%;
+    }
+  }
+  &__btns-container {
+    display: flex;
+    gap: list.nth($spaces, 6);
+  }
+  &__reviews {
+    align-self: stretch;
+    border-radius: $rounded3Xl;
+    border:$primaryBorder;
+    padding: list.nth($spaces, 8);
+    margin-top: list.nth($spaces, 15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: list.nth($spaces, 12);
+    @include mobile {
+      gap: list.nth($spaces, 6);
+      flex-direction: column;
+      margin-top: 0;
+      align-items: flex-start;
+    }
+    @include led{
+      margin-top: auto;
+    }
+  }
+  &__reviews-stars {
+    display: flex;
+    flex-direction: column;
+    gap: list.nth($spaces, 2);
+  }
+  &__stars {
+    font-size: $fontSizeLg;
+    color: $starColor;
+  }
+  &__stars-number {
+    font-weight: $fontWeightBold;
+  }
+  &__reviews-logo {
+    height: 3em;
+    width: 12em;
+    @include laptop {
+      height: 2em;
+      width: 8em;
+    }
+  }
+
+  &__right {
+    flex-basis: 50%;
+    @include tablet {
+      display: none;
+    }
+  }
+  &__image {
+    height: 100%;
+    object-fit: cover;
+    border-radius: $rounded2Xl;
+  }
+}
