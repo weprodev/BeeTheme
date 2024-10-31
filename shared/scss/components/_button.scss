@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .cta__button {
   &--button {
     width: 7rem;
@@ -10,6 +12,8 @@
       transition: 0.3s ease-in-out;
     }
   }
+}
+
 /*=========================================================
 *********   Generic Button Component
 *******  
