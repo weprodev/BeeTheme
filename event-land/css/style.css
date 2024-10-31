@@ -92,65 +92,6 @@ body {
   font-family: "Inter", sans-serif;
 }
 
-.heading-1,
-.heading-2,
-.heading-3 {
-  font-weight: 700;
-  text-transform: uppercase;
-}
-.heading-1--primary,
-.heading-2--primary,
-.heading-3--primary {
-  color: #24222c;
-}
-.heading-1--secondary,
-.heading-2--secondary,
-.heading-3--secondary {
-  color: #ffffff;
-}
-
-.heading-1 {
-  font-size: 4.5em;
-}
-@media screen and (max-width: 75em) {
-  .heading-1 {
-    font-size: 3em;
-  }
-}
-@media screen and (max-width: 40em) {
-  .heading-1 {
-    font-size: 2.25em;
-  }
-}
-
-.heading-2 {
-  font-size: 3em;
-}
-@media screen and (max-width: 75em) {
-  .heading-2 {
-    font-size: 2.25em;
-  }
-}
-@media screen and (max-width: 40em) {
-  .heading-2 {
-    font-size: 1.875em;
-  }
-}
-
-.heading-3 {
-  font-size: 2.25em;
-}
-@media screen and (max-width: 75em) {
-  .heading-3 {
-    font-size: 1.875em;
-  }
-}
-@media screen and (max-width: 40em) {
-  .heading-3 {
-    font-size: 1.5em;
-  }
-}
-
 .paragraph {
   color: #24222c;
   font-weight: 600;
@@ -192,6 +133,63 @@ body {
   color: #ffffff;
 }
 
+/*------------------------------------*\
+  #HEADINGS
+\*------------------------------------*/
+.heading-1,
+.heading-2,
+.heading-3 {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.heading-1--primary,
+.heading-2--primary,
+.heading-3--primary {
+  color: #24222c;
+}
+.heading-1--secondary,
+.heading-2--secondary,
+.heading-3--secondary {
+  color: #ffffff;
+}
+
+.heading-1 {
+  font-size: 4.5em;
+}
+
+.heading-2 {
+  font-size: 3em;
+}
+
+.heading-3 {
+  font-size: 2.25em;
+}
+
+/*------------------------------------*\
+  #MEDIA QUERIES
+\*------------------------------------*/
+@media screen and (max-width: 75em) {
+  .heading-1 {
+    font-size: 3em;
+  }
+  .heading-2 {
+    font-size: 2.25em;
+  }
+  .heading-3 {
+    font-size: 1.875em;
+  }
+}
+@media screen and (max-width: 40em) {
+  .heading-1 {
+    font-size: 2.25em;
+  }
+  .heading-2 {
+    font-size: 1.875em;
+  }
+  .heading-3 {
+    font-size: 1.5em;
+  }
+}
 /*------------------------------------*\
   #BASE
 \*------------------------------------*/
@@ -619,6 +617,17 @@ a {
   top: 100%;
 }
 
+.cta__button--button {
+  width: 7rem;
+  height: 3rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+.cta__button--button:hover {
+  transition: 0.3s ease-in-out;
+}
+
 /*=========================================================
 *********   Generic Button Component
 *******  
@@ -657,17 +666,21 @@ a {
 *******  
 */
 .button {
+  background: transparent;
+  color: #fff;
   border-radius: 9999px;
+  border: none;
   padding: 1em 1.5em;
   font-size: 0.875em;
-  transition: all 150ms;
-  background: transparent;
-  border: none;
+  font-weight: 600;
+  transition: 150ms;
   text-align: center;
   cursor: pointer;
   display: flex;
   align-items: center;
-  font-weight: 600;
+}
+.button:hover {
+  background-color: none;
 }
 @media screen and (max-width: 40em) {
   .button {
