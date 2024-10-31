@@ -9,9 +9,11 @@
   justify-content: space-between;
   height: 60vh;
   background: url('../images/main-hero.jpg') center/cover no-repeat;
-  color: #fff;
-  text-align: center;
+  color: $lightColor;
+  text-align: left;
   padding: list.nth($spaces, 4) list.nth($spaces, 8);
+  margin: 0 auto;
+  border-radius: $rounded4Xl;
 
   .hero-content {
     z-index: 1;
@@ -25,7 +27,7 @@
     }
 
     .title {
-      font-size: $fontSize4Xl;
+      font-size: $fontSize6Xl;
       font-weight: $fontWeightBold;
       margin-bottom: list.nth($spaces, 4);
     }
@@ -33,28 +35,28 @@
     .actions {
       display: flex;
       gap: list.nth($spaces, 4);
-      justify-content: center;
+      justify-content: flex-start;
       margin-top: list.nth($spaces, 4);
 
       .get-in-touch {
         @include button(
-          $bg: $primaryColor,
-          $color: #fff,
-          $radius: $roundedFull,
-          $hoverBgColor: color.adjust($primaryColor, $lightness: -10%),
+          $bg: none,
+          $color: $lightColor,
+          $hoverBgColor: rgba(255, 255, 255, 0.1),
           $padding: list.nth($spaces, 2) list.nth($spaces, 4)
         );
+        border-bottom: 1px solid $lightColor
       }
 
       .our-services {
         @include button(
           $bg: none,
-          $color: #fff,
-          $border: 1px solid rgba(255, 255, 255, 0.5),
-          $radius: $roundedFull,
+          $color: $lightColor,
+          $border: none,
           $hoverBgColor: rgba(255, 255, 255, 0.1),
           $padding: list.nth($spaces, 2) list.nth($spaces, 4)
         );
+        border-bottom: 1px solid $lightColor
       }
     }
   }
@@ -71,9 +73,9 @@
     height: 300px;
 
     .carousel-item {
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(255, 255, 255, 0.18);
       padding: list.nth($spaces, 2);
-      border-radius: $roundedMd;
+      border-radius: $rounded2Xl;
       transition: transform 0.3s ease;
 
       &:hover {
@@ -81,12 +83,32 @@
       }
 
       img {
-        width: 80%;
+        width: 60%;
         height: auto;
-        border-radius: $roundedSm;
-        left: 10%;
+        border-radius: $roundedLg;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
       }
 
+      .carousel-content {
+        display: flex;
+        justify-content: space-between;
+      }
+      
+      .carousel-button {
+        @include button(
+          $bg: none,
+          $color: $lightColor,
+          $hoverBgColor: rgba(255, 255, 255, 0.1),
+          $padding: list.nth($spaces, 2),
+          $radius : $roundedFull,
+          $border: 1px solid $lightColor
+        );
+
+        .arrow-icon {
+          padding: 0;
+        }
+      }
       .caption {
         color: #fff;
         font-size: $fontSizeSm;
@@ -96,15 +118,32 @@
     }
   }
 
+  .arrow-icon{
+    width: 0.875em;
+    height: 0.875em;
+    padding-left: list.nth($spaces, 2);
+  }
+
   .statistics {
     background-color: #FFF;
     color: $darkColor;
     position: absolute;
     display: flex;
+    gap:  list.nth($spaces, 4);
     bottom: 0;
     right: 0;
-    padding: list.nth($spaces, 6);
-    border-radius: $roundedMd 0 0 0;
+    padding: list.nth($spaces, 5);
+    border-radius: $rounded4Xl 0 0 0;
+    max-width: 50%;
+
+    .stat-item {
+      padding: list.nth($spaces, 2);
+
+      .stat-value{
+        font-size: $fontSize4Xl;
+        font-weight: $fontWeightBold;
+      }
+    }
   }
 
   &:before {
@@ -116,5 +155,6 @@
     bottom: 0;
     background: rgba(0, 0, 0, 0.3);
     z-index: 0;
+    border-radius: $rounded4Xl;
   }
 }

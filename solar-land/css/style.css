@@ -159,9 +159,11 @@
   justify-content: space-between;
   height: 60vh;
   background: url("../images/main-hero.jpg") center/cover no-repeat;
-  color: #fff;
-  text-align: center;
+  color: #f2f4f4;
+  text-align: left;
   padding: 1em 2em;
+  margin: 0 auto;
+  border-radius: 1.25em;
 }
 .hero .hero-content {
   z-index: 1;
@@ -174,20 +176,20 @@
   color: rgba(255, 255, 255, 0.7);
 }
 .hero .hero-content .title {
-  font-size: 2.25em;
+  font-size: 3em;
   font-weight: 700;
   margin-bottom: 1em;
 }
 .hero .hero-content .actions {
   display: flex;
   gap: 1em;
-  justify-content: center;
+  justify-content: flex-start;
   margin-top: 1em;
 }
 .hero .hero-content .actions .get-in-touch {
-  background: #0dd47e;
-  color: #fff;
-  border-radius: 9999px;
+  background: none;
+  color: #f2f4f4;
+  border-radius: 0;
   border: none;
   padding: 0.5em 1em;
   font-size: 1em;
@@ -195,21 +197,23 @@
   transition: none;
   text-align: center;
   cursor: pointer;
+  border-bottom: 1px solid #f2f4f4;
 }
 .hero .hero-content .actions .get-in-touch:hover {
-  background-color: rgb(10.0533333333, 163.9466666667, 97.44);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 .hero .hero-content .actions .our-services {
   background: none;
-  color: #fff;
-  border-radius: 9999px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #f2f4f4;
+  border-radius: 0;
+  border: none;
   padding: 0.5em 1em;
   font-size: 1em;
   font-weight: 400;
   transition: none;
   text-align: center;
   cursor: pointer;
+  border-bottom: 1px solid #f2f4f4;
 }
 .hero .hero-content .actions .our-services:hover {
   background-color: rgba(255, 255, 255, 0.1);
@@ -226,19 +230,42 @@
   height: 300px;
 }
 .hero .carousel .carousel-item {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.18);
   padding: 0.5em;
-  border-radius: 0.375em;
+  border-radius: 0.75em;
   transition: transform 0.3s ease;
 }
 .hero .carousel .carousel-item:hover {
   transform: scale(1.05);
 }
 .hero .carousel .carousel-item img {
-  width: 80%;
+  width: 60%;
   height: auto;
-  border-radius: 0.125em;
-  left: 10%;
+  border-radius: 0.5em;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+.hero .carousel .carousel-item .carousel-content {
+  display: flex;
+  justify-content: space-between;
+}
+.hero .carousel .carousel-item .carousel-button {
+  background: none;
+  color: #f2f4f4;
+  border-radius: 9999px;
+  border: 1px solid #f2f4f4;
+  padding: 0.5em;
+  font-size: 1em;
+  font-weight: 400;
+  transition: none;
+  text-align: center;
+  cursor: pointer;
+}
+.hero .carousel .carousel-item .carousel-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.hero .carousel .carousel-item .carousel-button .arrow-icon {
+  padding: 0;
 }
 .hero .carousel .carousel-item .caption {
   color: #fff;
@@ -246,15 +273,29 @@
   text-align: center;
   margin-top: 0.5em;
 }
+.hero .arrow-icon {
+  width: 0.875em;
+  height: 0.875em;
+  padding-left: 0.5em;
+}
 .hero .statistics {
   background-color: #FFF;
   color: #1e1e1e;
   position: absolute;
   display: flex;
+  gap: 1em;
   bottom: 0;
   right: 0;
-  padding: 1.5em;
-  border-radius: 0.375em 0 0 0;
+  padding: 1.25em;
+  border-radius: 1.25em 0 0 0;
+  max-width: 50%;
+}
+.hero .statistics .stat-item {
+  padding: 0.5em;
+}
+.hero .statistics .stat-item .stat-value {
+  font-size: 2.25em;
+  font-weight: 700;
 }
 .hero:before {
   content: "";
@@ -265,6 +306,7 @@
   bottom: 0;
   background: rgba(0, 0, 0, 0.3);
   z-index: 0;
+  border-radius: 1.25em;
 }
 
 /*# sourceMappingURL=style.css.map */
