@@ -596,6 +596,7 @@ body li {
 }
 .smart__solutions {
   padding-top: 5rem;
+  /* Responsive section */
 }
 .smart__solutions .container {
   background-color: rgb(244, 245, 246);
@@ -635,6 +636,21 @@ body li {
   left: 1rem;
   position: relative;
   width: 96%;
+}
+@media screen and (max-width: 40em) {
+  .smart__solutions .container .smart__solutions--img-box {
+    display: none;
+  }
+}
+@media screen and (min-width: 31.25em) and (max-width: 47.9375em) {
+  .smart__solutions .container .smart__solutions--img-box {
+    display: none;
+  }
+}
+@media screen and (max-width: 62em) {
+  .smart__solutions .container .smart__solutions--img-box {
+    display: none;
+  }
 }
 
 /*

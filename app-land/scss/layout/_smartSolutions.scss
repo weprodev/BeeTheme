@@ -48,4 +48,29 @@
       }
     }
   }
+
+  /* Responsive section */
+  @include mobile {
+    .container {
+      .smart__solutions--img-box {
+        display: none;
+      }
+    }
+  }
+
+  @include retinaMobile {
+    .container {
+      .smart__solutions--img-box {
+        display: none;
+      }
+    }
+  }
+
+  @include tablet {
+    .container {
+      .smart__solutions--img-box {
+        display: none;
+      }
+    }
+  }
 }
