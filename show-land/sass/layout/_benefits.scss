@@ -1,0 +1,58 @@
+.benefits {
+  padding-bottom: 8rem;
+  &__headline {
+    font-size: 2.8rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, $colorEighth, $colorSeventh);
+    -webkit-background-clip: text;
+    color: transparent;
+    padding-top: 1rem;
+    text-align: center;
+  }
+  &__paragraph {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  &__features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 4rem;
+    column-gap: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  &__img_boxs {
+    outline: 0.1rem solid $colorEleventh;
+    outline-offset: 0.8rem;
+    border-radius: 0.1rem;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: $defaultFontSize;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  &__description {
+    text-align: center;
+  }
+  &__img_box {
+    padding-left: 2rem;
+    border-radius: 0.4rem;
+    margin-bottom: 1rem;
+  }
+  &__img_box_1 {
+    padding-left: 1rem;
+    border-radius: 0.4rem;
+    margin-bottom: 1rem;
+  }
+
+  &__features_1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 4rem;
+    margin-bottom: 4rem;
+  }
+}
