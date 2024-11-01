@@ -110,6 +110,9 @@ body {
 }
 
 /*------------------------------------*\
+  #LAYOUTS
+\*------------------------------------*/
+/*------------------------------------*\
   #BASE
 \*------------------------------------*/
 *,
@@ -148,12 +151,13 @@ a {
 /*------------------------------------*\
   #COMPONENTS
 \*------------------------------------*/
+
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 1rem 4rem;
+  padding: 1rem 2.5rem;
   display: inline-block;
-  border-radius: 8px;
+  border-radius: 0.8rem;
   transition: all 0.2s;
 }
 .btn:hover {
@@ -164,15 +168,11 @@ a {
   transform: translateY(-0.1rem);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
-.btn-buttom {
+.btn-button {
   background-image: linear-gradient(to right, #364fc7, #6741d9, #37b24d);
   color: #fff;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
 }
 
-.nav-cta {
-  padding: 1rem 2.4rem !important;
-  align-items: center;
-}
 
 /*# sourceMappingURL=style.css.map */

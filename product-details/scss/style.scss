@@ -1,20 +1,19 @@
 /*------------------------------------*\
   #ABSTRACTS
 \*------------------------------------*/
-@import "variables";
-@import "typography";
-----------------------*\
-  #LAYOUTS
-\*------------------------------------*/
-@import "layout/top-nav";
-@import "layout/hero";
+
+@import "../../shared/scss/shared.scss";
+// @import "variables";
+
+
 /*------------------------------------*\
   #BASE
 \*------------------------------------*/
+
 @import "../../shared/scss/base/reset";
 
 /*------------------------------------*\
-  #COMPONENTS
+  #PRODUCT-DETAILS
 \*------------------------------------*/
-@import "components/_button.scss";
 
+@import "../scss/productDetails.scss"

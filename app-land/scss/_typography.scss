@@ -1,0 +1,17 @@
+body {
+  font-family: $primaryFontFamily;
+
+  a {
+    text-decoration: none;
+    color: $black;
+  }
+
+  a:hover {
+    transition: 0.5s;
+    color: $gray;
+  }
+
+  li {
+    list-style-type: none;
+  }
+}
