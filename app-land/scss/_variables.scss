@@ -17,6 +17,8 @@
     $black          : rgb(000, 000, 000); // #000
     $white          : rgb(255, 255, 255); // #fff
     
+    $gray           : rgb(128, 128, 128); // #808080
+
     $shadowBlack    : rgb(024, 026, 027); // #181a1b
     $vibrantGreen   : rgb(084, 234, 084); // #54ea54
     
@@ -45,3 +47,15 @@
     $paddingLarge: 3rem;          /* large padding */
     $paddingXlarge: 4rem;         /* Padding too big */
     $paddingDefault: 5rem;        /* default padding */
+    $transparentBlack : rgba(0, 0, 0, 0.5); // shadow Black
+
+/*========================================================================================*\
+*----------------------------               FONTS              ----------------------------        
+\*========================================================================================*/
+
+    /*--------------------------------
+    *** FONTS 
+    **  
+    */
+
+    $primaryFontFamily: "Poppins", sans-serif;

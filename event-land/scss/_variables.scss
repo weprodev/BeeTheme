@@ -1,3 +1,5 @@
+@use "sass:list";
+
 /*------------------------------------*\
   #COLORS
 \*------------------------------------*/
@@ -7,6 +9,7 @@ $primaryColorLighter: #effff7;
 $secondaryColor: #ffffff;
 $secondaryColorDarker: #f1f1f1;
 $tertiaryColor: #24222c;
+$starColor: #ffa534;
 
 /*------------------------------------*\
   #FONT
@@ -14,3 +17,16 @@ $tertiaryColor: #24222c;
 
 $primaryFontFamily: "Inter", sans-serif;
 
+/*------------------------------------*\
+  #SPACE
+\*------------------------------------*/
+
+$containerSidePadding: list.nth($spaces, 12);
+$containerSidePaddingMobile : list.nth($spaces, 6);
+
+/*------------------------------------*\
+  #BORDER
+\*------------------------------------*/
+
+$primaryBorder : 2px solid $secondaryColorDarker;
+$borderSecondary : 1px solid  $secondaryColorDarker;

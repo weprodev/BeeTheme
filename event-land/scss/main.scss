@@ -1,6 +1,29 @@
 /*------------------------------------*\
-  #TYPOGRAPHY & VARIABLES
+  #ABSTRACTS
 \*------------------------------------*/
 @import "../../shared/scss/abstracts/variables";
+@import "../../shared/scss/abstracts/media-query";
 @import "variables";
 @import "typography";
+
+/*------------------------------------*\
+  #BASE
+\*------------------------------------*/
+@import "../../shared/scss/base/reset";
+
+/*------------------------------------*\
+  #LAYOUTS
+\*------------------------------------*/
+@import "layout/top-bar";
+@import "layout/main-navigation";
+@import "layout/hero-header";
+@import "layout/about-section";
+@import "layout/features-section";
+
+/*------------------------------------*\
+  #COMPONENTS
+\*------------------------------------*/
+@import "../../shared/scss/components/dropdown";
+@import "../../shared/scss/components/button";
+@import "components/dropdown";
+@import "components/button";
