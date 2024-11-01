@@ -218,38 +218,44 @@
 .hero .hero-content .actions .our-services:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
-.hero .carousel {
+.hero .recent-project {
   position: absolute;
-  top: 50%;
+  top: 30%;
   right: 2em;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
   gap: 1em;
-  width: 300px;
-  height: 300px;
+  width: 15.625em;
+  height: 15.625em;
 }
-.hero .carousel .carousel-item {
+.hero .recent-project .recent-project-item {
   background-color: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(5px);
   padding: 0.5em;
   border-radius: 0.75em;
   transition: transform 0.3s ease;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 8px;
 }
-.hero .carousel .carousel-item:hover {
+.hero .recent-project .recent-project-item:hover {
   transform: scale(1.05);
 }
-.hero .carousel .carousel-item img {
-  width: 60%;
+.hero .recent-project .recent-project-item img {
+  width: 100%;
   height: auto;
   border-radius: 0.5em;
   aspect-ratio: 1/1;
   object-fit: cover;
+  grid-area: 1/1/5/5;
 }
-.hero .carousel .carousel-item .carousel-content {
-  display: flex;
-  justify-content: space-between;
+.hero .recent-project .recent-project-item .recent-project-options {
+  grid-area: 1/5/5/6;
+  grid-column-start: 5;
 }
-.hero .carousel .carousel-item .carousel-button {
+.hero .recent-project .recent-project-item .recent-project-button {
   background: none;
   color: #f2f4f4;
   border-radius: 9999px;
@@ -260,18 +266,22 @@
   transition: none;
   text-align: center;
   cursor: pointer;
+  width: 2.625em;
+  height: 2.625em;
+  grid-area: 5/1/6/3;
 }
-.hero .carousel .carousel-item .carousel-button:hover {
+.hero .recent-project .recent-project-item .recent-project-button:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
-.hero .carousel .carousel-item .carousel-button .arrow-icon {
+.hero .recent-project .recent-project-item .recent-project-button .arrow-icon {
   padding: 0;
 }
-.hero .carousel .carousel-item .caption {
+.hero .recent-project .recent-project-item .recent-project-caption {
   color: #fff;
   font-size: 0.875em;
   text-align: center;
   margin-top: 0.5em;
+  grid-area: 5/3/6/6;
 }
 .hero .arrow-icon {
   width: 0.875em;
@@ -279,7 +289,7 @@
   padding-left: 0.5em;
 }
 .hero .statistics {
-  background-color: #FFF;
+  background-color: #fff;
   color: #1e1e1e;
   position: absolute;
   display: flex;

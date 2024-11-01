@@ -1,5 +1,5 @@
 @use "sass:list";
-@use 'sass:color';
+@use "sass:color";
 @import "../../../shared/scss/components/button";
 
 .hero {
@@ -8,7 +8,7 @@
   align-items: center;
   justify-content: space-between;
   height: 60vh;
-  background: url('../images/main-hero.jpg') center/cover no-repeat;
+  background: url("../images/main-hero.jpg") center/cover no-repeat;
   color: $lightColor;
   text-align: left;
   padding: list.nth($spaces, 4) list.nth($spaces, 8);
@@ -45,7 +45,7 @@
           $hoverBgColor: rgba(255, 255, 255, 0.1),
           $padding: list.nth($spaces, 2) list.nth($spaces, 4)
         );
-        border-bottom: 1px solid $lightColor
+        border-bottom: 1px solid $lightColor;
       }
 
       .our-services {
@@ -56,80 +56,91 @@
           $hoverBgColor: rgba(255, 255, 255, 0.1),
           $padding: list.nth($spaces, 2) list.nth($spaces, 4)
         );
-        border-bottom: 1px solid $lightColor
+        border-bottom: 1px solid $lightColor;
       }
     }
   }
 
-  .carousel {
+  .recent-project {
     position: absolute;
-    top: 50%;
+    top: 30%;
     right: list.nth($spaces, 8);
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
     gap: list.nth($spaces, 4);
-    width: 300px;
-    height: 300px;
+    width: 15.625em;
+    height: 15.625em;
 
-    .carousel-item {
+    .recent-project-item {
       background-color: rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(5px);
       padding: list.nth($spaces, 2);
       border-radius: $rounded2Xl;
       transition: transform 0.3s ease;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      gap: 8px;
 
       &:hover {
         transform: scale(1.05);
       }
 
       img {
-        width: 60%;
+        width: 100%;
         height: auto;
         border-radius: $roundedLg;
         aspect-ratio: 1 / 1;
         object-fit: cover;
+        grid-area: 1 / 1 / 5 / 5;
       }
 
-      .carousel-content {
-        display: flex;
-        justify-content: space-between;
+      .recent-project-options {
+        grid-area: 1 / 5 / 5 / 6;
+        grid-column-start: 5;
       }
-      
-      .carousel-button {
+
+      .recent-project-button {
         @include button(
           $bg: none,
           $color: $lightColor,
           $hoverBgColor: rgba(255, 255, 255, 0.1),
           $padding: list.nth($spaces, 2),
-          $radius : $roundedFull,
+          $radius: $roundedFull,
           $border: 1px solid $lightColor
         );
+        width: 2.625em;
+        height: 2.625em;
+        grid-area: 5 / 1 / 6 / 3;
 
         .arrow-icon {
           padding: 0;
         }
       }
-      .caption {
+
+      .recent-project-caption {
         color: #fff;
         font-size: $fontSizeSm;
         text-align: center;
         margin-top: list.nth($spaces, 2);
+        grid-area: 5 / 3 / 6 / 6;
       }
     }
   }
 
-  .arrow-icon{
+  .arrow-icon {
     width: 0.875em;
     height: 0.875em;
     padding-left: list.nth($spaces, 2);
   }
 
   .statistics {
-    background-color: #FFF;
+    background-color: #fff;
     color: $darkColor;
     position: absolute;
     display: flex;
-    gap:  list.nth($spaces, 4);
+    gap: list.nth($spaces, 4);
     bottom: 0;
     right: 0;
     padding: list.nth($spaces, 5);
@@ -139,7 +150,7 @@
     .stat-item {
       padding: list.nth($spaces, 2);
 
-      .stat-value{
+      .stat-value {
         font-size: $fontSize4Xl;
         font-weight: $fontWeightBold;
       }
