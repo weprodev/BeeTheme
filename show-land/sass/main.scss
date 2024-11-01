@@ -1,5 +1,20 @@
-@import"variables";
-@import"top-nav";
-@import"typography";
-@import"../../shared/scss/components/button";
-@import"../../shared/scss/base/reset";
+/*------------------------------------*\
+  #ABSTRACTS
+\*------------------------------------*/
+@import "variables";
+@import "typography";
+/*------------------------------------*\
+  #LAYOUTS
+\*------------------------------------*/
+@import "layout/top-nav";
+@import "layout/hero";
+
+/*------------------------------------*\
+  #BASE
+\*------------------------------------*/
+@import "../../shared/scss/base/reset";
+
+/*------------------------------------*\
+  #COMPONENTS
+\*------------------------------------*/
+@import "components/_button.scss";
