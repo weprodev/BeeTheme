@@ -255,6 +255,23 @@
   grid-area: 1/5/5/6;
   grid-column-start: 5;
 }
+.hero .recent-project .recent-project-item .recent-project-options .recent-project-options-button {
+  background: none;
+  color: #f2f4f4;
+  border-radius: 9999px;
+  border: none;
+  padding: 0.5em;
+  font-size: 1em;
+  font-weight: 400;
+  transition: none;
+  text-align: center;
+  cursor: pointer;
+  width: 2.625em;
+  height: 2.625em;
+}
+.hero .recent-project .recent-project-item .recent-project-options .recent-project-options-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
 .hero .recent-project .recent-project-item .recent-project-button {
   background: none;
   color: #f2f4f4;
@@ -317,6 +334,48 @@
   background: rgba(0, 0, 0, 0.3);
   z-index: 0;
   border-radius: 1.25em;
+}
+
+.customers {
+  margin: 3em auto 1em;
+}
+.customers .customers-header {
+  display: flex;
+  gap: 1em;
+  margin: 1em auto 2em;
+}
+.customers .customers-header .customers-title {
+  font-size: 2.25em;
+  flex: 0 50%;
+}
+.customers .customers-header .customers-title span {
+  color: #8d959d;
+}
+.customers .customers-header .customers-text {
+  font-size: 1.125em;
+  flex: 0 50%;
+}
+.customers .customers-icons {
+  display: flex;
+  flex-direction: row;
+}
+.customers .customers-icons .customers-icon {
+  margin-right: 1em;
+  background-color: #f2f4f4;
+  padding: 0.5em;
+  border: 2px solid #f2f4f4;
+  border-radius: 9999px;
+  aspect-ratio: 1/1;
+  transition: all 0.3s ease-in;
+}
+.customers .customers-icons .customers-icon img {
+  width: 100%;
+  top: 25%;
+  position: relative;
+}
+.customers .customers-icons .customers-icon:hover {
+  background-color: #fff;
+  border: 2px solid #f2f4f4;
 }
 
 /*# sourceMappingURL=style.css.map */
