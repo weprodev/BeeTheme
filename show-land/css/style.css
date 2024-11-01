@@ -7,7 +7,6 @@
 /*------------------------------------*\
   #FONTS
 \*------------------------------------*/
-
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -54,9 +53,6 @@ body {
   font-weight: 700;
 }
 
-
-
-
 /*------------------------------------*\
   #BASE
 \*------------------------------------*/
@@ -86,6 +82,7 @@ picture,
 svg,
 video {
   display: block;
+  width: 100%;
 }
 
 a {
@@ -96,7 +93,6 @@ a {
 /*------------------------------------*\
   #COMPONENTS
 \*------------------------------------*/
-
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -118,6 +114,5 @@ a {
   color: #fff;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
 }
-
 
 /*# sourceMappingURL=style.css.map */
