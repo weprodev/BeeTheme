@@ -2,6 +2,12 @@ body {
   font-family: $primaryFontFamily;
   overflow-x: hidden;
 
+  * {
+    padding: 0;
+    margin: 0;
+    font: revert;
+  }
+
   a {
     text-decoration: none;
     color: $black;
