@@ -84,6 +84,17 @@
   }
 }
 
+.cta__button--button {
+  width: 7rem;
+  height: 3rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+.cta__button--button:hover {
+  transition: 0.3s ease-in-out;
+}
+
 /*=========================================================
 *********   Generic Button Component
 *******  
@@ -148,6 +159,17 @@
   background-color: #0dd47e;
 }
 
+.cta__button--button {
+  width: 7rem;
+  height: 3rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+.cta__button--button:hover {
+  transition: 0.3s ease-in-out;
+}
+
 /*=========================================================
 *********   Generic Button Component
 *******  
@@ -163,7 +185,7 @@
   text-align: left;
   padding: 1em 2em;
   margin: 0 auto;
-  border-radius: 1.25em;
+  border-radius: 1.5em;
 }
 .hero .hero-content {
   z-index: 1;
@@ -176,7 +198,7 @@
   color: rgba(255, 255, 255, 0.7);
 }
 .hero .hero-content .title {
-  font-size: 3em;
+  font-size: 3.75em;
   font-weight: 700;
   margin-bottom: 1em;
 }
@@ -186,22 +208,7 @@
   justify-content: flex-start;
   margin-top: 1em;
 }
-.hero .hero-content .actions .get-in-touch {
-  background: none;
-  color: #f2f4f4;
-  border-radius: 0;
-  border: none;
-  padding: 0.5em 1em;
-  font-size: 1em;
-  font-weight: 400;
-  transition: none;
-  text-align: center;
-  cursor: pointer;
-  border-bottom: 1px solid #f2f4f4;
-}
-.hero .hero-content .actions .get-in-touch:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
+.hero .hero-content .actions .get-in-touch,
 .hero .hero-content .actions .our-services {
   background: none;
   color: #f2f4f4;
@@ -215,6 +222,7 @@
   cursor: pointer;
   border-bottom: 1px solid #f2f4f4;
 }
+.hero .hero-content .actions .get-in-touch:hover,
 .hero .hero-content .actions .our-services:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
@@ -233,12 +241,12 @@
   background-color: rgba(255, 255, 255, 0.18);
   backdrop-filter: blur(5px);
   padding: 0.5em;
-  border-radius: 0.75em;
+  border-radius: 1em;
   transition: transform 0.3s ease;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  gap: 8px;
+  gap: 0.5em;
 }
 .hero .recent-project .recent-project-item:hover {
   transform: scale(1.05);
@@ -314,7 +322,7 @@
   bottom: 0;
   right: 0;
   padding: 1.25em;
-  border-radius: 1.25em 0 0 0;
+  border-radius: 1.5em 0 0 0;
   max-width: 50%;
 }
 .hero .statistics .stat-item {
@@ -333,7 +341,7 @@
   bottom: 0;
   background: rgba(0, 0, 0, 0.3);
   z-index: 0;
-  border-radius: 1.25em;
+  border-radius: 1.5em;
 }
 
 .customers {
