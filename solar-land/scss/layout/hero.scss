@@ -13,7 +13,7 @@
   text-align: left;
   padding: list.nth($spaces, 4) list.nth($spaces, 8);
   margin: 0 auto;
-  border-radius: $rounded4Xl;
+  border-radius: $rounded3Xl;
 
   .hero-content {
     z-index: 1;
@@ -38,21 +38,11 @@
       justify-content: flex-start;
       margin-top: list.nth($spaces, 4);
 
-      .get-in-touch {
-        @include button(
-          $bg: none,
-          $color: $lightColor,
-          $hoverBgColor: rgba(255, 255, 255, 0.1),
-          $padding: list.nth($spaces, 2) list.nth($spaces, 4)
-        );
-        border-bottom: 1px solid $lightColor;
-      }
-
+      .get-in-touch,
       .our-services {
         @include button(
           $bg: none,
           $color: $lightColor,
-          $border: none,
           $hoverBgColor: rgba(255, 255, 255, 0.1),
           $padding: list.nth($spaces, 2) list.nth($spaces, 4)
         );
@@ -81,7 +71,7 @@
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       grid-template-rows: repeat(4, 1fr);
-      gap: 8px;
+      gap: list.nth($spaces, 2);
 
       &:hover {
         transform: scale(1.05);
@@ -157,7 +147,7 @@
     bottom: 0;
     right: 0;
     padding: list.nth($spaces, 5);
-    border-radius: $rounded4Xl 0 0 0;
+    border-radius: $rounded3Xl 0 0 0;
     max-width: 50%;
 
     .stat-item {
@@ -179,6 +169,6 @@
     bottom: 0;
     background: rgba(0, 0, 0, 0.3);
     z-index: 0;
-    border-radius: $rounded4Xl;
+    border-radius: $rounded3Xl;
   }
 }
