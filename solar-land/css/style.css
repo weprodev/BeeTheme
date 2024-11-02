@@ -163,7 +163,7 @@
   text-align: left;
   padding: 1em 2em;
   margin: 0 auto;
-  border-radius: 1.25em;
+  border-radius: 1em;
 }
 .hero .hero-content {
   z-index: 1;
@@ -186,22 +186,7 @@
   justify-content: flex-start;
   margin-top: 1em;
 }
-.hero .hero-content .actions .get-in-touch {
-  background: none;
-  color: #f2f4f4;
-  border-radius: 0;
-  border: none;
-  padding: 0.5em 1em;
-  font-size: 1em;
-  font-weight: 400;
-  transition: none;
-  text-align: center;
-  cursor: pointer;
-  border-bottom: 1px solid #f2f4f4;
-}
-.hero .hero-content .actions .get-in-touch:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
+.hero .hero-content .actions .get-in-touch,
 .hero .hero-content .actions .our-services {
   background: none;
   color: #f2f4f4;
@@ -215,6 +200,7 @@
   cursor: pointer;
   border-bottom: 1px solid #f2f4f4;
 }
+.hero .hero-content .actions .get-in-touch:hover,
 .hero .hero-content .actions .our-services:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
@@ -238,7 +224,7 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  gap: 8px;
+  gap: 0.5em;
 }
 .hero .recent-project .recent-project-item:hover {
   transform: scale(1.05);
@@ -314,7 +300,7 @@
   bottom: 0;
   right: 0;
   padding: 1.25em;
-  border-radius: 1.25em 0 0 0;
+  border-radius: 1em 0 0 0;
   max-width: 50%;
 }
 .hero .statistics .stat-item {
@@ -333,7 +319,7 @@
   bottom: 0;
   background: rgba(0, 0, 0, 0.3);
   z-index: 0;
-  border-radius: 1.25em;
+  border-radius: 1em;
 }
 
 .customers {
@@ -376,6 +362,47 @@
 .customers .customers-icons .customers-icon:hover {
   background-color: #fff;
   border: 2px solid #f2f4f4;
+}
+
+.features {
+  background-color: rgb(223.2735849057, 225.5, 227.7264150943);
+  margin: 3em auto 1em;
+  padding: 3em 0;
+}
+.features .container {
+  margin: 0 auto;
+}
+.features .features-title {
+  font-size: 1.875em;
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+.features .features-title span {
+  color: #8d959d;
+}
+.features .features-cards {
+  background-color: #f2f4f4;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-radius: 1em;
+}
+.features .features-cards .features-card {
+  padding: 1.5em;
+  border-right: 0.5px solid #8d959d;
+  border-bottom: 0.5px solid #8d959d;
+}
+.features .features-cards .features-card:nth-child(3), .features .features-cards .features-card:nth-child(6) {
+  border-right: none;
+}
+.features .features-cards .features-card:nth-child(n+4):nth-child(-n+6) {
+  border-bottom: none;
+}
+.features .features-cards .features-card .features-card-icon-svg {
+  width: 2em;
+  height: 2em;
+  fill: rgb(34.52, 241.48, 152.04);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  padding: 0.5em;
 }
 
 /*# sourceMappingURL=style.css.map */
