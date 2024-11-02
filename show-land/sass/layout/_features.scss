@@ -1,0 +1,68 @@
+.features {
+  padding-top: 5rem;
+  padding-bottom: 8rem;
+  &-btn:link,
+  &-btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.2rem 0.8rem;
+    display: inline-block;
+    border-radius: 8px;
+    transition: all 0.2s;
+    border-radius: 10rem;
+  }
+  &__headline {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, $colorEighth, $colorSeventh);
+    -webkit-background-clip: text;
+    color: transparent;
+    &_1 {
+      text-align: center;
+      font-size: 2.8rem;
+      font-weight: 700;
+      background-image: linear-gradient(to right, $colorEighth, $colorSeventh);
+      -webkit-background-clip: text;
+      color: transparent;
+      margin-top: -1.5rem;
+    }
+  }
+  &__description {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1rem;
+    row-gap: 1rem;
+    margin-top: 2rem;
+  }
+  &__icone_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+  }
+  &__icone {
+    stroke: $colorWhite;
+    background-image: linear-gradient(
+      to right,
+      $colorThirteenth,
+      $colorFourteenth
+    );
+    width: 4rem;
+    height: 4rem;
+    padding: 1rem 1rem 1rem 1rem;
+    border-radius: 10rem;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: $defaultFontSize;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: -0.01rem;
+  }
+  &__paragraph {
+    text-align: center;
+    margin-top: -1rem;
+  }
+}
