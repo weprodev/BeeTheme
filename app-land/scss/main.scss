@@ -6,13 +6,12 @@
 */
 
     /*--------------------------------
-    ***  SET DIRECTION BEFORE ANYTHING
-    **   
-    */
+    ***  shared files 
+    **  
+    */   
+    @import "../../shared/scss/shared.scss";
 
-    @import "typography";
-        
-        
+
     /*--------------------------------
     ***  IMPORT GENERAL AND IMPORTANT
     **   VARIABLES
@@ -21,18 +20,18 @@
         @import "variables";
 
     /*--------------------------------
-    ***  
-    **   appLand
-    */   
+    ***  SET DIRECTION BEFORE ANYTHING
+    **   
+    */
 
-    @import "appLand";
-    
+    @import "typography";
+
     /*--------------------------------
-    ***  shared files 
-    **  
+    ***  
+    **   HEADER
     */   
 
-    @import "../../shared/scss/shared.scss";
+    @import "layout/header";
 
 /*
 ***         
