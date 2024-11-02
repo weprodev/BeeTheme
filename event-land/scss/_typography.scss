@@ -10,55 +10,12 @@ body {
   font-family: $primaryFontFamily;
 }
 
-.heading-1,
-.heading-2,
-.heading-3 {
-  font-weight: $fontWeightBold;
-  text-transform: uppercase;
-  &--primary {
-    color: $tertiaryColor;
-  }
-  &--secondary {
-    color: $secondaryColor;
-  }
-}
-
-.heading-1 {
-  font-size: $fontSize7Xl;
-  @include laptop {
-    font-size: $fontSize5Xl;
-  }
-  @include mobile {
-    font-size: $fontSize4Xl;
-  }
-}
-
-.heading-2 {
-  font-size: $fontSize5Xl;
-  @include laptop {
-    font-size: $fontSize4Xl;
-  }
-  @include mobile {
-    font-size: $fontSize3Xl;
-  }
-}
-
-.heading-3 {
-  font-size: $fontSize4Xl;
-  @include laptop {
-    font-size: $fontSize3Xl;
-  }
-  @include mobile {
-    font-size: $fontSize2Xl;
-  }
-}
-
 .paragraph {
   color: $tertiaryColor;
   font-weight: $fontWeightSemibold;
-  line-height: 1.8;  
+  line-height: 1.8;
 
-  &--primary{
+  &--primary {
     color: $tertiaryColor;
   }
   &--secondary {
@@ -88,7 +45,69 @@ body {
   &__arrow {
     transform: rotate(-45deg);
   }
-  &--primary{
+  &--primary {
     color: $tertiaryColor;
+  }
+  &--secondary {
+    color: $secondaryColor;
+  }
+}
+
+/*------------------------------------*\
+  #HEADINGS
+\*------------------------------------*/
+.heading-1,
+.heading-2,
+.heading-3 {
+  font-weight: $fontWeightBold;
+  text-transform: uppercase;
+  &--primary {
+    color: $tertiaryColor;
+  }
+  &--secondary {
+    color: $secondaryColor;
+  }
+}
+
+.heading-1 {
+  font-size: $fontSize7Xl;
+}
+
+.heading-2 {
+  font-size: $fontSize5Xl;
+}
+
+.heading-3 {
+  font-size: $fontSize4Xl;
+}
+
+/*------------------------------------*\
+  #MEDIA QUERIES
+\*------------------------------------*/
+@include laptop {
+  .heading-1 {
+    font-size: $fontSize5Xl;
+  }
+
+  .heading-2 {
+    font-size: $fontSize4Xl;
+  }
+
+  .heading-3 {
+    font-size: $fontSize3Xl;
+  }
+}
+
+@include mobile {
+  .heading-1 {
+    font-size: $fontSize4Xl;
+  }
+
+  .heading-2 {
+    font-size: $fontSize3Xl;
+  }
+
+  .heading-3 {
+    font-size: $fontSize2Xl;
   }
 }

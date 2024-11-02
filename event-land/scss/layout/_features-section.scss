@@ -1,0 +1,67 @@
+@use "sass:list";
+
+.features-section {
+  background-color: $tertiaryColor;
+  background-image: radial-gradient(at left top , $primaryColor -6%, $tertiaryColor 20%);
+  display: flex;
+  flex-direction: column;
+  gap: list.nth($spaces, 8);
+  padding: list.nth($spaces, 15) $containerSidePadding;
+  @include mobile {
+    padding: list.nth($spaces, 15) $containerSidePaddingMobile;
+  }
+
+  &__top,
+  &__bottom {
+    display: flex;
+    gap: list.nth($spaces, 16);
+    & > *:first-child {
+      flex-basis: 45%;
+    }
+    & > *:last-child {
+      flex-basis: 55%;
+    }
+    @include laptop() {
+      flex-direction: column;
+      gap: list.nth($spaces, 8);
+    }
+  }
+
+  &__image {
+    border-radius: $rounded3Xl;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__features-list {
+    display: flex;
+    flex-direction: column;
+    gap: list.nth($spaces, 6);
+    justify-content: space-between;
+  }
+  &__feature-item {
+    display: flex;
+    flex-direction: column;
+    gap: list.nth($spaces, 6);
+    padding-bottom: list.nth($spaces, 6);
+    border-bottom: $borderSecondary;
+  }
+  &__feature-link-divider {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__feature-link {
+    color: $secondaryColor;
+    font-size: $fontSize2Xl;
+    .features-section__feature-arrow {
+      transform: rotate(-45deg);
+      padding: list.nth($spaces, 1);
+    }
+    &--active {
+      .features-section__feature-arrow {
+        transform: rotate(45deg);
+        background-color: $primaryColor;
+        border-radius: $roundedFull;
+      }
+    }
+  }
+}
