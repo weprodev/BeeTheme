@@ -3,13 +3,14 @@
 \*------------------------------------*/
 @import "variables";
 @import "typography";
-@import "home-page";
-@import "super-fast";
+
 /*------------------------------------*\
   #LAYOUTS
 \*------------------------------------*/
 @import "layout/top-nav";
-
+@import "layout/home-page";
+@import "layout/super-fast";
+@import "layout/hero";
 /*------------------------------------*\
   #BASE
 \*------------------------------------*/
@@ -18,4 +19,4 @@
 /*------------------------------------*\
   #COMPONENTS
 \*------------------------------------*/
-@import "../sass/components/button";
+@import "components/button";

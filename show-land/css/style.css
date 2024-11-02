@@ -32,58 +32,33 @@ body {
   margin: 0 auto;
 }
 
-.text-box {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+/*------------------------------------*\
+  #LAYOUTS
+\*------------------------------------*/
+.main-nav__list {
+  display: flex;
+  padding-top: 1rem;
+  gap: 1.5rem;
+  list-style: none;
+  align-items: center;
 }
-
-.header-primary__sub {
-  display: block;
-  text-transform: uppercase;
+.main-nav__link:link, .main-nav__link:visited {
+  text-decoration: none;
   font-size: 1rem;
-}
-.header-primary__main {
-  display: block;
-  font-size: 5rem;
-  margin-bottom: -3rem;
-}
-.header-primary_main__1 {
-  display: block;
-  font-size: 5rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
-.text-img {
-  outline-offset: 2rem;
-  outline: 2px solid #777;
-  border-radius: 10px;
-}
-.text-img__1 {
+.header {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 30rem;
-  gap: 1rem;
-}
-.text-img__2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 1rem;
-  gap: 1rem;
+  justify-content: space-between;
 }
 
-.text-img__box {
-  border-radius: 9px;
-}
-
-.border__1 {
-  border-bottom-left-radius: 0;
-}
-.border__2 {
-  border-bottom-right-radius: 0;
+.logo {
+  padding-top: 0.8rem;
+  font-size: 2rem;
+  font-weight: 700;
 }
 
 .home-page {
@@ -228,33 +203,58 @@ body {
   height: 2rem;
 }
 
-/*------------------------------------*\
-  #LAYOUTS
-\*------------------------------------*/
-.main-nav__list {
-  display: flex;
-  padding-top: 1rem;
-  gap: 1.5rem;
-  list-style: none;
-  align-items: center;
+.text-box {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
-.main-nav__link:link, .main-nav__link:visited {
-  text-decoration: none;
-  font-size: 1rem;
-  color: #fff;
+
+.header-primary__sub {
+  display: block;
   text-transform: uppercase;
-  font-weight: 700;
+  font-size: 1rem;
+}
+.header-primary__main {
+  display: block;
+  font-size: 5rem;
+  margin-bottom: -3rem;
+}
+.header-primary_main__1 {
+  display: block;
+  font-size: 5rem;
 }
 
-.header {
+.text-img {
+  outline-offset: 2rem;
+  outline: 2px solid #777;
+  border-radius: 10px;
+}
+.text-img__1 {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30rem;
+  gap: 1rem;
+}
+.text-img__2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
 }
 
-.logo {
-  padding-top: 0.8rem;
-  font-size: 2rem;
-  font-weight: 700;
+.text-img__box {
+  border-radius: 9px;
+}
+
+.border__1 {
+  border-bottom-left-radius: 0;
+}
+.border__2 {
+  border-bottom-right-radius: 0;
 }
 
 /*------------------------------------*\
