@@ -653,6 +653,66 @@ body li {
   }
 }
 
+.customer__reviews {
+  padding-top: 5rem;
+}
+.customer__reviews .moonlitLavender {
+  background-color: rgb(204, 186, 254);
+}
+.customer__reviews .skyBreeze {
+  background-color: rgb(165, 228, 249);
+}
+.customer__reviews .sringGreen {
+  background-color: rgb(187, 249, 158);
+}
+.customer__reviews--header-sectios {
+  display: flex;
+  justify-content: space-between;
+}
+.customer__reviews--header-sectios .p-1,
+.customer__reviews--header-sectios h1 {
+  width: 24rem;
+}
+.customer__reviews--card-section {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.customer__reviews--card-section .card {
+  width: 24rem;
+  background: lightgreen;
+  border-radius: 2rem;
+  border: none;
+  height: 21rem;
+}
+.customer__reviews--card-section .card .card__text-box {
+  width: 95%;
+  left: 0.5rem;
+  position: relative;
+  display: grid;
+  top: 0.5rem;
+  height: 20rem;
+}
+.customer__reviews--card-section .card .card__text-box .paragraph p {
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+.customer__reviews--card-section .information-box {
+  display: flex;
+  gap: 1rem;
+  top: 2rem;
+  position: relative;
+  height: 5rem;
+}
+.customer__reviews--card-section .information-box img {
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  top: 0.5rem;
+  position: relative;
+  object-fit: cover;
+}
+
 /*
 ***         
 *****       

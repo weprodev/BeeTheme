@@ -1,0 +1,70 @@
+.customer__reviews {
+  padding-top: 5rem;
+
+  .moonlitLavender {
+    background-color: $moonlitLavender;
+  }
+
+  .skyBreeze {
+    background-color: $skyBreeze;
+  }
+
+  .sringGreen {
+    background-color: $sringGreen;
+  }
+
+  &--header-sectios {
+    display: flex;
+    justify-content: space-between;
+
+    .p-1,
+    h1 {
+      width: 24rem;
+    }
+  }
+
+  &--card-section {
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+
+    .card {
+      width: 24rem;
+      background: lightgreen;
+      border-radius: 2rem;
+      border: none;
+      height: 21rem;
+
+      .card__text-box {
+        width: 95%;
+        left: 0.5rem;
+        position: relative;
+        display: grid;
+        top: 0.5rem;
+        height: 20rem;
+
+        .paragraph p {
+          font-size: 1.2rem;
+          line-height: 1.4;
+        }
+      }
+    }
+
+    .information-box {
+      display: flex;
+      gap: 1rem;
+      top: 2rem;
+      position: relative;
+      height: 5rem;
+
+      img {
+        border-radius: 50%;
+        width: 4rem;
+        height: 4rem;
+        top: 0.5rem;
+        position: relative;
+        object-fit: cover;
+      }
+    }
+  }
+}
