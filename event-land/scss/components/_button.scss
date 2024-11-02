@@ -7,18 +7,17 @@
 
 .button {
   @include button(
-    transparent,
-    $roundedFull,
-    list.nth($spaces, 4) list.nth($spaces, 6),
-    none,
-    $fontSizeSm,
-    all map-get($durations, 150)
+    $bg: transparent,
+    $radius: $roundedFull,
+    $padding: list.nth($spaces, 4) list.nth($spaces, 6),
+    $fontSize: $fontSizeSm,
+    $transition: map-get($durations, 150),
+    $hoverBgColor: none,
+    $fontWeight : $fontWeightSemibold
   );
-  
   display: flex;
   align-items: center;
-  font-weight: $fontWeightSemibold;
-  
+
   @include mobile {
     padding: list.nth($spaces, 3) list.nth($spaces, 4);
   }
@@ -27,7 +26,7 @@
     background-color: $primaryColor;
     color: $secondaryColor;
   }
-  
+
   &--secondary {
     background-color: $secondaryColor;
     color: $tertiaryColor;
