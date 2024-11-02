@@ -33,23 +33,47 @@
       h1 {
         text-align: center;
         padding-top: 1rem;
+        font-size: 2.2rem;
+        font-weight: 600;
       }
 
       p {
         padding-top: 1rem;
+        line-height: 1.4;
       }
 
       .cta__button {
         position: relative;
         text-align: center;
         display: flex;
-        width: 15rem;
+        width: 27rem;
         gap: 2rem;
-        left: 6rem;
+        left: 0rem;
         padding-top: 1rem;
+        text-align: center;
+        place-content: center;
 
         &--button {
           width: 9rem;
+          border: none;
+          border-radius: 0.5rem;
+          height: 3rem;
+          font-size: 1rem;
+
+          &-more {
+            background-color: $lightGray;
+            width: 9rem;
+            border: none;
+            border-radius: 0.5rem;
+            height: 3rem;
+            cursor: pointer;
+            font-size: 1rem;
+
+            &:hover {
+              transition: 0.3s ease-in-out;
+              background-color: rgb(139 135 135);
+            }
+          }
         }
       }
 
@@ -57,7 +81,7 @@
         position: relative;
         padding-top: 1rem;
         display: flex;
-        width: 25rem;
+        width: 27rem;
         justify-content: center;
         gap: 2rem;
       }
@@ -93,6 +117,28 @@
           width: 76%;
           left: 2rem;
           position: relative;
+          font-size: 0.8rem;
+          font-weight: 800;
+        }
+
+        .cta__button {
+          position: relative;
+          text-align: center;
+          display: flex;
+          width: 22rem;
+          gap: 2rem;
+          left: 1rem;
+          padding-top: 1rem;
+          text-align: center;
+          place-content: center;
+        }
+
+        .stats-container {
+          font-size: 1rem;
+          left: -3rem;
+          .stat-item p {
+            width: 100%;
+          }
         }
       }
     }
