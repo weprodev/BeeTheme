@@ -3,14 +3,15 @@
 \*------------------------------------*/
 @import "variables";
 @import "typography";
-@import "home-page";
-@import "super-fast";
-@import "page-builder";
+
 /*------------------------------------*\
   #LAYOUTS
 \*------------------------------------*/
 @import "layout/top-nav";
-
+@import "layout/home-page.scss";
+@import "layout/super-fast.scss";
+@import "layout/page-builder";
+@import "layout/hero.scss";
 /*------------------------------------*\
   #BASE
 \*------------------------------------*/
@@ -19,4 +20,4 @@
 /*------------------------------------*\
   #COMPONENTS
 \*------------------------------------*/
-@import "../sass/components/button";
+@import "components/button";
