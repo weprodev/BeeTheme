@@ -554,6 +554,7 @@ body li {
 }
 @media screen and (max-width: 40em) {
   .hero__section {
+    overflow-x: hidden;
     left: 0.5rem;
   }
   .hero__section .hero__section--text-overlay {
@@ -568,6 +569,11 @@ body li {
     text-align: center;
     left: 0.7rem;
     height: 20rem;
+  }
+  .hero__section .hero__section--text-overlay .container p {
+    width: 76%;
+    left: 2rem;
+    position: relative;
   }
 }
 
