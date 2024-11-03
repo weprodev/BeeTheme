@@ -1,0 +1,11 @@
+@mixin add-padding-left($padding) {
+  > * {
+    padding-left: $padding;
+  }
+}
+
+@mixin add-padding-right($padding) {
+  > * {
+    padding-right: $padding;
+  }
+}

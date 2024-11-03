@@ -88,8 +88,6 @@
 \*------------------------------------*/
 /* ~~~~~~~~~~~~~~🔸 BASE 🔸~~~~~~~~~~~~~~ */
 /* Global styles, Resets, and Utilities */
-/* ~~~~~~~~~~~~~~🟢 COMPONENTS 🟢~~~~~~~~~~~~~~ */
-/* Reusable components and UI elements */
 *,
 *::before,
 *::after {
@@ -124,18 +122,12 @@ a {
   text-decoration: none;
 }
 
-
-.cta__button--button {
-  width: 7rem;
-  height: 3rem;
-  border: none;
-  border-radius: 2rem;
-  cursor: pointer;
-}
-.cta__button--button:hover {
-  transition: 0.3s ease-in-out;
-}
-
+/* ~~~~~~~~~~~~~~🟢 COMPONENTS 🟢~~~~~~~~~~~~~~ */
+/* Reusable components and UI elements */
+/*=========================================================
+*********   Generic Button Component
+*******  
+*/
 /* ~~~~~~~~~~~~~~⚙️ LAYOUT ⚙️~~~~~~~~~~~~~~ */
 /* Grid systems, structure, and layout styles */
 /*=======================
@@ -371,14 +363,6 @@ a {
 *----------------------------               FONTS              ----------------------------        
 \*========================================================================================*/
 /*--------------------------------
-*** FONTS 
-**  
-*/
-/*--------------------------------
-*** Font 
-**  
-*/
-/*--------------------------------
 *** Padding
 **  
 */
@@ -393,6 +377,12 @@ a {
 */
 body {
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+body * {
+  padding: 0;
+  margin: 0;
+  font: revert;
 }
 body a {
   text-decoration: none;
@@ -421,9 +411,6 @@ body li {
 .cta__button--button:hover {
   transition: 0.3s ease-in-out;
   background: rgb(71, 198, 71);
-}
-body li {
-  list-style-type: none;
 }
 
 /*--------------------------------
@@ -506,68 +493,128 @@ body li {
   position: relative;
   left: 1.2rem;
   width: 97%;
+  height: 50rem;
+  /*--------------------------------
+
+  *** FOR MINI MOBILE
+  ** MAX : 400PX / 25em
+  */
 }
 .hero__section--img {
   width: 100%;
-  height: 43.3rem;
+  height: 100%;
   object-fit: cover;
   border-radius: 2rem;
 }
 .hero__section--text-overlay {
-  background: rgba(0, 0, 0, 0.5);
-  max-width: 40%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 2rem;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  width: 28rem;
+  left: 8rem;
+  top: 8rem;
   height: 24rem;
   top: 10rem;
-  position: absolute;
-  left: 5rem;
-  border-radius: 2rem;
-  color: white;
 }
-.hero__section--text-overlay > * {
-  padding-left: 1rem;
+.hero__section--text-overlay .container {
+  width: 95%;
+  top: 0rem;
+  position: relative;
+  left: 0.5rem;
+  height: 100%;
 }
-.hero__section--text-overlay h1 {
+.hero__section--text-overlay .container h1 {
   text-align: center;
+  padding-top: 1rem;
+  font-size: 2.2rem;
+  font-weight: 600;
 }
-.hero__section .cta__button {
+.hero__section--text-overlay .container p {
+  padding-top: 1rem;
+  line-height: 1.4;
+}
+.hero__section--text-overlay .container .cta__button {
   position: relative;
   text-align: center;
   display: flex;
-  width: 15rem;
+  width: 27rem;
   gap: 2rem;
-  left: 6rem;
+  left: 0rem;
+  padding-top: 1rem;
+  text-align: center;
+  place-content: center;
 }
-.hero__section .cta__button--button {
+.hero__section--text-overlay .container .cta__button--button {
   width: 9rem;
+  border: none;
+  border-radius: 0.5rem;
+  height: 3rem;
+  font-size: 1rem;
 }
-.hero__section .cta__button--button .fa-solid {
-  position: relative;
-  font-size: 15px;
-  top: 2px;
-  left: 4px;
+.hero__section--text-overlay .container .cta__button--button-more {
+  background-color: rgb(170, 170, 170);
+  width: 9rem;
+  border: none;
+  border-radius: 0.5rem;
+  height: 3rem;
+  cursor: pointer;
+  font-size: 1rem;
 }
-.hero__section .stats-container {
+.hero__section--text-overlay .container .cta__button--button-more:hover {
+  transition: 0.3s ease-in-out;
+  background-color: rgb(139, 135, 135);
+}
+.hero__section--text-overlay .container .stats-container {
   position: relative;
+  padding-top: 1rem;
   display: flex;
-  left: 6rem;
+  width: 27rem;
+  justify-content: center;
   gap: 2rem;
-}
-@media screen and (max-width: 62em) {
-  .hero__section .hero__section--text-Overlay {
-    max-width: 50%;
-  }
-}
-@media screen and (min-width: 31.25em) and (max-width: 47.9375em) {
-  .hero__section {
-    left: 0.9rem;
-  }
-  .hero__section--text-overlay {
-    max-width: 70%;
-  }
 }
 @media screen and (max-width: 40em) {
   .hero__section {
+    overflow-x: hidden;
+    left: 0.5rem;
+  }
+  .hero__section .hero__section--text-overlay {
+    font-size: 0.625rem;
+    height: 100%;
+    width: 100%;
+    left: 0rem;
+    top: 0;
+  }
+  .hero__section .hero__section--text-overlay .container {
+    top: 10rem;
+    text-align: center;
     left: 0.7rem;
+    height: 20rem;
+  }
+  .hero__section .hero__section--text-overlay .container p {
+    width: 76%;
+    left: 2rem;
+    position: relative;
+    font-size: 0.8rem;
+    font-weight: 800;
+  }
+  .hero__section .hero__section--text-overlay .container .cta__button {
+    position: relative;
+    text-align: center;
+    display: flex;
+    width: 22rem;
+    gap: 2rem;
+    left: 1rem;
+    padding-top: 1rem;
+    text-align: center;
+    place-content: center;
+  }
+  .hero__section .hero__section--text-overlay .container .stats-container {
+    font-size: 1rem;
+    left: -3rem;
+  }
+  .hero__section .hero__section--text-overlay .container .stats-container .stat-item p {
+    width: 100%;
   }
 }
 
@@ -580,12 +627,21 @@ body li {
   /* tablet */
   /* laptop */
 }
+.explore__hub h2 {
+  font-size: 3rem;
+  font-weight: 600;
+}
 .explore__hub .header__section {
   display: flex;
-  gap: 1rem;
+  justify-content: space-between;
+  padding-top: 2rem;
 }
 .explore__hub .header__section p {
-  max-width: 33%;
+  width: 24rem;
+  line-height: 1.4;
+}
+.explore__hub .header__section .cta__button {
+  width: 24rem;
 }
 .explore__hub .header__section .cta__button--button {
   width: 15rem;
@@ -614,17 +670,10 @@ body li {
   border-top-right-radius: 2rem;
 }
 .explore__hub .card__section .card__text-box {
-  padding-top: 1rem;
-}
-.explore__hub .card__section .card__text-box > * {
-  padding-left: 1rem;
+  padding: 0.5rem;
 }
 .explore__hub .card__section .card__text-box p {
   font-size: 25px;
-}
-.explore__hub .card__section .card__text-box .paragraph {
-  top: -1rem;
-  position: relative;
 }
 .explore__hub .card__section .card__text-box .btn {
   background: rgba(229, 229, 229, 0.81);
@@ -634,7 +683,7 @@ body li {
   font-size: 15px;
   height: 1.5rem;
   border: none;
-  top: -26rem;
+  top: -21rem;
   width: 6rem;
   left: 1rem;
 }
@@ -667,65 +716,6 @@ body li {
     left: -6rem;
   }
 }
-.smart__solutions {
-  padding-top: 5rem;
-  /* Responsive section */
-}
-.smart__solutions .container {
-  background-color: rgb(244, 245, 246);
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-}
-.smart__solutions--img-box .smart-solutions-img {
-  top: 3.7rem;
-  position: relative;
-}
-.smart__solutions--information-box {
-  padding-top: 3rem;
-}
-.smart__solutions--information-box .menuItem {
-  display: flex;
-  align-items: center;
-  width: 20rem;
-  border-radius: 1rem;
-  background: rgb(255, 255, 255);
-  height: 4rem;
-  padding: 10px;
-  margin-bottom: 1rem;
-}
-.smart__solutions--information-box .menuItem span {
-  left: 1rem;
-  position: relative;
-  font-size: 20px;
-}
-.smart__solutions--information-box .selected {
-  background-color: rgb(32, 34, 35);
-  color: rgb(255, 255, 255);
-  height: auto;
-  display: block;
-}
-.smart__solutions--information-box .selected p {
-  left: 1rem;
-  position: relative;
-  width: 96%;
-}
-@media screen and (max-width: 40em) {
-  .smart__solutions .container .smart__solutions--img-box {
-    display: none;
-  }
-}
-@media screen and (min-width: 31.25em) and (max-width: 47.9375em) {
-  .smart__solutions .container .smart__solutions--img-box {
-    display: none;
-  }
-}
-@media screen and (max-width: 62em) {
-  .smart__solutions .container .smart__solutions--img-box {
-    display: none;
-  }
-}
-
 /*
 ***         
 *****       
