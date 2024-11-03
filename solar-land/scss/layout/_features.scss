@@ -8,10 +8,10 @@
 
   .container {
     margin: 0 auto;
-  }
+  
 
   .features-title {
-    font-size: $fontSize3Xl;
+    font-size: $fontSize4Xl;
     text-align: center;
     margin-bottom: list.nth($spaces, 6);
 
@@ -24,12 +24,14 @@
     background-color: $lightColor;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    border: 0.5px solid color.adjust($secondaryColor, $lightness : 30%);
     border-radius: $rounded3Xl;
+    box-shadow: $shadowSm;
 
     .features-card {
       padding: list.nth($spaces, 6);
-      border-right: 0.5px solid $secondaryColor;
-      border-bottom: 0.5px solid $secondaryColor;
+      border-right: 0.5px solid color.adjust($secondaryColor, $lightness : 30%);
+      border-bottom: 0.5px solid color.adjust($secondaryColor, $lightness : 30%);
 
       &:nth-child(3),
       &:nth-child(6) {
@@ -41,12 +43,18 @@
       }
 
       .features-card-icon-svg {
-        width: 2em;
-        height: 2em;
+        width: 3em;
+        height: 3em;
         fill: color.adjust($primaryColor, $lightness: 10%);
         box-shadow: $shadowSm;
         padding: list.nth($spaces, 2);
       }
+
+      .features-card-title {
+        font-size: $fontSize2Xl;
+        margin: list.nth($spaces, 4) 0 list.nth($spaces, 2);
+      }
     }
   }
+}
 }
