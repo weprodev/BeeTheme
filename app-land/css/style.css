@@ -618,33 +618,25 @@ body li {
   padding-top: 5rem;
   width: 97%;
   left: 1rem;
-  /*--------------------------------
-  *** FOR ANY DEVICE MAX SIZE UNTIL
-  ** MAX-WIDTH : 1024px OR 64em
-  */
-  /*--------------------------------
-  *** FOR ANY DEVICE MAX SIZE UNTIL
-  ** MAX-WIDTH : 992px OR 62em
-  */
-  /*--------------------------------
-  *** FOR RETINA MOBILE AND LANDSCAPE
-  ** MIN : 500px / 31.25em | MAX : 767px / 47.9375em
-  */
-  /*--------------------------------
-  *** FOR MOBILE
-  ** MAX : 640px / 40em
-  */
-  /*--------------------------------
-  *** FOR MINI MOBILE
-  ** MAX : 400px / 25em
-  */
+  /* mobile */
+  /* tablet */
+  /* laptop */
+}
+.explore__hub h2 {
+  font-size: 3rem;
+  font-weight: 600;
 }
 .explore__hub .header__section {
-  justify-content: space-around;
   display: flex;
+  justify-content: space-between;
+  padding-top: 2rem;
 }
 .explore__hub .header__section p {
-  max-width: 33%;
+  width: 24rem;
+  line-height: 1.4;
+}
+.explore__hub .header__section .cta__button {
+  width: 24rem;
 }
 .explore__hub .header__section .cta__button--button {
   width: 15rem;
@@ -656,13 +648,12 @@ body li {
   background-color: rgba(193, 193, 193, 0.81);
 }
 .explore__hub .card__section {
-  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
   padding-top: 2rem;
-  display: grid;
-  gap: 1rem;
+  display: flex;
+  justify-content: space-between;
 }
 .explore__hub .card__section .card {
-  width: 29rem;
+  width: 24rem;
   border-radius: 2rem;
   background-color: #f1f1f1;
 }
@@ -674,17 +665,10 @@ body li {
   border-top-right-radius: 2rem;
 }
 .explore__hub .card__section .card__text-box {
-  padding-top: 1rem;
-}
-.explore__hub .card__section .card__text-box > * {
-  padding-left: 1rem;
+  padding: 0.5rem;
 }
 .explore__hub .card__section .card__text-box p {
   font-size: 25px;
-}
-.explore__hub .card__section .card__text-box .paragraph {
-  top: -1rem;
-  position: relative;
 }
 .explore__hub .card__section .card__text-box .btn {
   background: rgba(229, 229, 229, 0.81);
@@ -694,7 +678,7 @@ body li {
   font-size: 15px;
   height: 1.5rem;
   border: none;
-  top: -26rem;
+  top: -21rem;
   width: 6rem;
   left: 1rem;
 }
@@ -702,90 +686,31 @@ body li {
   background: rgba(193, 193, 193, 0.81);
   transition: 0.5s;
 }
-@media screen and (max-width: 64em) {
-  .explore__hub .card__section {
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
-}
-@media screen and (max-width: 62em) {
-  .explore__hub .header__section {
-    grid-template-columns: repeat(2, 1fr);
-    display: grid;
-    text-align: center;
-  }
-  .explore__hub .header__section .cta__button {
-    left: 10rem;
-    position: relative;
-    top: 0.5rem;
-  }
-  .explore__hub .header__section p {
-    max-width: 87%;
-  }
-  .explore__hub .card__section {
-    grid-template-columns: repeat(1, 1fr);
-    position: relative;
-    top: 1rem;
-    gap: 2rem;
-  }
-  .explore__hub .card__section .card {
-    width: 27rem;
-  }
-}
-@media screen and (max-width: 64em) {
+@media (max-width: 480px) {
   .explore__hub {
-    left: 0.5rem;
-  }
-  .explore__hub h2 {
-    text-align: center;
-  }
-  .explore__hub .header__section {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .explore__hub .card__section {
-    grid-template-columns: repeat(1, 1fr);
-    place-self: center;
-  }
-  .explore__hub .card__section .card {
-    width: 27rem;
-  }
-}
-@media screen and (min-width: 31.25em) and (max-width: 47.9375em) {
-  .explore__hub .header__section {
-    grid-template-columns: repeat(1, 1fr);
-    text-align: center;
-  }
-  .explore__hub .header__section .cta__button {
-    left: 0;
-    top: 0;
-  }
-}
-@media screen and (max-width: 40em) {
-  .explore__hub {
-    width: 97%;
-    left: 0.5rem;
-  }
-  .explore__hub .header__section {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .explore__hub .header__section .cta__button {
-    left: 0;
-    top: 0;
-  }
-  .explore__hub h2 {
     text-align: center;
   }
   .explore__hub .header__section {
     display: grid;
-    text-align: center;
+    place-items: center;
+    left: -0.6rem;
+    position: relative;
   }
   .explore__hub .header__section p {
     max-width: 100%;
   }
-  .explore__hub .card__section .card {
-    width: 24rem;
+  .explore__hub .card__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    left: -0.5rem;
+    position: relative;
+  }
+  .explore__hub .card__section .card__text-box .btn {
+    left: -6rem;
   }
 }
-
 /*
 ***         
 *****       
