@@ -15,10 +15,16 @@
 
   &--header-sectios {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    line-height: 1.4;
 
-    .p-1,
+    .p-1 {
+      width: 24rem;
+    }
+
     h1 {
+      font-size: 2rem;
+      font-weight: 600;
       width: 24rem;
     }
   }
@@ -26,11 +32,10 @@
   &--card-section {
     padding-top: 2rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 
     .card {
       width: 24rem;
-      background: lightgreen;
       border-radius: 2rem;
       border: none;
       height: 21rem;
@@ -64,6 +69,10 @@
         top: 0.5rem;
         position: relative;
         object-fit: cover;
+      }
+
+      .about {
+        line-height: .8;
       }
     }
   }
