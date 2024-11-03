@@ -12,7 +12,6 @@
     
     @import "../../shared/scss/shared.scss";
 
-
     /*--------------------------------
     ***  IMPORT GENERAL AND IMPORTANT
     **   VARIABLES
@@ -43,7 +42,7 @@
 
     /*--------------------------------
     ***  LAYOUT
-    **   HEADER, HERO SECTION, EXPLORE HUB
+    **   HEADER, HERO SECTION, EXPLORE HUB, SMART SOLUTIONS
     */   
 
     @import "layout/header";
@@ -51,6 +50,8 @@
     @import "layout/heroSection";
 
     @import "layout/exploreHub";
+
+    @import "layout/smartSolutions";
 
 /*
 ***         

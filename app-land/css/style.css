@@ -353,7 +353,7 @@ a {
 ***         
 */
 /*========================================================================================*\
-*----------------------------               COLORE              ----------------------------        
+*----------------------------               COLORS              ----------------------------        
 \*========================================================================================*/
 /*--------------------------------
 *** FLAT UI COLORS 
@@ -366,6 +366,15 @@ a {
 *** FONTS 
 **  
 */
+/*--------------------------------
+*** Padding
+**  
+*/
+/* Small padding */
+/* Medium padding */
+/* large padding */
+/* Padding too big */
+/* default padding */
 /*--------------------------------
 ***  SET DIRECTION BEFORE ANYTHING
 **   
@@ -414,7 +423,7 @@ body li {
 */
 /*--------------------------------
 ***  LAYOUT
-**   HEADER, HERO SECTION, EXPLORE HUB
+**   HEADER, HERO SECTION, EXPLORE HUB, SMART SOLUTIONS
 */
 .header .hide-on-laptop {
   display: none;
@@ -711,6 +720,65 @@ body li {
     left: -6rem;
   }
 }
+.smart__solutions {
+  padding-top: 5rem;
+  /* Responsive section */
+}
+.smart__solutions .container {
+  background-color: rgb(244, 245, 246);
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.smart__solutions--img-box .smart-solutions-img {
+  top: 3.7rem;
+  position: relative;
+}
+.smart__solutions--information-box {
+  padding-top: 3rem;
+}
+.smart__solutions--information-box .menuItem {
+  display: flex;
+  align-items: center;
+  width: 20rem;
+  border-radius: 1rem;
+  background: rgb(255, 255, 255);
+  height: 4rem;
+  padding: 10px;
+  margin-bottom: 1rem;
+}
+.smart__solutions--information-box .menuItem span {
+  left: 1rem;
+  position: relative;
+  font-size: 20px;
+}
+.smart__solutions--information-box .selected {
+  background-color: rgb(32, 34, 35);
+  color: rgb(255, 255, 255);
+  height: auto;
+  display: block;
+}
+.smart__solutions--information-box .selected p {
+  left: 1rem;
+  position: relative;
+  width: 96%;
+}
+@media screen and (max-width: 40em) {
+  .smart__solutions .container .smart__solutions--img-box {
+    display: none;
+  }
+}
+@media screen and (min-width: 31.25em) and (max-width: 47.9375em) {
+  .smart__solutions .container .smart__solutions--img-box {
+    display: none;
+  }
+}
+@media screen and (max-width: 62em) {
+  .smart__solutions .container .smart__solutions--img-box {
+    display: none;
+  }
+}
+
 /*
 ***         
 *****       
