@@ -1,1 +1,151 @@
-/*# sourceMappingURL=main.css.map */
+/*------------------------------------*\
+  #FONT
+\*------------------------------------*/
+/*------------------------------------*\
+  #BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+  #SPACES (padding & margin & gap) 
+\*------------------------------------*/
+/*------------------------------------*\
+  #TRANSITION DURATION
+\*------------------------------------*/
+/*------------------------------------*\
+  #BOX SHADOW
+\*------------------------------------*/
+/*------------------------------------*\
+  #BORDER RADIUS
+\*------------------------------------*/
+/*------------------------------------*\
+  #COLORS
+\*------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+.quicksand-light {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 300;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.quicksand-regular {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.quicksand-medium {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.quicksand-semibold {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.quicksand-bold {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.container {
+  width: 100%;
+}
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+/*=========================================================
+*********   Generic Button Component
+*******  
+*/
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 2em;
+  background-color: #fff;
+}
+.header .logo img {
+  height: 2.5rem;
+  width: auto;
+}
+.header .navigation ul {
+  display: flex;
+  list-style: none;
+  gap: 2em;
+}
+.header .navigation ul li a {
+  text-decoration: none;
+  color: #1e1e1e;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+.header .navigation ul li a:hover {
+  color: #0dd47e;
+}
+.header .action-buttons {
+  display: flex;
+  gap: 1rem;
+}
+.header .action-buttons .login {
+  background: none;
+  color: #1e1e1e;
+  border-radius: 9999px;
+  border: 1px solid #f2f4f4;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  font-weight: 400;
+  transition: none;
+  text-align: center;
+  cursor: pointer;
+}
+.header .action-buttons .login:hover {
+  background-color: #f2f4f4;
+}
+.header .action-buttons .get-in-touch {
+  background: #0dd47e;
+  color: #fff;
+  border-radius: 9999px;
+  border: none;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  font-weight: 400;
+  transition: none;
+  text-align: center;
+  cursor: pointer;
+}
+.header .action-buttons .get-in-touch:hover {
+  background-color: #0dd47e;
+}
+
+/*# sourceMappingURL=style.css.map */

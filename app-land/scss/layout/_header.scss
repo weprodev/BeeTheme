@@ -53,8 +53,17 @@
     }
   }
 
-  // Responsive
+  .cta__button {
+    &--button {
+      background-color: $vibrantGreen;
 
+      &:hover {
+        background-color: $limeGreen;
+      }
+    }
+  }
+
+  // Responsive
   @include mobile {
     .hide-on-laptop {
       display: block;

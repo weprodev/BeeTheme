@@ -46,7 +46,7 @@
 	*/
 
 	@mixin lcd{
-		@media screen and (min-width : $pre-alpha){
+		@media screen and (min-width : $preAlpha){
 			@content;
 		}
 	}
@@ -68,7 +68,7 @@
 	*/
 
 	@mixin mini_laptop{
-		@media screen and (max-width : $pre-beta){
+		@media screen and (max-width : $preBeta){
 			@content;
 		}
 	}
@@ -90,7 +90,7 @@
 	*/
 
 	@mixin retinaMobile{
-		@media screen and ( min-width : $lota ) and ( max-width : $pre-zeta ){
+		@media screen and ( min-width : $lota ) and ( max-width : $preZeta ){
 			@content;
 		}
 	}

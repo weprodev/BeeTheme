@@ -4,15 +4,24 @@
   width: 97%;
   left: 1rem;
 
+  h2 {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+
   .header__section {
     display: flex;
-    gap: 1rem;
+    justify-content: space-between;
+    padding-top: 2rem;
 
     p {
-      max-width: 33%;
+      width: 24rem;
+      line-height: 1.4;
     }
 
     .cta__button {
+      width: 24rem;
+
       &--button {
         width: 15rem;
         font-size: 18px;
@@ -47,16 +56,10 @@
       }
 
       &__text-box {
-        padding-top: 1rem;
-        @include add-padding-left(1rem);
+        padding: 0.5rem;
 
         p {
           font-size: 25px;
-        }
-
-        .paragraph {
-          top: -1rem;
-          position: relative;
         }
 
         .btn {
@@ -67,7 +70,7 @@
           font-size: 15px;
           height: 1.5rem;
           border: none;
-          top: -26rem;
+          top: -21rem;
           width: 6rem;
           left: 1rem;
 
