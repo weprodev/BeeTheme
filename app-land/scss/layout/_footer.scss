@@ -1,13 +1,13 @@
 .footer {
   padding-top: 5rem;
+  width: 100%;
 
   .container {
     position: relative;
-    width: 82rem;
     display: flex;
     justify-content: space-between;
-    padding: 10px 20px;
     align-items: center;
+    width: 100%;
 
     .left-section {
       display: flex;
@@ -34,13 +34,13 @@
       margin: 0px;
     }
   }
+
   .custom-divider2 {
-    width: 83rem;
+    width: 100%;
     background-color: rgba(0, 0, 3, 0.2);
     margin: 10px 0;
     height: 2px;
     position: relative;
-    left: 1rem;
   }
 
   .down {
@@ -48,7 +48,6 @@
     justify-content: space-between;
     color: gray;
     position: relative;
-    width: 83rem;
-    left: 1rem;
+    width: 100%;
   }
 }
