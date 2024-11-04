@@ -3,7 +3,7 @@
   &:visited {
     text-transform: uppercase;
     text-decoration: none;
-    padding: 1rem 2.5rem;
+    padding: $fontSizeBase $fontSize4Xl;
     display: inline-block;
     border-radius: 0.8rem;
     transition: all 0.2s;

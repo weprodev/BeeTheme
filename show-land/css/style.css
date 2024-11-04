@@ -2,6 +2,24 @@
   #ABSTRACTS
 \*------------------------------------*/
 /*------------------------------------*\
+  #FONT
+\*------------------------------------*/
+/*------------------------------------*\
+  #BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+  #SPACES (padding & margin & gap) 
+\*------------------------------------*/
+/*------------------------------------*\
+  #TRANSITION DURATION
+\*------------------------------------*/
+/*------------------------------------*\
+  #BOX SHADOW
+\*------------------------------------*/
+/*------------------------------------*\
+  #BORDER RADIUS
+\*------------------------------------*/
+/*------------------------------------*\
   #COLOR
 \*------------------------------------*/
 /*------------------------------------*\
@@ -40,14 +58,14 @@ body {
 }
 .container .main-nav__list {
   display: flex;
-  padding-top: 1rem;
-  gap: 1.5rem;
+  padding-top: 1em;
+  gap: 1.5em;
   list-style: none;
   align-items: center;
 }
 .container .main-nav__link:link, .container .main-nav__link:visited {
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1em;
   color: #fff;
   text-transform: uppercase;
   font-weight: 700;
@@ -96,7 +114,7 @@ a {
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 1rem 2.5rem;
+  padding: 1em 2.25em;
   display: inline-block;
   border-radius: 0.8rem;
   transition: all 0.2s;
