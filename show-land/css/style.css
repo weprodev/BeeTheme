@@ -54,7 +54,8 @@ body {
   list-style: none;
   align-items: center;
 }
-.container .main-nav__link:link, .container .main-nav__link:visited {
+.container .main-nav__link:link,
+.container .main-nav__link:visited {
   text-decoration: none;
   font-size: 1rem;
   color: #fff;
@@ -327,7 +328,8 @@ body {
   padding-top: 5rem;
   padding-bottom: 8rem;
 }
-.features-btn:link, .features-btn:visited {
+.features-btn:link,
+.features-btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 0.2rem 0.8rem;
@@ -479,7 +481,8 @@ a {
 /*------------------------------------*\
   #COMPONENTS
 \*------------------------------------*/
-.btn:link, .btn:visited {
+.btn:link,
+.btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1rem 2.4rem;
