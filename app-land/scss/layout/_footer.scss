@@ -1,0 +1,54 @@
+.footer {
+  padding-top: 5rem;
+
+  .container {
+    position: relative;
+    width: 82rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+
+    .left-section {
+      display: flex;
+
+      img {
+        width: 3rem;
+      }
+
+      p {
+        padding-left: 1rem;
+        color: #181a1b;
+      }
+    }
+
+    .center-section ul {
+      display: flex;
+      gap: 20px;
+    }
+
+    .right-section ul {
+      display: flex;
+      gap: 20px;
+      padding: 0px;
+      margin: 0px;
+    }
+  }
+  .custom-divider2 {
+    width: 83rem;
+    background-color: rgba(0, 0, 3, 0.2);
+    margin: 10px 0;
+    height: 2px;
+    position: relative;
+    left: 1rem;
+  }
+
+  .down {
+    display: flex;
+    justify-content: space-between;
+    color: gray;
+    position: relative;
+    width: 83rem;
+    left: 1rem;
+  }
+}
