@@ -856,4 +856,116 @@ a {
   font-size: 1.5em;
 }
 
+.cta-section {
+  background-color: #ffffff;
+  padding: 3em;
+  display: flex;
+  gap: 4em;
+  min-height: 35rem;
+  align-items: center;
+}
+@media screen and (max-width: 40em) {
+  .cta-section {
+    padding: 3.75em 1.5em;
+  }
+}
+@media screen and (max-width: 75em) {
+  .cta-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+.cta-section__left, .cta-section__right {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+}
+.cta-section__btns-container {
+  display: flex;
+  gap: 0.5em;
+}
+.cta-section__left {
+  gap: 2em;
+}
+.cta-section__right {
+  gap: 4em;
+}
+.cta-section__message {
+  position: relative;
+}
+.cta-section__message--left {
+  align-self: flex-start;
+}
+.cta-section__message--right {
+  align-self: flex-end;
+}
+@media screen and (max-width: 40em) {
+  .cta-section__message--left {
+    align-self: stretch;
+  }
+  .cta-section__message--right {
+    align-self: stretch;
+  }
+}
+.cta-section__message-profile {
+  object-fit: cover;
+  border-radius: 9999px;
+}
+.cta-section__message-profile--big {
+  height: 6.5rem;
+  width: 6.5rem;
+}
+@media screen and (max-width: 40em) {
+  .cta-section__message-profile--big {
+    display: none;
+  }
+}
+.cta-section__message-profile--small {
+  height: 3.5rem;
+  width: 3.5rem;
+}
+.cta-section__message-box {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  color: #ffffff;
+  background-color: #24222c;
+  gap: 1em;
+  padding: 1em;
+  width: max-content;
+}
+@media screen and (max-width: 40em) {
+  .cta-section__message-box {
+    position: static;
+    width: 100%;
+  }
+}
+.cta-section__message-box--left {
+  left: 50%;
+  border-radius: 0 1.5em 1.5em 1.5em;
+}
+.cta-section__message-box--right {
+  right: 50%;
+  border-radius: 1.5em 0 1.5em 1.5em;
+}
+.cta-section__message-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1em;
+  max-width: 20rem;
+}
+@media screen and (max-width: 75em) {
+  .cta-section__message-info {
+    font-size: 0.75em;
+    max-width: 100%;
+  }
+}
+.cta-section__message-text {
+  font-weight: 600;
+}
+.cta-section__message-profile-name {
+  font-weight: 400;
+}
+
 /*# sourceMappingURL=style.css.map */
