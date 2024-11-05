@@ -1,0 +1,44 @@
+.powerful-features {
+  padding-top: 5rem;
+  padding-bottom: 6rem;
+  &__headline {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, $colorEighth, $colorSeventh);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  &__paragraph {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  &__feature {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 3rem;
+    column-gap: 2.8rem;
+    margin-top: $fontSize4Xl;
+  }
+  &__paragrapha_1 {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    outline: 0.1px solid $colorEleventh;
+    outline-offset: 0.4rem;
+    border-radius: 10rem;
+    padding: 0 2.8rem 0 0.4rem;
+  }
+  &__icone {
+    stroke: $colorBlack;
+    background-image: linear-gradient(
+      to right,
+      $colorThirteenth,
+      $colorFourteenth
+    );
+    width: 1rem;
+    height: 1rem;
+    border-radius: 10rem;
+    margin-bottom: -0.1rem;
+  }
+}

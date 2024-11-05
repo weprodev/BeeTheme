@@ -3,7 +3,7 @@
 \*------------------------------------*/
 @import "variables";
 @import "typography";
-
+@import "../../shared/scss/abstracts/variables";
 /*------------------------------------*\
   #LAYOUTS
 \*------------------------------------*/
@@ -14,7 +14,7 @@
 @import "layout/benefits";
 @import "layout/features";
 @import "layout/hero";
-
+@import "layout/powerful-features";
 /*------------------------------------*\
   #BASE
 \*------------------------------------*/
@@ -24,4 +24,3 @@
   #COMPONENTS
 \*------------------------------------*/
 @import "components/button";
-

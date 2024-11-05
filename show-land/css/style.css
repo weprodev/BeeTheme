@@ -36,6 +36,24 @@ body {
 }
 
 /*------------------------------------*\
+  #FONT
+\*------------------------------------*/
+/*------------------------------------*\
+  #BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+  #SPACES (padding & margin & gap) 
+\*------------------------------------*/
+/*------------------------------------*\
+  #TRANSITION DURATION
+\*------------------------------------*/
+/*------------------------------------*\
+  #BOX SHADOW
+\*------------------------------------*/
+/*------------------------------------*\
+  #BORDER RADIUS
+\*------------------------------------*/
+/*------------------------------------*\
   #LAYOUTS
 \*------------------------------------*/
 .container .header {
@@ -54,8 +72,7 @@ body {
   list-style: none;
   align-items: center;
 }
-.container .main-nav__link:link,
-.container .main-nav__link:visited {
+.container .main-nav__link:link, .container .main-nav__link:visited {
   text-decoration: none;
   font-size: 1rem;
   color: #fff;
@@ -255,7 +272,6 @@ body {
   align-items: baseline;
   gap: 0.5rem;
   outline: 0.1px solid rgba(255, 255, 255, 0.0431372549);
-  outline-offset: 0.2rem;
   outline-offset: 0.4rem;
   border-radius: 10rem;
   padding: 0 2.8rem 0 0.4rem;
@@ -328,8 +344,7 @@ body {
   padding-top: 5rem;
   padding-bottom: 8rem;
 }
-.features-btn:link,
-.features-btn:visited {
+.features-btn:link, .features-btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 0.2rem 0.8rem;
@@ -442,6 +457,47 @@ body {
   border-bottom-right-radius: 0;
 }
 
+.powerful-features {
+  padding-top: 5rem;
+  padding-bottom: 6rem;
+}
+.powerful-features__headline {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 700;
+  background-image: linear-gradient(to right, #087f5b, #c92a2a);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.powerful-features__paragraph {
+  text-align: center;
+  font-size: 1.2rem;
+}
+.powerful-features__feature {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 3rem;
+  column-gap: 2.8rem;
+  margin-top: 2.25em;
+}
+.powerful-features__paragrapha_1 {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  outline: 0.1px solid rgba(255, 255, 255, 0.0431372549);
+  outline-offset: 0.4rem;
+  border-radius: 10rem;
+  padding: 0 2.8rem 0 0.4rem;
+}
+.powerful-features__icone {
+  stroke: #000;
+  background-image: linear-gradient(to right, #554df0, #74d3af);
+  width: 1rem;
+  height: 1rem;
+  border-radius: 10rem;
+  margin-bottom: -0.1rem;
+}
+
 /*------------------------------------*\
   #BASE
 \*------------------------------------*/
@@ -481,8 +537,7 @@ a {
 /*------------------------------------*\
   #COMPONENTS
 \*------------------------------------*/
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1rem 2.4rem;
