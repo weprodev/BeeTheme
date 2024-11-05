@@ -5,7 +5,7 @@
     text-decoration: none;
     padding: nth($spaces, 4) nth($spaces, 10);
     display: inline-block;
-    border-radius: 0.8rem;
+    border-radius: $rounded2Xl;
     transition: all 0.2s;
   }
 
