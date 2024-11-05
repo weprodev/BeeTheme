@@ -100,7 +100,6 @@ picture,
 svg,
 video {
   display: block;
-  width: 100%;
 }
 
 a {
@@ -114,7 +113,7 @@ a {
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 1em 2.25em;
+  padding: 1em 2.5em;
   display: inline-block;
   border-radius: 0.8rem;
   transition: all 0.2s;
