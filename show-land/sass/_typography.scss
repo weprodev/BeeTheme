@@ -7,12 +7,7 @@ body {
   font-size: 95%;
 }
 .background-color {
-  background-image: linear-gradient(
-    to right,
-    $colorSecondary,
-    $colorTertiary,
-    $colorPrimary
-  );
+  background-image: linear-gradient(to right, $colorSecondary, $colorPrimary);
   height: 100vh;
 
   &__1 {
@@ -25,10 +20,13 @@ body {
   &__3 {
     background-color: $colorTwelfth;
   }
+
+  &__4 {
+    background-image: linear-gradient(to right, $colorSecondary, $colorPrimary);
+  }
 }
 
 .container {
   width: 75rem;
   margin: 0 auto;
 }
-

@@ -17,7 +17,7 @@ body {
 }
 
 .background-color {
-  background-image: linear-gradient(to right, #364fc7, #6741d9, #37b24d);
+  background-image: linear-gradient(to right, #0d27a7, #448851);
   height: 100vh;
 }
 .background-color__1 {
@@ -28,6 +28,9 @@ body {
 }
 .background-color__3 {
   background-color: #00092e;
+}
+.background-color__4 {
+  background-image: linear-gradient(to right, #0d27a7, #448851);
 }
 
 .container {
@@ -139,7 +142,7 @@ body {
   display: inline-flex;
   align-items: baseline;
   gap: 0.4rem;
-  background-image: linear-gradient(to right, #364fc7, #6741d9, #37b24d);
+  background-image: linear-gradient(to right, #0d27a7, #448851);
   padding: 0.2rem 1rem 0.2rem 1rem;
   text-transform: uppercase;
   font-weight: 700;
@@ -217,7 +220,7 @@ body {
 }
 
 .icone-1 {
-  stroke: #37b24d;
+  stroke: #448851;
   width: 2rem;
   height: 2rem;
 }
@@ -577,6 +580,53 @@ body {
   color: transparent;
 }
 
+.footer {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.footer__headline {
+  font-size: 3.75em;
+  font-weight: 700;
+  text-align: center;
+}
+.footer__info {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+.footer__features {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5em;
+  border-radius: 1em;
+  font-size: 1.25em;
+  margin-bottom: 2.5em;
+}
+.footer__icone {
+  stroke: #000;
+  background-image: linear-gradient(to right, #fff, #c92a2a);
+  width: 1rem;
+  height: 1rem;
+  border-radius: 1em;
+  margin-bottom: -0.1rem;
+}
+.footer-btn:link, .footer-btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.5em 2em;
+  display: inline-block;
+  border-radius: 0.5em;
+  transition: all 0.2s;
+}
+.footer-btn:link:hover, .footer-btn:visited:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+.footer-btn:link:active, .footer-btn:visited:active {
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
 /*------------------------------------*\
   #BASE
 \*------------------------------------*/
@@ -633,7 +683,7 @@ a {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 .btn-button {
-  background-image: linear-gradient(to right, #364fc7, #6741d9, #37b24d);
+  background-image: linear-gradient(to right, #0d27a7, #448851);
   color: #fff;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
 }

@@ -15,12 +15,7 @@
     display: inline-flex;
     align-items: baseline;
     gap: 0.4rem;
-    background-image: linear-gradient(
-      to right,
-      $colorSecondary,
-      $colorTertiary,
-      $colorPrimary
-    );
+    background-image: linear-gradient(to right, $colorSecondary, $colorPrimary);
     padding: 0.2rem 1rem 0.2rem 1rem;
     text-transform: uppercase;
     font-weight: 700;
