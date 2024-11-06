@@ -72,7 +72,12 @@
       }
 
       .about {
-        line-height: .8;
+        align-items: center;
+        display: grid;
+        gap: 1px;
+        height: 4rem;
+        top: 0.5rem;
+        position: relative;
       }
     }
   }
