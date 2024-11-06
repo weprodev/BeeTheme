@@ -9,14 +9,14 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(6, 1fr);
-    gap: list.nth($spaces, 8);
+    gap: list.nth($spaces, 1) list.nth($spaces, 10);
     padding: list.nth($spaces, 12) 0;
 
     .trusted-header {
       grid-area: 1 / 1 / 4 / 3;
 
       .trusted-title {
-        font-size: $fontSize4Xl;
+        font-size: $fontSize6Xl;
         font-weight: $fontWeightBold;
         margin-bottom: list.nth($spaces, 4);
 
@@ -30,7 +30,7 @@
           $bg: $primaryColor,
           $border: none,
           $radius: $roundedFull,
-          $padding: list.nth($spaces, 2) list.nth($spaces, 3),
+          $padding: list.nth($spaces, 4),
           $hoverBgColor: color.adjust($primaryColor, $lightness: 10%),
           $transition: map-get($durations, 150)
         );
@@ -46,6 +46,7 @@
     }
 
     .trusted-cards {
+      font-size: $fontSize2Xl;
       grid-area: 4 / 1 / 7 / 3;
       margin-top: list.nth($spaces, 16);
       display: grid;
@@ -56,6 +57,18 @@
         padding: list.nth($spaces, 4);
         border: 1px solid color.adjust($secondaryColor, $lightness: 30%);
         border-radius: $rounded2Xl;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        span {
+          color: $secondaryColor;
+        }
+
+        a {
+          font-size: $fontSizeSm;
+          text-decoration: underline;
+        }
       }
     }
 
