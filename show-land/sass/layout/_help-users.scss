@@ -1,0 +1,53 @@
+.help-users {
+  padding-top: 5rem;
+  padding-bottom: 6rem;
+  &__headline {
+    text-align: center;
+    font-size: $fontSize5Xl;
+    font-weight: $fontWeightBold;
+    background-image: linear-gradient(to right, $colorEighth, $colorSeventh);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  &__paragraph {
+    text-align: center;
+    font-size: $fontSizeXl;
+    margin-bottom: nth($spaces, 8);
+  }
+
+  &__info {
+    display: flex;
+    gap: nth($spaces, 16);
+  }
+
+  &__section {
+    display: flex;
+    gap: nth($spaces, 4);
+    align-items: center;
+  }
+
+  &__icone {
+    stroke: $colorWhite;
+    background-image: linear-gradient(
+      to right,
+      $colorThirteenth,
+      $colorFourteenth
+    );
+    width: 4rem;
+    height: 4rem;
+    padding: nth($spaces, 4) nth($spaces, 4);
+    border-radius: $roundedFull;
+  }
+
+  &__headline_1 {
+    font-size: $fontSize2Xl;
+  }
+  &__paragraph_1 {
+    color: $colorFifteenth;
+    margin-bottom: nth($spaces, 2);
+  }
+  &__link {
+    padding-bottom: 0.4rem;
+    border-bottom: solid $colorWhite 0.1rem;
+  }
+}
