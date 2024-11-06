@@ -228,6 +228,119 @@ a {
 }
 
 /*------------------------------------*\
+  #COMPONENTS
+\*------------------------------------*/
+/*=========================================================
+*********   Generic DropDown Component
+*******     Whenever .dropdown is hovered .dropdown__content appears
+*/
+.dropdown {
+  position: relative;
+}
+.dropdown:hover .dropdown__content {
+  display: unset;
+}
+.dropdown .dropdown__content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+}
+
+.cta__button--button {
+  width: 7rem;
+  height: 3rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+.cta__button--button:hover {
+  transition: 0.3s ease-in-out;
+}
+
+/*=========================================================
+*********   Generic Button Component
+*******  
+*/
+/*=========================================================
+*********  This customizes the generic dropdown for this project
+*******  
+*/
+.dropdown {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+}
+.dropdown__content {
+  background-color: #ffffff;
+  color: #24222c;
+  border-radius: 0.375em;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  padding: 1em;
+  gap: 0.5em;
+  flex-direction: column;
+  text-wrap: nowrap;
+}
+.dropdown__icon {
+  transition: transform 150ms;
+}
+.dropdown:hover .dropdown__content {
+  display: flex;
+}
+.dropdown:hover .dropdown__icon {
+  transform: rotate(180deg);
+}
+
+/*=========================================================
+*********  This customizes the generic button for this project
+*******  
+*/
+.button {
+  background: transparent;
+  color: #fff;
+  border-radius: 9999px;
+  border: none;
+  padding: 1em 1.5em;
+  font-size: 0.875em;
+  font-weight: 600;
+  transition: 150ms;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.button:hover {
+  background-color: none;
+}
+@media screen and (max-width: 40em) {
+  .button {
+    padding: 0.75em 1em;
+  }
+}
+.button--primary {
+  background-color: #50cb8b;
+  color: #ffffff;
+}
+.button--secondary {
+  background-color: #ffffff;
+  color: #24222c;
+  border: 2px solid #24222c;
+  gap: 0.75em;
+}
+.button--secondary .button__icon {
+  transform: rotate(-45deg);
+  font-size: 1.875em;
+}
+@media screen and (max-width: 40em) {
+  .button--secondary .button__icon {
+    font-size: 1.25em;
+  }
+}
+.button:hover {
+  opacity: 70%;
+}
+
+/*------------------------------------*\
   #LAYOUTS
 \*------------------------------------*/
 .top-bar {
@@ -657,117 +770,202 @@ a {
   }
 }
 
-/*------------------------------------*\
-  #COMPONENTS
-\*------------------------------------*/
-/*=========================================================
-*********   Generic DropDown Component
-*******     Whenever .dropdown is hovered .dropdown__content appears
-*/
-.dropdown {
+.testimonial-section {
+  display: flex;
+  flex-direction: column;
+  background-color: #f1f1f1;
+  background-image: radial-gradient(circle at 0 35%, #50cb8b -19%, transparent 10%), radial-gradient(circle at 100% 0%, #50cb8b -19%, transparent 10%);
+  padding: 3em;
+  gap: 4em;
+}
+@media screen and (max-width: 40em) {
+  .testimonial-section {
+    padding: 3.75em 1.5em;
+  }
+}
+.testimonial-section__top {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.testimonial-section__heading {
+  width: 38%;
+}
+@media screen and (max-width: 75em) {
+  .testimonial-section__heading {
+    width: 80%;
+  }
+}
+.testimonial-section__bottom {
+  display: flex;
+  gap: 3em;
+}
+@media screen and (max-width: 64em) {
+  .testimonial-section__bottom {
+    flex-direction: column;
+  }
+}
+.testimonial-section__review {
+  display: flex;
+  gap: 3em;
+}
+@media screen and (max-width: 40em) {
+  .testimonial-section__review {
+    gap: 1.5em;
+    flex-direction: column;
+  }
+}
+.testimonial-section__review-profile {
+  border-radius: 9999px;
+  width: 7rem;
+  height: 7rem;
+}
+@media screen and (max-width: 75em) {
+  .testimonial-section__review-profile {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+.testimonial-section__review-info {
+  font-size: 1.5em;
+}
+@media screen and (max-width: 75em) {
+  .testimonial-section__review-info {
+    font-size: 1em;
+  }
+}
+.testimonial-section__review-text {
+  line-height: 1.7;
+  margin-bottom: 1em;
+}
+.testimonial-section__review-person-info {
+  font-weight: 700;
+}
+.testimonial-section__move-btns-container {
+  display: flex;
+  gap: 1.25em;
+  align-self: flex-start;
+}
+@media screen and (max-width: 64em) {
+  .testimonial-section__move-btns-container {
+    align-self: center;
+  }
+}
+.testimonial-section__move-btn {
+  padding: 0.5em;
+  font-size: 1.5em;
+}
+
+.cta-section {
+  background-color: #ffffff;
+  padding: 3em;
+  display: flex;
+  gap: 4em;
+  min-height: 35rem;
+  align-items: center;
+}
+@media screen and (max-width: 40em) {
+  .cta-section {
+    padding: 3.75em 1.5em;
+  }
+}
+@media screen and (max-width: 75em) {
+  .cta-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+.cta-section__left, .cta-section__right {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+}
+.cta-section__btns-container {
+  display: flex;
+  gap: 0.5em;
+}
+.cta-section__left {
+  gap: 2em;
+}
+.cta-section__right {
+  gap: 4em;
+}
+.cta-section__message {
   position: relative;
 }
-.dropdown:hover .dropdown__content {
-  display: unset;
+.cta-section__message--left {
+  align-self: flex-start;
 }
-.dropdown .dropdown__content {
-  display: none;
-  position: absolute;
-  z-index: 1;
-  top: 100%;
+.cta-section__message--right {
+  align-self: flex-end;
 }
-
-.cta__button--button {
-  width: 7rem;
-  height: 3rem;
-  border: none;
-  border-radius: 2rem;
-  cursor: pointer;
+@media screen and (max-width: 40em) {
+  .cta-section__message--left {
+    align-self: stretch;
+  }
+  .cta-section__message--right {
+    align-self: stretch;
+  }
 }
-.cta__button--button:hover {
-  transition: 0.3s ease-in-out;
-}
-
-/*=========================================================
-*********   Generic Button Component
-*******  
-*/
-/*=========================================================
-*********  This customizes the generic dropdown for this project
-*******  
-*/
-.dropdown {
-  display: flex;
-  align-items: center;
-  gap: 0.75em;
-}
-.dropdown__content {
-  background-color: #ffffff;
-  color: #24222c;
-  border-radius: 0.375em;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  padding: 1em;
-  gap: 0.5em;
-  flex-direction: column;
-  text-wrap: nowrap;
-}
-.dropdown__icon {
-  transition: transform 150ms;
-}
-.dropdown:hover .dropdown__content {
-  display: flex;
-}
-.dropdown:hover .dropdown__icon {
-  transform: rotate(180deg);
-}
-
-/*=========================================================
-*********  This customizes the generic button for this project
-*******  
-*/
-.button {
-  background: transparent;
-  color: #fff;
+.cta-section__message-profile {
+  object-fit: cover;
   border-radius: 9999px;
-  border: none;
-  padding: 1em 1.5em;
-  font-size: 0.875em;
-  font-weight: 600;
-  transition: 150ms;
-  text-align: center;
-  cursor: pointer;
+}
+.cta-section__message-profile--big {
+  height: 6.5rem;
+  width: 6.5rem;
+}
+@media screen and (max-width: 40em) {
+  .cta-section__message-profile--big {
+    display: none;
+  }
+}
+.cta-section__message-profile--small {
+  height: 3.5rem;
+  width: 3.5rem;
+}
+.cta-section__message-box {
   display: flex;
-  align-items: center;
-}
-.button:hover {
-  background-color: none;
-}
-@media screen and (max-width: 40em) {
-  .button {
-    padding: 0.75em 1em;
-  }
-}
-.button--primary {
-  background-color: #50cb8b;
+  position: absolute;
+  top: 50%;
   color: #ffffff;
-}
-.button--secondary {
-  background-color: #ffffff;
-  color: #24222c;
-  border: 2px solid #24222c;
-  gap: 0.75em;
-}
-.button--secondary .button__icon {
-  transform: rotate(-45deg);
-  font-size: 1.875em;
+  background-color: #24222c;
+  gap: 1em;
+  padding: 1em;
+  width: max-content;
 }
 @media screen and (max-width: 40em) {
-  .button--secondary .button__icon {
-    font-size: 1.25em;
+  .cta-section__message-box {
+    position: static;
+    width: 100%;
   }
 }
-.button:hover {
-  opacity: 70%;
+.cta-section__message-box--left {
+  left: 50%;
+  border-radius: 0 1.5em 1.5em 1.5em;
+}
+.cta-section__message-box--right {
+  right: 50%;
+  border-radius: 1.5em 0 1.5em 1.5em;
+}
+.cta-section__message-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1em;
+  max-width: 20rem;
+}
+@media screen and (max-width: 75em) {
+  .cta-section__message-info {
+    font-size: 0.75em;
+    max-width: 100%;
+  }
+}
+.cta-section__message-text {
+  font-weight: 600;
+}
+.cta-section__message-profile-name {
+  font-weight: 400;
 }
 
 /*# sourceMappingURL=style.css.map */
