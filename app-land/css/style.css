@@ -832,9 +832,10 @@ body li {
   display: flex;
   justify-content: space-evenly;
 }
-.smart__solutions--img-box .smart-solutions-img {
-  top: 3.7rem;
+.smart__solutions--img-box {
+  top: 6rem;
   position: relative;
+  width: 27rem;
 }
 .smart__solutions--information-box {
   padding-top: 3rem;
