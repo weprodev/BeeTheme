@@ -493,7 +493,7 @@ body li {
 }
 
 .hero__section {
-  border-radius: 2rem;
+  border-radius: 1.5em;
   position: relative;
   left: 1.2rem;
   width: 97%;
@@ -512,12 +512,11 @@ body li {
 }
 .hero__section--text-overlay {
   background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 2rem;
+  border-radius: 1.5em;
   position: absolute;
   color: rgb(255, 255, 255);
   width: 28rem;
   left: 8rem;
-  top: 8rem;
   height: 24rem;
   top: 10rem;
 }
@@ -530,12 +529,12 @@ body li {
 }
 .hero__section--text-overlay .container h1 {
   text-align: center;
-  padding-top: 1rem;
-  font-size: 2.2rem;
-  font-weight: 600;
+  padding-top: 1em;
+  font-size: 2.25em;
+  font-weight: 700;
 }
 .hero__section--text-overlay .container p {
-  padding-top: 1rem;
+  padding-top: 1em;
   line-height: 1.4;
 }
 .hero__section--text-overlay .container .cta__button {
@@ -543,9 +542,9 @@ body li {
   text-align: center;
   display: flex;
   width: 27rem;
-  gap: 2rem;
+  gap: 2em;
   left: 0rem;
-  padding-top: 1rem;
+  padding-top: 1em;
   text-align: center;
   place-content: center;
 }
@@ -554,7 +553,7 @@ body li {
   border: none;
   border-radius: 0.5rem;
   height: 3rem;
-  font-size: 1rem;
+  font-size: 1em;
 }
 .hero__section--text-overlay .container .cta__button--button-more {
   background-color: rgb(170, 170, 170);
@@ -563,7 +562,7 @@ body li {
   border-radius: 0.5rem;
   height: 3rem;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1em;
 }
 .hero__section--text-overlay .container .cta__button--button-more:hover {
   transition: 0.3s ease-in-out;
@@ -571,11 +570,11 @@ body li {
 }
 .hero__section--text-overlay .container .stats-container {
   position: relative;
-  padding-top: 1rem;
+  padding-top: 1em;
   display: flex;
   width: 27rem;
   justify-content: center;
-  gap: 2rem;
+  gap: 2em;
 }
 @media screen and (max-width: 40em) {
   .hero__section {
@@ -599,22 +598,22 @@ body li {
     width: 76%;
     left: 2rem;
     position: relative;
-    font-size: 0.8rem;
-    font-weight: 800;
+    font-size: 0.875em;
+    font-weight: 700;
   }
   .hero__section .hero__section--text-overlay .container .cta__button {
     position: relative;
     text-align: center;
     display: flex;
     width: 22rem;
-    gap: 2rem;
+    gap: 2em;
     left: 1rem;
-    padding-top: 1rem;
+    padding-top: 1em;
     text-align: center;
     place-content: center;
   }
   .hero__section .hero__section--text-overlay .container .stats-container {
-    font-size: 1rem;
+    font-size: 1em;
     left: -3rem;
   }
   .hero__section .hero__section--text-overlay .container .stats-container .stat-item p {
