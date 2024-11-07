@@ -1,0 +1,30 @@
+.container {
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logo {
+    padding-top: 0.8rem;
+    font-size: $fontSize4Xl;
+    font-weight: $fontWeightBold;
+  }
+
+  .main-nav {
+    &__list {
+      display: flex;
+      padding-top: $fontSizeBase;
+      gap: $fontSize2Xl;
+      list-style: none;
+      align-items: center;
+    }
+    &__link:link,
+    &__link:visited {
+      text-decoration: none;
+      font-size: $fontSizeBase;
+      color: $colorwhite;
+      text-transform: uppercase;
+      font-weight: $fontWeightBold;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+body {
+  font-family: $primaryFontFamily;
+  font-weight: $fontWeightRegular;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: $colorwhite;
+  font-size: 95%;
+}
+.background-color {
+  background-image: linear-gradient(
+    to right,
+    $colorSecondary,
+    $colorTertiary,
+    $colorPrimary
+  );
+  height: 100vh;
+}
+.container {
+  width: 75rem;
+  margin: 0 auto;
+}
