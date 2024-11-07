@@ -833,7 +833,8 @@ body li {
   justify-content: space-evenly;
 }
 .smart__solutions--img-box .smart-solutions-img {
-  top: 3.7rem;
+  top: 6rem;
+  width: 27rem;
   position: relative;
 }
 .smart__solutions--information-box {
@@ -846,13 +847,13 @@ body li {
   border-radius: 1rem;
   background: rgb(255, 255, 255);
   height: 4rem;
-  padding: 10px;
+  padding: 0.625rem;
   margin-bottom: 1rem;
 }
 .smart__solutions--information-box .menuItem span {
   left: 1rem;
   position: relative;
-  font-size: 20px;
+  font-size: 1.125em;
 }
 .smart__solutions--information-box .selected {
   background-color: rgb(32, 34, 35);
