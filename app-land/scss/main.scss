@@ -12,7 +12,6 @@
     
     @import "../../shared/scss/shared.scss";
 
-
     /*--------------------------------
     ***  IMPORT GENERAL AND IMPORTANT
     **   VARIABLES
@@ -42,19 +41,16 @@
     @import "./mixins/mixins";
 
     /*--------------------------------
-    ***  
-    **   HEADER
+    ***  LAYOUT
+    **   HEADER, HERO SECTION, EXPLORE HUB, SMART SOLUTIONS
     */   
 
     @import "layout/header";
 
-    /*--------------------------------
-    ***  
-    **   Hero Section
-    */   
-
     @import "layout/heroSection";
 
+    @import "layout/exploreHub";
+    
 /*
 ***         
 *****       
