@@ -1,9 +1,9 @@
 /*------------------------------------*\
   #ABSTRACTS
 \*------------------------------------*/
+@import "../../shared/scss/abstracts/variables";
 @import "variables";
 @import "typography";
-
 /*------------------------------------*\
   #LAYOUTS
 \*------------------------------------*/
@@ -20,3 +20,4 @@
   #COMPONENTS
 \*------------------------------------*/
 @import "components/button";
+

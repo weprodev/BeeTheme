@@ -1,0 +1,51 @@
+@use "sass:list";
+
+.customers {
+  margin: list.nth($spaces, 12) auto list.nth($spaces, 4);
+
+  .customers-header {
+    display: flex;
+    gap: list.nth($spaces, 4);
+    margin: list.nth($spaces, 4) auto list.nth($spaces, 8);
+
+    .customers-title {
+      font-size: $fontSize4Xl;
+      flex: 0 50%;
+
+      span {
+        color: $secondaryColor;
+      }
+    }
+
+    .customers-text {
+      font-size: $fontSizeLg;
+      flex: 0 50%;
+    }
+  }
+
+  .customers-icons {
+    display: flex;
+    flex-direction: row;
+
+    .customers-icon {
+      margin-right: list.nth($spaces, 4);
+      background-color: $lightColor;
+      padding: list.nth($spaces, 2);
+      border: 2px solid $lightColor;
+      border-radius: $roundedFull;
+      aspect-ratio: 1 / 1;
+      transition: all 0.3s ease-in;
+
+      img {
+        width: 100%;
+        top: 25%;
+        position: relative;
+      }
+
+      &:hover {
+        background-color: #fff;
+        border: 2px solid $lightColor;
+      }
+    }
+  }
+}

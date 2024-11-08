@@ -1,4 +1,22 @@
 /*------------------------------------*\
+  #FONT
+\*------------------------------------*/
+/*------------------------------------*\
+  #BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+  #SPACES (padding & margin & gap) 
+\*------------------------------------*/
+/*------------------------------------*\
+  #TRANSITION DURATION
+\*------------------------------------*/
+/*------------------------------------*\
+  #BOX SHADOW
+\*------------------------------------*/
+/*------------------------------------*\
+  #BORDER RADIUS
+\*------------------------------------*/
+/*------------------------------------*\
   #COLORS
 \*------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
@@ -35,6 +53,337 @@
   font-weight: 700;
   font-optical-sizing: auto;
   font-style: normal;
+}
+
+.container {
+  width: 100%;
+}
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+.cta__button--button {
+  width: 7rem;
+  height: 3rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+.cta__button--button:hover {
+  transition: 0.3s ease-in-out;
+}
+
+/*=========================================================
+*********   Generic Button Component
+*******  
+*/
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 2em;
+  background-color: #fff;
+}
+.header .logo img {
+  height: 2.5rem;
+  width: auto;
+}
+.header .navigation ul {
+  display: flex;
+  list-style: none;
+  gap: 2em;
+}
+.header .navigation ul li a {
+  text-decoration: none;
+  color: #1e1e1e;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+.header .navigation ul li a:hover {
+  color: #0dd47e;
+}
+.header .action-buttons {
+  display: flex;
+  gap: 1rem;
+}
+.header .action-buttons .login {
+  background: none;
+  color: #1e1e1e;
+  border-radius: 9999px;
+  border: 1px solid #f2f4f4;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  font-weight: 400;
+  transition: none;
+  text-align: center;
+  cursor: pointer;
+}
+.header .action-buttons .login:hover {
+  background-color: #f2f4f4;
+}
+.header .action-buttons .get-in-touch {
+  background: #0dd47e;
+  color: #fff;
+  border-radius: 9999px;
+  border: none;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  font-weight: 400;
+  transition: none;
+  text-align: center;
+  cursor: pointer;
+}
+.header .action-buttons .get-in-touch:hover {
+  background-color: #0dd47e;
+}
+
+.cta__button--button {
+  width: 7rem;
+  height: 3rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+.cta__button--button:hover {
+  transition: 0.3s ease-in-out;
+}
+
+/*=========================================================
+*********   Generic Button Component
+*******  
+*/
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60vh;
+  background: url("../images/main-hero.jpg") center/cover no-repeat;
+  color: #f2f4f4;
+  text-align: left;
+  padding: 1em 2em;
+  margin: 0 auto;
+  border-radius: 1.5em;
+}
+.hero .hero-content {
+  z-index: 1;
+  max-width: 80%;
+}
+.hero .hero-content .tagline {
+  font-size: 1.125em;
+  font-weight: 500;
+  margin-bottom: 0.5em;
+  color: rgba(255, 255, 255, 0.7);
+}
+.hero .hero-content .title {
+  font-size: 3.75em;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+.hero .hero-content .actions {
+  display: flex;
+  gap: 1em;
+  justify-content: flex-start;
+  margin-top: 1em;
+}
+.hero .hero-content .actions .get-in-touch,
+.hero .hero-content .actions .our-services {
+  background: none;
+  color: #f2f4f4;
+  border-radius: 0;
+  border: none;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  font-weight: 400;
+  transition: none;
+  text-align: center;
+  cursor: pointer;
+  border-bottom: 1px solid #f2f4f4;
+}
+.hero .hero-content .actions .get-in-touch:hover,
+.hero .hero-content .actions .our-services:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.hero .recent-project {
+  position: absolute;
+  top: 30%;
+  right: 2em;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 15.625em;
+  height: 15.625em;
+}
+.hero .recent-project .recent-project-item {
+  background-color: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(5px);
+  padding: 0.5em;
+  border-radius: 1em;
+  transition: transform 0.3s ease;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 0.5em;
+}
+.hero .recent-project .recent-project-item:hover {
+  transform: scale(1.05);
+}
+.hero .recent-project .recent-project-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5em;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  grid-area: 1/1/5/5;
+}
+.hero .recent-project .recent-project-item .recent-project-options {
+  grid-area: 1/5/5/6;
+  grid-column-start: 5;
+}
+.hero .recent-project .recent-project-item .recent-project-options .recent-project-options-button {
+  background: none;
+  color: #f2f4f4;
+  border-radius: 9999px;
+  border: none;
+  padding: 0.5em;
+  font-size: 1em;
+  font-weight: 400;
+  transition: none;
+  text-align: center;
+  cursor: pointer;
+  width: 2.625em;
+  height: 2.625em;
+}
+.hero .recent-project .recent-project-item .recent-project-options .recent-project-options-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.hero .recent-project .recent-project-item .recent-project-button {
+  background: none;
+  color: #f2f4f4;
+  border-radius: 9999px;
+  border: 1px solid #f2f4f4;
+  padding: 0.5em;
+  font-size: 1em;
+  font-weight: 400;
+  transition: none;
+  text-align: center;
+  cursor: pointer;
+  width: 2.625em;
+  height: 2.625em;
+  grid-area: 5/1/6/3;
+}
+.hero .recent-project .recent-project-item .recent-project-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.hero .recent-project .recent-project-item .recent-project-button .arrow-icon {
+  padding: 0;
+}
+.hero .recent-project .recent-project-item .recent-project-caption {
+  color: #fff;
+  font-size: 0.875em;
+  text-align: center;
+  margin-top: 0.5em;
+  grid-area: 5/3/6/6;
+}
+.hero .arrow-icon {
+  width: 0.875em;
+  height: 0.875em;
+  padding-left: 0.5em;
+}
+.hero .statistics {
+  background-color: #fff;
+  color: #1e1e1e;
+  position: absolute;
+  display: flex;
+  gap: 1em;
+  bottom: 0;
+  right: 0;
+  padding: 1.25em;
+  border-radius: 1.5em 0 0 0;
+  max-width: 50%;
+}
+.hero .statistics .stat-item {
+  padding: 0.5em;
+}
+.hero .statistics .stat-item .stat-value {
+  font-size: 2.25em;
+  font-weight: 700;
+}
+.hero:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+  border-radius: 1.5em;
+}
+
+.customers {
+  margin: 3em auto 1em;
+}
+.customers .customers-header {
+  display: flex;
+  gap: 1em;
+  margin: 1em auto 2em;
+}
+.customers .customers-header .customers-title {
+  font-size: 2.25em;
+  flex: 0 50%;
+}
+.customers .customers-header .customers-title span {
+  color: #8d959d;
+}
+.customers .customers-header .customers-text {
+  font-size: 1.125em;
+  flex: 0 50%;
+}
+.customers .customers-icons {
+  display: flex;
+  flex-direction: row;
+}
+.customers .customers-icons .customers-icon {
+  margin-right: 1em;
+  background-color: #f2f4f4;
+  padding: 0.5em;
+  border: 2px solid #f2f4f4;
+  border-radius: 9999px;
+  aspect-ratio: 1/1;
+  transition: all 0.3s ease-in;
+}
+.customers .customers-icons .customers-icon img {
+  width: 100%;
+  top: 25%;
+  position: relative;
+}
+.customers .customers-icons .customers-icon:hover {
+  background-color: #fff;
+  border: 2px solid #f2f4f4;
 }
 
 /*# sourceMappingURL=style.css.map */

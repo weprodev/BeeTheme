@@ -1,0 +1,98 @@
+@use "sass:list";
+
+.smart__solutions {
+  padding-top: 5rem;
+
+  .container {
+    background-color: $mistGray;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  &--img-box {
+    .smart-solutions-img {
+      top: 6rem;
+      width: 27rem;
+      position: relative;
+    }
+  }
+
+  &--information-box {
+    padding-top: $rounded4Xl;
+
+    .menuItem {
+      display: flex;
+      align-items: center;
+      width: 20rem;
+      border-radius: $rounded2Xl;
+      background: $white;
+      height: 4rem;
+      padding: list.nth($spaces, 3);
+      margin-bottom: nth($spaces, 4);
+
+      span {
+        left: 1rem;
+        position: relative;
+        font-size: $fontSizeLg;
+      }
+    }
+
+    .selected {
+      background-color: $darkGray;
+      color: $white;
+      height: auto;
+      display: block;
+
+      p {
+        line-height: 1.6;
+        left: 1rem;
+        position: relative;
+        width: 96%;
+      }
+    }
+  }
+
+  // Responsive part
+
+  /*--------------------------------
+  *** FOR ANY DEVICE MAX SIZE UNTIL
+  ** MAX-WIDTH : 992px OR 62em
+  */
+
+  @include tablet {
+    .container {
+      .smart__solutions--img-box {
+        display: none;
+      }
+    }
+  }
+
+  /*--------------------------------
+
+  *** FOR MOBILE
+  ** MAX : 640PX / 40em
+  */
+
+  @include retinaMobile {
+    .container {
+      .smart__solutions--img-box {
+        display: none;
+      }
+    }
+  }
+
+  /*--------------------------------
+
+  *** FOR MINI MOBILE
+  ** MAX : 400PX / 25em
+  */
+
+  @include mobile {
+    .container {
+      .smart__solutions--img-box {
+        display: none;
+      }
+    }
+  }
+}
