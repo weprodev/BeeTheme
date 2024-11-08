@@ -1,3 +1,5 @@
+@use "sass:list";
+
 .customer__reviews {
   padding-top: 5rem;
 
@@ -23,20 +25,20 @@
     }
 
     h1 {
-      font-size: 2rem;
-      font-weight: 600;
+      font-size: $fontSize3Xl;
+      font-weight: $fontWeightSemibold;
       width: 24rem;
     }
   }
 
   &--card-section {
-    padding-top: 2rem;
+    padding-top: list.nth($spaces, 8);
     display: flex;
     justify-content: space-evenly;
 
     .card {
       width: 24rem;
-      border-radius: 2rem;
+      border-radius: $rounded4Xl;
       border: none;
       height: 21rem;
 
@@ -49,10 +51,10 @@
         height: 20rem;
 
         .paragraph {
-          padding: 0.2rem;
+          padding: list.nth($spaces, 1);
 
           p {
-            font-size: 1.2rem;
+            font-size: $fontSizeXl;
             line-height: 1.4;
           }
         }
@@ -61,7 +63,7 @@
 
     .information-box {
       display: flex;
-      gap: 1rem;
+      gap: list.nth($spaces, 4);
       top: 2rem;
       position: relative;
       height: 5rem;
@@ -78,7 +80,7 @@
       .about {
         align-items: center;
         display: grid;
-        gap: 1px;
+        gap: list.nth($spaces, 4);
         height: 4rem;
         top: 0.5rem;
         position: relative;
@@ -96,7 +98,7 @@
   @include mini_laptop {
     &--header-section {
       display: grid;
-      gap: 1rem;
+      gap: list.nth($spaces, 4);
       grid-template-columns: repeat(1, 1fr);
       text-align: center;
       place-content: center;
@@ -114,7 +116,7 @@
     &--card-section {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
+      gap: list.nth($spaces, 4);
 
       .card {
         margin: 0 auto;
@@ -130,7 +132,7 @@
   @include tablet {
     &--header-section {
       display: grid;
-      gap: 1rem;
+      gap: list.nth($spaces, 4);
       grid-template-columns: repeat(1, 1fr);
       text-align: center;
       place-content: center;
@@ -148,7 +150,7 @@
     &--card-section {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
+      gap: list.nth($spaces, 4);
 
       .card {
         margin: 0 auto;
@@ -186,7 +188,7 @@
     &--header-section {
       display: grid;
       text-align: center;
-      gap: 1rem;
+      gap: list.nth($spaces, 4);
       align-items: center;
 
       p {
@@ -196,7 +198,7 @@
 
     &--card-section {
       display: grid;
-      gap: 1rem;
+      gap: list.nth($spaces, 4);
       grid-template-columns: repeat(1, 1fr);
     }
   }
