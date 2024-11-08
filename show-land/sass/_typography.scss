@@ -7,12 +7,7 @@ body {
   font-size: 95%;
 }
 .background-color {
-  background-image: linear-gradient(
-    to right,
-    $colorSecondary,
-    $colorTertiary,
-    $colorPrimary
-  );
+  background-image: linear-gradient(to right, $colorSecondary, $colorPrimary);
   height: 100vh;
 }
 .container {
