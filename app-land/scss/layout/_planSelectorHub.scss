@@ -1,34 +1,58 @@
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
 .plan__Selector__Hub {
-  padding-top: 5rem;
+  padding: 5rem 1rem 0rem 1rem;
+
   .plans {
     background: #181a1b;
     color: white;
-    padding: 2rem;
-    border-radius: 2rem;
+    padding: nth($spaces, 4);
+    border-radius: $rounded4Xl;
 
     .mainBox {
       .subscription {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0px 20px;
+        padding: 1rem 20px;
+        padding: #{nth($spaces, 4)} #{nth($spaces, 6)};
         background-color: #262728;
-        border-radius: 8px;
+        border-radius: $roundedLg;
+
+        .subscription-level {
+          display: flex;
+          align-items: center;
+          gap: nth($spaces, 3);
+
+          h3 {
+            margin: 0;
+            font-size: $fontSize2Xl;
+            color: #ffffff;
+          }
+        }
 
         .subscription-options {
           display: flex;
-          gap: 20px;
+          gap: nth($spaces, 5);
 
           span {
             width: 8rem;
-            height: 2rem;
-            border-radius: 5px;
+            height: 2.5rem;
+            border-radius: $roundedLg;
             text-align: center;
-            align-items: center;
             display: flex;
+            align-items: center;
             justify-content: center;
             color: #2f3a2e;
-            gap: 0.4rem;
+            gap: nth($spaces, 2);
+            font-size: $fontSizeBase;
+            font-weight: bold;
+            transition: background 0.3s ease, transform 0.3s ease;
+
+            &:hover {
+              transform: scale(1.05);
+            }
           }
 
           .basic {
@@ -49,70 +73,89 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0px 20px;
+        padding: #{nth($spaces, 3)} #{nth($spaces, 5)};
 
         .status {
           width: 26rem;
           justify-content: space-between;
           display: flex;
+
+          span {
+            padding: #{nth($spaces, 1)} #{nth($spaces, 3)};
+          }
         }
       }
 
       .custom-divider {
-        background-color: rgba(0, 0, 3, 0.2);
-        margin: 10px 0;
-        height: 2px;
+        background-color: rgba(0, 0, 0, 0.4);
+        margin: 15px 0;
+        height: 3px;
       }
     }
 
-    .secondBox2 {
-      width: 35rem;
-      left: 11rem;
-      top: 10rem;
+    .download-box {
       position: relative;
       display: flex;
 
-      .download {
-        p {
-          text-align: left;
-          top: -1rem;
-          position: relative;
+      .information-section {
+        width: 50%;
+        text-align: center;
+        padding: 5rem nth($spaces, 1) nth($spaces, 4) 7rem;
+
+        h1 {
+          font-size: 3rem;
         }
 
-        .logo {
-          display: flex;
-        }
+        .btn-download {
+          ul {
+            display: flex;
+            gap: nth($spaces, 4);
+          }
 
-        .downloadIcon {
-          width: 12.3rem;
-          height: 3.5rem;
-          background: black;
-          border-radius: 8px;
-          display: flex;
-          border: 1px solid white;
-        }
-
-        .googlePlay {
-          width: 12.3rem;
-          height: 3.5rem;
-          background: black;
-          border-radius: 8px;
-          display: flex;
-          border: 1px solid white;
-          left: 1rem;
-          position: relative;
+          .download {
+            width: 180px;
+            height: 60px;
+            padding: nth($spaces, 2);
+          }
         }
       }
 
-      .img {
-        width: 19rem;
-        top: -6rem;
-        position: relative;
-        left: 8rem;
-        img {
-          width: 19rem;
-        }
-      }
+      // .image-box {
+      //   width: 50%;
+      // }
     }
+  }
+
+  // Responsive part
+
+  /*--------------------------------
+    *** FOR ANY DEVICE MAX SIZE UNTIL
+    ** MAX-WIDTH : 992px OR 62em
+    */
+
+  @include tablet {
+  }
+
+  /*--------------------------------
+    *** FOR RETINA MOBILE AND LANSCAPE
+    ** MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
+    */
+
+  @include mini_laptop {
+  }
+
+  /*--------------------------------
+    *** FOR MOBILE
+    ** MAX : 640PX / 40em
+    */
+  @include retinaMobile {
+  }
+
+  /*--------------------------------
+    *** FOR MINI MOBILE
+    ** MAX : 400PX / 25em
+    */
+
+  @include mobile {
   }
 }
