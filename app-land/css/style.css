@@ -353,14 +353,12 @@ a {
 ***         
 */
 /*========================================================================================*\
-*----------------------------               COLORE              ----------------------------        
+*----------------------------               COLORS              ----------------------------        
 \*========================================================================================*/
 /*--------------------------------
 *** FLAT UI COLORS 
 **  flatuicolors.com/palette/defo
 */
-/*--------------------------------
-    *** Font 
 /*========================================================================================*\
 *----------------------------               FONTS              ----------------------------        
 \*========================================================================================*/
@@ -368,6 +366,15 @@ a {
 *** FONTS 
 **  
 */
+/*--------------------------------
+*** Padding
+**  
+*/
+/* Small padding */
+/* Medium padding */
+/* large padding */
+/* Padding too big */
+/* default padding */
 /*--------------------------------
 ***  SET DIRECTION BEFORE ANYTHING
 **   
@@ -415,8 +422,8 @@ body li {
 **   MIXINS
 */
 /*--------------------------------
-***  
-**   HEADER
+***  LAYOUT
+**   HEADER, HERO SECTION, EXPLORE HUB, SMART SOLUTIONS
 */
 .header .hide-on-laptop {
   display: none;
@@ -485,10 +492,6 @@ body li {
   }
 }
 
-/*--------------------------------
-***  
-**   Hero Section
-*/
 .hero__section {
   border-radius: 1.5em;
   position: relative;
@@ -615,6 +618,206 @@ body li {
   }
   .hero__section .hero__section--text-overlay .container .stats-container .stat-item p {
     width: 100%;
+  }
+}
+
+.explore__hub {
+  position: relative;
+  padding-top: 5rem;
+  width: 97%;
+  left: 1rem;
+  /*--------------------------------
+  *** FOR MINI MOBILE
+  **	MAX : 400PX / 25em
+  */
+  /*--------------------------------
+  *** FOR MOBILE
+  **	MAX : 640PX / 40em
+  */
+  /*--------------------------------
+  *** FOR ANY DEVICE MAX SIZE UNTIL
+  **	MAX-WIDTH : 992px OR 62em
+  */
+  /*--------------------------------
+  *** FOR ANY DEVICE MAX SIZE UNTIL
+  **	MAX-WIDTH : 1200px OR 75em
+  */
+}
+.explore__hub h2 {
+  font-size: 3em;
+  font-weight: 600;
+}
+.explore__hub .header__section {
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+}
+.explore__hub .header__section p {
+  width: 24rem;
+  line-height: 1.4;
+}
+.explore__hub .header__section .cta__button {
+  width: 24rem;
+}
+.explore__hub .header__section .cta__button--button {
+  width: 15rem;
+  font-size: 1.125em;
+  background-color: rgba(229, 229, 229, 0.81);
+  border-radius: 1em;
+}
+.explore__hub .header__section .cta__button--button:hover {
+  background-color: rgba(193, 193, 193, 0.81);
+}
+.explore__hub .card__section {
+  padding-top: 2em;
+  justify-content: space-between;
+  display: flex;
+}
+.explore__hub .card__section .card {
+  background-color: #f1f1f1;
+  border-radius: 2rem;
+  width: 24rem;
+}
+.explore__hub .card__section .card__img img {
+  border-top-right-radius: 2rem;
+  border-top-left-radius: 2rem;
+  object-fit: cover;
+  height: 20rem;
+  width: 100%;
+}
+.explore__hub .card__section .card__text-box {
+  padding: 0.5em;
+}
+.explore__hub .card__section .card__text-box p {
+  font-size: 1.5em;
+}
+.explore__hub .card__section .card__text-box .btn {
+  background: rgba(229, 229, 229, 0.81);
+  border-radius: 0.375em;
+  font-size: 0.875em;
+  position: relative;
+  cursor: pointer;
+  height: 1.5rem;
+  border: none;
+  width: 6rem;
+  top: -22rem;
+  left: 1rem;
+}
+.explore__hub .card__section .card__text-box .btn:hover {
+  background: rgba(193, 193, 193, 0.81);
+  transition: 0.5s;
+}
+@media screen and (max-width: 25em) {
+  .explore__hub {
+    text-align: center;
+    padding: 5rem 0.5em 0 0.5em;
+    width: 100%;
+    left: 0rem;
+  }
+  .explore__hub .header__section {
+    display: grid;
+    place-items: center;
+  }
+  .explore__hub .header__section p {
+    max-width: 100%;
+    width: 100%;
+    line-height: 1.7;
+  }
+  .explore__hub .card__section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .explore__hub .card__section .card {
+    margin-top: 1em;
+  }
+  .explore__hub .card__section .card__text-box .btn {
+    left: -6rem;
+  }
+}
+@media screen and (max-width: 40em) {
+  .explore__hub {
+    text-align: center;
+    padding: 5rem 0.5em 0 0.5em;
+    width: 100%;
+    left: 0rem;
+  }
+  .explore__hub .header__section {
+    display: grid;
+    place-items: center;
+  }
+  .explore__hub .header__section p {
+    max-width: 100%;
+    width: 100%;
+    line-height: 1.7;
+  }
+  .explore__hub .card__section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .explore__hub .card__section .card {
+    margin-top: 1em;
+  }
+  .explore__hub .card__section .card__text-box .btn {
+    left: -6rem;
+  }
+}
+@media screen and (max-width: 62em) {
+  .explore__hub {
+    text-align: center;
+  }
+  .explore__hub .header__section {
+    display: grid;
+    place-items: center;
+    left: -0.6rem;
+    position: relative;
+  }
+  .explore__hub .header__section p {
+    width: 70%;
+    line-height: 1.7;
+    padding-top: 1em;
+    text-align: center;
+  }
+  .explore__hub .header__section .cta__button {
+    padding-top: 1em;
+  }
+  .explore__hub .card__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    left: -0.5rem;
+    position: relative;
+  }
+  .explore__hub .card__section .card__text-box .btn {
+    left: -6rem;
+  }
+}
+@media screen and (max-width: 75em) {
+  .explore__hub h2 {
+    text-align: center;
+  }
+  .explore__hub .header__section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .explore__hub .header__section .cta__button {
+    width: 100%;
+    text-align: center;
+    padding-top: 1em;
+    position: relative;
+  }
+  .explore__hub .card__section {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .explore__hub .card__section .card {
+    flex: 0 0 49%;
+  }
+  .explore__hub .card__section .card:last-child {
+    margin-top: 1.25em;
   }
 }
 
