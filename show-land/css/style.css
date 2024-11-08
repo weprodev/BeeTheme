@@ -35,7 +35,7 @@ body {
 }
 
 .background-color {
-  background-image: linear-gradient(to right, #364fc7, #6741d9, #37b24d);
+  background-image: linear-gradient(to right, #0d27a7, #448851);
   height: 100vh;
 }
 
@@ -182,7 +182,7 @@ a {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 .btn-button {
-  background-image: linear-gradient(to right, #364fc7, #6741d9, #37b24d);
+  background-image: linear-gradient(to right, #0d27a7, #448851);
   color: #fff;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
 }

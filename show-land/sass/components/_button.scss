@@ -19,14 +19,8 @@
   }
 
   &-button {
-    background-image: linear-gradient(
-      to right,
-      $colorSecondary,
-      $colorTertiary,
-      $colorPrimary
-    );
+    background-image: linear-gradient(to right, $colorSecondary, $colorPrimary);
     color: $colorwhite;
     box-shadow: 0 1rem 2rem rgba($colorBlack, 0.1);
   }
 }
-
