@@ -1,14 +1,14 @@
 /*------------------------------------*\
   #ABSTRACTS
 \*------------------------------------*/
+@import "../../shared/scss/abstracts/variables";
 @import "variables";
 @import "typography";
-
 /*------------------------------------*\
   #LAYOUTS
 \*------------------------------------*/
 @import "layout/top-nav";
-
+@import "layout/hero";
 /*------------------------------------*\
   #BASE
 \*------------------------------------*/
@@ -17,4 +17,5 @@
 /*------------------------------------*\
   #COMPONENTS
 \*------------------------------------*/
-@import "components/button";
+@import "components/_button.scss";
+

@@ -118,6 +118,17 @@ a {
   }
 }
 
+.cta__button--button {
+  width: 7rem;
+  height: 3rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+.cta__button--button:hover {
+  transition: 0.3s ease-in-out;
+}
+
 /*=========================================================
 *********   Generic Button Component
 *******  
@@ -182,6 +193,18 @@ a {
   background-color: #0dd47e;
 }
 
+
+.cta__button--button {
+  width: 7rem;
+  height: 3rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+.cta__button--button:hover {
+  transition: 0.3s ease-in-out;
+}
+
 /*=========================================================
 *********   Generic Button Component
 *******  
@@ -198,6 +221,7 @@ a {
   padding: 1em 2em;
   margin: 0 auto;
   border-radius: 1em;
+
 }
 .hero .hero-content {
   z-index: 1;
@@ -354,6 +378,7 @@ a {
   background: rgba(0, 0, 0, 0.3);
   z-index: 0;
   border-radius: 1em;
+
 }
 
 .customers {
