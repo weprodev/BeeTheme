@@ -21,7 +21,7 @@
 
   &_main__1 {
     display: block;
-    font-size: 5rem;
+    font-size: $fontSize8Xl;
   }
 }
 .text-img {
@@ -34,15 +34,15 @@
     align-items: center;
     justify-content: center;
     margin-top: 30rem;
-    gap: nth($spaces, 4 );
+    gap: nth($spaces, 4);
   }
 
   &__2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: nth($spaces, 4 );
-    gap: nth($spaces, 4 );
+    margin-top: nth($spaces, 4);
+    gap: nth($spaces, 4);
   }
 }
 .text-img__box {
