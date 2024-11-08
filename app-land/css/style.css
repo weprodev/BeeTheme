@@ -366,15 +366,6 @@ a {
 *----------------------------               FONTS              ----------------------------        
 \*========================================================================================*/
 /*--------------------------------
-*** Padding
-**  
-*/
-/* Small padding */
-/* Medium padding */
-/* large padding */
-/* Padding too big */
-/* default padding */
-/*--------------------------------
 ***  SET DIRECTION BEFORE ANYTHING
 **   
 */
@@ -492,7 +483,7 @@ body li {
 }
 
 .hero__section {
-  border-radius: 2rem;
+  border-radius: 1.5em;
   position: relative;
   left: 1.2rem;
   width: 97%;
@@ -511,12 +502,11 @@ body li {
 }
 .hero__section--text-overlay {
   background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 2rem;
+  border-radius: 1.5em;
   position: absolute;
   color: rgb(255, 255, 255);
   width: 28rem;
   left: 8rem;
-  top: 8rem;
   height: 24rem;
   top: 10rem;
 }
@@ -529,12 +519,12 @@ body li {
 }
 .hero__section--text-overlay .container h1 {
   text-align: center;
-  padding-top: 1rem;
-  font-size: 2.2rem;
-  font-weight: 600;
+  padding-top: 1em;
+  font-size: 2.25em;
+  font-weight: 700;
 }
 .hero__section--text-overlay .container p {
-  padding-top: 1rem;
+  padding-top: 1em;
   line-height: 1.4;
 }
 .hero__section--text-overlay .container .cta__button {
@@ -542,9 +532,9 @@ body li {
   text-align: center;
   display: flex;
   width: 27rem;
-  gap: 2rem;
+  gap: 2em;
   left: 0rem;
-  padding-top: 1rem;
+  padding-top: 1em;
   text-align: center;
   place-content: center;
 }
@@ -553,7 +543,7 @@ body li {
   border: none;
   border-radius: 0.5rem;
   height: 3rem;
-  font-size: 1rem;
+  font-size: 1em;
 }
 .hero__section--text-overlay .container .cta__button--button-more {
   background-color: rgb(170, 170, 170);
@@ -562,7 +552,7 @@ body li {
   border-radius: 0.5rem;
   height: 3rem;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1em;
 }
 .hero__section--text-overlay .container .cta__button--button-more:hover {
   transition: 0.3s ease-in-out;
@@ -570,11 +560,11 @@ body li {
 }
 .hero__section--text-overlay .container .stats-container {
   position: relative;
-  padding-top: 1rem;
+  padding-top: 1em;
   display: flex;
   width: 27rem;
   justify-content: center;
-  gap: 2rem;
+  gap: 2em;
 }
 @media screen and (max-width: 40em) {
   .hero__section {
@@ -598,22 +588,22 @@ body li {
     width: 76%;
     left: 2rem;
     position: relative;
-    font-size: 0.8rem;
-    font-weight: 800;
+    font-size: 0.875em;
+    font-weight: 700;
   }
   .hero__section .hero__section--text-overlay .container .cta__button {
     position: relative;
     text-align: center;
     display: flex;
     width: 22rem;
-    gap: 2rem;
+    gap: 2em;
     left: 1rem;
-    padding-top: 1rem;
+    padding-top: 1em;
     text-align: center;
     place-content: center;
   }
   .hero__section .hero__section--text-overlay .container .stats-container {
-    font-size: 1rem;
+    font-size: 1em;
     left: -3rem;
   }
   .hero__section .hero__section--text-overlay .container .stats-container .stat-item p {
@@ -648,13 +638,13 @@ body li {
   */
 }
 .explore__hub h2 {
-  font-size: 3rem;
+  font-size: 3em;
   font-weight: 600;
 }
 .explore__hub .header__section {
   display: flex;
   justify-content: space-between;
-  padding-top: 2rem;
+  padding: 2em;
 }
 .explore__hub .header__section p {
   width: 24rem;
@@ -665,46 +655,47 @@ body li {
 }
 .explore__hub .header__section .cta__button--button {
   width: 15rem;
-  font-size: 18px;
+  font-size: 1.125em;
   background-color: rgba(229, 229, 229, 0.81);
-  border-radius: 1rem;
+  border-radius: 1em;
 }
 .explore__hub .header__section .cta__button--button:hover {
   background-color: rgba(193, 193, 193, 0.81);
 }
 .explore__hub .card__section {
-  padding-top: 2rem;
-  display: flex;
+  padding-top: 2em;
   justify-content: space-between;
+  display: flex;
 }
 .explore__hub .card__section .card {
-  width: 24rem;
-  border-radius: 2rem;
   background-color: #f1f1f1;
+  border-radius: 2rem;
+  width: 24rem;
 }
 .explore__hub .card__section .card__img img {
-  width: 100%;
-  height: 20rem;
-  object-fit: cover;
-  border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
+  border-top-left-radius: 2rem;
+  object-fit: cover;
+  height: 20rem;
+  width: 100%;
 }
 .explore__hub .card__section .card__text-box {
-  padding: 0.5rem;
+  padding: 0.5em;
 }
 .explore__hub .card__section .card__text-box p {
-  font-size: 25px;
+  font-size: 1.5em;
 }
 .explore__hub .card__section .card__text-box .btn {
   background: rgba(229, 229, 229, 0.81);
+  border-radius: 0.375em;
+  font-size: 0.875em;
   position: relative;
-  border-radius: 5px;
   cursor: pointer;
-  font-size: 15px;
   height: 1.5rem;
   border: none;
   top: -22rem;
   width: 6rem;
+  top: -22rem;
   left: 1rem;
 }
 .explore__hub .card__section .card__text-box .btn:hover {
@@ -790,7 +781,7 @@ body li {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: 2em;
     left: -0.5rem;
     position: relative;
   }
@@ -827,7 +818,20 @@ body li {
 
 .smart__solutions {
   padding-top: 5rem;
-  /* Responsive section */
+  /*--------------------------------
+  *** FOR ANY DEVICE MAX SIZE UNTIL
+  ** MAX-WIDTH : 992px OR 62em
+  */
+  /*--------------------------------
+
+  *** FOR MOBILE
+  ** MAX : 640PX / 40em
+  */
+  /*--------------------------------
+
+  *** FOR MINI MOBILE
+  ** MAX : 400PX / 25em
+  */
 }
 .smart__solutions .container {
   background-color: rgb(244, 245, 246);
@@ -841,22 +845,22 @@ body li {
   width: 27rem;
 }
 .smart__solutions--information-box {
-  padding-top: 3rem;
+  padding-top: 2rem;
 }
 .smart__solutions--information-box .menuItem {
   display: flex;
   align-items: center;
   width: 20rem;
-  border-radius: 1rem;
+  border-radius: 1em;
   background: rgb(255, 255, 255);
   height: 4rem;
-  padding: 10px;
-  margin-bottom: 1rem;
+  padding: 0.75em;
+  margin-bottom: 1em;
 }
 .smart__solutions--information-box .menuItem span {
   left: 1rem;
   position: relative;
-  font-size: 20px;
+  font-size: 1.125em;
 }
 .smart__solutions--information-box .selected {
   background-color: rgb(32, 34, 35);
@@ -870,7 +874,7 @@ body li {
   position: relative;
   width: 96%;
 }
-@media screen and (max-width: 40em) {
+@media screen and (max-width: 62em) {
   .smart__solutions .container .smart__solutions--img-box {
     display: none;
   }
@@ -880,7 +884,7 @@ body li {
     display: none;
   }
 }
-@media screen and (max-width: 62em) {
+@media screen and (max-width: 40em) {
   .smart__solutions .container .smart__solutions--img-box {
     display: none;
   }
@@ -927,12 +931,12 @@ body li {
   width: 24rem;
 }
 .customer__reviews--header-section h1 {
-  font-size: 2rem;
+  font-size: 1.875em;
   font-weight: 600;
   width: 24rem;
 }
 .customer__reviews--card-section {
-  padding-top: 2rem;
+  padding-top: 2em;
   display: flex;
   justify-content: space-evenly;
 }
@@ -951,15 +955,15 @@ body li {
   height: 20rem;
 }
 .customer__reviews--card-section .card .card__text-box .paragraph {
-  padding: 0.2rem;
+  padding: 0.25em;
 }
 .customer__reviews--card-section .card .card__text-box .paragraph p {
-  font-size: 1.2rem;
+  font-size: 1.25em;
   line-height: 1.4;
 }
 .customer__reviews--card-section .information-box {
   display: flex;
-  gap: 1rem;
+  gap: 1em;
   top: 2rem;
   position: relative;
   height: 5rem;
@@ -975,7 +979,7 @@ body li {
 .customer__reviews--card-section .information-box .about {
   align-items: center;
   display: grid;
-  gap: 1px;
+  gap: 1em;
   height: 4rem;
   top: 0.5rem;
   position: relative;
@@ -983,7 +987,7 @@ body li {
 @media screen and (max-width: 64em) {
   .customer__reviews--header-section {
     display: grid;
-    gap: 1rem;
+    gap: 1em;
     grid-template-columns: repeat(1, 1fr);
     text-align: center;
     place-content: center;
@@ -998,7 +1002,7 @@ body li {
   .customer__reviews--card-section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    gap: 1em;
   }
   .customer__reviews--card-section .card {
     margin: 0 auto;
@@ -1007,7 +1011,7 @@ body li {
 @media screen and (max-width: 62em) {
   .customer__reviews--header-section {
     display: grid;
-    gap: 1rem;
+    gap: 1em;
     grid-template-columns: repeat(1, 1fr);
     text-align: center;
     place-content: center;
@@ -1022,7 +1026,7 @@ body li {
   .customer__reviews--card-section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    gap: 1em;
   }
   .customer__reviews--card-section .card {
     margin: 0 auto;
@@ -1037,7 +1041,7 @@ body li {
   .customer__reviews--header-section {
     display: grid;
     text-align: center;
-    gap: 1rem;
+    gap: 1em;
     align-items: center;
   }
   .customer__reviews--header-section p {
@@ -1045,7 +1049,7 @@ body li {
   }
   .customer__reviews--card-section {
     display: grid;
-    gap: 1rem;
+    gap: 1em;
     grid-template-columns: repeat(1, 1fr);
   }
 }
