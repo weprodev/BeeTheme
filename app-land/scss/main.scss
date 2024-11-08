@@ -9,6 +9,7 @@
     ***  shared files 
     **  
     */   
+    
     @import "../../shared/scss/shared.scss";
 
 
@@ -17,8 +18,8 @@
     **   VARIABLES
     */
 
-        @import "variables";
-
+    @import "variables"; 
+    
     /*--------------------------------
     ***  SET DIRECTION BEFORE ANYTHING
     **   
@@ -27,11 +28,32 @@
     @import "typography";
 
     /*--------------------------------
+    ***  SET DIRECTION BEFORE ANYTHING
+    **   
+    */
+
+    @import "./component/_button.scss";
+
+    /*--------------------------------
+    ***  IMPORT GENERAL AND IMPORTANT
+    **   MIXINS
+    */
+
+    @import "./mixins/mixins";
+
+    /*--------------------------------
     ***  
     **   HEADER
     */   
 
     @import "layout/header";
+
+    /*--------------------------------
+    ***  
+    **   Hero Section
+    */   
+
+    @import "layout/heroSection";
 
 /*
 ***         
