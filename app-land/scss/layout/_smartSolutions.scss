@@ -1,5 +1,7 @@
+@use "sass:list";
+
 .smart__solutions {
-  padding-top: $paddingDefault;
+  padding-top: 5rem;
 
   .container {
     background-color: $mistGray;
@@ -10,28 +12,29 @@
 
   &--img-box {
     .smart-solutions-img {
-      top: 3.7rem;
+      top: 6rem;
+      width: 27rem;
       position: relative;
     }
   }
 
   &--information-box {
-    padding-top: $paddingLarge;
+    padding-top: $rounded4Xl;
 
     .menuItem {
       display: flex;
       align-items: center;
       width: 20rem;
-      border-radius: 1rem;
+      border-radius: $rounded2Xl;
       background: $white;
       height: 4rem;
-      padding: 10px;
-      margin-bottom: 1rem;
+      padding: list.nth($spaces, 3);
+      margin-bottom: nth($spaces, 4);
 
       span {
         left: 1rem;
         position: relative;
-        font-size: 20px;
+        font-size: $fontSizeLg;
       }
     }
 
@@ -50,14 +53,26 @@
     }
   }
 
-  /* Responsive section */
-  @include mobile {
+  // Responsive part
+
+  /*--------------------------------
+  *** FOR ANY DEVICE MAX SIZE UNTIL
+  ** MAX-WIDTH : 992px OR 62em
+  */
+
+  @include tablet {
     .container {
       .smart__solutions--img-box {
         display: none;
       }
     }
   }
+
+  /*--------------------------------
+
+  *** FOR MOBILE
+  ** MAX : 640PX / 40em
+  */
 
   @include retinaMobile {
     .container {
@@ -67,7 +82,13 @@
     }
   }
 
-  @include tablet {
+  /*--------------------------------
+
+  *** FOR MINI MOBILE
+  ** MAX : 400PX / 25em
+  */
+
+  @include mobile {
     .container {
       .smart__solutions--img-box {
         display: none;

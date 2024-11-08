@@ -1,5 +1,7 @@
+@use "sass:list";
+
 .hero__section {
-  border-radius: 2rem;
+  border-radius: $rounded3Xl;
   position: relative;
   left: 1.2rem;
   width: 97%;
@@ -14,12 +16,11 @@
 
   &--text-overlay {
     background-color: $transparentBlack;
-    border-radius: 2rem;
+    border-radius: $rounded3Xl;
     position: absolute;
     color: $white;
     width: 28rem;
     left: 8rem;
-    top: 8rem;
     height: 24rem;
     top: 10rem;
 
@@ -32,13 +33,13 @@
 
       h1 {
         text-align: center;
-        padding-top: 1rem;
-        font-size: 2.2rem;
-        font-weight: 600;
+        padding-top: list.nth($spaces, 4);
+        font-size: $fontSize4Xl;
+        font-weight: $fontWeightBold;
       }
 
       p {
-        padding-top: 1rem;
+        padding-top: list.nth($spaces, 4);
         line-height: 1.4;
       }
 
@@ -47,9 +48,9 @@
         text-align: center;
         display: flex;
         width: 27rem;
-        gap: 2rem;
+        gap: list.nth($spaces, 8);
         left: 0rem;
-        padding-top: 1rem;
+        padding-top: list.nth($spaces, 4);
         text-align: center;
         place-content: center;
 
@@ -58,7 +59,7 @@
           border: none;
           border-radius: 0.5rem;
           height: 3rem;
-          font-size: 1rem;
+          font-size: $fontSizeBase;
 
           &-more {
             background-color: $lightGray;
@@ -67,7 +68,7 @@
             border-radius: 0.5rem;
             height: 3rem;
             cursor: pointer;
-            font-size: 1rem;
+            font-size: $fontSizeBase;
 
             &:hover {
               transition: 0.3s ease-in-out;
@@ -79,11 +80,11 @@
 
       .stats-container {
         position: relative;
-        padding-top: 1rem;
+        padding-top: list.nth($spaces, 4);
         display: flex;
         width: 27rem;
         justify-content: center;
-        gap: 2rem;
+        gap: list.nth($spaces, 8);
       }
     }
   }
@@ -117,8 +118,8 @@
           width: 76%;
           left: 2rem;
           position: relative;
-          font-size: 0.8rem;
-          font-weight: 800;
+          font-size: $fontSizeSm;
+          font-weight: $fontWeightBold;
         }
 
         .cta__button {
@@ -126,16 +127,17 @@
           text-align: center;
           display: flex;
           width: 22rem;
-          gap: 2rem;
+          gap: list.nth($spaces, 8);
           left: 1rem;
-          padding-top: 1rem;
+          padding-top: list.nth($spaces, 4);
           text-align: center;
           place-content: center;
         }
 
         .stats-container {
-          font-size: 1rem;
+          font-size: $fontSizeBase;
           left: -3rem;
+
           .stat-item p {
             width: 100%;
           }
