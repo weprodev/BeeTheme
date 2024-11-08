@@ -363,19 +363,6 @@ a {
 *----------------------------               FONTS              ----------------------------        
 \*========================================================================================*/
 /*--------------------------------
-*** FONTS 
-**  
-*/
-/*--------------------------------
-*** Padding
-**  
-*/
-/* Small padding */
-/* Medium padding */
-/* large padding */
-/* Padding too big */
-/* default padding */
-/*--------------------------------
 ***  SET DIRECTION BEFORE ANYTHING
 **   
 */
@@ -818,6 +805,80 @@ body li {
   }
   .explore__hub .card__section .card:last-child {
     margin-top: 1.25em;
+  }
+}
+
+.smart__solutions {
+  padding-top: 5rem;
+  /*--------------------------------
+  *** FOR ANY DEVICE MAX SIZE UNTIL
+  ** MAX-WIDTH : 992px OR 62em
+  */
+  /*--------------------------------
+
+  *** FOR MOBILE
+  ** MAX : 640PX / 40em
+  */
+  /*--------------------------------
+
+  *** FOR MINI MOBILE
+  ** MAX : 400PX / 25em
+  */
+}
+.smart__solutions .container {
+  background-color: rgb(244, 245, 246);
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.smart__solutions--img-box .smart-solutions-img {
+  top: 6rem;
+  width: 27rem;
+  position: relative;
+}
+.smart__solutions--information-box {
+  padding-top: 2rem;
+}
+.smart__solutions--information-box .menuItem {
+  display: flex;
+  align-items: center;
+  width: 20rem;
+  border-radius: 1em;
+  background: rgb(255, 255, 255);
+  height: 4rem;
+  padding: 0.75em;
+  margin-bottom: 1em;
+}
+.smart__solutions--information-box .menuItem span {
+  left: 1rem;
+  position: relative;
+  font-size: 1.125em;
+}
+.smart__solutions--information-box .selected {
+  background-color: rgb(32, 34, 35);
+  color: rgb(255, 255, 255);
+  height: auto;
+  display: block;
+}
+.smart__solutions--information-box .selected p {
+  line-height: 1.6;
+  left: 1rem;
+  position: relative;
+  width: 96%;
+}
+@media screen and (max-width: 62em) {
+  .smart__solutions .container .smart__solutions--img-box {
+    display: none;
+  }
+}
+@media screen and (min-width: 31.25em) and (max-width: 47.9375em) {
+  .smart__solutions .container .smart__solutions--img-box {
+    display: none;
+  }
+}
+@media screen and (max-width: 40em) {
+  .smart__solutions .container .smart__solutions--img-box {
+    display: none;
   }
 }
 
