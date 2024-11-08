@@ -1,23 +1,3 @@
-    /*--------------------------------
-    *** BREAKPOINTS
-    **
-    */
-
-    $led4k      : 160em     ;   // 2560px
-    $alpha      : 87.5em    ;   // 1400px
-    $pre-alpha  : 75.0625em ;   // 1201px
-    $beta       : 75em      ;   // 1200px
-    $pre-beta   : 64em      ;   // 1024px
-    $gamma      : 62em      ;   // 992px
-    $delta      : 60em      ;   // 960em
-    $epsilon    : 50em      ;   // 800em
-    $zeta       : 48em      ;   // 768px
-    $pre-zeta   : 47.9375em ;   // 767px
-    $eta        : 40em      ;   // 640px
-    $theta      : 35em      ;   // 560px
-    $lota       : 31.25em   ;   // 500px
-    $kappa      : 25em      ;   // 400px
-    $lambda     : 22.5em    ;   // 360px
 /*------------------------------------*\
   #FONT
 \*------------------------------------*/
@@ -26,3 +6,75 @@ $fontWeightRegular: 400;
 $fontWeightMedium: 500;
 $fontWeightSemibold: 600;
 $fontWeightBold: 700;
+
+$fontSizeXs: 0.75em;
+$fontSizeSm: 0.875em;
+$fontSizeBase: 1em;
+$fontSizeLg: 1.125em;
+$fontSizeXl: 1.25em;
+$fontSize2Xl: 1.5em;
+$fontSize3Xl: 1.875em;
+$fontSize4Xl: 2.25em;
+$fontSize5Xl: 3em;
+$fontSize6Xl: 3.75em;
+$fontSize7Xl: 4.5em;
+// To be continued...
+
+/*------------------------------------*\
+  #BREAKPOINTS
+\*------------------------------------*/
+
+$led4k: 160em;
+$alpha: 87.5em;
+$preAlpha: 75.0625em;
+$beta: 75em;
+$preBeta: 64em;
+$gamma: 62em;
+$lota: 31.25em;
+$preZeta: 47.9375em;
+$eta: 40em;
+$kappa: 25em;
+
+/*------------------------------------*\
+  #SPACES (padding & margin & gap) 
+\*------------------------------------*/
+
+$spaces: [];
+@for $i from 1 through 16 {
+  $spaces: append($spaces, #{0.25 * $i}em);
+}
+
+/*------------------------------------*\
+  #TRANSITION DURATION
+\*------------------------------------*/
+
+$durations: (
+  75: 75ms,
+  100: 100ms,
+  150: 150ms,
+  200: 200ms,
+  300: 300ms,
+  500: 500ms,
+  700: 700ms,
+  1000: 1000ms,
+);
+
+/*------------------------------------*\
+  #BOX SHADOW
+\*------------------------------------*/
+
+$shadowSm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+
+/*------------------------------------*\
+  #BORDER RADIUS
+\*------------------------------------*/
+
+$roundedSm: 0.125em;
+$rounded: 0.25em;
+$roundedMd: 0.375em;
+$roundedLg: 0.5em;
+$roundedXl: 0.75em;
+$rounded2Xl: 1em;
+$rounded3Xl: 1.5em;
+$rounded4Xl: 2rem;
+$roundedFull: 9999px;

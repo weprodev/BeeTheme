@@ -26,27 +26,23 @@
     $darkGray       : rgb(032, 034, 035); // #202223
     $mistGray       : rgb(244, 245, 246); // #f4f5f6
     
-    $moonlitLavender: rgb(204, 186, 254); // #ccbafe
-    $skyBreeze      : rgb(165, 228, 249); //#a5e4f9;
+    $sringGreen     : rgb(187, 249, 158); // #bbf99e
+    $skyBreeze      : rgb(165, 228, 249); // #a5e4f9
 
-    $sringGreen    : rgb(187, 249, 158); // #bbf99e
+    $charcoalGray   : rgb(038, 039, 040); // #262728
+    $forestGreen    : rgb(047, 058, 046); // #2f3a2e
+    
+    $softGold       : rgb(237, 208, 135); // #edd087
+    $moonlitLavender  : rgb(204, 186, 254); // #ccbafe
+    
+/*========================================================================================*\
+*----------------------------               SHADOW              ----------------------------        
+\*========================================================================================*/
+
     $transparentBlack : rgba(0, 0, 0, 0.5); // shadow Black
 
-
-    /*--------------------------------
-    *** Font 
-    **  
-    */
+/*========================================================================================*\
+*----------------------------               FONTS              ----------------------------        
+\*========================================================================================*/
 
     $primaryFontFamily: "Poppins", sans-serif;
-
-    /*--------------------------------
-    *** Padding
-    **  
-    */
-
-    $paddingSmall: 1rem;          /* Small padding */
-    $paddingMedium: 2rem;         /* Medium padding */
-    $paddingLarge: 3rem;          /* large padding */
-    $paddingXlarge: 4rem;         /* Padding too big */
-    $paddingDefault: 5rem;        /* default padding */

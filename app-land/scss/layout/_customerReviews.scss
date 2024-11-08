@@ -1,3 +1,5 @@
+@use "sass:list";
+
 .customer__reviews {
   padding-top: 5rem;
 
@@ -13,25 +15,30 @@
     background-color: $sringGreen;
   }
 
-  &--header-sectios {
+  &--header-section {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    line-height: 1.4;
 
-    .p-1,
+    p {
+      width: 24rem;
+    }
+
     h1 {
+      font-size: $fontSize3Xl;
+      font-weight: $fontWeightSemibold;
       width: 24rem;
     }
   }
 
   &--card-section {
-    padding-top: 2rem;
+    padding-top: list.nth($spaces, 8);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 
     .card {
       width: 24rem;
-      background: lightgreen;
-      border-radius: 2rem;
+      border-radius: $rounded4Xl;
       border: none;
       height: 21rem;
 
@@ -43,16 +50,20 @@
         top: 0.5rem;
         height: 20rem;
 
-        .paragraph p {
-          font-size: 1.2rem;
-          line-height: 1.4;
+        .paragraph {
+          padding: list.nth($spaces, 1);
+
+          p {
+            font-size: $fontSizeXl;
+            line-height: 1.4;
+          }
         }
       }
     }
 
     .information-box {
       display: flex;
-      gap: 1rem;
+      gap: list.nth($spaces, 4);
       top: 2rem;
       position: relative;
       height: 5rem;
@@ -65,6 +76,130 @@
         position: relative;
         object-fit: cover;
       }
+
+      .about {
+        align-items: center;
+        display: grid;
+        gap: list.nth($spaces, 4);
+        height: 4rem;
+        top: 0.5rem;
+        position: relative;
+      }
+    }
+  }
+
+  // RESPONSIVE SECTION
+
+  /*--------------------------------
+	*** FOR ANY DEVICE MAX SIZE UNTIL
+	**	MAX-WIDTH : 1024px OR 64em
+	*/
+
+  @include mini_laptop {
+    &--header-section {
+      display: grid;
+      gap: list.nth($spaces, 4);
+      grid-template-columns: repeat(1, 1fr);
+      text-align: center;
+      place-content: center;
+
+      h1 {
+        text-align: center;
+      }
+
+      p {
+        width: 50%;
+        margin: 0 auto;
+      }
+    }
+
+    &--card-section {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: list.nth($spaces, 4);
+
+      .card {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  /*--------------------------------
+  *** FOR ANY DEVICE MAX SIZE UNTIL
+  ** MAX-WIDTH : 992px OR 62em
+  */
+
+  @include tablet {
+    &--header-section {
+      display: grid;
+      gap: list.nth($spaces, 4);
+      grid-template-columns: repeat(1, 1fr);
+      text-align: center;
+      place-content: center;
+
+      h1 {
+        text-align: center;
+      }
+
+      p {
+        width: 50%;
+        margin: 0 auto;
+      }
+    }
+
+    &--card-section {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: list.nth($spaces, 4);
+
+      .card {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  /*--------------------------------
+  *** FOR RETINA MOBILE AND LANSCAPE
+  ** MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
+  */
+
+  @include mini_laptop {
+    &--header-section {
+      h1 {
+        width: 100%;
+      }
+    }
+  }
+
+  /*--------------------------------
+  *** FOR MOBILE
+  ** MAX : 640PX / 40em
+  */
+
+  @include retinaMobile {
+  }
+
+  /*--------------------------------
+  *** FOR MINI MOBILE
+  ** MAX : 400PX / 25em
+  */
+
+  @include mobile {
+    &--header-section {
+      display: grid;
+      text-align: center;
+      gap: list.nth($spaces, 4);
+      align-items: center;
+
+      p {
+        width: 24rem;
+      }
+    }
+
+    &--card-section {
+      display: grid;
+      gap: list.nth($spaces, 4);
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 }
