@@ -1,53 +1,102 @@
-.footer {
-  padding-top: 5rem;
-  width: 100%;
+.footer__section {
+  padding: 5rem nth($spaces, 2) 0rem nth($spaces, 2);
 
-  .container {
-    position: relative;
+  .footer {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    width: 100%;
+    height: 3rem;
 
-    .left-section {
-      display: flex;
+    &__brand {
+      font-size: $fontSize3Xl;
+      font-weight: $fontWeightSemibold;
+    }
 
-      img {
-        width: 3rem;
-      }
-
-      p {
-        padding-left: 1rem;
-        color: #181a1b;
+    &__nav {
+      &-list {
+        display: flex;
+        gap: nth($spaces, 4);
       }
     }
 
-    .center-section ul {
-      display: flex;
-      gap: 20px;
-    }
+    &__social {
+      &-list {
+        display: flex;
+        gap: nth($spaces, 4);
 
-    .right-section ul {
-      display: flex;
-      gap: 20px;
-      padding: 0px;
-      margin: 0px;
+        .footer__social-link {
+        }
+      }
     }
   }
 
-  .custom-divider2 {
+  hr {
     width: 100%;
+    margin: nth($spaces, 3) 0;
     background-color: rgba(0, 0, 3, 0.2);
-    margin: 10px 0;
-    height: 2px;
-    position: relative;
   }
 
-  .down {
+  .footer__copyright {
     display: flex;
     justify-content: space-between;
-    color: gray;
-    position: relative;
-    width: 100%;
+    padding-top: nth($spaces, 4);
+  }
+
+  // Responsive part
+
+  /*--------------------------------
+
+*** FOR RETINA MOBILE AND LANSCAPE
+** MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
+*/
+
+  @include mini_laptop {
+    .footer {
+      &__brand {
+        font-size: $fontSizeXl;
+      }
+      &__social {
+        display: none;
+        &-list {
+          gap: nth($spaces, 2);
+        }
+      }
+    }
+  }
+
+  /*--------------------------------
+
+  *** FOR MOBILE
+  ** MAX : 640PX / 40em
+  */
+
+  @include retinaMobile {
+    .footer {
+      &__social {
+        display: none;
+        &-list {
+          gap: nth($spaces, 1);
+        }
+      }
+    }
+  }
+
+  /*--------------------------------
+
+  *** FOR MINI MOBILE
+  ** MAX : 400PX / 25em
+  */
+
+  @include mobile {
+    .footer {
+      &__brand {
+        font-size: $fontSizeXl;
+      }
+      &__social {
+        display: none;
+        &-list {
+          gap: nth($spaces, 2);
+        }
+      }
+    }
   }
 }

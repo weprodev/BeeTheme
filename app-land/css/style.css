@@ -1348,50 +1348,80 @@ body li {
   }
 }
 
-.footer {
-  padding-top: 5rem;
-  width: 100%;
+.footer__section {
+  padding: 5rem 0.5em 0rem 0.5em;
+  /*--------------------------------
+
+  *** FOR RETINA MOBILE AND LANSCAPE
+  ** MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
+  */
+  /*--------------------------------
+
+  *** FOR MOBILE
+  ** MAX : 640PX / 40em
+  */
+  /*--------------------------------
+
+  *** FOR MINI MOBILE
+  ** MAX : 400PX / 25em
+  */
 }
-.footer .container {
-  position: relative;
+.footer__section .footer {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  height: 3rem;
+}
+.footer__section .footer__brand {
+  font-size: 1.875em;
+  font-weight: 600;
+}
+.footer__section .footer__nav-list {
+  display: flex;
+  gap: 1em;
+}
+.footer__section .footer__social-list {
+  display: flex;
+  gap: 1em;
+}
+.footer__section hr {
   width: 100%;
-}
-.footer .container .left-section {
-  display: flex;
-}
-.footer .container .left-section img {
-  width: 3rem;
-}
-.footer .container .left-section p {
-  padding-left: 1rem;
-  color: #181a1b;
-}
-.footer .container .center-section ul {
-  display: flex;
-  gap: 20px;
-}
-.footer .container .right-section ul {
-  display: flex;
-  gap: 20px;
-  padding: 0px;
-  margin: 0px;
-}
-.footer .custom-divider2 {
-  width: 100%;
+  margin: 0.75em 0;
   background-color: rgba(0, 0, 3, 0.2);
-  margin: 10px 0;
-  height: 2px;
-  position: relative;
 }
-.footer .down {
+.footer__section .footer__copyright {
   display: flex;
   justify-content: space-between;
-  color: gray;
-  position: relative;
-  width: 100%;
+  padding-top: 1em;
+}
+@media screen and (max-width: 64em) {
+  .footer__section .footer__brand {
+    font-size: 1.25em;
+  }
+  .footer__section .footer__social {
+    display: none;
+  }
+  .footer__section .footer__social-list {
+    gap: 0.5em;
+  }
+}
+@media screen and (min-width: 31.25em) and (max-width: 47.9375em) {
+  .footer__section .footer__social {
+    display: none;
+  }
+  .footer__section .footer__social-list {
+    gap: 0.25em;
+  }
+}
+@media screen and (max-width: 40em) {
+  .footer__section .footer__brand {
+    font-size: 1.25em;
+  }
+  .footer__section .footer__social {
+    display: none;
+  }
+  .footer__section .footer__social-list {
+    gap: 0.5em;
+  }
 }
 
 /*
