@@ -839,10 +839,10 @@ body li {
   display: flex;
   justify-content: space-evenly;
 }
-.smart__solutions--img-box .smart-solutions-img {
+.smart__solutions--img-box {
   top: 6rem;
-  width: 27rem;
   position: relative;
+  width: 27rem;
 }
 .smart__solutions--information-box {
   padding-top: 2rem;
@@ -892,6 +892,26 @@ body li {
 
 .customer__reviews {
   padding-top: 5rem;
+  /*--------------------------------
+  *** FOR ANY DEVICE MAX SIZE UNTIL
+  **	MAX-WIDTH : 1024px OR 64em
+  */
+  /*--------------------------------
+  *** FOR ANY DEVICE MAX SIZE UNTIL
+  ** MAX-WIDTH : 992px OR 62em
+  */
+  /*--------------------------------
+  *** FOR RETINA MOBILE AND LANSCAPE
+  ** MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
+  */
+  /*--------------------------------
+  *** FOR MOBILE
+  ** MAX : 640PX / 40em
+  */
+  /*--------------------------------
+  *** FOR MINI MOBILE
+  ** MAX : 400PX / 25em
+  */
 }
 .customer__reviews .moonlitLavender {
   background-color: rgb(204, 186, 254);
@@ -902,15 +922,15 @@ body li {
 .customer__reviews .sringGreen {
   background-color: rgb(187, 249, 158);
 }
-.customer__reviews--header-sectios {
+.customer__reviews--header-section {
   display: flex;
   justify-content: space-evenly;
   line-height: 1.4;
 }
-.customer__reviews--header-sectios .p-1 {
+.customer__reviews--header-section p {
   width: 24rem;
 }
-.customer__reviews--header-sectios h1 {
+.customer__reviews--header-section h1 {
   font-size: 2rem;
   font-weight: 600;
   width: 24rem;
@@ -933,6 +953,9 @@ body li {
   display: grid;
   top: 0.5rem;
   height: 20rem;
+}
+.customer__reviews--card-section .card .card__text-box .paragraph {
+  padding: 0.2rem;
 }
 .customer__reviews--card-section .card .card__text-box .paragraph p {
   font-size: 1.2rem;
@@ -960,6 +983,75 @@ body li {
   height: 4rem;
   top: 0.5rem;
   position: relative;
+}
+@media screen and (max-width: 64em) {
+  .customer__reviews--header-section {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+    place-content: center;
+  }
+  .customer__reviews--header-section h1 {
+    text-align: center;
+  }
+  .customer__reviews--header-section p {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .customer__reviews--card-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .customer__reviews--card-section .card {
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 62em) {
+  .customer__reviews--header-section {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+    place-content: center;
+  }
+  .customer__reviews--header-section h1 {
+    text-align: center;
+  }
+  .customer__reviews--header-section p {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .customer__reviews--card-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .customer__reviews--card-section .card {
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 64em) {
+  .customer__reviews--header-section h1 {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 40em) {
+  .customer__reviews--header-section {
+    display: grid;
+    text-align: center;
+    gap: 1rem;
+    align-items: center;
+  }
+  .customer__reviews--header-section p {
+    width: 24rem;
+  }
+  .customer__reviews--card-section {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 /*
