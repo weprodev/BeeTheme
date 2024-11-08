@@ -1,4 +1,3 @@
-
 .btn {
   &:link,
   &:visited {
@@ -21,8 +20,7 @@
 
   &-button {
     background-image: linear-gradient(to right, $colorSecondary, $colorPrimary);
-    color: $colorwhite;
+    color: $colorwihte;
     box-shadow: 0 1rem 2rem rgba($colorBlack, 0.1);
   }
 }
-

@@ -4,8 +4,13 @@
   gap: 5rem;
   padding-top: 8rem;
 
+  &__info {
+    margin-top: -8em;
+  }
+
   &__icone {
-    stroke: $colorWihte;
+    stroke: $colorwihte;
+
     width: 1rem;
     height: 1rem;
     margin-bottom: -2px;
@@ -15,41 +20,37 @@
     display: inline-flex;
     align-items: baseline;
     gap: 4px;
-    background-image: linear-gradient(
-      to right,
-      $colorSecondary,
-      $colorTertiary,
-      $colorPrimary
-    );
-    padding: 0.2rem 1rem 0.2rem 1rem;
+
+    background-image: linear-gradient(to right, $colorSecondary, $colorPrimary);
+    padding: nth($spaces, 1) nth($spaces, 4) nth($spaces, 1) nth($spaces, 4);
     text-transform: uppercase;
-    font-weight: 700;
-    border-radius: 100px;
+    font-weight: $fontWeightBold;
+    border-radius: $roundedFull;
     cursor: pointer;
   }
 
   &__headline {
     font-size: 2.8rem;
-    font-weight: 700;
+    font-weight: $fontWeightBold;
     background-image: linear-gradient(to right, $colorEighth, $colorSeventh);
     -webkit-background-clip: text;
     color: transparent;
-    margin-top: 1rem;
+    margin-top: nth($spaces, 1);
   }
 
   &__paragraph {
-    font-size: 1.2rem;
+    font-size: $fontSizeXl;
   }
   &__performance {
     display: inline-flex;
-    gap: 0.5rem;
-    font-size: 1.2rem;
-    margin-top: 1rem;
+    gap: nth($spaces, 2);
+    font-size: $fontSizeXl;
+    margin-top: nth($spaces, 4);
   }
 
   &__feature {
     display: flex;
-    gap: 3rem;
+    gap: nth($spaces, 12);
   }
 
   &__feature-1 {
@@ -58,9 +59,9 @@
     color: transparent;
     font-weight: 900;
     padding: 0 2.5rem 0 2.5rem;
-    outline: 1px solid $colorWihte;
+    outline: 1px solid $colorwihte;
     outline-offset: 0.5rem;
-    border-radius: 100px;
+    border-radius: $roundedFull;
     font-size: 5rem;
   }
 
@@ -68,35 +69,35 @@
     background-image: linear-gradient(to right, $colorEighth, $colorSeventh);
     -webkit-background-clip: text;
     color: transparent;
-    font-size: 3rem;
+    font-size: $fontSize5Xl;
     padding: 1.8rem 1.5rem 1.8rem 1.5rem;
-    outline: 1px solid $colorWihte;
+    outline: 1px solid $colorwihte;
     outline-offset: 0.5rem;
-    border-radius: 100px;
+    border-radius: $roundedFull;
   }
 
   &__feature-3 {
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
+    margin-top: nth($spaces, 4);
     background-image: linear-gradient(to right, $colorEighth, $colorSeventh);
     -webkit-background-clip: text;
     color: transparent;
-    font-size: 1.2rem;
+    font-size: $fontSizeXl;
   }
 
   &_performance {
     text-align: center;
-    margin-top: 2rem;
+    margin-top: nth($spaces, 8);
     margin-bottom: -2rem;
   }
 
   &__icones {
     display: flex;
-    gap: 2rem;
+    gap: nth($spaces, 8);
     justify-content: center;
     align-items: center;
-    padding-bottom: 4rem;
+    padding-bottom: nth($spaces, 16);
   }
   &__icone-google {
     width: 10rem;

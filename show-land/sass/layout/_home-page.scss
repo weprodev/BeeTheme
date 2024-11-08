@@ -13,31 +13,35 @@
   &__headline_1 {
     text-align: center;
     font-size: 2.8rem;
-    font-weight: 700;
+    font-weight: $fontWeightBold;
     background-image: linear-gradient(to right, $colorEighth, $colorSeventh);
     -webkit-background-clip: text;
     color: transparent;
   }
   &__description {
     text-align: center;
-    font-size: 1rem;
-    padding-bottom: 4rem;
+    font-size: $fontSizeLg;
+  }
+  &__description_1 {
+    text-align: center;
+    font-size: $fontSizeLg;
+    padding-bottom: nth($spaces, 16);
   }
   &__imgs {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    row-gap: 3rem;
-    column-gap: 3rem;
+    row-gap: nth($spaces, 12);
+    column-gap: nth($spaces, 12);
   }
   &__img_boxs {
     outline: 0.1px solid $colorEleventh;
     outline-offset: 0.8rem;
-    border-radius: 0.2rem;
+    border-radius: $rounded;
   }
   &__number {
     text-align: center;
-    font-size: 1.6rem;
-    font-weight: 700;
-    padding: 1rem 0 1rem 0;
+    font-size: $fontSize2Xl;
+    font-weight: $fontWeightBold;
+    padding: nth($spaces, 4) 0 nth($spaces, 4) 0;
   }
 }

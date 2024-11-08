@@ -3,10 +3,10 @@ body {
   font-weight: $fontWeightRegular;
   /* font-size: 16px; */
   line-height: 1.7;
-  color: $colorwhite;
+  color: $colorwihte;
   font-size: 95%;
 }
-}
+
 .background-color {
   background-image: linear-gradient(to right, $colorSecondary, $colorPrimary);
   height: 100vh;
@@ -24,4 +24,3 @@ body {
   width: 75rem;
   margin: 0 auto;
 }
-
