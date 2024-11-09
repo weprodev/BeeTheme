@@ -1,0 +1,86 @@
+@use "sass:list";
+@use "sass:color";
+@import "../../../shared/scss/components/button";
+
+.trusted {
+  margin: 0 auto;
+
+  .trusted-main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: list.nth($spaces, 1) list.nth($spaces, 10);
+    padding: list.nth($spaces, 12) 0;
+
+    .trusted-header {
+      grid-area: 1 / 1 / 4 / 3;
+
+      .trusted-title {
+        font-size: $fontSize6Xl;
+        font-weight: $fontWeightBold;
+        margin-bottom: list.nth($spaces, 4);
+
+        span {
+          color: $secondaryColor;
+        }
+      }
+
+      .trusted-button {
+        @include button(
+          $bg: $primaryColor,
+          $border: none,
+          $radius: $roundedFull,
+          $padding: list.nth($spaces, 4),
+          $hoverBgColor: color.adjust($primaryColor, $lightness: 10%),
+          $transition: map-get($durations, 150)
+        );
+
+        .arrow-icon {
+          width: 1.2em;
+          height: 1.2em;
+          padding-left: list.nth($spaces, 1);
+          padding-top: list.nth($spaces, 1);
+          display: inline-block;
+        }
+      }
+    }
+
+    .trusted-cards {
+      font-size: $fontSize2Xl;
+      grid-area: 4 / 1 / 7 / 3;
+      margin-top: list.nth($spaces, 16);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: list.nth($spaces, 4);
+
+      .trusted-card {
+        padding: list.nth($spaces, 4);
+        border: 1px solid color.adjust($secondaryColor, $lightness: 30%);
+        border-radius: $rounded2Xl;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        span {
+          color: $secondaryColor;
+        }
+
+        a {
+          font-size: $fontSizeSm;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .trusted-img {
+      grid-area: 1 / 3 / 7 / 5;
+
+      img {
+        border-radius: $rounded2Xl;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
