@@ -176,7 +176,7 @@
 
   @include mini_mobile {
     text-align: center;
-    padding: 5rem nth($spaces, 2) 0rem nth($spaces, 2);
+    padding: 5rem #{nth($spaces, 2)} 0 #{nth($spaces, 2)};
     width: 100%;
     left: 0rem;
 
@@ -213,7 +213,7 @@
 
   @include mobile {
     text-align: center;
-    padding: 5rem nth($spaces, 2) 0rem nth($spaces, 2);
+    padding: 5rem #{nth($spaces, 2)} 0 #{nth($spaces, 2)};
     width: 100%;
     left: 0rem;
 
@@ -238,6 +238,86 @@
           .btn {
             left: -6rem;
           }
+        }
+      }
+    }
+  }
+
+  /*--------------------------------
+	*** FOR ANY DEVICE MAX SIZE UNTIL
+	**	MAX-WIDTH : 992px OR 62em
+	*/
+
+  @include tablet {
+    text-align: center;
+
+    .header__section {
+      display: grid;
+      place-items: center;
+      left: -0.6rem;
+      position: relative;
+
+      p {
+        width: 70%;
+        line-height: 1.7;
+        padding-top: nth($spaces, 4);
+        text-align: center;
+      }
+
+      .cta__button {
+        padding-top: nth($spaces, 4);
+      }
+    }
+
+    .card__section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: nth($spaces, 8);
+      left: -0.5rem;
+      position: relative;
+
+      .card {
+        &__text-box {
+          .btn {
+            left: -6rem;
+          }
+        }
+      }
+    }
+  }
+
+  /*--------------------------------
+	*** FOR ANY DEVICE MAX SIZE UNTIL
+	**	MAX-WIDTH : 1200px OR 75em
+	*/
+
+  @include laptop {
+    h2 {
+      text-align: center;
+    }
+    .header__section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+
+      .cta__button {
+        width: 100%;
+        text-align: center;
+        padding-top: nth($spaces, 4);
+        position: relative;
+      }
+    }
+
+    .card__section {
+      display: flex;
+      flex-wrap: wrap;
+
+      .card {
+        flex: 0 0 49%;
+
+        &:last-child {
+          margin-top: nth($spaces, 5);
         }
       }
     }
