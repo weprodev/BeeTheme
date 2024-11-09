@@ -193,6 +193,7 @@ a {
   background-color: #0dd47e;
 }
 
+
 .cta__button--button {
   width: 7rem;
   height: 3rem;
@@ -219,7 +220,8 @@ a {
   text-align: left;
   padding: 1em 2em;
   margin: 0 auto;
-  border-radius: 1.5em;
+  border-radius: 1em;
+
 }
 .hero .hero-content {
   z-index: 1;
@@ -232,7 +234,7 @@ a {
   color: rgba(255, 255, 255, 0.7);
 }
 .hero .hero-content .title {
-  font-size: 3.75em;
+  font-size: 3em;
   font-weight: 700;
   margin-bottom: 1em;
 }
@@ -275,7 +277,7 @@ a {
   background-color: rgba(255, 255, 255, 0.18);
   backdrop-filter: blur(5px);
   padding: 0.5em;
-  border-radius: 1em;
+  border-radius: 0.75em;
   transition: transform 0.3s ease;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -356,7 +358,7 @@ a {
   bottom: 0;
   right: 0;
   padding: 1.25em;
-  border-radius: 1.5em 0 0 0;
+  border-radius: 1em 0 0 0;
   max-width: 50%;
 }
 .hero .statistics .stat-item {
@@ -375,7 +377,8 @@ a {
   bottom: 0;
   background: rgba(0, 0, 0, 0.3);
   z-index: 0;
-  border-radius: 1.5em;
+  border-radius: 1em;
+
 }
 
 .customers {
@@ -419,7 +422,6 @@ a {
   background-color: #fff;
   border: 2px solid #f2f4f4;
 }
-
 
 .features {
   background-color: rgb(223.2735849057, 225.5, 227.7264150943);
@@ -558,5 +560,4 @@ a {
   width: 100%;
   height: 100%;
 }
-
 /*# sourceMappingURL=style.css.map */
