@@ -424,7 +424,7 @@ body li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 1.25em;
 }
 .header__main nav ul {
   padding: 0;
@@ -433,7 +433,7 @@ body li {
   list-style: none;
 }
 .header__main nav ul li {
-  margin: 0 15px;
+  margin: 0 0.75em;
 }
 .header__hidden {
   position: fixed;
@@ -445,7 +445,7 @@ body li {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   background-color: rgba(255, 255, 255, 0.2);
-  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: -10px 0 0.75em rgba(0, 0, 0, 0.1);
   text-align: center;
   display: none;
 }
