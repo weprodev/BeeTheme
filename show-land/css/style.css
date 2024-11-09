@@ -2,6 +2,24 @@
   #ABSTRACTS
 \*------------------------------------*/
 /*------------------------------------*\
+  #FONT
+\*------------------------------------*/
+/*------------------------------------*\
+  #BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+  #SPACES (padding & margin & gap) 
+\*------------------------------------*/
+/*------------------------------------*\
+  #TRANSITION DURATION
+\*------------------------------------*/
+/*------------------------------------*\
+  #BOX SHADOW
+\*------------------------------------*/
+/*------------------------------------*\
+  #BORDER RADIUS
+\*------------------------------------*/
+/*------------------------------------*\
   #COLOR
 \*------------------------------------*/
 /*------------------------------------*\
@@ -39,24 +57,6 @@ body {
 }
 
 /*------------------------------------*\
-  #FONT
-\*------------------------------------*/
-/*------------------------------------*\
-  #BREAKPOINTS
-\*------------------------------------*/
-/*------------------------------------*\
-  #SPACES (padding & margin & gap) 
-\*------------------------------------*/
-/*------------------------------------*\
-  #TRANSITION DURATION
-\*------------------------------------*/
-/*------------------------------------*\
-  #BOX SHADOW
-\*------------------------------------*/
-/*------------------------------------*\
-  #BORDER RADIUS
-\*------------------------------------*/
-/*------------------------------------*\
   #LAYOUTS
 \*------------------------------------*/
 .container .header {
@@ -65,19 +65,20 @@ body {
 }
 .container .logo {
   padding-top: 0.8rem;
-  font-size: 2rem;
+  font-size: 2.25em;
   font-weight: 700;
 }
 .container .main-nav__list {
   display: flex;
-  padding-top: 1rem;
-  gap: 1.5rem;
+  padding-top: 1em;
+  gap: 1.5em;
   list-style: none;
   align-items: center;
 }
-.container .main-nav__link:link, .container .main-nav__link:visited {
+.container .main-nav__link:link,
+.container .main-nav__link:visited {
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1em;
   color: #fff;
   text-transform: uppercase;
   font-weight: 700;
@@ -347,7 +348,8 @@ body {
   padding-top: 5rem;
   padding-bottom: 8rem;
 }
-.features-btn:link, .features-btn:visited {
+.features-btn:link,
+.features-btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 0.2rem 0.8rem;
@@ -417,7 +419,7 @@ body {
 .header-primary__sub {
   display: block;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 1em;
 }
 .header-primary__main {
   display: block;
@@ -426,31 +428,31 @@ body {
 }
 .header-primary_main__1 {
   display: block;
-  font-size: 5rem;
+  font-size: 5em;
 }
 
 .text-img {
   outline-offset: 2rem;
-  outline: 2px solid #777;
-  border-radius: 10px;
+  outline: 0.2rem solid #777;
+  border-radius: 1em;
 }
 .text-img__1 {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 30rem;
-  gap: 1rem;
+  gap: 1em;
 }
 .text-img__2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 1rem;
-  gap: 1rem;
+  margin-top: 1em;
+  gap: 1em;
 }
 
 .text-img__box {
-  border-radius: 9px;
+  border-radius: 1em;
 }
 
 .border__1 {
@@ -610,7 +612,8 @@ body {
   border-radius: 1em;
   margin-bottom: -0.1rem;
 }
-.footer-btn:link, .footer-btn:visited {
+.footer-btn:link,
+.footer-btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 0.5em 2em;
@@ -618,11 +621,13 @@ body {
   border-radius: 0.5em;
   transition: all 0.2s;
 }
-.footer-btn:link:hover, .footer-btn:visited:hover {
+.footer-btn:link:hover,
+.footer-btn:visited:hover {
   transform: translateY(-0.3rem);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
-.footer-btn:link:active, .footer-btn:visited:active {
+.footer-btn:link:active,
+.footer-btn:visited:active {
   transform: translateY(-0.1rem);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
@@ -666,12 +671,13 @@ a {
 /*------------------------------------*\
   #COMPONENTS
 \*------------------------------------*/
-.btn:link, .btn:visited {
+.btn:link,
+.btn:visited {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 1rem 2.4rem;
+  padding: 1em 2.5em;
   display: inline-block;
-  border-radius: 8px;
+  border-radius: 1em;
   transition: all 0.2s;
 }
 .btn:hover {
@@ -691,11 +697,6 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.btn-cta__1 {
-  border-radius: 10rem !important;
-  padding: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

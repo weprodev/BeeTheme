@@ -1,9 +1,9 @@
 body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
+  font-family: $primaryFontFamily;
+  font-weight: $fontWeightRegular;
   /* font-size: 16px; */
   line-height: 1.7;
-  color: $colorWhite;
+  color: $colorwhite;
   font-size: 95%;
 }
 .background-color {

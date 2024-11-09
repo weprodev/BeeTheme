@@ -6,25 +6,26 @@
 
   .logo {
     padding-top: 0.8rem;
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: $fontSize4Xl;
+    font-weight: $fontWeightBold;
   }
 
   .main-nav {
     &__list {
       display: flex;
-      padding-top: 1rem;
-      gap: 1.5rem;
+      padding-top: $fontSizeBase;
+      gap: $fontSize2Xl;
       list-style: none;
       align-items: center;
     }
     &__link:link,
     &__link:visited {
       text-decoration: none;
-      font-size: 1rem;
-      color: $colorWhite;
+
+      font-size: $fontSizeBase;
+      color: $colorwhite;
       text-transform: uppercase;
-      font-weight: 700;
+      font-weight: $fontWeightBold;
     }
   }
 }

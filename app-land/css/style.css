@@ -124,17 +124,10 @@ a {
 
 /* ~~~~~~~~~~~~~~🟢 COMPONENTS 🟢~~~~~~~~~~~~~~ */
 /* Reusable components and UI elements */
-.cta__button--button {
-  width: 7rem;
-  height: 3rem;
-  border: none;
-  border-radius: 2rem;
-  cursor: pointer;
-}
-.cta__button--button:hover {
-  transition: 0.3s ease-in-out;
-}
-
+/*=========================================================
+*********   Generic Button Component
+*******  
+*/
 /* ~~~~~~~~~~~~~~⚙️ LAYOUT ⚙️~~~~~~~~~~~~~~ */
 /* Grid systems, structure, and layout styles */
 /*=======================
@@ -360,25 +353,30 @@ a {
 ***         
 */
 /*========================================================================================*\
-*----------------------------               COLORE              ----------------------------        
+*----------------------------               COLORS              ----------------------------        
 \*========================================================================================*/
 /*--------------------------------
 *** FLAT UI COLORS 
 **  flatuicolors.com/palette/defo
 */
 /*========================================================================================*\
+*----------------------------               SHADOW              ----------------------------        
+\*========================================================================================*/
+/*========================================================================================*\
 *----------------------------               FONTS              ----------------------------        
 \*========================================================================================*/
-/*--------------------------------
-*** FONTS 
-**  
-*/
 /*--------------------------------
 ***  SET DIRECTION BEFORE ANYTHING
 **   
 */
 body {
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+body * {
+  padding: 0;
+  margin: 0;
+  font: revert;
 }
 body a {
   text-decoration: none;
@@ -386,15 +384,36 @@ body a {
 }
 body a:hover {
   transition: 0.5s;
-  color: rgb(128, 128, 128);
+  color: rgb(170, 170, 170);
 }
 body li {
   list-style-type: none;
 }
 
 /*--------------------------------
-***  
-**   HEADER
+***  SET DIRECTION BEFORE ANYTHING
+**   
+*/
+.cta__button--button {
+  width: 7rem;
+  height: 3rem;
+  background: rgb(84, 234, 84);
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+.cta__button--button:hover {
+  transition: 0.3s ease-in-out;
+  background: rgb(71, 198, 71);
+}
+
+/*--------------------------------
+***  IMPORT GENERAL AND IMPORTANT
+**   MIXINS
+*/
+/*--------------------------------
+***  LAYOUT
+**   HEADER, HERO SECTION, EXPLORE HUB, SMART SOLUTIONS
 */
 .header .hide-on-laptop {
   display: none;
@@ -460,6 +479,573 @@ body li {
   }
   .header .hide-on-mobile {
     display: none;
+  }
+}
+
+.hero__section {
+  border-radius: 1.5em;
+  position: relative;
+  left: 1.2rem;
+  width: 97%;
+  height: 50rem;
+  /*--------------------------------
+
+  *** FOR MINI MOBILE
+  ** MAX : 400PX / 25em
+  */
+}
+.hero__section--img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2rem;
+}
+.hero__section--text-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 1.5em;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  width: 28rem;
+  left: 8rem;
+  height: 24rem;
+  top: 10rem;
+}
+.hero__section--text-overlay .container {
+  width: 95%;
+  top: 0rem;
+  position: relative;
+  left: 0.5rem;
+  height: 100%;
+}
+.hero__section--text-overlay .container h1 {
+  text-align: center;
+  padding-top: 1em;
+  font-size: 2.25em;
+  font-weight: 700;
+}
+.hero__section--text-overlay .container p {
+  padding-top: 1em;
+  line-height: 1.4;
+}
+.hero__section--text-overlay .container .cta__button {
+  position: relative;
+  text-align: center;
+  display: flex;
+  width: 27rem;
+  gap: 2em;
+  left: 0rem;
+  padding-top: 1em;
+  text-align: center;
+  place-content: center;
+}
+.hero__section--text-overlay .container .cta__button--button {
+  width: 9rem;
+  border: none;
+  border-radius: 0.5rem;
+  height: 3rem;
+  font-size: 1em;
+}
+.hero__section--text-overlay .container .cta__button--button-more {
+  background-color: rgb(170, 170, 170);
+  width: 9rem;
+  border: none;
+  border-radius: 0.5rem;
+  height: 3rem;
+  cursor: pointer;
+  font-size: 1em;
+}
+.hero__section--text-overlay .container .cta__button--button-more:hover {
+  transition: 0.3s ease-in-out;
+  background-color: rgb(139, 135, 135);
+}
+.hero__section--text-overlay .container .stats-container {
+  position: relative;
+  padding-top: 1em;
+  display: flex;
+  width: 27rem;
+  justify-content: center;
+  gap: 2em;
+}
+@media screen and (max-width: 40em) {
+  .hero__section {
+    overflow-x: hidden;
+    left: 0.5rem;
+  }
+  .hero__section .hero__section--text-overlay {
+    font-size: 0.625rem;
+    height: 100%;
+    width: 100%;
+    left: 0rem;
+    top: 0;
+  }
+  .hero__section .hero__section--text-overlay .container {
+    top: 10rem;
+    text-align: center;
+    left: 0.7rem;
+    height: 20rem;
+  }
+  .hero__section .hero__section--text-overlay .container p {
+    width: 76%;
+    left: 2rem;
+    position: relative;
+    font-size: 0.875em;
+    font-weight: 700;
+  }
+  .hero__section .hero__section--text-overlay .container .cta__button {
+    position: relative;
+    text-align: center;
+    display: flex;
+    width: 22rem;
+    gap: 2em;
+    left: 1rem;
+    padding-top: 1em;
+    text-align: center;
+    place-content: center;
+  }
+  .hero__section .hero__section--text-overlay .container .stats-container {
+    font-size: 1em;
+    left: -3rem;
+  }
+  .hero__section .hero__section--text-overlay .container .stats-container .stat-item p {
+    width: 100%;
+  }
+}
+
+.explore__hub {
+  position: relative;
+  padding-top: 5rem;
+  width: 97%;
+  left: 1rem;
+  /*--------------------------------
+  *** FOR MINI MOBILE
+  **	MAX : 400PX / 25em
+  */
+  /*--------------------------------
+  *** FOR MOBILE
+  **	MAX : 640PX / 40em
+  */
+  /*--------------------------------
+  *** FOR ANY DEVICE MAX SIZE UNTIL
+  **	MAX-WIDTH : 992px OR 62em
+  */
+  /*--------------------------------
+  *** FOR ANY DEVICE MAX SIZE UNTIL
+  **	MAX-WIDTH : 1200px OR 75em
+  */
+}
+.explore__hub h2 {
+  font-size: 3em;
+  font-weight: 600;
+}
+.explore__hub .header__section {
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+}
+.explore__hub .header__section p {
+  width: 24rem;
+  line-height: 1.4;
+}
+.explore__hub .header__section .cta__button {
+  width: 24rem;
+}
+.explore__hub .header__section .cta__button--button {
+  width: 15rem;
+  font-size: 1.125em;
+  background-color: rgba(229, 229, 229, 0.81);
+  border-radius: 1em;
+}
+.explore__hub .header__section .cta__button--button:hover {
+  background-color: rgba(193, 193, 193, 0.81);
+}
+.explore__hub .card__section {
+  padding-top: 2em;
+  justify-content: space-between;
+  display: flex;
+}
+.explore__hub .card__section .card {
+  background-color: #f1f1f1;
+  border-radius: 2rem;
+  width: 24rem;
+}
+.explore__hub .card__section .card__img img {
+  border-top-right-radius: 2rem;
+  border-top-left-radius: 2rem;
+  object-fit: cover;
+  height: 20rem;
+  width: 100%;
+}
+.explore__hub .card__section .card__text-box {
+  padding: 0.5em;
+}
+.explore__hub .card__section .card__text-box p {
+  font-size: 1.5em;
+}
+.explore__hub .card__section .card__text-box .btn {
+  background: rgba(229, 229, 229, 0.81);
+  border-radius: 0.375em;
+  font-size: 0.875em;
+  position: relative;
+  cursor: pointer;
+  height: 1.5rem;
+  border: none;
+  width: 6rem;
+  top: -22rem;
+  left: 1rem;
+}
+.explore__hub .card__section .card__text-box .btn:hover {
+  background: rgba(193, 193, 193, 0.81);
+  transition: 0.5s;
+}
+@media screen and (max-width: 25em) {
+  .explore__hub {
+    text-align: center;
+    padding: 5rem 0.5em 0 0.5em;
+    width: 100%;
+    left: 0rem;
+  }
+  .explore__hub .header__section {
+    display: grid;
+    place-items: center;
+  }
+  .explore__hub .header__section p {
+    max-width: 100%;
+    width: 100%;
+    line-height: 1.7;
+  }
+  .explore__hub .card__section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .explore__hub .card__section .card {
+    margin-top: 1em;
+  }
+  .explore__hub .card__section .card__text-box .btn {
+    left: -6rem;
+  }
+}
+@media screen and (max-width: 40em) {
+  .explore__hub {
+    text-align: center;
+    padding: 5rem 0.5em 0 0.5em;
+    width: 100%;
+    left: 0rem;
+  }
+  .explore__hub .header__section {
+    display: grid;
+    place-items: center;
+  }
+  .explore__hub .header__section p {
+    max-width: 100%;
+    width: 100%;
+    line-height: 1.7;
+  }
+  .explore__hub .card__section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .explore__hub .card__section .card {
+    margin-top: 1em;
+  }
+  .explore__hub .card__section .card__text-box .btn {
+    left: -6rem;
+  }
+}
+@media screen and (max-width: 62em) {
+  .explore__hub {
+    text-align: center;
+  }
+  .explore__hub .header__section {
+    display: grid;
+    place-items: center;
+    left: -0.6rem;
+    position: relative;
+  }
+  .explore__hub .header__section p {
+    width: 70%;
+    line-height: 1.7;
+    padding-top: 1em;
+    text-align: center;
+  }
+  .explore__hub .header__section .cta__button {
+    padding-top: 1em;
+  }
+  .explore__hub .card__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    left: -0.5rem;
+    position: relative;
+  }
+  .explore__hub .card__section .card__text-box .btn {
+    left: -6rem;
+  }
+}
+@media screen and (max-width: 75em) {
+  .explore__hub h2 {
+    text-align: center;
+  }
+  .explore__hub .header__section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .explore__hub .header__section .cta__button {
+    width: 100%;
+    text-align: center;
+    padding-top: 1em;
+    position: relative;
+  }
+  .explore__hub .card__section {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .explore__hub .card__section .card {
+    flex: 0 0 49%;
+  }
+  .explore__hub .card__section .card:last-child {
+    margin-top: 1.25em;
+  }
+}
+
+.smart__solutions {
+  padding-top: 5rem;
+  /*--------------------------------
+  *** FOR ANY DEVICE MAX SIZE UNTIL
+  ** MAX-WIDTH : 992px OR 62em
+  */
+  /*--------------------------------
+
+  *** FOR MOBILE
+  ** MAX : 640PX / 40em
+  */
+  /*--------------------------------
+
+  *** FOR MINI MOBILE
+  ** MAX : 400PX / 25em
+  */
+}
+.smart__solutions .container {
+  background-color: rgb(244, 245, 246);
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.smart__solutions--img-box {
+  top: 6rem;
+  position: relative;
+  width: 27rem;
+}
+.smart__solutions--information-box {
+  padding-top: 2rem;
+}
+.smart__solutions--information-box .menuItem {
+  display: flex;
+  align-items: center;
+  width: 20rem;
+  border-radius: 1em;
+  background: rgb(255, 255, 255);
+  height: 4rem;
+  padding: 0.75em;
+  margin-bottom: 1em;
+}
+.smart__solutions--information-box .menuItem span {
+  left: 1rem;
+  position: relative;
+  font-size: 1.125em;
+}
+.smart__solutions--information-box .selected {
+  background-color: rgb(32, 34, 35);
+  color: rgb(255, 255, 255);
+  height: auto;
+  display: block;
+}
+.smart__solutions--information-box .selected p {
+  line-height: 1.6;
+  left: 1rem;
+  position: relative;
+  width: 96%;
+}
+@media screen and (max-width: 62em) {
+  .smart__solutions .container .smart__solutions--img-box {
+    display: none;
+  }
+}
+@media screen and (min-width: 31.25em) and (max-width: 47.9375em) {
+  .smart__solutions .container .smart__solutions--img-box {
+    display: none;
+  }
+}
+@media screen and (max-width: 40em) {
+  .smart__solutions .container .smart__solutions--img-box {
+    display: none;
+  }
+}
+
+.customer__reviews {
+  padding-top: 5rem;
+  /*--------------------------------
+  *** FOR ANY DEVICE MAX SIZE UNTIL
+  **	MAX-WIDTH : 1024px OR 64em
+  */
+  /*--------------------------------
+  *** FOR ANY DEVICE MAX SIZE UNTIL
+  ** MAX-WIDTH : 992px OR 62em
+  */
+  /*--------------------------------
+  *** FOR RETINA MOBILE AND LANSCAPE
+  ** MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
+  */
+  /*--------------------------------
+  *** FOR MOBILE
+  ** MAX : 640PX / 40em
+  */
+  /*--------------------------------
+  *** FOR MINI MOBILE
+  ** MAX : 400PX / 25em
+  */
+}
+.customer__reviews .moonlitLavender {
+  background-color: rgb(204, 186, 254);
+}
+.customer__reviews .skyBreeze {
+  background-color: rgb(165, 228, 249);
+}
+.customer__reviews .sringGreen {
+  background-color: rgb(187, 249, 158);
+}
+.customer__reviews--header-section {
+  display: flex;
+  justify-content: space-evenly;
+  line-height: 1.4;
+}
+.customer__reviews--header-section p {
+  width: 24rem;
+}
+.customer__reviews--header-section h1 {
+  font-size: 1.875em;
+  font-weight: 600;
+  width: 24rem;
+}
+.customer__reviews--card-section {
+  padding-top: 2em;
+  display: flex;
+  justify-content: space-evenly;
+}
+.customer__reviews--card-section .card {
+  width: 24rem;
+  border-radius: 2rem;
+  border: none;
+  height: 21rem;
+}
+.customer__reviews--card-section .card .card__text-box {
+  width: 95%;
+  left: 0.5rem;
+  position: relative;
+  display: grid;
+  top: 0.5rem;
+  height: 20rem;
+}
+.customer__reviews--card-section .card .card__text-box .paragraph {
+  padding: 0.25em;
+}
+.customer__reviews--card-section .card .card__text-box .paragraph p {
+  font-size: 1.25em;
+  line-height: 1.4;
+}
+.customer__reviews--card-section .information-box {
+  display: flex;
+  gap: 1em;
+  top: 2rem;
+  position: relative;
+  height: 5rem;
+}
+.customer__reviews--card-section .information-box img {
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  top: 0.5rem;
+  position: relative;
+  object-fit: cover;
+}
+.customer__reviews--card-section .information-box .about {
+  align-items: center;
+  display: grid;
+  gap: 1em;
+  height: 4rem;
+  top: 0.5rem;
+  position: relative;
+}
+@media screen and (max-width: 64em) {
+  .customer__reviews--header-section {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+    place-content: center;
+  }
+  .customer__reviews--header-section h1 {
+    text-align: center;
+  }
+  .customer__reviews--header-section p {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .customer__reviews--card-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+  }
+  .customer__reviews--card-section .card {
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 62em) {
+  .customer__reviews--header-section {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+    place-content: center;
+  }
+  .customer__reviews--header-section h1 {
+    text-align: center;
+  }
+  .customer__reviews--header-section p {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .customer__reviews--card-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+  }
+  .customer__reviews--card-section .card {
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 64em) {
+  .customer__reviews--header-section h1 {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 40em) {
+  .customer__reviews--header-section {
+    display: grid;
+    text-align: center;
+    gap: 1em;
+    align-items: center;
+  }
+  .customer__reviews--header-section p {
+    width: 24rem;
+  }
+  .customer__reviews--card-section {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 

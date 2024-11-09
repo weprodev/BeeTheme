@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @use "sass:color";
 
 .cta__button {
@@ -44,3 +45,37 @@
     background-color: $hoverBgColor;
   }
 }
+=======
+@use "sass:color";
+
+/*=========================================================
+*********   Generic Button Component
+*******  
+*/
+@mixin button(
+  $bg: transparent,
+  $color: #fff,
+  $radius: 0,
+  $border: none,
+  $padding: 1em 2em,
+  $fontSize: 1em,
+  $fontWeight: 400,
+  $transition: none,
+  $hoverBgColor: color.adjust($bg, $lightness: -10%)
+) {
+  background: $bg;
+  color: $color;
+  border-radius: $radius;
+  border: $border;
+  padding: $padding;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  transition: $transition;
+  text-align: center;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $hoverBgColor;
+  }
+}
+>>>>>>> develop
