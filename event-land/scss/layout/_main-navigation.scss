@@ -8,7 +8,7 @@
   border-bottom: $primaryBorder;
   font-weight: $fontWeightSemibold;
   color: $tertiaryColor;
-  @include mini_laptop {
+  @include laptop {
     padding: list.nth($spaces, 4);
     justify-content: space-between;
     font-size: $fontSizeXl;
@@ -23,7 +23,7 @@
     align-items: center;
     justify-content: space-between;
     flex-grow: 1;
-    @include mini_laptop {
+    @include laptop {
       display: none;
       justify-content: flex-start;
       position: fixed;
@@ -54,7 +54,7 @@
   &__menu {
     display: flex;
     gap: list.nth($spaces, 8);
-    @include mini_laptop {
+    @include laptop {
       flex-direction: column;
     }
 
@@ -74,7 +74,7 @@
     background-color: transparent;
     border: none;
     font-size: $fontSize4Xl;
-    @include mini_laptop {
+    @include laptop {
       display: flex;
     }
   }
