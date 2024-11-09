@@ -4,11 +4,14 @@
 @import "../../shared/scss/abstracts/variables";
 @import "variables";
 @import "typography";
+
 /*------------------------------------*\
   #LAYOUTS
 \*------------------------------------*/
 @import "layout/top-nav";
+@import "layout/super-fast";
 @import "layout/hero";
+
 /*------------------------------------*\
   #BASE
 \*------------------------------------*/
@@ -17,5 +20,5 @@
 /*------------------------------------*\
   #COMPONENTS
 \*------------------------------------*/
-@import "components/_button.scss";
+@import "components/button";
 
