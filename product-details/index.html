@@ -129,4 +129,27 @@
     <section></section>
     <!--footer-->
   </body>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/tiny-slider.js"></script>
+  <script src="js/search-box.js"></script>
+  <script src="js/slider.js"></script>
+  <script>
+    window.onscroll = function () {
+      myFunction();
+    };
+
+    var navbar = document.getElementById("header");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        navbar.classList.add("sticky");
+        $(".content").css("padding-top", "5.5em");
+      } else {
+        navbar.classList.remove("sticky");
+        $(".content").css("padding-top", "0em");
+      }
+    }
+  </script>
 </html>

@@ -4,7 +4,7 @@
 .top-bar {
   width: 100vw;
   background: $white;
-  color: $white;
+  // color: $white;
   position: relative;
   padding: 0.5em 0em;
 
@@ -213,7 +213,7 @@
       .search-box {
         margin-right: 1em;
         background: $mainColorWeprodev;
-        border-radius: 100%;
+        border-radius: 10em;
         padding: 4px;
 
       }
@@ -268,7 +268,7 @@
 
       .click-search-btn {
         background: white;
-        color: $white;
+        color: $black;
 
       }
 

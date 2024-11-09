@@ -1030,7 +1030,6 @@ a {
 .top-bar {
   width: 100vw;
   background: rgb(255, 255, 255);
-  color: rgb(255, 255, 255);
   position: relative;
   padding: 0.5em 0em;
 }
@@ -1191,7 +1190,7 @@ a {
 .top-bar .top-bar-contant .section-login .search-box {
   margin-right: 1em;
   background: rgb(255, 94, 87);
-  border-radius: 100%;
+  border-radius: 10em;
   padding: 4px;
 }
 .top-bar .top-bar-contant .section-login .search-txt {
@@ -1239,7 +1238,7 @@ a {
 }
 .top-bar .top-bar-contant .section-login .click-search-btn {
   background: white;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
 .top-bar .top-bar-contant .section-login .section-button button {
   background-color: rgb(255, 255, 255);
@@ -1358,7 +1357,7 @@ a {
   .nav-bar > ul li .icon-circle-up {
     position: absolute;
     top: 1.3em;
-    right: 1.2em;
+    right: 2em;
     font-size: 1.7em;
     margin-top: 0em;
     display: block;
@@ -1399,7 +1398,7 @@ a {
   width: 100%;
   display: block;
   line-height: 5.5em;
-  padding: 0em 1em 0em 0.5em;
+  padding: 0em 2em;
 }
 .nav-bar > ul li ul {
   background-color: rgb(255, 255, 255);
