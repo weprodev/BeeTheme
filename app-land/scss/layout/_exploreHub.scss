@@ -72,7 +72,7 @@
           cursor: pointer;
           height: 1.5rem;
           border: none;
-          top: -21rem;
+          top: -22rem;
           width: 6rem;
           top: -22rem;
           left: 1rem;
@@ -86,8 +86,100 @@
     }
   }
 
-  /* mobile */
-  @media (max-width: 480px) {
+  // RESPONSIVE SECTION
+
+  /*--------------------------------
+	*** FOR MINI MOBILE
+	**	MAX : 400PX / 25em
+	*/
+
+  @include mini_mobile {
+    text-align: center;
+    padding: 5rem #{nth($spaces, 2)} 0 #{nth($spaces, 2)};
+    width: 100%;
+    left: 0rem;
+
+    .header__section {
+      display: grid;
+      place-items: center;
+
+      p {
+        max-width: 100%;
+        width: 100%;
+        line-height: 1.7;
+      }
+    }
+
+    .card__section {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      .card {
+        margin-top: nth($spaces, 4);
+        &__text-box {
+          .btn {
+            left: -6rem;
+          }
+        }
+      }
+    }
+  }
+
+  /*--------------------------------
+	*** FOR MOBILE
+	**	MAX : 640PX / 40em
+	*/
+
+  @include mobile {
+    text-align: center;
+    padding: 5rem #{nth($spaces, 2)} 0 #{nth($spaces, 2)};
+    width: 100%;
+    left: 0rem;
+
+    .header__section {
+      display: grid;
+      place-items: center;
+
+      p {
+        max-width: 100%;
+        width: 100%;
+        line-height: 1.7;
+      }
+    }
+
+    .card__section {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      .card {
+        margin-top: nth($spaces, 4);
+
+        &__text-box {
+          .btn {
+            left: -6rem;
+          }
+        }
+      }
+    }
+  }
+
+  /*--------------------------------
+<<<<<<< HEAD
+	*** FOR RETINA MOBILE AND LANSCAPE
+	**	MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
+	*/
+
+  @include retinaMobile {
+  }
+
+  /*--------------------------------
+=======
+>>>>>>> develop
+	*** FOR ANY DEVICE MAX SIZE UNTIL
+	**	MAX-WIDTH : 992px OR 62em
+	*/
+
+  @include tablet {
     text-align: center;
 
     .header__section {
@@ -97,7 +189,14 @@
       position: relative;
 
       p {
-        max-width: 100%;
+        width: 70%;
+        line-height: 1.7;
+        padding-top: nth($spaces, 4);
+        text-align: center;
+      }
+
+      .cta__button {
+        padding-top: nth($spaces, 4);
       }
     }
 
@@ -119,11 +218,39 @@
     }
   }
 
-  /* tablet */
-  @media (min-width: 481px) and (max-width: 768px) {
-  }
+  /*--------------------------------
+	*** FOR ANY DEVICE MAX SIZE UNTIL
+	**	MAX-WIDTH : 1200px OR 75em
+	*/
 
-  /* laptop */
-  @media (min-width: 769px) and (max-width: 1024px) {
+  @include laptop {
+    h2 {
+      text-align: center;
+    }
+    .header__section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+
+      .cta__button {
+        width: 100%;
+        text-align: center;
+        padding-top: nth($spaces, 4);
+        position: relative;
+      }
+    }
+
+    .card__section {
+      display: flex;
+      flex-wrap: wrap;
+
+      .card {
+        flex: 0 0 49%;
+
+        &:last-child {
+          margin-top: nth($spaces, 5);
+        }
+      }
+    }
   }
 }
