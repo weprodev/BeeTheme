@@ -360,6 +360,9 @@ a {
 **  flatuicolors.com/palette/defo
 */
 /*========================================================================================*\
+*----------------------------               SHADOW              ----------------------------        
+\*========================================================================================*/
+/*========================================================================================*\
 *----------------------------               FONTS              ----------------------------        
 \*========================================================================================*/
 /*--------------------------------
@@ -831,10 +834,10 @@ body li {
   display: flex;
   justify-content: space-evenly;
 }
-.smart__solutions--img-box .smart-solutions-img {
+.smart__solutions--img-box {
   top: 6rem;
-  width: 27rem;
   position: relative;
+  width: 27rem;
 }
 .smart__solutions--information-box {
   padding-top: 2rem;
@@ -879,6 +882,170 @@ body li {
 @media screen and (max-width: 40em) {
   .smart__solutions .container .smart__solutions--img-box {
     display: none;
+  }
+}
+
+.customer__reviews {
+  padding-top: 5rem;
+  /*--------------------------------
+  *** FOR ANY DEVICE MAX SIZE UNTIL
+  **	MAX-WIDTH : 1024px OR 64em
+  */
+  /*--------------------------------
+  *** FOR ANY DEVICE MAX SIZE UNTIL
+  ** MAX-WIDTH : 992px OR 62em
+  */
+  /*--------------------------------
+  *** FOR RETINA MOBILE AND LANSCAPE
+  ** MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
+  */
+  /*--------------------------------
+  *** FOR MOBILE
+  ** MAX : 640PX / 40em
+  */
+  /*--------------------------------
+  *** FOR MINI MOBILE
+  ** MAX : 400PX / 25em
+  */
+}
+.customer__reviews .moonlitLavender {
+  background-color: rgb(204, 186, 254);
+}
+.customer__reviews .skyBreeze {
+  background-color: rgb(165, 228, 249);
+}
+.customer__reviews .sringGreen {
+  background-color: rgb(187, 249, 158);
+}
+.customer__reviews--header-section {
+  display: flex;
+  justify-content: space-evenly;
+  line-height: 1.4;
+}
+.customer__reviews--header-section p {
+  width: 24rem;
+}
+.customer__reviews--header-section h1 {
+  font-size: 1.875em;
+  font-weight: 600;
+  width: 24rem;
+}
+.customer__reviews--card-section {
+  padding-top: 2em;
+  display: flex;
+  justify-content: space-evenly;
+}
+.customer__reviews--card-section .card {
+  width: 24rem;
+  border-radius: 2rem;
+  border: none;
+  height: 21rem;
+}
+.customer__reviews--card-section .card .card__text-box {
+  width: 95%;
+  left: 0.5rem;
+  position: relative;
+  display: grid;
+  top: 0.5rem;
+  height: 20rem;
+}
+.customer__reviews--card-section .card .card__text-box .paragraph {
+  padding: 0.25em;
+}
+.customer__reviews--card-section .card .card__text-box .paragraph p {
+  font-size: 1.25em;
+  line-height: 1.4;
+}
+.customer__reviews--card-section .information-box {
+  display: flex;
+  gap: 1em;
+  top: 2rem;
+  position: relative;
+  height: 5rem;
+}
+.customer__reviews--card-section .information-box img {
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  top: 0.5rem;
+  position: relative;
+  object-fit: cover;
+}
+.customer__reviews--card-section .information-box .about {
+  align-items: center;
+  display: grid;
+  gap: 1em;
+  height: 4rem;
+  top: 0.5rem;
+  position: relative;
+}
+@media screen and (max-width: 64em) {
+  .customer__reviews--header-section {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+    place-content: center;
+  }
+  .customer__reviews--header-section h1 {
+    text-align: center;
+  }
+  .customer__reviews--header-section p {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .customer__reviews--card-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+  }
+  .customer__reviews--card-section .card {
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 62em) {
+  .customer__reviews--header-section {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+    place-content: center;
+  }
+  .customer__reviews--header-section h1 {
+    text-align: center;
+  }
+  .customer__reviews--header-section p {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .customer__reviews--card-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+  }
+  .customer__reviews--card-section .card {
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 64em) {
+  .customer__reviews--header-section h1 {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 40em) {
+  .customer__reviews--header-section {
+    display: grid;
+    text-align: center;
+    gap: 1em;
+    align-items: center;
+  }
+  .customer__reviews--header-section p {
+    width: 24rem;
+  }
+  .customer__reviews--card-section {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
