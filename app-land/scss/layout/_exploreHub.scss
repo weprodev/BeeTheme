@@ -1,0 +1,244 @@
+@use "sass:list";
+
+.explore__hub {
+  position: relative;
+  padding-top: 5rem;
+  width: 97%;
+  left: 1rem;
+
+  h2 {
+    font-size: $fontSize5Xl;
+    font-weight: $fontWeightSemibold;
+  }
+
+  .header__section {
+    display: flex;
+    justify-content: space-between;
+    padding: list.nth($spaces, 8);
+
+    p {
+      width: 24rem;
+      line-height: 1.4;
+    }
+
+    .cta__button {
+      width: 24rem;
+
+      &--button {
+        width: 15rem;
+        font-size: $fontSizeLg;
+        background-color: rgba(229, 229, 229, 0.81);
+        border-radius: $rounded2Xl;
+
+        &:hover {
+          background-color: rgba(193, 193, 193, 0.81);
+        }
+      }
+    }
+  }
+
+  .card__section {
+    padding-top: list.nth($spaces, 8);
+    justify-content: space-between;
+    display: flex;
+
+    .card {
+      background-color: #f1f1f1;
+      border-radius: $rounded4Xl;
+      width: 24rem;
+
+      &__img {
+        img {
+          border-top-right-radius: $rounded4Xl;
+          border-top-left-radius: $rounded4Xl;
+          object-fit: cover;
+          height: 20rem;
+          width: 100%;
+        }
+      }
+
+      &__text-box {
+        padding: list.nth($spaces, 2);
+
+        p {
+          font-size: $fontSize2Xl;
+        }
+
+        .btn {
+          background: rgba(229, 229, 229, 0.81);
+          border-radius: $roundedMd;
+          font-size: $fontSizeSm;
+          position: relative;
+          cursor: pointer;
+          height: 1.5rem;
+          border: none;
+          width: 6rem;
+          top: -22rem;
+          left: 1rem;
+
+          &:hover {
+            background: rgb(193 193 193 / 81%);
+            transition: 0.5s;
+          }
+        }
+      }
+    }
+  }
+
+  // RESPONSIVE SECTION
+
+  /*--------------------------------
+	*** FOR MINI MOBILE
+	**	MAX : 400PX / 25em
+	*/
+
+  @include mini_mobile {
+    text-align: center;
+    padding: 5rem #{nth($spaces, 2)} 0 #{nth($spaces, 2)};
+    width: 100%;
+    left: 0rem;
+
+    .header__section {
+      display: grid;
+      place-items: center;
+
+      p {
+        max-width: 100%;
+        width: 100%;
+        line-height: 1.7;
+      }
+    }
+
+    .card__section {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      .card {
+        margin-top: nth($spaces, 4);
+        &__text-box {
+          .btn {
+            left: -6rem;
+          }
+        }
+      }
+    }
+  }
+
+  /*--------------------------------
+	*** FOR MOBILE
+	**	MAX : 640PX / 40em
+	*/
+
+  @include mobile {
+    text-align: center;
+    padding: 5rem #{nth($spaces, 2)} 0 #{nth($spaces, 2)};
+    width: 100%;
+    left: 0rem;
+
+    .header__section {
+      display: grid;
+      place-items: center;
+
+      p {
+        max-width: 100%;
+        width: 100%;
+        line-height: 1.7;
+      }
+    }
+
+    .card__section {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      .card {
+        margin-top: nth($spaces, 4);
+
+        &__text-box {
+          .btn {
+            left: -6rem;
+          }
+        }
+      }
+    }
+  }
+
+  /*--------------------------------
+	*** FOR ANY DEVICE MAX SIZE UNTIL
+	**	MAX-WIDTH : 992px OR 62em
+	*/
+
+  @include tablet {
+    text-align: center;
+
+    .header__section {
+      display: grid;
+      place-items: center;
+      left: -0.6rem;
+      position: relative;
+
+      p {
+        width: 70%;
+        line-height: 1.7;
+        padding-top: nth($spaces, 4);
+        text-align: center;
+      }
+
+      .cta__button {
+        padding-top: nth($spaces, 4);
+      }
+    }
+
+    .card__section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: nth($spaces, 8);
+      left: -0.5rem;
+      position: relative;
+
+      .card {
+        &__text-box {
+          .btn {
+            left: -6rem;
+          }
+        }
+      }
+    }
+  }
+
+  /*--------------------------------
+	*** FOR ANY DEVICE MAX SIZE UNTIL
+	**	MAX-WIDTH : 1200px OR 75em
+	*/
+
+  @include laptop {
+    h2 {
+      text-align: center;
+    }
+    .header__section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+
+      .cta__button {
+        width: 100%;
+        text-align: center;
+        padding-top: nth($spaces, 4);
+        position: relative;
+      }
+    }
+
+    .card__section {
+      display: flex;
+      flex-wrap: wrap;
+
+      .card {
+        flex: 0 0 49%;
+
+        &:last-child {
+          margin-top: nth($spaces, 5);
+        }
+      }
+    }
+  }
+}
