@@ -500,7 +500,7 @@ body li {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 2rem;
+  border-radius: 2em;
 }
 .hero__section--text-overlay {
   background-color: rgba(0, 0, 0, 0.5);
@@ -522,7 +522,7 @@ body li {
 .hero__section--text-overlay .container h1 {
   text-align: center;
   padding-top: 1em;
-  font-size: 2.25em;
+  font-size: 1.875em;
   font-weight: 700;
 }
 .hero__section--text-overlay .container p {
@@ -543,7 +543,7 @@ body li {
 .hero__section--text-overlay .container .cta__button--button {
   width: 9rem;
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 0.5em;
   height: 3rem;
   font-size: 1em;
 }
@@ -551,7 +551,7 @@ body li {
   background-color: rgb(170, 170, 170);
   width: 9rem;
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 0.5em;
   height: 3rem;
   cursor: pointer;
   font-size: 1em;
@@ -574,10 +574,10 @@ body li {
     left: 0.5rem;
   }
   .hero__section .hero__section--text-overlay {
-    font-size: 0.625rem;
+    font-size: 0.75em;
     height: 100%;
     width: 100%;
-    left: 0rem;
+    left: 0;
     top: 0;
   }
   .hero__section .hero__section--text-overlay .container {
@@ -586,30 +586,49 @@ body li {
     left: 0.7rem;
     height: 20rem;
   }
+  .hero__section .hero__section--text-overlay .container h1 {
+    font-size: 3em;
+  }
   .hero__section .hero__section--text-overlay .container p {
+    font-size: 1.25em;
     width: 76%;
-    left: 2rem;
+    left: 3rem;
     position: relative;
-    font-size: 0.875em;
     font-weight: 700;
+    padding-top: 2rem;
   }
   .hero__section .hero__section--text-overlay .container .cta__button {
     position: relative;
     text-align: center;
     display: flex;
-    width: 22rem;
     gap: 2em;
-    left: 1rem;
-    padding-top: 1em;
+    padding-top: 2em;
     text-align: center;
     place-content: center;
+    width: 100%;
+    left: 0;
+  }
+  .hero__section .hero__section--text-overlay .container .cta__button--button {
+    font-size: 1.25em;
+  }
+  .hero__section .hero__section--text-overlay .container .cta__button--button-more {
+    font-size: 1.25em;
   }
   .hero__section .hero__section--text-overlay .container .stats-container {
-    font-size: 1em;
-    left: -3rem;
+    left: 0;
+    font-size: 1.125em;
+    padding-top: 2rem;
+    gap: 3rem;
+    margin: 0 auto;
   }
   .hero__section .hero__section--text-overlay .container .stats-container .stat-item p {
     width: 100%;
+  }
+  .hero__section .hero__section--text-overlay .container .stats-container .stat-item p:first {
+    left: 2.5rem;
+  }
+  .hero__section .hero__section--text-overlay .container .stats-container .stat-item p:last-child {
+    left: 0.5rem;
   }
 }
 
