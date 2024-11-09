@@ -618,9 +618,19 @@ body li {
   padding-top: 5rem;
   width: 97%;
   left: 1rem;
-  /* mobile */
+  /*--------------------------------
+  *** FOR MINI MOBILE
+  **	MAX : 400PX / 25em
+  */
+  /*--------------------------------
+  *** FOR MOBILE
+  **	MAX : 640PX / 40em
+  */
+  /*--------------------------------
+  *** FOR ANY DEVICE MAX SIZE UNTIL
+  **	MAX-WIDTH : 992px OR 62em
+  */
   /* tablet */
-  /* laptop */
 }
 .explore__hub h2 {
   font-size: 3em;
@@ -678,7 +688,6 @@ body li {
   cursor: pointer;
   height: 1.5rem;
   border: none;
-  top: -21rem;
   width: 6rem;
   top: -22rem;
   left: 1rem;
@@ -687,7 +696,63 @@ body li {
   background: rgba(193, 193, 193, 0.81);
   transition: 0.5s;
 }
-@media (max-width: 480px) {
+@media screen and (max-width: 25em) {
+  .explore__hub {
+    text-align: center;
+    padding: 5rem 0.5em 0 0.5em;
+    width: 100%;
+    left: 0rem;
+  }
+  .explore__hub .header__section {
+    display: grid;
+    place-items: center;
+  }
+  .explore__hub .header__section p {
+    max-width: 100%;
+    width: 100%;
+    line-height: 1.7;
+  }
+  .explore__hub .card__section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .explore__hub .card__section .card {
+    margin-top: 1em;
+  }
+  .explore__hub .card__section .card__text-box .btn {
+    left: -6rem;
+  }
+}
+@media screen and (max-width: 40em) {
+  .explore__hub {
+    text-align: center;
+    padding: 5rem 0.5em 0 0.5em;
+    width: 100%;
+    left: 0rem;
+  }
+  .explore__hub .header__section {
+    display: grid;
+    place-items: center;
+  }
+  .explore__hub .header__section p {
+    max-width: 100%;
+    width: 100%;
+    line-height: 1.7;
+  }
+  .explore__hub .card__section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .explore__hub .card__section .card {
+    margin-top: 1em;
+  }
+  .explore__hub .card__section .card__text-box .btn {
+    left: -6rem;
+  }
+}
+@media screen and (max-width: 62em) {
   .explore__hub {
     text-align: center;
   }
@@ -698,7 +763,13 @@ body li {
     position: relative;
   }
   .explore__hub .header__section p {
-    max-width: 100%;
+    width: 70%;
+    line-height: 1.7;
+    padding-top: 1em;
+    text-align: center;
+  }
+  .explore__hub .header__section .cta__button {
+    padding-top: 1em;
   }
   .explore__hub .card__section {
     display: flex;
@@ -712,6 +783,33 @@ body li {
     left: -6rem;
   }
 }
+@media screen and (max-width: 75em) {
+  .explore__hub h2 {
+    text-align: center;
+  }
+  .explore__hub .header__section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .explore__hub .header__section .cta__button {
+    width: 100%;
+    text-align: center;
+    padding-top: 1em;
+    position: relative;
+  }
+  .explore__hub .card__section {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .explore__hub .card__section .card {
+    flex: 0 0 49%;
+  }
+  .explore__hub .card__section .card:last-child {
+    margin-top: 1.25em;
+  }
+}
+
 .smart__solutions {
   padding-top: 5rem;
   /*--------------------------------
