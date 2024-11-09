@@ -72,6 +72,7 @@
           cursor: pointer;
           height: 1.5rem;
           border: none;
+          top: -22rem;
           width: 6rem;
           top: -22rem;
           left: 1rem;
@@ -163,6 +164,17 @@
   }
 
   /*--------------------------------
+<<<<<<< HEAD
+	*** FOR RETINA MOBILE AND LANSCAPE
+	**	MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
+	*/
+
+  @include retinaMobile {
+  }
+
+  /*--------------------------------
+=======
+>>>>>>> develop
 	*** FOR ANY DEVICE MAX SIZE UNTIL
 	**	MAX-WIDTH : 992px OR 62em
 	*/
