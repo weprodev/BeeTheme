@@ -1,0 +1,82 @@
+@use "sass:list";
+
+.testimonial-section {
+  display: flex;
+  flex-direction: column;
+  background-color: $forthColor;
+  background-image: radial-gradient(
+      circle at 0 35%,
+      $primaryColor -19%,
+      transparent 10%
+    ),
+    radial-gradient(circle at 100% 0%, $primaryColor -19%, transparent 10%);
+  padding: $containerSidePadding;
+  gap: list.nth($spaces, 16);
+  @include mobile {
+    padding: list.nth($spaces, 15) $containerSidePaddingMobile;
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    gap: list.nth($spaces, 4);
+  }
+  &__heading {
+    width: 38%;
+    @include laptop {
+      width: 80%;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    gap: list.nth($spaces, 12);
+    @include mini-laptop {
+      flex-direction: column;
+    }
+  }
+
+  &__review {
+    display: flex;
+    gap: list.nth($spaces, 12);
+    @include mobile {
+      gap: list.nth($spaces, 6);
+      flex-direction: column;
+    }
+  }
+  &__review-profile {
+    border-radius: $roundedFull;
+    width: 7rem;
+    height: 7rem;
+    @include laptop {
+      width: 5rem;
+      height: 5rem;
+    }
+  }
+  &__review-info {
+    font-size: $fontSize2Xl;
+    @include laptop {
+      font-size: $fontSizeBase;
+    }
+  }
+  &__review-text {
+    line-height: 1.7;
+    margin-bottom: list.nth($spaces, 4);
+  }
+  &__review-person-info {
+    font-weight: $fontWeightBold;
+  }
+
+  &__move-btns-container {
+    display: flex;
+    gap: list.nth($spaces, 5);
+    align-self: flex-start;
+    @include mini-laptop {
+      align-self: center;
+    }
+  }
+  &__move-btn {
+    padding: list.nth($spaces, 2);
+    font-size: $fontSize2Xl;
+  }
+}
