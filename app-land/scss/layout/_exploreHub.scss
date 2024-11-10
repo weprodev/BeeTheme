@@ -65,7 +65,7 @@
           font-size: $fontSizeSm;
           height: 1.5rem;
           border: none;
-          top: -22rem;
+          top: -21rem;
           width: 6rem;
           left: 1rem;
 
@@ -207,6 +207,11 @@
     padding: 5rem nth($spaces, 2) 0rem nth($spaces, 2);
     width: 100%;
     left: 0rem;
+
+  @include laptop {
+    h2 {
+      text-align: center;
+    }
 
     .header__section {
       display: grid;

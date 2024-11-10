@@ -653,6 +653,7 @@ body li {
   *** FOR MOBILE
   **	MAX : 640PX / 40em
   */
+  
 }
 .explore__hub h2 {
   font-size: 3em;
@@ -710,7 +711,7 @@ body li {
   font-size: 0.875em;
   height: 1.5rem;
   border: none;
-  top: -22rem;
+  top: -21rem;
   width: 6rem;
   left: 1rem;
 }
