@@ -926,4 +926,47 @@ footer .container .footer-bottom .footer-bottom-links a {
   margin-left: 0.75em;
 }
 
+@media (max-width: 75em) {
+  footer {
+    padding: 1em;
+  }
+  footer .container .footer-top .footer-top-title h2 {
+    font-size: 2.25em;
+  }
+  footer .container .footer-nav {
+    padding: 2em 0 0.75em;
+    gap: 0.5em;
+  }
+  footer .container .footer-nav .navigation ul {
+    gap: 0;
+  }
+  footer .container .footer-nav .navigation ul li {
+    border-right: 1px solid #8d959d;
+    padding: 0 0.75em;
+  }
+}
+@media (max-width: 40em) {
+  footer {
+    padding: 0.75em;
+  }
+  footer .container .footer-top {
+    flex-direction: column;
+  }
+  footer .container .footer-top .footer-top-title h2 {
+    font-size: 1.875em;
+  }
+  footer .container .footer-nav {
+    flex-direction: column;
+    padding: 2em 0 0.75em;
+    gap: 0.5em;
+  }
+  footer .container .footer-nav .navigation ul {
+    gap: 0;
+  }
+  footer .container .footer-nav .navigation ul li {
+    border-right: 1px solid #8d959d;
+    padding: 0 0.75em;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
