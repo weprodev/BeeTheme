@@ -124,7 +124,7 @@
           left: 3rem;
           position: relative;
           font-weight: $fontWeightBold;
-          padding-top: 2rem;
+          padding-top: nth($spaces, 8);
         }
 
         .cta__button {
@@ -150,8 +150,8 @@
         .stats-container {
           left: 0;
           font-size: $fontSizeLg;
-          padding-top: 2rem;
-          gap: 3rem;
+          padding-top: nth($spaces, 8);
+          gap: nth($spaces, 12);
           margin: 0 auto;
 
           .stat-item p {
