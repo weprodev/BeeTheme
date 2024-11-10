@@ -725,7 +725,8 @@ a {
 .case-study .case-study-header .case-study-title {
   font-size: 3em;
   text-align: center;
-  width: 75%;
+  width: 50%;
+  margin: 0 auto;
 }
 .case-study .case-study-header .case-study-title span {
   color: #8d959d;
@@ -789,6 +790,21 @@ a {
   border-radius: 0.5em;
 }
 
+@media (max-width: 40em) {
+  .case-study {
+    margin: 0 auto;
+    padding: 1.5em 0;
+  }
+  .case-study .case-study-header .case-study-title {
+    font-size: 1.875em;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .case-study .case-study-card {
+    flex-direction: column;
+  }
+}
 footer {
   background-color: #1e1e1e;
   color: #f2f4f4;
