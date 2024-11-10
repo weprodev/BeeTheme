@@ -535,9 +535,10 @@ a {
   margin: 0 auto;
 }
 .features .container .features-title {
-  font-size: 2.25em;
+  font-size: 4.5em;
   text-align: center;
-  margin-bottom: 1.5em;
+  margin: 0 auto 0.5em;
+  width: 65%;
 }
 .features .container .features-title span {
   color: #8d959d;
@@ -573,6 +574,30 @@ a {
   margin: 1em 0 0.5em;
 }
 
+@media (max-width: 75em) {
+  .features .container .features-title {
+    font-size: 3em;
+    width: 100%;
+  }
+  .features .container .features-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .features .container .features-cards .features-card:nth-child(3), .features .container .features-cards .features-card:nth-child(6) {
+    border-right: inherit;
+  }
+  .features .container .features-cards .features-card:nth-child(n+4):nth-child(-n+6) {
+    border-bottom: inherit;
+  }
+}
+@media (max-width: 40em) {
+  .features .container .features-title {
+    font-size: 1.875em;
+    width: 100%;
+  }
+  .features .container .features-cards {
+    grid-template-columns: 1fr;
+  }
+}
 /*=========================================================
 *********   Generic Button Component
 *******  
