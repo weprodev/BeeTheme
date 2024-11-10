@@ -32,7 +32,7 @@
     color: transparent;
     padding-top: 1rem;
   }
-  &__paragraph {
+  &__paragraph_1 {
     font-size: 1.2rem;
     margin-bottom: 3rem;
   }
@@ -61,5 +61,8 @@
     height: 1rem;
     border-radius: 10rem;
     margin-bottom: -0.1rem;
+  }
+  &__img {
+    width: 40rem;
   }
 }
