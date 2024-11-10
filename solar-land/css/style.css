@@ -262,7 +262,7 @@ a {
   background: url("../images/main-hero.jpg") center/cover no-repeat;
   color: #f2f4f4;
   text-align: left;
-  padding: 1em 2em;
+  padding: 1em 3em;
   margin: 0 auto;
   border-radius: 1.5em;
 }
@@ -277,9 +277,8 @@ a {
   color: rgba(255, 255, 255, 0.7);
 }
 .hero .hero-content .title {
-  font-size: 3.75em;
+  font-size: 6em;
   font-weight: 700;
-  margin-bottom: 1em;
 }
 .hero .hero-content .actions {
   display: flex;
@@ -388,9 +387,10 @@ a {
   grid-area: 5/3/6/6;
 }
 .hero .arrow-icon {
-  width: 0.875em;
-  height: 0.875em;
+  width: 1.1em;
+  height: 1.1em;
   padding-left: 0.5em;
+  display: inline-block;
 }
 .hero .statistics {
   background-color: #fff;
@@ -423,6 +423,52 @@ a {
   border-radius: 1.5em;
 }
 
+@media (max-width: 75em) {
+  .hero .hero-content {
+    max-width: 65%;
+  }
+  .hero .hero-content .title {
+    font-size: 3.75em;
+  }
+}
+@media (max-width: 62em) {
+  .hero .hero-content {
+    max-width: 50%;
+  }
+  .hero .hero-content .title {
+    font-size: 2.25em;
+  }
+}
+@media (max-width: 40em) {
+  .hero {
+    flex-direction: column;
+    padding: 0;
+    height: 80vh;
+  }
+  .hero .hero-content {
+    max-width: 100%;
+    padding: 2em 1em 1em;
+  }
+  .hero .recent-project {
+    position: relative;
+    transform: none;
+    top: 0;
+    right: 0;
+  }
+  .hero .recent-project .recent-project-item img {
+    aspect-ratio: 16/9;
+  }
+  .hero .statistics {
+    position: relative;
+    max-width: 100%;
+    border-radius: 0;
+    padding: 0.5em;
+    gap: 0.5em;
+  }
+  .hero .statistics .stat-item .stat-value {
+    font-size: 1.5em;
+  }
+}
 .customers {
   margin: 3em auto 1em;
 }
