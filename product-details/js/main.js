@@ -20,7 +20,6 @@ $(document).ready(function(){
 
     $(".icon-circle-down").click(function(){
       $(this).siblings('ul.dropdown').toggle('slide');
-      // $(this).removeClass("icon-circle-down");
       $(this).toggleClass("icon-circle-down");
       $(this).toggleClass("icon-circle-up");
     });
@@ -28,8 +27,6 @@ $(document).ready(function(){
     $(".section-responsive").click(function(){
       $(".menu").toggle('slide');
       $(".menu").css('display', 'block');
-      // $(this).removeClass("icon-menu5");
-      // $(this).addClass("icon-close dbl-click");
       $(this).toggleClass("icon-close");
     });
 
@@ -43,7 +40,6 @@ $(document).ready(function(){
       autoplay: false,
       mouseDrag: true,
       controls: false,
-      // center: true,
       loop: true,
       nav: false,
       touch: true,

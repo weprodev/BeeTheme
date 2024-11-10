@@ -67,7 +67,7 @@
 	**	MAX-WIDTH : 1024px OR 64em
 	*/
 
-	@mixin mini_laptop{
+	@mixin miniLaptop{
 		@media screen and (max-width : $preBeta){
 			@content;
 		}
@@ -111,7 +111,7 @@
 	**	MAX : 400PX / 25em
 	*/
 
-	@mixin mini_mobile{
+	@mixin miniMobile{
 		@media screen and (max-width : $kappa  ){
 			@content;
 		}
