@@ -22,9 +22,6 @@
       &-list {
         display: flex;
         gap: nth($spaces, 4);
-
-        .footer__social-link {
-        }
       }
     }
   }
@@ -45,9 +42,9 @@
 
   /*--------------------------------
 
-*** FOR RETINA MOBILE AND LANSCAPE
-** MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
-*/
+  *** FOR RETINA MOBILE AND LANSCAPE
+  ** MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
+  */
 
   @include mini_laptop {
     .footer {
