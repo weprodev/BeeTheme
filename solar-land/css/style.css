@@ -511,6 +511,21 @@ a {
   border: 2px solid #f2f4f4;
 }
 
+@media (max-width: 40em) {
+  .customers {
+    margin: 0.5em auto;
+  }
+  .customers .customers-header {
+    flex-direction: column;
+    padding: 0.75em;
+  }
+  .customers .customers-header .customers-title {
+    font-size: 1.875em;
+  }
+  .customers .customers-icons .customers-icon {
+    margin-right: 0.25em;
+  }
+}
 .features {
   background-color: rgb(223.2735849057, 225.5, 227.7264150943);
   margin: 3em auto 1em;

@@ -49,3 +49,24 @@
     }
   }
 }
+
+@media (max-width: $eta) {
+  .customers {
+    margin: list.nth($spaces, 2) auto;
+
+    .customers-header {
+      flex-direction: column;
+      padding: list.nth($spaces, 3);
+
+      .customers-title {
+        font-size: $fontSize3Xl;
+      }
+    }
+
+    .customers-icons {
+      .customers-icon {
+        margin-right: list.nth($spaces, 1);
+      }
+    }
+  }
+}
