@@ -26,7 +26,7 @@
 **	 CSS3 , CLEARFIX
 */
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
 .container {
   width: 90%;
 }
@@ -860,7 +860,7 @@ body li {
   justify-content: space-evenly;
 }
 .smart__solutions--img-box {
-  top: 6rem;
+  top: 5rem;
   position: relative;
   width: 27rem;
 }
@@ -1076,26 +1076,19 @@ body li {
 
 .plan__Selector__Hub {
   padding: 5rem 1em 0.25em 1em;
+  /* Responsive part */
   /*--------------------------------
   *** FOR ANY DEVICE MAX SIZE UNTIL
-  **	MAX-WIDTH : 1024px OR 64em
+  **	MAX-WIDTH : 992px OR 62em
   */
   /*--------------------------------
-    *** FOR ANY DEVICE MAX SIZE UNTIL
-    ** MAX-WIDTH : 992px OR 62em
-    */
+  *** FOR RETINA MOBILE AND LANSCAPE
+  **	MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
+  */
   /*--------------------------------
-    *** FOR RETINA MOBILE AND LANSCAPE
-    ** MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
-    */
-  /*--------------------------------
-    *** FOR MOBILE
-    ** MAX : 640PX / 40em
-    */
-  /*--------------------------------
-    *** FOR MINI MOBILE
-    ** MAX : 400PX / 25em
-    */
+  *** FOR MOBILE
+  **	MAX : 640PX / 40em
+  */
 }
 .plan__Selector__Hub .plans {
   background: rgb(24, 26, 27);
@@ -1248,61 +1241,78 @@ body li {
   position: relative;
 }
 @media screen and (max-width: 62em) {
-  .plan__Selector__Hub .plans .download-box .information-section {
-    width: 100%;
-    padding: 0;
+  .plan__Selector__Hub .plans {
+    padding: 2rem;
+    border-radius: 10px;
+    margin: auto;
   }
-  .plan__Selector__Hub .plans .download-box .information-section .information-box {
-    width: 54%;
-    left: 14rem;
-    position: relative;
-  }
-  .plan__Selector__Hub .plans .download-box .information-section .btn-download ul {
-    display: flex;
-    justify-content: center;
-    width: 86%;
-    top: 0rem;
-    position: relative;
-    left: 3rem;
-  }
-  .plan__Selector__Hub .plans .download-box .image-box {
-    display: none;
-  }
-}
-@media screen and (max-width: 64em) {
-  .plan__Selector__Hub .plans .mainBox .subscription .subscription-level,
-  .plan__Selector__Hub .plans .mainBox .subscription .subscription-options {
-    width: 25rem;
-  }
-  .plan__Selector__Hub .plans .mainBox .box h3,
-  .plan__Selector__Hub .plans .mainBox .box .status {
-    width: 25rem;
-  }
-  .plan__Selector__Hub .plans .download-box .information-section .btn-download {
-    left: -1rem;
-    position: relative;
-  }
-  .plan__Selector__Hub .plans .download-box .image-box {
-    display: none;
-  }
-}
-@media screen and (min-width: 31.25em) and (max-width: 47.9375em) {
   .plan__Selector__Hub .plans h1 {
+    font-size: 2rem;
     text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  .plan__Selector__Hub .plans .mainBox {
+    padding-top: 1.5rem;
   }
   .plan__Selector__Hub .plans .mainBox .subscription {
     display: grid;
-    text-align: center;
-    width: 100%;
-    gap: 1em;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1.5rem;
+    background-color: rgb(38, 39, 40);
+    border-radius: 0.5em;
   }
-  .plan__Selector__Hub .plans .mainBox .subscription .subscription-level,
-  .plan__Selector__Hub .plans .mainBox .subscription .subscription-options {
-    width: 33rem;
+  .plan__Selector__Hub .plans .mainBox .subscription .subscription-level {
     justify-content: center;
+    gap: 1rem;
+  }
+  .plan__Selector__Hub .plans .mainBox .subscription .subscription-level h3 {
+    font-size: 1.5rem;
   }
   .plan__Selector__Hub .plans .mainBox .subscription .subscription-options {
+    justify-content: center;
+    gap: 1rem;
+  }
+  .plan__Selector__Hub .plans .mainBox .subscription .subscription-options span {
+    width: 100%;
+    height: 2.5rem;
+    font-size: 1em;
+  }
+  .plan__Selector__Hub .plans .mainBox .box {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  .plan__Selector__Hub .plans .mainBox .box .status {
+    width: 100%;
+    display: flex;
     justify-content: space-between;
+  }
+  .plan__Selector__Hub .plans .download-box {
+    flex-direction: column;
+    align-items: center;
+  }
+  .plan__Selector__Hub .plans .download-box .image-box {
+    display: none;
+  }
+  .plan__Selector__Hub .plans .download-box .information-section {
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+  .plan__Selector__Hub .plans .download-box .information-section .btn-download ul {
+    display: contents;
+  }
+  .plan__Selector__Hub .plans .download-box .image-box {
+    margin-top: 1rem;
+  }
+}
+@media screen and (min-width: 31.25em) and (max-width: 47.9375em) {
+  .plan__Selector__Hub .plans .mainBox .subscription {
+    justify-content: center;
+    gap: 2em;
+  }
+  .plan__Selector__Hub .plans .mainBox .subscription .subscription-level {
+    justify-content: center;
   }
   .plan__Selector__Hub .plans .mainBox .box {
     display: grid;
@@ -1310,18 +1320,13 @@ body li {
     width: 100%;
     gap: 1em;
   }
-  .plan__Selector__Hub .plans .mainBox .box h3 {
-    width: 34rem;
-    text-align: center;
-  }
+  .plan__Selector__Hub .plans .mainBox .box h3,
   .plan__Selector__Hub .plans .mainBox .box .status {
     width: 34rem;
     text-align: center;
   }
-  .plan__Selector__Hub .plans .download-box .information-section .information-box {
-    width: 100%;
-    left: 0;
-    position: relative;
+  .plan__Selector__Hub .plans .download-box .information-section .btn-download ul {
+    display: flex;
   }
 }
 @media screen and (max-width: 40em) {
@@ -1338,8 +1343,7 @@ body li {
   .plan__Selector__Hub .plans .mainBox .subscription .subscription-level,
   .plan__Selector__Hub .plans .mainBox .subscription .subscription-options {
     flex-wrap: wrap;
-    gap: 1em;
-    width: 18rem;
+    width: 100%;
   }
   .plan__Selector__Hub .plans .mainBox .subscription .subscription-options {
     justify-content: space-between;
@@ -1347,8 +1351,8 @@ body li {
   .plan__Selector__Hub .plans .mainBox .box {
     display: grid;
     text-align: center;
-    width: 100%;
-    gap: 1em;
+    left: -1rem;
+    position: relative;
   }
   .plan__Selector__Hub .plans .mainBox .box h3,
   .plan__Selector__Hub .plans .mainBox .box .status {
@@ -1360,8 +1364,11 @@ body li {
     left: 0;
     position: relative;
   }
+  .plan__Selector__Hub .plans .download-box .information-section .information-box .btn-download {
+    left: -1.5rem;
+  }
   .plan__Selector__Hub .plans .download-box .information-section .information-box .btn-download ul {
-    display: grid;
+    display: contents;
     top: 3rem;
   }
 }
