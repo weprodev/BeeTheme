@@ -118,17 +118,6 @@ a {
   }
 }
 
-.cta__button--button {
-  width: 7rem;
-  height: 3rem;
-  border: none;
-  border-radius: 2rem;
-  cursor: pointer;
-}
-.cta__button--button:hover {
-  transition: 0.3s ease-in-out;
-}
-
 /*=========================================================
 *********   Generic Button Component
 *******  
@@ -139,6 +128,7 @@ a {
   justify-content: space-between;
   padding: 1em 2em;
   background-color: #fff;
+  margin: 0 auto;
 }
 .header .logo img {
   height: 2.5rem;
@@ -157,6 +147,30 @@ a {
 }
 .header .navigation ul li a:hover {
   color: #0dd47e;
+}
+.header .hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 0.3rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.header .hamburger span {
+  display: block;
+  width: 1.5rem;
+  height: 0.2rem;
+  background-color: #1e1e1e;
+  transition: transform 0.3s ease;
+}
+.header .hamburger.active span:nth-child(1) {
+  transform: translateY(0.5rem) rotate(45deg);
+}
+.header .hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.header .hamburger.active span:nth-child(3) {
+  transform: translateY(-0.5rem) rotate(-45deg);
 }
 .header .action-buttons {
   display: flex;
@@ -192,16 +206,47 @@ a {
 .header .action-buttons .get-in-touch:hover {
   background-color: #0dd47e;
 }
-
-.cta__button--button {
-  width: 7rem;
-  height: 3rem;
-  border: none;
-  border-radius: 2rem;
-  cursor: pointer;
-}
-.cta__button--button:hover {
-  transition: 0.3s ease-in-out;
+@media (max-width: 62em) {
+  .header .header {
+    padding: 0.5em;
+  }
+  .header .navigation {
+    display: none;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+  .header .navigation.active {
+    display: flex;
+    position: absolute;
+    top: 4em;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    padding: 1em;
+    padding-bottom: 4em;
+    width: 100%;
+    z-index: 10;
+  }
+  .header .navigation ul {
+    flex-direction: column;
+  }
+  .header .hamburger {
+    display: flex;
+  }
+  .header .action-buttons {
+    display: none;
+  }
+  .header .action-buttons.active {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+    width: 100%;
+    padding-top: 0.5em;
+    align-items: center;
+    position: absolute;
+    top: 20em;
+    z-index: 11;
+  }
 }
 
 /*=========================================================
@@ -465,17 +510,6 @@ a {
 .features .container .features-cards .features-card .features-card-title {
   font-size: 1.5em;
   margin: 1em 0 0.5em;
-}
-
-.cta__button--button {
-  width: 7rem;
-  height: 3rem;
-  border: none;
-  border-radius: 2rem;
-  cursor: pointer;
-}
-.cta__button--button:hover {
-  transition: 0.3s ease-in-out;
 }
 
 /*=========================================================
