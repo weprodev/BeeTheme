@@ -1,3 +1,4 @@
+@use "sass:list";
 .super-fast {
   display: flex;
   align-items: center;
@@ -35,7 +36,7 @@
     background-image: linear-gradient(to right, $colorEighth, $colorSeventh);
     -webkit-background-clip: text;
     color: transparent;
-    margin-top: nth($spaces, 1);
+    margin-top: list.nth($spaces, 1);
   }
 
   &__paragraph {
@@ -43,14 +44,14 @@
   }
   &__performance {
     display: inline-flex;
-    gap: nth($spaces, 2);
+    gap: list.nth($spaces, 2);
     font-size: $fontSizeXl;
-    margin-top: nth($spaces, 4);
+    margin-top: list.nth($spaces, 4);
   }
 
   &__feature {
     display: flex;
-    gap: nth($spaces, 12);
+    gap: list.nth($spaces, 12);
   }
 
   &__feature-1 {
@@ -79,7 +80,7 @@
   &__feature-3 {
     display: flex;
     justify-content: center;
-    margin-top: nth($spaces, 4);
+    margin-top: list.nth($spaces, 4);
     background-image: linear-gradient(to right, $colorEighth, $colorSeventh);
     -webkit-background-clip: text;
     color: transparent;
@@ -88,16 +89,16 @@
 
   &_performance {
     text-align: center;
-    margin-top: nth($spaces, 8);
+    margin-top: list.nth($spaces, 8);
     margin-bottom: -2rem;
   }
 
   &__icones {
     display: flex;
-    gap: nth($spaces, 8);
+    gap: list.nth($spaces, 8);
     justify-content: center;
     align-items: center;
-    padding-bottom: nth($spaces, 16);
+    padding-bottom: list.nth($spaces, 16);
   }
   &__icone-google {
     width: 10rem;

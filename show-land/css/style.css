@@ -55,14 +55,14 @@ body {
 \*------------------------------------*/
 .main-nav__list {
   display: flex;
-  padding-top: 1rem;
-  gap: 1.5rem;
+  padding-top: 1em;
+  gap: 1.5em;
   list-style: none;
   align-items: center;
 }
 .main-nav__link:link, .main-nav__link:visited {
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1em;
   color: #fff;
   text-transform: uppercase;
   font-weight: 700;

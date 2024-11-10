@@ -1,18 +1,19 @@
+@use "sass:list";
 .main-nav {
   &__list {
     display: flex;
-    padding-top: 1rem;
-    gap: 1.5rem;
+    padding-top: list.nth($spaces, 4);
+    gap: list.nth($spaces, 6);
     list-style: none;
     align-items: center;
   }
   &__link:link,
   &__link:visited {
     text-decoration: none;
-    font-size: 1rem;
+    font-size: $fontSizeBase;
     color: $colorwihte;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: $fontWeightBold;
   }
 }
 .header {
@@ -22,5 +23,5 @@
 .logo {
   padding-top: 0.8rem;
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: $fontWeightBold;
 }
