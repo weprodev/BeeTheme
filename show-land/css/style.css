@@ -77,69 +77,6 @@ body {
   font-weight: 700;
 }
 
-.page-builder {
-  display: flex;
-  gap: 3.5em;
-  padding-top: 5rem;
-}
-.page-builder__icone {
-  stroke: #fff;
-  background-color: #c92a2a;
-  padding: 0.2rem 0.2rem 0.2rem 0.2rem;
-  width: 1.7rem;
-  height: 1.7rem;
-  border-radius: 9999px;
-  margin-bottom: -0.4rem;
-}
-.page-builder__button {
-  display: inline-flex;
-  align-items: baseline;
-  border-radius: 9999px;
-  padding: 0 1em 0 1em;
-  gap: 0.5em;
-  font-size: 1.6rem;
-  font-weight: 900;
-  color: #c92a2a;
-  background-color: #fff;
-  cursor: pointer;
-}
-.page-builder__headline {
-  font-size: 2.8rem;
-  font-weight: 700;
-  background-image: linear-gradient(to right, #087f5b, #c92a2a);
-  -webkit-background-clip: text;
-  color: transparent;
-  padding-top: 0.5em;
-}
-.page-builder__paragraph {
-  font-size: 1.25em;
-  margin-bottom: 2.75em;
-}
-.page-builder__feature {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  row-gap: 2.5rem;
-  margin-bottom: 2em;
-}
-.page-builder__features {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 0.5em;
-  outline: 0.1px solid rgba(255, 255, 255, 0.0431372549);
-  outline-offset: 0.2rem;
-  outline-offset: 0.4rem;
-  border-radius: 9999px;
-  padding: 0 2.8rem 0 0.4rem;
-}
-.page-builder__icone_1 {
-  stroke: #000;
-  background-image: linear-gradient(to right, #fff, #c92a2a);
-  width: 1rem;
-  height: 1rem;
-  border-radius: 9999px;
-  margin-bottom: -0.1rem;
-}
-
 .home-page {
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -291,9 +228,8 @@ body {
 
 .page-builder {
   display: flex;
-  gap: 3.4rem;
+  gap: 3.5em;
   padding-top: 5rem;
-  margin-bottom: 10rem;
 }
 .page-builder__icone {
   stroke: #fff;
@@ -301,15 +237,15 @@ body {
   padding: 0.2rem 0.2rem 0.2rem 0.2rem;
   width: 1.7rem;
   height: 1.7rem;
-  border-radius: 10rem;
+  border-radius: 9999px;
   margin-bottom: -0.4rem;
 }
 .page-builder__button {
   display: inline-flex;
   align-items: baseline;
-  border-radius: 10rem;
-  padding: 0 1rem 0 1rem;
-  gap: 0.5rem;
+  border-radius: 9999px;
+  padding: 0 1em 0 1em;
+  gap: 0.5em;
   font-size: 1.6rem;
   font-weight: 900;
   color: #c92a2a;
@@ -322,11 +258,99 @@ body {
   background-image: linear-gradient(to right, #087f5b, #c92a2a);
   -webkit-background-clip: text;
   color: transparent;
-  padding-top: 1rem;
+  padding-top: 0.5em;
 }
 .page-builder__paragraph {
-  font-size: 1.2rem;
-  margin-bottom: 3rem;
+  font-size: 1.25em;
+  margin-bottom: 2.75em;
+}
+.page-builder__feature {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 2.5rem;
+  margin-bottom: 2em;
+}
+.page-builder__features {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.5em;
+  outline: 0.1px solid rgba(255, 255, 255, 0.0431372549);
+  outline-offset: 0.2rem;
+  outline-offset: 0.4rem;
+  border-radius: 9999px;
+  padding: 0 2.8rem 0 0.4rem;
+}
+.page-builder__icone_1 {
+  stroke: #000;
+  background-image: linear-gradient(to right, #fff, #c92a2a);
+  width: 1rem;
+  height: 1rem;
+  border-radius: 9999px;
+  margin-bottom: -0.1rem;
+}
+
+.benefits {
+  padding-top: 4em;
+  padding-bottom: 8rem;
+}
+.benefits__headline {
+  font-size: 2.8rem;
+  font-weight: 700;
+  background-image: linear-gradient(to right, #087f5b, #c92a2a);
+  -webkit-background-clip: text;
+  color: transparent;
+  padding-top: 1em;
+  text-align: center;
+}
+.benefits__paragraph {
+  font-size: 1.25em;
+  margin-bottom: 3em;
+  text-align: center;
+}
+.benefits__features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 4rem;
+  column-gap: 4rem;
+  margin-bottom: 4em;
+}
+.benefits__img_boxs {
+  outline: 0.1rem solid rgba(255, 255, 255, 0.0431372549);
+  outline-offset: 0.8rem;
+  border-radius: 0.125em;
+}
+.benefits__title {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+.benefits__description {
+  text-align: center;
+}
+.benefits__img_box {
+  padding-left: 2.25em;
+  border-radius: 0.5em;
+  margin-bottom: 1em;
+}
+.benefits__img_box_1 {
+  padding-left: 1em;
+  border-radius: 0.5em;
+  margin-bottom: 1em;
+}
+.benefits__features_1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 4rem;
+  margin-bottom: 4em;
+}
+
+.text-box {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .header-primary__sub {
@@ -343,85 +367,6 @@ body {
   display: block;
   font-size: 5em;
 }
-
-.benefits {
-  padding-bottom: 8rem;
-}
-.benefits__headline {
-  font-size: 2.8rem;
-  font-weight: 700;
-  background-image: linear-gradient(to right, #087f5b, #c92a2a);
-  -webkit-background-clip: text;
-  color: transparent;
-  padding-top: 1rem;
-  text-align: center;
-}
-.benefits__paragraph {
-  font-size: 1.2rem;
-  margin-bottom: 3rem;
-  text-align: center;
-}
-.benefits__features {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  row-gap: 4rem;
-  column-gap: 4rem;
-  margin-bottom: 4rem;
-}
-.benefits__img_boxs {
-  outline: 0.1rem solid rgba(255, 255, 255, 0.0431372549);
-  outline-offset: 0.8rem;
-  border-radius: 0.1rem;
-}
-.benefits__title {
-  text-align: center;
-  font-size: 1.6rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-.benefits__description {
-  text-align: center;
-}
-.benefits__img_box {
-  padding-left: 2rem;
-  border-radius: 0.4rem;
-  margin-bottom: 1rem;
-}
-.benefits__img_box_1 {
-  padding-left: 1rem;
-  border-radius: 0.4rem;
-  margin-bottom: 1rem;
-}
-.benefits__features_1 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 4rem;
-  margin-bottom: 4rem;
-}
-
-.text-box {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.header-primary__sub {
-  display: block;
-  text-transform: uppercase;
-  font-size: 1rem;
-}
-.header-primary__main {
-  display: block;
-  font-size: 5rem;
-  margin-bottom: -3rem;
-}
-.header-primary_main__1 {
-  display: block;
-  font-size: 5rem;
-}
-
 
 .text-img {
   outline-offset: 2rem;
@@ -445,7 +390,6 @@ body {
 
 .text-img__box {
   border-radius: 1em;
-
 }
 
 .border__1 {

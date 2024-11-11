@@ -1,6 +1,5 @@
 @use "sass:list";
 
-
 .text-box {
   position: absolute;
   top: 30%;
@@ -14,7 +13,6 @@
     display: block;
     text-transform: uppercase;
     font-size: $fontSizeBase;
-
   }
 
   &__main {

@@ -1,17 +1,19 @@
+@use "sass:list";
 .benefits {
+  padding-top: list.nth($spaces, 16);
   padding-bottom: 8rem;
   &__headline {
     font-size: 2.8rem;
-    font-weight: 700;
+    font-weight: $fontWeightBold;
     background-image: linear-gradient(to right, $colorEighth, $colorSeventh);
     -webkit-background-clip: text;
     color: transparent;
-    padding-top: 1rem;
+    padding-top: list.nth($spaces, 4);
     text-align: center;
   }
   &__paragraph {
-    font-size: 1.2rem;
-    margin-bottom: 3rem;
+    font-size: $fontSizeXl;
+    margin-bottom: list.nth($spaces, 12);
     text-align: center;
   }
 
@@ -20,39 +22,39 @@
     grid-template-columns: repeat(2, 1fr);
     row-gap: 4rem;
     column-gap: 4rem;
-    margin-bottom: 4rem;
+    margin-bottom: list.nth($spaces, 16);
   }
 
   &__img_boxs {
     outline: 0.1rem solid $colorEleventh;
     outline-offset: 0.8rem;
-    border-radius: 0.1rem;
+    border-radius: $roundedSm;
   }
 
   &__title {
     text-align: center;
     font-size: $defaultFontSize;
-    font-weight: 700;
-    margin-bottom: 1rem;
+    font-weight: $fontWeightBold;
+    margin-bottom: list.nth($spaces, 4);
   }
   &__description {
     text-align: center;
   }
   &__img_box {
-    padding-left: 2rem;
-    border-radius: 0.4rem;
-    margin-bottom: 1rem;
+    padding-left: list.nth($spaces, 9);
+    border-radius: $roundedLg;
+    margin-bottom: list.nth($spaces, 4);
   }
   &__img_box_1 {
-    padding-left: 1rem;
-    border-radius: 0.4rem;
-    margin-bottom: 1rem;
+    padding-left: list.nth($spaces, 4);
+    border-radius: $roundedLg;
+    margin-bottom: list.nth($spaces, 4);
   }
 
   &__features_1 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 4rem;
-    margin-bottom: 4rem;
+    margin-bottom: list.nth($spaces, 16);
   }
 }
