@@ -1,0 +1,115 @@
+@use "sass:list";
+.super-fast {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  padding-top: 8rem;
+
+  &__info {
+    margin-top: -8em;
+  }
+
+  &__icone {
+    stroke: $colorwihte;
+
+    width: 1rem;
+    height: 1rem;
+    margin-bottom: -2px;
+  }
+
+  &__button {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 4px;
+
+    background-image: linear-gradient(to right, $colorSecondary, $colorPrimary);
+    padding: nth($spaces, 1) nth($spaces, 4) nth($spaces, 1) nth($spaces, 4);
+    text-transform: uppercase;
+    font-weight: $fontWeightBold;
+    border-radius: $roundedFull;
+    cursor: pointer;
+  }
+
+  &__headline {
+    font-size: 2.8rem;
+    font-weight: $fontWeightBold;
+    background-image: linear-gradient(to right, $colorEighth, $colorSeventh);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-top: list.nth($spaces, 1);
+  }
+
+  &__paragraph {
+    font-size: $fontSizeXl;
+  }
+  &__performance {
+    display: inline-flex;
+    gap: list.nth($spaces, 2);
+    font-size: $fontSizeXl;
+    margin-top: list.nth($spaces, 4);
+  }
+
+  &__feature {
+    display: flex;
+    gap: list.nth($spaces, 12);
+  }
+
+  &__feature-1 {
+    background-image: linear-gradient(to right, $colorEighth, $colorSeventh);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 900;
+    padding: 0 2.5rem 0 2.5rem;
+    outline: 1px solid $colorwihte;
+    outline-offset: 0.5rem;
+    border-radius: $roundedFull;
+    font-size: 5rem;
+  }
+
+  &__feature-2 {
+    background-image: linear-gradient(to right, $colorEighth, $colorSeventh);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: $fontSize5Xl;
+    padding: 1.8rem 1.5rem 1.8rem 1.5rem;
+    outline: 1px solid $colorwihte;
+    outline-offset: 0.5rem;
+    border-radius: $roundedFull;
+  }
+
+  &__feature-3 {
+    display: flex;
+    justify-content: center;
+    margin-top: list.nth($spaces, 4);
+    background-image: linear-gradient(to right, $colorEighth, $colorSeventh);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: $fontSizeXl;
+  }
+
+  &_performance {
+    text-align: center;
+    margin-top: list.nth($spaces, 8);
+    margin-bottom: -2rem;
+  }
+
+  &__icones {
+    display: flex;
+    gap: list.nth($spaces, 8);
+    justify-content: center;
+    align-items: center;
+    padding-bottom: list.nth($spaces, 16);
+  }
+  &__icone-google {
+    width: 10rem;
+  }
+  &__icone-gtmetrix {
+    width: 12rem;
+  }
+}
+
+.icone-1 {
+  stroke: $colorPrimary;
+  width: 2rem;
+  height: 2rem;
+}
