@@ -1,6 +1,7 @@
 /*------------------------------------*\
   #ABSTRACTS
 \*------------------------------------*/
+@import "../../shared/scss/abstracts/variables";
 @import "variables";
 @import "typography";
 
@@ -21,4 +22,4 @@
 /*------------------------------------*\
   #COMPONENTS
 \*------------------------------------*/
-@import "../sass/components/button";
+@import "components/button";
