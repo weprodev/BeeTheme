@@ -53,14 +53,23 @@ body {
 /*------------------------------------*\
   #LAYOUTS
 \*------------------------------------*/
-.main-nav__list {
+.container .header {
+  display: flex;
+  justify-content: space-between;
+}
+.container .logo {
+  padding-top: 0.8rem;
+  font-size: 2.25em;
+  font-weight: 700;
+}
+.container .main-nav__list {
   display: flex;
   padding-top: 1em;
   gap: 1.5em;
   list-style: none;
   align-items: center;
 }
-.main-nav__link:link, .main-nav__link:visited {
+.container .main-nav__link:link, .container .main-nav__link:visited {
   text-decoration: none;
   font-size: 1em;
   color: #fff;
@@ -68,15 +77,67 @@ body {
   font-weight: 700;
 }
 
-.header {
+.page-builder {
   display: flex;
-  justify-content: space-between;
+  gap: 3.5em;
+  padding-top: 5rem;
 }
-
-.logo {
-  padding-top: 0.8rem;
-  font-size: 2rem;
+.page-builder__icone {
+  stroke: #fff;
+  background-color: #c92a2a;
+  padding: 0.2rem 0.2rem 0.2rem 0.2rem;
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 9999px;
+  margin-bottom: -0.4rem;
+}
+.page-builder__button {
+  display: inline-flex;
+  align-items: baseline;
+  border-radius: 9999px;
+  padding: 0 1em 0 1em;
+  gap: 0.5em;
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #c92a2a;
+  background-color: #fff;
+  cursor: pointer;
+}
+.page-builder__headline {
+  font-size: 2.8rem;
   font-weight: 700;
+  background-image: linear-gradient(to right, #087f5b, #c92a2a);
+  -webkit-background-clip: text;
+  color: transparent;
+  padding-top: 0.5em;
+}
+.page-builder__paragraph {
+  font-size: 1.25em;
+  margin-bottom: 2.75em;
+}
+.page-builder__feature {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 2.5rem;
+  margin-bottom: 2em;
+}
+.page-builder__features {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.5em;
+  outline: 0.1px solid rgba(255, 255, 255, 0.0431372549);
+  outline-offset: 0.2rem;
+  outline-offset: 0.4rem;
+  border-radius: 9999px;
+  padding: 0 2.8rem 0 0.4rem;
+}
+.page-builder__icone_1 {
+  stroke: #000;
+  background-image: linear-gradient(to right, #fff, #c92a2a);
+  width: 1rem;
+  height: 1rem;
+  border-radius: 9999px;
+  margin-bottom: -0.1rem;
 }
 
 .home-page {
