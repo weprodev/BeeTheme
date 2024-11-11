@@ -1,6 +1,7 @@
 /*------------------------------------*\
   #ABSTRACTS
 \*------------------------------------*/
+@import "../../shared/scss/abstracts/variables";
 @import "variables";
 @import "typography";
 
@@ -8,10 +9,11 @@
   #LAYOUTS
 \*------------------------------------*/
 @import "layout/top-nav";
-@import "layout/home-page.scss";
-@import "layout/super-fast.scss";
 @import "layout/page-builder";
-@import "layout/hero.scss";
+@import "layout/home-page";
+@import "layout/super-fast";
+@import "layout/hero";
+
 /*------------------------------------*\
   #BASE
 \*------------------------------------*/

@@ -1,0 +1,86 @@
+@use "sass:list";
+
+.header {
+  .hide-on-laptop {
+    display: none;
+  }
+
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: nth($spaces, 5);
+
+    nav ul {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      list-style: none;
+
+      li {
+        margin: 0 nth($spaces, 3);
+      }
+    }
+  }
+
+  &__hidden {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 13;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: $frostedWhite;
+    box-shadow: -10px 0 $roundedXl $lightShadow;
+    text-align: center;
+    display: none;
+
+    .logo {
+      height: 2rem;
+      width: 100%;
+    }
+
+    &--nav {
+      top: 2rem;
+      position: relative;
+
+      ul {
+        li {
+          height: 3rem;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .cta__button {
+    &--button {
+      background-color: $vibrantGreen;
+
+      &:hover {
+        background-color: $limeGreen;
+      }
+    }
+  }
+
+  // Responsive
+  @include mobile {
+    .hide-on-laptop {
+      display: block;
+    }
+    .hide-on-mobile {
+      display: none;
+    }
+  }
+
+  @include retinaMobile {
+    .hide-on-laptop {
+      display: block;
+    }
+    .hide-on-mobile {
+      display: none;
+    }
+  }
+}

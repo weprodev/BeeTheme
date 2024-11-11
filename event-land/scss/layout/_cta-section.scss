@@ -1,0 +1,111 @@
+@use "sass:list";
+
+.cta-section {
+  background-color: $secondaryColor;
+  padding: $containerSidePadding;
+  display: flex;
+  gap: list.nth($spaces, 16);
+  min-height: 35rem;
+  align-items: center;
+  @include mobile {
+    padding: list.nth($spaces, 15) $containerSidePaddingMobile;
+  }
+  @include laptop {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  &__left,
+  &__right {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+  }
+
+  &__btns-container {
+    display: flex;
+    gap: list.nth($spaces, 2);
+  }
+
+  &__left {
+    gap: list.nth($spaces, 8);
+  }
+  &__right {
+    gap: list.nth($spaces, 16);
+  }
+
+  &__message {
+    position: relative;
+    &--left {
+      align-self: flex-start;
+    }
+    &--right {
+      align-self: flex-end;
+    }
+
+    @include mobile {
+      &--left {
+        align-self: stretch;
+      }
+      &--right {
+        align-self: stretch;
+      }
+    }
+  }
+  &__message-profile {
+    object-fit: cover;
+    border-radius: $roundedFull;
+    &--big {
+      height: 6.5rem;
+      width: 6.5rem;
+      @include mobile {
+        display: none;
+      }
+    }
+    &--small {
+      height: 3.5rem;
+      width: 3.5rem;
+    }
+  }
+  &__message-box {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    color: $secondaryColor;
+    background-color: $tertiaryColor;
+    gap: list.nth($spaces, 4);
+    padding: list.nth($spaces, 4);
+    width: 25rem;
+    @include mobile {
+      width: 10rem;
+      position: static;
+      width: 100%;
+    }
+
+    &--left {
+      left: 50%;
+      border-radius: 0 $rounded3Xl $rounded3Xl $rounded3Xl;
+    }
+    &--right {
+      right: 50%;
+      border-radius: $rounded3Xl 0 $rounded3Xl $rounded3Xl;
+    }
+  }
+  &__message-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: list.nth($spaces, 4);
+    max-width: 20rem;
+    @include laptop {
+      font-size: $fontSizeXs;
+      max-width: 100%;
+    }
+  }
+  &__message-text {
+    font-weight: $fontWeightSemibold;
+  }
+  &__message-profile-name {
+    font-weight: $fontWeightRegular;
+  }
+}
