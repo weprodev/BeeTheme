@@ -25,7 +25,6 @@ picture,
 svg,
 video {
   display: block;
-  width: 100%;
 }
 
 a {
@@ -897,7 +896,7 @@ footer .container .footer-nav .navigation ul li a:hover {
 }
 footer .container .footer-nav .action-buttons {
   display: flex;
-  gap: 1rem;
+  gap: 1em;
 }
 footer .container .footer-nav .action-buttons .social {
   background: #8d959d;
