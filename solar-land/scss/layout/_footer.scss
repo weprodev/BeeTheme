@@ -107,7 +107,7 @@ footer {
 
       .action-buttons {
         display: flex;
-        gap: list.nth($spaces, 4);
+        gap: 1rem;
 
         .social {
           @include button(

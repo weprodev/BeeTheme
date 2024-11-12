@@ -896,7 +896,7 @@ footer .container .footer-nav .navigation ul li a:hover {
 }
 footer .container .footer-nav .action-buttons {
   display: flex;
-  gap: 1em;
+  gap: 1rem;
 }
 footer .container .footer-nav .action-buttons .social {
   background: #8d959d;
