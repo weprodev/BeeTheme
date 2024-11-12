@@ -25,7 +25,6 @@ picture,
 svg,
 video {
   display: block;
-  width: 100%;
 }
 
 a {
@@ -118,17 +117,6 @@ a {
   }
 }
 
-.cta__button--button {
-  width: 7rem;
-  height: 3rem;
-  border: none;
-  border-radius: 2rem;
-  cursor: pointer;
-}
-.cta__button--button:hover {
-  transition: 0.3s ease-in-out;
-}
-
 /*=========================================================
 *********   Generic Button Component
 *******  
@@ -191,17 +179,6 @@ a {
 }
 .header .action-buttons .get-in-touch:hover {
   background-color: #0dd47e;
-}
-
-.cta__button--button {
-  width: 7rem;
-  height: 3rem;
-  border: none;
-  border-radius: 2rem;
-  cursor: pointer;
-}
-.cta__button--button:hover {
-  transition: 0.3s ease-in-out;
 }
 
 /*=========================================================
@@ -467,17 +444,6 @@ a {
   margin: 1em 0 0.5em;
 }
 
-.cta__button--button {
-  width: 7rem;
-  height: 3rem;
-  border: none;
-  border-radius: 2rem;
-  cursor: pointer;
-}
-.cta__button--button:hover {
-  transition: 0.3s ease-in-out;
-}
-
 /*=========================================================
 *********   Generic Button Component
 *******  
@@ -721,7 +687,7 @@ footer .container .footer-nav .navigation ul li a:hover {
 }
 footer .container .footer-nav .action-buttons {
   display: flex;
-  gap: 1rem;
+  gap: 1em;
 }
 footer .container .footer-nav .action-buttons .social {
   background: #8d959d;
