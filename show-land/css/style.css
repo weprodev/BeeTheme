@@ -310,8 +310,8 @@ body {
 .benefits__features {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  row-gap: 4rem;
-  column-gap: 4rem;
+  row-gap: 4em;
+  column-gap: 4em;
   margin-bottom: 4em;
 }
 .benefits__img_boxs {
@@ -341,7 +341,7 @@ body {
 .benefits__features_1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 4rem;
+  column-gap: 4em;
   margin-bottom: 4em;
 }
 

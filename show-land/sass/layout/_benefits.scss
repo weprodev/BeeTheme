@@ -20,8 +20,8 @@
   &__features {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    row-gap: 4rem;
-    column-gap: 4rem;
+    row-gap: list.nth($spaces, 16);
+    column-gap: list.nth($spaces, 16);
     margin-bottom: list.nth($spaces, 16);
   }
 
@@ -54,7 +54,7 @@
   &__features_1 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 4rem;
+    column-gap: list.nth($spaces, 16);
     margin-bottom: list.nth($spaces, 16);
   }
 }

@@ -1,9 +1,8 @@
 @use "sass:list";
 
-
 .home-page {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: $spaceBetweenSections;
+  padding-bottom: $spaceBetweenSections;
   &__headline {
     text-align: center;
     font-size: 4.2rem;
