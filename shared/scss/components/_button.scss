@@ -1,18 +1,5 @@
+
 @use "sass:color";
-
-.cta__button {
-  &--button {
-    width: 7rem;
-    height: 3rem;
-    border: none;
-    border-radius: 2rem;
-    cursor: pointer;
-
-    &:hover {
-      transition: 0.3s ease-in-out;
-    }
-  }
-}
 
 /*=========================================================
 *********   Generic Button Component
@@ -44,3 +31,4 @@
     background-color: $hoverBgColor;
   }
 }
+

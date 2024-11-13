@@ -1,0 +1,80 @@
+@use "sass:list";
+@use "sass:color";
+
+.case-study {
+  margin: 0 auto;
+  padding: list.nth($spaces, 12) 0;
+
+  .case-study-header {
+    .case-study-title {
+      font-size: $fontSize5Xl;
+      text-align: center;
+      width: 75%;
+
+      span {
+        color: $secondaryColor;
+      }
+    }
+  }
+
+  .case-study-card {
+    background: $lightColor;
+    padding: list.nth($spaces, 2);
+    margin: list.nth($spaces, 8) auto;
+    border-radius: $roundedLg;
+    display: flex;
+    gap: list.nth($spaces, 8);
+
+    .case-study-info {
+      padding: list.nth($spaces, 4);
+      flex: 5;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .case-study-title {
+        font-size: $fontSize2Xl;
+        font-weight: $fontWeightBold;
+        margin-bottom: list.nth($spaces, 4);
+      }
+
+      .case-study-text {
+        font-size: $fontSizeBase;
+      }
+
+      .case-study-button {
+        @include button(
+          $bg: $primaryColor,
+          $border: none,
+          $radius: $roundedFull,
+          $padding: list.nth($spaces, 3),
+          $hoverBgColor: color.adjust($primaryColor, $lightness: 10%),
+          $transition: map-get($durations, 150)
+        );
+        margin-top: list.nth($spaces, 4);
+        width: max-content;
+      }
+
+      .case-study-author {
+        font-size: $fontSizeBase;
+        font-weight: $fontWeightBold;
+        margin-top: list.nth($spaces, 8);
+        span {
+          color: $secondaryColor;
+          font-weight: $fontWeightRegular;
+        }
+      }
+    }
+
+    .case-study-img {
+      flex: 4;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: $roundedLg;
+      }
+    }
+  }
+}
