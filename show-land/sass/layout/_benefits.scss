@@ -1,0 +1,60 @@
+@use "sass:list";
+.benefits {
+  padding-top: list.nth($spaces, 16);
+  padding-bottom: 8rem;
+  &__headline {
+    font-size: 2.8rem;
+    font-weight: $fontWeightBold;
+    background-image: linear-gradient(to right, $colorEighth, $colorSeventh);
+    -webkit-background-clip: text;
+    color: transparent;
+    padding-top: list.nth($spaces, 4);
+    text-align: center;
+  }
+  &__paragraph {
+    font-size: $fontSizeXl;
+    margin-bottom: list.nth($spaces, 12);
+    text-align: center;
+  }
+
+  &__features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: list.nth($spaces, 16);
+    column-gap: list.nth($spaces, 16);
+    margin-bottom: list.nth($spaces, 16);
+  }
+
+  &__img_boxs {
+    outline: 0.1rem solid $colorEleventh;
+    outline-offset: 0.8rem;
+    border-radius: $roundedSm;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: $defaultFontSize;
+    font-weight: $fontWeightBold;
+    margin-bottom: list.nth($spaces, 4);
+  }
+  &__description {
+    text-align: center;
+  }
+  &__img_box {
+    padding-left: list.nth($spaces, 9);
+    border-radius: $roundedLg;
+    margin-bottom: list.nth($spaces, 4);
+  }
+  &__img_box_1 {
+    padding-left: list.nth($spaces, 4);
+    border-radius: $roundedLg;
+    margin-bottom: list.nth($spaces, 4);
+  }
+
+  &__features_1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: list.nth($spaces, 16);
+    margin-bottom: list.nth($spaces, 16);
+  }
+}

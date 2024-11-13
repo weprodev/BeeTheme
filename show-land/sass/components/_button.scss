@@ -24,4 +24,9 @@
     color: $colorwihte;
     box-shadow: 0 1rem 2rem rgba($colorBlack, 0.1);
   }
+  &-cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
