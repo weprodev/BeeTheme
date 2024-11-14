@@ -2,7 +2,7 @@
 .page-builder {
   display: flex;
   gap: list.nth($spaces, 14);
-  padding-top: 5rem;
+  padding-top: $spaceBetweenSections;
   &__icone {
     stroke: $colorwihte;
     background-color: $colorSeventh;
@@ -10,7 +10,6 @@
     width: 1.7rem;
     height: 1.7rem;
     border-radius: $roundedFull;
-
     margin-bottom: -0.4rem;
   }
   &__button {
