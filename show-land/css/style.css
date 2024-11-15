@@ -50,6 +50,28 @@ body {
   margin: 0 auto;
 }
 
+body.modal-open {
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0.4rem;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 0.75em;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 0.75em;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #777;
+}
+
 /*------------------------------------*\
   #LAYOUTS
 \*------------------------------------*/
@@ -179,6 +201,9 @@ body {
   outline: 0.1px solid rgba(255, 255, 255, 0.0431372549);
   outline-offset: 0.8rem;
   border-radius: 0.25em;
+}
+.home-page__img_boxs img {
+  width: 100%;
 }
 .home-page__number {
   text-align: center;
