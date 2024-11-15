@@ -1,0 +1,368 @@
+@use "sass:list";
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+.plan__Selector__Hub {
+  padding: 5rem nth($spaces, 4) nth($spaces, 1) nth($spaces, 4);
+
+  .plans {
+    background: $shadowBlack;
+    color: $white;
+    padding: nth($spaces, 4);
+    border-radius: $rounded4Xl;
+
+    h1 {
+      font-size: $fontSize4Xl;
+      margin-top: nth($spaces, 4);
+      position: relative;
+    }
+
+    .mainBox {
+      padding-top: nth($spaces, 4);
+
+      .subscription {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: #{nth($spaces, 4)} #{nth($spaces, 6)};
+        background-color: $charcoalGray;
+        border-radius: $roundedLg;
+
+        .subscription-level {
+          display: flex;
+          align-items: center;
+          gap: nth($spaces, 3);
+
+          h3 {
+            margin: 0;
+            font-size: $fontSize2Xl;
+            color: $white;
+          }
+        }
+
+        .subscription-options {
+          display: flex;
+          gap: nth($spaces, 5);
+
+          span {
+            width: 8rem;
+            height: 2.5rem;
+            border-radius: $roundedLg;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $forestGreen;
+            gap: nth($spaces, 2);
+            font-size: $fontSizeBase;
+            font-weight: bold;
+            transition: background 0.3s ease, transform 0.3s ease;
+
+            &:hover {
+              transform: scale(1.05);
+            }
+          }
+
+          .basic {
+            background: $sringGreen;
+          }
+
+          .advanced {
+            background: $moonlitLavender;
+          }
+
+          .premium {
+            background: $softGold;
+          }
+        }
+      }
+
+      .box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: #{nth($spaces, 3)} #{nth($spaces, 5)};
+
+        .status {
+          width: 26rem;
+          justify-content: space-between;
+          display: flex;
+
+          span {
+            padding: #{nth($spaces, 1)} #{nth($spaces, 3)};
+          }
+        }
+      }
+
+      .custom-divider {
+        background-color: $transparentBlack;
+        margin: nth($spaces, 3) 0;
+        height: 0.1875rem;
+      }
+    }
+
+    .download-box {
+      position: relative;
+      display: flex;
+
+      p {
+        line-height: 1.7;
+        margin-top: nth($spaces, 4);
+      }
+
+      .information-section {
+        width: 50%;
+        text-align: center;
+        padding: 5rem nth($spaces, 1) nth($spaces, 4) 7rem;
+
+        .btn-download {
+          margin-top: 5rem;
+
+          ul {
+            margin-top: 5rem;
+            width: 41%;
+            text-align: center;
+            padding: 0;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+
+          li {
+            display: inline-block;
+            margin: nth($spaces, 3);
+          }
+
+          .download {
+            width: 12.5rem;
+            height: 4.6875rem;
+            background: black;
+            float: left;
+            border-radius: $roundedMd;
+            position: relative;
+            color: $white;
+            cursor: pointer;
+            border: 0.0625rem solid $white;
+          }
+
+          .download > .fa {
+            color: $white;
+            position: absolute;
+            top: 50%;
+            left: 0.9375rem;
+            transform: translateY(-50%);
+          }
+
+          .df,
+          .dfn {
+            position: absolute;
+            left: 4.375rem;
+          }
+
+          .df {
+            top: 1.25rem;
+            font-size: $fontSizeXs;
+          }
+
+          .dfn {
+            top: 2.0625rem;
+            font-size: $fontSizeBase;
+          }
+
+          .download:hover {
+            -webkit-filter: invert(100%);
+            filter: invert(100%);
+            transition: 0.3s ease-in-out;
+          }
+        }
+      }
+
+      .image-box {
+        top: 1rem;
+        position: relative;
+      }
+    }
+  }
+
+  /* Responsive part */
+
+  /*--------------------------------
+	*** FOR ANY DEVICE MAX SIZE UNTIL
+	**	MAX-WIDTH : 992px OR 62em
+	*/
+
+  @include tablet {
+    .plans {
+      padding: nth($spaces, 8);
+      border-radius: 10px;
+      margin: auto;
+
+      h1 {
+        font-size: $fontSize4Xl;
+        text-align: center;
+        margin-bottom: nth($spaces, 6);
+      }
+
+      .mainBox {
+        padding-top: nth($spaces, 6);
+
+        .subscription {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: nth($spaces, 4);
+          padding: nth($spaces, 6);
+          background-color: $charcoalGray;
+          border-radius: $roundedLg;
+
+          .subscription-level {
+            justify-content: center;
+            gap: nth($spaces, 4);
+
+            h3 {
+              font-size: $fontSize2Xl;
+            }
+          }
+
+          .subscription-options {
+            justify-content: center;
+            gap: nth($spaces, 4);
+
+            span {
+              width: 100%;
+              height: 2.5rem;
+              font-size: $fontSizeBase;
+            }
+          }
+        }
+
+        .box {
+          flex-direction: column;
+          gap: nth($spaces, 4);
+          align-items: center;
+
+          .status {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+          }
+        }
+      }
+
+      .download-box {
+        flex-direction: column;
+        align-items: center;
+
+        .image-box {
+          display: none;
+        }
+
+        .information-section {
+          width: 100%;
+          padding: nth($spaces, 8) nth($spaces, 4);
+
+          .btn-download {
+            ul {
+              display: contents;
+            }
+          }
+        }
+
+        .image-box {
+          margin-top: nth($spaces, 4);
+        }
+      }
+    }
+  }
+
+  /*--------------------------------
+	*** FOR RETINA MOBILE AND LANSCAPE
+	**	MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
+	*/
+
+  @include retinaMobile {
+    .plans {
+      .mainBox .subscription {
+        justify-content: center;
+        gap: nth($spaces, 8);
+        .subscription-level {
+          justify-content: center;
+        }
+      }
+      .mainBox .box {
+        display: grid;
+        text-align: center;
+        width: 100%;
+        gap: nth($spaces, 4);
+
+        h3,
+        .status {
+          width: 34rem;
+          text-align: center;
+        }
+      }
+      .download-box .information-section .btn-download ul {
+        display: flex;
+      }
+    }
+  }
+
+  /*--------------------------------
+	*** FOR MOBILE
+	**	MAX : 640PX / 40em
+	*/
+
+  @include mobile {
+    .plans {
+      h1 {
+        font-size: $fontSize3Xl;
+        text-align: center;
+      }
+      .mainBox {
+        .subscription {
+          display: grid;
+          text-align: center;
+          width: 100%;
+          gap: nth($spaces, 4);
+
+          .subscription-level,
+          .subscription-options {
+            flex-wrap: wrap;
+            width: 100%;
+          }
+
+          .subscription-options {
+            justify-content: space-between;
+          }
+        }
+
+        .box {
+          display: grid;
+          text-align: center;
+          left: -1rem;
+          position: relative;
+
+          h3,
+          .status {
+            width: 19rem;
+            text-align: center;
+          }
+        }
+      }
+
+      .download-box .information-section .information-box {
+        width: 100%;
+        left: 0;
+        position: relative;
+
+        .btn-download {
+          left: -1.5rem;
+
+          ul {
+            display: contents;
+            top: 3rem;
+          }
+        }
+      }
+    }
+  }
+}
