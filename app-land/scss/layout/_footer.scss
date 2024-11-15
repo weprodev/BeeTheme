@@ -1,0 +1,99 @@
+.footer__section {
+  padding: 5rem nth($spaces, 2) 0rem nth($spaces, 2);
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    height: 3rem;
+
+    &__brand {
+      font-size: $fontSize3Xl;
+      font-weight: $fontWeightSemibold;
+    }
+
+    &__nav {
+      &-list {
+        display: flex;
+        gap: nth($spaces, 4);
+      }
+    }
+
+    &__social {
+      &-list {
+        display: flex;
+        gap: nth($spaces, 4);
+      }
+    }
+  }
+
+  hr {
+    width: 100%;
+    margin: nth($spaces, 3) 0;
+    background-color: rgba(0, 0, 3, 0.2);
+  }
+
+  .footer__copyright {
+    display: flex;
+    justify-content: space-between;
+    padding-top: nth($spaces, 4);
+  }
+
+  // Responsive part
+
+  /*--------------------------------
+
+  *** FOR RETINA MOBILE AND LANSCAPE
+  ** MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
+  */
+
+  @include mini_laptop {
+    .footer {
+      &__brand {
+        font-size: $fontSizeXl;
+      }
+      &__social {
+        display: none;
+        &-list {
+          gap: nth($spaces, 2);
+        }
+      }
+    }
+  }
+
+  /*--------------------------------
+
+  *** FOR MOBILE
+  ** MAX : 640PX / 40em
+  */
+
+  @include retinaMobile {
+    .footer {
+      &__social {
+        display: none;
+        &-list {
+          gap: nth($spaces, 1);
+        }
+      }
+    }
+  }
+
+  /*--------------------------------
+
+  *** FOR MINI MOBILE
+  ** MAX : 400PX / 25em
+  */
+
+  @include mobile {
+    .footer {
+      &__brand {
+        font-size: $fontSizeXl;
+      }
+      &__social {
+        display: none;
+        &-list {
+          gap: nth($spaces, 2);
+        }
+      }
+    }
+  }
+}

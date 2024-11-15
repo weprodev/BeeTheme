@@ -1,0 +1,60 @@
+@use "sass:list";
+@use "sass:color";
+
+.features {
+  background-color: color.adjust($secondaryColor, $lightness: 30%);
+  margin: list.nth($spaces, 12) auto list.nth($spaces, 4);
+  padding: list.nth($spaces, 12) 0;
+
+  .container {
+    margin: 0 auto;
+  
+
+  .features-title {
+    font-size: $fontSize4Xl;
+    text-align: center;
+    margin-bottom: list.nth($spaces, 6);
+
+    span {
+      color: $secondaryColor;
+    }
+  }
+
+  .features-cards {
+    background-color: $lightColor;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 0.5px solid color.adjust($secondaryColor, $lightness : 30%);
+    border-radius: $rounded3Xl;
+    box-shadow: $shadowSm;
+
+    .features-card {
+      padding: list.nth($spaces, 6);
+      border-right: 0.5px solid color.adjust($secondaryColor, $lightness : 30%);
+      border-bottom: 0.5px solid color.adjust($secondaryColor, $lightness : 30%);
+
+      &:nth-child(3),
+      &:nth-child(6) {
+        border-right: none;
+      }
+
+      &:nth-child(n + 4):nth-child(-n + 6) {
+        border-bottom: none;
+      }
+
+      .features-card-icon-svg {
+        width: 3em;
+        height: 3em;
+        fill: color.adjust($primaryColor, $lightness: 10%);
+        box-shadow: $shadowSm;
+        padding: list.nth($spaces, 2);
+      }
+
+      .features-card-title {
+        font-size: $fontSize2Xl;
+        margin: list.nth($spaces, 4) 0 list.nth($spaces, 2);
+      }
+    }
+  }
+}
+}

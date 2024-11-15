@@ -1,0 +1,172 @@
+@use "sass:list";
+
+.hero__section {
+  border-radius: $rounded3Xl;
+  position: relative;
+  left: 1.2rem;
+  width: 97%;
+  height: 50rem;
+
+  &--img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: $rounded4Xl;
+  }
+
+  &--text-overlay {
+    background-color: $transparentBlack;
+    border-radius: $rounded3Xl;
+    position: absolute;
+    color: $white;
+    width: 28rem;
+    left: 8rem;
+    height: 24rem;
+    top: 10rem;
+
+    .container {
+      width: 95%;
+      top: 0rem;
+      position: relative;
+      left: 0.5rem;
+      height: 100%;
+
+      h1 {
+        text-align: center;
+        padding-top: list.nth($spaces, 4);
+        font-size: $fontSize3Xl;
+        font-weight: $fontWeightBold;
+      }
+
+      p {
+        padding-top: list.nth($spaces, 4);
+        line-height: 1.4;
+      }
+
+      .cta__button {
+        position: relative;
+        text-align: center;
+        display: flex;
+        width: 27rem;
+        gap: list.nth($spaces, 8);
+        left: 0rem;
+        padding-top: list.nth($spaces, 4);
+        text-align: center;
+        place-content: center;
+
+        &--button {
+          width: 9rem;
+          border: none;
+          border-radius: $roundedLg;
+          height: 3rem;
+          font-size: $fontSizeBase;
+
+          &-more {
+            background-color: $lightGray;
+            width: 9rem;
+            border: none;
+            border-radius: $roundedLg;
+            height: 3rem;
+            cursor: pointer;
+            font-size: $fontSizeBase;
+
+            &:hover {
+              transition: 0.3s ease-in-out;
+              background-color: $stoneGray;
+            }
+          }
+        }
+      }
+
+      .stats-container {
+        position: relative;
+        padding-top: list.nth($spaces, 4);
+        display: flex;
+        width: 27rem;
+        justify-content: center;
+        gap: list.nth($spaces, 8);
+      }
+    }
+  }
+
+  // Responsive part
+
+  /*--------------------------------
+
+  *** FOR MINI MOBILE
+  ** MAX : 400PX / 25em
+  */
+
+  @include mobile {
+    overflow-x: hidden;
+    left: 0.5rem;
+
+    .hero__section--text-overlay {
+      font-size: $fontSizeXs;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+
+      .container {
+        top: 10rem;
+        text-align: center;
+        left: 0.7rem;
+        height: 20rem;
+
+        h1 {
+          font-size: $fontSize5Xl;
+        }
+
+        p {
+          font-size: $fontSizeXl;
+          width: 76%;
+          left: 3rem;
+          position: relative;
+          font-weight: $fontWeightBold;
+          padding-top: nth($spaces, 8);
+        }
+
+        .cta__button {
+          position: relative;
+          text-align: center;
+          display: flex;
+          gap: list.nth($spaces, 8);
+          padding-top: list.nth($spaces, 8);
+          text-align: center;
+          place-content: center;
+          width: 100%;
+          left: 0;
+
+          &--button {
+            font-size: $fontSizeXl;
+
+            &-more {
+              font-size: $fontSizeXl;
+            }
+          }
+        }
+
+        .stats-container {
+          left: 0;
+          font-size: $fontSizeLg;
+          padding-top: nth($spaces, 8);
+          gap: nth($spaces, 12);
+          margin: 0 auto;
+
+          .stat-item p {
+            width: 100%;
+
+            &:first {
+              left: 2.5rem;
+            }
+
+            &:last-child {
+              left: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
