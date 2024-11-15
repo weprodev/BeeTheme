@@ -1,5 +1,5 @@
-
 @use "sass:list";
+
 
 .super-fast {
   display: flex;
@@ -13,8 +13,6 @@
 
   &__icone {
     stroke: $colorwihte;
-
-
     width: 1rem;
     height: 1rem;
     margin-bottom: -2px;
