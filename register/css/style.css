@@ -29,6 +29,7 @@
 ***  GENERAL DIFINITIONS
 **	 CSS3 , CLEARFIX
 */
+@import url("https://fonts.googleapis.com/css?family=Muli");
 .container {
   width: 90%;
 }
@@ -117,5 +118,143 @@ a {
 /*------------------------------------*\
   #REGISTER PAGE
 \*------------------------------------*/
+/*------------------------------------*\
+  #fonts
+  #IMPORT THIS FONT FROM FONTS.GOOGLE.COM 
+\*------------------------------------*/
+.register-form {
+  font-family: "Muli", sans-serif;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
+.register-form .pic-register {
+  width: 50%;
+  height: 100vh;
+  object-fit: fill;
+  background-color: #FF5B32;
+}
+@media screen and (max-width: 62em) {
+  .register-form .pic-register {
+    display: none;
+  }
+}
+.register-form .section-login {
+  width: 50%;
+  margin: 0 auto;
+  background-color: rgb(255, 255, 255);
+  align-items: flex-start;
+  justify-content: center;
+  display: flex;
+}
+@media screen and (max-width: 62em) {
+  .register-form .section-login {
+    width: 100%;
+  }
+}
+.register-form .section-login spam {
+  padding: 1em;
+  font-size: 3em;
+  display: flex;
+  justify-content: center;
+}
+.register-form .section-login .section-label-input {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* When the checkbox is checked, add a blue background */
+  /* Show the checkmark when checked */
+}
+@media screen and (max-width: 62em) {
+  .register-form .section-login .section-label-input {
+    width: 70%;
+  }
+}
+.register-form .section-login .section-label-input input {
+  border: 1px solid rgb(0, 0, 0);
+  border: 1px solid rgba(0, 0, 0, 0.38);
+  width: 80%;
+  border-radius: 30px;
+  padding: 0.8em;
+  transition: all 0.7s;
+}
+.register-form .section-login .section-label-input input:focus {
+  border: 1px solid #FF5B32;
+}
+.register-form .section-login .section-label-input label {
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  margin: 1em 0em;
+}
+.register-form .section-login .section-label-input .showpass {
+  display: block;
+  position: relative;
+  padding-left: 45px;
+  margin-top: 1em;
+  margin-bottom: 12px;
+  font-weight: unset;
+  cursor: pointer;
+  font-size: 15px;
+  user-select: none;
+}
+.register-form .section-login .section-label-input .showpass input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.register-form .section-login .section-label-input .showpass .checkmark {
+  position: absolute;
+  left: 10px;
+  height: 20px;
+  width: 20px;
+  background-color: rgb(255, 255, 255);
+  border: 0.5px solid grey;
+  border-radius: 2px;
+  /* Create the checkmark/indicator (hidden when not checked) */
+}
+.register-form .section-login .section-label-input .showpass .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 5px;
+  width: 9px;
+  height: 18px;
+  border: solid rgb(255, 255, 255);
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+.register-form .section-login .section-label-input .showpass:hover input ~ .checkmark {
+  background-color: rgb(255, 255, 255);
+}
+.register-form .section-login .section-label-input .showpass input:checked ~ .checkmark {
+  background-color: #2196F3;
+  border: unset;
+}
+.register-form .section-login .section-label-input .showpass input:checked ~ .checkmark:after {
+  display: block;
+}
+.register-form .section-login .section-label-input .underborder {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid rgb(0, 0, 0);
+}
+.register-form .section-login .section-label-input .button {
+  background: #FF5B32;
+  margin-top: 2em;
+  border: 1px solid transparent;
+  transition: all 0.5s;
+  color: rgb(255, 255, 255);
+}
+.register-form .section-login .section-label-input .button:hover {
+  border: 1px solid #FF5B32;
+  background: rgb(255, 255, 255);
+  color: #FF5B32;
+}
 
 /*# sourceMappingURL=style.css.map */
