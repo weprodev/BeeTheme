@@ -1,0 +1,61 @@
+.demo-modal {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  padding: nth($spaces, 8) nth($spaces, 16);
+  justify-content: center;
+  background-color: adjust-color($color: $colorSixth, $alpha: -0.3);
+
+  &.fade-in {
+    animation: fade-in 0.3s linear both;
+  }
+  &.fade-out {
+    animation: fade-out 0.3s linear both;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    gap: nth($spaces, 12);
+    background-color: $colorwihte;
+    max-width: 80rem;
+    height: 90vh;
+    border-radius: 1rem;
+    padding: nth($spaces, 8) nth($spaces, 16);
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include mobile{
+      gap: nth($spaces,4);
+      align-items: stretch;
+      text-align: center;
+      flex-direction: column;
+    }
+  }
+  &__name {
+    font-size: $fontSize5Xl;
+    font-weight: $fontWeightBold;
+    background-image: linear-gradient(to right, #087f5b, #c92a2a);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  &__by {
+    font-size:$fontSizeXl;
+    font-weight: $fontWeightBold;
+    color: $colorGreyDark;
+  }
+  &__by-link:hover {
+    color: $colorTenth;
+  }
+
+  &__image {
+    width: 100%;
+  }
+}
