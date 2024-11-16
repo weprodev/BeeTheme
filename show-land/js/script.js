@@ -2,19 +2,19 @@
   #DATA
 \*------------------------------------*/
 
-// An example of demo object
-// {
-//   id: 0, // an id that is unique in the array
-//   name: "EventLand", // Name of your page
-//   createdBy: {
-//     name: "Ahmad Mohammadirad", // Your name
-//     github: "https://github.com/ahmadmohammadirad2006", // link of your github profile
-//   },
-//   url: "event-land/index.html", // URL of your page based on root dir
-//   mainImage: "event-land-main.png", // Name of your main page image in shared/images/
-//   entirePageImage: "event-land-entire.png", // Name of your entire page image in shared/images/
-// },
-const demos = [];
+const demos = [
+  {
+    id: 0, // an id that is unique in the array
+    name: "EventLand", // Name of your page
+    createdBy: {
+      name: "Ahmad Mohammadirad", // Your name
+      github: "https://github.com/ahmadmohammadirad2006", // link of your github profile
+    },
+    url: "event-land/index.html", // URL of your page based on root dir
+    mainImage: "event-land-main.png", // Name of your main page image in shared/images/
+    entirePageImage: "event-land-entire.png", // Name of your entire page image in shared/images/
+  },
+];
 
 /*------------------------------------*\
   #SELECTING ELEMENTS
