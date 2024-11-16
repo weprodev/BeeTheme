@@ -189,6 +189,7 @@ body.modal-open {
   padding-bottom: 4em;
 }
 .home-page__imgs {
+  padding-top: 4em;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   row-gap: 3em;

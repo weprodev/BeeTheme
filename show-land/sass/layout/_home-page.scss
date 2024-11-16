@@ -31,6 +31,7 @@
     padding-bottom: list.nth($spaces, 16);
   }
   &__imgs {
+    padding-top: nth($spaces, 16);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     row-gap: list.nth($spaces, 12);
