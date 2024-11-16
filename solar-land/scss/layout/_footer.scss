@@ -1,0 +1,140 @@
+@use "sass:list";
+
+footer {
+  background-color: $darkColor;
+  color: $lightColor;
+  padding: list.nth($spaces, 16) list.nth($spaces, 8);
+
+  .container {
+    margin: 0 auto;
+
+    .footer-top {
+      display: flex;
+      gap: list.nth($spaces, 8);
+
+      .footer-top-title {
+        flex: 4;
+        h2 {
+          font-size: $fontSize4Xl;
+          font-weight: $fontWeightBold;
+
+          span {
+            color: $secondaryColor;
+          }
+        }
+
+        p {
+          color: $lightColor;
+          display: inline-block;
+          margin: list.nth($spaces, 5);
+          margin-left: 0;
+
+          .footer-top-title-check {
+            width: 1em;
+            height: 1em;
+            background-color: $primaryColor;
+            border-radius: $roundedFull;
+            color: $darkColor;
+            display: inline-block;
+          }
+        }
+      }
+
+      .footer-top-description {
+        flex: 3;
+
+        p {
+          line-height: 1.5;
+          margin-bottom: list.nth($spaces, 5);
+        }
+
+        button {
+          @include button(
+            $bg: $lightColor,
+            $color: $darkColor,
+            $border: none,
+            $radius: $roundedFull,
+            $padding: list.nth($spaces, 4),
+            $hoverBgColor: $secondaryColor,
+            $transition: map-get($durations, 150)
+          );
+
+          .arrow-icon {
+            width: 1.2em;
+            height: 1.2em;
+            padding-left: list.nth($spaces, 1);
+            padding-top: list.nth($spaces, 1);
+            display: inline-block;
+          }
+        }
+      }
+    }
+
+    .footer-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: list.nth($spaces, 16) 0 list.nth($spaces, 6);
+      border-bottom: 1px solid $secondaryColor;
+
+      .logo {
+        img {
+          height: 2.5rem;
+          width: auto;
+        }
+      }
+
+      .navigation {
+        ul {
+          display: flex;
+          list-style: none;
+          gap: list.nth($spaces, 8);
+
+          li {
+            a {
+              text-decoration: none;
+              color: $lightColor;
+              font-weight: $fontWeightRegular;
+              transition: color 0.3s ease;
+
+              &:hover {
+                color: $primaryColor;
+              }
+            }
+          }
+        }
+      }
+
+      .action-buttons {
+        display: flex;
+        gap: list.nth($spaces, 4);
+
+        .social {
+          @include button(
+            $bg: $secondaryColor,
+            $color: $lightColor,
+            $fontSize: $fontSizeSm,
+            $fontWeight: $fontWeightBold,
+            $radius: $roundedFull,
+            $padding: list.nth($spaces, 2)
+          );
+          line-height: 1;
+          width: 2em;
+          height: 2em;
+        }
+      }
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      margin: list.nth($spaces, 8) 0 0;
+
+      .footer-bottom-links {
+        a {
+          margin-left: list.nth($spaces, 3);
+        }
+      }
+    }
+  }
+}
