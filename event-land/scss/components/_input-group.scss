@@ -1,0 +1,21 @@
+@use "sass:list";
+
+.input-group {
+  display: flex;
+  border-radius: $roundedFull;
+  padding: list.nth($spaces, 3);
+  gap: list.nth($spaces, 3);
+  justify-content: space-between;
+  &__input {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+  }
+  &__button {
+    display: flex;
+    gap: list.nth($spaces, 2);
+  }
+  &--primary {
+    background-color: $secondaryColor;
+  }
+}

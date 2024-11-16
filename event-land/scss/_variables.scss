@@ -1,0 +1,37 @@
+@use "sass:list";
+@use "sass:color";
+
+/*------------------------------------*\
+  #COLORS
+\*------------------------------------*/
+
+$primaryColor: #50cb8b;
+$secondaryColor: #ffffff;
+$tertiaryColor: #24222c;
+$forthColor: #f1f1f1;
+$fifthColor: #effff7;
+$starColor: #ffa534;
+
+$forthColorDarker1 : color.adjust($forthColor , $lightness: -5);
+$forthColorDarker2 : color.adjust($forthColor , $lightness: -20);
+$forthColorDarker3 : color.adjust($forthColor , $lightness: -50);
+
+/*------------------------------------*\
+  #FONT
+\*------------------------------------*/
+
+$primaryFontFamily: "Inter", sans-serif;
+
+/*------------------------------------*\
+  #SPACE
+\*------------------------------------*/
+
+$containerSidePadding: 7rem;
+$containerSidePaddingMobile : 1.5rem;
+
+/*------------------------------------*\
+  #BORDER
+\*------------------------------------*/
+
+$primaryBorder : 2px solid $forthColor;
+$borderSecondary : 1px solid  $forthColorDarker3;

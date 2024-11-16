@@ -1,0 +1,58 @@
+@use "sass:list";
+
+.top-bar {
+  padding: 0 $containerSidePadding;
+  color: $forthColorDarker1;
+  background-color: $tertiaryColor;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: capitalize;
+  gap: list.nth($spaces, 8);
+  font-size: $fontSizeSm;
+  font-weight: $fontWeightSemibold;
+  text-wrap: nowrap;
+  @include mobile() {
+    display: none;
+  }
+  @include tablet {
+    justify-content: center;
+  }
+
+  &__business {
+    display: flex;
+    // To make a thin space between the two span elements
+    gap: 1px;
+    // To give that thin space a color and make it look like a line
+    background-color: $forthColorDarker3;
+
+    @include tablet {
+      display: none;
+    }
+
+    span {
+      // To cover the background color of parent
+      background-color: $tertiaryColor;
+      padding: list.nth($spaces, 5);
+    }
+    span:first-child {
+      padding-left: 0;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: list.nth($spaces, 8);
+    & > li {
+      padding: list.nth($spaces, 5) 0;
+      & > a {
+        color: inherit;
+        text-decoration: none;
+        transition: all map-get($durations, 150);
+        &:hover {
+          opacity: 70%;
+        }
+      }
+    }
+  }
+}

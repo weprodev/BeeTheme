@@ -1,0 +1,116 @@
+@use "sass:list";
+
+/*------------------------------------*\
+  #FORNT
+\*------------------------------------*/
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+body {
+  font-family: $primaryFontFamily;
+}
+
+.paragraph {
+  color: $tertiaryColor;
+  font-weight: $fontWeightSemibold;
+  line-height: 1.8;
+
+  &--primary {
+    color: $tertiaryColor;
+  }
+  &--secondary {
+    color: $forthColorDarker3;
+  }
+  &--tertiary {
+    color: $forthColorDarker2;
+  }
+}
+
+.tag {
+  padding: list.nth($spaces, 2) list.nth($spaces, 5);
+  border-radius: $roundedFull;
+  font-weight: $fontWeightBold;
+  text-transform: uppercase;
+  text-align: center;
+  &--primary {
+    color: $primaryColor;
+    background-color: $fifthColor;
+  }
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: list.nth($spaces, 2);
+  font-size: $fontSize2Xl;
+  font-weight: $fontWeightSemibold;
+
+  &__arrow {
+    transform: rotate(-45deg);
+  }
+  &--primary {
+    color: $tertiaryColor;
+  }
+  &--secondary {
+    color: $secondaryColor;
+  }
+}
+
+/*------------------------------------*\
+  #HEADINGS
+\*------------------------------------*/
+.heading-1,
+.heading-2,
+.heading-3 {
+  font-weight: $fontWeightBold;
+  text-transform: uppercase;
+  &--primary {
+    color: $tertiaryColor;
+  }
+  &--secondary {
+    color: $secondaryColor;
+  }
+}
+
+.heading-1 {
+  font-size: $fontSize7Xl;
+}
+
+.heading-2 {
+  font-size: $fontSize5Xl;
+}
+
+.heading-3 {
+  font-size: $fontSize4Xl;
+}
+
+/*------------------------------------*\
+  #MEDIA QUERIES
+\*------------------------------------*/
+@include laptop {
+  .heading-1 {
+    font-size: $fontSize5Xl;
+  }
+
+  .heading-2 {
+    font-size: $fontSize4Xl;
+  }
+
+  .heading-3 {
+    font-size: $fontSize3Xl;
+  }
+}
+
+@include mobile {
+  .heading-1 {
+    font-size: $fontSize4Xl;
+  }
+
+  .heading-2 {
+    font-size: $fontSize3Xl;
+  }
+
+  .heading-3 {
+    font-size: $fontSize2Xl;
+  }
+}

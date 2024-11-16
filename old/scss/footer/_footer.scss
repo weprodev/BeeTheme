@@ -1,0 +1,247 @@
+/*========================================================================================
+*********    
+*******      
+*****       DIV FOOTER
+***         
+*/
+
+.footer-section{
+    width                   : 100%;
+    height                  : auto;
+    display                 : flex;
+    flex-direction          : column;
+    background-image        : url('../img/weprodev-2.jpg');
+    background-repeat       : no-repeat;
+    background-size         : cover;
+    background-position     : center;
+    color                   : $WHITE;
+    align-items             : center;
+    justify-content         : center;
+    position: relative;
+    // overflow                : scroll;
+    &::before{
+        content: "";
+        background-color: rgba($color: $BLACK, $alpha: 0.85);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 0;
+        width: 100%;
+    }
+
+    .text-section{
+        display                 : flex;
+        width                   : 70%;
+        // margin-top              : 2em;
+        flex-direction          : row;
+        padding                 : 5em 0em;
+        justify-content         : center;
+        z-index                 : 10;
+
+        @include laptop{
+            width: 90%;
+        }
+        @include tablet{
+            flex-flow           : unset;
+            flex-direction      : column;
+            // width               : 90%;
+            margin              : 2em 0em 0em 3em;
+            
+        }
+        @include mobile{
+            width               : 94%;
+            padding             : 6em 0em 3em;
+        }
+
+            .colm-txt{
+                width           : inherit;
+
+               &:nth-child(even)
+               {
+                padding                 : 0em 5em;
+                width                   : 30%;
+                    @include led{
+                        padding             : 0em 3em;
+                    }
+                    @include laptop{
+                        padding             : 0em 3em;
+                        span , p{
+                            font-size: 20px;
+                        }
+                    }
+                    @include tablet{
+                        width               : 100%;
+                        padding             : 0em;
+                        span , p {
+                            font-size: 23px;
+                        }  
+                    }
+               }//nth-child
+               
+               @include tablet{
+                    margin-bottom        : 3em;
+               }
+                h1{
+                    font-size               : 2.5em;
+                    padding-bottom          : 70px;
+                    font-weight             : bolder;
+                }
+                .span-text{
+                    font-size               : 23px;
+                    line-height             : 2.5em;
+                    padding-left            : 3em;
+                    position                : relative;
+                    top                     : -26px;
+                    @include laptop{
+                        padding-left         : 2em;
+                    }
+                    @include tablet{
+                        top                 : -30px;
+                    }
+                    @include mobile{
+                        font-size           : 21px;
+                        padding-left        : 2em;
+                    }
+                    @include mini_mobile{
+                        font-size           : 20px;
+                        
+                    }
+                }
+                .email-wrap{
+                    word-wrap: break-word;
+                }
+                p{
+                    font-size               : 20px;
+                    line-height             : 2.1;
+                }
+                .icon{
+                    font-size               : 36px;
+                    position                : relative;
+                    top                     : 10px;  
+                    @include mobile{
+                        font-size           : 30px;
+                        top                 : 4px;
+                    }
+                }
+                .input-e{
+                    margin-top              : 3em;
+                    border-radius           : 5px 0px 0px 5px;
+                    border                  : 1px solid $WHITE;
+                    background              : $BLACK;
+                    color                   : $WHITE;
+                    width                   : 12em;
+                    font-size               : 1em;
+                    &:focus{
+                        border-color: $mainColorWeprodev;
+                    }
+                    
+                    @include led4k{
+                        width                : 12em;
+                    }
+                    @include led{
+                        border-radius       : 5px 0px 0px 5px;
+                    }
+                    @include lcd{
+                        width               : 92%;
+                        border-radius       : 5px 5px 5px 5px;
+                    }
+                    @include laptop{
+                        width                : 88%;
+                        border-radius        : 5px 5px 5px 5px;
+                    }
+                    @include tablet{
+                        width               : 45%;
+                        border-radius       : 5px 0px 0px 5px;
+                    }
+                    @include mobile{
+                        width               : 62%;
+                        border-radius       : 5px 0px 0px 5px;
+                    }
+                    @include mini_mobile{
+                        width               : 82%;
+                        border-radius       : 5px 5px 5px 5px;
+                    }
+                }//inout e
+                .submit-b{
+                    background              : $mainColorWeprodev;
+                    color                   : $WHITE;
+                    font-size               : 1.1em;
+                    border-radius           : 0px 5px 5px 0px;
+                    position                : relative;
+                    left                    : -5px;
+                    border                  : 1px solid $mainColorWeprodev; 
+                    padding                 : 1em 1em; 
+                    &:hover{
+                        background-color    : rgba($color: $mainColorWeprodev, $alpha: 0.8);
+                        color               : $WHITE;
+                        border-color        : $mainColorWeprodev;
+                    }
+                    @include lcd{
+                        width               : 100%;
+                        border-radius       : 5px 5px 5px 5px;
+                        left                : 0em;
+                        top                 : 1em;
+                    }
+                    @include laptop{
+                        border-radius       : 5px 5px 5px 5px;
+                        width               : 100%;
+                        left                : 0em;
+                        top                 : 1em;
+                    }
+                    @include tablet{
+                        width               : 15%;
+                        left                : -0.3em;
+                        top                 : 0em;
+                        border-radius       : 0px 5px 5px 0px;
+                    }
+                    @include mobile {
+                        border-radius       : 0px 5px 5px 0px;
+                        width               : 25%;
+                        left                : -2em;
+                    }
+                    @include mini_mobile{
+                        width               : 91%;
+                        left                : 0%;
+                        top                 : 1.5em;
+                        border-radius       : 5px 5px 5px 5px;
+                    }
+                }//submit b
+            }//colm txt
+    }//text footer
+    .down-footer{
+
+        display             : flex;
+        border-top          : 2px solid rgba($color: $mainColorWeprodev, $alpha: 0.5);
+        width               : 100%;
+        justify-content     : center;
+        z-index             : 10;
+
+        .logo{
+            display         : flex;
+            flex-direction  : row;
+            width           : 70%;
+
+            @include tablet{
+                width       : 90%;
+            }
+
+            img{
+                width       : 7em;
+                margin      : 1em 0em;
+
+                @include mobile{
+                    margin  : 1.5em 0em;
+                }
+            }//img
+
+            .text-d{
+                display                 : flex;
+                color                   : $ASBESTOS;
+                align-items             : center;
+            }
+        }//logo
+
+    }//down footer
+    
+}//footer section

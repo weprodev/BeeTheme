@@ -1,0 +1,53 @@
+@use "sass:list";
+
+.home-page {
+  padding-top: $spaceBetweenSections;
+  padding-bottom: $spaceBetweenSections;
+  &__headline {
+    text-align: center;
+    font-size: 4.2rem;
+    font-weight: 900;
+    background-image: linear-gradient(to right, $colorNinth, $colorEighth);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  &__headline_1 {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: $fontWeightBold;
+    background-image: linear-gradient(to right, $colorEighth, $colorSeventh);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  &__description {
+    text-align: center;
+    font-size: $fontSizeLg;
+    margin-bottom: list.nth($spaces, 10);
+  }
+  &__description_1 {
+    text-align: center;
+    font-size: $fontSizeLg;
+    padding-bottom: list.nth($spaces, 16);
+  }
+  &__imgs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: list.nth($spaces, 12);
+    column-gap: list.nth($spaces, 12);
+  }
+  &__img_boxs {
+    outline: 0.1px solid $colorEleventh;
+    outline-offset: 0.8rem;
+    border-radius: $rounded;
+    img{
+      width: 100%;
+    }
+  }
+  &__number {
+    text-align: center;
+    font-size: $fontSize2Xl;
+    font-weight: $fontWeightBold;
+    padding: list.nth($spaces, 4) 0 list.nth($spaces, 4) 0;
+  }
+}

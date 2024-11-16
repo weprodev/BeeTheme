@@ -1,0 +1,34 @@
+
+@use "sass:list";
+.btn {
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: list.nth($spaces, 4) list.nth($spaces, 10);
+    display: inline-block;
+    border-radius: $rounded2Xl;
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba($colorBlack, 0.2);
+  }
+  &:active {
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba($colorBlack, 0.2);
+  }
+
+  &-button {
+    background-image: linear-gradient(to right, $colorSecondary, $colorPrimary);
+    color: $colorwihte;
+    box-shadow: 0 1rem 2rem rgba($colorBlack, 0.1);
+  }
+  &-cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+

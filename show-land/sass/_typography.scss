@@ -1,0 +1,29 @@
+body {
+  font-family: $primaryFontFamily;
+  font-weight: $fontWeightRegular;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: $colorwihte;
+  font-size: 95%;
+}
+
+.background-color {
+  background-image: linear-gradient(to right, $colorSecondary, $colorPrimary);
+  height: 100vh;
+
+  &__1 {
+    background-color: $colorSixth;
+  }
+
+  &__2 {
+    background-color: $colorTenth;
+  }
+  &__3 {
+    background-color: $colorTwelfth;
+  }
+}
+
+.container {
+  width: 75rem;
+  margin: 0 auto;
+}

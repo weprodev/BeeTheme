@@ -1,0 +1,28 @@
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 75rem;
+  top: 1rem;
+  position: relative;
+  left: 1rem;
+
+  .center-header ul {
+    display: flex;
+    gap: 20px;
+    padding: 0px;
+    margin: 0px;
+
+    li a:hover {
+      background: none;
+      color: $GREEN-BUTTON-BASKET;
+    }
+  }
+
+  .left-haeder {
+    display: flex;
+    img {
+      position: relative !important;
+    }
+  }
+}
