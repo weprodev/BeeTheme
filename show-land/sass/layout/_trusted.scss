@@ -1,0 +1,32 @@
+.trusted {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: nth($spaces, 16);
+  padding: nth($spaces, 12);
+  &__info {
+    display: inline-flex;
+    gap: nth($spaces, 8);
+    background-color: $colorTwelfth;
+    padding: nth($spaces, 6) nth($spaces, 6);
+    border-radius: $rounded2Xl;
+  }
+  &__icon {
+    width: 4rem;
+    height: 4rem;
+  }
+  &__paragraph {
+    color: $colorSixteenth;
+  }
+  &__paragraph_1 {
+    margin-top: nth($spaces, 2);
+    font-weight: $fontWeightBold;
+  }
+  &__headline {
+    font-size: $fontSize4Xl;
+    font-weight: $fontWeightBold;
+    background-image: linear-gradient(to right, $colorEighth, $colorSeventh);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+}

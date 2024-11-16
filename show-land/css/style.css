@@ -629,6 +629,39 @@ body.modal-open {
   border-bottom: solid #fff 0.1rem;
 }
 
+.trusted {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4em;
+  padding: 3em;
+}
+.trusted__info {
+  display: inline-flex;
+  gap: 2em;
+  background-color: #00092e;
+  padding: 1.5em 1.5em;
+  border-radius: 1em;
+}
+.trusted__icon {
+  width: 4rem;
+  height: 4rem;
+}
+.trusted__paragraph {
+  color: rgba(255, 255, 255, 0.9137254902);
+}
+.trusted__paragraph_1 {
+  margin-top: 0.5em;
+  font-weight: 700;
+}
+.trusted__headline {
+  font-size: 2.25em;
+  font-weight: 700;
+  background-image: linear-gradient(to right, #087f5b, #c92a2a);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 /*------------------------------------*\
   #BASE
 \*------------------------------------*/
