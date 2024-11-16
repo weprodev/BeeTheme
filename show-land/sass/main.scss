@@ -4,7 +4,9 @@
 @import "../../shared/scss/abstracts/variables";
 @import "variables";
 @import "typography";
-@import "../../shared/scss/abstracts/variables";
+@import "base";
+@import "../../shared/scss/abstracts/media-query";
+
 /*------------------------------------*\
   #LAYOUTS
 \*------------------------------------*/
@@ -21,8 +23,10 @@
   #BASE
 \*------------------------------------*/
 @import "../../shared/scss/base/reset";
+@import "../../shared/scss/base/animation";
 
 /*------------------------------------*\
   #COMPONENTS
 \*------------------------------------*/
 @import "components/button";
+@import "components/demo-modal";
