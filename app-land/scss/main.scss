@@ -9,16 +9,16 @@
     ***  shared files 
     **  
     */   
+    
     @import "../../shared/scss/shared.scss";
-
 
     /*--------------------------------
     ***  IMPORT GENERAL AND IMPORTANT
     **   VARIABLES
     */
 
-        @import "variables";
-
+    @import "variables"; 
+    
     /*--------------------------------
     ***  SET DIRECTION BEFORE ANYTHING
     **   
@@ -27,11 +27,37 @@
     @import "typography";
 
     /*--------------------------------
-    ***  
-    **   HEADER
+    ***  SET DIRECTION BEFORE ANYTHING
+    **   
+    */
+
+    @import "./component/_button.scss";
+
+    /*--------------------------------
+    ***  IMPORT GENERAL AND IMPORTANT
+    **   MIXINS
+    */
+
+    @import "./mixins/mixins";
+
+    /*--------------------------------
+    ***  LAYOUT
+    **   HEADER, HERO SECTION, EXPLORE HUB, SMART SOLUTIONS, CUSTOMER REVIEWS, PLAN SELECTOR HUB
     */   
 
     @import "layout/header";
+
+    @import "layout/heroSection";
+
+    @import "layout/exploreHub";
+
+    @import "layout/smartSolutions";
+    
+    @import "layout/customerReviews";
+
+    @import "layout/planSelectorHub";
+
+    @import "layout/footer";
 
 /*
 ***         

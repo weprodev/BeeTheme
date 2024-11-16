@@ -1,0 +1,238 @@
+@use "sass:list";
+@use "sass:color";
+@import "../../../shared/scss/components/button";
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60vh;
+  background: url("../images/main-hero.jpg") center/cover no-repeat;
+  color: $lightColor;
+  text-align: left;
+  padding: list.nth($spaces, 4) list.nth($spaces, 12);
+  margin: 0 auto;
+  border-radius: $rounded3Xl;
+
+  .hero-content {
+    z-index: 1;
+    max-width: 80%;
+
+    .tagline {
+      font-size: $fontSizeLg;
+      font-weight: $fontWeightMedium;
+      margin-bottom: list.nth($spaces, 2);
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .title {
+      font-size: $fontSize9Xl;
+      font-weight: $fontWeightBold;
+    }
+
+    .actions {
+      display: flex;
+      gap: list.nth($spaces, 4);
+      justify-content: flex-start;
+      margin-top: list.nth($spaces, 4);
+
+      .get-in-touch,
+      .our-services {
+        @include button(
+          $bg: none,
+          $color: $lightColor,
+          $hoverBgColor: rgba(255, 255, 255, 0.1),
+          $padding: list.nth($spaces, 2) list.nth($spaces, 4)
+        );
+        border-bottom: 1px solid $lightColor;
+      }
+    }
+  }
+
+  .recent-project {
+    position: absolute;
+    top: 30%;
+    right: list.nth($spaces, 8);
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: list.nth($spaces, 4);
+    width: 15.625em;
+    height: 15.625em;
+
+    .recent-project-item {
+      background-color: rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(5px);
+      padding: list.nth($spaces, 2);
+      border-radius: $rounded2Xl;
+      transition: transform 0.3s ease;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      gap: list.nth($spaces, 2);
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: $roundedLg;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        grid-area: 1 / 1 / 5 / 5;
+      }
+
+      .recent-project-options {
+        grid-area: 1 / 5 / 5 / 6;
+        grid-column-start: 5;
+
+        .recent-project-options-button {
+          @include button(
+            $bg: none,
+            $color: $lightColor,
+            $hoverBgColor: rgba(255, 255, 255, 0.1),
+            $padding: list.nth($spaces, 2),
+            $radius: $roundedFull,
+            $border: none
+          );
+          width: 2.625em;
+          height: 2.625em;
+        }
+      }
+
+      .recent-project-button {
+        @include button(
+          $bg: none,
+          $color: $lightColor,
+          $hoverBgColor: rgba(255, 255, 255, 0.1),
+          $padding: list.nth($spaces, 2),
+          $radius: $roundedFull,
+          $border: 1px solid $lightColor
+        );
+        width: 2.625em;
+        height: 2.625em;
+        grid-area: 5 / 1 / 6 / 3;
+
+        .arrow-icon {
+          padding: 0;
+        }
+      }
+
+      .recent-project-caption {
+        color: #fff;
+        font-size: $fontSizeSm;
+        text-align: center;
+        margin-top: list.nth($spaces, 2);
+        grid-area: 5 / 3 / 6 / 6;
+      }
+    }
+  }
+
+  .arrow-icon {
+    width: 1.1em;
+    height: 1.1em;
+    padding-left: list.nth($spaces, 2);
+    display: inline-block;
+  }
+
+  .statistics {
+    background-color: #fff;
+    color: $darkColor;
+    position: absolute;
+    display: flex;
+    gap: list.nth($spaces, 4);
+    bottom: 0;
+    right: 0;
+    padding: list.nth($spaces, 5);
+    border-radius: $rounded3Xl 0 0 0;
+    max-width: 50%;
+
+    .stat-item {
+      padding: list.nth($spaces, 2);
+
+      .stat-value {
+        font-size: $fontSize4Xl;
+        font-weight: $fontWeightBold;
+      }
+    }
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+    border-radius: $rounded3Xl;
+  }
+}
+
+@media (max-width: $beta) {
+  .hero {
+    .hero-content {
+      max-width: 65%;
+
+      .title {
+        font-size: $fontSize6Xl;
+      }
+    }
+  }
+}
+
+@media (max-width: $gamma) {
+  .hero {
+    .hero-content {
+      max-width: 50%;
+
+      .title {
+        font-size: $fontSize4Xl;
+      }
+    }
+  }
+}
+
+@media (max-width: $eta) {
+  .hero {
+    flex-direction: column;
+    padding: 0;
+    height: 80vh;
+
+    .hero-content {
+      max-width: 100%;
+      padding: list.nth($spaces, 8) list.nth($spaces, 4) list.nth($spaces, 4);
+    }
+
+    .recent-project {
+      position: relative;
+      transform: none;
+      top: 0;
+      right: 0;
+
+      .recent-project-item {
+        img {
+          aspect-ratio: 16 / 9;
+        }
+      }
+    }
+
+    .statistics {
+      position: relative;
+      max-width: 100%;
+      border-radius: 0;
+      padding: list.nth($spaces, 2);
+      gap: list.nth($spaces, 2);
+
+      .stat-item {
+        .stat-value {
+          font-size: $fontSize2Xl;
+        }
+      }
+    }
+  }
+}

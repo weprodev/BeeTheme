@@ -19,7 +19,10 @@ body {
     color: $tertiaryColor;
   }
   &--secondary {
-    color: $secondaryColorDarker;
+    color: $forthColorDarker3;
+  }
+  &--tertiary {
+    color: $forthColorDarker2;
   }
 }
 
@@ -31,7 +34,7 @@ body {
   text-align: center;
   &--primary {
     color: $primaryColor;
-    background-color: $primaryColorLighter;
+    background-color: $fifthColor;
   }
 }
 
