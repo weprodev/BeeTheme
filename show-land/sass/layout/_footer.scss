@@ -1,0 +1,48 @@
+.footer {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  &__headline {
+    font-size: $fontSize6Xl;
+    font-weight: $fontWeightBold;
+    text-align: center;
+  }
+  &__info {
+    display: flex;
+    justify-content: center;
+    gap: nth($spaces, 8);
+  }
+  &__features {
+    display: flex;
+    align-items: baseline;
+    gap: nth($spaces, 2);
+    border-radius: $rounded2Xl;
+    font-size: $fontSizeXl;
+    margin-bottom: nth($spaces, 10);
+  }
+  &__icone {
+    stroke: $colorBlack;
+    background-image: linear-gradient(to right, $colorWhite, $colorSeventh);
+    width: 1rem;
+    height: 1rem;
+    border-radius: $rounded2Xl;
+    margin-bottom: -0.1rem;
+  }
+  &-btn:link,
+  &-btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: nth($spaces, 2) nth($spaces, 8);
+    display: inline-block;
+    border-radius: $roundedLg;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: translateY(-0.3rem);
+      box-shadow: 0 1rem 2rem rgba($colorBlack, 0.2);
+    }
+    &:active {
+      transform: translateY(-0.1rem);
+      box-shadow: 0 0.5rem 1rem rgba($colorBlack, 0.2);
+    }
+  }
+}
