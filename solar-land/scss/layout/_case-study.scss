@@ -9,7 +9,8 @@
     .case-study-title {
       font-size: $fontSize5Xl;
       text-align: center;
-      width: 75%;
+      width: 50%;
+      margin: 0 auto;
 
       span {
         color: $secondaryColor;
@@ -78,3 +79,24 @@
     }
   }
 }
+
+@media (max-width: $eta) {
+  .case-study {
+    margin: 0 auto;
+    padding: list.nth($spaces, 6) 0;
+
+    .case-study-header {
+      .case-study-title {
+        font-size: $fontSize3Xl;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+
+    .case-study-card {
+      flex-direction: column;
+    }
+  }
+}
+
