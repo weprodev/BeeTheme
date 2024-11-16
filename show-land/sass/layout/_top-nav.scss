@@ -1,3 +1,4 @@
+@use "sass:list";
 .container {
   .header {
     display: flex;
@@ -13,17 +14,16 @@
   .main-nav {
     &__list {
       display: flex;
-      padding-top: $fontSizeBase;
-      gap: $fontSize2Xl;
+      padding-top: list.nth($spaces, 4);
+      gap: list.nth($spaces, 6);
       list-style: none;
       align-items: center;
     }
     &__link:link,
     &__link:visited {
       text-decoration: none;
-
       font-size: $fontSizeBase;
-      color: $colorwhite;
+      color: $colorwihte;
       text-transform: uppercase;
       font-weight: $fontWeightBold;
     }

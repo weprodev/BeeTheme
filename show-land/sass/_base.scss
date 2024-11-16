@@ -1,0 +1,21 @@
+body.modal-open {
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0.4rem;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: $roundedXl;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $colorGreyDark2;
+  border-radius: $roundedXl;
+  &:hover {
+    background: $colorGreyDark;
+  }
+}

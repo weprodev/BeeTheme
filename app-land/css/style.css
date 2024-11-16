@@ -25,6 +25,8 @@
 ***  GENERAL DIFINITIONS
 **	 CSS3 , CLEARFIX
 */
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
 .container {
   width: 90%;
 }
@@ -413,7 +415,7 @@ body li {
 */
 /*--------------------------------
 ***  LAYOUT
-**   HEADER, HERO SECTION, EXPLORE HUB, SMART SOLUTIONS
+**   HEADER, HERO SECTION, EXPLORE HUB, SMART SOLUTIONS, CUSTOMER REVIEWS, PLAN SELECTOR HUB
 */
 .header .hide-on-laptop {
   display: none;
@@ -422,7 +424,7 @@ body li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 1.25em;
 }
 .header__main nav ul {
   padding: 0;
@@ -431,7 +433,7 @@ body li {
   list-style: none;
 }
 .header__main nav ul li {
-  margin: 0 15px;
+  margin: 0 0.75em;
 }
 .header__hidden {
   position: fixed;
@@ -443,7 +445,7 @@ body li {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   background-color: rgba(255, 255, 255, 0.2);
-  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: -10px 0 0.75em rgba(0, 0, 0, 0.1);
   text-align: center;
   display: none;
 }
@@ -498,7 +500,7 @@ body li {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 2rem;
+  border-radius: 2em;
 }
 .hero__section--text-overlay {
   background-color: rgba(0, 0, 0, 0.5);
@@ -520,7 +522,7 @@ body li {
 .hero__section--text-overlay .container h1 {
   text-align: center;
   padding-top: 1em;
-  font-size: 2.25em;
+  font-size: 1.875em;
   font-weight: 700;
 }
 .hero__section--text-overlay .container p {
@@ -541,7 +543,7 @@ body li {
 .hero__section--text-overlay .container .cta__button--button {
   width: 9rem;
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 0.5em;
   height: 3rem;
   font-size: 1em;
 }
@@ -549,7 +551,7 @@ body li {
   background-color: rgb(170, 170, 170);
   width: 9rem;
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 0.5em;
   height: 3rem;
   cursor: pointer;
   font-size: 1em;
@@ -572,10 +574,10 @@ body li {
     left: 0.5rem;
   }
   .hero__section .hero__section--text-overlay {
-    font-size: 0.625rem;
+    font-size: 0.75em;
     height: 100%;
     width: 100%;
-    left: 0rem;
+    left: 0;
     top: 0;
   }
   .hero__section .hero__section--text-overlay .container {
@@ -584,30 +586,49 @@ body li {
     left: 0.7rem;
     height: 20rem;
   }
+  .hero__section .hero__section--text-overlay .container h1 {
+    font-size: 3em;
+  }
   .hero__section .hero__section--text-overlay .container p {
+    font-size: 1.25em;
     width: 76%;
-    left: 2rem;
+    left: 3rem;
     position: relative;
-    font-size: 0.875em;
     font-weight: 700;
+    padding-top: 2em;
   }
   .hero__section .hero__section--text-overlay .container .cta__button {
     position: relative;
     text-align: center;
     display: flex;
-    width: 22rem;
     gap: 2em;
-    left: 1rem;
-    padding-top: 1em;
+    padding-top: 2em;
     text-align: center;
     place-content: center;
+    width: 100%;
+    left: 0;
+  }
+  .hero__section .hero__section--text-overlay .container .cta__button--button {
+    font-size: 1.25em;
+  }
+  .hero__section .hero__section--text-overlay .container .cta__button--button-more {
+    font-size: 1.25em;
   }
   .hero__section .hero__section--text-overlay .container .stats-container {
-    font-size: 1em;
-    left: -3rem;
+    left: 0;
+    font-size: 1.125em;
+    padding-top: 2em;
+    gap: 3em;
+    margin: 0 auto;
   }
   .hero__section .hero__section--text-overlay .container .stats-container .stat-item p {
     width: 100%;
+  }
+  .hero__section .hero__section--text-overlay .container .stats-container .stat-item p:first {
+    left: 2.5rem;
+  }
+  .hero__section .hero__section--text-overlay .container .stats-container .stat-item p:last-child {
+    left: 0.5rem;
   }
 }
 
@@ -617,20 +638,20 @@ body li {
   width: 97%;
   left: 1rem;
   /*--------------------------------
-  *** FOR MINI MOBILE
-  **	MAX : 400PX / 25em
-  */
-  /*--------------------------------
-  *** FOR MOBILE
-  **	MAX : 640PX / 40em
+  *** FOR ANY DEVICE MAX SIZE UNTIL
+  **	MAX-WIDTH : 1200px OR 75em
   */
   /*--------------------------------
   *** FOR ANY DEVICE MAX SIZE UNTIL
   **	MAX-WIDTH : 992px OR 62em
   */
   /*--------------------------------
-  *** FOR ANY DEVICE MAX SIZE UNTIL
-  **	MAX-WIDTH : 1200px OR 75em
+  *** FOR MINI MOBILE
+  **	MAX : 400PX / 25em
+  */
+  /*--------------------------------
+  *** FOR MOBILE
+  **	MAX : 640PX / 40em
   */
 }
 .explore__hub h2 {
@@ -640,7 +661,7 @@ body li {
 .explore__hub .header__section {
   display: flex;
   justify-content: space-between;
-  padding: 2em;
+  padding-top: 2em;
 }
 .explore__hub .header__section p {
   width: 24rem;
@@ -660,20 +681,20 @@ body li {
 }
 .explore__hub .card__section {
   padding-top: 2em;
-  justify-content: space-between;
   display: flex;
+  justify-content: space-between;
 }
 .explore__hub .card__section .card {
-  background-color: #f1f1f1;
-  border-radius: 2rem;
   width: 24rem;
+  border-radius: 2em;
+  background-color: rgb(255, 255, 255);
 }
 .explore__hub .card__section .card__img img {
-  border-top-right-radius: 2rem;
-  border-top-left-radius: 2rem;
-  object-fit: cover;
-  height: 20rem;
   width: 100%;
+  height: 20rem;
+  object-fit: cover;
+  border-top-left-radius: 2em;
+  border-top-right-radius: 2em;
 }
 .explore__hub .card__section .card__text-box {
   padding: 0.5em;
@@ -683,24 +704,85 @@ body li {
 }
 .explore__hub .card__section .card__text-box .btn {
   background: rgba(229, 229, 229, 0.81);
-  border-radius: 0.375em;
-  font-size: 0.875em;
   position: relative;
+  border-radius: 0.375em;
   cursor: pointer;
+  font-size: 0.875em;
   height: 1.5rem;
   border: none;
+  top: -21rem;
   width: 6rem;
-  top: -22rem;
   left: 1rem;
 }
 .explore__hub .card__section .card__text-box .btn:hover {
   background: rgba(193, 193, 193, 0.81);
   transition: 0.5s;
 }
+@media screen and (max-width: 75em) {
+  .explore__hub h2 {
+    text-align: center;
+  }
+  .explore__hub .header__section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .explore__hub .header__section .cta__button {
+    width: 100%;
+    text-align: center;
+    padding-top: 2em;
+    position: relative;
+  }
+  .explore__hub .card__section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    align-items: center;
+    left: -0.5rem;
+    position: relative;
+  }
+  .explore__hub .card__section .card {
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 62em) {
+  .explore__hub {
+    text-align: center;
+  }
+  .explore__hub .header__section {
+    display: grid;
+    justify-content: space-around;
+  }
+  .explore__hub .header__section p {
+    margin: 0 auto;
+    width: 60%;
+    line-height: 1.7;
+    padding-top: 1em;
+    text-align: center;
+  }
+  .explore__hub .header__section .cta__button {
+    margin: 0 auto;
+    padding-top: 1em;
+  }
+  .explore__hub .card__section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    align-items: center;
+    left: -0.5rem;
+    position: relative;
+  }
+  .explore__hub .card__section .card {
+    margin: 0 auto;
+  }
+  .explore__hub .card__section .card__text-box .btn {
+    left: -6rem;
+  }
+}
 @media screen and (max-width: 25em) {
   .explore__hub {
     text-align: center;
-    padding: 5rem 0.5em 0 0.5em;
+    padding: 5rem 0.5em 0rem 0.5em;
     width: 100%;
     left: 0rem;
   }
@@ -728,9 +810,12 @@ body li {
 @media screen and (max-width: 40em) {
   .explore__hub {
     text-align: center;
-    padding: 5rem 0.5em 0 0.5em;
+    padding: 5rem 0.5em 0rem 0.5em;
     width: 100%;
     left: 0rem;
+  }
+  .explore__hub h2 {
+    text-align: center;
   }
   .explore__hub .header__section {
     display: grid;
@@ -751,63 +836,6 @@ body li {
   }
   .explore__hub .card__section .card__text-box .btn {
     left: -6rem;
-  }
-}
-@media screen and (max-width: 62em) {
-  .explore__hub {
-    text-align: center;
-  }
-  .explore__hub .header__section {
-    display: grid;
-    place-items: center;
-    left: -0.6rem;
-    position: relative;
-  }
-  .explore__hub .header__section p {
-    width: 70%;
-    line-height: 1.7;
-    padding-top: 1em;
-    text-align: center;
-  }
-  .explore__hub .header__section .cta__button {
-    padding-top: 1em;
-  }
-  .explore__hub .card__section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2em;
-    left: -0.5rem;
-    position: relative;
-  }
-  .explore__hub .card__section .card__text-box .btn {
-    left: -6rem;
-  }
-}
-@media screen and (max-width: 75em) {
-  .explore__hub h2 {
-    text-align: center;
-  }
-  .explore__hub .header__section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  }
-  .explore__hub .header__section .cta__button {
-    width: 100%;
-    text-align: center;
-    padding-top: 1em;
-    position: relative;
-  }
-  .explore__hub .card__section {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .explore__hub .card__section .card {
-    flex: 0 0 49%;
-  }
-  .explore__hub .card__section .card:last-child {
-    margin-top: 1.25em;
   }
 }
 
@@ -835,12 +863,12 @@ body li {
   justify-content: space-evenly;
 }
 .smart__solutions--img-box {
-  top: 6rem;
+  top: 5rem;
   position: relative;
   width: 27rem;
 }
 .smart__solutions--information-box {
-  padding-top: 2rem;
+  padding-top: 2em;
 }
 .smart__solutions--information-box .menuItem {
   display: flex;
@@ -900,10 +928,6 @@ body li {
   ** MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
   */
   /*--------------------------------
-  *** FOR MOBILE
-  ** MAX : 640PX / 40em
-  */
-  /*--------------------------------
   *** FOR MINI MOBILE
   ** MAX : 400PX / 25em
   */
@@ -937,7 +961,7 @@ body li {
 }
 .customer__reviews--card-section .card {
   width: 24rem;
-  border-radius: 2rem;
+  border-radius: 2em;
   border: none;
   height: 21rem;
 }
@@ -1046,6 +1070,381 @@ body li {
     display: grid;
     gap: 1em;
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.plan__Selector__Hub {
+  padding: 5rem 1em 0.25em 1em;
+  /* Responsive part */
+  /*--------------------------------
+  *** FOR ANY DEVICE MAX SIZE UNTIL
+  **	MAX-WIDTH : 992px OR 62em
+  */
+  /*--------------------------------
+  *** FOR RETINA MOBILE AND LANSCAPE
+  **	MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
+  */
+  /*--------------------------------
+  *** FOR MOBILE
+  **	MAX : 640PX / 40em
+  */
+}
+.plan__Selector__Hub .plans {
+  background: rgb(24, 26, 27);
+  color: rgb(255, 255, 255);
+  padding: 1em;
+  border-radius: 2em;
+}
+.plan__Selector__Hub .plans h1 {
+  font-size: 2.25em;
+  margin-top: 1em;
+  position: relative;
+}
+.plan__Selector__Hub .plans .mainBox {
+  padding-top: 1em;
+}
+.plan__Selector__Hub .plans .mainBox .subscription {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 1.5em;
+  background-color: rgb(38, 39, 40);
+  border-radius: 0.5em;
+}
+.plan__Selector__Hub .plans .mainBox .subscription .subscription-level {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+}
+.plan__Selector__Hub .plans .mainBox .subscription .subscription-level h3 {
+  margin: 0;
+  font-size: 1.5em;
+  color: rgb(255, 255, 255);
+}
+.plan__Selector__Hub .plans .mainBox .subscription .subscription-options {
+  display: flex;
+  gap: 1.25em;
+}
+.plan__Selector__Hub .plans .mainBox .subscription .subscription-options span {
+  width: 8rem;
+  height: 2.5rem;
+  border-radius: 0.5em;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(47, 58, 46);
+  gap: 0.5em;
+  font-size: 1em;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.plan__Selector__Hub .plans .mainBox .subscription .subscription-options span:hover {
+  transform: scale(1.05);
+}
+.plan__Selector__Hub .plans .mainBox .subscription .subscription-options .basic {
+  background: rgb(187, 249, 158);
+}
+.plan__Selector__Hub .plans .mainBox .subscription .subscription-options .advanced {
+  background: rgb(204, 186, 254);
+}
+.plan__Selector__Hub .plans .mainBox .subscription .subscription-options .premium {
+  background: rgb(237, 208, 135);
+}
+.plan__Selector__Hub .plans .mainBox .box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75em 1.25em;
+}
+.plan__Selector__Hub .plans .mainBox .box .status {
+  width: 26rem;
+  justify-content: space-between;
+  display: flex;
+}
+.plan__Selector__Hub .plans .mainBox .box .status span {
+  padding: 0.25em 0.75em;
+}
+.plan__Selector__Hub .plans .mainBox .custom-divider {
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0.75em 0;
+  height: 0.1875rem;
+}
+.plan__Selector__Hub .plans .download-box {
+  position: relative;
+  display: flex;
+}
+.plan__Selector__Hub .plans .download-box p {
+  line-height: 1.7;
+  margin-top: 1em;
+}
+.plan__Selector__Hub .plans .download-box .information-section {
+  width: 50%;
+  text-align: center;
+  padding: 5rem 0.25em 1em 7rem;
+}
+.plan__Selector__Hub .plans .download-box .information-section .btn-download {
+  margin-top: 5rem;
+}
+.plan__Selector__Hub .plans .download-box .information-section .btn-download ul {
+  margin-top: 5rem;
+  width: 41%;
+  text-align: center;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.plan__Selector__Hub .plans .download-box .information-section .btn-download li {
+  display: inline-block;
+  margin: 0.75em;
+}
+.plan__Selector__Hub .plans .download-box .information-section .btn-download .download {
+  width: 12.5rem;
+  height: 4.6875rem;
+  background: black;
+  float: left;
+  border-radius: 0.375em;
+  position: relative;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  border: 0.0625rem solid rgb(255, 255, 255);
+}
+.plan__Selector__Hub .plans .download-box .information-section .btn-download .download > .fa {
+  color: rgb(255, 255, 255);
+  position: absolute;
+  top: 50%;
+  left: 0.9375rem;
+  transform: translateY(-50%);
+}
+.plan__Selector__Hub .plans .download-box .information-section .btn-download .df,
+.plan__Selector__Hub .plans .download-box .information-section .btn-download .dfn {
+  position: absolute;
+  left: 4.375rem;
+}
+.plan__Selector__Hub .plans .download-box .information-section .btn-download .df {
+  top: 1.25rem;
+  font-size: 0.75em;
+}
+.plan__Selector__Hub .plans .download-box .information-section .btn-download .dfn {
+  top: 2.0625rem;
+  font-size: 1em;
+}
+.plan__Selector__Hub .plans .download-box .information-section .btn-download .download:hover {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+  transition: 0.3s ease-in-out;
+}
+.plan__Selector__Hub .plans .download-box .image-box {
+  top: 1rem;
+  position: relative;
+}
+@media screen and (max-width: 62em) {
+  .plan__Selector__Hub .plans {
+    padding: 2em;
+    border-radius: 10px;
+    margin: auto;
+  }
+  .plan__Selector__Hub .plans h1 {
+    font-size: 2.25em;
+    text-align: center;
+    margin-bottom: 1.5em;
+  }
+  .plan__Selector__Hub .plans .mainBox {
+    padding-top: 1.5em;
+  }
+  .plan__Selector__Hub .plans .mainBox .subscription {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+    padding: 1.5em;
+    background-color: rgb(38, 39, 40);
+    border-radius: 0.5em;
+  }
+  .plan__Selector__Hub .plans .mainBox .subscription .subscription-level {
+    justify-content: center;
+    gap: 1em;
+  }
+  .plan__Selector__Hub .plans .mainBox .subscription .subscription-level h3 {
+    font-size: 1.5em;
+  }
+  .plan__Selector__Hub .plans .mainBox .subscription .subscription-options {
+    justify-content: center;
+    gap: 1em;
+  }
+  .plan__Selector__Hub .plans .mainBox .subscription .subscription-options span {
+    width: 100%;
+    height: 2.5rem;
+    font-size: 1em;
+  }
+  .plan__Selector__Hub .plans .mainBox .box {
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+  }
+  .plan__Selector__Hub .plans .mainBox .box .status {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .plan__Selector__Hub .plans .download-box {
+    flex-direction: column;
+    align-items: center;
+  }
+  .plan__Selector__Hub .plans .download-box .image-box {
+    display: none;
+  }
+  .plan__Selector__Hub .plans .download-box .information-section {
+    width: 100%;
+    padding: 2em 1em;
+  }
+  .plan__Selector__Hub .plans .download-box .information-section .btn-download ul {
+    display: contents;
+  }
+  .plan__Selector__Hub .plans .download-box .image-box {
+    margin-top: 1em;
+  }
+}
+@media screen and (min-width: 31.25em) and (max-width: 47.9375em) {
+  .plan__Selector__Hub .plans .mainBox .subscription {
+    justify-content: center;
+    gap: 2em;
+  }
+  .plan__Selector__Hub .plans .mainBox .subscription .subscription-level {
+    justify-content: center;
+  }
+  .plan__Selector__Hub .plans .mainBox .box {
+    display: grid;
+    text-align: center;
+    width: 100%;
+    gap: 1em;
+  }
+  .plan__Selector__Hub .plans .mainBox .box h3,
+  .plan__Selector__Hub .plans .mainBox .box .status {
+    width: 34rem;
+    text-align: center;
+  }
+  .plan__Selector__Hub .plans .download-box .information-section .btn-download ul {
+    display: flex;
+  }
+}
+@media screen and (max-width: 40em) {
+  .plan__Selector__Hub .plans h1 {
+    font-size: 1.875em;
+    text-align: center;
+  }
+  .plan__Selector__Hub .plans .mainBox .subscription {
+    display: grid;
+    text-align: center;
+    width: 100%;
+    gap: 1em;
+  }
+  .plan__Selector__Hub .plans .mainBox .subscription .subscription-level,
+  .plan__Selector__Hub .plans .mainBox .subscription .subscription-options {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .plan__Selector__Hub .plans .mainBox .subscription .subscription-options {
+    justify-content: space-between;
+  }
+  .plan__Selector__Hub .plans .mainBox .box {
+    display: grid;
+    text-align: center;
+    left: -1rem;
+    position: relative;
+  }
+  .plan__Selector__Hub .plans .mainBox .box h3,
+  .plan__Selector__Hub .plans .mainBox .box .status {
+    width: 19rem;
+    text-align: center;
+  }
+  .plan__Selector__Hub .plans .download-box .information-section .information-box {
+    width: 100%;
+    left: 0;
+    position: relative;
+  }
+  .plan__Selector__Hub .plans .download-box .information-section .information-box .btn-download {
+    left: -1.5rem;
+  }
+  .plan__Selector__Hub .plans .download-box .information-section .information-box .btn-download ul {
+    display: contents;
+    top: 3rem;
+  }
+}
+
+.footer__section {
+  padding: 5rem 0.5em 0rem 0.5em;
+  /*--------------------------------
+
+  *** FOR RETINA MOBILE AND LANSCAPE
+  ** MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
+  */
+  /*--------------------------------
+
+  *** FOR MOBILE
+  ** MAX : 640PX / 40em
+  */
+  /*--------------------------------
+
+  *** FOR MINI MOBILE
+  ** MAX : 400PX / 25em
+  */
+}
+.footer__section .footer {
+  display: flex;
+  justify-content: space-between;
+  height: 3rem;
+}
+.footer__section .footer__brand {
+  font-size: 1.875em;
+  font-weight: 600;
+}
+.footer__section .footer__nav-list {
+  display: flex;
+  gap: 1em;
+}
+.footer__section .footer__social-list {
+  display: flex;
+  gap: 1em;
+}
+.footer__section hr {
+  width: 100%;
+  margin: 0.75em 0;
+  background-color: rgba(0, 0, 3, 0.2);
+}
+.footer__section .footer__copyright {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1em;
+}
+@media screen and (max-width: 64em) {
+  .footer__section .footer__brand {
+    font-size: 1.25em;
+  }
+  .footer__section .footer__social {
+    display: none;
+  }
+  .footer__section .footer__social-list {
+    gap: 0.5em;
+  }
+}
+@media screen and (min-width: 31.25em) and (max-width: 47.9375em) {
+  .footer__section .footer__social {
+    display: none;
+  }
+  .footer__section .footer__social-list {
+    gap: 0.25em;
+  }
+}
+@media screen and (max-width: 40em) {
+  .footer__section .footer__brand {
+    font-size: 1.25em;
+  }
+  .footer__section .footer__social {
+    display: none;
+  }
+  .footer__section .footer__social-list {
+    gap: 0.5em;
   }
 }
 

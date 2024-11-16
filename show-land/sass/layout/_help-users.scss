@@ -1,5 +1,6 @@
+@use "sass:list";
 .help-users {
-  padding-top: 5rem;
+  padding-top: $spaceBetweenSections;
   padding-bottom: 6rem;
   &__headline {
     text-align: center;
@@ -12,22 +13,22 @@
   &__paragraph {
     text-align: center;
     font-size: $fontSizeXl;
-    margin-bottom: nth($spaces, 8);
+    margin-bottom: list.nth($spaces, 8);
   }
 
   &__info {
     display: flex;
-    gap: nth($spaces, 16);
+    gap: list.nth($spaces, 16);
   }
 
   &__section {
     display: flex;
-    gap: nth($spaces, 4);
+    gap: list.nth($spaces, 4);
     align-items: center;
   }
 
   &__icone {
-    stroke: $colorWhite;
+    stroke: $colorwihte;
     background-image: linear-gradient(
       to right,
       $colorThirteenth,
@@ -35,7 +36,7 @@
     );
     width: 4rem;
     height: 4rem;
-    padding: nth($spaces, 4) nth($spaces, 4);
+    padding: list.nth($spaces, 4) list.nth($spaces, 4);
     border-radius: $roundedFull;
   }
 
@@ -44,10 +45,10 @@
   }
   &__paragraph_1 {
     color: $colorFifteenth;
-    margin-bottom: nth($spaces, 2);
+    margin-bottom: list.nth($spaces, 2);
   }
   &__link {
-    padding-bottom: 0.4rem;
-    border-bottom: solid $colorWhite 0.1rem;
+    padding-bottom: list.nth($spaces, 2);
+    border-bottom: solid $colorwihte 0.1rem;
   }
 }
