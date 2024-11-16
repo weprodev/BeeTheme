@@ -3,7 +3,7 @@
 .about-section {
   display: flex;
   flex-direction: column;
-  background-color: $primaryColorLighter;
+  background-color: $forthColor;
   padding: $containerSidePadding;
   gap: list.nth($spaces, 12);
   @include mobile {
@@ -46,7 +46,7 @@
 
     &--polling-vote {
       flex-basis: 30%;
-      background-color: $secondaryColorDarker;
+      background-color: $forthColorDarker1;
     }
     &--virtual-events {
       flex-basis: 70%;
