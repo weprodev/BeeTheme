@@ -129,24 +129,6 @@ body.modal-open {
 **	MAX : 400PX / 25em
 */
 /*------------------------------------*\
-  #FONT
-\*------------------------------------*/
-/*------------------------------------*\
-  #BREAKPOINTS
-\*------------------------------------*/
-/*------------------------------------*\
-  #SPACES (padding & margin & gap) 
-\*------------------------------------*/
-/*------------------------------------*\
-  #TRANSITION DURATION
-\*------------------------------------*/
-/*------------------------------------*\
-  #BOX SHADOW
-\*------------------------------------*/
-/*------------------------------------*\
-  #BORDER RADIUS
-\*------------------------------------*/
-/*------------------------------------*\
   #LAYOUTS
 \*------------------------------------*/
 .container .header {
@@ -599,6 +581,52 @@ body.modal-open {
   height: 1rem;
   border-radius: 9999px;
   margin-bottom: -0.1rem;
+}
+
+.help-users {
+  padding-top: 5rem;
+  padding-bottom: 6rem;
+}
+.help-users__headline {
+  text-align: center;
+  font-size: 3em;
+  font-weight: 700;
+  background-image: linear-gradient(to right, #087f5b, #c92a2a);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.help-users__paragraph {
+  text-align: center;
+  font-size: 1.25em;
+  margin-bottom: 2em;
+}
+.help-users__info {
+  display: flex;
+  gap: 4em;
+}
+.help-users__section {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+.help-users__icone {
+  stroke: #fff;
+  background-image: linear-gradient(to right, #554df0, #74d3af);
+  width: 4rem;
+  height: 4rem;
+  padding: 1em 1em;
+  border-radius: 9999px;
+}
+.help-users__headline_1 {
+  font-size: 1.5em;
+}
+.help-users__paragraph_1 {
+  color: rgba(255, 255, 255, 0.7176470588);
+  margin-bottom: 0.5em;
+}
+.help-users__link {
+  padding-bottom: 0.5em;
+  border-bottom: solid #fff 0.1rem;
 }
 
 /*------------------------------------*\
