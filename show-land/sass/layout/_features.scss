@@ -1,0 +1,69 @@
+@use "sass:list";
+.features {
+  padding-top: $spaceBetweenSections;
+  padding-bottom: 8rem;
+  &-btn:link,
+  &-btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: list.nth($spaces, 1) list.nth($spaces, 3);
+    display: inline-block;
+
+    transition: all 0.2s;
+    border-radius: $roundedFull;
+  }
+  &__headline {
+    text-align: center;
+    font-size: $fontSize5Xl;
+    font-weight: $fontWeightBold;
+    background-image: linear-gradient(to right, $colorEighth, $colorSeventh);
+    -webkit-background-clip: text;
+    color: transparent;
+    &_1 {
+      text-align: center;
+      font-size: $fontSize5Xl;
+      font-weight: $fontWeightBold;
+      background-image: linear-gradient(to right, $colorEighth, $colorSeventh);
+      -webkit-background-clip: text;
+      color: transparent;
+      margin-top: -1.5rem;
+    }
+  }
+  &__description {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: list.nth($spaces, 4);
+    row-gap: list.nth($spaces, 4);
+    margin-top: list.nth($spaces, 8);
+  }
+  &__icone_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+  }
+  &__icone {
+    stroke: $colorwihte;
+    background-image: linear-gradient(
+      to right,
+      $colorThirteenth,
+      $colorFourteenth
+    );
+    width: 4rem;
+    height: 4rem;
+    padding: list.nth($spaces, 4) list.nth($spaces, 4);
+    border-radius: $roundedFull;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: $defaultFontSize;
+    font-weight: $fontWeightBold;
+    margin-bottom: list.nth($spaces, 4);
+    letter-spacing: -0.01rem;
+  }
+  &__paragraph {
+    text-align: center;
+    margin-top: -1rem;
+  }
+}

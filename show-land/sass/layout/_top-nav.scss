@@ -1,27 +1,31 @@
 @use "sass:list";
-.main-nav {
-  &__list {
+.container {
+  .header {
     display: flex;
-    padding-top: list.nth($spaces, 4);
-    gap: list.nth($spaces, 6);
-    list-style: none;
-    align-items: center;
+    justify-content: space-between;
   }
-  &__link:link,
-  &__link:visited {
-    text-decoration: none;
-    font-size: $fontSizeBase;
-    color: $colorwihte;
-    text-transform: uppercase;
+
+  .logo {
+    padding-top: 0.8rem;
+    font-size: $fontSize4Xl;
     font-weight: $fontWeightBold;
   }
-}
-.header {
-  display: flex;
-  justify-content: space-between;
-}
-.logo {
-  padding-top: 0.8rem;
-  font-size: 2rem;
-  font-weight: $fontWeightBold;
+
+  .main-nav {
+    &__list {
+      display: flex;
+      padding-top: list.nth($spaces, 4);
+      gap: list.nth($spaces, 6);
+      list-style: none;
+      align-items: center;
+    }
+    &__link:link,
+    &__link:visited {
+      text-decoration: none;
+      font-size: $fontSizeBase;
+      color: $colorwihte;
+      text-transform: uppercase;
+      font-weight: $fontWeightBold;
+    }
+  }
 }

@@ -1,7 +1,8 @@
 @use "sass:list";
+
 .home-page {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: $spaceBetweenSections;
+  padding-bottom: $spaceBetweenSections;
   &__headline {
     text-align: center;
     font-size: 4.2rem;
@@ -22,6 +23,7 @@
   &__description {
     text-align: center;
     font-size: $fontSizeLg;
+    margin-bottom: list.nth($spaces, 10);
   }
   &__description_1 {
     text-align: center;
