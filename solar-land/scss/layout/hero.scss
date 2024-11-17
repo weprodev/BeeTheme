@@ -11,7 +11,7 @@
   background: url("../images/main-hero.jpg") center/cover no-repeat;
   color: $lightColor;
   text-align: left;
-  padding: list.nth($spaces, 4) list.nth($spaces, 8);
+  padding: list.nth($spaces, 4) list.nth($spaces, 12);
   margin: 0 auto;
   border-radius: $rounded3Xl;
 
@@ -27,9 +27,8 @@
     }
 
     .title {
-      font-size: $fontSize6Xl;
+      font-size: $fontSize9Xl;
       font-weight: $fontWeightBold;
-      margin-bottom: list.nth($spaces, 4);
     }
 
     .actions {
@@ -133,9 +132,10 @@
   }
 
   .arrow-icon {
-    width: 0.875em;
-    height: 0.875em;
+    width: 1.1em;
+    height: 1.1em;
     padding-left: list.nth($spaces, 2);
+    display: inline-block;
   }
 
   .statistics {
@@ -170,5 +170,69 @@
     background: rgba(0, 0, 0, 0.3);
     z-index: 0;
     border-radius: $rounded3Xl;
+  }
+}
+
+@media (max-width: $beta) {
+  .hero {
+    .hero-content {
+      max-width: 65%;
+
+      .title {
+        font-size: $fontSize6Xl;
+      }
+    }
+  }
+}
+
+@media (max-width: $gamma) {
+  .hero {
+    .hero-content {
+      max-width: 50%;
+
+      .title {
+        font-size: $fontSize4Xl;
+      }
+    }
+  }
+}
+
+@media (max-width: $eta) {
+  .hero {
+    flex-direction: column;
+    padding: 0;
+    height: 80vh;
+
+    .hero-content {
+      max-width: 100%;
+      padding: list.nth($spaces, 8) list.nth($spaces, 4) list.nth($spaces, 4);
+    }
+
+    .recent-project {
+      position: relative;
+      transform: none;
+      top: 0;
+      right: 0;
+
+      .recent-project-item {
+        img {
+          aspect-ratio: 16 / 9;
+        }
+      }
+    }
+
+    .statistics {
+      position: relative;
+      max-width: 100%;
+      border-radius: 0;
+      padding: list.nth($spaces, 2);
+      gap: list.nth($spaces, 2);
+
+      .stat-item {
+        .stat-value {
+          font-size: $fontSize2Xl;
+        }
+      }
+    }
   }
 }

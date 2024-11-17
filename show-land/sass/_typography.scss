@@ -21,6 +21,10 @@ body {
   &__3 {
     background-color: $colorTwelfth;
   }
+
+  &__4 {
+    background-image: linear-gradient(to right, $colorSecondary, $colorPrimary);
+  }
 }
 
 .container {

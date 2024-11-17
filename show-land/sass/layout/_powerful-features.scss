@@ -1,0 +1,45 @@
+@use "sass:list";
+.powerful-features {
+  padding-top: $spaceBetweenSections;
+  padding-bottom: 6rem;
+  &__headline {
+    text-align: center;
+    font-size: $fontSize5Xl;
+    font-weight: $fontWeightBold;
+    background-image: linear-gradient(to right, $colorEighth, $colorSeventh);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  &__paragraph {
+    text-align: center;
+    font-size: $fontSizeXl;
+  }
+  &__feature {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: list.nth($spaces, 12);
+    column-gap: list.nth($spaces, 11);
+    margin-top: $fontSize4Xl;
+  }
+  &__paragrapha_1 {
+    display: flex;
+    align-items: baseline;
+    gap: list.nth($spaces, 2);
+    outline: 0.1px solid $colorEleventh;
+    outline-offset: 0.4rem;
+    border-radius: $roundedFull;
+    padding: 0 list.nth($spaces, 11) 0 list.nth($spaces, 2);
+  }
+  &__icone {
+    stroke: $colorBlack;
+    background-image: linear-gradient(
+      to right,
+      $colorThirteenth,
+      $colorFourteenth
+    );
+    width: 1rem;
+    height: 1rem;
+    border-radius: $roundedFull;
+    margin-bottom: -0.1rem;
+  }
+}
