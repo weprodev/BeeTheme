@@ -17,10 +17,7 @@
   );
   display: flex;
   align-items: center;
-
-  @include mobile {
-    padding: list.nth($spaces, 3) list.nth($spaces, 4);
-  }
+  text-wrap: nowrap;
 
   &--primary {
     background-color: $primaryColor;
