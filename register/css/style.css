@@ -174,12 +174,10 @@ a {
   }
 }
 .register-form .section-login .section-label-input input {
-  border: 1px solid rgb(0, 0, 0);
   border: 1px solid rgba(0, 0, 0, 0.38);
   width: 80%;
   border-radius: 30px;
   padding: 0.8em;
-  transition: all 0.7s;
 }
 .register-form .section-login .section-label-input input:focus {
   border: 1px solid #FF5B32;

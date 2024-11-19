@@ -54,17 +54,18 @@
        
           
         input{
-            border                : 1px solid $black;
             border                : 1px solid $borderColor ;
             width                 : 80%;
             border-radius         : 30px;
             padding               : 0.8em;
-            transition            : all 0.7s;
+
 
             &:focus{
               border              : 1px solid  $redLogin ;
+
             }
           }
+          
 
           label{  
             font-weight         : bold;
