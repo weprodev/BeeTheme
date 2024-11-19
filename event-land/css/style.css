@@ -93,7 +93,7 @@ body {
 }
 
 .paragraph {
-  color: #24222c;
+  font-size: 1.125em;
   font-weight: 600;
   line-height: 1.8;
 }
@@ -193,6 +193,13 @@ body {
     font-size: 1.5em;
   }
 }
+img,
+picture,
+svg,
+video {
+  width: 100%;
+}
+
 /*------------------------------------*\
   #BASE
 \*------------------------------------*/
@@ -222,7 +229,6 @@ picture,
 svg,
 video {
   display: block;
-  width: 100%;
 }
 
 a {
@@ -248,17 +254,6 @@ a {
   position: absolute;
   z-index: 1;
   top: 100%;
-}
-
-.cta__button--button {
-  width: 7rem;
-  height: 3rem;
-  border: none;
-  border-radius: 2rem;
-  cursor: pointer;
-}
-.cta__button--button:hover {
-  transition: 0.3s ease-in-out;
 }
 
 /*=========================================================
@@ -311,14 +306,10 @@ a {
   cursor: pointer;
   display: flex;
   align-items: center;
+  text-wrap: nowrap;
 }
 .button:hover {
   background-color: none;
-}
-@media screen and (max-width: 40em) {
-  .button {
-    padding: 0.75em 1em;
-  }
 }
 .button--primary {
   background-color: #50cb8b;
@@ -460,7 +451,7 @@ a {
     flex-direction: column;
     align-items: start;
     padding: 1em;
-    min-height: 100vh;
+    min-height: 100dvh;
     gap: 3em;
   }
   .main-navigation__menu-button-divider.open {
@@ -1060,6 +1051,7 @@ a {
 .footer__bottom {
   display: flex;
   gap: 1.5em;
+  line-height: 1.8;
 }
 @media screen and (max-width: 40em) {
   .footer__bottom {
