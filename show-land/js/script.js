@@ -15,15 +15,15 @@ const demos = [
     entirePageImage: "event-land-entire.png", // Name of your entire page image in shared/images/
   },
   {
-    id: 1, // an id that is unique in the array
-    name: "SolarLand", // Name of your page
+    id: 1,
+    name: "SolarLand",
     createdBy: {
-      name: "AbdolMajed ShahBakhsh", // Your name
-      github: "https://github.com/abdolmajed3", // link of your github profile
+      name: "AbdolMajed ShahBakhsh",
+      github: "https://github.com/abdolmajed3",
     },
-    url: "solar-land/index.html", // URL of your page based on root dir
-    mainImage: "solar-land-main.png", // Name of your main page image in shared/images/
-    entirePageImage: "solar-land-entire.png", // Name of your entire page image in shared/images/
+    url: "solar-land/index.html",
+    mainImage: "solar-land-main.jpeg",
+    entirePageImage: "solar-land-entire.jpeg",
   },
 ];
 
