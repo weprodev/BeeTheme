@@ -52,7 +52,6 @@
         font-size: $fontSizeXl;
       }
       &__social {
-        display: none;
         &-list {
           gap: nth($spaces, 2);
         }
@@ -69,7 +68,6 @@
   @include retinaMobile {
     .footer {
       &__social {
-        display: none;
         &-list {
           gap: nth($spaces, 1);
         }
@@ -85,14 +83,35 @@
 
   @include mobile {
     .footer {
-      &__brand {
+      display: grid;
+      justify-content: center;
+      align-content: space-between;
+      justify-items: center;
+      height: 6rem;
+
+      &__nav {
         font-size: $fontSizeXl;
       }
+
+      &__brand {
+        font-size: $fontSize5Xl;
+        top: -4rem;
+        position: relative;
+      }
+
+      &__nav-list {
+        top: -2rem;
+        position: relative;
+      }
+
       &__social {
-        display: none;
         &-list {
-          gap: nth($spaces, 2);
+          gap: nth($spaces, 4);
         }
+      }
+
+      &__section {
+        width: 23rem;
       }
     }
   }

@@ -19,14 +19,11 @@
     }
     .cta__button {
       width: 24rem;
+
       &--button {
         width: 15rem;
         font-size: $fontSizeLg;
-        background-color: rgba(229, 229, 229, 0.81);
         border-radius: $rounded2Xl;
-        &:hover {
-          background-color: rgba(193, 193, 193, 0.81);
-        }
       }
     }
   }
@@ -46,8 +43,7 @@
           width: 100%;
           height: 20rem;
           object-fit: cover;
-          border-top-left-radius: nth($spaces, 8);
-          border-top-right-radius: nth($spaces, 8);
+          border-radius: nth($spaces, 8);
         }
       }
       &__text-box {
@@ -57,17 +53,23 @@
           font-size: $fontSize2Xl;
         }
 
+        .paragraph,
+        p {
+          line-height: 1.6;
+        }
+
         .btn {
-          background: $softLightGray;
           position: relative;
-          border-radius: $roundedMd;
           cursor: pointer;
           font-size: $fontSizeSm;
-          height: 1.5rem;
           border: none;
-          top: -21rem;
-          width: 6rem;
-          left: 1rem;
+          top: -22rem;
+          left: 4rem;
+          width: 6.625rem;
+          height: 2.6875rem;
+          background: #f1f1f1;
+          border-radius: 1.5rem;
+          transform: translate(-50%, -50%);
 
           &:hover {
             background: $mutedSilver;
@@ -77,6 +79,26 @@
       }
     }
   }
+
+  .button-box {
+    text-align: center;
+
+    .cta__button {
+      width: 17rem;
+      height: 3rem;
+      border: none;
+      font-size: 0.9rem;
+      border-radius: $rounded2Xl;
+      background: $vibrantGreen;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+
+      &:hover {
+        background-color: $limeGreen;
+      }
+    }
+  }
+
   // RESPONSIVE SECTION
 
   /*--------------------------------
@@ -153,7 +175,16 @@
 
         &__text-box {
           .btn {
-            left: -6rem;
+            left: -4rem;
+          }
+
+          .paragraph {
+            line-height: 1.6;
+            text-align: start;
+          }
+
+          p {
+            text-align: start;
           }
         }
       }
@@ -190,7 +221,7 @@
         margin-top: nth($spaces, 4);
         &__text-box {
           .btn {
-            left: -6rem;
+            left: -4rem;
           }
         }
       }
@@ -207,6 +238,8 @@
     padding: 5rem nth($spaces, 2) 0rem nth($spaces, 2);
     width: 100%;
     left: 0rem;
+    width: 22rem;
+    margin: 0 auto;
 
     h2 {
       text-align: center;
@@ -229,9 +262,14 @@
       flex-direction: column;
       .card {
         margin-top: nth($spaces, 4);
+        width: 22rem;
         &__text-box {
+          p,
+          .paragraph {
+            text-align: start;
+          }
           .btn {
-            left: -6rem;
+            left: -3rem;
           }
         }
       }

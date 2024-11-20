@@ -3,9 +3,9 @@
 .hero__section {
   border-radius: $rounded3Xl;
   position: relative;
-  left: 1.2rem;
+  margin: 0 auto;
   width: 97%;
-  height: 50rem;
+  height: 37rem;
 
   &--img {
     width: 100%;
@@ -16,38 +16,39 @@
 
   &--text-overlay {
     background-color: $transparentBlack;
-    border-radius: $rounded3Xl;
+    border-radius: $rounded4Xl;
     position: absolute;
     color: $white;
-    width: 28rem;
-    left: 8rem;
-    height: 24rem;
-    top: 10rem;
+    width: 35rem;
+    left: 0rem;
+    height: 100%;
+    top: 0;
 
     .container {
-      width: 95%;
-      top: 0rem;
+      width: 76%;
+      padding-top: nth($spaces, 12);
       position: relative;
-      left: 0.5rem;
       height: 100%;
+      margin: 0 auto;
 
       h1 {
         text-align: center;
-        padding-top: list.nth($spaces, 4);
-        font-size: $fontSize3Xl;
+        padding-top: list.nth($spaces, 2);
+        font-size: 2.5rem;
         font-weight: $fontWeightBold;
       }
 
       p {
         padding-top: list.nth($spaces, 4);
-        line-height: 1.4;
+        text-align: center;
+        font-size: 1.2rem;
+        line-height: 1.6;
       }
 
       .cta__button {
         position: relative;
         text-align: center;
         display: flex;
-        width: 27rem;
         gap: list.nth($spaces, 8);
         left: 0rem;
         padding-top: list.nth($spaces, 4);
@@ -82,7 +83,7 @@
         position: relative;
         padding-top: list.nth($spaces, 4);
         display: flex;
-        width: 27rem;
+        font-size: 1.2rem;
         justify-content: center;
         gap: list.nth($spaces, 8);
       }
@@ -92,81 +93,24 @@
   // Responsive part
 
   /*--------------------------------
+	*** FOR RETINA MOBILE AND LANSCAPE
+	**	MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
+	*/
+
+  @include retinaMobile {
+    &--text-overlay {
+      width: 100%;
+    }
+  }
+
+  /*--------------------------------
 
   *** FOR MINI MOBILE
   ** MAX : 400PX / 25em
   */
-
   @include mobile {
-    overflow-x: hidden;
-    left: 0.5rem;
-
-    .hero__section--text-overlay {
-      font-size: $fontSizeXs;
-      height: 100%;
+    &--text-overlay {
       width: 100%;
-      left: 0;
-      top: 0;
-
-      .container {
-        top: 10rem;
-        text-align: center;
-        left: 0.7rem;
-        height: 20rem;
-
-        h1 {
-          font-size: $fontSize5Xl;
-        }
-
-        p {
-          font-size: $fontSizeXl;
-          width: 76%;
-          left: 3rem;
-          position: relative;
-          font-weight: $fontWeightBold;
-          padding-top: nth($spaces, 8);
-        }
-
-        .cta__button {
-          position: relative;
-          text-align: center;
-          display: flex;
-          gap: list.nth($spaces, 8);
-          padding-top: list.nth($spaces, 8);
-          text-align: center;
-          place-content: center;
-          width: 100%;
-          left: 0;
-
-          &--button {
-            font-size: $fontSizeXl;
-
-            &-more {
-              font-size: $fontSizeXl;
-            }
-          }
-        }
-
-        .stats-container {
-          left: 0;
-          font-size: $fontSizeLg;
-          padding-top: nth($spaces, 8);
-          gap: nth($spaces, 12);
-          margin: 0 auto;
-
-          .stat-item p {
-            width: 100%;
-
-            &:first {
-              left: 2.5rem;
-            }
-
-            &:last-child {
-              left: 0.5rem;
-            }
-          }
-        }
-      }
     }
   }
 }
