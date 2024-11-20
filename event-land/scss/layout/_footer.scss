@@ -67,6 +67,7 @@
   &__bottom {
     display: flex;
     gap: list.nth($spaces, 6);
+    line-height: 1.8;
     @include mobile {
       flex-direction: column;
     }
