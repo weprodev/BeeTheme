@@ -65,12 +65,12 @@ $(document).ready(function(){
 
   });
 
-window.onscroll = function() {myFunction()};
+window.onscroll = function() {navbarSticky()};
 
 var navbar = document.getElementById("header");
 var sticky = navbar.offsetTop;
 
-function myFunction() {
+function navbarSticky() {
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky");
   } else {

@@ -48,7 +48,7 @@
                 background-color: $white;
             }
 
-            .Circle {
+            .circle {
                 opacity: 0;
                 visibility: hidden;
                 margin-right: 1em;
@@ -166,16 +166,15 @@
 
                 }
 
-                //li
+
             }
 
-            //ul
+
         }
 
-        //li
     }
 
-    //ul
+
 
     .search {
         position: absolute;
@@ -208,7 +207,7 @@
         }
     }
 
-    //search
+
     .search-active {
         width: 100vw;
         height: 100%;
@@ -267,10 +266,10 @@
             }
         }
 
-        //search-active-content
+
     }
 
-    //search-active
+
     .section-responsive {
         display: none;
         position: absolute;
@@ -301,4 +300,3 @@
 
 }
 
-//header
