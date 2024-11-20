@@ -166,7 +166,7 @@
                     background-color: transparent;
                     cursor: pointer;
 
-                    .Circle {
+                    .circle {
                       opacity: 1;
                       visibility: visible;
                     }
@@ -299,6 +299,10 @@
 
           a {
             color: $mainColorWeprodev;
+
+            &:hover {
+              color: $white;
+            }
           }
         }
 

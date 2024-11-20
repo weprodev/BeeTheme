@@ -115,8 +115,6 @@ a {
   text-decoration: none;
 }
 
-/* ~~~~~~~~~~~~~~🟢 TYPOGRAPHY 🟢~~~~~~~~~~~~~~ */
-/* Use global icons */
 /* ~~~~~~~~~~~~~~🟢 COMPONENTS 🟢~~~~~~~~~~~~~~ */
 /* Reusable components and UI elements */
 /*=========================================================
@@ -381,12 +379,12 @@ a {
 *********   
 *******     EXPORT THIS FONT ICONS FROM ICOMOON.IO AND SELECTED THESE ICONS BASE PERSONAL INTRESTING 
 *****       YOU CAN UPDATE THIS ICONS WITH IMPORT JSON FILE IN COMPONENT FOLDER TO MAIN SITE.
-***         share
+***         
 */
 @font-face {
   font-family: "icomoon";
-  src: url("../fonts/icons/icomoon.eot");
-  src: url("../fonts/icons/icomoon.eot") format("embedded-opentype"), url("../fonts/icons/icomoon.ttf") format("truetype"), url("../fonts/icons/icomoon.woff") format("woff"), url("../fonts/icons/icomoon.svg") format("svg");
+  src: url("../fonts/icons/icomoon.eot?5sy53h");
+  src: url("../fonts/icons/icomoon.eot?5sy53h#iefix") format("embedded-opentype"), url("../fonts/icons/icomoon.ttf?5sy53h") format("truetype"), url("../fonts/icons/icomoon.woff?5sy53h") format("woff"), url("../fonts/icons/icomoon.svg?5sy53h#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -1268,6 +1266,9 @@ a {
 }
 .top-bar .top-bar-contant .section-login .section-button .button-login a {
   color: rgb(255, 94, 87);
+}
+.top-bar .top-bar-contant .section-login .section-button .button-login a:hover {
+  color: rgb(255, 255, 255);
 }
 .top-bar .top-bar-contant .section-login .section-button .button-freeTemplate {
   background-color: rgb(255, 94, 87);
