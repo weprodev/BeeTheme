@@ -1,83 +1,6 @@
 /*------------------------------------*\
   #ABSTRACTS
 \*------------------------------------*/
-/*------------------------------------*\
-  #FONT
-\*------------------------------------*/
-/*------------------------------------*\
-  #BREAKPOINTS
-\*------------------------------------*/
-/*------------------------------------*\
-  #SPACES (padding & margin & gap) 
-\*------------------------------------*/
-/*------------------------------------*\
-  #TRANSITION DURATION
-\*------------------------------------*/
-/*------------------------------------*\
-  #BOX SHADOW
-\*------------------------------------*/
-/*------------------------------------*\
-  #BORDER RADIUS
-\*------------------------------------*/
-/*------------------------------------*\
-  #COLOR
-\*------------------------------------*/
-/*------------------------------------*\
-  #FONTS
-\*------------------------------------*/
-body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  /* font-size: 16px; */
-  line-height: 1.7;
-  color: #fff;
-  font-size: 95%;
-}
-
-.background-color {
-  background-image: linear-gradient(to right, #0d27a7, #448851);
-  height: 100vh;
-}
-.background-color__1 {
-  background-color: #0e1523;
-}
-.background-color__2 {
-  background-color: #0f1429;
-}
-.background-color__3 {
-  background-color: #00092e;
-}
-.background-color__4 {
-  background-image: linear-gradient(to right, #0d27a7, #448851);
-}
-
-.container {
-  width: 75rem;
-  margin: 0 auto;
-}
-
-body.modal-open {
-  height: 100vh;
-  overflow-y: hidden;
-}
-
-::-webkit-scrollbar {
-  width: 0.4rem;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
-  border-radius: 0.75em;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #999;
-  border-radius: 0.75em;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #777;
-}
-
 /*========================================================================================
 *********   GRIDS BASE SUSY
 *******     MEDIA QUERY 
@@ -132,6 +55,85 @@ body.modal-open {
 **	MAX : 400PX / 25em
 */
 /*------------------------------------*\
+  #FONT
+\*------------------------------------*/
+/*------------------------------------*\
+  #BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+  #SPACES (padding & margin & gap) 
+\*------------------------------------*/
+/*------------------------------------*\
+  #TRANSITION DURATION
+\*------------------------------------*/
+/*------------------------------------*\
+  #BOX SHADOW
+\*------------------------------------*/
+/*------------------------------------*\
+  #BORDER RADIUS
+\*------------------------------------*/
+/*------------------------------------*\
+  #COLOR
+\*------------------------------------*/
+/*------------------------------------*\
+  #FONTS
+\*------------------------------------*/
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: #fff;
+  font-size: 95%;
+}
+
+.background-color {
+  background-image: linear-gradient(to right, #0d27a7, #448851);
+  height: 100vh;
+}
+.background-color__1 {
+  background-color: #0e1523;
+  z-index: 2000;
+  position: relative;
+}
+.background-color__2 {
+  background-color: #0f1429;
+}
+.background-color__3 {
+  background-color: #00092e;
+}
+.background-color__4 {
+  background-image: linear-gradient(to right, #0d27a7, #448851);
+}
+
+.container {
+  width: 75rem;
+  margin: 0 auto;
+}
+
+body.modal-open {
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0.4rem;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 0.75em;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 0.75em;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #777;
+}
+
+/*------------------------------------*\
   #LAYOUTS
 \*------------------------------------*/
 .container .header {
@@ -181,7 +183,6 @@ body.modal-open {
 .home-page__description {
   text-align: center;
   font-size: 1.125em;
-  margin-bottom: 2.5em;
 }
 .home-page__description_1 {
   text-align: center;
@@ -348,6 +349,9 @@ body.modal-open {
 }
 .page-builder__paragraph {
   font-size: 1.25em;
+}
+.page-builder__paragraph_1 {
+  font-size: 1.25em;
   margin-bottom: 2.75em;
 }
 .page-builder__feature {
@@ -501,7 +505,6 @@ body.modal-open {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  z-index: 1000;
 }
 
 .header-primary__sub {
@@ -520,11 +523,15 @@ body.modal-open {
 }
 
 .text-img {
+  position: relative;
   outline-offset: 2rem;
   outline: 0.2rem solid #777;
   border-radius: 1em;
+  z-index: 1;
 }
 .text-img__1 {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -532,6 +539,8 @@ body.modal-open {
   gap: 1em;
 }
 .text-img__2 {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -540,6 +549,8 @@ body.modal-open {
 }
 
 .text-img__box {
+  position: relative;
+  z-index: 1;
   border-radius: 1em;
 }
 
@@ -764,6 +775,7 @@ picture,
 svg,
 video {
   display: block;
+  width: 100%;
 }
 
 a {

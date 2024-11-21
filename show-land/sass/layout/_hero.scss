@@ -1,12 +1,10 @@
 @use "sass:list";
-
 .text-box {
   position: absolute;
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  z-index: 1000;
 }
 
 .header-primary {
@@ -28,11 +26,14 @@
   }
 }
 .text-img {
+  position: relative;
   outline-offset: 2rem;
   outline: 0.2rem solid $colorGreyDark;
   border-radius: $rounded2Xl;
-
+  z-index: 1;
   &__1 {
+    position: relative;
+    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,6 +42,8 @@
   }
 
   &__2 {
+    position: relative;
+    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,6 +52,8 @@
   }
 }
 .text-img__box {
+  position: relative;
+  z-index: 1;
   border-radius: $rounded2Xl;
 }
 .border {

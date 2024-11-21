@@ -34,6 +34,9 @@
   }
   &__paragraph {
     font-size: $fontSizeXl;
+  }
+  &__paragraph_1 {
+    font-size: $fontSizeXl;
     margin-bottom: list.nth($spaces, 11);
   }
 
