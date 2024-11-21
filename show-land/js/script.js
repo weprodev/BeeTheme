@@ -14,6 +14,18 @@ const demos = [
     mainImage: "event-land-main.png", // Name of your main page image in shared/images/
     entirePageImage: "event-land-entire.png", // Name of your entire page image in shared/images/
   },
+
+  {
+    id: 2,
+    name: "AppLand",
+    createdBy: {
+      name: "Max Richard",
+      github: "https://github.com/MaxRichard2007",
+    },
+    url: "app-land/index.html",
+    mainImage: "app-land-main.jpeg",
+    entirePageImage: "app-land-entire.jpeg",
+  },
 ];
 
 /*------------------------------------*\
