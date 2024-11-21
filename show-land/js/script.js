@@ -14,7 +14,17 @@ const demos = [
     mainImage: "event-land-main.png", // Name of your main page image in shared/images/
     entirePageImage: "event-land-entire.png", // Name of your entire page image in shared/images/
   },
-
+  {
+    id: 1,
+    name: "SolarLand",
+    createdBy: {
+      name: "AbdolMajed ShahBakhsh",
+      github: "https://github.com/abdolmajed3",
+    },
+    url: "solar-land/index.html",
+    mainImage: "solar-land-main.jpeg",
+    entirePageImage: "solar-land-entire.jpeg",
+  },
   {
     id: 2,
     name: "AppLand",
@@ -25,7 +35,7 @@ const demos = [
     url: "app-land/index.html",
     mainImage: "app-land-main.jpeg",
     entirePageImage: "app-land-entire.jpeg",
-  },
+  }
 ];
 
 /*------------------------------------*\
