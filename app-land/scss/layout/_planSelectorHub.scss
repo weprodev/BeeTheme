@@ -108,6 +108,7 @@
       p {
         line-height: 1.7;
         margin-top: nth($spaces, 4);
+        font-size: 1.2rem;
       }
 
       .information-section {
@@ -344,6 +345,7 @@
           display: grid;
           text-align: center;
           position: relative;
+          justify-content: center;
 
           h3,
           .status {

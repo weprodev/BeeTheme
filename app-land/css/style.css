@@ -440,6 +440,7 @@ body li {
   justify-content: space-between;
   align-items: center;
   padding: 1.25em;
+  font-size: 1.125em;
 }
 .header__main nav ul {
   padding: 0;
@@ -592,10 +593,18 @@ body li {
   .hero__section--text-overlay {
     width: 100%;
   }
+  .hero__section--text-overlay .container h1,
+  .hero__section--text-overlay .container p {
+    text-align: start;
+  }
 }
 @media screen and (max-width: 40em) {
   .hero__section--text-overlay {
     width: 100%;
+  }
+  .hero__section .container h1,
+  .hero__section .container p {
+    text-align: start;
   }
 }
 
@@ -663,6 +672,7 @@ body li {
 }
 .explore__hub .card__section .card__text-box p {
   font-size: 1.5em;
+  font-weight: 700;
 }
 .explore__hub .card__section .card__text-box .paragraph,
 .explore__hub .card__section .card__text-box p {
@@ -673,7 +683,7 @@ body li {
   cursor: pointer;
   font-size: 0.875em;
   border: none;
-  top: -22rem;
+  top: -24rem;
   left: 4rem;
   width: 6.625rem;
   height: 2.6875rem;
@@ -881,7 +891,8 @@ body li {
   background-color: rgb(32, 34, 35);
   color: rgb(255, 255, 255);
   height: auto;
-  display: block;
+  gap: 1em;
+  display: grid;
 }
 .smart__solutions--information-box .selected p {
   line-height: 1.6;
@@ -1210,6 +1221,7 @@ body li {
 .plan__Selector__Hub .plans .download-box p {
   line-height: 1.7;
   margin-top: 1em;
+  font-size: 1.2rem;
 }
 .plan__Selector__Hub .plans .download-box .information-section {
   width: 50%;
@@ -1389,6 +1401,7 @@ body li {
     display: grid;
     text-align: center;
     position: relative;
+    justify-content: center;
   }
   .plan__Selector__Hub .plans .mainBox .box h3,
   .plan__Selector__Hub .plans .mainBox .box .status {
@@ -1425,7 +1438,7 @@ body li {
 }
 
 .footer__section {
-  padding: 5rem 0.5em 0rem 0.5em;
+  padding: 5rem 0.5em 3em 0.5em;
   /*--------------------------------
 
   *** FOR RETINA MOBILE AND LANSCAPE
@@ -1446,10 +1459,10 @@ body li {
   display: flex;
   justify-content: space-between;
   height: 3rem;
+  font-weight: 600;
 }
 .footer__section .footer__brand {
   font-size: 1.875em;
-  font-weight: 600;
 }
 .footer__section .footer__nav-list {
   display: flex;

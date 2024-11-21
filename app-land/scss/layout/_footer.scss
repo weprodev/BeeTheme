@@ -1,14 +1,14 @@
 .footer__section {
-  padding: 5rem nth($spaces, 2) 0rem nth($spaces, 2);
+  padding: 5rem nth($spaces, 2) nth($spaces, 12) nth($spaces, 2);
 
   .footer {
     display: flex;
     justify-content: space-between;
     height: 3rem;
+    font-weight: $fontWeightSemibold;
 
     &__brand {
       font-size: $fontSize3Xl;
-      font-weight: $fontWeightSemibold;
     }
 
     &__nav {

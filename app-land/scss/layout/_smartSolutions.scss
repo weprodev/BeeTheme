@@ -34,7 +34,8 @@
       background-color: $darkGray;
       color: $white;
       height: auto;
-      display: block;
+      gap: nth($spaces, 4);
+      display: grid;
 
       p {
         line-height: 1.6;

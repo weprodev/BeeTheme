@@ -100,6 +100,13 @@
   @include retinaMobile {
     &--text-overlay {
       width: 100%;
+
+      .container {
+        h1,
+        p {
+          text-align: start;
+        }
+      }
     }
   }
 
@@ -111,6 +118,13 @@
   @include mobile {
     &--text-overlay {
       width: 100%;
+    }
+
+    .container {
+      h1,
+      p {
+        text-align: start;
+      }
     }
   }
 }

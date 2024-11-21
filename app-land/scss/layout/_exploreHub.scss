@@ -51,6 +51,7 @@
 
         p {
           font-size: $fontSize2Xl;
+          font-weight: $fontWeightBold;
         }
 
         .paragraph,
@@ -63,7 +64,7 @@
           cursor: pointer;
           font-size: $fontSizeSm;
           border: none;
-          top: -22rem;
+          top: -24rem;
           left: 4rem;
           width: 6.625rem;
           height: 2.6875rem;
