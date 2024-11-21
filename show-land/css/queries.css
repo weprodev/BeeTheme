@@ -515,11 +515,12 @@
     width: 60rem;
   }
   .text-box {
-    margin-top: -25rem;
+    margin-top: -24rem;
     font-size: 1.5rem;
   }
   .header-primary__main {
     font-size: 3.5rem;
+    margin-bottom: -1rem;
   }
   .header-primary_main__1 {
     font-size: 3.5rem;
@@ -597,6 +598,7 @@
   .btn-cta {
     font-size: 2rem;
   }
+
   .features__headline {
     font-size: 4rem;
   }
@@ -617,7 +619,9 @@
     margin-top: 2rem;
     font-size: 2rem;
   }
-
+  .powerful-features {
+    padding: 2.5rem 1rem;
+  }
   .powerful-features__headline {
     font-size: 4rem;
   }
@@ -629,14 +633,18 @@
     grid-template-columns: repeat(2, 28rem);
     row-gap: 3rem;
     column-gap: 2.8rem;
-    margin-top: 1.6rem;
+    margin-top: 4rem;
   }
   .powerful-features__paragrapha_1 {
     font-size: 1.6rem;
+    outline: none;
   }
   .powerful-features__icone {
     width: 1.6rem;
     height: 1.6rem;
+  }
+  .help-users {
+    padding: 4rem 4rem 8rem 4rem;
   }
   .help-users__headline {
     font-size: 4rem;
