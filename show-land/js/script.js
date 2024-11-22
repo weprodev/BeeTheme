@@ -25,6 +25,17 @@ const demos = [
     mainImage: "solar-land-main.jpeg",
     entirePageImage: "solar-land-entire.jpeg",
   },
+  {
+    id: 2,
+    name: "AppLand",
+    createdBy: {
+      name: "Max Richard",
+      github: "https://github.com/MaxRichard2007",
+    },
+    url: "app-land/index.html",
+    mainImage: "app-land-main.jpeg",
+    entirePageImage: "app-land-entire.jpeg",
+  }
 ];
 
 /*------------------------------------*\
