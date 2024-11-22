@@ -1,11 +1,12 @@
 @use "sass:list";
+@use "sass:color";
 @import "../../../shared/scss/components/button";
 
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: list.nth($spaces, 4) list.nth($spaces, 8); 
+  padding: list.nth($spaces, 4) list.nth($spaces, 8);
   background-color: #fff;
   margin: 0 auto;
 
@@ -83,9 +84,9 @@
     .get-in-touch {
       @include button(
         $bg: $primaryColor,
-        $color: #fff,
+        $color: $darkColor,
         $radius: $roundedFull,
-        $hoverBgColor: $primaryColor,
+        $hoverBgColor: color.adjust($primaryColor, $lightness: 10%),
         $padding: list.nth($spaces, 2) list.nth($spaces, 4)
       );
     }
@@ -124,7 +125,7 @@
 
     .action-buttons {
       display: none;
-  
+
       &.active {
         display: flex;
         flex-direction: row;
@@ -137,7 +138,5 @@
         z-index: 11;
       }
     }
-
   }
-
 }

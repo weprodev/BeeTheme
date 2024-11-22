@@ -46,6 +46,7 @@
       .case-study-button {
         @include button(
           $bg: $primaryColor,
+          $color: $darkColor,
           $border: none,
           $radius: $roundedFull,
           $padding: list.nth($spaces, 3),
@@ -99,4 +100,3 @@
     }
   }
 }
-
