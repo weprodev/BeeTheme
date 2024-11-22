@@ -1,3 +1,100 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
+* {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+}
+
+body {
+  min-height: 100vh;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/*------------------------------------*\
+  #FONT
+\*------------------------------------*/
+/*------------------------------------*\
+  #BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+  #SPACES (padding & margin & gap) 
+\*------------------------------------*/
+/*------------------------------------*\
+  #TRANSITION DURATION
+\*------------------------------------*/
+/*------------------------------------*\
+  #BOX SHADOW
+\*------------------------------------*/
+/*------------------------------------*\
+  #BORDER RADIUS
+\*------------------------------------*/
+/*------------------------------------*\
+  #COLORS
+\*------------------------------------*/
+.container-fluid {
+  width: 100%;
+  max-width: 100%;
+}
+
+.login {
+  display: flex;
+}
+.login-image {
+  flex: 1;
+}
+.login-image img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+.login-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login-form h2 {
+  font-size: 2.25em;
+  padding-bottom: 1.5em;
+}
+.login-form-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.login-form-form input {
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  padding: 1em;
+}
+.login-form-form input:focus {
+  border: 1px solid #ff5b32;
+}
+.login label,
+.login input {
+  width: 100%;
+}
 
 /*# sourceMappingURL=style.css.map */

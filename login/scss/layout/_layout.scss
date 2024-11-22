@@ -1,0 +1,54 @@
+@use "sass:list";
+
+.container-fluid {
+  width: 100%;
+  max-width: 100%;
+}
+
+.login {
+  display: flex;
+
+  &-image {
+    flex: 1;
+
+    img {
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+    }
+  }
+
+  &-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      font-size: $fontSize4Xl;
+      padding-bottom: list.nth($spaces, 6);
+    }
+
+    &-form {
+      display: flex;
+      flex-direction: column;
+      gap: list.nth($spaces, 4);
+
+      input {
+        border: 1px solid rgba($color: #000000, $alpha: 0.6);
+        border-radius: 20px;
+        padding: list.nth($spaces, 4);
+
+        &:focus {
+          border: 1px solid $primaryColor;
+        }
+      }
+    }
+  }
+
+  label,
+  input {
+    width: 100%;
+  }
+}
