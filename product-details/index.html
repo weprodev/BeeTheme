@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product Details</title>
     <meta name="author" content="" />
-    <meta name="viewport"content="initial-scale=1.0, user-scalable=no, width=device-width"/>
+    <meta
+      name="viewport"
+      content="initial-scale=1.0, user-scalable=no, width=device-width"
+    />
     <meta property="og:title" content="WeProDev" />
     <meta property="og:site_name" content="WeProDev" />
     <meta property="og:description" content="WeProDev" />
@@ -25,103 +28,146 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="WeProDev.com" />
     <meta name="apple-mobile-web-app-capable" content="WeProDev" />
     <link rel="icon" href="img/favicon.png" />
-    <link rel="stylesheet" href="scss/lib/tiny-slider.css">
+    <link rel="stylesheet" href="scss/lib/tiny-slider.css" />
     <link rel="stylesheet" href="css/style.css" media="all" />
   </head>
   <body>
-    <section>
-      <section class="top-bar">
-        <div class="top-bar-contant">
-          <div class="section-logo-lang">
-            <div class="logo">
-              <img src="img/logo.png" alt="logo WeProDev" />
+   
+      <section>
+        <section class="top-bar">
+          <div class="top-bar-contant">
+            <div class="section-logo-lang">
+              <div class="logo">
+                <img src="img/logo.png" alt="logo WeProDev" />
+              </div>
+              <div class="select-lang">
+                <ul>
+                  <li>
+                    <a href="#" class="l-one"
+                      ><span class="show">Language</span></a
+                    >
+                    <span class="icon-chevron-down"></span>
+                    <ul class="dropdown" id="dropdown">
+                      <li><a href="#" class="l-two"> English</a></li>
+                      <li><a href="#" class="l-two">Kurdish</a></li>
+                      <li><a href="#" class="l-two">Persian</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <!--section lang-->
             </div>
-            <div class="select-lang">
-              <ul>
-                <li>
-                  <a href="#" class="l-one"
-                    ><span class="show">Language</span></a>
-                  <span class="icon-chevron-down"></span>
-                  <ul class="dropdown" id="dropdown">
-                    <li><a href="#" class="l-two"> English</a></li>
-                    <li><a href="#" class="l-two">Kurdish</a></li>
-                    <li><a href="#" class="l-two">Persian</a></li>
-                  </ul>
-                </li>
+            <div class="section-login">
+              <div class="search-box" id="search-btn">
+                <input
+                  type="text"
+                  class="search-txt"
+                  id="input-search"
+                  placeholder="search..."
+                />
+                <span
+                  class="icon-search search-btn"
+                  id="input-search-btn"
+                ></span>
+              </div>
+              <div class="section-button">
+                <button class="button-login"><a href="#">login</a></button>
+                <button class="button-freeTemplate">
+                  <a href="#">Free Template</a>
+                </button>
+              </div>
+            </div>
+            <!--section login-->
+          </div>
+        </section>
+        <!--top bar-->
+        <section class="nav-bar" id="stickynavbar">
+          <ul class="menu">
+            <li>
+              <a href="#" class="l-one">Home</a>
+              <span class="icon-circle-down"></span>
+              <ul class="dropdown" id="dropdown">
+                <li><a href="#" class="l-two">two-one</a></li>
+                <li><a href="#" class="l-two">two-two</a></li>
+                <li><a href="#" class="l-two">two-three</a></li>
               </ul>
-            </div>
-            <!--section lang-->
+            </li>
+            <li>
+              <a href="#" class="l-one">Portfolio</a>
+              <span class="icon-circle-down"></span>
+              <ul class="dropdown" id="dropdown">
+                <li><a href="#" class="l-two">two-one</a></li>
+                <li><a href="#" class="l-two">two-two</a></li>
+                <li><a href="#" class="l-two">two-three</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="l-one" id="parent-dropdown">Blog</a>
+              <span class="icon-circle-down"></span>
+              <ul class="dropdown" id="dropdown">
+                <li><a href="#" class="l-two">two-one</a></li>
+                <li><a href="#" class="l-two">two-two</a></li>
+                <li><a href="#" class="l-two">two-three</a></li>
+              </ul>
+            </li>
+            <li><a href="#" class="l-one last-li-menu">Contact</a></li>
+          </ul>
+          <div class="search">
+            <span class="icon-search icon-searchh"></span>
           </div>
-          <div class="section-login">
-            <div class="search-box" id="search-btn">
-              <input
-                type="text"
-                class="search-txt"
-                id="input-search"
-                placeholder="search..."
-              />
-              <span class="icon-search search-btn" id="input-search-btn"></span>
-            </div>
-            <div class="section-button">
-              <button class="button-login"><a href="#">login</a></button>
-              <button class="button-freeTemplate"><a href="#">Free Template</a></button>
+          <div class="search-active">
+            <div class="search-active-content">
+              <span class="icon-search"></span>
+              <input type="text" class="text-search" placeholder="Write..." />
+              <span class="icon-close icon-searchh"></span>
             </div>
           </div>
-          <!--section login-->
+          <div class="section-responsive icon-menu5"></div>
+        </section>
+        <!--nav bar-->
+      </section>
+      <!--navbar and top bar-->
+      <div class="content">
+      <section class="gradient-bg">
+        <div class="started-section">
+          <h2 class="title-started font-size-title">
+            The World's Leading WordPress Page Builder
+          </h2>
+          <p class="description-started">
+            Join 5,000,000+ Professionals Who Build Better Sites With Elementor
+          </p>
+          <a href="" class="btn-start">GET STARTED</a>
+          <div class="img-started-section">
+            <img src="img/img-started.jpg" alt="" />
+          </div>
+          <div class="card-started row">
+            <div class="one col-xl-4 col-lg-12">
+              <h2 class="title-card-started">All-in-One Solution</h2>
+              <p>
+                Control every aspect of your web design workflow from one place.
+              </p>
+            </div>
+            <div class="one col-xl-4 col-lg-12">
+              <h2 class="title-card-started">Visual Design</h2>
+              <p>
+                Simple. Powerful. Flexable. Experience the power of 100% Visual
+                design.
+              </p>
+            </div>
+            <div class="one col-xl-4 col-lg-12">
+              <h2 class="title-card-started">Faster Performance</h2>
+              <p>
+                Build websites that load faster, and speed up the process of
+                building them.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
-      <!--top bar-->
-      <section class="nav-bar">
-        <ul class="menu">
-          <li>
-            <a href="#" class="l-one">Home</a>
-            <span class="icon-circle-down"></span>
-            <ul class="dropdown" id="dropdown">
-              <li><a href="#" class="l-two">two-one</a></li>
-              <li><a href="#" class="l-two">two-two</a></li>
-              <li><a href="#" class="l-two">two-three</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#" class="l-one">Portfolio</a>
-            <span class="icon-circle-down"></span>
-            <ul class="dropdown" id="dropdown">
-              <li><a href="#" class="l-two">two-one</a></li>
-              <li><a href="#" class="l-two">two-two</a></li>
-              <li><a href="#" class="l-two">two-three</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#" class="l-one" id="parent-dropdown">Blog</a>
-            <span class="icon-circle-down"></span>
-            <ul class="dropdown" id="dropdown">
-              <li><a href="#" class="l-two">two-one</a></li>
-              <li><a href="#" class="l-two">two-two</a></li>
-              <li><a href="#" class="l-two">two-three</a></li>
-            </ul>
-          </li>
-          <li><a href="#" class="l-one last-li-menu">Contact</a></li>
-        </ul>
-        <div class="search">
-          <span class="icon-search icon-searchh"></span>
-        </div>
-        <div class="search-active">
-          <div class="search-active-content">
-            <span class="icon-search"></span>
-            <input type="text" class="text-search" placeholder="Write..." />
-            <span class="icon-close icon-searchh"></span>
-          </div>
-        </div>
-        <div class="section-responsive icon-menu5"></div>
-      </section>
-      <!--nav bar-->
-    </section>
-
-    <!--navbar and top bar-->
-    <section></section>
-    <!--hero header -->
-    <section></section>
-    <!--main-->
+      <!--hero header -->
+      <section></section>
+      <!--main-->
+    </div>
     <section></section>
     <!--footer-->
   </body>
@@ -131,4 +177,5 @@
   <script src="js/search-box.js"></script>
   <script src="js/slider.js"></script>
   <script src="js/sticky-navbar.js"></script>
+  
 </html>
