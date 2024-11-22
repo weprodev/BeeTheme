@@ -1,10 +1,11 @@
 /*------------------------------------*\
   #REGISTER PAGE
 \*------------------------------------*/
+@use "sass:list";
 @import "../../typography/muliFont";
 
 .register-form{
-  font-family :  $fontFamily;
+  font-family     :  $fontFamily;
   width           : 100%;
   position        : relative;
   overflow        : hidden;
@@ -35,9 +36,9 @@
         width                 : 100%;
       }
 
-      spam{
-          padding             : 1em;
-          font-size           : 3em;
+      h1{
+          padding             : list.nth($spaces, 4);
+          font-size           : list.nth($spaces, 12);
           display             : flex;
           justify-content     : center;
       }
@@ -57,7 +58,7 @@
             border                : 1px solid $borderColor ;
             width                 : 80%;
             border-radius         : 30px;
-            padding               : 0.8em;
+            padding               : list.nth($spaces, 4);
 
 
             &:focus{
@@ -68,10 +69,9 @@
           
 
           label{  
-            font-weight         : bold;
-            font-size           : 20px;
+            font-size           : $fontSizeBase;
             display             : flex;
-            margin              : 1em 0em;
+            margin              : list.nth($spaces, 4) 0;
           }
 
 
@@ -79,11 +79,11 @@
             display             : block;
             position            : relative;
             padding-left        : 45px;
-            margin-top          : 1em;
+            margin-top          : list.nth($spaces, 6);
             margin-bottom       : 12px;
             font-weight         : unset;
             cursor              : pointer;
-            font-size           : 15px;
+            font-size           : $fontSizeBase;
             user-select         : none;
 
             input {
@@ -139,13 +139,12 @@
           
 
           .underborder{   
-            margin-top          : 1em;
-            margin-bottom       : 1em;    
+            margin              : list.nth($spaces,4);  
             border-bottom       : 1px solid $black;
           }
           .button{
             background          : $redLogin ;
-            margin-top          : 2em;
+            margin-top          : list.nth($spaces,8);
             border              : 1px solid transparent;
             transition          : all 0.5s;
             color               : $white;

@@ -154,7 +154,7 @@ a {
     width: 100%;
   }
 }
-.register-form .section-login spam {
+.register-form .section-login h1 {
   padding: 1em;
   font-size: 3em;
   display: flex;
@@ -177,26 +177,25 @@ a {
   border: 1px solid rgba(0, 0, 0, 0.38);
   width: 80%;
   border-radius: 30px;
-  padding: 0.8em;
+  padding: 1em;
 }
 .register-form .section-login .section-label-input input:focus {
   border: 1px solid #FF5B32;
 }
 .register-form .section-login .section-label-input label {
-  font-weight: bold;
-  font-size: 20px;
+  font-size: 1em;
   display: flex;
-  margin: 1em 0em;
+  margin: 1em 0;
 }
 .register-form .section-login .section-label-input .showpass {
   display: block;
   position: relative;
   padding-left: 45px;
-  margin-top: 1em;
+  margin-top: 1.5em;
   margin-bottom: 12px;
   font-weight: unset;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 1em;
   user-select: none;
 }
 .register-form .section-login .section-label-input .showpass input {
@@ -238,8 +237,7 @@ a {
   display: block;
 }
 .register-form .section-login .section-label-input .underborder {
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin: 1em;
   border-bottom: 1px solid rgb(0, 0, 0);
 }
 .register-form .section-login .section-label-input .button {
