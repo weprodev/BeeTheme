@@ -172,6 +172,10 @@ body.modal-open {
   -webkit-background-clip: text;
   color: transparent;
 }
+.home-page__imgs-main-page img {
+  height: 12rem;
+  object-fit: contain;
+}
 .home-page__headline_1 {
   text-align: center;
   font-size: 2.8rem;
@@ -203,8 +207,6 @@ body.modal-open {
 }
 .home-page__img_boxs img {
   width: 100%;
-  height: 12rem;
-  object-fit: contain;
 }
 .home-page__number {
   text-align: center;
