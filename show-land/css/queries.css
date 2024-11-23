@@ -559,6 +559,9 @@
     grid-template-columns: repeat(1, 53.6rem);
     margin-top: -0.5rem;
   }
+  .home-page__img_boxs img {
+    height: auto;
+  }
   .page-builder__headline {
     font-size: 4rem;
   }
