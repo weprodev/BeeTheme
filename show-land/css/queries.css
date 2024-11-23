@@ -554,6 +554,11 @@
     margin-left: 2.5rem;
     margin-top: -4rem;
   }
+  .home-page__imgs-main-page {
+    display: grid;
+    grid-template-columns: repeat(1, 53.6rem);
+    margin-top: -0.5rem;
+  }
   .page-builder__headline {
     font-size: 4rem;
   }
