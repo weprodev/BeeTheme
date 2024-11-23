@@ -192,7 +192,7 @@ a {
 }
 .header .action-buttons .get-in-touch {
   background: #0dd47e;
-  color: #fff;
+  color: #1e1e1e;
   border-radius: 9999px;
   border: none;
   padding: 0.5em 1em;
@@ -203,7 +203,7 @@ a {
   cursor: pointer;
 }
 .header .action-buttons .get-in-touch:hover {
-  background-color: #0dd47e;
+  background-color: rgb(34.52, 241.48, 152.04);
 }
 @media (max-width: 62em) {
   .header .header {
@@ -499,11 +499,13 @@ a {
   border-radius: 9999px;
   aspect-ratio: 1/1;
   transition: all 0.3s ease-in;
+  box-sizing: border-box;
 }
 .customers .customers-icons .customers-icon img {
   width: 100%;
   top: 25%;
   position: relative;
+  padding: 1em;
 }
 .customers .customers-icons .customers-icon:hover {
   background-color: #fff;
@@ -521,7 +523,12 @@ a {
   .customers .customers-header .customers-title {
     font-size: 1.875em;
   }
+  .customers .customers-icons {
+    flex-wrap: wrap;
+    padding: 0.75em;
+  }
   .customers .customers-icons .customers-icon {
+    flex: 1 1 32%;
     margin-right: 0.25em;
   }
 }
@@ -624,7 +631,7 @@ a {
 }
 .trusted .trusted-main .trusted-header .trusted-button {
   background: #0dd47e;
-  color: #fff;
+  color: #1e1e1e;
   border-radius: 9999px;
   border: none;
   padding: 1em;
@@ -755,7 +762,7 @@ a {
 }
 .case-study .case-study-card .case-study-info .case-study-button {
   background: #0dd47e;
-  color: #fff;
+  color: #1e1e1e;
   border-radius: 9999px;
   border: none;
   padding: 0.75em;
@@ -897,6 +904,7 @@ footer .container .footer-nav .navigation ul li a:hover {
 footer .container .footer-nav .action-buttons {
   display: flex;
   gap: 1rem;
+  gap: 1em;
 }
 footer .container .footer-nav .action-buttons .social {
   background: #8d959d;
