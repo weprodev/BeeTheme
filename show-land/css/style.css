@@ -235,7 +235,7 @@ body.modal-open {
   align-items: baseline;
   gap: 4px;
   background-image: linear-gradient(to right, #0d27a7, #448851);
-  padding: 0.25em 1em 0.25em 1em;
+  padding: 0.25em 1em;
   text-transform: uppercase;
   font-weight: 700;
   border-radius: 9999px;
