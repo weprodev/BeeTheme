@@ -1,6 +1,6 @@
 @use "sass:list";
 @use "sass:color";
-@import '../../../shared/scss/components/button';
+@import "../../../shared/scss/components/button";
 
 .container-fluid {
   width: 100%;
@@ -44,40 +44,48 @@
         border-radius: 20px;
         padding: list.nth($spaces, 4);
 
-        &:focus, &:active {
+        &:focus,
+        &:active {
           border: 1px solid $primaryColor;
         }
       }
 
       .login-form-remember-me {
-
-        input{
-          border: 0.5em solid gray;
-          border-radius: $roundedLg;
+        input,
+        label {
+          display: inline;
+          width: auto;
+          margin: list.nth($spaces, 1);
+          font-size: $fontSizeLg;
+          cursor: pointer;
         }
 
-        input, label{
-        display: inline;
-        width: auto;
-        margin: list.nth($spaces, 1);
-        font-size: $fontSizeLg;
+        input {
+          border: 0.5em solid gray;
+          border-radius: $roundedLg;
+          width: 1em;
+          height: 1em;
         }
       }
 
-      button{
+      .login-form-forgot-password {
+        margin-left: list.nth($spaces, 8);
+      }
+
+      button {
         @include button(
           $bg: $primaryColor,
           $color: #fff,
           $radius: $roundedFull,
           $border: 1px solid transparent,
-          $padding: 1em 2em,
-          $fontSize: 1em,
-          $fontWeight: 400,
+          $padding: list.nth($spaces, 4) list.nth($spaces, 8),
           $transition: all 0.6s ease,
           $hoverBgColor: #fff
         );
 
-        width: 80%;
+        width: 85%;
+        display: block;
+        margin: 0 auto;
 
         &:hover {
           color: $primaryColor;
@@ -93,8 +101,36 @@
     display: block;
     margin: list.nth($spaces, 2) 0;
   }
-  
-  label{
+
+  label {
     font-size: $fontSize2Xl;
+  }
+}
+
+@media (max-width: $eta) {
+  .login {
+    height: 100vh;
+
+    &-image {
+      display: none;
+    }
+
+    &-form {
+      &-form {
+        width: 100%;
+        padding: 0 list.nth($spaces, 4);
+      }
+    }
+  }
+}
+
+@media (max-width: $gamma) {
+  .login {
+    &-form {
+      &-form {
+        width: 80%;
+        padding: 0 list.nth($spaces, 4);
+      }
+    }
   }
 }
