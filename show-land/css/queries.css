@@ -1,7 +1,7 @@
 /**************************/
 /* BELOW 1344px (Smaller desktops) */
 /**************************/
-@media (max-width: 87em) {
+@media (max-width: 87.5em) {
   html {
     font-size: 92%;
   }
