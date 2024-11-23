@@ -10,12 +10,6 @@
     justify-content: space-evenly;
   }
 
-  &--img-box {
-    top: 5rem;
-    position: relative;
-    width: 27rem;
-  }
-
   &--information-box {
     padding-top: $rounded4Xl;
 
@@ -40,7 +34,8 @@
       background-color: $darkGray;
       color: $white;
       height: auto;
-      display: block;
+      gap: nth($spaces, 4);
+      display: grid;
 
       p {
         line-height: 1.6;
