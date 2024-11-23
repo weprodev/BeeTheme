@@ -1,3 +1,161 @@
 /*------------------------------------*\
   #REGISTER PAGE
 \*------------------------------------*/
+@use "sass:list";
+@import "../../typography/muliFont";
+
+.register-form{
+  font-family     :  $fontFamily;
+  width           : 100%;
+  position        : relative;
+  overflow        : hidden;
+  display         : flex;
+  flex-direction  : row;
+
+  .pic-register{
+      width                   : 50%;
+      height                  : 100vh;
+      object-fit              : fill;
+      background-color        : $redLogin ;
+
+      @include tablet{
+        display               : none;
+      }
+  }
+  
+
+  .section-login{
+      width                   : 50%;
+      margin                  : 0 auto;
+      background-color        : $white;
+      align-items             : flex-start;
+      justify-content         : center;
+      display                 : flex;
+
+      @include tablet{
+        width                 : 100%;
+      }
+
+      h1{
+          padding             : list.nth($spaces, 4);
+          font-size           : list.nth($spaces, 12);
+          display             : flex;
+          justify-content     : center;
+      }
+
+      .section-label-input{
+        width                 : 70%;
+        display               : flex;
+        flex-direction        : column;
+        justify-content       : center;
+
+        @include tablet{
+          width                 : 70%;
+        }
+       
+          
+        input{
+            border                : 1px solid $borderColor ;
+            width                 : 80%;
+            border-radius         : 30px;
+            padding               : list.nth($spaces, 4);
+
+
+            &:focus{
+              border              : 1px solid  $redLogin ;
+
+            }
+          }
+          
+
+          label{  
+            font-size           : $fontSizeBase;
+            display             : flex;
+            margin              : list.nth($spaces, 4) 0;
+          }
+
+
+          .showpass {
+            display             : block;
+            position            : relative;
+            padding-left        : 45px;
+            margin-top          : list.nth($spaces, 6);
+            margin-bottom       : 12px;
+            font-weight         : unset;
+            cursor              : pointer;
+            font-size           : $fontSizeBase;
+            user-select         : none;
+
+            input {
+              position: absolute;
+              opacity: 0;
+              cursor: pointer;
+              height: 0;
+              width: 0;
+            }
+           
+            .checkmark {
+              position          : absolute;
+              left              : 10px;
+              height            : 20px;
+              width             : 20px;
+              background-color  : $white;
+              border            : 0.5px solid grey;
+              border-radius     : 2px;
+                /* Create the checkmark/indicator (hidden when not checked) */
+                &:after {
+                content             : "";
+                position            : absolute;
+                display             : none;
+                left                : 5px;
+                width               : 9px;
+                height              : 18px;
+                border              : solid $white;
+                border-width        : 0 3px 3px 0;
+                transform           : rotate(45deg);
+              }
+              
+            }
+           
+          }//showpass
+          
+          .showpass:hover input ~ .checkmark {
+            background-color    : $white;
+          }
+          
+          /* When the checkbox is checked, add a blue background */
+          .showpass input:checked ~ .checkmark {
+            background-color    : $checkBox;
+            border              : unset;
+            
+          }
+          
+          /* Show the checkmark when checked */
+          .showpass input:checked ~ .checkmark:after {
+            display             : block;
+          }
+          
+          
+          
+
+          .underborder{   
+            margin              : list.nth($spaces,4);  
+            border-bottom       : 1px solid $black;
+          }
+          .button{
+            background          : $redLogin ;
+            margin-top          : list.nth($spaces,8);
+            border              : 1px solid transparent;
+            transition          : all 0.5s;
+            color               : $white;
+            &:hover{
+              border            : 1px solid  $redLogin ;
+              background        : $white;
+              color             : $redLogin ;
+            }
+
+          }
+      }//section label and input
+  }//section login
+
+}//register
