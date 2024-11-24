@@ -7,6 +7,90 @@
     <link rel="stylesheet" href="css/style.css" media="all" />
   </head>
   <body>
+
+    <div class="basket">
+      <div id="sec-1">
+        <header class="header">
+          <div class="header__basket">
+            <img src="images/favicon.png" class="header__logo" alt="logo" />
+            <a href="#" id="icon-close-page">
+              <svg class="icon icon-cross">
+                <use xlink:href="#icon-cross"></use>
+              </svg>
+            </a>
+          </div>
+        </header>
+        <div class="basket-content">
+          <h2 class="heading-primary">Do You Have a Website?</h2>
+          <div class="cards-section">
+            <div class="card">
+              <img src="images/server.png" class="card__image" alt="server" />
+              <div class="card__text-section">
+                <h3 class="card__title heading-secondary">No, I don't</h3>
+                <span class="card__description"
+                  >No problem, We'll help you step up your site.</span
+                >
+              </div>
+              <button id="no-button" class="button card__button">
+                <a href="#">Continue</a>
+              </button>
+              <a href="#" class="card__bottom-link">
+                <svg class="icon icon-notification">
+                  <use xlink:href="#icon-notification"></use>
+                </svg>
+                Why I do need WordPress?</a
+              >
+            </div>
+            <div class="card">
+              <img src="images/laptop.png" class="card__image" alt="loptop" />
+              <div class="card__text-section">
+                <h3 class="card__title heading-secondary">Yes, I sure do</h3>
+                <span class="card__description"
+                  >Great, Click below to install Elementor on your existing
+                  website.</span
+                >
+              </div>
+              <button id="yes-button" class="button card__button">
+                <a href="#">Continue</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+  <svg
+    aria-hidden="true"
+    style="position: absolute; width: 0; height: 0; overflow: hidden"
+    version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+  >
+    <defs>
+      <symbol id="icon-notification" viewBox="0 0 32 32">
+        <path
+          d="M16 3c-3.472 0-6.737 1.352-9.192 3.808s-3.808 5.72-3.808 9.192c0 3.472 1.352 6.737 3.808 9.192s5.72 3.808 9.192 3.808c3.472 0 6.737-1.352 9.192-3.808s3.808-5.72 3.808-9.192c0-3.472-1.352-6.737-3.808-9.192s-5.72-3.808-9.192-3.808zM16 0v0c8.837 0 16 7.163 16 16s-7.163 16-16 16c-8.837 0-16-7.163-16-16s7.163-16 16-16zM14 22h4v4h-4zM14 6h4v12h-4z"
+        ></path>
+      </symbol>
+      <symbol id="icon-cross" viewBox="0 0 32 32">
+        <path
+          d="M31.708 25.708c-0-0-0-0-0-0l-9.708-9.708 9.708-9.708c0-0 0-0 0-0 0.105-0.105 0.18-0.227 0.229-0.357 0.133-0.356 0.057-0.771-0.229-1.057l-4.586-4.586c-0.286-0.286-0.702-0.361-1.057-0.229-0.13 0.048-0.252 0.124-0.357 0.228 0 0-0 0-0 0l-9.708 9.708-9.708-9.708c-0-0-0-0-0-0-0.105-0.104-0.227-0.18-0.357-0.228-0.356-0.133-0.771-0.057-1.057 0.229l-4.586 4.586c-0.286 0.286-0.361 0.702-0.229 1.057 0.049 0.13 0.124 0.252 0.229 0.357 0 0 0 0 0 0l9.708 9.708-9.708 9.708c-0 0-0 0-0 0-0.104 0.105-0.18 0.227-0.229 0.357-0.133 0.355-0.057 0.771 0.229 1.057l4.586 4.586c0.286 0.286 0.702 0.361 1.057 0.229 0.13-0.049 0.252-0.124 0.357-0.229 0-0 0-0 0-0l9.708-9.708 9.708 9.708c0 0 0 0 0 0 0.105 0.105 0.227 0.18 0.357 0.229 0.356 0.133 0.771 0.057 1.057-0.229l4.586-4.586c0.286-0.286 0.362-0.702 0.229-1.057-0.049-0.13-0.124-0.252-0.229-0.357z"
+        ></path>
+      </symbol>
+      <symbol id="icon-arrow-right2" viewBox="0 0 32 32">
+        <path
+          d="M19.414 27.414l10-10c0.781-0.781 0.781-2.047 0-2.828l-10-10c-0.781-0.781-2.047-0.781-2.828 0s-0.781 2.047 0 2.828l6.586 6.586h-19.172c-1.105 0-2 0.895-2 2s0.895 2 2 2h19.172l-6.586 6.586c-0.39 0.39-0.586 0.902-0.586 1.414s0.195 1.024 0.586 1.414c0.781 0.781 2.047 0.781 2.828 0z"
+        ></path>
+      </symbol>
+      <symbol id="icon-arrow-left2" viewBox="0 0 32 32">
+        <path
+          d="M12.586 27.414l-10-10c-0.781-0.781-0.781-2.047 0-2.828l10-10c0.781-0.781 2.047-0.781 2.828 0s0.781 2.047 0 2.828l-6.586 6.586h19.172c1.105 0 2 0.895 2 2s-0.895 2-2 2h-19.172l6.586 6.586c0.39 0.39 0.586 0.902 0.586 1.414s-0.195 1.024-0.586 1.414c-0.781 0.781-2.047 0.781-2.828 0z"
+        ></path>
+      </symbol>
+    </defs>
+  </svg>
     <script src="js/script.js"></script>
   </body>
 </html>

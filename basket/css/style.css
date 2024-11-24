@@ -1,3 +1,319 @@
+/*------------------------------------*\
+  #ABSTRACTS
+\*------------------------------------*/
+/*------------------------------------*\
+  #FONT
+\*------------------------------------*/
+/*------------------------------------*\
+  #BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+  #SPACES (padding & margin & gap) 
+\*------------------------------------*/
+/*------------------------------------*\
+  #TRANSITION DURATION
+\*------------------------------------*/
+/*------------------------------------*\
+  #BOX SHADOW
+\*------------------------------------*/
+/*------------------------------------*\
+  #BORDER RADIUS
+\*------------------------------------*/
+/*========================================================================================
+*********   GRIDS BASE SUSY
+*******     MEDIA QUERY 
+*****       
+***         
+*/
+/*--------------------------------
+***  GENERAL DIFINITIONS
+**	 CSS3 , CLEARFIX
+*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
+.container {
+  width: 90%;
+}
 
+/*========================================================================================*\
+*----------------------------          MEDIA QUERY              ----------------------------        
+\*========================================================================================*/
+/*--------------------------------
+*** 4K AND HIGH RESOULOTIONS 
+**	MIN-WIDTH : 2560px OR 160em
+*/
+/*--------------------------------
+*** LAPTOP OR DESKTOP 
+**	MIN-WIDTH : 1400px OR 87.5em
+*/
+/*--------------------------------
+*** FOR SOM OF THE DEVICES
+**	MIN-WIDTH : 1201px OR 75.0625em
+*/
+/*--------------------------------
+*** FOR ANY DEVICE MAX SIZE UNTIL
+**	MAX-WIDTH : 1200px OR 75em
+*/
+/*--------------------------------
+*** FOR ANY DEVICE MAX SIZE UNTIL
+**	MAX-WIDTH : 1024px OR 64em
+*/
+/*--------------------------------
+*** FOR ANY DEVICE MAX SIZE UNTIL
+**	MAX-WIDTH : 992px OR 62em
+*/
+/*--------------------------------
+*** FOR RETINA MOBILE AND LANSCAPE
+**	MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
+*/
+/*--------------------------------
+*** FOR MOBILE
+**	MAX : 640PX / 40em
+*/
+/*--------------------------------
+*** FOR MINI MOBILE
+**	MAX : 400PX / 25em
+*/
+/*------------------------------------*\
+  #COLORS
+\*------------------------------------*/
+/*------------------------------------*\
+  #FONT
+\*------------------------------------*/
+/*------------------------------------*\
+  #SHADOW
+\*------------------------------------*/
+/*------------------------------------*\
+  #FORNT
+\*------------------------------------*/
+body {
+  font-family: "Inter", sans-serif;
+}
 
+/*------------------------------------*\
+  #HEADINGS
+\*------------------------------------*/
+.heading-primary,
+.heading-secondary {
+  text-align: center;
+  font-weight: 500;
+}
+
+.heading-primary {
+  font-size: 2.25em;
+}
+
+.heading-secondary {
+  font-size: 1.875em;
+}
+
+@media screen and (max-width: 40em) {
+  .heading-primary {
+    font-size: 1.875em;
+  }
+  .heading-secondary {
+    font-size: 1.5em;
+  }
+}
+/*------------------------------------*\
+  #BASE
+\*------------------------------------*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+}
+
+body {
+  min-height: 100vh;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.basket {
+  width: 100%;
+  z-index: -1;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  transition: all 0.6s;
+}
+a .icon {
+  transition: inherit;
+}
+a:hover {
+  background-color: rgb(245, 245, 245);
+  color: rgb(52, 152, 219);
+}
+a:hover .icon {
+  fill: rgb(52, 152, 219);
+}
+
+/*------------------------------------*\
+  #COMPONENTS
+\*------------------------------------*/
+/*=========================================================
+*********   Generic Button Component
+*******  
+*/
+.button {
+  background: #fff;
+  color: #1dc973;
+  border-radius: 9999px;
+  border: 1px solid #1dc973;
+  padding: 0.75em 4em;
+  font-size: 1em;
+  font-weight: 600;
+  transition: 150ms;
+  text-align: center;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: rgba(29, 201, 115, 0.1);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1em;
+  margin: 2em;
+  width: 27rem;
+  padding: 2em 2.5em;
+  box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.1);
+}
+@media screen and (max-width: 64em) {
+  .card {
+    width: 50%;
+    margin: 1em;
+  }
+}
+@media screen and (max-width: 40em) {
+  .card {
+    width: 100%;
+    margin: 1em auto;
+    border-radius: 0;
+  }
+}
+.card__image {
+  background-color: #fff;
+  width: 7rem;
+  height: 7rem;
+  margin: 1em auto;
+}
+.card__button {
+  margin: 0 auto 3em auto;
+}
+.card__button > a {
+  color: #1dc973;
+}
+.card__button > a:hover {
+  background-color: transparent;
+}
+.card__button:hover > a {
+  color: #000;
+}
+.card__text-section {
+  margin: 1.5em 0;
+  text-align: center;
+}
+.card__title {
+  margin-top: 0.75em;
+  margin-bottom: 1.5em;
+}
+.card__description {
+  text-align: center;
+  margin-bottom: 2.5em;
+  color: rgba(0, 0, 0, 0.8);
+}
+.card__bottom-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25em;
+}
+.card__bottom-link .icon-notification {
+  width: 1rem;
+  height: 1rem;
+}
+.card a {
+  background-color: transparent;
+  text-align: center;
+}
+
+/*------------------------------------*\
+  #LAYOUTS
+\*------------------------------------*/
+.header {
+  width: 100%;
+  height: 5rem;
+  position: relative;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+}
+.header__basket {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  top: 30%;
+  width: 80%;
+}
+.header .icon-cross {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  fill: rgb(127.5, 127.5, 127.5);
+}
+.header__logo {
+  width: 7rem;
+  height: 3rem;
+  object-fit: cover;
+}
+.header a {
+  background: transparent;
+}
+
+.basket-content {
+  background: #fff;
+}
+.basket-content h2 {
+  margin: 0.75em 0 1.5em;
+}
+@media screen and (max-width: 40em) {
+  .basket-content h2 {
+    margin: 0.75em 0;
+  }
+}
+.basket-content .cards-section {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 40em) {
+  .basket-content .cards-section {
+    flex-direction: column;
+  }
+}
 /*# sourceMappingURL=style.css.map */
