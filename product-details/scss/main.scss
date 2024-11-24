@@ -3,7 +3,7 @@
 \*------------------------------------*/
 
 @import "../../shared/scss/shared.scss";
-// @import "variables";
+
 
 
 /*------------------------------------*\
@@ -13,7 +13,15 @@
 @import "../../shared/scss/base/reset";
 
 /*------------------------------------*\
-  #PRODUCT-DETAILS
+  #TYPOGRAPGY
 \*------------------------------------*/
 
-@import "../scss/productDetails.scss"
+@import "./typography/icomoon";
+
+
+/*------------------------------------*\
+  #LAYOUT
+\*------------------------------------*/
+@import "variables";
+@import "./layout/top-bar.scss";
+@import "./layout/nav-bar.scss";

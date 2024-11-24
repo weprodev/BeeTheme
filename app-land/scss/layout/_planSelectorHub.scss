@@ -108,6 +108,7 @@
       p {
         line-height: 1.7;
         margin-top: nth($spaces, 4);
+        font-size: 1.2rem;
       }
 
       .information-section {
@@ -119,7 +120,7 @@
           margin-top: 5rem;
 
           ul {
-            margin-top: 5rem;
+            margin-top: 9rem;
             width: 41%;
             text-align: center;
             padding: 0;
@@ -192,9 +193,11 @@
 	*/
 
   @include tablet {
+    padding: 5rem 0;
+
     .plans {
       padding: nth($spaces, 8);
-      border-radius: 10px;
+      border-radius: $roundedXl;
       margin: auto;
 
       h1 {
@@ -296,8 +299,10 @@
 
         h3,
         .status {
-          width: 34rem;
-          text-align: center;
+          gap: 0;
+          left: -1rem;
+          position: relative;
+          width: 27rem;
         }
       }
       .download-box .information-section .btn-download ul {
@@ -317,6 +322,7 @@
         font-size: $fontSize3Xl;
         text-align: center;
       }
+
       .mainBox {
         .subscription {
           display: grid;
@@ -338,13 +344,30 @@
         .box {
           display: grid;
           text-align: center;
-          left: -1rem;
           position: relative;
+          justify-content: center;
 
           h3,
           .status {
-            width: 19rem;
+            gap: nth($spaces, 8);
             text-align: center;
+          }
+
+          .status {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: nth($spaces, 3);
+
+            span {
+              flex: 1;
+              display: inline-block;
+              min-width: 5rem;
+              text-align: center;
+              padding: 0.3125rem nth($spaces, 3);
+              border-radius: $roundedMd;
+            }
           }
         }
       }

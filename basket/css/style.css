@@ -179,6 +179,7 @@ a:hover .icon {
   display: none !important;
 }
 
+
 /*------------------------------------*\
   #COMPONENTS
 \*------------------------------------*/
@@ -269,6 +270,7 @@ a:hover .icon {
   background-color: transparent;
   text-align: center;
 }
+
 
 .close-modal {
   display: flex;

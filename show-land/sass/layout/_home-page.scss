@@ -11,7 +11,10 @@
     -webkit-background-clip: text;
     color: transparent;
   }
-
+  &__imgs-main-page img {
+    height: 12rem;
+    object-fit: contain;
+  }
   &__headline_1 {
     text-align: center;
     font-size: 2.8rem;
@@ -23,7 +26,6 @@
   &__description {
     text-align: center;
     font-size: $fontSizeLg;
-    margin-bottom: list.nth($spaces, 10);
   }
   &__description_1 {
     text-align: center;
@@ -41,7 +43,7 @@
     outline: 0.1px solid $colorEleventh;
     outline-offset: 0.8rem;
     border-radius: $rounded;
-    img{
+    img {
       width: 100%;
     }
   }
