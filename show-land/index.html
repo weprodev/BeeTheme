@@ -9,6 +9,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 
    <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/queries.css">
+
+   <script defer src="js/main.js"></script>
+
+   <script
+   type="module"
+   src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+ ></script>
+ <script
+   nomodule=""
+   src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+ ></script>
+
 </head>
 
 <body>
@@ -17,7 +30,7 @@
     <div class="background-color">
 
         <div class="container">
-            <header class="header ">
+            <header class="header">
                 <h1 class="logo">Anvogue</h1>
                 <nav class="main-nav">
                     <ul class="main-nav__list">
@@ -28,7 +41,10 @@
             <li><a class="main-nav__link btn btn-button nav-cta" href="#">purchase now</a> </li>
         </ul>
     </nav>
-       
+       <button class="btn-mobile-nav">
+        <ion-icon name="menu-outline" class="icone-mobile-nav"></ion-icon>
+        <ion-icon name="close-outline" class="icone-mobile-nav"></ion-icon>
+       </button>
 </header>
 <section class="hero">
     <div class="text-box">
@@ -44,18 +60,18 @@
         <div class="text-img">
 
 
-            <div class="text-img__1">
-                <img src="https://placehold.co/150x300" class="text-img__box border__1" alt="">
-                <img src="https://placehold.co/400x300" class="text-img__box" alt="">
-                <img src="https://placehold.co/400x300" class="text-img__box" alt="">
-                <img src="https://placehold.co/150x300" class="text-img__box border__2" alt="">
-            </div>
-            <div class="text-img__2">
-                <img src="https://placehold.co/373x140" class="text-img__box" alt="">
-                <img src="https://placehold.co/373x140" class="text-img__box" alt="">
-                <img src="https://placehold.co/373x140" class="text-img__box" alt="">
-            </div>
-        
+    <div class="text-img__1">
+        <img src="https://placehold.co/180x300" class="text-img__box img__box_small_1 border__1" alt="">
+        <img src="https://placehold.co/400x300" class="text-img__box img__box_big" alt="">
+        <img src="https://placehold.co/400x300" class="text-img__box img__box_big" alt="">
+        <img src="https://placehold.co/180x300" class="text-img__box img__box_small_2 border__2" alt="">
+    </div>
+    <div class="text-img__2">
+        <img src="https://placehold.co/373x140" class="text-img__box img__box_horizontal_1" alt="">
+        <img src="https://placehold.co/373x140" class="text-img__box img__box_horizontal_2" alt="">
+        <img src="https://placehold.co/373x140" class="text-img__box img__box_horizontal_3" alt="">
+    </div>
+    
         </div>
 </section>
 </div>
@@ -77,7 +93,8 @@
               
             <h1 class="super-fast__headline">Super Fast Loading Speed</h1>
 
-            <p class="super-fast__paragraph">Anvogue is optimized for fast loading speed by having a good structure and well witten code for best user experience</p>
+            <p class="super-fast__paragraph">Anvogue is optimized for fast loading speed by having a</p>
+            <p class="super-fast__paragraph"> good structure and well witten code for best user experience</p>
 
             <p class="super-fast__performance"><span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="super-fast__icone icone-1">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
@@ -122,36 +139,38 @@
 <div class="background-color__2">
 <div class="container">
     <section class="home-page"> 
+        <div class="home-page__info">
       <h1 class="home-page__headline">24+</h1>
       <h1 class="home-page__headline_1">Ready To Use Home Pages</h1>
-      <p class="home-page__description">All home pages, inner pages, and elements are included with the purchase. Easily import the demos and pages with the one-click demo import.</p>
-
+      <p class="home-page__description">All home pages, inner pages, and elements are included with the purchase. Easily</p>
+      <p class="home-page__description_1">import the demos and pages with the one-click demo import.</p>
+    </div>
       <div class="home-page__imgs">
-<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods"><p class="home-page__number">Home page 01</p></div>
-<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods"><p class="home-page__number">Home page 02</p></div>
-<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods"><p class="home-page__number">Home page 03</p></div>
-<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods"><p class="home-page__number">Home page 04</p></div>
-<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods"><p class="home-page__number">Home page 05</p></div>
-<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods"><p class="home-page__number">Home page 06</p></div>
-<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods"><p class="home-page__number">Home page 07</p></div>
-<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods"><p class="home-page__number">Home page 08</p></div>
-<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods"><p class="home-page__number">Home page 09</p></div>
-<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods"><p class="home-page__number">Home page 10</p></div>
-<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods"><p class="home-page__number">Home page 11</p></div>
-<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods"><p class="home-page__number">Home page 12</p></div>
-<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods"><p class="home-page__number">Home page 13</p></div>
-<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods"><p class="home-page__number">Home page 14</p></div>
-<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods"><p class="home-page__number">Home page 15</p></div>
-<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods"><p class="home-page__number">Home page 16</p></div>
-<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods"><p class="home-page__number">Home page 17</p></div>
-<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods"><p class="home-page__number">Home page 18</p></div>
-<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods"><p class="home-page__number">Home page 19</p></div>
-<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods"><p class="home-page__number">Home page 20</p></div>
-<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods"><p class="home-page__number">Home page 21</p></div>
-<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods"><p class="home-page__number">Home page 22</p></div>
-<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods"><p class="home-page__number">Home page 23</p></div>
-<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods"><p class="home-page__number">Home page 24</p></div>
-<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods"><p class="home-page__number">Home RTL</p></div>
+<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods" class="home-page__img"><p class="home-page__number">Home page 01</p></div>
+<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods" class="home-page__img"><p class="home-page__number">Home page 02</p></div>
+<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods" class="home-page__img"><p class="home-page__number">Home page 03</p></div>
+<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods" class="home-page__img"><p class="home-page__number">Home page 04</p></div>
+<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods" class="home-page__img"><p class="home-page__number">Home page 05</p></div>
+<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods" class="home-page__img"><p class="home-page__number">Home page 06</p></div>
+<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods" class="home-page__img"><p class="home-page__number">Home page 07</p></div>
+<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods" class="home-page__img"><p class="home-page__number">Home page 08</p></div>
+<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods" class="home-page__img"><p class="home-page__number">Home page 09</p></div>
+<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods" class="home-page__img"><p class="home-page__number">Home page 10</p></div>
+<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods" class="home-page__img"><p class="home-page__number">Home page 11</p></div>
+<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods" class="home-page__img"><p class="home-page__number">Home page 12</p></div>
+<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods" class="home-page__img"><p class="home-page__number">Home page 13</p></div>
+<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods" class="home-page__img"><p class="home-page__number">Home page 14</p></div>
+<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods" class="home-page__img"><p class="home-page__number">Home page 15</p></div>
+<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods" class="home-page__img"><p class="home-page__number">Home page 16</p></div>
+<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods" class="home-page__img"><p class="home-page__number">Home page 17</p></div>
+<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods" class="home-page__img"><p class="home-page__number">Home page 18</p></div>
+<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods" class="home-page__img"><p class="home-page__number">Home page 19</p></div>
+<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods" class="home-page__img"><p class="home-page__number">Home page 20</p></div>
+<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods" class="home-page__img"><p class="home-page__number">Home page 21</p></div>
+<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods" class="home-page__img"><p class="home-page__number">Home page 22</p></div>
+<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods" class="home-page__img"><p class="home-page__number">Home page 23</p></div>
+<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods" class="home-page__img"><p class="home-page__number">Home page 24</p></div>
+<div class="home-page__img_boxs" ><img src="https://placehold.co/400x550"  alt="a store site with all kinds of goods" class="home-page__img"><p class="home-page__number">Home RTL</p></div>
   </div>
     </section>
     </div>
@@ -165,8 +184,8 @@
       </svg>
       </span>elementor</p>
       <h1 class="page-builder__headline">Elementor Page Builder</h1>
-      <p class="page-builder__paragraph">Enjoy intuitive interface and flexibility of one of the most user- friendly page builder for WordPress. Enhanced with a set of additional elements, it enables you to customize layouts with ease.</p>
-
+      <p class="page-builder__paragraph">Enjoy intuitive interface and flexibility of one of the most user- friendly page builder for WordPress.</p>
+      <p class="page-builder__paragraph_1">Enhanced with a set of additional elements, it enables you to customize layouts with ease.</p>
 <div class="page-builder__feature">
     <div>
         <p class="page-builder__features"><span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="page-builder__icone_1">
@@ -193,7 +212,7 @@
 
 <a href="#" class="btn btn-button">view demo</a>
 </div>
-<div> <img src="https://placehold.co/650x400" class="" alt=""></div>
+<div> <img src="https://placehold.co/650x400" class="page-builder__img" alt=""></div>
     </section>
 
     <section class="benefits">
@@ -585,3 +604,4 @@
 </main>   
     </body>
     </html>
+
