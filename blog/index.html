@@ -1,12 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.2.1/css/all.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
     <title>Blog</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div class="container">
+        <div class="select-lang">
+          <i class="fa-solid fa-globe"></i>
+
+          <div class="dropdown">
+            <div class="select">
+              <span class="selected">Language</span>
+              <div class="cart"></div>
+            </div>
+            <ul class="menu">
+              <li class="active">English</li>
+              <li>Persian</li>
+              <li>Spanish</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="box">
+          <input type="checkbox" id="check" />
+          <div class="search-box">
+            <input type="text" placeholder="Search..." />
+            <label for="check" class="icon">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </label>
+          </div>
+
+          <div class="button-section">
+            <button class="oringeBtn">Login</button>
+            <button class="oringeBtn oringeBtn-L">Free Template</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="separator"></div>
+
+    <script src="js/main.js"></script>
+  </body>
 </html>

@@ -1,0 +1,48 @@
+/*========================================================================================
+*********   
+*******     IMPORT ALL OF THE STYLES HERE
+*****       
+***         
+*/
+
+    /*--------------------------------
+    ***  shared files 
+    **  
+    */   
+    
+    @import "../../shared/scss/shared.scss";
+
+    /*--------------------------------
+    ***  IMPORT GENERAL AND IMPORTANT
+    **   VARIABLES
+    */
+
+    @import "variables"; 
+    
+    /*--------------------------------
+    ***  SET DIRECTION BEFORE ANYTHING
+    **   
+    */
+
+    @import "typography";
+
+    /*--------------------------------
+    ***  SET DIRECTION BEFORE ANYTHING
+    **   
+    */
+
+    @import "./component/button";
+
+    /*--------------------------------
+    ***  LAYOUT
+    **   HEADER
+    */   
+
+    @import "layout/header";
+
+/*
+***         
+*****       
+*******     
+*********   
+========================================================================================*/
