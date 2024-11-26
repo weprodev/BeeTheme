@@ -1,12 +1,13 @@
-
 /*------------------------------------*\
   #COLORS
 \*------------------------------------*/
+$primaryColor: #ff5e57;
 $secondaryColor: #1dc973;
+$tertiaryColor: #95a5a6;
+$forthColor: #2980b9;
 
-$white : #fff;
-$black : #000;
-
+$white: #fff;
+$black: #000;
 
 /*------------------------------------*\
   #FONT
@@ -14,10 +15,22 @@ $black : #000;
 
 $primaryFontFamily: "Inter", sans-serif;
 
-
 /*------------------------------------*\
   #SHADOW
 \*------------------------------------*/
 
-$shadowDark : 0px 0px 20px 0px rgba($color: $black, $alpha: 0.2);
-$shadowDarkSpread : 0px 0px 20px 10px rgba($color: $black, $alpha: 0.1);
+$shadowDark: 0px 0px 20px 0px
+  rgba(
+    $color: $black,
+    $alpha: 0.2,
+  );
+$shadowDarkSpread: 0px 0px 20px 10px
+  rgba(
+    $color: $black,
+    $alpha: 0.1,
+  );
+
+/*------------------------------------*\
+  #BORDER
+\*------------------------------------*/
+$lightBorder: 0.1rem solid rgba($black, $alpha: 0.2);
