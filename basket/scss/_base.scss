@@ -12,9 +12,9 @@ a {
   }
   &:hover {
     background-color: rgb(245, 245, 245);
-    color: rgb(52, 152, 219);
+    color: $forthColor;
     .icon {
-      fill: rgb(52, 152, 219);
+      fill: $forthColor;
     }
   }
 }
@@ -27,3 +27,6 @@ a {
   display: none !important;
 }
 
+.right-0 {
+  right: 0% !important;
+}
