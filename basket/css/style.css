@@ -83,6 +83,9 @@
   #SHADOW
 \*------------------------------------*/
 /*------------------------------------*\
+  #BORDER
+\*------------------------------------*/
+/*------------------------------------*\
   #FORNT
 \*------------------------------------*/
 body {
@@ -143,6 +146,7 @@ picture,
 svg,
 video {
   display: block;
+  width: 100%;
 }
 
 a {
@@ -165,10 +169,10 @@ a .icon {
 }
 a:hover {
   background-color: rgb(245, 245, 245);
-  color: rgb(52, 152, 219);
+  color: #2980b9;
 }
 a:hover .icon {
-  fill: rgb(52, 152, 219);
+  fill: #2980b9;
 }
 
 .blur {
@@ -179,6 +183,9 @@ a:hover .icon {
   display: none !important;
 }
 
+.right-0 {
+  right: 0% !important;
+}
 
 /*------------------------------------*\
   #COMPONENTS
@@ -271,7 +278,6 @@ a:hover .icon {
   text-align: center;
 }
 
-
 .close-modal {
   display: flex;
   flex-direction: column;
@@ -339,6 +345,126 @@ a:hover .icon {
   transform: scale(1.1);
 }
 
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  margin: 0 auto;
+  width: 80%;
+  text-align: left;
+  margin-top: 4em;
+}
+@media screen and (max-width: 40em) {
+  .form {
+    width: 90%;
+  }
+}
+.form__checkboxs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.form__checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  user-select: none;
+}
+.form__checkbox-input {
+  display: none;
+}
+.form__checkbox-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: #fff;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.25em;
+  transition: 150ms;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.form__checkbox-button::after {
+  content: "";
+  display: none;
+  width: 0.4rem;
+  height: 0.7rem;
+  border: solid #fff;
+  border-width: 0 0.2rem 0.2rem 0;
+  transform: rotate(45deg);
+}
+.form__checkbox-input:checked ~ .form__checkbox-button {
+  background-color: #ff5e57;
+  box-shadow: 0px 0px 5px 5px rgba(255, 94, 87, 0.5);
+  border-color: transparent;
+}
+.form__checkbox-input:checked ~ .form__checkbox-button::after {
+  display: block;
+}
+.form__checkbox-group:hover .form__checkbox-input:not(:checked) ~ .form__checkbox-button {
+  background-color: rgba(149, 165, 166, 0.2);
+}
+.form__input-groups-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+}
+@media screen and (max-width: 64em) {
+  .form__input-groups-container {
+    flex-direction: column;
+  }
+}
+.form__input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  flex-grow: 1;
+}
+.form__input-label-star {
+  color: #ff5e57;
+}
+.form__input {
+  padding: 1em;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.25em;
+}
+.form__textarea-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.form__textarea {
+  width: 100%;
+  height: 8rem;
+  border-radius: 0.25em;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  resize: none;
+  padding: 0.5em;
+}
+.form__button {
+  background: #fff;
+  color: #000;
+  border-radius: 0.25em;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  padding: 0.75em 1.5em;
+  font-size: 1em;
+  font-weight: 400;
+  transition: 150ms;
+  text-align: center;
+  cursor: pointer;
+  align-self: flex-start;
+  margin-bottom: 1em;
+}
+.form__button:hover {
+  background-color: #ff5e57;
+}
+.form__button:hover {
+  color: #fff;
+  border-color: transparent;
+}
+
 /*------------------------------------*\
   #LAYOUTS
 \*------------------------------------*/
@@ -358,7 +484,7 @@ a:hover .icon {
   top: 30%;
   width: 80%;
 }
-.header .icon-cross {
+.header .icon {
   display: inline-block;
   width: 2rem;
   height: 2rem;
@@ -392,6 +518,19 @@ a:hover .icon {
   .basket-content .cards-section {
     flex-direction: column;
   }
+}
+
+.select-section {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  position: fixed;
+  overflow: auto;
+  top: 0;
+  bottom: 0;
+  right: 105%;
+  z-index: 99;
+  transition: all 0.9s cubic-bezier(0.6, 0.05, 0.4, 1);
 }
 
 /*# sourceMappingURL=style.css.map */

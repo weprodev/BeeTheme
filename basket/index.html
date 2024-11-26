@@ -7,21 +7,15 @@
     <link rel="stylesheet" href="css/style.css" media="all" />
   </head>
   <body>
-
     <div class="basket">
       <div class="close-modal hidden" id="close-page">
         <h2 class="heading-primary">Are you sure?</h2>
         <div class="close-modal__buttons-container">
           <a href="#" class="close-modal__button-yes">Yes</a>
-          <button
-            class="close-modal__button-no"
-            id="close"
-          >
-            No
-          </button>
+          <button class="close-modal__button-no" id="close">No</button>
         </div>
       </div>
-      
+
       <div id="sec-1">
         <header class="header">
           <div class="header__basket">
@@ -70,11 +64,96 @@
           </div>
         </div>
       </div>
+
+      <div class="select-section" id="sec-2">
+        <header class="header">
+          <div class="header__basket">
+            <img src="images/favicon.png" class="header__logo" alt="logo" />
+            <a href="#" id="back-main-page2">
+              <svg class="icon icon-arrow-right2">
+                <use xlink:href="#icon-arrow-right2"></use>
+              </svg>
+            </a>
+          </div>
+        </header>
+
+        <div class="basket-content">
+          <h2 class="heading-primary">Select</h2>
+          <form class="form">
+            <div class="form__checkboxs-container">
+              <div class="form__checkbox-group">
+                <input
+                  class="form__checkbox-input"
+                  type="checkbox"
+                  id="checkbox-1-1"
+                />
+                <label class="form__checkbox-button" for="checkbox-1-1"></label>
+                <label for="checkbox-1-1">
+                  I want to use your service and transfering my site to your
+                  platform</label
+                >
+              </div>
+              <div class="form__checkbox-group">
+                <input
+                  class="form__checkbox-input"
+                  type="checkbox"
+                  id="checkbox-1-2"
+                />
+                <label class="form__checkbox-button" for="checkbox-1-2"></label>
+                <label for="checkbox-1-2"> I need to consutatiion</label>
+              </div>
+            </div>
+
+            <div class="form__input-groups-container">
+              <div class="form__input-group">
+                <label for="firstname-1"
+                  >First Name:&nbsp;<span class="form__input-label-star"
+                    >*</span
+                  >
+                </label>
+                <input
+                  class="form__input"
+                  type="text"
+                  id="firstname-1"
+                  placeholder="First Name..."
+                />
+              </div>
+              <div class="form__input-group">
+                <label for="lastname-1"
+                  >Last Name:&nbsp;<span class="form__input-label-star">*</span>
+                </label>
+                <input
+                  class="form__input"
+                  type="text"
+                  id="lastname-1"
+                  placeholder="Last Name..."
+                />
+              </div>
+              <div class="form__input-group">
+                <label for="email-1"
+                  >Email:&nbsp;<span class="form__input-label-star">*</span>
+                </label>
+                <input
+                  class="form__input"
+                  type="email"
+                  id="email-1"
+                  placeholder="Email..."
+                />
+              </div>
+            </div>
+
+            <div class="form__textarea-group">
+              <label for="textarea-1">Your message:</label>
+              <textarea class="form__textarea" id="textarea-1"></textarea>
+            </div>
+
+            <button class="form__button" type="submit">Send</button>
+          </form>
+        </div>
+      </div>
     </div>
 
-
     <script src="js/jquery.min.js"></script>
-
     <script src="js/script.js"></script>
   </body>
   <svg
@@ -107,6 +186,4 @@
       </symbol>
     </defs>
   </svg>
-    <script src="js/script.js"></script>
-  </body>
 </html>
