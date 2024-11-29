@@ -6,37 +6,44 @@
 */
 
     /*--------------------------------
-    ***  shared files 
-    **  
-    */   
-    
+    ***  SHARED FILES
+    **   Import shared styles
+    */
+
     @import "../../shared/scss/shared.scss";
 
     /*--------------------------------
-    ***  IMPORT GENERAL AND IMPORTANT
-    **   VARIABLES
+    ***  VARIABLES
+    **   Import global variables
     */
 
-    @import "variables"; 
-    
+    @import "variables";
+
     /*--------------------------------
-    ***  SET DIRECTION BEFORE ANYTHING
-    **   
+    ***  TYPOGRAPHY
+    **   Import typography settings
     */
 
     @import "typography";
 
     /*--------------------------------
-    ***  SET DIRECTION BEFORE ANYTHING
-    **   
+    ***  COMPONENTS
+    **   Import specific components
     */
 
     @import "./component/button";
 
     /*--------------------------------
+    ***  BASE STYLES
+    **   General base styles
+    */
+
+    @import "base/_base.scss";
+
+    /*--------------------------------
     ***  LAYOUT
-    **   HEADER
-    */   
+    **   Import layout-specific styles
+    */
 
     @import "layout/header";
 

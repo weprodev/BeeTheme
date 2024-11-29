@@ -6,8 +6,8 @@
 ***         
 */
 /*--------------------------------
-***  shared files 
-**  
+***  SHARED FILES
+**   Import shared styles
 */
 /* ===================================
    🌐 MAIN IMPORT FILE  
@@ -358,8 +358,8 @@ a {
   }
 }
 /*--------------------------------
-***  IMPORT GENERAL AND IMPORTANT
-**   VARIABLES
+***  VARIABLES
+**   Import global variables
 */
 /*========================================================================================
 *********   ALL OF THE VARIABLES TYPE 
@@ -387,17 +387,11 @@ a {
 *********   
 /*========================================================================================*/
 /*--------------------------------
-***  SET DIRECTION BEFORE ANYTHING
-**   
+***  TYPOGRAPHY
+**   Import typography settings
 */
 body {
   font-family: "Poppins", sans-serif;
-  overflow-x: hidden;
-}
-body * {
-  padding: 0;
-  margin: 0;
-  font: revert;
 }
 body a {
   text-decoration: none;
@@ -410,6 +404,48 @@ body a:hover {
 body li {
   list-style-type: none;
 }
+body * {
+  font: revert;
+}
+
+/*--------------------------------
+***  COMPONENTS
+**   Import specific components
+*/
+.oringeBtn {
+  border: 0.125em rgb(255, 150, 113) solid;
+  padding: 0.9em 2em;
+  background: rgb(255, 255, 255);
+  color: rgb(255, 150, 113);
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 0.375em;
+}
+.oringeBtn:hover {
+  background-color: rgba(255, 94, 87, 0.4);
+  transition: 1s;
+}
+.oringeBtn-L {
+  width: 11rem;
+  background-color: rgb(255, 94, 87);
+  font-size: 100%;
+  color: rgb(255, 255, 255);
+}
+.oringeBtn-L:hover {
+  background-color: rgba(255, 94, 87, 0.5);
+}
+
+/*--------------------------------
+***  BASE STYLES
+**   General base styles
+*/
+body {
+  overflow-x: hidden;
+}
+body * {
+  padding: 0;
+  margin: 0;
+}
 body .container {
   width: 70%;
 }
@@ -421,35 +457,8 @@ body .separator {
 }
 
 /*--------------------------------
-***  SET DIRECTION BEFORE ANYTHING
-**   
-*/
-.oringeBtn {
-  border: 2px #ff9671 solid;
-  padding: 0.9em 2em;
-  background: white;
-  color: #ff9671;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 5px;
-}
-.oringeBtn:hover {
-  background-color: rgba(255, 94, 87, 0.4);
-  transition: 1s;
-}
-.oringeBtn-L {
-  width: 11rem;
-  background-color: rgb(255, 94, 87);
-  font-size: 100%;
-  color: white;
-}
-.oringeBtn-L:hover {
-  background-color: rgba(255, 94, 87, 0.5);
-}
-
-/*--------------------------------
 ***  LAYOUT
-**   HEADER
+**   Import layout-specific styles
 */
 header {
   justify-content: center;
