@@ -4,9 +4,17 @@
   background-color: $white;
   position: fixed;
   overflow: auto;
-  top: 0;
-  bottom: 0;
-  right: 105%;
   z-index: 99;
   transition: all 0.9s cubic-bezier(0.6, 0.05, 0.4, 1);
+
+  &--left{
+    top: 0;
+    bottom: 0;
+    right: 105%;
+  }
+  &--right{
+    top: 0;
+    bottom: 0;
+    left: 105%;
+  }
 }

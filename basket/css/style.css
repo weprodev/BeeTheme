@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*------------------------------------*\
   #ABSTRACTS
 \*------------------------------------*/
@@ -185,6 +186,15 @@ a:hover .icon {
 
 .right-0 {
   right: 0% !important;
+}
+
+.left-0 {
+  left: 0% !important;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 /*------------------------------------*\
@@ -465,6 +475,100 @@ a:hover .icon {
   border-color: transparent;
 }
 
+.platform {
+  width: 20em;
+  height: 7em;
+}
+@media screen and (max-width: 62em) {
+  .platform {
+    width: 19em;
+  }
+}
+@media screen and (max-width: 40em) {
+  .platform {
+    width: 22em;
+  }
+}
+.platform__radio-input {
+  display: none;
+}
+.platform__radio-label {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  border-radius: 1.5em;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+  position: relative;
+  transition: 300ms;
+}
+.platform__radio-input:not(:disabled) ~ .platform__radio-label {
+  cursor: pointer;
+}
+.platform__radio-input:disabled ~ .platform__radio-label {
+  color: hsl(150, 5%, 75%);
+  border-color: hsl(150, 5%, 75%);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+.platform__radio-input:checked ~ .platform__radio-label {
+  background: #1dc973;
+  color: #fff;
+  box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.1);
+}
+.platform__radio-input:checked ~ .platform__radio-label .platform__check-circle::after {
+  display: flex;
+}
+.platform__name {
+  font-size: 1.5em;
+  font-weight: 500;
+  position: absolute;
+  top: 50%;
+  left: 59%;
+  transform: translate(-50%, -50%);
+  white-space: pre;
+}
+.platform__check-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  height: 3rem;
+  width: 3rem;
+}
+.platform__check-circle::after {
+  content: "✓";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  height: 3rem;
+  width: 3rem;
+  color: #000;
+  background: #fff;
+  font-size: 1.875em;
+  border-radius: 9999px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.platform__front-image {
+  width: 85%;
+  height: 85%;
+  object-fit: contain;
+}
+.platform__bg-image {
+  width: 11em;
+  opacity: 0.2;
+  position: absolute;
+  top: -29%;
+  right: -17%;
+}
+
 /*------------------------------------*\
   #LAYOUTS
 \*------------------------------------*/
@@ -526,11 +630,35 @@ a:hover .icon {
   background-color: #fff;
   position: fixed;
   overflow: auto;
+  z-index: 99;
+  transition: all 0.9s cubic-bezier(0.6, 0.05, 0.4, 1);
+}
+.select-section--left {
   top: 0;
   bottom: 0;
   right: 105%;
-  z-index: 99;
-  transition: all 0.9s cubic-bezier(0.6, 0.05, 0.4, 1);
+}
+.select-section--right {
+  top: 0;
+  bottom: 0;
+  left: 105%;
+}
+
+.platform-options-container {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  padding-bottom: 2em;
+  margin: 1em 0;
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
+  gap: 2.5em;
+  margin: 0 auto;
+  width: 80%;
+}
+@media screen and (max-width: 40em) {
+  .platform-options-container {
+    width: 90%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
