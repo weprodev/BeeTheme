@@ -92,7 +92,7 @@ a {
 }
 .login-form-form input {
   border: 1px solid rgba(0, 0, 0, 0.38);
-  border-radius: 20px;
+  border-radius: 1em;
   padding: 1em;
 }
 .login-form-form input:focus, .login-form-form input:active {
