@@ -18,6 +18,7 @@
 ***  GENERAL DIFINITIONS
 **	 CSS3 , CLEARFIX
 */
+@import url("https://fonts.googleapis.com/css?family=Muli");
 .container {
   width: 90%;
 }
@@ -81,6 +82,22 @@
 \*------------------------------------*/
 /* ~~~~~~~~~~~~~~🔸 BASE 🔸~~~~~~~~~~~~~~ */
 /* Global styles, Resets, and Utilities */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 *,
 *::before,
 *::after {
@@ -107,7 +124,6 @@ picture,
 svg,
 video {
   display: block;
-  width: 100%;
 }
 
 a {
@@ -364,7 +380,6 @@ picture,
 svg,
 video {
   display: block;
-  width: 100%;
 }
 
 a {
@@ -1024,6 +1039,17 @@ a {
 /*------------------------------------*\
   #VARIABLES PRODUCT DETAILS
 \*------------------------------------*/
+:root {
+  --gradient: linear-gradient(
+      310deg,
+      #845ec2,
+      #d65db1,
+      #ff6f91,
+      #ff9671,
+      #ffc75f
+  );
+}
+
 /*------------------------------------*\
   #TOP BAR
 \*------------------------------------*/
@@ -1171,7 +1197,7 @@ a {
   background-color: transparent;
   cursor: pointer;
 }
-.top-bar .top-bar-contant .section-logo-lang .select-lang > ul li ul li:hover .l-two .Circle {
+.top-bar .top-bar-contant .section-logo-lang .select-lang > ul li ul li:hover .l-two .circle {
   opacity: 1;
   visibility: visible;
 }
@@ -1343,7 +1369,7 @@ a {
     background-color: rgb(255, 255, 255);
   }
 }
-.nav-bar > ul li .Circle {
+.nav-bar > ul li .circle {
   opacity: 0;
   visibility: hidden;
   margin-right: 1em;
@@ -1553,6 +1579,141 @@ a {
   .nav-bar .section-responsive {
     right: 2em;
   }
+}
+
+/*------------------------------------*\
+  #GRADIENT BACKGROUND
+\*------------------------------------*/
+/*------------------------------------*\
+  #IMPORT THIS FONT FROM FONTS.GOOGLE.COM -muli font
+\*------------------------------------*/
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: top 1s;
+}
+
+.sticky + .content {
+  padding-top: 5em;
+}
+
+.gradient-bg {
+  width: 100%;
+  background-image: var(--gradient);
+  background-size: 500%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 6em 0;
+  transition: animation 4s;
+  animation: gradient-background 5s infinite alternate;
+}
+@keyframes gradient-background {
+  0% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
+}
+.gradient-bg .font-size-title {
+  font-size: 3em;
+  line-height: 2.5;
+  margin-bottom: 0.5em;
+}
+@media screen and (max-width: 64em) {
+  .gradient-bg .font-size-title {
+    font-size: 2.25em;
+    line-height: 2;
+  }
+}
+@media screen and (max-width: 40em) {
+  .gradient-bg .font-size-title {
+    font-size: 1.875em;
+    line-height: 1.5;
+    margin-bottom: 1em;
+  }
+}
+.gradient-bg .started-section {
+  width: 70%;
+  text-align: center;
+}
+@media screen and (max-width: 62em) {
+  .gradient-bg .started-section {
+    width: 90%;
+  }
+}
+.gradient-bg .started-section .title-started {
+  color: rgb(255, 255, 255);
+}
+.gradient-bg .started-section .description-started {
+  font-size: 1.25em;
+  color: rgb(255, 255, 255);
+  line-height: 1.5;
+  font-weight: 100;
+  margin-bottom: 9vh;
+}
+.gradient-bg .started-section .btn-start {
+  background-color: #2fdc81;
+  padding: 0.75em 2.5em;
+  font-size: 1.25em;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  border-radius: 1.5em;
+  transition: all 0.4s;
+}
+.gradient-bg .started-section .btn-start:hover {
+  background-color: #1bac5e;
+}
+.gradient-bg .started-section .img-started-section {
+  margin: 10vh 0;
+}
+.gradient-bg .started-section .img-started-section img {
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 0.5em !important;
+}
+.gradient-bg .started-section .card-started {
+  height: 14em;
+}
+@media screen and (max-width: 75em) {
+  .gradient-bg .started-section .card-started {
+    height: 30em;
+  }
+}
+@media screen and (max-width: 25em) {
+  .gradient-bg .started-section .card-started {
+    height: 33em;
+  }
+}
+.gradient-bg .started-section .card-started .one {
+  color: rgb(255, 255, 255);
+}
+@media screen and (max-width: 75em) {
+  .gradient-bg .started-section .card-started .one {
+    margin-bottom: 3em;
+  }
+}
+.gradient-bg .started-section .card-started h2,
+.gradient-bg .started-section .card-started p {
+  margin: 0 1.25em;
+}
+@media screen and (max-width: 62em) {
+  .gradient-bg .started-section .card-started h2,
+  .gradient-bg .started-section .card-started p {
+    margin: 0;
+  }
+}
+.gradient-bg .started-section .card-started h2 {
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: 3;
+}
+.gradient-bg .started-section .card-started p {
+  font-size: 1.125em;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 /*# sourceMappingURL=style.css.map */
