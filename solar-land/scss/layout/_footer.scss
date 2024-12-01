@@ -187,18 +187,36 @@ footer {
       }
 
       .footer-nav {
-        flex-direction: column;
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         padding: list.nth($spaces, 8) 0 list.nth($spaces, 3);
         gap: list.nth($spaces, 2);
 
+        .logo {
+          grid-area: 1 / 1 / 2 / 3;
+        }
+
         .navigation {
+          grid-area: 2/1/4/2;
+
           ul {
-            gap: 0;
+            flex-direction: column;
+            gap: list.nth($spaces, 5);
 
             li {
-              border-right: 1px solid $secondaryColor;
-              padding: 0 list.nth($spaces, 3);
+              border: none;
             }
+          }
+        }
+
+        .action-buttons {
+          grid-area: 2/2/4/3;
+          flex-wrap: wrap;
+
+          .social {
+            width: 4em;
+            height: 4em;
           }
         }
       }

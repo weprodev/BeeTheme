@@ -1,11 +1,11 @@
 /*------------------------------------*\
   #ABSTRACTS
 \*------------------------------------*/
+@import "../../shared/scss/abstracts/media-query";
 @import "../../shared/scss/abstracts/variables";
 @import "variables";
 @import "typography";
 @import "base";
-@import "../../shared/scss/abstracts/media-query";
 
 /*------------------------------------*\
   #LAYOUTS
@@ -21,6 +21,7 @@
 @import "layout/help-users";
 @import "layout/trusted";
 @import "layout/footer";
+@import "layout/icone-mobile";
 /*------------------------------------*\
   #BASE
 \*------------------------------------*/

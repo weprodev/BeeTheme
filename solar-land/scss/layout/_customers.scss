@@ -35,11 +35,13 @@
       border-radius: $roundedFull;
       aspect-ratio: 1 / 1;
       transition: all 0.3s ease-in;
+      box-sizing: border-box;
 
       img {
         width: 100%;
         top: 25%;
         position: relative;
+        padding: list.nth($spaces, 4);
       }
 
       &:hover {
@@ -64,7 +66,11 @@
     }
 
     .customers-icons {
+      flex-wrap: wrap;
+      padding: list.nth($spaces, 3);
+
       .customers-icon {
+        flex: 1 1 32%;
         margin-right: list.nth($spaces, 1);
       }
     }

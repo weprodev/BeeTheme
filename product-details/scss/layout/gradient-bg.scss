@@ -1,0 +1,151 @@
+/*------------------------------------*\
+  #GRADIENT BACKGROUND
+\*------------------------------------*/
+@use "sass:list";
+@import "../../../shared/scss/typography/muliFont";
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition   : top 1s;
+  }
+  
+  .sticky + .content {
+    padding-top     : list.nth($spaces, 20);
+  }
+
+.gradient-bg {
+    width: 100%;
+    background-image: var(--gradient);
+    background-size: 500%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: list.nth($spaces, 24) 0;
+    transition: animation 4s;
+    animation: gradient-background 5s infinite alternate;
+
+    @keyframes gradient-background {
+        0% {
+            background-position: right;
+        }
+
+        100% {
+            background-position: left;
+        }
+    }
+
+
+    .font-size-title {
+        font-size: $fontSize5Xl;
+        line-height: 2.5;
+        margin-bottom: list.nth($spaces, 2);
+
+        @include miniLaptop {
+            font-size: $fontSize4Xl;
+            line-height: 2;
+        }
+
+        @include mobile {
+            font-size: $fontSize3Xl;
+            line-height: 1.5;
+            margin-bottom: list.nth($spaces, 4);
+        }
+    }
+
+    .started-section {
+        width: 70%;
+        text-align: center;
+
+        @include tablet {
+            width: 90%;
+        }
+
+        .title-started {
+            color: $white;
+        }
+
+        .description-started {
+            font-size: $fontSizeXl;
+            color: $white;
+            line-height: 1.5;
+            font-weight: 100;
+            margin-bottom: 9vh;
+        }
+
+        .btn-start {
+            background-color: $btnStartGreen;
+            padding: list.nth($spaces, 3) list.nth($spaces, 10);
+            font-size: $fontSizeXl;
+            color: $white;
+            font-weight: $fontWeightSemibold;
+            border-radius: $rounded3Xl;
+            transition: all 0.4s;
+
+            &:hover {
+                background-color: $btnStartGreenHover;
+            }
+        }
+
+        //btn-start
+        .img-started-section {
+            margin: 10vh 0;
+
+
+            img {
+                max-width: 100%;
+                object-fit: contain;
+                border-radius: $roundedLg !important;
+            }
+        }
+
+        .card-started {
+            height: 14em;
+
+            @include laptop {
+                height: 30em;
+            }
+
+            @include miniMobile {
+                height: 33em;
+            }
+
+            .one {
+                color: $white;
+
+                @include laptop {
+                    margin-bottom: list.nth($spaces, 12);
+
+                }
+            }
+
+            h2,
+            p {
+                margin: 0 list.nth($spaces, 5);
+
+                @include tablet {
+                    margin: 0;
+                }
+            }
+
+            h2 {
+                font-size: $fontSize2Xl;
+                font-weight: $fontWeightSemibold;
+                line-height: 3;
+            }
+
+            p {
+                font-size: $fontSizeLg;
+                font-weight: $fontWeightRegular;
+                line-height: 1.5;
+            }
+        }
+
+        //card-started
+    }
+
+    //started-section
+}
+
+//gradient-bg

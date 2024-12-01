@@ -499,11 +499,13 @@ a {
   border-radius: 9999px;
   aspect-ratio: 1/1;
   transition: all 0.3s ease-in;
+  box-sizing: border-box;
 }
 .customers .customers-icons .customers-icon img {
   width: 100%;
   top: 25%;
   position: relative;
+  padding: 1em;
 }
 .customers .customers-icons .customers-icon:hover {
   background-color: #fff;
@@ -521,7 +523,12 @@ a {
   .customers .customers-header .customers-title {
     font-size: 1.875em;
   }
+  .customers .customers-icons {
+    flex-wrap: wrap;
+    padding: 0.75em;
+  }
   .customers .customers-icons .customers-icon {
+    flex: 1 1 32%;
     margin-right: 0.25em;
   }
 }
@@ -956,16 +963,32 @@ footer .container .footer-bottom .footer-bottom-links a {
     font-size: 1.875em;
   }
   footer .container .footer-nav {
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     padding: 2em 0 0.75em;
     gap: 0.5em;
   }
+  footer .container .footer-nav .logo {
+    grid-area: 1/1/2/3;
+  }
+  footer .container .footer-nav .navigation {
+    grid-area: 2/1/4/2;
+  }
   footer .container .footer-nav .navigation ul {
-    gap: 0;
+    flex-direction: column;
+    gap: 1.25em;
   }
   footer .container .footer-nav .navigation ul li {
-    border-right: 1px solid #8d959d;
-    padding: 0 0.75em;
+    border: none;
+  }
+  footer .container .footer-nav .action-buttons {
+    grid-area: 2/2/4/3;
+    flex-wrap: wrap;
+  }
+  footer .container .footer-nav .action-buttons .social {
+    width: 4em;
+    height: 4em;
   }
 }
 

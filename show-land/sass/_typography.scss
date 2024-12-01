@@ -10,9 +10,10 @@ body {
 .background-color {
   background-image: linear-gradient(to right, $colorSecondary, $colorPrimary);
   height: 100vh;
-
   &__1 {
     background-color: $colorSixth;
+    z-index: 2000;
+    position: relative;
   }
 
   &__2 {
