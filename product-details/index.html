@@ -8,61 +8,69 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header class="header container">
-      <img
-        class="header__logo"
-        src="images/weprodev-logo.png"
-        alt="WeProDev Logo"
-      />
-      <div class="header__select-lang dropdown">
-        <div class="header__select-lang-title">
-          <span class="icon-globe1"></span>
-          Language
-          <span class="icon-chevron-down"></span>
-        </div>
+    <header class="weprodev-header">
+      <div class="weprodev-header__top-section">
+        <img
+          class="weprodev-header__logo"
+          src="../weprodev-header/images/weprodev-logo.png"
+          alt="WeProDev Logo"
+        />
+        <div class="weprodev-header__select-lang dropdown">
+          <div class="weprodev-header__select-lang-title">
+            <span class="icon-globe1"></span>
+            Language
+            <span class="icon-chevron-down"></span>
+          </div>
 
-        <ul class="header__select-lang-list dropdown__content">
-          <li class="header__select-lang-item">
-            <a href="#" class="link">English</a>
+          <ul class="weprodev-header__select-lang-list dropdown__content">
+            <li class="weprodev-header__select-lang-item">
+              <a href="#" class="link">English</a>
+            </li>
+            <li class="weprodev-header__select-lang-item">
+              <a href="#" class="link">Kurdish</a>
+            </li>
+            <li class="weprodev-header__select-lang-item">
+              <a href="#" class="link">Persian</a>
+            </li>
+          </ul>
+        </div>
+        <div class="weprodev-header__search-box search-box-js">
+          <input
+            type="text"
+            class="weprodev-header__search-box-input search-input-js"
+            placeholder="Search..."
+          />
+          <button
+            class="weprodev-header__search-box-button icon-search search-button-js"
+          ></button>
+        </div>
+        <div class="weprodev-header__buttons-container">
+          <button class="weprodev-header__login-button">Login</button>
+          <button class="weprodev-header__free-template-button">
+            Free template
+          </button>
+        </div>
+      </div>
+
+      <nav class="weprodev-header__navbar">
+        <ul class="weprodev-header__menu">
+          <li class="weprodev-header__menu-item">
+            <a href="#" class="link">Home</a>
           </li>
-          <li class="header__select-lang-item">
-            <a href="#" class="link">Kurdish</a>
+          <li class="weprodev-header__menu-item">
+            <a href="#" class="link">Portfolio</a>
           </li>
-          <li class="header__select-lang-item">
-            <a href="#" class="link">Persian</a>
+          <li class="weprodev-header__menu-item">
+            <a href="#" class="link">Blog</a>
+          </li>
+          <li class="weprodev-header__menu-item">
+            <a href="#" class="link">Contact</a>
           </li>
         </ul>
-      </div>
-      <div class="header__search-box search-box-js">
-        <input
-          type="text"
-          class="header__search-box-input search-input-js"
-          placeholder="Search..."
-        />
-        <button
-          class="header__search-box-button icon-search search-button-js"
-        ></button>
-      </div>
-      <div class="header__buttons-container">
-        <button class="button button--secondary">Login</button>
-        <button class="button button--primary header__free-template-btn">
-          Free template
-        </button>
-      </div>
+      </nav>
     </header>
 
-    <nav class="navbar container">
-      <ul class="navbar__menu">
-        <li class="navbar__menu-item"><a href="#" class="link">Home</a></li>
-        <li class="navbar__menu-item">
-          <a href="#" class="link">Portfolio</a>
-        </li>
-        <li class="navbar__menu-item"><a href="#" class="link">Blog</a></li>
-        <li class="navbar__menu-item"><a href="#" class="link">Contact</a></li>
-      </ul>
-    </nav>
-
-    <section class="hero container background-gradient-animation">
+    <section class="hero section background-gradient-animation">
       <div class="hero__text-section">
         <h1 class="heading-1 heading-1--primary">
           The World's Leading WordPress Page Builder
@@ -105,6 +113,6 @@
       </div>
     </section>
 
-    <script src="js/script.js"></script>
+    <script src="../weprodev-header/js/script.js"></script>
   </body>
 </html>

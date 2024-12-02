@@ -25,14 +25,11 @@
   #COMPONENTS
 \*------------------------------------*/
 
-@import "../../shared/scss/components/dropdown";
 @import "../../shared/scss/components/button";
-@import "components/button";
 @import "components/cta";
 
 /*------------------------------------*\
   #LAYOUT
 \*------------------------------------*/
-@import "./layout/header";
-@import "./layout/navbar";
+@import "../../weprodev-header/scss/main.scss";
 @import "./layout/hero";
