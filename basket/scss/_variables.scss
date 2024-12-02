@@ -19,12 +19,12 @@ $primaryFontFamily: "Inter", sans-serif;
   #SHADOW
 \*------------------------------------*/
 
-$shadowDark: 0px 0px 20px 0px
+$shadowDark: 0px 0px 2rem 0px
   rgba(
     $color: $black,
     $alpha: 0.2,
   );
-$shadowDarkSpread: 0px 0px 20px 10px
+$shadowDarkSpread: 0px 0px 2rem 1rem
   rgba(
     $color: $black,
     $alpha: 0.1,
