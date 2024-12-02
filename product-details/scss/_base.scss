@@ -1,0 +1,26 @@
+.container {
+    width: 100%;
+  padding: 0 $containerSidePadding;
+  @include laptop {
+    padding: 0 $containerSidePaddingLaptop;
+  }
+}
+
+img{
+  width: 100%;
+}
+
+a.link{
+  color: $black;
+  transition: map-get($durations, 150);
+  &:hover {
+    color: $mainColorWeprodev;
+  }
+}
+
+.background-gradient-animation{
+  background-image: var(--gradient);
+  background-size: 500%;
+  transition: animation 4s;
+  animation: background-movement 5s infinite alternate;
+}

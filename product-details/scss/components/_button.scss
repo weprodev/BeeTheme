@@ -1,0 +1,22 @@
+.button {
+  @include button(
+    $radius: $rounded,
+    $padding: nth($spaces, 4) nth($spaces, 6),
+    $transition: map-get($durations, 150),
+    $hoverBgColor: none,
+    $fontWeight: $fontWeightSemibold,
+    $border: 0.1rem solid $mainColorWeprodev
+  );
+  &--primary {
+    color: $white;
+    background-color: $mainColorWeprodev;
+  }
+  &--secondary {
+    color: $mainColorWeprodev;
+    background-color: $white;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+}

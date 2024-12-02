@@ -1,5 +1,5 @@
 /*------------------------------------*\
-  #VARIABLES PRODUCT DETAILS
+  #COLORS
 \*------------------------------------*/
 
 :root{
@@ -21,5 +21,30 @@ $secondColorWeprodev : rgb(89, 70, 140); // #59468c
 
 $clouds         : rgb(236, 240, 241); // #ecf0f1;
 
-$btnStartGreen :#2fdc81;
-$btnStartGreenHover :#1bac5e;
+$thirdColorWeprodev :#2fdc81;
+
+/*------------------------------------*\
+  #SPACE
+\*------------------------------------*/
+
+$containerSidePadding: 15rem ;
+$containerSidePaddingLaptop : 1.5rem;
+
+
+/*------------------------------------*\
+  #FONT
+\*------------------------------------*/ 
+
+$primaryFontFamily : "Inter", sans-serif;
+
+/*------------------------------------*\
+  #SHADOW
+\*------------------------------------*/ 
+
+$shadowDark : 0px 0px 20px 0px rgba($color: $black, $alpha: 0.2);
+
+/*------------------------------------*\
+  #BORDER
+\*------------------------------------*/ 
+
+$primaryBorder : 1px solid $clouds;

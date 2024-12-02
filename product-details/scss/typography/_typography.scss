@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+body{
+    font-family: $primaryFontFamily;
+}
+
+.heading-1{
+    font-size: $fontSize6Xl;
+    font-weight: $fontWeightMedium;
+    &--primary{
+        color : $white
+    }
+}
+
+.paragraph{
+    font-size: $fontSizeXl;
+    &--primary{
+        color: $white;
+    }
+}
