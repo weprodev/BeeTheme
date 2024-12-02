@@ -15,3 +15,13 @@
     opacity: 0;
   }
 }
+
+@keyframes background-movement {
+  0% {
+    background-position: right;
+  }
+
+  100% {
+    background-position: left;
+  }
+}
