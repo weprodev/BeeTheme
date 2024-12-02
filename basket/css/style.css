@@ -171,6 +171,15 @@ a:hover .icon {
   fill: rgb(52, 152, 219);
 }
 
+.blur {
+  filter: blur(10px);
+}
+
+.hidden {
+  display: none !important;
+}
+
+
 /*------------------------------------*\
   #COMPONENTS
 \*------------------------------------*/
@@ -262,6 +271,74 @@ a:hover .icon {
   text-align: center;
 }
 
+
+.close-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0.25em;
+  padding: 2em;
+  width: 37em;
+  height: 18em;
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 40em) {
+  .close-modal {
+    width: 100%;
+  }
+}
+.close-modal__buttons-container {
+  display: flex;
+  margin: 2em;
+  font-size: 1.5em;
+  margin-bottom: 0;
+  gap: 1em;
+}
+.close-modal__button-yes {
+  background: #fff;
+  color: #000;
+  border-radius: 0.25em;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 0.5em 1em;
+  font-size: 1em;
+  font-weight: 400;
+  transition: 300ms;
+  text-align: center;
+  cursor: pointer;
+}
+.close-modal__button-yes:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.close-modal__button-yes:hover {
+  color: #fff;
+}
+.close-modal__button-no {
+  background: #1dc973;
+  color: #000;
+  border-radius: 0.25em;
+  border: none;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  font-weight: 400;
+  transition: 300ms;
+  text-align: center;
+  cursor: pointer;
+}
+.close-modal__button-no:hover {
+  background-color: rgba(29, 201, 115, 0.9);
+}
+.close-modal__button-yes:hover, .close-modal__button-no:hover {
+  transform: scale(1.1);
+}
+
 /*------------------------------------*\
   #LAYOUTS
 \*------------------------------------*/
@@ -316,4 +393,5 @@ a:hover .icon {
     flex-direction: column;
   }
 }
+
 /*# sourceMappingURL=style.css.map */

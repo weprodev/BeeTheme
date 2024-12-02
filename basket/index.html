@@ -9,6 +9,19 @@
   <body>
 
     <div class="basket">
+      <div class="close-modal hidden" id="close-page">
+        <h2 class="heading-primary">Are you sure?</h2>
+        <div class="close-modal__buttons-container">
+          <a href="#" class="close-modal__button-yes">Yes</a>
+          <button
+            class="close-modal__button-no"
+            id="close"
+          >
+            No
+          </button>
+        </div>
+      </div>
+      
       <div id="sec-1">
         <header class="header">
           <div class="header__basket">
@@ -58,6 +71,9 @@
         </div>
       </div>
     </div>
+
+
+    <script src="js/jquery.min.js"></script>
 
     <script src="js/script.js"></script>
   </body>
