@@ -16,13 +16,10 @@
     }
   }
   &__topic {
+    color: $mainColorWeprodev;
     font-size: $fontSizeXl;
     letter-spacing: 0.2rem;
     font-weight: $fontWeightMedium;
-  }
-  &__topic,
-  &__learn-more-link {
-    color: $mainColorWeprodev;
   }
 
   &__image-container {
