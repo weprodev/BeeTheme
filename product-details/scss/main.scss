@@ -1,27 +1,38 @@
 /*------------------------------------*\
   #ABSTRACTS
 \*------------------------------------*/
-
-@import "../../shared/scss/shared.scss";
-
-
+@import "../../shared/scss/abstracts/media-query";
+@import "../../shared/scss/abstracts/variables";
+@import "variables";
 
 /*------------------------------------*\
   #BASE
 \*------------------------------------*/
 
 @import "../../shared/scss/base/reset";
+@import "../../shared/scss/base/animation";
+@import "base";
+
 
 /*------------------------------------*\
   #TYPOGRAPGY
 \*------------------------------------*/
 
 @import "./typography/icomoon";
+@import "./typography/typography";
 
+/*------------------------------------*\
+  #COMPONENTS
+\*------------------------------------*/
+
+@import "../../shared/scss/components/dropdown";
+@import "../../shared/scss/components/button";
+@import "components/button";
+@import "components/cta";
 
 /*------------------------------------*\
   #LAYOUT
 \*------------------------------------*/
-@import "variables";
-@import "./layout/top-bar.scss";
-@import "./layout/nav-bar.scss";
+@import "./layout/header";
+@import "./layout/navbar";
+@import "./layout/hero";
