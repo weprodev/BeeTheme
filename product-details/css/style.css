@@ -182,6 +182,10 @@ a.link:hover {
   color: rgb(255, 94, 87);
 }
 
+a.colored-link {
+  color: rgb(255, 94, 87);
+}
+
 .background-gradient-animation {
   background-image: var(--gradient);
   background-size: 500%;
@@ -956,12 +960,10 @@ body {
   }
 }
 .feature__topic {
+  color: rgb(255, 94, 87);
   font-size: 1.25em;
   letter-spacing: 0.2rem;
   font-weight: 500;
-}
-.feature__topic, .feature__learn-more-link {
-  color: rgb(255, 94, 87);
 }
 .feature__image-container {
   overflow: hidden;
@@ -2004,6 +2006,7 @@ a {
   overflow-x: hidden;
 }
 .built-section__heading {
+  text-align: center;
   padding-right: 15rem;
 }
 @media screen and (max-width: 75em) {
@@ -2030,6 +2033,29 @@ a {
 @media screen and (max-width: 40em) {
   .built-section__features > * {
     height: auto;
+  }
+}
+
+.create-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 8em;
+  gap: 4em;
+  text-align: center;
+}
+@media screen and (max-width: 40em) {
+  .create-section {
+    padding-block: 4em;
+    gap: 2.5em;
+  }
+}
+.create-section__paragraph {
+  width: 70%;
+}
+@media screen and (max-width: 40em) {
+  .create-section__paragraph {
+    width: 100%;
   }
 }
 
