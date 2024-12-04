@@ -35,9 +35,19 @@ const demos = [
     url: "app-land/index.html",
     mainImage: "app-land-main.jpeg",
     entirePageImage: "app-land-entire.jpeg",
-  }
+  },
+  {
+    id: 3,
+    name: "Basket",
+    createdBy: {
+      name: "Ahmad Mohammadirad",
+      github: "https://github.com/ahmadmohammadirad2006",
+    },
+    url: "basket/index.html",
+    mainImage: "basket-entire-main.png",
+    entirePageImage: "basket-entire-main.png",
+  },
 ];
-
 
 /*------------------------------------*\
   #SELECTING ELEMENTS
