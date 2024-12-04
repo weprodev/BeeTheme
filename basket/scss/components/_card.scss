@@ -7,7 +7,7 @@
   padding: nth($spaces, 8) nth($spaces, 10);
   box-shadow: $shadowDarkSpread;
 
-  @include mini_laptop {
+  @include miniLaptop {
     width: 50%;
     margin: nth($spaces, 4);
   }

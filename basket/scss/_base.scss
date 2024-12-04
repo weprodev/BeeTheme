@@ -12,9 +12,9 @@ a {
   }
   &:hover {
     background-color: rgb(245, 245, 245);
-    color: rgb(52, 152, 219);
+    color: $fourthColor;
     .icon {
-      fill: rgb(52, 152, 219);
+      fill: $fourthColor;
     }
   }
 }
@@ -27,3 +27,14 @@ a {
   display: none !important;
 }
 
+.right-0 {
+  right: 0% !important;
+}
+.left-0 {
+  left: 0% !important;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
