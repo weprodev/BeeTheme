@@ -2090,4 +2090,22 @@ a {
   }
 }
 
+.phenomenon-section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding-block: 4em;
+  gap: 2em;
+  background-color: #ecf0f1;
+}
+.phenomenon-section__paragraph {
+  width: 70%;
+}
+@media screen and (max-width: 40em) {
+  .phenomenon-section__paragraph {
+    width: 100%;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
