@@ -10,8 +10,6 @@
 \*------------------------------------*/
 
 @import "../../shared/scss/base/reset";
-@import "../../shared/scss/base/animation";
-@import "base";
 
 
 /*------------------------------------*\
@@ -19,17 +17,15 @@
 \*------------------------------------*/
 
 @import "./typography/icomoon";
-@import "./typography/typography";
 
 /*------------------------------------*\
   #COMPONENTS
 \*------------------------------------*/
 
+@import "../../shared/scss/components/dropdown";
 @import "../../shared/scss/components/button";
-@import "components/cta";
 
 /*------------------------------------*\
   #LAYOUT
 \*------------------------------------*/
-@import "../../weprodev-header/scss/main.scss";
-@import "./layout/hero";
+@import "layout/weprodev-header";
