@@ -1,22 +1,42 @@
-$("#icon-close-page").on("click", function () {
-  $("#sec-1").addClass("blur");
-  $("#close-page").removeClass("hidden");
-});
-$("#close").on("click", function () {
-  $("#close-page").addClass("hidden");
-  $("#sec-1").removeClass("blur");
+/*------------------------------------*\
+  #SELECTING ELEMENTS
+\*------------------------------------*/
+const iconClosePageEl = document.getElementById("icon-close-page");
+const sec1El = document.getElementById("sec-1");
+const sec2El = document.getElementById("sec-2");
+const sec3El = document.getElementById("sec-3");
+const closeEl = document.getElementById("close");
+const closePageEl = document.getElementById("close-page");
+const noButtonEl = document.getElementById("no-button");
+const backMainPage1El = document.getElementById("back-main-page1");
+const backMainPage2El = document.getElementById("back-main-page2");
+const yesButtonEl = document.getElementById("yes-button");
+
+/*------------------------------------*\
+  #EVENT HANDLERS
+\*------------------------------------*/
+iconClosePageEl.addEventListener("click", () => {
+  sec1El.classList.add("blur");
+  closePageEl.classList.remove("hidden");
 });
 
-$("#no-button").on("click", function () {
-  $("#sec-2").addClass("right-0");
-});
-$("#back-main-page2").on("click", function () {
-  $("#sec-2").removeClass("right-0");
+closeEl.addEventListener("click", () => {
+  sec1El.classList.remove("blur");
+  closePageEl.classList.add("hidden");
 });
 
-$("#yes-button").on("click", function () {
-  $("#sec-3").addClass("left-0");
+noButtonEl.addEventListener("click", () => {
+  sec2El.classList.add("right-0");
 });
-$("#back-main-page1").on("click", function () {
-  $("#sec-3").removeClass("left-0");
+
+backMainPage2El.addEventListener("click", () => {
+  sec2El.classList.remove("right-0");
+});
+
+yesButtonEl.addEventListener("click", () => {
+  sec3El.classList.add("left-0");
+});
+
+backMainPage1El.addEventListener("click", () => {
+  sec3El.classList.remove("left-0");
 });
