@@ -7,6 +7,387 @@
     <link rel="stylesheet" href="css/style.css" media="all" />
   </head>
   <body>
+    <div class="basket">
+      <div class="close-modal hidden" id="close-page">
+        <h2 class="heading-primary">Are you sure?</h2>
+        <div class="close-modal__buttons-container">
+          <a href="#" class="close-modal__button-yes">Yes</a>
+          <button class="close-modal__button-no" id="close">No</button>
+        </div>
+      </div>
+
+      <div id="sec-1">
+        <header class="header">
+          <div class="header__basket">
+            <img src="images/favicon.png" class="header__logo" alt="logo" />
+            <a href="#" id="icon-close-page">
+              <svg class="icon icon-cross">
+                <use xlink:href="#icon-cross"></use>
+              </svg>
+            </a>
+          </div>
+        </header>
+        <div class="basket-content">
+          <h2 class="heading-primary">Do You Have a Website?</h2>
+          <div class="cards-section">
+            <div class="card">
+              <img src="images/server.png" class="card__image" alt="server" />
+              <div class="card__text-section">
+                <h3 class="card__title heading-secondary">No, I don't</h3>
+                <span class="card__description"
+                  >No problem, We'll help you step up your site.</span
+                >
+              </div>
+              <button id="no-button" class="button card__button">
+                <a href="#">Continue</a>
+              </button>
+              <a href="#" class="card__bottom-link">
+                <svg class="icon icon-notification">
+                  <use xlink:href="#icon-notification"></use>
+                </svg>
+                Why I do need WordPress?</a
+              >
+            </div>
+            <div class="card">
+              <img src="images/laptop.png" class="card__image" alt="loptop" />
+              <div class="card__text-section">
+                <h3 class="card__title heading-secondary">Yes, I sure do</h3>
+                <span class="card__description"
+                  >Great, Click below to install Elementor on your existing
+                  website.</span
+                >
+              </div>
+              <button id="yes-button" class="button card__button">
+                <a href="#">Continue</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="select-section select-section--left" id="sec-2">
+        <header class="header">
+          <div class="header__basket">
+            <img src="images/favicon.png" class="header__logo" alt="logo" />
+            <a href="#" id="back-main-page2">
+              <svg class="icon icon-arrow-right2">
+                <use xlink:href="#icon-arrow-right2"></use>
+              </svg>
+            </a>
+          </div>
+        </header>
+
+        <div class="basket-content">
+          <h2 class="heading-primary">Select</h2>
+          <form class="form">
+            <div class="form__checkboxs-container">
+              <div class="form__checkbox-group">
+                <input
+                  class="form__checkbox-input"
+                  type="checkbox"
+                  id="checkbox-1-1"
+                />
+                <label class="form__checkbox-button" for="checkbox-1-1"></label>
+                <label for="checkbox-1-1">
+                  I want to use your service and transfering my site to your
+                  platform</label
+                >
+              </div>
+              <div class="form__checkbox-group">
+                <input
+                  class="form__checkbox-input"
+                  type="checkbox"
+                  id="checkbox-1-2"
+                />
+                <label class="form__checkbox-button" for="checkbox-1-2"></label>
+                <label for="checkbox-1-2"> I need to consutatiion</label>
+              </div>
+            </div>
+
+            <div class="form__input-groups-container">
+              <div class="form__input-group">
+                <label for="firstname-1"
+                  >First Name:&nbsp;<span class="form__input-label-star"
+                    >*</span
+                  >
+                </label>
+                <input
+                  class="form__input"
+                  type="text"
+                  id="firstname-1"
+                  placeholder="First Name..."
+                />
+              </div>
+              <div class="form__input-group">
+                <label for="lastname-1"
+                  >Last Name:&nbsp;<span class="form__input-label-star">*</span>
+                </label>
+                <input
+                  class="form__input"
+                  type="text"
+                  id="lastname-1"
+                  placeholder="Last Name..."
+                />
+              </div>
+              <div class="form__input-group">
+                <label for="email-1"
+                  >Email:&nbsp;<span class="form__input-label-star">*</span>
+                </label>
+                <input
+                  class="form__input"
+                  type="email"
+                  id="email-1"
+                  placeholder="Email..."
+                />
+              </div>
+            </div>
+
+            <div class="form__textarea-group">
+              <label for="textarea-1">Your message:</label>
+              <textarea class="form__textarea" id="textarea-1"></textarea>
+            </div>
+
+            <button class="form__button" type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="select-section select-section--right" id="sec-3">
+        <header class="header">
+          <div class="header__basket">
+            <img src="images/favicon.png" class="header__logo" alt="logo" />
+
+            <a href="#" id="back-main-page1">
+              <svg class="icon icon-arrow-left2">
+                <use xlink:href="#icon-arrow-left2"></use>
+              </svg>
+            </a>
+          </div>
+        </header>
+        <div class="basket-content">
+          <h2 class="heading-primary">Select your platform</h2>
+          <div class="platform-options-container">
+            <div class="platform">
+              <input
+                type="radio"
+                id="wordpress-platform"
+                name="platform-option"
+                class="platform__radio-input"
+              />
+              <label class="platform__radio-label" for="wordpress-platform">
+                <img
+                  src="images/wordpress-logo.png"
+                  class="platform__bg-image"
+                  alt="WordPress Logo"
+                />
+
+                <span class="platform__check-circle">
+                  <img
+                    src="images/wordpress-logo.png"
+                    class="platform__front-image"
+                    alt="WordPress Logo"
+                /></span>
+                <span class="platform__name">WordPress</span>
+              </label>
+            </div>
+            <div class="platform">
+              <input
+                type="radio"
+                id="laravel-platform"
+                name="platform-option"
+                class="platform__radio-input"
+              />
+              <label class="platform__radio-label" for="laravel-platform">
+                <img
+                  src="images/laravel-logo.png"
+                  class="platform__bg-image"
+                  alt="Laravel Logo"
+                />
+
+                <span class="platform__check-circle">
+                  <img
+                    src="images/laravel-logo.png"
+                    class="platform__front-image"
+                    alt="Laravel Logo"
+                /></span>
+                <span class="platform__name">Laravel</span>
+              </label>
+            </div>
+            <div class="platform">
+              <input
+                type="radio"
+                id="magneto-platform"
+                name="platform-option"
+                class="platform__radio-input"
+              />
+              <label class="platform__radio-label" for="magneto-platform">
+                <img
+                  src="images/laravel-logo.png"
+                  class="platform__bg-image"
+                  alt="Magneto Logo"
+                />
+
+                <span class="platform__check-circle">
+                  <img
+                    src="images/magento-logo.png"
+                    class="platform__front-image"
+                    alt="Magneto Logo"
+                /></span>
+                <span class="platform__name">Magneto</span>
+              </label>
+            </div>
+            <div class="platform">
+              <input
+                type="radio"
+                id="www-platform"
+                name="platform-option"
+                class="platform__radio-input"
+              />
+              <label class="platform__radio-label" for="www-platform">
+                <img
+                  src="images/www-icon.png"
+                  class="platform__bg-image"
+                  alt="WWW icon"
+                />
+
+                <span class="platform__check-circle">
+                  <img
+                    src="images/www-icon.png"
+                    class="platform__front-image"
+                    alt="WWW icon"
+                /></span>
+                <span class="platform__name">Dedicated Website</span>
+              </label>
+            </div>
+            <div class="platform">
+              <input
+                type="radio"
+                id="idontknow-platform"
+                name="platform-option"
+                class="platform__radio-input"
+              />
+              <label class="platform__radio-label" for="idontknow-platform">
+                <img
+                  src="images/notification-icon.png"
+                  class="platform__bg-image"
+                  alt="Notification icon"
+                />
+
+                <span class="platform__check-circle">
+                  <img
+                    src="images/notification-icon.png"
+                    class="platform__front-image"
+                    alt="Notification icon"
+                /></span>
+                <span class="platform__name">I don't know!</span>
+              </label>
+            </div>
+          </div>
+
+          <form class="form">
+            <div class="form__checkboxs-container">
+              <div class="form__checkbox-group">
+                <input
+                  class="form__checkbox-input"
+                  type="checkbox"
+                  id="checkbox-2-1"
+                />
+                <label class="form__checkbox-button" for="checkbox-2-1"></label>
+                <label for="checkbox-2-1">
+                  I want to use your service and transfering my site to your
+                  platform</label
+                >
+              </div>
+              <div class="form__checkbox-group">
+                <input
+                  class="form__checkbox-input"
+                  type="checkbox"
+                  id="checkbox-2-2"
+                />
+                <label class="form__checkbox-button" for="checkbox-2-2"></label>
+                <label for="checkbox-2-2"> I need to consutatiion</label>
+              </div>
+            </div>
+
+            <div class="form__input-groups-container">
+              <div class="form__input-group">
+                <label for="firstname-2"
+                  >First Name:&nbsp;<span class="form__input-label-star"
+                    >*</span
+                  >
+                </label>
+                <input
+                  class="form__input"
+                  type="text"
+                  id="firstname-2"
+                  placeholder="First Name..."
+                />
+              </div>
+              <div class="form__input-group">
+                <label for="lastname-2"
+                  >Last Name:&nbsp;<span class="form__input-label-star">*</span>
+                </label>
+                <input
+                  class="form__input"
+                  type="text"
+                  id="lastname-2"
+                  placeholder="Last Name..."
+                />
+              </div>
+              <div class="form__input-group">
+                <label for="email-2"
+                  >Email:&nbsp;<span class="form__input-label-star">*</span>
+                </label>
+                <input
+                  class="form__input"
+                  type="email"
+                  id="email-2"
+                  placeholder="Email..."
+                />
+              </div>
+            </div>
+
+            <div class="form__textarea-group">
+              <label for="textarea-2">Your message:</label>
+              <textarea class="form__textarea" id="textarea-2"></textarea>
+            </div>
+
+            <button class="form__button" type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
     <script src="js/script.js"></script>
   </body>
+  <svg
+    aria-hidden="true"
+    style="position: absolute; width: 0; height: 0; overflow: hidden"
+    version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+  >
+    <defs>
+      <symbol id="icon-notification" viewBox="0 0 32 32">
+        <path
+          d="M16 3c-3.472 0-6.737 1.352-9.192 3.808s-3.808 5.72-3.808 9.192c0 3.472 1.352 6.737 3.808 9.192s5.72 3.808 9.192 3.808c3.472 0 6.737-1.352 9.192-3.808s3.808-5.72 3.808-9.192c0-3.472-1.352-6.737-3.808-9.192s-5.72-3.808-9.192-3.808zM16 0v0c8.837 0 16 7.163 16 16s-7.163 16-16 16c-8.837 0-16-7.163-16-16s7.163-16 16-16zM14 22h4v4h-4zM14 6h4v12h-4z"
+        ></path>
+      </symbol>
+      <symbol id="icon-cross" viewBox="0 0 32 32">
+        <path
+          d="M31.708 25.708c-0-0-0-0-0-0l-9.708-9.708 9.708-9.708c0-0 0-0 0-0 0.105-0.105 0.18-0.227 0.229-0.357 0.133-0.356 0.057-0.771-0.229-1.057l-4.586-4.586c-0.286-0.286-0.702-0.361-1.057-0.229-0.13 0.048-0.252 0.124-0.357 0.228 0 0-0 0-0 0l-9.708 9.708-9.708-9.708c-0-0-0-0-0-0-0.105-0.104-0.227-0.18-0.357-0.228-0.356-0.133-0.771-0.057-1.057 0.229l-4.586 4.586c-0.286 0.286-0.361 0.702-0.229 1.057 0.049 0.13 0.124 0.252 0.229 0.357 0 0 0 0 0 0l9.708 9.708-9.708 9.708c-0 0-0 0-0 0-0.104 0.105-0.18 0.227-0.229 0.357-0.133 0.355-0.057 0.771 0.229 1.057l4.586 4.586c0.286 0.286 0.702 0.361 1.057 0.229 0.13-0.049 0.252-0.124 0.357-0.229 0-0 0-0 0-0l9.708-9.708 9.708 9.708c0 0 0 0 0 0 0.105 0.105 0.227 0.18 0.357 0.229 0.356 0.133 0.771 0.057 1.057-0.229l4.586-4.586c0.286-0.286 0.362-0.702 0.229-1.057-0.049-0.13-0.124-0.252-0.229-0.357z"
+        ></path>
+      </symbol>
+      <symbol id="icon-arrow-right2" viewBox="0 0 32 32">
+        <path
+          d="M19.414 27.414l10-10c0.781-0.781 0.781-2.047 0-2.828l-10-10c-0.781-0.781-2.047-0.781-2.828 0s-0.781 2.047 0 2.828l6.586 6.586h-19.172c-1.105 0-2 0.895-2 2s0.895 2 2 2h19.172l-6.586 6.586c-0.39 0.39-0.586 0.902-0.586 1.414s0.195 1.024 0.586 1.414c0.781 0.781 2.047 0.781 2.828 0z"
+        ></path>
+      </symbol>
+      <symbol id="icon-arrow-left2" viewBox="0 0 32 32">
+        <path
+          d="M12.586 27.414l-10-10c-0.781-0.781-0.781-2.047 0-2.828l10-10c0.781-0.781 2.047-0.781 2.828 0s0.781 2.047 0 2.828l-6.586 6.586h19.172c1.105 0 2 0.895 2 2s-0.895 2-2 2h-19.172l6.586 6.586c0.39 0.39 0.586 0.902 0.586 1.414s-0.195 1.024-0.586 1.414c-0.781 0.781-2.047 0.781-2.828 0z"
+        ></path>
+      </symbol>
+    </defs>
+  </svg>
 </html>

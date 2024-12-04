@@ -1,0 +1,31 @@
+/*------------------------------------*\
+  #ABSTRACTS
+\*------------------------------------*/
+@import "../../shared/scss/abstracts/variables";
+@import "../../shared/scss/abstracts/media-query";
+@import "variables";
+@import "typography";
+
+/*------------------------------------*\
+  #BASE
+\*------------------------------------*/
+@import "../../shared/scss/base/reset";
+@import "base";
+
+/*------------------------------------*\
+  #COMPONENTS
+\*------------------------------------*/
+@import "../../shared/scss/components/button";
+@import "components/button";
+@import "components/card";
+@import "components/close-modal";
+@import "components/form";
+@import "components/platform";
+
+/*------------------------------------*\
+  #LAYOUTS
+\*------------------------------------*/
+@import "layout/header";
+@import "layout/basket-content";
+@import "layout/select-section";
+@import "layout/platform-options-container";

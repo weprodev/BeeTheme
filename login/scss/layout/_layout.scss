@@ -1,0 +1,136 @@
+@use "sass:list";
+@use "sass:color";
+@import "../../../shared/scss/components/button";
+
+.container-fluid {
+  width: 100%;
+  max-width: 100%;
+}
+
+.login {
+  display: flex;
+
+  &-image {
+    flex: 1;
+
+    img {
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+    }
+  }
+
+  &-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #000;
+
+    h2 {
+      font-size: $fontSize5Xl;
+      padding-bottom: list.nth($spaces, 6);
+    }
+
+    &-form {
+      display: flex;
+      flex-direction: column;
+      gap: list.nth($spaces, 4);
+      width: 50%;
+
+      input {
+        border: 1px solid rgba($color: #000000, $alpha: 0.38);
+        border-radius: $rounded2Xl;
+        padding: list.nth($spaces, 4);
+
+        &:focus,
+        &:active {
+          border: 1px solid $primaryColor;
+        }
+      }
+
+      .login-form-remember-me {
+        input,
+        label {
+          display: inline;
+          width: auto;
+          margin: list.nth($spaces, 1);
+          font-size: $fontSizeLg;
+          cursor: pointer;
+        }
+
+        input {
+          border: 0.5em solid gray;
+          border-radius: $roundedLg;
+          width: 1em;
+          height: 1em;
+        }
+      }
+
+      .login-form-forgot-password {
+        margin-left: list.nth($spaces, 8);
+      }
+
+      button {
+        @include button(
+          $bg: $primaryColor,
+          $color: #fff,
+          $radius: $roundedFull,
+          $border: 1px solid transparent,
+          $padding: list.nth($spaces, 4) list.nth($spaces, 8),
+          $transition: all 0.6s ease,
+          $hoverBgColor: #fff
+        );
+
+        width: 85%;
+        display: block;
+        margin: 0 auto;
+
+        &:hover {
+          color: $primaryColor;
+          border: 1px solid $primaryColor;
+        }
+      }
+    }
+  }
+
+  label,
+  input {
+    width: 100%;
+    display: block;
+    margin: list.nth($spaces, 2) 0;
+  }
+
+  label {
+    font-size: $fontSize2Xl;
+  }
+}
+
+@media (max-width: $eta) {
+  .login {
+    height: 100vh;
+
+    &-image {
+      display: none;
+    }
+
+    &-form {
+      &-form {
+        width: 100%;
+        padding: 0 list.nth($spaces, 4);
+      }
+    }
+  }
+}
+
+@media (max-width: $gamma) {
+  .login {
+    &-form {
+      &-form {
+        width: 80%;
+        padding: 0 list.nth($spaces, 4);
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: $rounded2Xl;
+  margin: nth($spaces, 8);
+  width: 27rem;
+  padding: nth($spaces, 8) nth($spaces, 10);
+  box-shadow: $shadowDarkSpread;
+
+  @include miniLaptop {
+    width: 50%;
+    margin: nth($spaces, 4);
+  }
+  @include mobile {
+    width: 100%;
+    margin: nth($spaces, 4) auto;
+    border-radius: 0;
+  }
+
+  &__image {
+    background-color: $white;
+    width: 7rem;
+    height: 7rem;
+    margin: nth($spaces, 4) auto;
+  }
+
+  &__button {
+    margin: 0 auto nth($spaces, 12) auto;
+    & > a {
+      color: $secondaryColor;
+      &:hover {
+        background-color: transparent;
+      }
+    }
+    &:hover > a {
+      color: $black;
+    }
+  }
+
+  &__text-section {
+    margin: nth($spaces, 6) 0;
+    text-align: center;
+  }
+
+  &__title {
+    margin-top: nth($spaces, 3);
+    margin-bottom: nth($spaces, 6);
+  }
+
+  &__description {
+    text-align: center;
+    margin-bottom: nth($spaces, 10);
+    color: rgba($color: $black, $alpha: 0.8);
+  }
+
+  &__bottom-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: nth($spaces, 1);
+    .icon-notification {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+
+  a {
+    background-color: transparent;
+    text-align: center;
+  }
+}
