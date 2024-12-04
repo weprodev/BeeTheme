@@ -906,6 +906,9 @@ body {
 .paragraph--secondary {
   color: rgb(0, 0, 0);
 }
+.paragraph--tertiary {
+  color: rgba(0, 0, 0, 0.5);
+}
 
 /*------------------------------------*\
   #COMPONENTS
@@ -2056,6 +2059,34 @@ a {
 @media screen and (max-width: 40em) {
   .create-section__paragraph {
     width: 100%;
+  }
+}
+
+.elementor-section {
+  display: flex;
+  padding-block: 8em;
+  gap: 4em;
+  align-items: center;
+}
+@media screen and (max-width: 75em) {
+  .elementor-section {
+    flex-direction: column;
+    padding-block: 4em;
+  }
+}
+.elementor-section__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.5em;
+  align-items: flex-start;
+}
+.elementor-section__image {
+  object-fit: cover;
+}
+@media screen and (max-width: 40em) {
+  .elementor-section__image {
+    display: none;
   }
 }
 
