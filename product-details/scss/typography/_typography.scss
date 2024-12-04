@@ -38,4 +38,7 @@ body {
   &--secondary {
     color: $black;
   }
+  &--tertiary {
+    color: rgba($black, $alpha: 0.5);
+  }
 }
