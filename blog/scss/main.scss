@@ -45,8 +45,9 @@
     **   Import layout-specific styles
     */
 
-    @import "layout/nav-bar.scss";
-    @import "layout/top-bar.scss";
+    @import "layout/nav-bar";
+    @import "layout/top-bar";
+    @import "layout/content-section";
 
 /*
 ***         
