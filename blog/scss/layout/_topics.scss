@@ -1,0 +1,92 @@
+.topics {
+  justify-content: center;
+  display: flex;
+  padding-top: nth($spaces, 12);
+
+  .container {
+    h2 {
+      margin: 0 auto;
+      padding: nth($spaces, 4) 0em;
+      font-size: 2.5em;
+      text-align: center;
+    }
+
+    p {
+      margin: 0 auto;
+      font-size: $fontSize2Xl;
+      padding-bottom: nth($spaces, 8);
+      max-width: 33em;
+      text-align: center;
+    }
+
+    .more-topics {
+      padding-bottom: nth($spaces, 4);
+
+      .topic {
+        margin: nth($spaces, 6) auto nth($spaces, 4);
+        display: flex;
+        flex-wrap: wrap;
+        text-align: left;
+        justify-content: space-between;
+        align-items: center;
+
+        a {
+          padding: nth($spaces, 6) nth($spaces, 4);
+          width: 27%;
+          min-width: 16rem;
+          height: 1em;
+          margin: nth($spaces, 2) nth($spaces, 2);
+          background-color: $paleSky;
+          float: left;
+          text-align: left;
+          border: 0.0625rem solid;
+          border-left: 0.3125rem solid;
+          border-radius: 0.4375rem;
+          font-weight: bold;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          $colors: $red, $green, $yellow, $orange, $blue, $red, $green, $yellow,
+            $orange, $blue;
+
+          & {
+            @for $i from 1 through length($colors) {
+              &:nth-child(#{$i}) {
+                border-color: nth($colors, $i);
+              }
+            }
+          }
+
+          .cart {
+            width: 0;
+            height: 0;
+            border-left: $roundedMd solid transparent;
+            border-right: $roundedMd solid transparent;
+            border-top: $roundedMd solid $black;
+            transition: 0.3s;
+          }
+        }
+      }
+    }
+  }
+
+  /*========================================================================================*\
+  *----------------------------          MEDIA QUERY              ----------------------------        
+  \*========================================================================================*/
+
+  /*--------------------------------
+	*** FOR MOBILE
+	**	MAX : 640PX / 40em
+	*/
+
+  @include mobile {
+    .container {
+      .more-topics {
+        .topic {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
