@@ -27,9 +27,11 @@
 
 @import "../../shared/scss/components/button";
 @import "components/cta";
+@import "components/feature";
 
 /*------------------------------------*\
   #LAYOUT
 \*------------------------------------*/
 @import "../../weprodev-header/scss/main.scss";
 @import "./layout/hero";
+@import "./layout/built-section";
