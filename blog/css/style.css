@@ -406,7 +406,62 @@ body li {
 body * {
   font: revert;
 }
+body hr {
+  width: 43rem;
+  margin: 0 auto;
+  display: none;
+  border-color: rgb(0, 0, 0);
+}
 
+/*========================================================================================*\
+ *----------------------------          MEDIA QUERY              ----------------------------        
+ \*========================================================================================*/
+/*--------------------------------
+	*** 4K AND HIGH RESOULOTIONS 
+	**	MIN-WIDTH : 2560px OR 160em
+	*/
+@media screen and (min-width: 160em) {
+  html {
+    font-size: 2rem;
+  }
+}
+/*--------------------------------
+	*** LAPTOP OR DESKTOP 
+	**	MIN-WIDTH : 1400px OR 87.5em
+	*/
+/*--------------------------------
+	*** FOR SOM OF THE DEVICES
+	**	MIN-WIDTH : 1201px OR 75.0625em
+	*/
+/*--------------------------------
+	*** FOR ANY DEVICE MAX SIZE UNTIL
+	**	MAX-WIDTH : 1200px OR 75em
+	*/
+/*--------------------------------
+	*** FOR ANY DEVICE MAX SIZE UNTIL
+	**	MAX-WIDTH : 1024px OR 64em
+	*/
+/*--------------------------------
+	*** FOR ANY DEVICE MAX SIZE UNTIL
+	**	MAX-WIDTH : 992px OR 62em
+	*/
+@media screen and (max-width: 62em) {
+  body hr {
+    display: block;
+  }
+}
+/*--------------------------------
+	*** FOR RETINA MOBILE AND LANSCAPE
+	**	MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
+	*/
+/*--------------------------------
+	*** FOR MOBILE
+	**	MAX : 640PX / 40em
+	*/
+/*--------------------------------
+	*** FOR MINI MOBILE
+	**	MAX : 400PX / 25em
+	*/
 /*--------------------------------
 ***  COMPONENTS
 **   Import specific components
@@ -1181,6 +1236,273 @@ body .separator {
   }
 }
 
+.Featured-Articles-Subscription {
+  padding-top: 1rem;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  /*========================================================================================*\
+  *----------------------------          MEDIA QUERY              ----------------------------        
+  \*========================================================================================*/
+  /*--------------------------------
+  *** FOR ANY DEVICE MAX SIZE UNTIL
+  **	MAX-WIDTH : 992px OR 62em
+  */
+  /*--------------------------------
+  *** FOR RETINA MOBILE AND LANSCAPE
+  **	MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
+  */
+  /*--------------------------------
+  *** FOR MOBILE
+  **	MAX : 640PX / 40em
+  */
+  /*--------------------------------
+  *** FOR MINI MOBILE
+  **	MAX : 400PX / 25em
+  */
+}
+.Featured-Articles-Subscription .container {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.Featured-Articles-Subscription .container .box1,
+.Featured-Articles-Subscription .container .box2,
+.Featured-Articles-Subscription .container .box3 {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 0 1rem;
+}
+.Featured-Articles-Subscription .container .box1 .Blog__Highlights,
+.Featured-Articles-Subscription .container .box2 .Blog__Highlights,
+.Featured-Articles-Subscription .container .box3 .Blog__Highlights {
+  height: 30rem;
+  background-color: rgb(236, 240, 241);
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.Featured-Articles-Subscription .container .box1 .Blog__Highlights-img,
+.Featured-Articles-Subscription .container .box2 .Blog__Highlights-img,
+.Featured-Articles-Subscription .container .box3 .Blog__Highlights-img {
+  display: flex;
+  justify-content: center;
+}
+.Featured-Articles-Subscription .container .box1 .Blog__Highlights-img img,
+.Featured-Articles-Subscription .container .box2 .Blog__Highlights-img img,
+.Featured-Articles-Subscription .container .box3 .Blog__Highlights-img img {
+  width: 95%;
+  border-radius: 5px;
+}
+.Featured-Articles-Subscription .container .box1 .Blog__Highlights .info-card,
+.Featured-Articles-Subscription .container .box2 .Blog__Highlights .info-card,
+.Featured-Articles-Subscription .container .box3 .Blog__Highlights .info-card {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.Featured-Articles-Subscription .container .box1 .Blog__Highlights .info-card p,
+.Featured-Articles-Subscription .container .box2 .Blog__Highlights .info-card p,
+.Featured-Articles-Subscription .container .box3 .Blog__Highlights .info-card p {
+  padding: 1em;
+  font-size: 1em;
+  padding-left: 0.125rem;
+}
+.Featured-Articles-Subscription .container .box1 .Blog__Highlights .info-card h2,
+.Featured-Articles-Subscription .container .box2 .Blog__Highlights .info-card h2,
+.Featured-Articles-Subscription .container .box3 .Blog__Highlights .info-card h2 {
+  padding: 1em 1.5em 4em;
+  margin: 0;
+  font-size: 1em;
+}
+.Featured-Articles-Subscription .container .box1 .Blog__Highlights .info-card h2 a,
+.Featured-Articles-Subscription .container .box2 .Blog__Highlights .info-card h2 a,
+.Featured-Articles-Subscription .container .box3 .Blog__Highlights .info-card h2 a {
+  font-size: 1.5em;
+  font-weight: unset;
+}
+.Featured-Articles-Subscription .container .box1 .Blog__Highlights .info-card .blog-meta,
+.Featured-Articles-Subscription .container .box2 .Blog__Highlights .info-card .blog-meta,
+.Featured-Articles-Subscription .container .box3 .Blog__Highlights .info-card .blog-meta {
+  font-size: 0.7em;
+}
+.Featured-Articles-Subscription .container .box1 .marke__tingHub,
+.Featured-Articles-Subscription .container .box2 .marke__tingHub,
+.Featured-Articles-Subscription .container .box3 .marke__tingHub {
+  height: 30rem;
+  background-color: rgb(255, 94, 87);
+  padding: 0.5rem;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  justify-content: center;
+  display: flex;
+}
+.Featured-Articles-Subscription .container .box1 .marke__tingHub .info-card,
+.Featured-Articles-Subscription .container .box2 .marke__tingHub .info-card,
+.Featured-Articles-Subscription .container .box3 .marke__tingHub .info-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  width: 90%;
+}
+.Featured-Articles-Subscription .container .box1 .marke__tingHub .info-card h3,
+.Featured-Articles-Subscription .container .box2 .marke__tingHub .info-card h3,
+.Featured-Articles-Subscription .container .box3 .marke__tingHub .info-card h3 {
+  font-size: 2em;
+  font-weight: bold;
+  padding: 0 0em 5rem 0rem;
+  width: 80%;
+  margin: 0 auto;
+}
+.Featured-Articles-Subscription .container .box1 .marke__tingHub .info-card p,
+.Featured-Articles-Subscription .container .box2 .marke__tingHub .info-card p,
+.Featured-Articles-Subscription .container .box3 .marke__tingHub .info-card p {
+  font-size: 1.3em;
+  padding-left: 0.125rem;
+  max-width: 74%;
+  margin: 0 auto;
+  padding: 0em 0em 3rem 0rem;
+}
+.Featured-Articles-Subscription .container .box1 .marke__tingHub .info-card .btn-box button,
+.Featured-Articles-Subscription .container .box2 .marke__tingHub .info-card .btn-box button,
+.Featured-Articles-Subscription .container .box3 .marke__tingHub .info-card .btn-box button {
+  width: 100%;
+  font-size: 0.8em;
+  height: 3.5em;
+  background: transparent;
+  border-color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  margin-bottom: 1em;
+  cursor: pointer;
+}
+.Featured-Articles-Subscription .container .box1 .marke__tingHub .info-card .btn-box button:hover,
+.Featured-Articles-Subscription .container .box2 .marke__tingHub .info-card .btn-box button:hover,
+.Featured-Articles-Subscription .container .box3 .marke__tingHub .info-card .btn-box button:hover {
+  background-color: rgba(255, 94, 87, 0.5);
+}
+.Featured-Articles-Subscription .container .box2,
+.Featured-Articles-Subscription .container .box3 {
+  padding-top: 1rem;
+  grid-template-columns: 2fr 4fr;
+}
+.Featured-Articles-Subscription .container .box2 .marke__tingHub .info-card h1,
+.Featured-Articles-Subscription .container .box3 .marke__tingHub .info-card h1 {
+  width: 70%;
+  margin: 0 auto;
+  line-height: 1.9;
+}
+.Featured-Articles-Subscription .container .box2 .marke__tingHub .info-card button,
+.Featured-Articles-Subscription .container .box3 .marke__tingHub .info-card button {
+  top: 4rem;
+  position: relative;
+}
+.Featured-Articles-Subscription .container .box2 .content__card,
+.Featured-Articles-Subscription .container .box3 .content__card {
+  background-color: aqua;
+  height: 30rem;
+  background-color: rgb(236, 240, 241);
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.Featured-Articles-Subscription .container .box2 .content__card-img,
+.Featured-Articles-Subscription .container .box3 .content__card-img {
+  display: flex;
+  justify-content: center;
+  height: 60%;
+}
+.Featured-Articles-Subscription .container .box2 .content__card-img img,
+.Featured-Articles-Subscription .container .box3 .content__card-img img {
+  width: 95%;
+  border-radius: 5px;
+  object-fit: cover;
+  object-position: top;
+}
+.Featured-Articles-Subscription .container .box2 .content__card .info-card,
+.Featured-Articles-Subscription .container .box3 .content__card .info-card {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+  height: 40%;
+}
+.Featured-Articles-Subscription .container .box2 .content__card .info-card p,
+.Featured-Articles-Subscription .container .box3 .content__card .info-card p {
+  padding: 1em;
+  font-size: 1em;
+  padding-left: 0.125rem;
+}
+.Featured-Articles-Subscription .container .box2 .content__card .info-card h2,
+.Featured-Articles-Subscription .container .box3 .content__card .info-card h2 {
+  padding: 0em 1.5em 1em;
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.Featured-Articles-Subscription .container .box2 .content__card .info-card .blog-meta,
+.Featured-Articles-Subscription .container .box3 .content__card .info-card .blog-meta {
+  font-size: 0.7em;
+}
+.Featured-Articles-Subscription .container .box3 {
+  grid-template-columns: 4fr 2fr;
+}
+@media screen and (max-width: 62em) {
+  .Featured-Articles-Subscription .container {
+    align-items: center;
+    width: 60%;
+  }
+  .Featured-Articles-Subscription .container .box1,
+  .Featured-Articles-Subscription .container .box2,
+  .Featured-Articles-Subscription .container .box3 {
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    width: 34rem;
+  }
+  .Featured-Articles-Subscription .container .box1 .Blog__Highlights,
+  .Featured-Articles-Subscription .container .box1 .marke__tingHub,
+  .Featured-Articles-Subscription .container .box1 .content__card,
+  .Featured-Articles-Subscription .container .box2 .Blog__Highlights,
+  .Featured-Articles-Subscription .container .box2 .marke__tingHub,
+  .Featured-Articles-Subscription .container .box2 .content__card,
+  .Featured-Articles-Subscription .container .box3 .Blog__Highlights,
+  .Featured-Articles-Subscription .container .box3 .marke__tingHub,
+  .Featured-Articles-Subscription .container .box3 .content__card {
+    height: 38rem;
+  }
+  .Featured-Articles-Subscription .container .box1 .Blog__Highlights .btn-box,
+  .Featured-Articles-Subscription .container .box1 .marke__tingHub .btn-box,
+  .Featured-Articles-Subscription .container .box1 .content__card .btn-box,
+  .Featured-Articles-Subscription .container .box2 .Blog__Highlights .btn-box,
+  .Featured-Articles-Subscription .container .box2 .marke__tingHub .btn-box,
+  .Featured-Articles-Subscription .container .box2 .content__card .btn-box,
+  .Featured-Articles-Subscription .container .box3 .Blog__Highlights .btn-box,
+  .Featured-Articles-Subscription .container .box3 .marke__tingHub .btn-box,
+  .Featured-Articles-Subscription .container .box3 .content__card .btn-box {
+    font-size: 1.5rem;
+  }
+  .Featured-Articles-Subscription .container .box1 .box1 .marke__tingHub .info-card h3,
+  .Featured-Articles-Subscription .container .box2 .box1 .marke__tingHub .info-card h3,
+  .Featured-Articles-Subscription .container .box3 .box1 .marke__tingHub .info-card h3 {
+    top: 2rem;
+    position: relative;
+  }
+  .Featured-Articles-Subscription .container .box1 .box1 .marke__tingHub .info-card p,
+  .Featured-Articles-Subscription .container .box2 .box1 .marke__tingHub .info-card p,
+  .Featured-Articles-Subscription .container .box3 .box1 .marke__tingHub .info-card p {
+    padding: 2em 0em 5rem 0rem;
+  }
+  .Featured-Articles-Subscription .container .box2 .marke__tingHub .info-card h1 {
+    font-size: 3rem;
+  }
+  .Featured-Articles-Subscription .container .box2 .marke__tingHub .info-card .btn-box {
+    padding-top: 5rem;
+  }
+}
 /*
 ***         
 *****       
