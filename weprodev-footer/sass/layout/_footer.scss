@@ -4,6 +4,11 @@
   color: $colorWihte;
   line-height: 1.7;
   font-weight: $fontWeightRegular;
+  background-image: linear-gradient($colorSecondary, $colorSecondary);
+  background-size: cover;
+  @include mobile {
+    background-position: center;
+  }
   &__info {
     display: flex;
     justify-content: center;
@@ -22,6 +27,7 @@
   &__headline {
     font-size: 2.4rem;
     margin-bottom: 4.5rem;
+    font-weight: $fontWeightSemibold;
   }
   &__paragraph {
     font-size: $fontSize2Xl;
@@ -52,10 +58,10 @@
   }
   &__email {
     width: 25rem;
-    padding: list.nth($spaces, 4);
-    font-size: $fontSizeBase;
-    border-radius: 0.6rem;
-    border: $colorWihte solid 0.2rem;
+    padding: list.nth($spaces, 2);
+    font-size: 1.1rem;
+    border-radius: 0.4rem;
+    border: $colorWihte solid 0.1rem;
     font-family: inherit;
     background-color: $colorBlack;
     transition: all 0.6s;
@@ -66,19 +72,21 @@
   }
   &__email:hover,
   &__email:active {
-    border: $colorPrimary solid 0.2rem;
+    border: $colorPrimary solid 0.1rem;
   }
   &__email:focus {
     outline: none;
   }
 
   &__btn {
-    padding: list.nth($spaces, 4);
+    padding: list.nth($spaces, 2);
     font-size: $fontSizeLg;
     background-color: $colorPrimary;
-    border-radius: 0.6rem;
+    border-radius: 0.4rem;
     border: none;
     transition: all 0.6s;
+    color: $colorWihte;
+    font-size: 1.2rem;
     cursor: pointer;
     @include miniLaptop {
       width: 25rem;

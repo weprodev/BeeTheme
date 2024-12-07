@@ -80,12 +80,6 @@
   margin: 0 auto;
 }
 
-.background {
-  background-image: linear-gradient(rgba(20, 20, 20, 0.9019607843), rgba(20, 20, 20, 0.9019607843)), url(../img/weprodev-2.jpg);
-  background-size: cover;
-  background-position: center;
-}
-
 /*------------------------------------*\
   #BASE
 \*------------------------------------*/
@@ -131,6 +125,13 @@ a {
   color: #fff;
   line-height: 1.7;
   font-weight: 400;
+  background-image: linear-gradient(rgba(20, 20, 20, 0.9019607843), rgba(20, 20, 20, 0.9019607843));
+  background-size: cover;
+}
+@media screen and (max-width: 40em) {
+  .weprodev-footer {
+    background-position: center;
+  }
 }
 .weprodev-footer__info {
   display: flex;
@@ -156,6 +157,7 @@ a {
 .weprodev-footer__headline {
   font-size: 2.4rem;
   margin-bottom: 4.5rem;
+  font-weight: 600;
 }
 .weprodev-footer__paragraph {
   font-size: 1.5em;
@@ -186,10 +188,10 @@ a {
 }
 .weprodev-footer__email {
   width: 25rem;
-  padding: 1em;
-  font-size: 1em;
-  border-radius: 0.6rem;
-  border: #fff solid 0.2rem;
+  padding: 0.5em;
+  font-size: 1.1rem;
+  border-radius: 0.4rem;
+  border: #fff solid 0.1rem;
   font-family: inherit;
   background-color: #000;
   transition: all 0.6s;
@@ -201,18 +203,20 @@ a {
   }
 }
 .weprodev-footer__email:hover, .weprodev-footer__email:active {
-  border: #ff5e57 solid 0.2rem;
+  border: #ff5e57 solid 0.1rem;
 }
 .weprodev-footer__email:focus {
   outline: none;
 }
 .weprodev-footer__btn {
-  padding: 1em;
+  padding: 0.5em;
   font-size: 1.125em;
   background-color: #ff5e57;
-  border-radius: 0.6rem;
+  border-radius: 0.4rem;
   border: none;
   transition: all 0.6s;
+  color: #fff;
+  font-size: 1.2rem;
   cursor: pointer;
 }
 @media screen and (max-width: 64em) {
