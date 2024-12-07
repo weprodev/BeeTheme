@@ -138,11 +138,6 @@ a {
   justify-content: center;
   gap: 4em;
 }
-@media screen and (min-width: 75.0625em) {
-  .weprodev-footer__info {
-    font-size: 80%;
-  }
-}
 @media screen and (max-width: 75em) {
   .weprodev-footer__info {
     font-size: 80%;
@@ -156,7 +151,7 @@ a {
 }
 .weprodev-footer__headline {
   font-size: 2.4rem;
-  margin-bottom: 4.5rem;
+  margin-bottom: 1.75em;
   font-weight: 600;
 }
 .weprodev-footer__paragraph {
@@ -196,6 +191,7 @@ a {
   background-color: #000;
   transition: all 0.6s;
   color: #fff;
+  margin-bottom: 0.25em;
 }
 @media screen and (max-width: 40em) {
   .weprodev-footer__email {
@@ -210,13 +206,12 @@ a {
 }
 .weprodev-footer__btn {
   padding: 0.5em;
-  font-size: 1.125em;
+  font-size: 1.2rem;
   background-color: #ff5e57;
   border-radius: 0.4rem;
   border: none;
   transition: all 0.6s;
   color: #fff;
-  font-size: 1.2rem;
   cursor: pointer;
 }
 @media screen and (max-width: 64em) {
