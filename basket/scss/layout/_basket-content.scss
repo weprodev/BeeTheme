@@ -1,0 +1,18 @@
+.basket-content {
+  background: $white;
+  h2 {
+    margin: nth($spaces, 3) 0 nth($spaces, 6);
+    @include mobile {
+      margin: nth($spaces, 3) 0;
+    }
+  }
+  
+  .cards-section {
+    display: flex;
+    justify-content: center;
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+}

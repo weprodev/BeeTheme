@@ -1,0 +1,12 @@
+.button {
+  @include button(
+    $bg: $white,
+    $color: $secondaryColor,
+    $radius: $roundedFull,
+    $padding: nth($spaces, 3) nth($spaces, 16),
+    $transition: map-get($durations, 150),
+    $fontWeight: $fontWeightSemibold,
+    $border: 1px solid $secondaryColor,
+    $hoverBgColor: rgba($color: $secondaryColor, $alpha: 0.1)
+  );
+}

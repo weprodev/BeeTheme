@@ -1,0 +1,179 @@
+.weprodev-header {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+
+  a {
+    transition: map-get($durations, 300);
+    &:hover {
+      color: $mainColorWeprodev;
+    }
+  }
+
+  &__top-section {
+    width: 100%;
+    padding-inline: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: nth($spaces, 4);
+    gap: nth($spaces, 4);
+    background-color: $white;
+    box-shadow: $shadowSm;
+    border-bottom: 1px solid $clouds;
+    @include laptop {
+      padding-inline: 1.5rem;
+    }
+    @include mobile {
+      flex-wrap: wrap;
+    }
+  }
+  &__logo {
+    width: 8rem;
+  }
+  &__select-lang {
+    .icon-globe1:before {
+      font-size: $fontSize4Xl;
+    }
+    .icon-chevron-down {
+      transition: map-get($durations, 150);
+    }
+    &:hover {
+      .icon-chevron-down {
+        transform: rotate(180deg);
+      }
+    }
+    @include mobile {
+      display: none;
+    }
+  }
+  &__select-lang-title {
+    display: flex;
+    align-items: center;
+    gap: nth($spaces, 2);
+    cursor: default;
+    padding: nth($spaces, 2) 0;
+  }
+  &__select-lang-list {
+    width: 100%;
+    top: 100%;
+    left: 0;
+    border-radius: $rounded;
+    flex-direction: column;
+    box-shadow: 0 0 2rem 0 rgba($color: $black, $alpha: 0.2);
+    background-color: $white;
+  }
+  &__select-lang-item {
+    padding: nth($spaces, 3);
+  }
+  &__search-box {
+    display: flex;
+    margin-left: auto;
+    background-color: $mainColorWeprodev;
+    padding: nth($spaces, 1);
+    border-radius: $roundedFull;
+
+    @include mobile {
+      order: 2;
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+  &__search-box-input {
+    transition: map-get($durations, 300);
+    width: 0;
+    color: $white;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    &::placeholder {
+      color: $white;
+    }
+
+    @include mobile {
+      width: 100%;
+      margin-left: nth($spaces, 2);
+    }
+  }
+  &__search-box-button {
+    transition: map-get($durations, 300);
+    cursor: pointer;
+    transition: map-get($durations, 150);
+    padding: nth($spaces, 3);
+    border-radius: $roundedFull;
+    border: none;
+    color: $white;
+    background-color: $mainColorWeprodev;
+
+    @include mobile {
+      background-color: $white;
+      color: $black;
+    }
+  }
+  &__search-box.active &__search-box-input {
+    width: 10rem;
+    margin-left: nth($spaces, 2);
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+  &__search-box.active &__search-box-button {
+    background-color: $white;
+    color: $black;
+  }
+  &__buttons-container {
+    @include mobile {
+      margin-left: auto;
+    }
+  }
+  &__login-button,
+  &__free-template-button {
+    @include button(
+      $radius: $rounded,
+      $padding: nth($spaces, 4) nth($spaces, 6),
+      $transition: map-get($durations, 150),
+      $hoverBgColor: none,
+      $fontWeight: $fontWeightSemibold,
+      $border: 0.1rem solid $mainColorWeprodev
+    );
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+  &__login-button {
+    color: $mainColorWeprodev;
+    background-color: $white;
+  }
+  &__free-template-button {
+    color: $white;
+    background-color: $mainColorWeprodev;
+    @include laptop {
+      display: none;
+    }
+  }
+
+  &__navbar {
+    width: 100%;
+    padding-inline: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: $shadowSm;
+    padding-block: nth($spaces, 6);
+    background-color: $white;
+    @include laptop {
+      padding-inline: 1.5rem;
+    }
+  }
+  &__menu {
+    font-size: $fontSizeXl;
+    display: flex;
+    gap: nth($spaces, 4);
+    @include mobile {
+      font-size: $fontSizeLg;
+    }
+  }
+}

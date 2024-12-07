@@ -1,0 +1,29 @@
+.basket {
+  width: 100%;
+  z-index: -1;
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+  transition: all 0.6s;
+  .icon {
+    transition: inherit;
+  }
+  &:hover {
+    background-color: rgb(245, 245, 245);
+    color: rgb(52, 152, 219);
+    .icon {
+      fill: rgb(52, 152, 219);
+    }
+  }
+}
+
+.blur {
+  filter: blur(10px);
+}
+
+.hidden {
+  display: none !important;
+}
+

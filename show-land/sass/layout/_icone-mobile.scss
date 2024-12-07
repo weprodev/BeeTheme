@@ -1,0 +1,17 @@
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  z-index: 3000;
+  display: none;
+}
+
+.icone-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: $colorGreyDark3;
+}
+
+.icone-mobile-nav[name="close-outline"] {
+  display: none;
+}
