@@ -1,0 +1,42 @@
+.resources-section {
+  display: flex;
+  flex-direction: column;
+  padding-block: nth($spaces, 16);
+  gap: nth($spaces, 16);
+  text-align: center;
+
+  &__cards-container {
+    display: flex;
+    justify-content: center;
+    gap: nth($spaces, 4);
+    flex-wrap: wrap;
+  }
+
+  &__card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;    
+    gap: nth($spaces, 6);
+    padding: nth($spaces, 4);
+    box-shadow: $shadowDark;
+    flex: 1 0 20%;
+    @include laptop {
+      flex: 1 0 40%;
+    }
+    @include mobile {
+      flex: 1 0 100%;
+    }
+  }
+  &__card-heading {
+    font-weight: $fontWeightMedium;
+    font-size: $fontSizeXl;
+  }
+  &__card-paragraph {
+    font-size: $fontSizeBase;
+  }
+  &__card-image {
+    width: auto;
+    margin: nth($spaces, 4);
+  }
+}
