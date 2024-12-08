@@ -31,8 +31,8 @@
 /*------------------------------------*\
   #LAYOUT
 \*------------------------------------*/
-@import "../../weprodev-header/scss/main.scss";
-@import "../../weprodev-footer/sass/main.scss";
+@import "../../shared/weprodev-header/scss/main.scss";
+@import "../../shared/weprodev-footer/sass/main.scss";
 @import "./layout/hero";
 @import "./layout/built-section";
 @import "./layout/create-section";
