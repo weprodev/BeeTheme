@@ -1975,6 +1975,254 @@ a {
   }
 }
 
+/*------------------------------------*\
+  #ABSTRACTS
+\*------------------------------------*/
+/*========================================================================================
+*********   GRIDS BASE SUSY
+*******     MEDIA QUERY 
+*****       
+***         
+*/
+/*--------------------------------
+***  GENERAL DIFINITIONS
+**	 CSS3 , CLEARFIX
+*/
+.container {
+  width: 90%;
+}
+
+/*========================================================================================*\
+*----------------------------          MEDIA QUERY              ----------------------------        
+\*========================================================================================*/
+/*--------------------------------
+*** 4K AND HIGH RESOULOTIONS 
+**	MIN-WIDTH : 2560px OR 160em
+*/
+/*--------------------------------
+*** LAPTOP OR DESKTOP 
+**	MIN-WIDTH : 1400px OR 87.5em
+*/
+/*--------------------------------
+*** FOR SOM OF THE DEVICES
+**	MIN-WIDTH : 1201px OR 75.0625em
+*/
+/*--------------------------------
+*** FOR ANY DEVICE MAX SIZE UNTIL
+**	MAX-WIDTH : 1200px OR 75em
+*/
+/*--------------------------------
+*** FOR ANY DEVICE MAX SIZE UNTIL
+**	MAX-WIDTH : 1024px OR 64em
+*/
+/*--------------------------------
+*** FOR ANY DEVICE MAX SIZE UNTIL
+**	MAX-WIDTH : 992px OR 62em
+*/
+/*--------------------------------
+*** FOR RETINA MOBILE AND LANSCAPE
+**	MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
+*/
+/*--------------------------------
+*** FOR MOBILE
+**	MAX : 640PX / 40em
+*/
+/*--------------------------------
+*** FOR MINI MOBILE
+**	MAX : 400PX / 25em
+*/
+/*------------------------------------*\
+  #FONT
+\*------------------------------------*/
+/*------------------------------------*\
+  #BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+  #SPACES (padding & margin & gap) 
+\*------------------------------------*/
+/*------------------------------------*\
+  #TRANSITION DURATION
+\*------------------------------------*/
+/*------------------------------------*\
+  #BOX SHADOW
+\*------------------------------------*/
+/*------------------------------------*\
+  #BORDER RADIUS
+\*------------------------------------*/
+/*------------------------------------*\
+  #COLOR
+\*------------------------------------*/
+.container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+/*------------------------------------*\
+  #BASE
+\*------------------------------------*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+}
+
+body {
+  min-height: 100vh;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/*------------------------------------*\
+  #LAYOUT
+\*------------------------------------*/
+.weprodev-footer {
+  padding: 4em 0;
+  color: #fff;
+  line-height: 1.7;
+  font-weight: 400;
+  background-image: linear-gradient(rgba(20, 20, 20, 0.9019607843), rgba(20, 20, 20, 0.9019607843));
+  background-size: cover;
+}
+@media screen and (max-width: 40em) {
+  .weprodev-footer {
+    background-position: center;
+  }
+}
+.weprodev-footer__info {
+  display: flex;
+  justify-content: center;
+  gap: 4em;
+}
+@media screen and (max-width: 75em) {
+  .weprodev-footer__info {
+    font-size: 80%;
+  }
+}
+@media screen and (max-width: 64em) {
+  .weprodev-footer__info {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.weprodev-footer__headline {
+  font-size: 2.4rem;
+  margin-bottom: 1.75em;
+  font-weight: 600;
+}
+.weprodev-footer__paragraph {
+  font-size: 1.5em;
+}
+.weprodev-footer__location {
+  display: flex;
+  gap: 0.5em;
+  justify-content: baseline;
+  font-size: 1.5em;
+  margin-bottom: 2em;
+}
+.weprodev-footer__email_address {
+  display: flex;
+  gap: 0.5em;
+  justify-content: baseline;
+  font-size: 1.5em;
+}
+.weprodev-footer__icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-top: -0.4rem;
+}
+.weprodev-footer__form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  margin-top: 3.5em;
+}
+.weprodev-footer__email {
+  width: 25rem;
+  padding: 0.5em;
+  font-size: 1.1rem;
+  border-radius: 0.4rem;
+  border: #fff solid 0.1rem;
+  font-family: inherit;
+  background-color: #000;
+  transition: all 0.6s;
+  color: #fff;
+  margin-bottom: 0.25em;
+}
+@media screen and (max-width: 40em) {
+  .weprodev-footer__email {
+    width: 18rem;
+  }
+}
+.weprodev-footer__email:hover, .weprodev-footer__email:active {
+  border: #ff5e57 solid 0.1rem;
+}
+.weprodev-footer__email:focus {
+  outline: none;
+}
+.weprodev-footer__btn {
+  padding: 0.5em;
+  font-size: 1.2rem;
+  background-color: #ff5e57;
+  border-radius: 0.4rem;
+  border: none;
+  transition: all 0.6s;
+  color: #fff;
+  cursor: pointer;
+}
+@media screen and (max-width: 64em) {
+  .weprodev-footer__btn {
+    width: 25rem;
+  }
+}
+@media screen and (max-width: 40em) {
+  .weprodev-footer__btn {
+    width: 18rem;
+  }
+}
+.weprodev-footer__btn:link {
+  background-color: #ff5e57;
+}
+.weprodev-footer__btn:hover {
+  background-color: rgb(255, 74.45, 66.6);
+}
+.weprodev-footer__border {
+  margin-top: 5em;
+  margin-bottom: 1em;
+  border-bottom: rgba(255, 95, 87, 0.6588235294) solid 0.15rem;
+}
+.weprodev-footer__item_footer {
+  display: flex;
+  align-items: center;
+}
+.weprodev-footer__logo {
+  width: 7rem;
+}
+.weprodev-footer__copy_info {
+  color: #adb5bd;
+}
+
 .hero {
   display: flex;
   flex-direction: column;
