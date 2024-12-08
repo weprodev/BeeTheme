@@ -58,6 +58,17 @@ const demos = [
     mainImage: "show-land-main.png",
     entirePageImage: "show-land-entire.png",
   },
+  {
+    id: 5,
+    name: "ProductDetails",
+    createdBy: {
+      name: "Ahmad Mohammadirad",
+      github: "https://github.com/ahmadmohammadirad2006",
+    },
+    url: "product-details/index.html",
+    mainImage: "product-details-main.png",
+    entirePageImage: "product-details-entire.png",
+  },
 ];
 
 /*------------------------------------*\
