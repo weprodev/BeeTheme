@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*------------------------------------*\
   #ABSTRACTS
 \*------------------------------------*/
@@ -83,6 +84,9 @@
   #SHADOW
 \*------------------------------------*/
 /*------------------------------------*\
+  #BORDER
+\*------------------------------------*/
+/*------------------------------------*\
   #FORNT
 \*------------------------------------*/
 body {
@@ -143,6 +147,7 @@ picture,
 svg,
 video {
   display: block;
+  width: 100%;
 }
 
 a {
@@ -165,10 +170,31 @@ a .icon {
 }
 a:hover {
   background-color: rgb(245, 245, 245);
-  color: rgb(52, 152, 219);
+  color: #2980b9;
 }
 a:hover .icon {
-  fill: rgb(52, 152, 219);
+  fill: #2980b9;
+}
+
+.blur {
+  filter: blur(10px);
+}
+
+.hidden {
+  display: none !important;
+}
+
+.right-0 {
+  right: 0% !important;
+}
+
+.left-0 {
+  left: 0% !important;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 /*------------------------------------*\
@@ -201,7 +227,7 @@ a:hover .icon {
   margin: 2em;
   width: 27rem;
   padding: 2em 2.5em;
-  box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 2rem 1rem rgba(0, 0, 0, 0.1);
 }
 @media screen and (max-width: 64em) {
   .card {
@@ -262,6 +288,287 @@ a:hover .icon {
   text-align: center;
 }
 
+.close-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0px 0px 2rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.25em;
+  padding: 2em;
+  width: 37em;
+  height: 18em;
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 40em) {
+  .close-modal {
+    width: 100%;
+  }
+}
+.close-modal__buttons-container {
+  display: flex;
+  margin: 2em;
+  font-size: 1.5em;
+  margin-bottom: 0;
+  gap: 1em;
+}
+.close-modal__button-yes {
+  background: #fff;
+  color: #000;
+  border-radius: 0.25em;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 0.5em 1em;
+  font-size: 1em;
+  font-weight: 400;
+  transition: 300ms;
+  text-align: center;
+  cursor: pointer;
+}
+.close-modal__button-yes:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.close-modal__button-yes:hover {
+  color: #fff;
+}
+.close-modal__button-no {
+  background: #1dc973;
+  color: #000;
+  border-radius: 0.25em;
+  border: none;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  font-weight: 400;
+  transition: 300ms;
+  text-align: center;
+  cursor: pointer;
+}
+.close-modal__button-no:hover {
+  background-color: rgba(29, 201, 115, 0.9);
+}
+.close-modal__button-yes:hover, .close-modal__button-no:hover {
+  transform: scale(1.1);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  margin: 0 auto;
+  width: 80%;
+  text-align: left;
+  margin-top: 4em;
+}
+@media screen and (max-width: 40em) {
+  .form {
+    width: 90%;
+  }
+}
+.form__checkboxs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.form__checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  user-select: none;
+}
+.form__checkbox-input {
+  display: none;
+}
+.form__checkbox-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: #fff;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.25em;
+  transition: 150ms;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.form__checkbox-button::after {
+  content: "";
+  display: none;
+  width: 0.4rem;
+  height: 0.7rem;
+  border: solid #fff;
+  border-width: 0 0.2rem 0.2rem 0;
+  transform: rotate(45deg);
+}
+.form__checkbox-input:checked ~ .form__checkbox-button {
+  background-color: #ff5e57;
+  box-shadow: 0px 0px 5px 5px rgba(255, 94, 87, 0.5);
+  border-color: transparent;
+}
+.form__checkbox-input:checked ~ .form__checkbox-button::after {
+  display: block;
+}
+.form__checkbox-group:hover .form__checkbox-input:not(:checked) ~ .form__checkbox-button {
+  background-color: rgba(149, 165, 166, 0.2);
+}
+.form__input-groups-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+}
+@media screen and (max-width: 64em) {
+  .form__input-groups-container {
+    flex-direction: column;
+  }
+}
+.form__input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  flex-grow: 1;
+}
+.form__input-label-star {
+  color: #ff5e57;
+}
+.form__input {
+  padding: 1em;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.25em;
+}
+.form__textarea-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.form__textarea {
+  width: 100%;
+  height: 8rem;
+  border-radius: 0.25em;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  resize: none;
+  padding: 0.5em;
+}
+.form__button {
+  background: #fff;
+  color: #000;
+  border-radius: 0.25em;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  padding: 0.75em 1.5em;
+  font-size: 1em;
+  font-weight: 400;
+  transition: 150ms;
+  text-align: center;
+  cursor: pointer;
+  align-self: flex-start;
+  margin-bottom: 1em;
+}
+.form__button:hover {
+  background-color: #ff5e57;
+}
+.form__button:hover {
+  color: #fff;
+  border-color: transparent;
+}
+
+.platform {
+  width: 20em;
+  height: 7em;
+}
+@media screen and (max-width: 62em) {
+  .platform {
+    width: 19em;
+  }
+}
+@media screen and (max-width: 40em) {
+  .platform {
+    width: 22em;
+  }
+}
+.platform__radio-input {
+  display: none;
+}
+.platform__radio-label {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  border-radius: 1.5em;
+  overflow: hidden;
+  box-shadow: 0px 0px 2rem 0px rgba(0, 0, 0, 0.2);
+  position: relative;
+  transition: 300ms;
+}
+.platform__radio-input:not(:disabled) ~ .platform__radio-label {
+  cursor: pointer;
+}
+.platform__radio-input:disabled ~ .platform__radio-label {
+  color: hsl(150, 5%, 75%);
+  border-color: hsl(150, 5%, 75%);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+.platform__radio-input:checked ~ .platform__radio-label {
+  background: #1dc973;
+  color: #fff;
+  box-shadow: 0px 0px 2rem 1rem rgba(0, 0, 0, 0.1);
+}
+.platform__radio-input:checked ~ .platform__radio-label .platform__check-circle::after {
+  display: flex;
+}
+.platform__name {
+  font-size: 1.5em;
+  font-weight: 500;
+  position: absolute;
+  top: 50%;
+  left: 59%;
+  transform: translate(-50%, -50%);
+  white-space: pre;
+}
+.platform__check-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  height: 3rem;
+  width: 3rem;
+}
+.platform__check-circle::after {
+  content: "✓";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  height: 3rem;
+  width: 3rem;
+  color: #000;
+  background: #fff;
+  font-size: 1.875em;
+  border-radius: 9999px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.platform__front-image {
+  width: 85%;
+  height: 85%;
+  object-fit: contain;
+}
+.platform__bg-image {
+  width: 11em;
+  opacity: 0.2;
+  position: absolute;
+  top: -29%;
+  right: -17%;
+}
+
 /*------------------------------------*\
   #LAYOUTS
 \*------------------------------------*/
@@ -269,7 +576,7 @@ a:hover .icon {
   width: 100%;
   height: 5rem;
   position: relative;
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 2rem 0px rgba(0, 0, 0, 0.2);
 }
 .header__basket {
   display: flex;
@@ -281,7 +588,7 @@ a:hover .icon {
   top: 30%;
   width: 80%;
 }
-.header .icon-cross {
+.header .icon {
   display: inline-block;
   width: 2rem;
   height: 2rem;
@@ -316,4 +623,42 @@ a:hover .icon {
     flex-direction: column;
   }
 }
+
+.select-section {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  position: fixed;
+  overflow: auto;
+  z-index: 99;
+  transition: all 0.9s cubic-bezier(0.6, 0.05, 0.4, 1);
+}
+.select-section--left {
+  top: 0;
+  bottom: 0;
+  right: 105%;
+}
+.select-section--right {
+  top: 0;
+  bottom: 0;
+  left: 105%;
+}
+
+.platform-options-container {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  padding-bottom: 2em;
+  margin: 1em 0;
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
+  gap: 2.5em;
+  margin: 0 auto;
+  width: 80%;
+}
+@media screen and (max-width: 40em) {
+  .platform-options-container {
+    width: 90%;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

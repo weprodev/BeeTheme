@@ -1,0 +1,25 @@
+.oringeBtn {
+  border: $roundedSm $coralSunset solid;
+  padding: 0.9em nth($spaces, 8);
+  background: $white;
+  color: $coralSunset;
+  font-size: $rounded2Xl;
+  cursor: pointer;
+  border-radius: $roundedMd;
+
+  &:hover {
+    background-color: $softCoral;
+    transition: 1s;
+  }
+
+  &-L {
+    width: 11rem;
+    background-color: $coralRed;
+    font-size: 100%;
+    color: $white;
+
+    &:hover {
+      background-color: $blushCoral;
+    }
+  }
+}

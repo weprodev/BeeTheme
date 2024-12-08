@@ -7,8 +7,15 @@
     <link rel="stylesheet" href="css/style.css" media="all" />
   </head>
   <body>
-
     <div class="basket">
+      <div class="close-modal hidden" id="close-page">
+        <h2 class="heading-primary">Are you sure?</h2>
+        <div class="close-modal__buttons-container">
+          <a href="#" class="close-modal__button-yes">Yes</a>
+          <button class="close-modal__button-no" id="close">No</button>
+        </div>
+      </div>
+
       <div id="sec-1">
         <header class="header">
           <div class="header__basket">
@@ -57,6 +64,298 @@
           </div>
         </div>
       </div>
+
+      <div class="select-section select-section--left" id="sec-2">
+        <header class="header">
+          <div class="header__basket">
+            <img src="images/favicon.png" class="header__logo" alt="logo" />
+            <a href="#" id="back-main-page2">
+              <svg class="icon icon-arrow-right2">
+                <use xlink:href="#icon-arrow-right2"></use>
+              </svg>
+            </a>
+          </div>
+        </header>
+
+        <div class="basket-content">
+          <h2 class="heading-primary">Select</h2>
+          <form class="form">
+            <div class="form__checkboxs-container">
+              <div class="form__checkbox-group">
+                <input
+                  class="form__checkbox-input"
+                  type="checkbox"
+                  id="checkbox-1-1"
+                />
+                <label class="form__checkbox-button" for="checkbox-1-1"></label>
+                <label for="checkbox-1-1">
+                  I want to use your service and transfering my site to your
+                  platform</label
+                >
+              </div>
+              <div class="form__checkbox-group">
+                <input
+                  class="form__checkbox-input"
+                  type="checkbox"
+                  id="checkbox-1-2"
+                />
+                <label class="form__checkbox-button" for="checkbox-1-2"></label>
+                <label for="checkbox-1-2"> I need to consutatiion</label>
+              </div>
+            </div>
+
+            <div class="form__input-groups-container">
+              <div class="form__input-group">
+                <label for="firstname-1"
+                  >First Name:&nbsp;<span class="form__input-label-star"
+                    >*</span
+                  >
+                </label>
+                <input
+                  class="form__input"
+                  type="text"
+                  id="firstname-1"
+                  placeholder="First Name..."
+                />
+              </div>
+              <div class="form__input-group">
+                <label for="lastname-1"
+                  >Last Name:&nbsp;<span class="form__input-label-star">*</span>
+                </label>
+                <input
+                  class="form__input"
+                  type="text"
+                  id="lastname-1"
+                  placeholder="Last Name..."
+                />
+              </div>
+              <div class="form__input-group">
+                <label for="email-1"
+                  >Email:&nbsp;<span class="form__input-label-star">*</span>
+                </label>
+                <input
+                  class="form__input"
+                  type="email"
+                  id="email-1"
+                  placeholder="Email..."
+                />
+              </div>
+            </div>
+
+            <div class="form__textarea-group">
+              <label for="textarea-1">Your message:</label>
+              <textarea class="form__textarea" id="textarea-1"></textarea>
+            </div>
+
+            <button class="form__button" type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="select-section select-section--right" id="sec-3">
+        <header class="header">
+          <div class="header__basket">
+            <img src="images/favicon.png" class="header__logo" alt="logo" />
+
+            <a href="#" id="back-main-page1">
+              <svg class="icon icon-arrow-left2">
+                <use xlink:href="#icon-arrow-left2"></use>
+              </svg>
+            </a>
+          </div>
+        </header>
+        <div class="basket-content">
+          <h2 class="heading-primary">Select your platform</h2>
+          <div class="platform-options-container">
+            <div class="platform">
+              <input
+                type="radio"
+                id="wordpress-platform"
+                name="platform-option"
+                class="platform__radio-input"
+              />
+              <label class="platform__radio-label" for="wordpress-platform">
+                <img
+                  src="images/wordpress-logo.png"
+                  class="platform__bg-image"
+                  alt="WordPress Logo"
+                />
+
+                <span class="platform__check-circle">
+                  <img
+                    src="images/wordpress-logo.png"
+                    class="platform__front-image"
+                    alt="WordPress Logo"
+                /></span>
+                <span class="platform__name">WordPress</span>
+              </label>
+            </div>
+            <div class="platform">
+              <input
+                type="radio"
+                id="laravel-platform"
+                name="platform-option"
+                class="platform__radio-input"
+              />
+              <label class="platform__radio-label" for="laravel-platform">
+                <img
+                  src="images/laravel-logo.png"
+                  class="platform__bg-image"
+                  alt="Laravel Logo"
+                />
+
+                <span class="platform__check-circle">
+                  <img
+                    src="images/laravel-logo.png"
+                    class="platform__front-image"
+                    alt="Laravel Logo"
+                /></span>
+                <span class="platform__name">Laravel</span>
+              </label>
+            </div>
+            <div class="platform">
+              <input
+                type="radio"
+                id="magneto-platform"
+                name="platform-option"
+                class="platform__radio-input"
+              />
+              <label class="platform__radio-label" for="magneto-platform">
+                <img
+                  src="images/laravel-logo.png"
+                  class="platform__bg-image"
+                  alt="Magneto Logo"
+                />
+
+                <span class="platform__check-circle">
+                  <img
+                    src="images/magento-logo.png"
+                    class="platform__front-image"
+                    alt="Magneto Logo"
+                /></span>
+                <span class="platform__name">Magneto</span>
+              </label>
+            </div>
+            <div class="platform">
+              <input
+                type="radio"
+                id="www-platform"
+                name="platform-option"
+                class="platform__radio-input"
+              />
+              <label class="platform__radio-label" for="www-platform">
+                <img
+                  src="images/www-icon.png"
+                  class="platform__bg-image"
+                  alt="WWW icon"
+                />
+
+                <span class="platform__check-circle">
+                  <img
+                    src="images/www-icon.png"
+                    class="platform__front-image"
+                    alt="WWW icon"
+                /></span>
+                <span class="platform__name">Dedicated Website</span>
+              </label>
+            </div>
+            <div class="platform">
+              <input
+                type="radio"
+                id="idontknow-platform"
+                name="platform-option"
+                class="platform__radio-input"
+              />
+              <label class="platform__radio-label" for="idontknow-platform">
+                <img
+                  src="images/notification-icon.png"
+                  class="platform__bg-image"
+                  alt="Notification icon"
+                />
+
+                <span class="platform__check-circle">
+                  <img
+                    src="images/notification-icon.png"
+                    class="platform__front-image"
+                    alt="Notification icon"
+                /></span>
+                <span class="platform__name">I don't know!</span>
+              </label>
+            </div>
+          </div>
+
+          <form class="form">
+            <div class="form__checkboxs-container">
+              <div class="form__checkbox-group">
+                <input
+                  class="form__checkbox-input"
+                  type="checkbox"
+                  id="checkbox-2-1"
+                />
+                <label class="form__checkbox-button" for="checkbox-2-1"></label>
+                <label for="checkbox-2-1">
+                  I want to use your service and transfering my site to your
+                  platform</label
+                >
+              </div>
+              <div class="form__checkbox-group">
+                <input
+                  class="form__checkbox-input"
+                  type="checkbox"
+                  id="checkbox-2-2"
+                />
+                <label class="form__checkbox-button" for="checkbox-2-2"></label>
+                <label for="checkbox-2-2"> I need to consutatiion</label>
+              </div>
+            </div>
+
+            <div class="form__input-groups-container">
+              <div class="form__input-group">
+                <label for="firstname-2"
+                  >First Name:&nbsp;<span class="form__input-label-star"
+                    >*</span
+                  >
+                </label>
+                <input
+                  class="form__input"
+                  type="text"
+                  id="firstname-2"
+                  placeholder="First Name..."
+                />
+              </div>
+              <div class="form__input-group">
+                <label for="lastname-2"
+                  >Last Name:&nbsp;<span class="form__input-label-star">*</span>
+                </label>
+                <input
+                  class="form__input"
+                  type="text"
+                  id="lastname-2"
+                  placeholder="Last Name..."
+                />
+              </div>
+              <div class="form__input-group">
+                <label for="email-2"
+                  >Email:&nbsp;<span class="form__input-label-star">*</span>
+                </label>
+                <input
+                  class="form__input"
+                  type="email"
+                  id="email-2"
+                  placeholder="Email..."
+                />
+              </div>
+            </div>
+
+            <div class="form__textarea-group">
+              <label for="textarea-2">Your message:</label>
+              <textarea class="form__textarea" id="textarea-2"></textarea>
+            </div>
+
+            <button class="form__button" type="submit">Send</button>
+          </form>
+        </div>
+      </div>
     </div>
 
     <script src="js/script.js"></script>
@@ -91,6 +390,4 @@
       </symbol>
     </defs>
   </svg>
-    <script src="js/script.js"></script>
-  </body>
 </html>
