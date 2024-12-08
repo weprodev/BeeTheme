@@ -1,0 +1,25 @@
+.elementor-section {
+  display: flex;
+  padding-block: nth($spaces, 32);
+  gap: nth($spaces, 16);
+  align-items: center;
+  @include laptop {
+    flex-direction: column;
+    padding-block: nth($spaces, 16);
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: nth($spaces, 10);
+    align-items: flex-start;
+  }
+
+  &__image {
+    object-fit: cover;
+    @include mobile {
+      display: none;
+    }
+  }
+}

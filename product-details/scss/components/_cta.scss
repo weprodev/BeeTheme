@@ -6,7 +6,8 @@
     $padding: nth($spaces, 3) nth($spaces, 10),
     $transition: map-get($durations, 300),
     $hoverBgColor: none,
-    $fontSize: $fontSizeXl
+    $fontSize: $fontSizeXl,
+    $fontWeight: $fontWeightSemibold
   );
   text-transform: uppercase;
 
@@ -16,5 +17,19 @@
     &:hover {
       background-color: color.adjust($thirdColorWeprodev, $lightness: -10);
     }
+  }
+
+  &--tertiary:hover,
+  &--secondary {
+    border: 2px solid $white;
+    color: $white;
+    background-color: transparent;
+  }
+
+  &--secondary:hover,
+  &--tertiary {
+    border: 2px solid transparent;
+    background-color: $white;
+    color: $secondColorWeprodev;
   }
 }

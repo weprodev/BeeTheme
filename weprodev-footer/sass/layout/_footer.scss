@@ -1,0 +1,118 @@
+@use "sass:list";
+.weprodev-footer {
+  padding: list.nth($spaces, 16) 0;
+  color: $colorWihte;
+  line-height: 1.7;
+  font-weight: $fontWeightRegular;
+  background-image: linear-gradient($colorSecondary, $colorSecondary);
+  background-size: cover;
+  @include mobile {
+    background-position: center;
+  }
+  &__info {
+    display: flex;
+    justify-content: center;
+    gap: list.nth($spaces, 16);
+    @include laptop {
+      font-size: 80%;
+    }
+    @include miniLaptop {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__headline {
+    font-size: 2.4rem;
+    margin-bottom: list.nth($spaces, 7);
+    font-weight: $fontWeightSemibold;
+  }
+  &__paragraph {
+    font-size: $fontSize2Xl;
+  }
+  &__location {
+    display: flex;
+    gap: list.nth($spaces, 2);
+    justify-content: baseline;
+    font-size: $fontSize2Xl;
+    margin-bottom: list.nth($spaces, 8);
+  }
+  &__email_address {
+    display: flex;
+    gap: list.nth($spaces, 2);
+    justify-content: baseline;
+    font-size: $fontSize2Xl;
+  }
+  &__icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-top: -0.4rem;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: list.nth($spaces, 2);
+    margin-top: list.nth($spaces, 14);
+  }
+  &__email {
+    width: 25rem;
+    padding: list.nth($spaces, 2);
+    font-size: 1.1rem;
+    border-radius: 0.4rem;
+    border: $colorWihte solid 0.1rem;
+    font-family: inherit;
+    background-color: $colorBlack;
+    transition: all 0.6s;
+    color: $colorWihte;
+    margin-bottom: list.nth($spaces, 1);
+    @include mobile {
+      width: 18rem;
+    }
+  }
+  &__email:hover,
+  &__email:active {
+    border: $colorPrimary solid 0.1rem;
+  }
+  &__email:focus {
+    outline: none;
+  }
+
+  &__btn {
+    padding: list.nth($spaces, 2);
+    font-size: 1.2rem;
+    background-color: $colorPrimary;
+    border-radius: 0.4rem;
+    border: none;
+    transition: all 0.6s;
+    color: $colorWihte;
+    cursor: pointer;
+    @include miniLaptop {
+      width: 25rem;
+    }
+    @include mobile {
+      width: 18rem;
+    }
+  }
+  &__btn {
+    &:link {
+      background-color: $colorPrimary;
+    }
+    &:hover {
+      background-color: darken($colorPrimary, 4%);
+    }
+  }
+  &__border {
+    margin-top: list.nth($spaces, 20);
+    margin-bottom: list.nth($spaces, 4);
+    border-bottom: $colorFourth solid 0.15rem;
+  }
+  &__item_footer {
+    display: flex;
+    align-items: center;
+  }
+  &__logo {
+    width: 7rem;
+  }
+  &__copy_info {
+    color: $colorTertiary;
+  }
+}
