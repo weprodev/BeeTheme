@@ -1,0 +1,303 @@
+.blog-layout {
+  display: flex;
+  gap: nth($spaces, 3);
+  justify-content: center;
+  padding-top: 3rem;
+
+  .container {
+    justify-content: space-between;
+    display: flex;
+    width: 73%;
+    gap: nth($spaces, 2);
+
+    .main-post {
+      background: $softSky;
+      width: 61%;
+      height: 38rem;
+      border-radius: $roundedMd;
+      display: grid;
+      justify-items: center;
+      cursor: pointer;
+
+      &:hover {
+        box-shadow: 0 0.625rem 3.125rem -0.3125rem $frostedSlate;
+        transition: all 0.6s;
+        transform: scale(1.01);
+      }
+
+      &__informations {
+        width: 31.3rem;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+
+        img {
+          height: auto;
+          width: 100%;
+          border-radius: $roundedLg;
+        }
+
+        .main-post__image {
+          top: 1rem;
+          position: relative;
+        }
+
+        .title-box {
+          text-align: start;
+          padding-top: nth($spaces, 4);
+          display: flex;
+          flex-direction: column;
+          gap: 10rem;
+
+          .main-post__title {
+            font-size: $fontSize2Xl;
+            top: 2rem;
+            position: relative;
+            text-align: start;
+          }
+        }
+
+        .main-post__info {
+          color: $gray;
+          font-size: $fontSizeSm;
+          display: flex;
+          flex-direction: row;
+        }
+      }
+    }
+
+    .sidebar {
+      padding-top: nth($spaces, 4);
+      text-align: start;
+
+      .sidebar__title {
+        display: inline-block;
+        padding: nth($spaces, 1) 5em nth($spaces, 1) nth($spaces, 4);
+        background: $coralRed;
+        margin-bottom: nth($spaces, 4);
+        font-size: $fontSizeLg;
+        white-space: pre;
+        color: $white;
+      }
+
+      .sidebar__list {
+        list-style: none;
+        padding: 0;
+
+        .sidebar__item {
+          margin-bottom: nth($spaces, 4);
+          width: 21rem;
+          background: $softSky;
+          height: 9rem;
+          padding: nth($spaces, 12) nth($spaces, 4) 0 nth($spaces, 4);
+          border-radius: $roundedMd;
+          cursor: pointer;
+
+          &:hover {
+            box-shadow: 0 0.625rem 3.125rem -0.3125rem $frostedSlate;
+            transition: all 0.6s;
+            transform: scale(1.01);
+          }
+
+          .sidebar__item-title {
+            h4 {
+              padding: nth($spaces, 4);
+              font-size: $fontSizeXl;
+              margin-bottom: nth($spaces, 4);
+              padding-bottom: nth($spaces, 4);
+            }
+          }
+
+          .blog-meta {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            position: absolute;
+            left: -1rem;
+            position: relative;
+
+            a {
+              font-size: $fontSizeXs;
+              padding: nth($spaces, 8) 0 nth($spaces, 6) nth($spaces, 6);
+            }
+          }
+
+          .sidebar__item-info {
+            color: $gray;
+            font-size: $fontSizeSm;
+          }
+        }
+      }
+    }
+  }
+
+  // Responsive Section
+
+  /*--------------------------------
+	*** FOR ANY DEVICE MAX SIZE UNTIL
+	**	MAX-WIDTH : 1024px OR 64em
+	*/
+
+  @include miniLaptop {
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .main-post {
+        width: 75%;
+      }
+
+      .sidebar {
+        width: 75%;
+        padding-top: nth($spaces, 8);
+
+        .sidebar__list .sidebar__item {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  /*--------------------------------
+	*** FOR ANY DEVICE MAX SIZE UNTIL
+	**	MAX-WIDTH : 992px OR 62em
+	*/
+
+  @include tablet {
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .main-post {
+        width: 75%;
+      }
+
+      .sidebar {
+        width: 75%;
+        padding-top: nth($spaces, 8);
+
+        .sidebar__list .sidebar__item {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .container {
+      .main-post {
+        width: 100%;
+        height: 39rem;
+
+        .main-post__informations {
+          width: 95%;
+        }
+      }
+
+      .sidebar {
+        width: 100%;
+
+        .sidebar__list .sidebar__item {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  /*--------------------------------
+	*** FOR RETINA MOBILE AND LANSCAPE
+	**	MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
+	*/
+
+  @include retinaMobile {
+    .container {
+      width: 100%;
+
+      .main-post {
+        width: 100%;
+        border-radius: 0;
+        max-height: 37rem;
+
+        &__informations {
+          width: 95%;
+        }
+      }
+
+      .sidebar {
+        width: 100%;
+
+        .sidebar__title {
+          left: 1rem;
+          position: relative;
+        }
+
+        .sidebar__list .sidebar__item {
+          border-radius: 0;
+        }
+      }
+    }
+  }
+
+  /*--------------------------------
+	*** FOR MOBILE
+	**	MAX : 640PX / 40em
+	*/
+
+  @include mobile {
+    .container {
+      .main-post {
+        width: 80%;
+        height: 39rem;
+
+        .main-post__informations {
+          width: 95%;
+        }
+      }
+
+      .sidebar {
+        width: 80%;
+
+        .sidebar__title {
+          left: 0;
+        }
+      }
+    }
+  }
+
+  /*--------------------------------
+	*** FOR MINI MOBILE
+	**	MAX : 400PX / 25em
+	*/
+
+  @include miniMobile {
+    .container {
+      width: 100%;
+
+      .main-post {
+        width: 100%;
+        height: 34rem;
+        border-radius: 0;
+
+        &__informations {
+          width: 90%;
+        }
+      }
+
+      .sidebar {
+        width: 100%;
+
+        .sidebar__title {
+          left: 1rem;
+          position: relative;
+        }
+
+        .sidebar__list .sidebar__item {
+          border-radius: 0;
+        }
+      }
+    }
+  }
+}
