@@ -5,7 +5,7 @@
   justify-content: center;
 
   .container {
-    width: 70%;
+    width: 62%;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -19,18 +19,24 @@
       grid-gap: 0 1rem;
 
       .Blog__Highlights {
-        height: 30rem;
+        height: 32.1rem;
         background-color: $softSky;
         padding: 0.5rem;
         cursor: pointer;
+        position: relative;
+        border-radius: 5px;
 
         &-img {
           display: flex;
           justify-content: center;
+          height: 11.5rem;
+          width: 14.5rem;
+          padding: 0.2rem 0 0 1.2rem;
 
           img {
             width: 95%;
-            border-radius: 5px;
+            object-fit: cover;
+            border-radius: 5px 5px 0 0;
           }
         }
 
@@ -40,36 +46,38 @@
           flex-direction: column;
 
           p {
-            padding: 1em;
-            font-size: 1em;
-            padding-left: 0.125rem;
+            padding: 0.6rem 1rem 2rem 1rem;
+            font-size: 0.7em;
+            padding-left: 12px;
           }
 
           h2 {
-            padding: 1em 1.5em 4em;
+            padding: 0 14px 10rem 14px;
             margin: 0;
-            font-size: 1em;
+            line-height: 0.9;
 
             a {
-              font-size: 1.5em;
+              font-size: 16px;
               font-weight: unset;
             }
           }
 
           .blog-meta {
-            font-size: 0.7em;
+            font-size: 9px;
+            padding-left: 8px;
           }
         }
       }
 
       .marke__tingHub {
-        height: 30rem;
+        height: 32.1rem;
         background-color: $coralRed;
         padding: 0.5rem;
         cursor: pointer;
         color: $white;
         justify-content: center;
         display: flex;
+        border-radius: 5px;
 
         .info-card {
           display: flex;
@@ -79,21 +87,26 @@
           width: 90%;
 
           h3 {
-            font-size: 2em;
+            font-size: 1.5em;
             font-weight: bold;
-            padding: 0 0em 5rem 0rem;
+            padding: 5em 0 1rem 0;
             width: 80%;
             margin: 0 auto;
+            top: -5rem;
+            position: relative;
           }
 
           p {
-            font-size: 1.3em;
-            padding-left: 0.125rem;
-            max-width: 74%;
+            font-size: 0.9em;
             margin: 0 auto;
-            padding: 0em 0em 3rem 0rem;
+            padding: 0 0.5em;
+            top: -1rem;
+            position: relative;
           }
+
           .btn-box {
+            padding: 2em 0 0 1em;
+
             button {
               width: 100%;
               font-size: 0.8em;
@@ -135,50 +148,90 @@
       }
 
       .content__card {
-        background-color: aqua;
-        height: 30rem;
         background-color: $softSky;
+        height: 33.8rem;
         padding: 0.5rem;
         cursor: pointer;
 
         &-img {
           display: flex;
           justify-content: center;
-          height: 60%;
+          height: 58%;
 
           img {
-            width: 95%;
-            border-radius: 5px;
+            width: 94%;
             object-fit: cover;
             object-position: top;
+            border-radius: 5px 5px 0 0;
           }
         }
 
         .info-card {
-          display: flex;
-          flex-direction: column;
           text-align: start;
           display: flex;
           flex-direction: column;
-          gap: 2rem;
-          padding: 1rem;
           height: 40%;
+          width: 100%;
 
           p {
-            padding: 1em;
-            font-size: 1em;
-            padding-left: 0.125rem;
+            padding: 2.2em 0 22px 0;
+            font-size: 0.7rem;
           }
 
           h2 {
-            padding: 0em 1.5em 1em;
+            padding: 9px 0 5.4em 3px;
             margin: 0;
-            font-size: 1.5em;
+            font-size: 17px;
             font-weight: bold;
+            word-spacing: 3px;
+            line-height: 1.3;
           }
 
           .blog-meta {
-            font-size: 0.7em;
+            font-size: 9.5px;
+            left: -3px;
+            position: relative;
+          }
+        }
+      }
+    }
+
+    .box2 {
+      .marke__tingHub {
+        height: 33.8rem;
+
+        .info-card {
+          h1 {
+            width: 90%;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-size: 2rem;
+            padding: 3rem 0;
+            font-weight: 100;
+          }
+
+          .btn-box {
+            padding: 0;
+            button {
+              width: 100%;
+              font-size: 0.8em;
+              height: 4.5em;
+              background: transparent;
+              border-color: rgb(255, 255, 255);
+              color: rgb(255, 255, 255);
+              font-weight: bold;
+              cursor: pointer;
+              margin: 0 auto;
+              top: 2rem;
+            }
+          }
+        }
+      }
+
+      .content__card {
+        .info-card {
+          h2 {
+            padding-bottom: 5.5rem;
           }
         }
       }
@@ -186,6 +239,18 @@
 
     .box3 {
       grid-template-columns: 4fr 2fr;
+
+      .content__card {
+        height: 32rem;
+      }
+
+      .Blog__Highlights {
+        height: 32rem;
+
+        .info-card h2 {
+          padding: 0 14px 11.1rem 14px;
+        }
+      }
     }
   }
 
@@ -201,49 +266,61 @@
   @include tablet {
     .container {
       align-items: center;
-      width: 60%;
 
       .box1,
       .box2,
       .box3 {
         grid-template-columns: 1fr;
         grid-gap: 1rem;
-        width: 34rem;
 
-        .Blog__Highlights,
-        .marke__tingHub,
-        .content__card {
-          height: 38rem;
+        .Blog__Highlights {
+          height: 26.1rem;
 
-          .btn-box {
-            font-size: 1.5rem;
-          }
-        }
+          .Blog__Highlights-img {
+            display: flex;
+            justify-content: center;
+            height: 11.5rem;
+            width: 100%;
+            padding: 0;
 
-        .box1 {
-          .marke__tingHub {
-            .info-card {
-              h3 {
-                top: 2rem;
-                position: relative;
-              }
-
-              p {
-                padding: 2em 0em 5rem 0rem;
-              }
+            & img {
+              width: 90%;
             }
           }
-        }
-      }
-      .box2 {
-        .marke__tingHub {
+
           .info-card {
-            h1 {
-              font-size: 3rem;
-            }
+            padding: 0rem 1rem 1rem 0rem;
 
-            .btn-box {
-              padding-top: 5rem;
+            h2 {
+              padding: 0 14px 6.5rem 14px;
+            }
+          }
+        }
+
+        .marke__tingHub {
+          width: 35.1rem;
+          margin: 0 auto;
+        }
+
+        .content__card {
+          height: 26.1rem;
+          width: 35.1rem;
+
+          .content__card-img {
+            display: flex;
+            justify-content: center;
+            height: 11.5rem;
+            width: 100%;
+            padding: 0;
+
+            & img {
+              width: 90%;
+            }
+          }
+
+          .info-card {
+            h2 {
+              padding: 0 14px 6.5rem 14px;
             }
           }
         }
@@ -257,6 +334,13 @@
 	*/
 
   @include retinaMobile {
+    .container {
+      .box1,
+      .box2,
+      .box3 {
+        grid-template-columns: 1fr;
+      }
+    }
   }
 
   /*--------------------------------
@@ -265,13 +349,27 @@
 	*/
 
   @include mobile {
+    .container {
+      .box1,
+      .box2,
+      .box3 {
+        grid-template-columns: 1fr;
+      }
+    }
   }
 
   /*--------------------------------
 	*** FOR MINI MOBILE
-	**	MAX : 400PX / 25em
+	**	MAX : 375PX / 23.4375em
 	*/
 
   @include miniMobile {
+    .container {
+      .box1,
+      .box2,
+      .box3 {
+        grid-template-columns: 1fr;
+      }
+    }
   }
 }
