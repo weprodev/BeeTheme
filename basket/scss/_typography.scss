@@ -1,0 +1,35 @@
+/*------------------------------------*\
+  #FORNT
+\*------------------------------------*/
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+body {
+  font-family: $primaryFontFamily;
+}
+
+/*------------------------------------*\
+  #HEADINGS
+\*------------------------------------*/
+
+.heading-primary,
+.heading-secondary {
+  text-align: center;
+  font-weight: $fontWeightMedium;
+}
+
+.heading-primary {
+  font-size: $fontSize4Xl;
+}
+.heading-secondary {
+  font-size: $fontSize3Xl;
+}
+
+@include mobile {
+  .heading-primary {
+    font-size: $fontSize3Xl;
+  }
+  .heading-secondary {
+    font-size: $fontSize2Xl;
+  }
+}

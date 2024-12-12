@@ -1,0 +1,119 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: nth($spaces, 8);
+  margin: 0 auto;
+  width: 80%;
+  text-align: left;
+  margin-top: nth($spaces , 16);
+  @include mobile {
+    width: 90%;
+  }
+
+  &__checkboxs-container {
+    display: flex;
+    flex-direction: column;
+    gap: nth($spaces, 4);
+  }
+  &__checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: nth($spaces, 4);
+    user-select: none;
+  }
+  &__checkbox-input {
+    display: none;
+  }
+  &__checkbox-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: $white;
+    border: $lightBorder;
+    border-radius: $rounded;
+    transition: map-get($durations, 150);
+    cursor: pointer;
+    flex-shrink: 0;
+    &::after {
+      content: "";
+      display: none;
+      width: 0.4rem;
+      height: 0.7rem;
+      border: solid $white;
+      border-width: 0 0.2rem 0.2rem 0;
+      transform: rotate(45deg);
+    }
+  }
+  &__checkbox-input:checked ~ .form__checkbox-button {
+    background-color: $primaryColor;
+    box-shadow: 0px 0px 5px 5px rgba($color: $primaryColor, $alpha: 0.5);
+    border-color: transparent;
+    &::after {
+      display: block;
+    }
+  }
+  &__checkbox-group:hover
+    .form__checkbox-input:not(:checked)
+    ~ .form__checkbox-button {
+    background-color: rgba($color: $tertiaryColor, $alpha: 0.2);
+  }
+
+  &__input-groups-container {
+    display: flex;
+    justify-content: space-between;
+    gap: nth($spaces, 4);
+    @include miniLaptop {
+      flex-direction: column;
+    }
+  }
+  &__input-group {
+    display: flex;
+    flex-direction: column;
+    gap: nth($spaces, 2);
+    flex-grow: 1;
+
+  }
+  &__input-label-star {
+    color: $primaryColor;
+  }
+  &__input {
+    padding: nth($spaces, 4);
+    border: $lightBorder;
+    border-radius: $rounded;
+  }
+
+  &__textarea-group {
+    display: flex;
+    flex-direction: column;
+    gap: nth($spaces, 2);
+  }
+  &__textarea {
+    width: 100%;
+    height: 8rem;
+    border-radius: $rounded;
+    border: $lightBorder;
+    resize: none;
+    padding: nth($spaces, 2);
+  }
+
+  &__button {
+    @include button(
+      $bg: $white,
+      $color: $black,
+      $radius: $rounded,
+      $padding: nth($spaces, 3) nth($spaces, 6),
+      $transition: map-get($durations, 150),
+      $border: $lightBorder,
+      $hoverBgColor: $primaryColor
+    );
+    align-self: flex-start;
+    margin-bottom: nth($spaces, 4);
+
+    &:hover {
+      color: $white;
+      border-color: transparent;
+    }
+  }
+}

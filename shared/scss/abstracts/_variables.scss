@@ -42,7 +42,7 @@ $kappa: 25em;
 \*------------------------------------*/
 
 $spaces: [];
-@for $i from 1 through 16 {
+@for $i from 1 through 32 {
   $spaces: append($spaces, #{0.25 * $i}em);
 }
 

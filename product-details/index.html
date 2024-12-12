@@ -4,131 +4,186 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product Details</title>
-    <meta name="author" content="" />
-    <meta name="viewport"content="initial-scale=1.0, user-scalable=no, width=device-width"/>
-    <meta property="og:title" content="WeProDev" />
-    <meta property="og:site_name" content="WeProDev" />
-    <meta property="og:description" content="WeProDev" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="http://WeProDev.com" />
-    <meta name="keywords" content="" />
-    <meta name="description" content="WeProDev" />
-    <meta name="robots" content="WeProDev" />
-    <meta name="copyright" content="2017-2018" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="twitter:card" content="WeProDev" />
-    <meta name="twitter:url" content="http://WeProDev.com" />
-    <meta name="twitter:domain" content="http://WeProDev.com" />
-    <meta name="twitter:title" content="WeProDev" />
-    <meta name="twitter:description" content="WeProDev" />
-    <meta name="twitter:image" content="http://WeProDev.com" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="WeProDev.com" />
-    <meta name="apple-mobile-web-app-capable" content="WeProDev" />
-    <link rel="icon" href="img/favicon.png" />
-    <link rel="stylesheet" href="scss/lib/tiny-slider.css">
-    <link rel="stylesheet" href="css/style.css" media="all" />
+    <link rel="icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <section>
-      <section class="top-bar">
-        <div class="top-bar-contant">
-          <div class="section-logo-lang">
-            <div class="logo">
-              <img src="img/logo.png" alt="logo WeProDev" />
-            </div>
-            <div class="select-lang">
-              <ul>
-                <li>
-                  <a href="#" class="l-one"
-                    ><span class="show">Language</span></a>
-                  <span class="icon-chevron-down"></span>
-                  <ul class="dropdown" id="dropdown">
-                    <li><a href="#" class="l-two"> English</a></li>
-                    <li><a href="#" class="l-two">Kurdish</a></li>
-                    <li><a href="#" class="l-two">Persian</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-            <!--section lang-->
+    <header class="weprodev-header">
+      <div class="weprodev-header__top-section">
+        <img
+          class="weprodev-header__logo"
+          src="../weprodev-header/images/weprodev-logo.png"
+          alt="WeProDev Logo"
+        />
+        <div class="weprodev-header__select-lang dropdown">
+          <div class="weprodev-header__select-lang-title">
+            <span class="icon-globe1"></span>
+            Language
+            <span class="icon-chevron-down"></span>
           </div>
-          <div class="section-login">
-            <div class="search-box" id="search-btn">
-              <input
-                type="text"
-                class="search-txt"
-                id="input-search"
-                placeholder="search..."
-              />
-              <span class="icon-search search-btn" id="input-search-btn"></span>
-            </div>
-            <div class="section-button">
-              <button class="button-login"><a href="#">login</a></button>
-              <button class="button-freeTemplate"><a href="#">Free Template</a></button>
-            </div>
-          </div>
-          <!--section login-->
+
+          <ul class="weprodev-header__select-lang-list dropdown__content">
+            <li class="weprodev-header__select-lang-item">
+              <a href="#" class="link">English</a>
+            </li>
+            <li class="weprodev-header__select-lang-item">
+              <a href="#" class="link">Kurdish</a>
+            </li>
+            <li class="weprodev-header__select-lang-item">
+              <a href="#" class="link">Persian</a>
+            </li>
+          </ul>
         </div>
-      </section>
-      <!--top bar-->
-      <section class="nav-bar">
-        <ul class="menu">
-          <li>
-            <a href="#" class="l-one">Home</a>
-            <span class="icon-circle-down"></span>
-            <ul class="dropdown" id="dropdown">
-              <li><a href="#" class="l-two">two-one</a></li>
-              <li><a href="#" class="l-two">two-two</a></li>
-              <li><a href="#" class="l-two">two-three</a></li>
-            </ul>
+        <div class="weprodev-header__search-box search-box-js">
+          <input
+            type="text"
+            class="weprodev-header__search-box-input search-input-js"
+            placeholder="Search..."
+          />
+          <button
+            class="weprodev-header__search-box-button icon-search search-button-js"
+          ></button>
+        </div>
+        <div class="weprodev-header__buttons-container">
+          <button class="weprodev-header__login-button">Login</button>
+          <button class="weprodev-header__free-template-button">
+            Free template
+          </button>
+        </div>
+      </div>
+
+      <nav class="weprodev-header__navbar">
+        <ul class="weprodev-header__menu">
+          <li class="weprodev-header__menu-item">
+            <a href="#" class="link">Home</a>
           </li>
-          <li>
-            <a href="#" class="l-one">Portfolio</a>
-            <span class="icon-circle-down"></span>
-            <ul class="dropdown" id="dropdown">
-              <li><a href="#" class="l-two">two-one</a></li>
-              <li><a href="#" class="l-two">two-two</a></li>
-              <li><a href="#" class="l-two">two-three</a></li>
-            </ul>
+          <li class="weprodev-header__menu-item">
+            <a href="#" class="link">Portfolio</a>
           </li>
-          <li>
-            <a href="#" class="l-one" id="parent-dropdown">Blog</a>
-            <span class="icon-circle-down"></span>
-            <ul class="dropdown" id="dropdown">
-              <li><a href="#" class="l-two">two-one</a></li>
-              <li><a href="#" class="l-two">two-two</a></li>
-              <li><a href="#" class="l-two">two-three</a></li>
-            </ul>
+          <li class="weprodev-header__menu-item">
+            <a href="#" class="link">Blog</a>
           </li>
-          <li><a href="#" class="l-one last-li-menu">Contact</a></li>
+          <li class="weprodev-header__menu-item">
+            <a href="#" class="link">Contact</a>
+          </li>
         </ul>
-        <div class="search">
-          <span class="icon-search icon-searchh"></span>
+      </nav>
+    </header>
+
+    <section class="hero section background-gradient-animation">
+      <div class="hero__text-section">
+        <h1 class="heading-1 heading-1--primary">
+          The World's Leading WordPress Page Builder
+        </h1>
+        <p class="paragraph paragraph--primary">
+          Join 5,000,000+ Professionals Who Build Better Sites With Elementor
+        </p>
+        <a href="#" class="cta cta--primary">Get started</a>
+      </div>
+
+      <img
+        class="hero__image"
+        src="https://placehold.co/1200x600/png"
+        alt="Home Office Company"
+      />
+
+      <div class="hero__features-container">
+        <div class="hero__feature">
+          <h4 class="heading-4 heading-1--primary">All-in-One Solution</h4>
+          <p class="paragraph paragraph--primary">
+            Control every aspect of your web design workflow from one place.
+          </p>
         </div>
-        <div class="search-active">
-          <div class="search-active-content">
-            <span class="icon-search"></span>
-            <input type="text" class="text-search" placeholder="Write..." />
-            <span class="icon-close icon-searchh"></span>
-          </div>
+
+        <div class="hero__feature">
+          <h4 class="heading-4 heading-1--primary">Visual Design</h4>
+          <p class="paragraph paragraph--primary">
+            Simple. Powerful. Flexable. Experience the power of 100% Visual
+            design.
+          </p>
         </div>
-        <div class="section-responsive icon-menu5"></div>
-      </section>
-      <!--nav bar-->
+
+        <div class="hero__feature">
+          <h4 class="heading-4 heading-1--primary">Faster Performance</h4>
+          <p class="paragraph paragraph--primary">
+            Build websites that load faster, and speed up the process of
+            building them.
+          </p>
+        </div>
+      </div>
     </section>
 
-    <!--navbar and top bar-->
-    <section></section>
-    <!--hero header -->
-    <section></section>
-    <!--main-->
-    <section></section>
-    <!--footer-->
+    <section class="built-section section">
+      <h2 class="heading-2 heading-2--secondary built-section__heading">
+        Built for Professionals From Freelancer to Agency
+      </h2>
+
+      <div class="built-section__features">
+        <div class="feature">
+          <div class="feature__info">
+            <span class="feature__topic">DESIGN</span>
+            <h4 class="heading-4 heading-4--secondary">
+              Pixel Perfect Design in WordPress
+            </h4>
+            <p class="paragraph paragraph--secondary">
+              The only complete design platform to offer pixel perfect design,
+              yet produces 100% clean code. Take your design vision and turn it
+              into a stunning custom-made website.
+            </p>
+            <a href="#" class="feature__learn-more-link">Learn More</a>
+          </div>
+          <div class="feature__image-container">
+            <img
+              class="feature__image"
+              src="https://placehold.co/300x400/png"
+              alt="Placeholder"
+            />
+          </div>
+        </div>
+        <div class="feature">
+          <div class="feature__info">
+            <span class="feature__topic">MARKETING </span>
+            <h4 class="heading-4 heading-4--secondary">
+              Get More Traffic, Leads & Conversions
+            </h4>
+            <p class="paragraph paragraph--secondary">
+              Design forms visually, integrate them with your favorite marketing
+              tools, and generate more traffic, leads & conversions.
+            </p>
+            <a href="#" class="feature__learn-more-link">Learn More</a>
+          </div>
+          <div class="feature__image-container">
+            <img
+              class="feature__image"
+              src="https://placehold.co/300x400/png"
+              alt="Placeholder"
+            />
+          </div>
+        </div>
+        <div class="feature">
+          <div class="feature__info">
+            <span class="feature__topic">DEVELOPMENT</span>
+            <h4 class="heading-4 heading-4--secondary">
+              Extendable & Developer-Friendly
+            </h4>
+            <p class="paragraph paragraph--secondary">
+              Thousands of developers have contributed to the Elementor open
+              source project, building themes, add-ons, and products, further
+              extending the functionality.
+            </p>
+            <a href="#" class="feature__learn-more-link">Learn More</a>
+          </div>
+          <div class="feature__image-container">
+            <img
+              class="feature__image"
+              src="https://placehold.co/300x400/png"
+              alt="Placeholder"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="../weprodev-header/js/script.js"></script>
   </body>
-  <script src="js/jquery.min.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/tiny-slider.js"></script>
-  <script src="js/search-box.js"></script>
-  <script src="js/slider.js"></script>
-  <script src="js/sticky-navbar.js"></script>
 </html>

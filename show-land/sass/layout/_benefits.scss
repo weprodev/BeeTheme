@@ -56,6 +56,5 @@
     grid-template-columns: repeat(3, 1fr);
     column-gap: list.nth($spaces, 16);
     margin-bottom: list.nth($spaces, 16);
-
   }
 }

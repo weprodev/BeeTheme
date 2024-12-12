@@ -1,6 +1,5 @@
 @use "sass:list";
 
-
 .super-fast {
   display: flex;
   align-items: center;
@@ -23,7 +22,7 @@
     align-items: baseline;
     gap: 4px;
     background-image: linear-gradient(to right, $colorSecondary, $colorPrimary);
-    padding: nth($spaces, 1) nth($spaces, 4) nth($spaces, 1) nth($spaces, 4);
+    padding: list.nth($spaces, 1) list.nth($spaces, 4);
     text-transform: uppercase;
     font-weight: $fontWeightBold;
     border-radius: $roundedFull;
