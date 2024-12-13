@@ -104,6 +104,14 @@
     opacity: 0;
   }
 }
+@keyframes background-movement {
+  0% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
+}
 *,
 *::before,
 *::after {
@@ -130,6 +138,7 @@ picture,
 svg,
 video {
   display: block;
+  width: 100%;
 }
 
 a {
@@ -940,7 +949,7 @@ body .separator {
   display: flex;
   gap: 0.75em;
   justify-content: center;
-  padding-top: 3rem;
+  padding-top: 2em;
   /*--------------------------------
   *** FOR ANY DEVICE MAX SIZE UNTIL
   **	MAX-WIDTH : 1024px OR 64em
@@ -963,19 +972,20 @@ body .separator {
   */
 }
 .blog-layout .container {
-  justify-content: space-between;
   display: flex;
-  width: 73%;
-  gap: 0.5em;
+  width: 66%;
+  gap: 0.75em;
 }
 .blog-layout .container .main-post {
   background: rgb(236, 240, 241);
-  width: 61%;
-  height: 38rem;
+  width: 33.5rem;
+  height: 30.5rem;
   border-radius: 0.375em;
   display: grid;
   justify-items: center;
   cursor: pointer;
+  top: 0.5rem;
+  position: relative;
 }
 .blog-layout .container .main-post:hover {
   box-shadow: 0 0.625rem 3.125rem -0.3125rem rgba(51, 71, 91, 0.12);
@@ -983,65 +993,85 @@ body .separator {
   transform: scale(1.01);
 }
 .blog-layout .container .main-post__informations {
-  width: 31.3rem;
-  align-items: center;
-  justify-content: center;
   display: flex;
   flex-direction: column;
+  width: 32.5rem;
+  height: 30rem;
 }
-.blog-layout .container .main-post__informations img {
-  height: auto;
-  width: 100%;
-  border-radius: 0.5em;
+.blog-layout .container .main-post__informations .img__box {
+  width: 29.8rem;
+  height: 19.6rem;
+  margin: 0 auto;
+  padding-top: 0.9rem;
 }
-.blog-layout .container .main-post__informations .main-post__image {
-  top: 1rem;
-  position: relative;
+.blog-layout .container .main-post__informations .img__box-img {
+  width: 29.8rem;
+  height: 18.7rem;
+  object-fit: cover;
+  border-top: 0.3125rem;
 }
 .blog-layout .container .main-post__informations .title-box {
   text-align: start;
-  padding-top: 1em;
+  padding-top: 0.5em;
   display: flex;
   flex-direction: column;
-  gap: 10rem;
 }
 .blog-layout .container .main-post__informations .title-box .main-post__title {
-  font-size: 1.5em;
-  top: 2rem;
+  font-size: 1.0625rem;
+  top: 0.8125rem;
   position: relative;
   text-align: start;
+  padding: 0 0.625rem 0 0.625rem;
+  word-spacing: 0.0625rem;
+  line-height: 1.4;
+  font-weight: 600;
 }
 .blog-layout .container .main-post__informations .main-post__info {
-  color: rgb(128, 128, 128);
-  font-size: 0.875em;
+  color: rgb(0, 0, 0);
   display: flex;
   flex-direction: row;
+  top: 5.875rem;
+  left: 0.25rem;
+  font-size: 0.5625rem;
+  position: relative;
 }
 .blog-layout .container .sidebar {
   padding-top: 1em;
   text-align: start;
+  width: 17.5rem;
+  position: relative;
+  height: 31rem;
 }
 .blog-layout .container .sidebar .sidebar__title {
   display: inline-block;
-  padding: 0.25em 5em 0.25em 1em;
   background: rgb(255, 94, 87);
-  margin-bottom: 1em;
-  font-size: 1.125em;
-  white-space: pre;
+  font-size: 0.875rem;
+  font-weight: bolder;
   color: rgb(255, 255, 255);
+  width: 10rem;
+  top: 0.1875rem;
+  position: relative;
+  height: 1.7rem;
+}
+.blog-layout .container .sidebar .sidebar__title p {
+  padding: 0.3125rem 0px 0px 0.4375rem;
+  font-weight: 100;
 }
 .blog-layout .container .sidebar .sidebar__list {
   list-style: none;
   padding: 0;
+  padding-top: 0.99rem;
 }
 .blog-layout .container .sidebar .sidebar__list .sidebar__item {
   margin-bottom: 1em;
-  width: 21rem;
   background: rgb(236, 240, 241);
-  height: 9rem;
-  padding: 3em 1em 0 1em;
-  border-radius: 0.375em;
+  height: 5.2rem;
+  padding: 2.4em 0.8em 0px 1em;
+  border-radius: 0.1875rem;
   cursor: pointer;
+}
+.blog-layout .container .sidebar .sidebar__list .sidebar__item h4 {
+  font-size: 0.625rem;
 }
 .blog-layout .container .sidebar .sidebar__list .sidebar__item:hover {
   box-shadow: 0 0.625rem 3.125rem -0.3125rem rgba(51, 71, 91, 0.12);
@@ -1063,12 +1093,18 @@ body .separator {
   position: relative;
 }
 .blog-layout .container .sidebar .sidebar__list .sidebar__item .blog-meta a {
-  font-size: 0.75em;
-  padding: 2em 0 1.5em 1.5em;
+  font-size: 9px;
+  padding: 0.9375rem 0em 0em 0.8125rem;
 }
 .blog-layout .container .sidebar .sidebar__list .sidebar__item .sidebar__item-info {
   color: rgb(128, 128, 128);
   font-size: 0.875em;
+}
+.blog-layout .container .sidebar .sidebar__list .sidebar__item-b {
+  height: 6.2rem;
+}
+.blog-layout .container .sidebar .sidebar__list .sidebar__item-b .blog-meta a {
+  padding-top: 1.25em;
 }
 @media screen and (max-width: 64em) {
   .blog-layout .container {
