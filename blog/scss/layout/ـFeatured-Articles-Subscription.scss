@@ -1,11 +1,167 @@
+.Blog__Highlights {
+  height: 32.1rem;
+  background-color: $softSky;
+  padding: nth($spaces, 2);
+  cursor: pointer;
+  position: relative;
+  border-radius: 0.3125rem;
+
+  &-img {
+    display: flex;
+    justify-content: center;
+    height: 11.5rem;
+    width: 14.5rem;
+    padding: 0.2rem 0 0 1.2rem;
+
+    img {
+      width: 95%;
+      object-fit: cover;
+      border-radius: 0.3125rem 0.3125rem 0 0;
+    }
+  }
+
+  .info-card {
+    padding-top: nth($spaces, 4);
+    display: flex;
+    flex-direction: column;
+
+    p {
+      padding: 0.6rem nth($spaces, 4) nth($spaces, 8) nth($spaces, 4);
+      font-size: 0.7em;
+      padding-left: 12px;
+    }
+
+    h2 {
+      padding: 0 0.875rem 10rem 0.875rem;
+      margin: 0;
+      line-height: 0.9;
+
+      a {
+        font-size: 1rem;
+        font-weight: unset;
+      }
+    }
+
+    .blog-meta {
+      font-size: 0.5625rem;
+      padding-left: nth($spaces, 2);
+    }
+  }
+}
+
+.marke__tingHub {
+  height: 32.1rem;
+  background-color: $coralRed;
+  padding: nth($spaces, 2);
+  cursor: pointer;
+  color: $white;
+  justify-content: center;
+  display: flex;
+  border-radius: 0.3125rem;
+
+  .info-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 90%;
+
+    h3 {
+      font-size: $fontSize2Xl;
+      font-weight: bold;
+      padding: nth($spaces, 20) 0 nth($spaces, 4) 0;
+      width: 80%;
+      margin: 0 auto;
+      top: -5rem;
+      position: relative;
+    }
+
+    p {
+      font-size: 0.9em;
+      margin: 0 auto;
+      padding: 0 nth($spaces, 2);
+      top: -1rem;
+      position: relative;
+    }
+
+    .btn-box {
+      padding: nth($spaces, 8) 0 0 nth($spaces, 4);
+
+      button {
+        width: 100%;
+        font-size: 0.8em;
+        height: 3.5em;
+        background: transparent;
+        border-color: $white;
+        color: $white;
+        font-weight: bold;
+        margin-bottom: nth($spaces, 4);
+        cursor: pointer;
+
+        &:hover {
+          background-color: $blushCoral;
+        }
+      }
+    }
+  }
+}
+
+.content__card {
+  background-color: $softSky;
+  height: 33.8rem;
+  padding: nth($spaces, 2);
+  cursor: pointer;
+
+  &-img {
+    display: flex;
+    justify-content: center;
+    height: 58%;
+
+    img {
+      width: 94%;
+      object-fit: cover;
+      object-position: top;
+      border-radius: 0.3125rem 0.3125rem 0 0;
+    }
+  }
+
+  .info-card {
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    height: 40%;
+    width: 100%;
+
+    p {
+      padding: 2.2em 0 1.375rem 0;
+      font-size: 0.7rem;
+    }
+
+    h2 {
+      padding: 0.5625rem 0 5.4em 0.1875rem;
+      margin: 0;
+      font-size: 1.0625rem;
+      font-weight: bold;
+      word-spacing: 0.1875rem;
+      line-height: 1.3;
+    }
+
+    .blog-meta {
+      font-size: 0.59375rem;
+      left: -0.1875rem;
+      position: relative;
+    }
+  }
+}
+
 .Featured-Articles-Subscription {
-  padding-top: 1rem;
+  padding-top: nth($spaces, 4);
   align-items: center;
   display: flex;
   justify-content: center;
 
   .container {
-    width: 70%;
+    width: 62%;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -16,107 +172,12 @@
       display: grid;
       justify-content: space-between;
       grid-template-columns: 1fr 1fr 1fr;
-      grid-gap: 0 1rem;
-
-      .Blog__Highlights {
-        height: 30rem;
-        background-color: $softSky;
-        padding: 0.5rem;
-        cursor: pointer;
-
-        &-img {
-          display: flex;
-          justify-content: center;
-
-          img {
-            width: 95%;
-            border-radius: 5px;
-          }
-        }
-
-        .info-card {
-          padding-top: 1rem;
-          display: flex;
-          flex-direction: column;
-
-          p {
-            padding: 1em;
-            font-size: 1em;
-            padding-left: 0.125rem;
-          }
-
-          h2 {
-            padding: 1em 1.5em 4em;
-            margin: 0;
-            font-size: 1em;
-
-            a {
-              font-size: 1.5em;
-              font-weight: unset;
-            }
-          }
-
-          .blog-meta {
-            font-size: 0.7em;
-          }
-        }
-      }
-
-      .marke__tingHub {
-        height: 30rem;
-        background-color: $coralRed;
-        padding: 0.5rem;
-        cursor: pointer;
-        color: $white;
-        justify-content: center;
-        display: flex;
-
-        .info-card {
-          display: flex;
-          flex-direction: column;
-          text-align: center;
-          justify-content: center;
-          width: 90%;
-
-          h3 {
-            font-size: 2em;
-            font-weight: bold;
-            padding: 0 0em 5rem 0rem;
-            width: 80%;
-            margin: 0 auto;
-          }
-
-          p {
-            font-size: 1.3em;
-            padding-left: 0.125rem;
-            max-width: 74%;
-            margin: 0 auto;
-            padding: 0em 0em 3rem 0rem;
-          }
-          .btn-box {
-            button {
-              width: 100%;
-              font-size: 0.8em;
-              height: 3.5em;
-              background: transparent;
-              border-color: rgb(255, 255, 255);
-              color: rgb(255, 255, 255);
-              font-weight: bold;
-              margin-bottom: 1em;
-              cursor: pointer;
-
-              &:hover {
-                background-color: rgba(255, 94, 87, 0.5);
-              }
-            }
-          }
-        }
-      }
+      grid-gap: 0 nth($spaces, 4);
     }
 
     .box2,
     .box3 {
-      padding-top: 1rem;
+      padding-top: nth($spaces, 4);
       grid-template-columns: 2fr 4fr;
 
       .marke__tingHub {
@@ -133,52 +194,45 @@
           }
         }
       }
+    }
 
-      .content__card {
-        background-color: aqua;
-        height: 30rem;
-        background-color: $softSky;
-        padding: 0.5rem;
-        cursor: pointer;
-
-        &-img {
-          display: flex;
-          justify-content: center;
-          height: 60%;
-
-          img {
-            width: 95%;
-            border-radius: 5px;
-            object-fit: cover;
-            object-position: top;
-          }
-        }
+    .box2 {
+      .marke__tingHub {
+        height: 33.8rem;
 
         .info-card {
-          display: flex;
-          flex-direction: column;
-          text-align: start;
-          display: flex;
-          flex-direction: column;
-          gap: 2rem;
-          padding: 1rem;
-          height: 40%;
-
-          p {
-            padding: 1em;
-            font-size: 1em;
-            padding-left: 0.125rem;
+          h1 {
+            width: 90%;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-size: 2rem;
+            padding: nth($spaces, 6) 0;
+            font-weight: 100;
           }
 
+          .btn-box {
+            padding: 0;
+
+            button {
+              width: 100%;
+              font-size: 0.8em;
+              height: 4.5em;
+              background: transparent;
+              border-color: $white;
+              color: $white;
+              font-weight: bold;
+              cursor: pointer;
+              margin: 0 auto;
+              top: 2rem;
+            }
+          }
+        }
+      }
+
+      .content__card {
+        .info-card {
           h2 {
-            padding: 0em 1.5em 1em;
-            margin: 0;
-            font-size: 1.5em;
-            font-weight: bold;
-          }
-
-          .blog-meta {
-            font-size: 0.7em;
+            padding-bottom: nth($spaces, 20);
           }
         }
       }
@@ -186,6 +240,18 @@
 
     .box3 {
       grid-template-columns: 4fr 2fr;
+
+      .content__card {
+        height: 32rem;
+      }
+
+      .Blog__Highlights {
+        height: 32rem;
+
+        .info-card h2 {
+          padding: 0 0.875rem 11.1rem 0.875rem;
+        }
+      }
     }
   }
 
@@ -201,49 +267,61 @@
   @include tablet {
     .container {
       align-items: center;
-      width: 60%;
 
       .box1,
       .box2,
       .box3 {
         grid-template-columns: 1fr;
-        grid-gap: 1rem;
-        width: 34rem;
+        grid-gap: nth($spaces, 4);
 
-        .Blog__Highlights,
-        .marke__tingHub,
-        .content__card {
-          height: 38rem;
+        .Blog__Highlights {
+          height: 26.1rem;
 
-          .btn-box {
-            font-size: 1.5rem;
-          }
-        }
+          .Blog__Highlights-img {
+            display: flex;
+            justify-content: center;
+            height: 11.5rem;
+            width: 100%;
+            padding: 0;
 
-        .box1 {
-          .marke__tingHub {
-            .info-card {
-              h3 {
-                top: 2rem;
-                position: relative;
-              }
-
-              p {
-                padding: 2em 0em 5rem 0rem;
-              }
+            & img {
+              width: 90%;
             }
           }
-        }
-      }
-      .box2 {
-        .marke__tingHub {
+
           .info-card {
-            h1 {
-              font-size: 3rem;
-            }
+            padding: 0rem nth($spaces, 4) nth($spaces, 4) 0rem;
 
-            .btn-box {
-              padding-top: 5rem;
+            h2 {
+              padding: 0 0.875rem 6.5rem 0.875rem;
+            }
+          }
+        }
+
+        .marke__tingHub {
+          width: 35.1rem;
+          margin: 0 auto;
+        }
+
+        .content__card {
+          height: 26.1rem;
+          width: 35.1rem;
+
+          .content__card-img {
+            display: flex;
+            justify-content: center;
+            height: 11.5rem;
+            width: 100%;
+            padding: 0;
+
+            & img {
+              width: 90%;
+            }
+          }
+
+          .info-card {
+            h2 {
+              padding: 0 0.875rem 6.5rem 0.875rem;
             }
           }
         }
@@ -257,6 +335,13 @@
 	*/
 
   @include retinaMobile {
+    .container {
+      .box1,
+      .box2,
+      .box3 {
+        grid-template-columns: 1fr;
+      }
+    }
   }
 
   /*--------------------------------
@@ -265,13 +350,27 @@
 	*/
 
   @include mobile {
+    .container {
+      .box1,
+      .box2,
+      .box3 {
+        grid-template-columns: 1fr;
+      }
+    }
   }
 
   /*--------------------------------
 	*** FOR MINI MOBILE
-	**	MAX : 400PX / 25em
+	**	MAX : 375PX / 23.4375em
 	*/
 
   @include miniMobile {
+    .container {
+      .box1,
+      .box2,
+      .box3 {
+        grid-template-columns: 1fr;
+      }
+    }
   }
 }

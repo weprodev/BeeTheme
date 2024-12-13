@@ -1,0 +1,97 @@
+.platform {
+  width: 20em;
+  height: 7em;
+  @include tablet {
+    width: 19em;
+  }
+  @include mobile {
+    width: 22em;
+  }
+
+  &__radio-input {
+    display: none;
+  }
+
+  &__radio-label {
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: $white;
+    border: $lightBorder;
+    border-radius: $rounded3Xl;
+    overflow: hidden;
+    box-shadow: $shadowDark;
+    position: relative;
+    transition: map-get($durations, 300);
+  }
+
+  &__radio-input:not(:disabled) ~ .platform__radio-label {
+    cursor: pointer;
+  }
+  &__radio-input:disabled ~ .platform__radio-label {
+    color: $fifthColor;
+    border-color: $fifthColor;
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+  &__radio-input:checked ~ .platform__radio-label {
+    background: $secondaryColor;
+    color: $white;
+    box-shadow:$shadowDarkSpread;
+    .platform__check-circle::after {
+      display: flex;
+    }
+  }
+
+  &__name {
+    font-size: $fontSize2Xl;
+    font-weight: $fontWeightMedium;
+    position: absolute;
+    top: 50%;
+    left: 59%;
+    transform: translate(-50%, -50%);
+    white-space: pre;
+  }
+
+  &__check-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    height: 3rem;
+    width: 3rem;
+
+    &::after {
+      content: "✓";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      height: 3rem;
+      width: 3rem;
+      color: $black;
+      background: $white;
+      font-size: $fontSize3Xl;
+      border-radius: $roundedFull;
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__front-image {
+    width: 85%;
+    height: 85%;
+    object-fit: contain;
+  }
+
+  &__bg-image {
+    width: 11em;
+    opacity: 0.2;
+    position: absolute;
+    top: -29%;
+    right: -17%;
+  }
+}

@@ -1,0 +1,20 @@
+@use "sass:color";
+
+.cta {
+  @include button(
+    $radius: $roundedFull,
+    $padding: nth($spaces, 3) nth($spaces, 10),
+    $transition: map-get($durations, 300),
+    $hoverBgColor: none,
+    $fontSize: $fontSizeXl
+  );
+  text-transform: uppercase;
+
+  &--primary {
+    background-color: $thirdColorWeprodev;
+    color: $white;
+    &:hover {
+      background-color: color.adjust($thirdColorWeprodev, $lightness: -10);
+    }
+  }
+}

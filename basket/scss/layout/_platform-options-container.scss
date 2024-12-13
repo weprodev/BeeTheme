@@ -1,0 +1,14 @@
+.platform-options-container {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    padding-bottom: nth($spaces, 8);
+    margin: nth($spaces, 4) 0;
+    border-bottom: $lightBorder;
+    gap: nth($spaces , 10);
+    margin: 0 auto;
+    width: 80%;
+    @include mobile {
+      width: 90%;
+    }
+  }
