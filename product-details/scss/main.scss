@@ -13,7 +13,6 @@
 @import "../../shared/scss/base/animation";
 @import "base";
 
-
 /*------------------------------------*\
   #TYPOGRAPGY
 \*------------------------------------*/
@@ -32,6 +31,12 @@
 /*------------------------------------*\
   #LAYOUT
 \*------------------------------------*/
-@import "../../weprodev-header/scss/main.scss";
+@import "../../shared/weprodev-header/scss/main.scss";
+@import "../../shared/weprodev-footer/sass/main.scss";
 @import "./layout/hero";
 @import "./layout/built-section";
+@import "./layout/create-section";
+@import "./layout/elementor-section";
+@import "./layout/phenomenon-section";
+@import "./layout/resources-section";
+@import "./layout/cta-section";

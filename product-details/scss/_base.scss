@@ -18,6 +18,10 @@ a.link {
   }
 }
 
+a.colored-link {
+  color: $mainColorWeprodev;
+}
+
 .background-gradient-animation {
   background-image: var(--gradient);
   background-size: 500%;
