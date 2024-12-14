@@ -35,9 +35,41 @@ const demos = [
     url: "app-land/index.html",
     mainImage: "app-land-main.jpeg",
     entirePageImage: "app-land-entire.jpeg",
-  }
+  },
+  {
+    id: 3,
+    name: "Basket",
+    createdBy: {
+      name: "Ahmad Mohammadirad",
+      github: "https://github.com/ahmadmohammadirad2006",
+    },
+    url: "basket/index.html",
+    mainImage: "basket-entire-main.png",
+    entirePageImage: "basket-entire-main.png",
+  },
+  {
+    id: 4,
+    name: "ShowLand",
+    createdBy: {
+      name: "Sadi Karimi",
+      github: "https://github.com/sadiGFG",
+    },
+    url: "show-land/index.html",
+    mainImage: "show-land-main.png",
+    entirePageImage: "show-land-entire.png",
+  },
+  {
+    id: 5,
+    name: "ProductDetails",
+    createdBy: {
+      name: "Ahmad Mohammadirad",
+      github: "https://github.com/ahmadmohammadirad2006",
+    },
+    url: "product-details/index.html",
+    mainImage: "product-details-main.png",
+    entirePageImage: "product-details-entire.png",
+  },
 ];
-
 
 /*------------------------------------*\
   #SELECTING ELEMENTS

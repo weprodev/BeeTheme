@@ -1,16 +1,15 @@
 /*------------------------------------*\
   #ABSTRACTS
 \*------------------------------------*/
-@import "../../shared/scss/abstracts/media-query";
-@import "../../shared/scss/abstracts/variables";
+@import "../../scss/abstracts/media-query";
+@import "../../scss/abstracts/variables";
 @import "variables";
 
 /*------------------------------------*\
   #BASE
 \*------------------------------------*/
 
-@import "../../shared/scss/base/reset";
-
+@import "../../scss/base/reset";
 
 /*------------------------------------*\
   #TYPOGRAPGY
@@ -22,8 +21,8 @@
   #COMPONENTS
 \*------------------------------------*/
 
-@import "../../shared/scss/components/dropdown";
-@import "../../shared/scss/components/button";
+@import "../../scss/components/dropdown";
+@import "../../scss/components/button";
 
 /*------------------------------------*\
   #LAYOUT

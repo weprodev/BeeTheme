@@ -1,0 +1,15 @@
+/*------------------------------------*\
+  #ABSTRACTS
+\*------------------------------------*/
+@import "../../shared/scss/abstracts/media-query";
+@import "../../shared/scss/abstracts/variables";
+@import "variables";
+@import "typography";
+/*------------------------------------*\
+  #BASE
+\*------------------------------------*/
+@import "../../shared/scss/base/reset";
+/*------------------------------------*\
+  #LAYOUT
+\*------------------------------------*/
+@import "layout/footer";
