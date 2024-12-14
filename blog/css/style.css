@@ -1612,22 +1612,42 @@ body .separator {
   *----------------------------          MEDIA QUERY              ----------------------------        
   \*========================================================================================*/
   /*--------------------------------
+  *** FOR ANY DEVICE MAX SIZE UNTIL
+  **	MAX-WIDTH : 1200px OR 75em
+  */
+  /*--------------------------------
+  *** FOR ANY DEVICE MAX SIZE UNTIL
+  **	MAX-WIDTH : 1024px OR 64em
+  */
+  /*--------------------------------
+  *** FOR ANY DEVICE MAX SIZE UNTIL
+  **	MAX-WIDTH : 992px OR 62em
+  */
+  /*--------------------------------
+  *** FOR RETINA MOBILE AND LANSCAPE
+  **	MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
+  */
+  /*--------------------------------
   *** FOR MOBILE
   **	MAX : 640PX / 40em
+  */
+  /*--------------------------------
+  *** FOR MINI MOBILE
+  **	MAX : 400PX / 25em
   */
 }
 .topics .container h2 {
   margin: 0 auto;
   text-align: center;
-  padding: 36px 10px 0 0;
-  font-size: 28px;
+  padding: 2.25em 0.625rem 0 0;
+  font-size: 1.75rem;
   font-weight: bold;
 }
 .topics .container p {
   margin: 0 auto;
-  font-size: 17px;
+  font-size: 1.0625rem;
   text-align: center;
-  padding: 23px 8rem 2.7rem 7.8rem;
+  padding: 1.4375rem 8em 2.7rem 8em;
 }
 .topics .container .more-topics {
   justify-content: center;
@@ -1637,8 +1657,8 @@ body .separator {
   flex-wrap: wrap;
   text-align: left;
   align-items: center;
-  gap: 0px 23px;
-  padding-left: 8px;
+  gap: 0 1.4375rem;
+  padding-left: 0.5em;
 }
 .topics .container .more-topics .topic a {
   padding: 1.5em 1em;
@@ -1676,13 +1696,13 @@ body .separator {
   border-color: rgb(255, 0, 0);
 }
 .topics .container .more-topics .topic a:nth-child(7) {
-  border-color: rgb(0, 128, 0);
-}
-.topics .container .more-topics .topic a:nth-child(8) {
   border-color: rgb(255, 255, 0);
 }
-.topics .container .more-topics .topic a:nth-child(9) {
+.topics .container .more-topics .topic a:nth-child(8) {
   border-color: rgb(255, 165, 0);
+}
+.topics .container .more-topics .topic a:nth-child(9) {
+  border-color: rgb(0, 128, 0);
 }
 .topics .container .more-topics .topic a:nth-child(10) {
   border-color: rgb(0, 0, 255);
@@ -1695,7 +1715,44 @@ body .separator {
   border-top: 0.375em solid rgb(0, 0, 0);
   transition: 0.3s;
 }
+@media screen and (max-width: 75em) {
+  .topics .container .more-topics .topic {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 64em) {
+  .topics .container p {
+    padding: 1.4375rem 7.5em 2.7rem 7.5em;
+  }
+  .topics .container .more-topics .topic {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 62em) {
+  .topics .container p {
+    padding: 1.4375rem 6em 2.7rem 6em;
+  }
+  .topics .container .more-topics .topic {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 31.25em) and (max-width: 47.9375em) {
+  .topics .container p {
+    padding: 1.4375rem 3em 2.7rem 3em;
+  }
+  .topics .container .more-topics .topic {
+    justify-content: center;
+  }
+}
 @media screen and (max-width: 40em) {
+  .topics .container .more-topics .topic {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 25em) {
+  .topics .container p {
+    padding: 1.4375rem 2em 2.7rem 2em;
+  }
   .topics .container .more-topics .topic {
     justify-content: center;
   }
