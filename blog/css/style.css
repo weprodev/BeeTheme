@@ -1618,27 +1618,27 @@ body .separator {
 }
 .topics .container h2 {
   margin: 0 auto;
-  padding: 1em 0em;
-  font-size: 2.5em;
   text-align: center;
+  padding: 36px 10px 0 0;
+  font-size: 28px;
+  font-weight: bold;
 }
 .topics .container p {
   margin: 0 auto;
-  font-size: 1.5em;
-  padding-bottom: 2em;
-  max-width: 33em;
+  font-size: 17px;
   text-align: center;
+  padding: 23px 8rem 2.7rem 7.8rem;
 }
 .topics .container .more-topics {
-  padding-bottom: 1em;
+  justify-content: center;
 }
 .topics .container .more-topics .topic {
-  margin: 1.5em auto 1em;
   display: flex;
   flex-wrap: wrap;
   text-align: left;
-  justify-content: space-between;
   align-items: center;
+  gap: 0px 23px;
+  padding-left: 8px;
 }
 .topics .container .more-topics .topic a {
   padding: 1.5em 1em;

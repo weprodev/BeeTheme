@@ -6,29 +6,29 @@
   .container {
     h2 {
       margin: 0 auto;
-      padding: nth($spaces, 4) 0em;
-      font-size: 2.5em;
       text-align: center;
+      padding: 36px 10px 0 0;
+      font-size: 28px;
+      font-weight: bold;
     }
 
     p {
       margin: 0 auto;
-      font-size: $fontSize2Xl;
-      padding-bottom: nth($spaces, 8);
-      max-width: 33em;
+      font-size: 17px;
       text-align: center;
+      padding: 23px 8rem 2.7rem 7.8rem;
     }
 
     .more-topics {
-      padding-bottom: nth($spaces, 4);
+      justify-content: center;
 
       .topic {
-        margin: nth($spaces, 6) auto nth($spaces, 4);
         display: flex;
         flex-wrap: wrap;
         text-align: left;
-        justify-content: space-between;
         align-items: center;
+        gap: 0px 23px;
+        padding-left: 8px;
 
         a {
           padding: nth($spaces, 6) nth($spaces, 4);
