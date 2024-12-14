@@ -1148,7 +1148,7 @@ body .separator {
   position: relative;
 }
 .blog-layout .container .sidebar .sidebar__list .sidebar__item .blog-meta a {
-  font-size: 9px;
+  font-size: 0.5625rem;
   padding: 0.9375rem 0em 0em 0.8125rem;
 }
 .blog-layout .container .sidebar .sidebar__list .sidebar__item .sidebar__item-info {
@@ -1597,6 +1597,7 @@ body .separator {
     grid-template-columns: 1fr;
   }
 }
+
 /*
 ***         
 *****       
