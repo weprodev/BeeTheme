@@ -1766,6 +1766,29 @@ body .separator {
   font-weight: 400;
   background-image: linear-gradient(rgba(20, 20, 20, 0.902), rgba(20, 20, 20, 0.902));
   background-size: cover;
+  /*========================================================================================*\
+  *----------------------------          MEDIA QUERY              ----------------------------        
+  \*========================================================================================*/
+  /*--------------------------------
+  *** FOR ANY DEVICE MAX SIZE UNTIL
+  **	MAX-WIDTH : 1024px OR 64em
+  */
+  /*--------------------------------
+  *** FOR ANY DEVICE MAX SIZE UNTIL
+  **	MAX-WIDTH : 992px OR 62em
+  */
+  /*--------------------------------
+  *** FOR RETINA MOBILE AND LANSCAPE
+  **	MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
+  */
+  /*--------------------------------
+  *** FOR MOBILE
+  **	MAX : 640PX / 40em
+  */
+  /*--------------------------------
+  *** FOR MINI MOBILE
+  **	MAX : 375PX / 23.4375em
+  */
 }
 .weprodev-footer .containerA {
   width: 70%;
@@ -1856,6 +1879,67 @@ body .separator {
 }
 .weprodev-footer .container .item-footer .copy-info {
   color: rgb(173, 181, 189);
+}
+@media screen and (max-width: 64em) {
+  .weprodev-footer .containerA {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 62em) {
+  .weprodev-footer .containerA {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    gap: 3em;
+    width: 90%;
+  }
+  .weprodev-footer .containerA .WeProDev p {
+    width: 43rem;
+  }
+  .weprodev-footer .container {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 31.25em) and (max-width: 47.9375em) {
+  .weprodev-footer .containerA {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    gap: 3em;
+    width: 90%;
+  }
+  .weprodev-footer .containerA .WeProDev p {
+    width: 17rem;
+  }
+  .weprodev-footer .container {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 40em) {
+  .weprodev-footer .containerA {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    gap: 3em;
+    width: 90%;
+  }
+  .weprodev-footer .containerA .WeProDev p {
+    width: 17rem;
+  }
+  .weprodev-footer .container {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 25em) {
+  .weprodev-footer .containerA {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    gap: 3em;
+    width: 90%;
+  }
+  .weprodev-footer .containerA .WeProDev p {
+    width: 17rem;
+  }
+  .weprodev-footer .container {
+    width: 90%;
+  }
 }
 
 /*

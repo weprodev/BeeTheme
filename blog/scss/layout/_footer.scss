@@ -112,4 +112,115 @@
       }
     }
   }
+
+  /*========================================================================================*\
+  *----------------------------          MEDIA QUERY              ----------------------------        
+  \*========================================================================================*/
+
+  /*--------------------------------
+	*** FOR ANY DEVICE MAX SIZE UNTIL
+	**	MAX-WIDTH : 1024px OR 64em
+	*/
+
+  @include miniLaptop {
+    .containerA {
+      justify-content: center;
+    }
+  }
+
+  /*--------------------------------
+	*** FOR ANY DEVICE MAX SIZE UNTIL
+	**	MAX-WIDTH : 992px OR 62em
+	*/
+
+  @include tablet {
+    .containerA {
+      grid-template-columns: 1fr;
+      justify-content: center;
+      gap: nth($spaces, 12);
+      width: 90%;
+
+      .WeProDev {
+        p {
+          width: 43rem;
+        }
+      }
+    }
+
+    .container {
+      width: 90%;
+    }
+  }
+
+  /*--------------------------------
+	*** FOR RETINA MOBILE AND LANSCAPE
+	**	MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
+	*/
+
+  @include retinaMobile {
+    .containerA {
+      grid-template-columns: 1fr;
+      justify-content: center;
+      gap: nth($spaces, 12);
+      width: 90%;
+
+      .WeProDev {
+        p {
+          width: 17rem;
+        }
+      }
+    }
+
+    .container {
+      width: 90%;
+    }
+  }
+
+  /*--------------------------------
+	*** FOR MOBILE
+	**	MAX : 640PX / 40em
+	*/
+
+  @include mobile {
+    .containerA {
+      grid-template-columns: 1fr;
+      justify-content: center;
+      gap: nth($spaces, 12);
+      width: 90%;
+
+      .WeProDev {
+        p {
+          width: 17rem;
+        }
+      }
+    }
+
+    .container {
+      width: 90%;
+    }
+  }
+
+  /*--------------------------------
+	*** FOR MINI MOBILE
+	**	MAX : 375PX / 23.4375em
+	*/
+
+  @include miniMobile {
+    .containerA {
+      grid-template-columns: 1fr;
+      justify-content: center;
+      gap: nth($spaces, 12);
+      width: 90%;
+
+      .WeProDev {
+        p {
+          width: 17rem;
+        }
+      }
+    }
+
+    .container {
+      width: 90%;
+    }
+  }
 }
