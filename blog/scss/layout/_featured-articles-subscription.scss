@@ -1,4 +1,4 @@
-.Blog__Highlights {
+.blog__highlights {
   height: 32.1rem;
   background-color: $softSky;
   padding: nth($spaces, 2);
@@ -154,7 +154,7 @@
   }
 }
 
-.Featured-Articles-Subscription {
+.featured_articles_aubscription {
   padding-top: nth($spaces, 4);
   align-items: center;
   display: flex;
@@ -245,7 +245,7 @@
         height: 32rem;
       }
 
-      .Blog__Highlights {
+      .blog__highlights {
         height: 32rem;
 
         .info-card h2 {
@@ -274,10 +274,10 @@
         grid-template-columns: 1fr;
         grid-gap: nth($spaces, 4);
 
-        .Blog__Highlights {
+        .blog__highlights {
           height: 26.1rem;
 
-          .Blog__Highlights-img {
+          .blog__highlights-img {
             display: flex;
             justify-content: center;
             height: 11.5rem;
