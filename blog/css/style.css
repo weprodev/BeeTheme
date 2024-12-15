@@ -1154,7 +1154,7 @@ body .separator {
   position: relative;
 }
 .blog-layout .container .sidebar .sidebar__list .sidebar__item .blog-meta a {
-  font-size: 9px;
+  font-size: 0.5625rem;
   padding: 0.9375rem 0em 0em 0.8125rem;
 }
 .blog-layout .container .sidebar .sidebar__list .sidebar__item .sidebar__item-info {
@@ -1278,7 +1278,7 @@ body .separator {
   }
 }
 
-.Blog__Highlights {
+.blog__highlights {
   height: 32.1rem;
   background-color: rgb(236, 240, 241);
   padding: 0.5em;
@@ -1286,38 +1286,38 @@ body .separator {
   position: relative;
   border-radius: 0.3125rem;
 }
-.Blog__Highlights-img {
+.blog__highlights-img {
   display: flex;
   justify-content: center;
   height: 11.5rem;
   width: 14.5rem;
   padding: 0.2rem 0 0 1.2rem;
 }
-.Blog__Highlights-img img {
+.blog__highlights-img img {
   width: 95%;
   object-fit: cover;
   border-radius: 0.3125rem 0.3125rem 0 0;
 }
-.Blog__Highlights .info-card {
+.blog__highlights .info-card {
   padding-top: 1em;
   display: flex;
   flex-direction: column;
 }
-.Blog__Highlights .info-card p {
+.blog__highlights .info-card p {
   padding: 0.6rem 1em 2em 1em;
   font-size: 0.7em;
   padding-left: 12px;
 }
-.Blog__Highlights .info-card h2 {
+.blog__highlights .info-card h2 {
   padding: 0 0.875rem 10rem 0.875rem;
   margin: 0;
   line-height: 0.9;
 }
-.Blog__Highlights .info-card h2 a {
+.blog__highlights .info-card h2 a {
   font-size: 1rem;
   font-weight: unset;
 }
-.Blog__Highlights .info-card .blog-meta {
+.blog__highlights .info-card .blog-meta {
   font-size: 0.5625rem;
   padding-left: 0.5em;
 }
@@ -1415,7 +1415,7 @@ body .separator {
   position: relative;
 }
 
-.Featured-Articles-Subscription {
+.featured_articles_aubscription {
   padding-top: 1em;
   align-items: center;
   display: flex;
@@ -1440,40 +1440,40 @@ body .separator {
   **	MAX : 375PX / 23.4375em
   */
 }
-.Featured-Articles-Subscription .container {
+.featured_articles_aubscription .container {
   width: 62%;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
 }
-.Featured-Articles-Subscription .container .box1,
-.Featured-Articles-Subscription .container .box2,
-.Featured-Articles-Subscription .container .box3 {
+.featured_articles_aubscription .container .box1,
+.featured_articles_aubscription .container .box2,
+.featured_articles_aubscription .container .box3 {
   display: grid;
   justify-content: space-between;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 0 1em;
 }
-.Featured-Articles-Subscription .container .box2,
-.Featured-Articles-Subscription .container .box3 {
+.featured_articles_aubscription .container .box2,
+.featured_articles_aubscription .container .box3 {
   padding-top: 1em;
   grid-template-columns: 2fr 4fr;
 }
-.Featured-Articles-Subscription .container .box2 .marke__tingHub .info-card h1,
-.Featured-Articles-Subscription .container .box3 .marke__tingHub .info-card h1 {
+.featured_articles_aubscription .container .box2 .marke__tingHub .info-card h1,
+.featured_articles_aubscription .container .box3 .marke__tingHub .info-card h1 {
   width: 70%;
   margin: 0 auto;
   line-height: 1.9;
 }
-.Featured-Articles-Subscription .container .box2 .marke__tingHub .info-card button,
-.Featured-Articles-Subscription .container .box3 .marke__tingHub .info-card button {
+.featured_articles_aubscription .container .box2 .marke__tingHub .info-card button,
+.featured_articles_aubscription .container .box3 .marke__tingHub .info-card button {
   top: 4rem;
   position: relative;
 }
-.Featured-Articles-Subscription .container .box2 .marke__tingHub {
+.featured_articles_aubscription .container .box2 .marke__tingHub {
   height: 33.8rem;
 }
-.Featured-Articles-Subscription .container .box2 .marke__tingHub .info-card h1 {
+.featured_articles_aubscription .container .box2 .marke__tingHub .info-card h1 {
   width: 90%;
   margin: 0 auto;
   line-height: 1.8;
@@ -1481,10 +1481,10 @@ body .separator {
   padding: 1.5em 0;
   font-weight: 100;
 }
-.Featured-Articles-Subscription .container .box2 .marke__tingHub .info-card .btn-box {
+.featured_articles_aubscription .container .box2 .marke__tingHub .info-card .btn-box {
   padding: 0;
 }
-.Featured-Articles-Subscription .container .box2 .marke__tingHub .info-card .btn-box button {
+.featured_articles_aubscription .container .box2 .marke__tingHub .info-card .btn-box button {
   width: 100%;
   font-size: 0.8em;
   height: 4.5em;
@@ -1496,110 +1496,110 @@ body .separator {
   margin: 0 auto;
   top: 2rem;
 }
-.Featured-Articles-Subscription .container .box2 .content__card .info-card h2 {
+.featured_articles_aubscription .container .box2 .content__card .info-card h2 {
   padding-bottom: 5em;
 }
-.Featured-Articles-Subscription .container .box3 {
+.featured_articles_aubscription .container .box3 {
   grid-template-columns: 4fr 2fr;
 }
-.Featured-Articles-Subscription .container .box3 .content__card {
+.featured_articles_aubscription .container .box3 .content__card {
   height: 32rem;
 }
-.Featured-Articles-Subscription .container .box3 .Blog__Highlights {
+.featured_articles_aubscription .container .box3 .blog__highlights {
   height: 32rem;
 }
-.Featured-Articles-Subscription .container .box3 .Blog__Highlights .info-card h2 {
+.featured_articles_aubscription .container .box3 .blog__highlights .info-card h2 {
   padding: 0 0.875rem 11.1rem 0.875rem;
 }
 @media screen and (max-width: 62em) {
-  .Featured-Articles-Subscription .container {
+  .featured_articles_aubscription .container {
     align-items: center;
   }
-  .Featured-Articles-Subscription .container .box1,
-  .Featured-Articles-Subscription .container .box2,
-  .Featured-Articles-Subscription .container .box3 {
+  .featured_articles_aubscription .container .box1,
+  .featured_articles_aubscription .container .box2,
+  .featured_articles_aubscription .container .box3 {
     grid-template-columns: 1fr;
     grid-gap: 1em;
   }
-  .Featured-Articles-Subscription .container .box1 .Blog__Highlights,
-  .Featured-Articles-Subscription .container .box2 .Blog__Highlights,
-  .Featured-Articles-Subscription .container .box3 .Blog__Highlights {
+  .featured_articles_aubscription .container .box1 .blog__highlights,
+  .featured_articles_aubscription .container .box2 .blog__highlights,
+  .featured_articles_aubscription .container .box3 .blog__highlights {
     height: 26.1rem;
   }
-  .Featured-Articles-Subscription .container .box1 .Blog__Highlights .Blog__Highlights-img,
-  .Featured-Articles-Subscription .container .box2 .Blog__Highlights .Blog__Highlights-img,
-  .Featured-Articles-Subscription .container .box3 .Blog__Highlights .Blog__Highlights-img {
+  .featured_articles_aubscription .container .box1 .blog__highlights .blog__highlights-img,
+  .featured_articles_aubscription .container .box2 .blog__highlights .blog__highlights-img,
+  .featured_articles_aubscription .container .box3 .blog__highlights .blog__highlights-img {
     display: flex;
     justify-content: center;
     height: 11.5rem;
     width: 100%;
     padding: 0;
   }
-  .Featured-Articles-Subscription .container .box1 .Blog__Highlights .Blog__Highlights-img img,
-  .Featured-Articles-Subscription .container .box2 .Blog__Highlights .Blog__Highlights-img img,
-  .Featured-Articles-Subscription .container .box3 .Blog__Highlights .Blog__Highlights-img img {
+  .featured_articles_aubscription .container .box1 .blog__highlights .blog__highlights-img img,
+  .featured_articles_aubscription .container .box2 .blog__highlights .blog__highlights-img img,
+  .featured_articles_aubscription .container .box3 .blog__highlights .blog__highlights-img img {
     width: 90%;
   }
-  .Featured-Articles-Subscription .container .box1 .Blog__Highlights .info-card,
-  .Featured-Articles-Subscription .container .box2 .Blog__Highlights .info-card,
-  .Featured-Articles-Subscription .container .box3 .Blog__Highlights .info-card {
+  .featured_articles_aubscription .container .box1 .blog__highlights .info-card,
+  .featured_articles_aubscription .container .box2 .blog__highlights .info-card,
+  .featured_articles_aubscription .container .box3 .blog__highlights .info-card {
     padding: 0rem 1em 1em 0rem;
   }
-  .Featured-Articles-Subscription .container .box1 .Blog__Highlights .info-card h2,
-  .Featured-Articles-Subscription .container .box2 .Blog__Highlights .info-card h2,
-  .Featured-Articles-Subscription .container .box3 .Blog__Highlights .info-card h2 {
+  .featured_articles_aubscription .container .box1 .blog__highlights .info-card h2,
+  .featured_articles_aubscription .container .box2 .blog__highlights .info-card h2,
+  .featured_articles_aubscription .container .box3 .blog__highlights .info-card h2 {
     padding: 0 0.875rem 6.5rem 0.875rem;
   }
-  .Featured-Articles-Subscription .container .box1 .marke__tingHub,
-  .Featured-Articles-Subscription .container .box2 .marke__tingHub,
-  .Featured-Articles-Subscription .container .box3 .marke__tingHub {
+  .featured_articles_aubscription .container .box1 .marke__tingHub,
+  .featured_articles_aubscription .container .box2 .marke__tingHub,
+  .featured_articles_aubscription .container .box3 .marke__tingHub {
     width: 35.1rem;
     margin: 0 auto;
   }
-  .Featured-Articles-Subscription .container .box1 .content__card,
-  .Featured-Articles-Subscription .container .box2 .content__card,
-  .Featured-Articles-Subscription .container .box3 .content__card {
+  .featured_articles_aubscription .container .box1 .content__card,
+  .featured_articles_aubscription .container .box2 .content__card,
+  .featured_articles_aubscription .container .box3 .content__card {
     height: 26.1rem;
     width: 35.1rem;
   }
-  .Featured-Articles-Subscription .container .box1 .content__card .content__card-img,
-  .Featured-Articles-Subscription .container .box2 .content__card .content__card-img,
-  .Featured-Articles-Subscription .container .box3 .content__card .content__card-img {
+  .featured_articles_aubscription .container .box1 .content__card .content__card-img,
+  .featured_articles_aubscription .container .box2 .content__card .content__card-img,
+  .featured_articles_aubscription .container .box3 .content__card .content__card-img {
     display: flex;
     justify-content: center;
     height: 11.5rem;
     width: 100%;
     padding: 0;
   }
-  .Featured-Articles-Subscription .container .box1 .content__card .content__card-img img,
-  .Featured-Articles-Subscription .container .box2 .content__card .content__card-img img,
-  .Featured-Articles-Subscription .container .box3 .content__card .content__card-img img {
+  .featured_articles_aubscription .container .box1 .content__card .content__card-img img,
+  .featured_articles_aubscription .container .box2 .content__card .content__card-img img,
+  .featured_articles_aubscription .container .box3 .content__card .content__card-img img {
     width: 90%;
   }
-  .Featured-Articles-Subscription .container .box1 .content__card .info-card h2,
-  .Featured-Articles-Subscription .container .box2 .content__card .info-card h2,
-  .Featured-Articles-Subscription .container .box3 .content__card .info-card h2 {
+  .featured_articles_aubscription .container .box1 .content__card .info-card h2,
+  .featured_articles_aubscription .container .box2 .content__card .info-card h2,
+  .featured_articles_aubscription .container .box3 .content__card .info-card h2 {
     padding: 0 0.875rem 6.5rem 0.875rem;
   }
 }
 @media screen and (min-width: 31.25em) and (max-width: 47.9375em) {
-  .Featured-Articles-Subscription .container .box1,
-  .Featured-Articles-Subscription .container .box2,
-  .Featured-Articles-Subscription .container .box3 {
+  .featured_articles_aubscription .container .box1,
+  .featured_articles_aubscription .container .box2,
+  .featured_articles_aubscription .container .box3 {
     grid-template-columns: 1fr;
   }
 }
 @media screen and (max-width: 40em) {
-  .Featured-Articles-Subscription .container .box1,
-  .Featured-Articles-Subscription .container .box2,
-  .Featured-Articles-Subscription .container .box3 {
+  .featured_articles_aubscription .container .box1,
+  .featured_articles_aubscription .container .box2,
+  .featured_articles_aubscription .container .box3 {
     grid-template-columns: 1fr;
   }
 }
 @media screen and (max-width: 25em) {
-  .Featured-Articles-Subscription .container .box1,
-  .Featured-Articles-Subscription .container .box2,
-  .Featured-Articles-Subscription .container .box3 {
+  .featured_articles_aubscription .container .box1,
+  .featured_articles_aubscription .container .box2,
+  .featured_articles_aubscription .container .box3 {
     grid-template-columns: 1fr;
   }
 }
