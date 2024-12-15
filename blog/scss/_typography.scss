@@ -1,135 +1,67 @@
-body {
-  font-family: $primaryFontFamily;
+html {
+  body {
+    font-family: $primaryFontFamily;
 
-  a {
-    text-decoration: none;
-    color: $black;
+    a {
+      text-decoration: none;
+      color: $black;
 
-    &:hover {
-      transition: 0.5s;
+      &:hover {
+        transition: 0.5s;
+      }
+    }
+
+    li {
+      list-style-type: none;
+    }
+
+    * {
+      font: revert;
+    }
+
+    hr {
+      width: 43rem;
+      margin: 0 auto;
+      display: none;
+      border-color: $black;
+    }
+
+    .hr {
+      width: 50rem;
+      display: block;
+      top: 2rem;
+      position: relative;
     }
   }
 
-  li {
-    list-style-type: none;
-  }
-
-  * {
-    font: revert;
-  }
-
-  hr {
-    width: 43rem;
-    margin: 0 auto;
-    display: none;
-    border-color: $black;
-  }
-
-  .hr {
-    width: 50rem;
-    display: block;
-    top: 2rem;
-    position: relative;
-  }
-}
-
-/*========================================================================================*\
+  /*========================================================================================*\
  *----------------------------          MEDIA QUERY              ----------------------------        
  \*========================================================================================*/
 
-/*--------------------------------
+  /*--------------------------------
 	*** 4K AND HIGH RESOULOTIONS 
 	**	MIN-WIDTH : 2560px OR 160em
 	*/
 
-@include led4k {
-  html {
-    font-size: 2rem;
+  @include led4k {
+    font-size: 1.5rem;
   }
-}
 
-/*--------------------------------
-	*** LAPTOP OR DESKTOP 
-	**	MIN-WIDTH : 1400px OR 87.5em
-	*/
-
-@include led {
-  html {
-    // font-size: 2rem;
-  }
-}
-
-/*--------------------------------
-	*** FOR SOM OF THE DEVICES
-	**	MIN-WIDTH : 1201px OR 75.0625em
-	*/
-
-@include lcd {
-  html {
-    // font-size: 2rem;
-  }
-}
-
-/*--------------------------------
-	*** FOR ANY DEVICE MAX SIZE UNTIL
-	**	MAX-WIDTH : 1200px OR 75em
-	*/
-
-@include laptop {
-  html {
-    // font-size: 2rem;
-  }
-}
-
-/*--------------------------------
-	*** FOR ANY DEVICE MAX SIZE UNTIL
-	**	MAX-WIDTH : 1024px OR 64em
-	*/
-
-@include miniLaptop {
-  html {
-    // font-size: 1rem;
-  }
-}
-
-/*--------------------------------
+  /*--------------------------------
 	*** FOR ANY DEVICE MAX SIZE UNTIL
 	**	MAX-WIDTH : 992px OR 62em
 	*/
 
-@include tablet {
-  body {
-    hr {
-      display: block;
-      width: 100%;
-    }
+  @include tablet {
+    body {
+      hr {
+        display: block;
+        width: 100%;
+      }
 
-    .hr {
-      width: 100%;
+      .hr {
+        width: 100%;
+      }
     }
   }
-}
-
-/*--------------------------------
-	*** FOR RETINA MOBILE AND LANSCAPE
-	**	MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
-	*/
-
-@include retinaMobile {
-}
-
-/*--------------------------------
-	*** FOR MOBILE
-	**	MAX : 640PX / 40em
-	*/
-
-@include mobile {
-}
-
-/*--------------------------------
-	*** FOR MINI MOBILE
-	**	MAX : 400PX / 25em
-	*/
-
-@include miniMobile {
 }
