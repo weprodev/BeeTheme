@@ -26,7 +26,7 @@ body {
   }
 
   .hr {
-    width: 56rem;
+    width: 50rem;
     display: block;
     top: 2rem;
     position: relative;
@@ -101,6 +101,11 @@ body {
   body {
     hr {
       display: block;
+      width: 100%;
+    }
+
+    .hr {
+      width: 100%;
     }
   }
 }
