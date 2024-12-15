@@ -18,94 +18,67 @@
   </head>
   <body>
     <!-- Header -->
-    <section>
-      <section class="top-bar">
-        <div class="top-bar-contant">
-          <div class="select-lang">
-            <i class="fa-solid fa-globe"></i>
-
-            <div class="dropdown">
-              <div class="select">
-                <span class="selected">Language</span>
-                <div class="cart"></div>
-              </div>
-              <ul class="menu">
-                <li class="active">English</li>
-                <li>Persian</li>
-                <li>Spanish</li>
-              </ul>
-            </div>
+    <header style="z-index: 99" class="weprodev-header">
+      <div class="weprodev-header__top-section">
+        <img
+          class="weprodev-header__logo"
+          src="img/logo.png"
+          alt="WeProDev Logo"
+        />
+        <div class="weprodev-header__select-lang dropdown">
+          <div class="weprodev-header__select-lang-title">
+            <span class="icon-globe1"></span>
+            Language
+            <span class="icon-chevron-down"></span>
           </div>
 
-          <div class="section-login">
-            <div class="search-box" id="search-btn">
-              <input
-                type="text"
-                class="search-txt"
-                id="input-search"
-                placeholder="search..."
-              />
-              <span
-                class="search-btn fa-solid fa-magnifying-glass"
-                id="input-search-btn"
-              ></span>
-            </div>
-            <div class="section-button">
-              <button class="button-login"><a href="#">login</a></button>
-              <button class="button-freeTemplate">
-                <a href="#">Free Template</a>
-              </button>
-            </div>
-          </div>
-          <!--section login-->
+          <ul class="weprodev-header__select-lang-list dropdown__content">
+            <li class="weprodev-header__select-lang-item">
+              <a href="#" class="link">English</a>
+            </li>
+            <li class="weprodev-header__select-lang-item">
+              <a href="#" class="link">Kurdish</a>
+            </li>
+            <li class="weprodev-header__select-lang-item">
+              <a href="#" class="link">Persian</a>
+            </li>
+          </ul>
         </div>
-      </section>
+        <div class="weprodev-header__search-box search-box-js">
+          <input
+            type="text"
+            class="weprodev-header__search-box-input search-input-js"
+            placeholder="Search..."
+          />
+          <button
+            class="weprodev-header__search-box-button icon-search search-button-js"
+          ></button>
+        </div>
+        <div class="weprodev-header__buttons-container">
+          <button class="weprodev-header__login-button">Login</button>
+          <button class="weprodev-header__free-template-button">
+            Free template
+          </button>
+        </div>
+      </div>
 
-      <!--top bar-->
-      <section class="nav-bar">
-        <ul class="menu">
-          <li>
-            <a href="#" class="l-one">Home</a>
-            <span class="icon-circle-down"></span>
-            <ul class="dropdown" id="dropdown">
-              <li><a href="#" class="l-two">two-one</a></li>
-              <li><a href="#" class="l-two">two-two</a></li>
-              <li><a href="#" class="l-two">two-three</a></li>
-            </ul>
+      <nav class="weprodev-header__navbar">
+        <ul class="weprodev-header__menu">
+          <li class="weprodev-header__menu-item">
+            <a href="#" class="link">Home</a>
           </li>
-          <li>
-            <a href="#" class="l-one">Portfolio</a>
-            <span class="icon-circle-down"></span>
-            <ul class="dropdown" id="dropdown">
-              <li><a href="#" class="l-two">two-one</a></li>
-              <li><a href="#" class="l-two">two-two</a></li>
-              <li><a href="#" class="l-two">two-three</a></li>
-            </ul>
+          <li class="weprodev-header__menu-item">
+            <a href="#" class="link">Portfolio</a>
           </li>
-          <li>
-            <a href="#" class="l-one" id="parent-dropdown">Blog</a>
-            <span class="icon-circle-down"></span>
-            <ul class="dropdown" id="dropdown">
-              <li><a href="#" class="l-two">two-one</a></li>
-              <li><a href="#" class="l-two">two-two</a></li>
-              <li><a href="#" class="l-two">two-three</a></li>
-            </ul>
+          <li class="weprodev-header__menu-item">
+            <a href="#" class="link">Blog</a>
           </li>
-          <li><a href="#" class="l-one last-li-menu">Contact</a></li>
+          <li class="weprodev-header__menu-item">
+            <a href="#" class="link">Contact</a>
+          </li>
         </ul>
-        <div class="search">
-          <span class="icon-search icon-searchh"></span>
-        </div>
-        <div class="search-active">
-          <div class="search-active-content">
-            <span class="icon-search"></span>
-            <input type="text" class="text-search" placeholder="Write..." />
-            <span class="icon-close icon-searchh"></span>
-          </div>
-        </div>
-        <div class="section-responsive icon-menu5"></div>
-      </section>
-    </section>
+      </nav>
+    </header>
 
     <!-- Content Section -->
     <section class="blog-layout">
@@ -412,5 +385,6 @@
     </section>
 
     <script src="js/main.js"></script>
+    <script src="../shared/weprodev-header/js/script.js"></script>
   </body>
 </html>

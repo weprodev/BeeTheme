@@ -6,6 +6,12 @@
   position: relative;
   border-radius: 0.3125rem;
 
+  &:hover {
+    box-shadow: 0 0.625rem 3.125rem -0.3125rem $frostedSlate;
+    transition: all 0.6s;
+    transform: scale(1.01);
+  }
+
   &-img {
     display: flex;
     justify-content: center;
@@ -59,6 +65,12 @@
   display: flex;
   border-radius: 0.3125rem;
 
+  &:hover {
+    box-shadow: 0 0.625rem 3.125rem -0.3125rem $frostedSlate;
+    transition: all 0.6s;
+    transform: scale(1.01);
+  }
+
   .info-card {
     display: flex;
     flex-direction: column;
@@ -111,6 +123,12 @@
   height: 33.8rem;
   padding: nth($spaces, 2);
   cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 0.625rem 3.125rem -0.3125rem $frostedSlate;
+    transition: all 0.6s;
+    transform: scale(1.01);
+  }
 
   &-img {
     display: flex;
