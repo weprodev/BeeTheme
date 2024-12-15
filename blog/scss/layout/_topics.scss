@@ -2,6 +2,7 @@
   justify-content: center;
   display: flex;
   padding-top: nth($spaces, 12);
+  padding-bottom: nth($spaces, 12);
 
   .container {
     h2 {
