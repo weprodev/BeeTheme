@@ -1,4 +1,4 @@
-.weprodev-footer {
+.footer {
   padding-top: nth($spaces, 24);
   color: $white;
   line-height: 1.7;
@@ -6,7 +6,7 @@
   background-image: linear-gradient($obsidianGlow, $obsidianGlow);
   background-size: cover;
 
-  .containerA {
+  .footer__container {
     width: 70%;
     margin: 0 auto;
     display: grid;
@@ -15,23 +15,21 @@
     grid-gap: 0 nth($spaces, 4);
     justify-content: space-between;
 
-    .WeProDev,
-    .ContactInfo,
-    .FollowUs {
+    .footer__section {
       width: 17rem;
 
-      h1 {
+      .footer__title {
         padding-bottom: nth($spaces, 8);
         font-size: 2rem;
         font-weight: bolder;
       }
     }
 
-    .ContactInfo {
+    .footer__contact {
       gap: nth($spaces, 4);
       display: grid;
 
-      h1 {
+      .footer__title {
         padding-bottom: nth($spaces, 6);
       }
 
@@ -47,11 +45,12 @@
       }
     }
 
-    .FollowUs {
+    .footer__follow {
       p {
         padding-bottom: nth($spaces, 8);
       }
-      .inputE {
+
+      .footer__input {
         width: 100%;
         height: 3rem;
         background: $black;
@@ -69,7 +68,7 @@
         }
       }
 
-      .submit {
+      .footer__button {
         background: $coralRed;
         color: $white;
         font-size: 1.1em;
@@ -90,24 +89,26 @@
     }
   }
 
-  &__border {
+  &__divider {
     margin-top: nth($spaces, 20);
     margin-bottom: nth($spaces, 4);
     border-bottom: $blushEmber solid 0.15rem;
     padding-top: nth($spaces, 24);
   }
 
-  .container {
+  .footer__bottom {
     margin: 0 auto;
-    .item-footer {
+    width: 70%;
+
+    &-container {
       display: flex;
       align-items: center;
 
-      .logo {
+      .footer__logo {
         width: 7rem;
       }
 
-      .copy-info {
+      .footer__copy {
         color: $slateGray;
       }
     }
@@ -123,7 +124,7 @@
 	*/
 
   @include miniLaptop {
-    .containerA {
+    .footer__container {
       justify-content: center;
     }
   }
@@ -134,20 +135,20 @@
 	*/
 
   @include tablet {
-    .containerA {
+    .footer__container {
       grid-template-columns: 1fr;
       justify-content: center;
       gap: nth($spaces, 12);
       width: 90%;
 
-      .WeProDev {
+      .footer__about {
         p {
           width: 43rem;
         }
       }
     }
 
-    .container {
+    .footer__bottom {
       width: 90%;
     }
   }
@@ -158,20 +159,20 @@
 	*/
 
   @include retinaMobile {
-    .containerA {
+    .footer__container {
       grid-template-columns: 1fr;
       justify-content: center;
       gap: nth($spaces, 12);
       width: 90%;
 
-      .WeProDev {
+      .footer__about {
         p {
           width: 17rem;
         }
       }
     }
 
-    .container {
+    .footer__bottom {
       width: 90%;
     }
   }
@@ -182,20 +183,20 @@
 	*/
 
   @include mobile {
-    .containerA {
+    .footer__container {
       grid-template-columns: 1fr;
       justify-content: center;
       gap: nth($spaces, 12);
       width: 90%;
 
-      .WeProDev {
+      .footer__about {
         p {
           width: 17rem;
         }
       }
     }
 
-    .container {
+    .footer__bottom {
       width: 90%;
     }
   }
@@ -206,20 +207,20 @@
 	*/
 
   @include miniMobile {
-    .containerA {
+    .footer__container {
       grid-template-columns: 1fr;
       justify-content: center;
       gap: nth($spaces, 12);
       width: 90%;
 
-      .WeProDev {
+      .footer__about {
         p {
           width: 17rem;
         }
       }
     }
 
-    .container {
+    .footer__bottom {
       width: 90%;
     }
   }

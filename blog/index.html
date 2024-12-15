@@ -359,16 +359,16 @@
 
     <!-- FOOTER -->
     <section
-      class="weprodev-footer"
+      class="footer"
       style="
         background-image: linear-gradient(#141414e6, #141414e6),
           url(./img/weprodev-3.jpg);
       "
     >
-      <div class="containerA">
-        <div class="WeProDev">
-          <h1>WeProDev</h1>
-
+      <div class="footer__container">
+        <!-- WeProDev Info -->
+        <div class="footer__section footer__about">
+          <h1 class="footer__title">WeProDev</h1>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque
             nostrum assumenda voluptate excepturi recusandae ducimus impedit
@@ -376,37 +376,42 @@
           </p>
         </div>
 
-        <div class="ContactInfo">
-          <h1>Contact Info</h1>
-
-          <span>
+        <!-- Contact Info -->
+        <div class="footer__section footer__contact">
+          <h1 class="footer__title">Contact Info</h1>
+          <span class="footer__item">
             <i class="fa-solid fa-location-dot"></i>
-            <p>Dadkhah Mall,Enghelab Street</p>
+            <p>Dadkhah Mall, Enghelab Street</p>
           </span>
-
-          <span>
+          <span class="footer__item">
             <i class="fa-solid fa-envelope"></i>
             <p>Youremail@yourdomain.com</p>
           </span>
         </div>
 
-        <div class="FollowUs">
-          <h1>Follow Us</h1>
-
+        <!-- Follow Us -->
+        <div class="footer__section footer__follow">
+          <h1 class="footer__title">Follow Us</h1>
           <p>Subscribe to our newsletter</p>
-
-          <input class="inputE" type="text" placeholder="Enter Your Email" />
-          <input class="submit" type="submit" value="submit" />
+          <div class="footer__form">
+            <input
+              class="footer__input"
+              type="text"
+              placeholder="Enter Your Email"
+            />
+            <input class="footer__button" type="submit" value="Submit" />
+          </div>
         </div>
       </div>
 
-      <div class="weprodev-footer__border"></div>
+      <!-- Footer Border -->
+      <div class="footer__divider"></div>
 
-      <div class="container">
-        <div class="item-footer">
-          <img src="img/favicon.png" alt="logo" class="logo" />
-
-          <p class="copy-info">&copy;2024 All rights reserved</p>
+      <!-- Footer Bottom -->
+      <div class="footer__bottom">
+        <div class="footer__bottom-container">
+          <img src="img/favicon.png" alt="logo" class="footer__logo" />
+          <p class="footer__copy">&copy;2024 All rights reserved</p>
         </div>
       </div>
     </section>
