@@ -2904,7 +2904,7 @@ a {
   }
 }
 
-.weprodev-footer {
+.footer {
   padding-top: 6em;
   color: #fff;
   line-height: 1.7;
@@ -2935,7 +2935,7 @@ a {
   **	MAX : 375PX / 23.4375em
   */
 }
-.weprodev-footer .containerA {
+.footer .footer__container {
   width: 70%;
   margin: 0 auto;
   display: grid;
@@ -2944,36 +2944,32 @@ a {
   grid-gap: 0 1em;
   justify-content: space-between;
 }
-.weprodev-footer .containerA .WeProDev,
-.weprodev-footer .containerA .ContactInfo,
-.weprodev-footer .containerA .FollowUs {
+.footer .footer__container .footer__section {
   width: 17rem;
 }
-.weprodev-footer .containerA .WeProDev h1,
-.weprodev-footer .containerA .ContactInfo h1,
-.weprodev-footer .containerA .FollowUs h1 {
+.footer .footer__container .footer__section .footer__title {
   padding-bottom: 2em;
   font-size: 2rem;
   font-weight: bolder;
 }
-.weprodev-footer .containerA .ContactInfo {
+.footer .footer__container .footer__contact {
   gap: 1em;
   display: grid;
 }
-.weprodev-footer .containerA .ContactInfo h1 {
+.footer .footer__container .footer__contact .footer__title {
   padding-bottom: 1.5em;
 }
-.weprodev-footer .containerA .ContactInfo span i {
+.footer .footer__container .footer__contact span i {
   font-size: 2rem;
 }
-.weprodev-footer .containerA .ContactInfo span p {
+.footer .footer__container .footer__contact span p {
   left: 2rem;
   position: relative;
 }
-.weprodev-footer .containerA .FollowUs p {
+.footer .footer__container .footer__follow p {
   padding-bottom: 2em;
 }
-.weprodev-footer .containerA .FollowUs .inputE {
+.footer .footer__container .footer__follow .footer__input {
   width: 100%;
   height: 3rem;
   background: #000;
@@ -2984,12 +2980,12 @@ a {
   font-size: 1em;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
-.weprodev-footer .containerA .FollowUs .inputE:focus {
+.footer .footer__container .footer__follow .footer__input:focus {
   border-color: rgb(255, 94, 87);
   box-shadow: 0 0 0.625rem rgb(255, 94, 87);
   outline: none;
 }
-.weprodev-footer .containerA .FollowUs .submit {
+.footer .footer__container .footer__follow .footer__button {
   background: rgb(255, 94, 87);
   color: #fff;
   font-size: 1.1em;
@@ -3002,87 +2998,88 @@ a {
   cursor: pointer;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
-.weprodev-footer .containerA .FollowUs .submit:hover {
+.footer .footer__container .footer__follow .footer__button:hover {
   transition: 0.5s;
   background-color: rgba(255, 94, 87, 0.8);
 }
-.weprodev-footer__border {
+.footer__divider {
   margin-top: 5em;
   margin-bottom: 1em;
   border-bottom: rgba(255, 95, 87, 0.659) solid 0.15rem;
   padding-top: 6em;
 }
-.weprodev-footer .container {
+.footer .footer__bottom {
   margin: 0 auto;
+  width: 70%;
 }
-.weprodev-footer .container .item-footer {
+.footer .footer__bottom-container {
   display: flex;
   align-items: center;
 }
-.weprodev-footer .container .item-footer .logo {
+.footer .footer__bottom-container .footer__logo {
   width: 7rem;
 }
-.weprodev-footer .container .item-footer .copy-info {
+.footer .footer__bottom-container .footer__copy {
   color: rgb(173, 181, 189);
 }
 @media screen and (max-width: 64em) {
-  .weprodev-footer .containerA {
+  .footer .footer__container {
     justify-content: center;
   }
 }
 @media screen and (max-width: 62em) {
-  .weprodev-footer .containerA {
+  .footer .footer__container {
     grid-template-columns: 1fr;
     justify-content: center;
     gap: 3em;
     width: 90%;
   }
-  .weprodev-footer .containerA .WeProDev p {
+  .footer .footer__container .footer__about p {
     width: 43rem;
   }
-  .weprodev-footer .container {
+  .footer .footer__bottom {
     width: 90%;
   }
 }
 @media screen and (min-width: 31.25em) and (max-width: 47.9375em) {
-  .weprodev-footer .containerA {
+  .footer .footer__container {
     grid-template-columns: 1fr;
     justify-content: center;
     gap: 3em;
     width: 90%;
   }
-  .weprodev-footer .containerA .WeProDev p {
+  .footer .footer__container .footer__about p {
     width: 17rem;
   }
-  .weprodev-footer .container {
+  .footer .footer__bottom {
     width: 90%;
   }
 }
 @media screen and (max-width: 40em) {
-  .weprodev-footer .containerA {
+  .footer .footer__container {
     grid-template-columns: 1fr;
     justify-content: center;
     gap: 3em;
     width: 90%;
   }
-  .weprodev-footer .containerA .WeProDev p {
+  .footer .footer__container .footer__about p {
     width: 17rem;
   }
-  .weprodev-footer .container {
+  .footer .footer__bottom {
     width: 90%;
   }
 }
 @media screen and (max-width: 25em) {
-  .weprodev-footer .containerA {
+  .footer .footer__container {
     grid-template-columns: 1fr;
     justify-content: center;
     gap: 3em;
     width: 90%;
   }
-  .weprodev-footer .containerA .WeProDev p {
+  .footer .footer__container .footer__about p {
     width: 17rem;
   }
-  .weprodev-footer .container {
+  .footer .footer__bottom {
     width: 90%;
   }
 }
