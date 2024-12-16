@@ -164,7 +164,9 @@
     }
   }
 
-  // Responsive Section
+/*========================================================================================*\
+*----------------------------          MEDIA QUERY              ----------------------------        
+\*========================================================================================*/
 
   /*--------------------------------
 	*** FOR ANY DEVICE MAX SIZE UNTIL
@@ -205,32 +207,19 @@
 
       .main-post {
         width: 75%;
+
+        &__informations {
+          .img__box {
+            img {
+              width: 28rem;
+            }
+          }
+        }
       }
 
       .sidebar {
         width: 75%;
         padding-top: nth($spaces, 8);
-
-        .sidebar__list .sidebar__item {
-          width: 100%;
-        }
-      }
-    }
-  }
-
-  @media screen and (max-width: 768px) {
-    .container {
-      .main-post {
-        width: 100%;
-        height: 39rem;
-
-        .main-post__informations {
-          width: 95%;
-        }
-      }
-
-      .sidebar {
-        width: 100%;
 
         .sidebar__list .sidebar__item {
           width: 100%;
@@ -255,6 +244,16 @@
 
         &__informations {
           width: 95%;
+
+          .img__box {
+            img {
+              width: 23.2rem;
+            }
+          }
+
+          .title-box {
+            width: 90%;
+          }
         }
       }
 
@@ -286,6 +285,16 @@
 
         .main-post__informations {
           width: 95%;
+
+          .img__box {
+            img {
+              width: 23.2rem;
+            }
+          }
+
+          .title-box {
+            width: 90%;
+          }
         }
       }
 
