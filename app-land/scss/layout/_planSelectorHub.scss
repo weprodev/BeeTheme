@@ -104,7 +104,7 @@
     .download-box {
       position: relative;
       display: flex;
-
+      gap: nth($spaces, 8);
       p {
         line-height: 1.7;
         margin-top: nth($spaces, 4);
@@ -117,17 +117,7 @@
         padding: 5rem nth($spaces, 1) nth($spaces, 4) 7rem;
 
         .btn-download {
-          margin-top: 5rem;
-
-          ul {
-            margin-top: 9rem;
-            width: 41%;
-            text-align: center;
-            padding: 0;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-          }
+          margin-top: 2rem;
 
           li {
             display: inline-block;

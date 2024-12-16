@@ -12,6 +12,8 @@
     display: flex;
     justify-content: space-between;
     padding-top: nth($spaces, 8);
+    gap: nth($spaces,8);
+
 
     p {
       width: 24rem;
@@ -32,6 +34,7 @@
     padding-top: nth($spaces, 8);
     display: flex;
     justify-content: space-between;
+    gap: nth($spaces,8);
 
     .card {
       width: 24rem;
@@ -124,8 +127,8 @@
       }
     }
 
-    .card__section {
-      display: grid;
+    .card__section {    
+        display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: nth($spaces, 4);
       align-items: center;
@@ -164,12 +167,9 @@
     }
 
     .card__section {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: nth($spaces, 4);
-      align-items: center;
-      left: -0.5rem;
-      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
 
       .card {
         margin: 0 auto;
@@ -186,43 +186,6 @@
 
           p {
             text-align: start;
-          }
-        }
-      }
-    }
-  }
-
-  /*--------------------------------
-  *** FOR MINI MOBILE
-  **	MAX : 400PX / 25em
-  */
-
-  @include mini_mobile {
-    text-align: center;
-    padding: 5rem nth($spaces, 2) 0rem nth($spaces, 2);
-    width: 100%;
-    left: 0rem;
-
-    .header__section {
-      display: grid;
-      place-items: center;
-
-      p {
-        max-width: 100%;
-        width: 100%;
-        line-height: 1.7;
-      }
-    }
-
-    .card__section {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      .card {
-        margin-top: nth($spaces, 4);
-        &__text-box {
-          .btn {
-            left: -4rem;
           }
         }
       }
@@ -257,10 +220,8 @@
       }
     }
 
-    .card__section {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
+    .card__section {    
+      
       .card {
         margin-top: nth($spaces, 4);
         width: 22rem;
@@ -271,6 +232,40 @@
           }
           .btn {
             left: -3rem;
+          }
+        }
+      }
+    }
+  }
+
+  /*--------------------------------
+  *** FOR MINI MOBILE
+  **	MAX : 400PX / 25em
+  */
+
+  @include miniMobile {
+    text-align: center;
+    padding: 5rem nth($spaces, 2) 0rem nth($spaces, 2);
+    width: 100%;
+    left: 0rem;
+
+    .header__section {
+      display: grid;
+      place-items: center;
+
+      p {
+        max-width: 100%;
+        width: 100%;
+        line-height: 1.7;
+      }
+    }
+
+    .card__section {
+      .card {
+        margin-top: nth($spaces, 4);
+        &__text-box {
+          .btn {
+            left: -4rem;
           }
         }
       }
