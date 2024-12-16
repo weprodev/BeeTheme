@@ -106,6 +106,14 @@
     opacity: 0;
   }
 }
+@keyframes background-movement {
+  0% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
+}
 *,
 *::before,
 *::after {
@@ -132,6 +140,7 @@ picture,
 svg,
 video {
   display: block;
+  width: 100%;
 }
 
 a {
@@ -386,6 +395,22 @@ a {
 ***  SET DIRECTION BEFORE ANYTHING
 **   
 */
+@media screen and (min-width: 75.0625em) {
+  html {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (min-width: 87.5em) {
+  html {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (min-width: 160em) {
+  html {
+    font-size: 2rem;
+  }
+}
+
 body {
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
@@ -412,6 +437,7 @@ body li {
 **   
 */
 .cta__button--button {
+  font-size: 1rem;
   width: 7rem;
   height: 3rem;
   background: rgb(84, 234, 84);
@@ -622,12 +648,12 @@ body li {
   **	MAX-WIDTH : 992px OR 62em
   */
   /*--------------------------------
-  *** FOR MINI MOBILE
-  **	MAX : 400PX / 25em
-  */
-  /*--------------------------------
   *** FOR MOBILE
   **	MAX : 640PX / 40em
+  */
+  /*--------------------------------
+  *** FOR MINI MOBILE
+  **	MAX : 400PX / 25em
   */
 }
 .explore__hub h2 {
@@ -638,6 +664,7 @@ body li {
   display: flex;
   justify-content: space-between;
   padding-top: 2em;
+  gap: 2em;
 }
 .explore__hub .header__section p {
   width: 24rem;
@@ -655,6 +682,7 @@ body li {
   padding-top: 2em;
   display: flex;
   justify-content: space-between;
+  gap: 2em;
 }
 .explore__hub .card__section .card {
   width: 24rem;
@@ -758,12 +786,9 @@ body li {
     padding-top: 1em;
   }
   .explore__hub .card__section {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1em;
-    align-items: center;
-    left: -0.5rem;
-    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
   }
   .explore__hub .card__section .card {
     margin: 0 auto;
@@ -777,34 +802,6 @@ body li {
   }
   .explore__hub .card__section .card__text-box p {
     text-align: start;
-  }
-}
-@media screen and (max-width: 25em) {
-  .explore__hub {
-    text-align: center;
-    padding: 5rem 0.5em 0rem 0.5em;
-    width: 100%;
-    left: 0rem;
-  }
-  .explore__hub .header__section {
-    display: grid;
-    place-items: center;
-  }
-  .explore__hub .header__section p {
-    max-width: 100%;
-    width: 100%;
-    line-height: 1.7;
-  }
-  .explore__hub .card__section {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
-  .explore__hub .card__section .card {
-    margin-top: 1em;
-  }
-  .explore__hub .card__section .card__text-box .btn {
-    left: -4rem;
   }
 }
 @media screen and (max-width: 40em) {
@@ -828,11 +825,6 @@ body li {
     width: 100%;
     line-height: 1.7;
   }
-  .explore__hub .card__section {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
   .explore__hub .card__section .card {
     margin-top: 1em;
     width: 22rem;
@@ -843,6 +835,29 @@ body li {
   }
   .explore__hub .card__section .card__text-box .btn {
     left: -3rem;
+  }
+}
+@media screen and (max-width: 25em) {
+  .explore__hub {
+    text-align: center;
+    padding: 5rem 0.5em 0rem 0.5em;
+    width: 100%;
+    left: 0rem;
+  }
+  .explore__hub .header__section {
+    display: grid;
+    place-items: center;
+  }
+  .explore__hub .header__section p {
+    max-width: 100%;
+    width: 100%;
+    line-height: 1.7;
+  }
+  .explore__hub .card__section .card {
+    margin-top: 1em;
+  }
+  .explore__hub .card__section .card__text-box .btn {
+    left: -4rem;
   }
 }
 
@@ -868,6 +883,9 @@ body li {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
+}
+.smart__solutions--img-box {
+  align-self: flex-end;
 }
 .smart__solutions--information-box {
   padding-top: 2em;
@@ -952,6 +970,7 @@ body li {
   display: flex;
   justify-content: space-evenly;
   line-height: 1.4;
+  gap: 2em;
 }
 .customer__reviews--header-section p {
   width: 24rem;
@@ -965,6 +984,7 @@ body li {
   padding-top: 2em;
   display: flex;
   justify-content: space-evenly;
+  gap: 2em;
 }
 .customer__reviews--card-section .card {
   width: 24rem;
@@ -1078,9 +1098,9 @@ body li {
     margin: 0 auto;
   }
   .customer__reviews--card-section {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
   }
   .customer__reviews--card-section .card {
     margin: 0 auto;
@@ -1106,11 +1126,6 @@ body li {
   .customer__reviews--header-section h1 {
     width: 22rem;
     margin: o auto;
-  }
-  .customer__reviews--card-section {
-    display: grid;
-    gap: 1em;
-    grid-template-columns: repeat(1, 1fr);
   }
   .customer__reviews--card-section .card {
     width: 22rem;
@@ -1217,6 +1232,7 @@ body li {
 .plan__Selector__Hub .plans .download-box {
   position: relative;
   display: flex;
+  gap: 2em;
 }
 .plan__Selector__Hub .plans .download-box p {
   line-height: 1.7;
@@ -1229,16 +1245,7 @@ body li {
   padding: 5rem 0.25em 1em 7rem;
 }
 .plan__Selector__Hub .plans .download-box .information-section .btn-download {
-  margin-top: 5rem;
-}
-.plan__Selector__Hub .plans .download-box .information-section .btn-download ul {
-  margin-top: 9rem;
-  width: 41%;
-  text-align: center;
-  padding: 0;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  margin-top: 2rem;
 }
 .plan__Selector__Hub .plans .download-box .information-section .btn-download li {
   display: inline-block;
@@ -1516,7 +1523,7 @@ body li {
     position: relative;
   }
   .footer__section .footer__social-list {
-    gap: 1em;
+    display: none;
   }
   .footer__section .footer__section {
     width: 23rem;

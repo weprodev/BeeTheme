@@ -19,6 +19,8 @@
     display: flex;
     justify-content: space-evenly;
     line-height: 1.4;
+    gap: nth($spaces,8);
+
 
     p {
       width: 24rem;
@@ -35,6 +37,8 @@
     padding-top: list.nth($spaces, 8);
     display: flex;
     justify-content: space-evenly;
+    gap: nth($spaces,8);
+
 
     .card {
       width: 24rem;
@@ -134,7 +138,7 @@
 	**	MAX-WIDTH : 1024px OR 64em
 	*/
 
-  @include mini_laptop {
+  @include miniLaptop {
     &--header-section {
       display: grid;
       gap: list.nth($spaces, 4);
@@ -187,9 +191,9 @@
     }
 
     &--card-section {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: list.nth($spaces, 4);
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
 
       .card {
         margin: 0 auto;
@@ -202,7 +206,7 @@
   ** MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
   */
 
-  @include mini_laptop {
+  @include miniLaptop {
     &--header-section {
       h1 {
         width: 100%;
@@ -233,10 +237,6 @@
     }
 
     &--card-section {
-      display: grid;
-      gap: list.nth($spaces, 4);
-      grid-template-columns: repeat(1, 1fr);
-
       .card {
         width: 22rem;
       }
