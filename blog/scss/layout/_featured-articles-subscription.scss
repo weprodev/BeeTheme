@@ -1,0 +1,394 @@
+.blog__highlights {
+  height: 32.1rem;
+  background-color: $softSky;
+  padding: nth($spaces, 2);
+  cursor: pointer;
+  position: relative;
+  border-radius: 0.3125rem;
+
+  &:hover {
+    box-shadow: 0 0.625rem 3.125rem -0.3125rem $frostedSlate;
+    transition: all 0.6s;
+    transform: scale(1.01);
+  }
+
+  &-img {
+    display: flex;
+    justify-content: center;
+    height: 11.5rem;
+    width: 14.5rem;
+    padding: 0.2rem 0 0 1.2rem;
+
+    img {
+      width: 95%;
+      object-fit: cover;
+      border-radius: 0.3125rem 0.3125rem 0 0;
+    }
+  }
+
+  .info-card {
+    padding-top: nth($spaces, 4);
+    display: flex;
+    flex-direction: column;
+
+    p {
+      padding: 0.6rem nth($spaces, 4) nth($spaces, 8) nth($spaces, 4);
+      font-size: 0.7em;
+      padding-left: 12px;
+    }
+
+    h2 {
+      padding: 0 0.875rem 10rem 0.875rem;
+      margin: 0;
+      line-height: 0.9;
+
+      a {
+        font-size: 1rem;
+        font-weight: unset;
+      }
+    }
+
+    .blog-meta {
+      font-size: 0.5625rem;
+      padding-left: nth($spaces, 2);
+    }
+  }
+}
+
+.marke__tingHub {
+  height: 32.1rem;
+  background-color: $coralRed;
+  padding: nth($spaces, 2);
+  cursor: pointer;
+  color: $white;
+  justify-content: center;
+  display: flex;
+  border-radius: 0.3125rem;
+
+  &:hover {
+    box-shadow: 0 0.625rem 3.125rem -0.3125rem $frostedSlate;
+    transition: all 0.6s;
+    transform: scale(1.01);
+  }
+
+  .info-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 90%;
+
+    h3 {
+      font-size: $fontSize2Xl;
+      font-weight: bold;
+      padding: nth($spaces, 20) 0 nth($spaces, 4) 0;
+      width: 80%;
+      margin: 0 auto;
+      top: -5rem;
+      position: relative;
+    }
+
+    p {
+      font-size: 0.9em;
+      margin: 0 auto;
+      padding: 0 nth($spaces, 2);
+      top: -1rem;
+      position: relative;
+    }
+
+    .btn-box {
+      padding: nth($spaces, 8) 0 0 nth($spaces, 4);
+
+      button {
+        width: 100%;
+        font-size: 0.8em;
+        height: 3.5em;
+        background: transparent;
+        border-color: $white;
+        color: $white;
+        font-weight: bold;
+        margin-bottom: nth($spaces, 4);
+        cursor: pointer;
+
+        &:hover {
+          background-color: $blushCoral;
+        }
+      }
+    }
+  }
+}
+
+.content__card {
+  background-color: $softSky;
+  height: 33.8rem;
+  padding: nth($spaces, 2);
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 0.625rem 3.125rem -0.3125rem $frostedSlate;
+    transition: all 0.6s;
+    transform: scale(1.01);
+  }
+
+  &-img {
+    display: flex;
+    justify-content: center;
+    height: 58%;
+
+    img {
+      width: 94%;
+      object-fit: cover;
+      object-position: top;
+      border-radius: 0.3125rem 0.3125rem 0 0;
+    }
+  }
+
+  .info-card {
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    height: 40%;
+    width: 100%;
+
+    p {
+      padding: 2.2em 0 1.375rem 0;
+      font-size: 0.7rem;
+    }
+
+    h2 {
+      padding: 0.5625rem 0 5.4em 0.1875rem;
+      margin: 0;
+      font-size: 1.0625rem;
+      font-weight: bold;
+      word-spacing: 0.1875rem;
+      line-height: 1.3;
+    }
+
+    .blog-meta {
+      font-size: 0.59375rem;
+      left: -0.1875rem;
+      position: relative;
+    }
+  }
+}
+
+.featured_articles_aubscription {
+  padding-top: nth($spaces, 4);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  .container {
+    width: 62%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    .box1,
+    .box2,
+    .box3 {
+      display: grid;
+      justify-content: space-between;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 0 nth($spaces, 4);
+    }
+
+    .box2,
+    .box3 {
+      padding-top: nth($spaces, 4);
+      grid-template-columns: 2fr 4fr;
+
+      .marke__tingHub {
+        .info-card {
+          h1 {
+            width: 70%;
+            margin: 0 auto;
+            line-height: 1.9;
+          }
+
+          button {
+            top: 4rem;
+            position: relative;
+          }
+        }
+      }
+    }
+
+    .box2 {
+      .marke__tingHub {
+        height: 33.8rem;
+
+        .info-card {
+          h1 {
+            width: 90%;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-size: 2rem;
+            padding: nth($spaces, 6) 0;
+            font-weight: 100;
+          }
+
+          .btn-box {
+            padding: 0;
+
+            button {
+              width: 100%;
+              font-size: 0.8em;
+              height: 4.5em;
+              background: transparent;
+              border-color: $white;
+              color: $white;
+              font-weight: bold;
+              cursor: pointer;
+              margin: 0 auto;
+              top: 2rem;
+            }
+          }
+        }
+      }
+
+      .content__card {
+        .info-card {
+          h2 {
+            padding-bottom: nth($spaces, 20);
+          }
+        }
+      }
+    }
+
+    .box3 {
+      grid-template-columns: 4fr 2fr;
+
+      .content__card {
+        height: 32rem;
+      }
+
+      .blog__highlights {
+        height: 32rem;
+
+        .info-card h2 {
+          padding: 0 0.875rem 11.1rem 0.875rem;
+        }
+      }
+    }
+  }
+
+  /*========================================================================================*\
+  *----------------------------          MEDIA QUERY              ----------------------------        
+  \*========================================================================================*/
+
+  /*--------------------------------
+	*** FOR ANY DEVICE MAX SIZE UNTIL
+	**	MAX-WIDTH : 992px OR 62em
+	*/
+
+  @include tablet {
+    .container {
+      align-items: center;
+
+      .box1,
+      .box2,
+      .box3 {
+        grid-template-columns: 1fr;
+        grid-gap: nth($spaces, 4);
+
+        .blog__highlights {
+          height: 26.1rem;
+
+          .blog__highlights-img {
+            display: flex;
+            justify-content: center;
+            height: 11.5rem;
+            width: 100%;
+            padding: 0;
+
+            & img {
+              width: 90%;
+            }
+          }
+
+          .info-card {
+            padding: 0rem nth($spaces, 4) nth($spaces, 4) 0rem;
+
+            h2 {
+              padding: 0 0.875rem 6.5rem 0.875rem;
+            }
+          }
+        }
+
+        .marke__tingHub {
+          width: 35.1rem;
+          margin: 0 auto;
+        }
+
+        .content__card {
+          height: 26.1rem;
+          width: 35.1rem;
+
+          .content__card-img {
+            display: flex;
+            justify-content: center;
+            height: 11.5rem;
+            width: 100%;
+            padding: 0;
+
+            & img {
+              width: 90%;
+            }
+          }
+
+          .info-card {
+            h2 {
+              padding: 0 0.875rem 6.5rem 0.875rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /*--------------------------------
+	*** FOR RETINA MOBILE AND LANSCAPE
+	**	MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
+	*/
+
+  @include retinaMobile {
+    .container {
+      .box1,
+      .box2,
+      .box3 {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  /*--------------------------------
+	*** FOR MOBILE
+	**	MAX : 640PX / 40em
+	*/
+
+  @include mobile {
+    .container {
+      .box1,
+      .box2,
+      .box3 {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  /*--------------------------------
+	*** FOR MINI MOBILE
+	**	MAX : 375PX / 23.4375em
+	*/
+
+  @include miniMobile {
+    .container {
+      .box1,
+      .box2,
+      .box3 {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}

@@ -1,21 +1,67 @@
-body {
-  font-family: $primaryFontFamily;
+html {
+  body {
+    font-family: $primaryFontFamily;
 
-  a {
-    text-decoration: none;
-    color: $black;
+    a {
+      text-decoration: none;
+      color: $black;
 
-    &:hover {
-      transition: 0.5s;
-      color: $lightGray;
+      &:hover {
+        transition: 0.5s;
+      }
+    }
+
+    li {
+      list-style-type: none;
+    }
+
+    * {
+      font: revert;
+    }
+
+    hr {
+      width: 43rem;
+      margin: 0 auto;
+      display: none;
+      border-color: $black;
+    }
+
+    .hr {
+      width: 50rem;
+      display: block;
+      top: 2rem;
+      position: relative;
     }
   }
 
-  li {
-    list-style-type: none;
+ /*========================================================================================*\
+ *----------------------------          MEDIA QUERY              ----------------------------        
+ \*========================================================================================*/
+
+  /*--------------------------------
+	*** 4K AND HIGH RESOULOTIONS 
+	**	MIN-WIDTH : 2560px OR 160em
+	*/
+
+  @include led4k {
+    font-size: 2rem;
   }
 
-  * {
-    font: revert;
+  /*--------------------------------
+	*** FOR ANY DEVICE MAX SIZE UNTIL
+	**	MAX-WIDTH : 992px OR 62em
+	*/
+
+  @include tablet {
+    body {
+      hr {
+        display: block;
+        width: 100%;
+      }
+
+      .hr {
+        width: 100%;
+      }
+    }
   }
 }

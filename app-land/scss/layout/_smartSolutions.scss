@@ -10,6 +10,11 @@
     justify-content: space-evenly;
   }
 
+  &--img-box{
+    align-self: flex-end;
+  }
+
+
   &--information-box {
     padding-top: $rounded4Xl;
 

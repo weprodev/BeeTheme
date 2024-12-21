@@ -69,6 +69,17 @@ const demos = [
     mainImage: "product-details-main.png",
     entirePageImage: "product-details-entire.png",
   },
+  {
+    id: 6,
+    name: "Blog",
+    createdBy: {
+      name: "Max Richard",
+      github: "https://github.com/MaxRichard2007",
+    },
+    url: "blog/index.html",
+    mainImage: "blog-main.png",
+    entirePageImage: "blog-entire.png",
+  },
 ];
 
 /*------------------------------------*\

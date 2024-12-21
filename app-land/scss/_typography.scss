@@ -1,3 +1,15 @@
+html {
+  @include lcd{
+    font-size: 1.1rem;
+  }
+  @include led{
+    font-size: 1.3rem;
+  }
+  @include led4k{
+    font-size: 2rem;
+  }
+}
+
 body {
   font-family: $primaryFontFamily;
   overflow-x: hidden;

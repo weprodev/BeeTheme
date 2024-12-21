@@ -27,6 +27,13 @@
     @import "typography";
 
     /*--------------------------------
+    ***  Icon
+    **   Search Icon
+    */
+
+    @import "./icomoon";
+
+    /*--------------------------------
     ***  COMPONENTS
     **   Import specific components
     */
@@ -45,8 +52,11 @@
     **   Import layout-specific styles
     */
 
-    @import "layout/nav-bar.scss";
-    @import "layout/top-bar.scss";
+    @import "../../shared/weprodev-header/scss/main.scss";
+    @import "layout/content-section";
+    @import "layout/featured-articles-subscription";
+    @import "layout/topics";
+    @import "layout/footer";
 
 /*
 ***         

@@ -10,100 +10,386 @@
       href="https://site-assets.fontawesome.com/releases/v6.2.1/css/all.css"
     />
 
+    <!-- FAVICON -->
+    <link rel="icon" href="img/favicon.png" type="image/png" />
+
     <link rel="stylesheet" href="css/style.css" />
     <title>Blog</title>
   </head>
   <body>
-    <!-- Header -->
-    <section>
-      <section class="top-bar">
-        <div class="top-bar-contant">
-          <div class="select-lang">
-            <i class="fa-solid fa-globe"></i>
-
-            <div class="dropdown">
-              <div class="select">
-                <span class="selected">Language</span>
-                <div class="cart"></div>
-              </div>
-              <ul class="menu">
-                <li class="active">English</li>
-                <li>Persian</li>
-                <li>Spanish</li>
-              </ul>
-            </div>
+    <!-- HEADER -->
+    <header style="z-index: 99" class="weprodev-header">
+      <div class="weprodev-header__top-section">
+        <img
+          class="weprodev-header__logo"
+          src="img/logo.png"
+          alt="WeProDev Logo"
+        />
+        <div class="weprodev-header__select-lang dropdown">
+          <div class="weprodev-header__select-lang-title">
+            <span class="icon-globe1"></span>
+            Language
+            <span class="icon-chevron-down"></span>
           </div>
 
-          <div class="section-login">
-            <div class="search-box" id="search-btn">
-              <input
-                type="text"
-                class="search-txt"
-                id="input-search"
-                placeholder="search..."
-              />
-              <span
-                class="search-btn fa-solid fa-magnifying-glass"
-                id="input-search-btn"
-              ></span>
-            </div>
-            <div class="section-button">
-              <button class="button-login"><a href="#">login</a></button>
-              <button class="button-freeTemplate">
-                <a href="#">Free Template</a>
-              </button>
-            </div>
-          </div>
-          <!--section login-->
+          <ul class="weprodev-header__select-lang-list dropdown__content">
+            <li class="weprodev-header__select-lang-item">
+              <a href="#" class="link">English</a>
+            </li>
+            <li class="weprodev-header__select-lang-item">
+              <a href="#" class="link">Kurdish</a>
+            </li>
+            <li class="weprodev-header__select-lang-item">
+              <a href="#" class="link">Persian</a>
+            </li>
+          </ul>
         </div>
-      </section>
+        <div class="weprodev-header__search-box search-box-js">
+          <input
+            type="text"
+            class="weprodev-header__search-box-input search-input-js"
+            placeholder="Search..."
+          />
+          <button
+            class="weprodev-header__search-box-button icon-search search-button-js"
+          ></button>
+        </div>
+        <div class="weprodev-header__buttons-container">
+          <button class="weprodev-header__login-button">Login</button>
+          <button class="weprodev-header__free-template-button">
+            Free template
+          </button>
+        </div>
+      </div>
 
-      <!--top bar-->
-      <section class="nav-bar">
-        <ul class="menu">
-          <li>
-            <a href="#" class="l-one">Home</a>
-            <span class="icon-circle-down"></span>
-            <ul class="dropdown" id="dropdown">
-              <li><a href="#" class="l-two">two-one</a></li>
-              <li><a href="#" class="l-two">two-two</a></li>
-              <li><a href="#" class="l-two">two-three</a></li>
-            </ul>
+      <nav class="weprodev-header__navbar">
+        <ul class="weprodev-header__menu">
+          <li class="weprodev-header__menu-item">
+            <a href="#" class="link">Home</a>
           </li>
-          <li>
-            <a href="#" class="l-one">Portfolio</a>
-            <span class="icon-circle-down"></span>
-            <ul class="dropdown" id="dropdown">
-              <li><a href="#" class="l-two">two-one</a></li>
-              <li><a href="#" class="l-two">two-two</a></li>
-              <li><a href="#" class="l-two">two-three</a></li>
-            </ul>
+          <li class="weprodev-header__menu-item">
+            <a href="#" class="link">Portfolio</a>
           </li>
-          <li>
-            <a href="#" class="l-one" id="parent-dropdown">Blog</a>
-            <span class="icon-circle-down"></span>
-            <ul class="dropdown" id="dropdown">
-              <li><a href="#" class="l-two">two-one</a></li>
-              <li><a href="#" class="l-two">two-two</a></li>
-              <li><a href="#" class="l-two">two-three</a></li>
-            </ul>
+          <li class="weprodev-header__menu-item">
+            <a href="#" class="link">Blog</a>
           </li>
-          <li><a href="#" class="l-one last-li-menu">Contact</a></li>
+          <li class="weprodev-header__menu-item">
+            <a href="#" class="link">Contact</a>
+          </li>
         </ul>
-        <div class="search">
-          <span class="icon-search icon-searchh"></span>
-        </div>
-        <div class="search-active">
-          <div class="search-active-content">
-            <span class="icon-search"></span>
-            <input type="text" class="text-search" placeholder="Write..." />
-            <span class="icon-close icon-searchh"></span>
+      </nav>
+    </header>
+
+    <!-- CONTENT SECTION -->
+    <section class="blog-layout">
+      <div class="container">
+        <div class="main-post">
+          <div class="main-post__informations">
+            <div class="img__box">
+              <img
+                src="img/blogging.jpg"
+                alt="Blog Image"
+                class="img__box-img"
+              />
+            </div>
+
+            <div class="title-box">
+              <h2 class="main-post__title">
+                <a href="#"
+                  >How to Write a Blog Post: A Step-by-Step Guide [+ Free Blog
+                  Post Templates]</a
+                >
+              </h2>
+              <div class="main-post__info">
+                <span class="reading-time">Marketing | 18 Min Read</span>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="section-responsive icon-menu5"></div>
-      </section>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+          <h3 class="sidebar__title">
+            <p>Most Popular</p>
+          </h3>
+          <ul class="sidebar__list">
+            <li class="sidebar__item">
+              <h4 class="sidebar__item-title">
+                How to Create a Sales Plan: Template + Examples
+              </h4>
+              <div class="blog-meta">
+                <a href="#">Sales | 3 Min Read</a>
+              </div>
+            </li>
+            <li class="sidebar__item sidebar__item-b">
+              <h4 class="sidebar__item-title">
+                How to Ask for a Referral to a Potential Client [+ Free Email
+                Templates]
+              </h4>
+              <div class="blog-meta">
+                <a href="#">Sales | 3 Min Read</a>
+              </div>
+            </li>
+            <li class="sidebar__item sidebar__item-b">
+              <h4 class="sidebar__item-title">
+                5 Steps to Create an Outstanding Marketing Plan [Free Templates]
+              </h4>
+              <div class="blog-meta">
+                <a href="#">Sales | 3 Min Read</a>
+              </div>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- FEATURED ARTICLES AND SUBSCRIPTION -->
+    <section class="featured_articles_aubscription">
+      <div class="container">
+        <div class="box1">
+          <div class="blog__highlights">
+            <div class="blog__highlights-img">
+              <img src="img/blog2.jpg" alt="Blog Image" />
+            </div>
+
+            <div class="info-card">
+              <p>Content type</p>
+              <h2>
+                <a href="#">
+                  The Ultimate Guide to Managing Remote Marketing Teams
+                </a>
+              </h2>
+              <div class="blog-meta">
+                <a href="#">MARKETING | 2 MIN READ</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="blog__highlights">
+            <div class="blog__highlights-img">
+              <img src="img/blog1.png" alt="Blog Image" />
+            </div>
+
+            <div class="info-card">
+              <p>Content type</p>
+              <h2>
+                <a href="#">
+                  The 5 Key Components of a Killer Customer Marketing Strategy
+                </a>
+              </h2>
+              <div class="blog-meta">
+                <a href="#">MARKETING | 7 MIN READ</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="marke__tingHub">
+            <div class="info-card">
+              <h3>Subscribe to Our Blog</h3>
+
+              <p>
+                Stay up to date with the latest marketing, sales, and service
+                tips and news.
+              </p>
+
+              <div class="btn-box">
+                <button>Subscribe via Email</button>
+                <button>Subscribe on Slack</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="box2">
+          <div class="marke__tingHub">
+            <div class="info-card">
+              <h1>2020 State of Marketing Report</h1>
+
+              <div class="btn-box">
+                <button>Explore the Report</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="content__card">
+            <div class="content__card-img">
+              <img src="img/blog5.jpg" alt="" />
+            </div>
+
+            <div class="info-card">
+              <p>Content type</p>
+              <h2>
+                <a href="#">
+                  7 Tips for Working Remotely with Roommates or Family, From
+                  HubSpot Marketers
+                </a>
+              </h2>
+              <div class="blog-meta">
+                <a href="#">MARKETING | 11 MIN READ</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="box3">
+          <div class="content__card">
+            <div class="content__card-img">
+              <img src="img/blog4.png" alt="" />
+            </div>
+
+            <div class="info-card">
+              <p>Content type</p>
+              <h2>
+                <a href="#">
+                  How My Sales Team Hit Quota Every Month for A Year
+                </a>
+              </h2>
+              <div class="blog-meta">
+                <a href="#">SALES | 5 MIN READ</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="blog__highlights">
+            <div class="blog__highlights-img">
+              <img src="img/blog2.jpg" alt="" />
+            </div>
+
+            <div class="info-card">
+              <p>Content type</p>
+              <h2>
+                <a href="#"> 12 Female Entrepreneurs You Need to Follow </a>
+              </h2>
+              <div class="blog-meta">
+                <a href="#"> SALES | 8 MIN READ</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="hr" />
+
+    <!-- TOPICS -->
+    <section class="topics">
+      <div class="container">
+        <h2>Explore More Topic</h2>
+        <p>
+          Ready to brush up on something new? We've got more to read right this
+          way.
+        </p>
+
+        <div class="more-topics">
+          <div class="topic">
+            <a href="#">
+              <span>Customer Retention</span>
+              <div class="cart"></div>
+            </a>
+            <a href="#">
+              <span>Customer Experience</span>
+              <div class="cart"></div>
+            </a>
+            <a href="#">
+              <span>SEO</span>
+              <div class="cart"></div>
+            </a>
+            <a href="#">
+              <span>Instagram Marketing</span>
+              <div class="cart"></div>
+            </a>
+            <a href="#">
+              <span>Email Newsletters</span>
+              <div class="cart"></div>
+            </a>
+
+            <a href="#">
+              <span>Email Marketing</span>
+              <div class="cart"></div>
+            </a>
+            <a href="#">
+              <span>Sales Qualification</span>
+              <div class="cart"></div>
+            </a>
+            <a href="#">
+              <span>Sales Process</span>
+              <div class="cart"></div>
+            </a>
+            <a href="#">
+              <span>Sales Prospecting</span>
+              <div class="cart"></div>
+            </a>
+            <a href="#">
+              <span>Remote work</span>
+              <div class="cart"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <section
+      class="footer"
+      style="
+        background-image: linear-gradient(#141414e6, #141414e6),
+          url(./img/weprodev-3.jpg);
+      "
+    >
+      <div class="footer__container">
+        <!-- WeProDev Info -->
+        <div class="footer__section footer__about">
+          <h1 class="footer__title">WeProDev</h1>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque
+            nostrum assumenda voluptate excepturi recusandae ducimus impedit
+            totam culpa quidem beatae recusandae ducimus impedit
+          </p>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer__section footer__contact">
+          <h1 class="footer__title">Contact Info</h1>
+          <span class="footer__item">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>Dadkhah Mall, Enghelab Street</p>
+          </span>
+          <span class="footer__item">
+            <i class="fa-solid fa-envelope"></i>
+            <p>Youremail@yourdomain.com</p>
+          </span>
+        </div>
+
+        <!-- Follow Us -->
+        <div class="footer__section footer__follow">
+          <h1 class="footer__title">Follow Us</h1>
+          <p>Subscribe to our newsletter</p>
+          <div class="footer__form">
+            <input
+              class="footer__input"
+              type="text"
+              placeholder="Enter Your Email"
+            />
+            <input class="footer__button" type="submit" value="Submit" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Border -->
+      <div class="footer__divider"></div>
+
+      <!-- Footer Bottom -->
+      <div class="footer__bottom">
+        <div class="footer__bottom-container">
+          <img src="img/favicon.png" alt="logo" class="footer__logo" />
+          <p class="footer__copy">&copy;2024 All rights reserved</p>
+        </div>
+      </div>
     </section>
 
     <script src="js/main.js"></script>
+    <script src="../shared/weprodev-header/js/script.js"></script>
   </body>
 </html>

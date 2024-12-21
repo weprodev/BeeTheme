@@ -46,7 +46,7 @@
   ** MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
   */
 
-  @include mini_laptop {
+  @include miniLaptop {
     .footer {
       &__brand {
         font-size: $fontSizeXl;
@@ -106,7 +106,7 @@
 
       &__social {
         &-list {
-          gap: nth($spaces, 4);
+          display: none;
         }
       }
 

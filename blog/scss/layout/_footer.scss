@@ -1,0 +1,227 @@
+.footer {
+  padding-top: nth($spaces, 24);
+  color: $white;
+  line-height: 1.7;
+  font-weight: $fontWeightRegular;
+  background-image: linear-gradient($obsidianGlow, $obsidianGlow);
+  background-size: cover;
+
+  .footer__container {
+    width: 70%;
+    margin: 0 auto;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0 nth($spaces, 4);
+    justify-content: space-between;
+
+    .footer__section {
+      width: 17rem;
+
+      .footer__title {
+        padding-bottom: nth($spaces, 8);
+        font-size: 2rem;
+        font-weight: bolder;
+      }
+    }
+
+    .footer__contact {
+      gap: nth($spaces, 4);
+      display: grid;
+
+      .footer__title {
+        padding-bottom: nth($spaces, 6);
+      }
+
+      span {
+        i {
+          font-size: 2rem;
+        }
+
+        p {
+          left: 2rem;
+          position: relative;
+        }
+      }
+    }
+
+    .footer__follow {
+      p {
+        padding-bottom: nth($spaces, 8);
+      }
+
+      .footer__input {
+        width: 100%;
+        height: 3rem;
+        background: $black;
+        border: $roundedSm solid $white;
+        border-radius: 0.3125rem;
+        color: $white;
+        padding: nth($spaces, 4);
+        font-size: $fontSizeBase;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+        &:focus {
+          border-color: $coralRed;
+          box-shadow: 0 0 0.625rem $coralRed;
+          outline: none;
+        }
+      }
+
+      .footer__button {
+        background: $coralRed;
+        color: $white;
+        font-size: 1.1em;
+        position: relative;
+        border: 0.0625rem solid $coralRed;
+        height: 3rem;
+        width: 100%;
+        border-radius: 0.3125rem 0.3125rem 0.3125rem 0.3125rem;
+        top: 1em;
+        cursor: pointer;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+          transition: 0.5s;
+          background-color: $blushRed;
+        }
+      }
+    }
+  }
+
+  &__divider {
+    margin-top: nth($spaces, 20);
+    margin-bottom: nth($spaces, 4);
+    border-bottom: $blushEmber solid 0.15rem;
+    padding-top: nth($spaces, 24);
+  }
+
+  .footer__bottom {
+    margin: 0 auto;
+    width: 70%;
+
+    &-container {
+      display: flex;
+      align-items: center;
+
+      .footer__logo {
+        width: 7rem;
+      }
+
+      .footer__copy {
+        color: $slateGray;
+      }
+    }
+  }
+
+  /*========================================================================================*\
+  *----------------------------          MEDIA QUERY              ----------------------------        
+  \*========================================================================================*/
+
+  /*--------------------------------
+	*** FOR ANY DEVICE MAX SIZE UNTIL
+	**	MAX-WIDTH : 1024px OR 64em
+	*/
+
+  @include miniLaptop {
+    .footer__container {
+      justify-content: center;
+    }
+  }
+
+  /*--------------------------------
+	*** FOR ANY DEVICE MAX SIZE UNTIL
+	**	MAX-WIDTH : 992px OR 62em
+	*/
+
+  @include tablet {
+    .footer__container {
+      grid-template-columns: 1fr;
+      justify-content: center;
+      gap: nth($spaces, 12);
+      width: 90%;
+
+      .footer__about {
+        p {
+          width: 43rem;
+        }
+      }
+    }
+
+    .footer__bottom {
+      width: 90%;
+    }
+  }
+
+  /*--------------------------------
+	*** FOR RETINA MOBILE AND LANSCAPE
+	**	MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
+	*/
+
+  @include retinaMobile {
+    .footer__container {
+      grid-template-columns: 1fr;
+      justify-content: center;
+      gap: nth($spaces, 12);
+      width: 90%;
+
+      .footer__about {
+        p {
+          width: 17rem;
+        }
+      }
+    }
+
+    .footer__bottom {
+      width: 90%;
+    }
+  }
+
+  /*--------------------------------
+	*** FOR MOBILE
+	**	MAX : 640PX / 40em
+	*/
+
+  @include mobile {
+    .footer__container {
+      grid-template-columns: 1fr;
+      justify-content: center;
+      gap: nth($spaces, 12);
+      width: 90%;
+
+      .footer__about {
+        p {
+          width: 17rem;
+        }
+      }
+    }
+
+    .footer__bottom {
+      width: 90%;
+    }
+  }
+
+  /*--------------------------------
+	*** FOR MINI MOBILE
+	**	MAX : 375PX / 23.4375em
+	*/
+
+  @include miniMobile {
+    .footer__container {
+      grid-template-columns: 1fr;
+      justify-content: center;
+      gap: nth($spaces, 12);
+      width: 90%;
+
+      .footer__about {
+        p {
+          width: 17rem;
+        }
+      }
+    }
+
+    .footer__bottom {
+      width: 90%;
+    }
+  }
+}
