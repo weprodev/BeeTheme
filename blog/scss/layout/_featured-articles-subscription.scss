@@ -281,10 +281,11 @@
 	*** FOR ANY DEVICE MAX SIZE UNTIL
 	**	MAX-WIDTH : 992px OR 62em
 	*/
-
   @include tablet {
     .container {
-      align-items: center;
+      display:flex;
+      flex-direction: column;
+      gap:2rem;
 
       .box1,
       .box2,
@@ -299,12 +300,10 @@
             display: flex;
             justify-content: center;
             height: 11.5rem;
+            // height: auto;
             width: 100%;
             padding: 0;
-
-            & img {
-              width: 90%;
-            }
+        
           }
 
           .info-card {
@@ -317,13 +316,16 @@
         }
 
         .marke__tingHub {
-          width: 35.1rem;
+          width: 90%;/* Takes 90% of the parent container width */
+          max-width:35.1rem;
           margin: 0 auto;
         }
 
         .content__card {
-          height: 26.1rem;
-          width: 35.1rem;
+          height: auto;//allow the height adjust based on content
+          width: 90%;//use percent for flexibility
+          max-width: 35.1rem;//maintain the original maximum width
+          margin: 0 auto; //centers the card
 
           .content__card-img {
             display: flex;
@@ -331,10 +333,6 @@
             height: 11.5rem;
             width: 100%;
             padding: 0;
-
-            & img {
-              width: 90%;
-            }
           }
 
           .info-card {
@@ -342,6 +340,11 @@
               padding: 0 0.875rem 6.5rem 0.875rem;
             }
           }
+        }
+        .content__card-img img,
+        .blog__highlights-img img {
+          width: 100%;//makes images fully responsive
+          height: auto;//maintain aspect ratio
         }
       }
     }
@@ -354,13 +357,29 @@
 
   @include retinaMobile {
     .container {
+      display: flex; /* Make the container a flex container */
+      flex-direction: column; /* Stack items vertically */
+  
       .box1,
       .box2,
       .box3 {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Keep the single-column layout */
+        width: 100%; /* Ensure the boxes span the full width */
+        max-width: 768px; /* Limit their width for readability */
+        margin: 0 auto; /* Center the boxes horizontally */
+        gap: 1.5rem; /* Add consistent spacing between them */
+        padding: 0 1rem;
       }
+      a {
+        font-size: clamp(0.7rem, 2vw, 0.9rem); // Smaller font 
+        max-width: 100%; // Full width 
+        margin: 0 auto;
+      }
+      
     }
   }
+  
+
 
   /*--------------------------------
 	*** FOR MOBILE
@@ -369,26 +388,104 @@
 
   @include mobile {
     .container {
-      .box1,
-      .box2,
-      .box3 {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem; /* Maintain spacing between boxes */
+      
+      .box1, .box2, .box3 {
         grid-template-columns: 1fr;
+        width: 100%; /* Make boxes full-width */
+        max-width: 600px; /* Restrict width for readability */
+        margin: 0 auto; /* Center the boxes */
+        
+        .blog__highlights {
+          height: auto; /* Allow height to adjust based on content */
+          
+          .blog__highlights-img {
+            height: 11.5rem;
+            width: 100%;
+          }
+          
+          .info-card {
+            padding: 0.5rem; /* Compact padding */
+            width: 100%;
+          }
+        }
+        
+        .content__card {
+          height: auto; /* Allow content card height to adjust */
+          width: 100%;
+          max-width: 35.1rem; /* Retain maximum width */
+          margin: 0 auto; /* Center the card */
+          
+          .content__card-img {
+            height: 11.5rem;
+            width: 100%;
+          }
+          
+          .info-card h2 {
+            padding: 0 0.875rem 6.5rem 0.875rem;
+          }
+        }
+      }
+      h1,h3{
+        text-align: center;
       }
     }
   }
 
   /*--------------------------------
-	*** FOR MINI MOBILE
-	**	MAX : 375PX / 23.4375em
-	*/
-
-  @include miniMobile {
-    .container {
-      .box1,
-      .box2,
-      .box3 {
-        grid-template-columns: 1fr;
+ *** FOR MINI MOBILE
+ ** MAX: 375px / 23.4375em
+ --------------------------------*/
+@include miniMobile {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+    .box1, .box2, .box3 {
+      width: 100%; /* Full-width on small screens */
+      margin: 0 auto;
+      
+      .blog__highlights {
+        height: auto; /* Let the content define the height */
+        
+        .blog__highlights-img {
+          height: 9rem; /* Slightly smaller image height */
+          width: 100%;
+        }
+        
+        .info-card {
+          padding: 0.25rem; /* Reduced padding */
+          width: 100%;
+        }
       }
+      
+      .content__card {
+        height: auto;
+        width: 100%;
+        max-width: 35.1rem; /* Limit max-width for readability */
+        margin: 0 auto;
+        
+        .content__card-img {
+          height: 9rem;
+          width: 100%;
+        }
+        
+        .info-card h2 {
+          padding: 0 0.875rem 5rem 0.875rem; /* Adjust padding for smaller screens */
+        }
+      }
+
+    }
+    h1, h3{
+      font-size: clamp(1.2rem,3vw,1.5rem);
+      text-align: center;
+      margin: 0.25rem 0;
+      line-height: 1.5 !important;
+      overflow-wrap: break-word;
     }
   }
+}
 }
