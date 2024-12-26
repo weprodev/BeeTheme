@@ -165,8 +165,54 @@
   }
 
   /*========================================================================================*\
-*----------------------------          MEDIA QUERY              ----------------------------        
-\*========================================================================================*/
+  *----------------------------          MEDIA QUERY              ----------------------------        
+  \*========================================================================================*/
+
+  /*--------------------------------
+	*** FOR SOM OF THE DEVICES
+	**	MIN-WIDTH : 1201px OR 75.0625em
+	*/
+
+  @include lcd {
+    .container {
+      .sidebar {
+        .sidebar__list {
+          & > :first-child {
+            .sidebar__item-title {
+              top: -0.5rem;
+              position: relative;
+            }
+            .blog-meta {
+              top: -0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /*--------------------------------
+	*** FOR ANY DEVICE MAX SIZE UNTIL
+	**	MAX-WIDTH : 1200px OR 75em
+	*/
+
+  @include laptop {
+    .container {
+      .sidebar {
+        .sidebar__list {
+          & > :first-child {
+            .sidebar__item-title {
+              top: -0.5rem;
+              position: relative;
+            }
+            .blog-meta {
+              top: -0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
 
   /*--------------------------------
 	*** FOR ANY DEVICE MAX SIZE UNTIL
@@ -187,8 +233,14 @@
         width: 75%;
         padding-top: nth($spaces, 8);
 
-        .sidebar__list .sidebar__item {
-          width: 100%;
+        .sidebar__list {
+          & > :first-child {
+            // background-color: red;
+            // color: red;
+          }
+          .sidebar__item {
+            width: 100%;
+          }
         }
       }
     }
@@ -287,16 +339,20 @@
 
   @include mobile {
     .container {
+      width: 62%;
+
       .main-post {
-        width: 80%;
-        height: 39rem;
+        width: 23rem;
+        height: 30rem;
 
         .main-post__informations {
           width: 95%;
 
           .img__box {
+            width: 20rem;
+
             img {
-              width: 23.2rem;
+              width: 20rem;
             }
           }
 
@@ -307,7 +363,7 @@
       }
 
       .sidebar {
-        width: 80%;
+        width: 23rem;
 
         .sidebar__title {
           left: 0;
@@ -323,11 +379,11 @@
 
   @include miniMobile {
     .container {
-      width: 100%;
+      width: 62%;
 
       .main-post {
         width: 100%;
-        height: 34rem;
+        height: 31rem;
         border-radius: 0;
 
         &__informations {

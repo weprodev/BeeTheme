@@ -408,14 +408,6 @@ html {
   **	MIN-WIDTH : 2560px OR 160em
   */
   /*--------------------------------
-  *** LAPTOP OR DESKTOP 
-  **	MIN-WIDTH : 1400px OR 87.5em
-  */
-  /*--------------------------------
-  *** FOR SOM OF THE DEVICES
-  **	MIN-WIDTH : 1201px OR 75.0625em
-  */
-  /*--------------------------------
   *** FOR ANY DEVICE MAX SIZE UNTIL
   **	MAX-WIDTH : 1200px OR 75em
   */
@@ -424,21 +416,21 @@ html {
   **	MAX-WIDTH : 1024px OR 64em
   */
   /*--------------------------------
-  *** FOR ANY DEVICE MAX SIZE UNTIL
-  **	MAX-WIDTH : 992px OR 62em
-  */
-  /*--------------------------------
-  *** FOR RETINA MOBILE AND LANSCAPE
-  **	MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
-  */
+  *** FOR MINI MOBILE
+  **	MAX : 400PX / 25em
+  --------------------------------*/
   /*--------------------------------
   *** FOR MOBILE
   **	MAX : 640PX / 40em
-  */
+  --------------------------------*/
   /*--------------------------------
-  *** FOR MINI MOBILE
-  **	MAX : 400PX / 25em
-  */
+  *** FOR RETINA MOBILE AND LANDSCAPE
+  **	MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
+  --------------------------------*/
+  /*--------------------------------
+  *** FOR TABLET
+  **	MAX-WIDTH : 992px OR 62em
+  --------------------------------*/
 }
 html body {
   font-family: "Poppins", sans-serif;
@@ -479,48 +471,72 @@ html body .weprodev-header {
     font-size: 2rem;
   }
 }
-@media screen and (min-width: 75.0625em) {
-  html {
-    font-size: 1.5rem;
-  }
-}
 @media screen and (max-width: 75em) {
   html {
     font-size: 1rem;
+  }
+  html body .hr {
+    width: 47rem;
   }
 }
 @media screen and (max-width: 64em) {
   html {
     font-size: 1rem;
   }
-}
-@media screen and (max-width: 62em) {
-  html {
-    font-size: 1.5rem;
+  html body .hr {
+    width: 27rem;
   }
-  html body .hr,
   html body hr {
-    width: 20rem;
     display: block;
-  }
-  html body hr {
+    width: 32rem;
     top: -2.5rem;
     position: relative;
-  }
-}
-@media screen and (min-width: 31.25em) and (max-width: 47.9375em) {
-  html {
-    font-size: 0.7rem;
-  }
-}
-@media screen and (max-width: 40em) {
-  html {
-    font-size: 1rem;
   }
 }
 @media screen and (max-width: 25em) {
   html {
     font-size: 0.8rem;
+  }
+  html body .hr {
+    width: 18rem;
+  }
+  html body hr {
+    width: 19.5rem;
+    display: block;
+  }
+}
+@media screen and (max-width: 40em) and (min-width: 401px) and (max-width: 640px) {
+  html {
+    font-size: 1rem;
+  }
+  html body .hr {
+    width: 20rem;
+  }
+  html body hr {
+    width: 23rem;
+    display: block;
+  }
+}
+@media screen and (min-width: 31.25em) and (max-width: 47.9375em) and (min-width: 641px) and (max-width: 767px) {
+  html {
+    font-size: 0.7rem;
+  }
+  html .hr {
+    width: 16rem !important;
+  }
+}
+@media screen and (max-width: 62em) and (min-width: 768px) and (max-width: 992px) {
+  html {
+    font-size: 1.5rem;
+  }
+  html body .hr {
+    width: 17.5rem;
+    display: block;
+  }
+  html body hr {
+    width: 21rem;
+    top: -2.5rem;
+    position: relative;
   }
 }
 
@@ -2211,6 +2227,14 @@ a {
   *----------------------------          MEDIA QUERY              ----------------------------        
   \*========================================================================================*/
   /*--------------------------------
+  *** FOR SOM OF THE DEVICES
+  **	MIN-WIDTH : 1201px OR 75.0625em
+  */
+  /*--------------------------------
+  *** FOR ANY DEVICE MAX SIZE UNTIL
+  **	MAX-WIDTH : 1200px OR 75em
+  */
+  /*--------------------------------
   *** FOR ANY DEVICE MAX SIZE UNTIL
   **	MAX-WIDTH : 1024px OR 64em
   */
@@ -2366,6 +2390,24 @@ a {
 .blog-layout .container .sidebar .sidebar__list .sidebar__item-b .blog-meta a {
   padding-top: 1.25em;
 }
+@media screen and (min-width: 75.0625em) {
+  .blog-layout .container .sidebar .sidebar__list > :first-child .sidebar__item-title {
+    top: -0.5rem;
+    position: relative;
+  }
+  .blog-layout .container .sidebar .sidebar__list > :first-child .blog-meta {
+    top: -0.5rem;
+  }
+}
+@media screen and (max-width: 75em) {
+  .blog-layout .container .sidebar .sidebar__list > :first-child .sidebar__item-title {
+    top: -0.5rem;
+    position: relative;
+  }
+  .blog-layout .container .sidebar .sidebar__list > :first-child .blog-meta {
+    top: -0.5rem;
+  }
+}
 @media screen and (max-width: 64em) {
   .blog-layout .container {
     display: flex;
@@ -2445,21 +2487,27 @@ a {
   }
 }
 @media screen and (max-width: 40em) {
+  .blog-layout .container {
+    width: 62%;
+  }
   .blog-layout .container .main-post {
-    width: 80%;
-    height: 39rem;
+    width: 23rem;
+    height: 30rem;
   }
   .blog-layout .container .main-post .main-post__informations {
     width: 95%;
   }
+  .blog-layout .container .main-post .main-post__informations .img__box {
+    width: 20rem;
+  }
   .blog-layout .container .main-post .main-post__informations .img__box img {
-    width: 23.2rem;
+    width: 20rem;
   }
   .blog-layout .container .main-post .main-post__informations .title-box {
     width: 90%;
   }
   .blog-layout .container .sidebar {
-    width: 80%;
+    width: 23rem;
   }
   .blog-layout .container .sidebar .sidebar__title {
     left: 0;
@@ -2467,11 +2515,11 @@ a {
 }
 @media screen and (max-width: 25em) {
   .blog-layout .container {
-    width: 100%;
+    width: 62%;
   }
   .blog-layout .container .main-post {
     width: 100%;
-    height: 34rem;
+    height: 31rem;
     border-radius: 0;
   }
   .blog-layout .container .main-post__informations {
@@ -2507,7 +2555,6 @@ a {
   justify-content: center;
   height: 11.5rem;
   width: 14.5rem;
-  padding: 0.2rem 0 0 1.2rem;
 }
 .blog__highlights-img img {
   width: 95%;
@@ -2577,7 +2624,7 @@ a {
   position: relative;
 }
 .marke__tingHub .info-card .btn-box {
-  padding: 2em 0 0 1em;
+  padding: 2em 0 0 0;
 }
 .marke__tingHub .info-card .btn-box button {
   width: 100%;
@@ -2628,7 +2675,7 @@ a {
   font-size: 0.7rem;
 }
 .content__card .info-card h2 {
-  padding: 0.5625rem 0 5.4em 0.1875rem;
+  padding: 0.5625rem 0 4.8rem 0.1875rem;
   margin: 0;
   font-size: 1.0625rem;
   font-weight: bold;
@@ -2649,6 +2696,10 @@ a {
   /*========================================================================================*\
   *----------------------------          MEDIA QUERY              ----------------------------        
   \*========================================================================================*/
+  /*--------------------------------
+  *** FOR ANY DEVICE MAX SIZE UNTIL
+  **	MAX-WIDTH : 1024px OR 64em
+  */
   /*--------------------------------
   *** FOR ANY DEVICE MAX SIZE UNTIL
   **	MAX-WIDTH : 992px OR 62em
@@ -2737,7 +2788,7 @@ a {
 .featured_articles_aubscription .container .box3 .blog__highlights .info-card h2 {
   padding: 0 0.875rem 11.1rem 0.875rem;
 }
-@media screen and (max-width: 62em) {
+@media screen and (max-width: 64em) {
   .featured_articles_aubscription .container {
     display: flex;
     flex-direction: column;
@@ -2755,6 +2806,9 @@ a {
   .featured_articles_aubscription .container .box2 .blog__highlights,
   .featured_articles_aubscription .container .box3 .blog__highlights {
     height: 26.1rem;
+    width: 90%;
+    max-width: 35.1rem;
+    margin: 0 auto;
   }
   .featured_articles_aubscription .container .box1 .blog__highlights .blog__highlights-img,
   .featured_articles_aubscription .container .box2 .blog__highlights .blog__highlights-img,
@@ -2773,7 +2827,7 @@ a {
   .featured_articles_aubscription .container .box1 .blog__highlights .info-card h2,
   .featured_articles_aubscription .container .box2 .blog__highlights .info-card h2,
   .featured_articles_aubscription .container .box3 .blog__highlights .info-card h2 {
-    padding: 0 0.875rem 6.5rem 0.875rem;
+    padding: 0 0.875rem 8.5rem 0.875rem;
   }
   .featured_articles_aubscription .container .box1 .marke__tingHub,
   .featured_articles_aubscription .container .box2 .marke__tingHub,
@@ -2812,6 +2866,92 @@ a {
   .featured_articles_aubscription .container .box3 .blog__highlights-img img {
     width: 100%;
     height: auto;
+  }
+  .featured_articles_aubscription .container .box1 .blog__highlights .info-card h2 {
+    padding: 0 0.875rem 6rem 0.875rem;
+  }
+}
+@media screen and (max-width: 62em) {
+  .featured_articles_aubscription .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .featured_articles_aubscription .container .box1,
+  .featured_articles_aubscription .container .box2,
+  .featured_articles_aubscription .container .box3 {
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+    margin: 0 auto;
+    width: 75%;
+  }
+  .featured_articles_aubscription .container .box1 .blog__highlights,
+  .featured_articles_aubscription .container .box2 .blog__highlights,
+  .featured_articles_aubscription .container .box3 .blog__highlights {
+    height: 26.1rem;
+    width: 90%;
+    max-width: 35.1rem;
+    margin: 0 auto;
+  }
+  .featured_articles_aubscription .container .box1 .blog__highlights .blog__highlights-img,
+  .featured_articles_aubscription .container .box2 .blog__highlights .blog__highlights-img,
+  .featured_articles_aubscription .container .box3 .blog__highlights .blog__highlights-img {
+    display: flex;
+    justify-content: center;
+    height: 11.5rem;
+    width: 100%;
+    padding: 0;
+  }
+  .featured_articles_aubscription .container .box1 .blog__highlights .info-card,
+  .featured_articles_aubscription .container .box2 .blog__highlights .info-card,
+  .featured_articles_aubscription .container .box3 .blog__highlights .info-card {
+    padding: 0rem 1em 1em 0rem;
+  }
+  .featured_articles_aubscription .container .box1 .blog__highlights .info-card h2,
+  .featured_articles_aubscription .container .box2 .blog__highlights .info-card h2,
+  .featured_articles_aubscription .container .box3 .blog__highlights .info-card h2 {
+    padding: 0 0.875rem 7.402rem 0.875rem;
+  }
+  .featured_articles_aubscription .container .box1 .marke__tingHub,
+  .featured_articles_aubscription .container .box2 .marke__tingHub,
+  .featured_articles_aubscription .container .box3 .marke__tingHub {
+    width: 90%;
+    max-width: 35.1rem;
+    margin: 0 auto;
+  }
+  .featured_articles_aubscription .container .box1 .content__card,
+  .featured_articles_aubscription .container .box2 .content__card,
+  .featured_articles_aubscription .container .box3 .content__card {
+    height: auto;
+    width: 90%;
+    max-width: 35.1rem;
+    margin: 0 auto;
+  }
+  .featured_articles_aubscription .container .box1 .content__card .content__card-img,
+  .featured_articles_aubscription .container .box2 .content__card .content__card-img,
+  .featured_articles_aubscription .container .box3 .content__card .content__card-img {
+    display: flex;
+    justify-content: center;
+    height: 11.5rem;
+    width: 100%;
+    padding: 0;
+  }
+  .featured_articles_aubscription .container .box1 .content__card .info-card h2,
+  .featured_articles_aubscription .container .box2 .content__card .info-card h2,
+  .featured_articles_aubscription .container .box3 .content__card .info-card h2 {
+    padding: 0 0.875rem 6.5rem 0.875rem;
+  }
+  .featured_articles_aubscription .container .box1 .content__card-img img,
+  .featured_articles_aubscription .container .box1 .blog__highlights-img img,
+  .featured_articles_aubscription .container .box2 .content__card-img img,
+  .featured_articles_aubscription .container .box2 .blog__highlights-img img,
+  .featured_articles_aubscription .container .box3 .content__card-img img,
+  .featured_articles_aubscription .container .box3 .blog__highlights-img img {
+    width: 100%;
+    height: auto;
+  }
+  .featured_articles_aubscription .container .box1 .blog__highlights .info-card h2 {
+    padding: 0 0.875rem 6rem 0.875rem;
   }
 }
 @media screen and (min-width: 31.25em) and (max-width: 47.9375em) {
@@ -2957,6 +3097,18 @@ a {
   *----------------------------          MEDIA QUERY              ----------------------------        
   \*========================================================================================*/
   /*--------------------------------
+  *** FOR SOM OF THE DEVICES
+  **	MIN-WIDTH : 1201px OR 75.0625em
+  */
+  /*--------------------------------
+  *** LAPTOP OR DESKTOP 
+  **	MIN-WIDTH : 1400px OR 87.5em
+  */
+  /*--------------------------------
+  *** 4K AND HIGH RESOULOTIONS 
+  **	MIN-WIDTH : 2560px OR 160em
+  */
+  /*--------------------------------
   *** FOR ANY DEVICE MAX SIZE UNTIL
   **	MAX-WIDTH : 1200px OR 75em
   */
@@ -3062,17 +3214,29 @@ a {
   border-top: 0.375em solid #000;
   transition: 0.3s;
 }
+@media screen and (min-width: 75.0625em) {
+  .topics .container .more-topics .topic a {
+    width: 13.38rem;
+  }
+}
+@media screen and (min-width: 87.5em) {
+  .topics .container .more-topics .topic a {
+    width: 15.95rem;
+  }
+}
+@media screen and (min-width: 160em) {
+  .topics .container .more-topics .topic a {
+    width: 14.4rem;
+  }
+}
 @media screen and (max-width: 75em) {
-  .topics .container .more-topics .topic {
-    justify-content: center;
+  .topics .container .more-topics .topic a {
+    width: 13.3rem;
   }
 }
 @media screen and (max-width: 64em) {
-  .topics .container p {
-    padding: 1.4375rem 7.5em 2.7rem 7.5em;
-  }
-  .topics .container .more-topics .topic {
-    justify-content: center;
+  .topics .container .more-topics .topic a {
+    width: 11rem;
   }
 }
 @media screen and (max-width: 62em) {
@@ -3236,7 +3400,7 @@ a {
     width: 90%;
   }
   .footer .footer__container .footer__about p {
-    width: 43rem;
+    width: 100%;
   }
   .footer .footer__bottom {
     width: 90%;

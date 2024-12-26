@@ -17,7 +17,7 @@
     justify-content: center;
     height: 11.5rem;
     width: 14.5rem;
-    padding: 0.2rem 0 0 1.2rem;
+    // padding: 0.2rem 0 0 1.2rem;
 
     img {
       width: 95%;
@@ -97,7 +97,7 @@
     }
 
     .btn-box {
-      padding: nth($spaces, 8) 0 0 nth($spaces, 4);
+      padding: nth($spaces, 8) 0 0 0;
 
       button {
         width: 100%;
@@ -156,7 +156,7 @@
     }
 
     h2 {
-      padding: 0.5625rem 0 5.4em 0.1875rem;
+      padding: 0.5625rem 0 4.8rem 0.1875rem;
       margin: 0;
       font-size: 1.0625rem;
       font-weight: bold;
@@ -279,9 +279,10 @@
 
   /*--------------------------------
 	*** FOR ANY DEVICE MAX SIZE UNTIL
-	**	MAX-WIDTH : 992px OR 62em
+	**	MAX-WIDTH : 1024px OR 64em
 	*/
-  @include tablet {
+
+  @include miniLaptop {
     .container {
       display: flex;
       flex-direction: column;
@@ -297,12 +298,14 @@
 
         .blog__highlights {
           height: 26.1rem;
+          width: 90%;
+          max-width: 35.1rem;
+          margin: 0 auto;
 
           .blog__highlights-img {
             display: flex;
             justify-content: center;
             height: 11.5rem;
-            // height: auto;
             width: 100%;
             padding: 0;
           }
@@ -311,7 +314,7 @@
             padding: 0rem nth($spaces, 4) nth($spaces, 4) 0rem;
 
             h2 {
-              padding: 0 0.875rem 6.5rem 0.875rem;
+              padding: 0 0.875rem 8.5rem 0.875rem;
             }
           }
         }
@@ -346,6 +349,102 @@
         .blog__highlights-img img {
           width: 100%;
           height: auto;
+        }
+      }
+
+      .box1 {
+        .blog__highlights {
+          .info-card {
+            h2 {
+              padding: 0 0.875rem 6rem 0.875rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /*--------------------------------
+	*** FOR ANY DEVICE MAX SIZE UNTIL
+	**	MAX-WIDTH : 992px OR 62em
+	*/
+  @include tablet {
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      .box1,
+      .box2,
+      .box3 {
+        grid-template-columns: 1fr;
+        grid-gap: nth($spaces, 4);
+        margin: 0 auto;
+        width: 75%;
+
+        .blog__highlights {
+          height: 26.1rem;
+          width: 90%;
+          max-width: 35.1rem;
+          margin: 0 auto;
+
+          .blog__highlights-img {
+            display: flex;
+            justify-content: center;
+            height: 11.5rem;
+            width: 100%;
+            padding: 0;
+          }
+
+          .info-card {
+            padding: 0rem nth($spaces, 4) nth($spaces, 4) 0rem;
+
+            h2 {
+              padding: 0 0.875rem 7.402rem 0.875rem;
+            }
+          }
+        }
+
+        .marke__tingHub {
+          width: 90%;
+          max-width: 35.1rem;
+          margin: 0 auto;
+        }
+
+        .content__card {
+          height: auto;
+          width: 90%;
+          max-width: 35.1rem;
+          margin: 0 auto;
+
+          .content__card-img {
+            display: flex;
+            justify-content: center;
+            height: 11.5rem;
+            width: 100%;
+            padding: 0;
+          }
+
+          .info-card {
+            h2 {
+              padding: 0 0.875rem 6.5rem 0.875rem;
+            }
+          }
+        }
+        .content__card-img img,
+        .blog__highlights-img img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .box1 {
+        .blog__highlights {
+          .info-card {
+            h2 {
+              padding: 0 0.875rem 6rem 0.875rem;
+            }
+          }
         }
       }
     }
