@@ -1,0 +1,16 @@
+/*------------------------------------*\
+  #ABSTRACTS
+\*------------------------------------*/
+@import "../../../../shared/styles/scss/abstracts/variables";
+@import "../../../../shared/styles/scss/abstracts/media-query";
+@import "variables";
+
+/*------------------------------------*\
+  #BASE
+\*------------------------------------*/
+@import "../../../../shared/styles/scss/base/reset";
+
+/*------------------------------------*\
+  #LAYOUTS
+\*------------------------------------*/
+@import "./layout/register-page.scss"

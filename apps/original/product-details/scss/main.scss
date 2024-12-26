@@ -1,0 +1,42 @@
+/*------------------------------------*\
+  #ABSTRACTS
+\*------------------------------------*/
+@import "../../../../shared/styles/scss/abstracts/media-query";
+@import "../../../../shared/styles/scss/abstracts/variables";
+@import "variables";
+
+/*------------------------------------*\
+  #BASE
+\*------------------------------------*/
+
+@import "../../../../shared/styles/scss/base/reset";
+@import "../../../../shared/styles/scss/base/animation";
+@import "base";
+
+/*------------------------------------*\
+  #TYPOGRAPGY
+\*------------------------------------*/
+
+@import "./typography/icomoon";
+@import "./typography/typography";
+
+/*------------------------------------*\
+  #COMPONENTS
+\*------------------------------------*/
+
+@import "../../../../shared/styles/scss/components/button";
+@import "components/cta";
+@import "components/feature";
+
+/*------------------------------------*\
+  #LAYOUT
+\*------------------------------------*/
+@import "../../../../shared/styles/scss/weprodev-header/scss/main.scss";
+@import "../../../../shared/styles/scss/weprodev-footer/sass/main.scss";
+@import "./layout/hero";
+@import "./layout/built-section";
+@import "./layout/create-section";
+@import "./layout/elementor-section";
+@import "./layout/phenomenon-section";
+@import "./layout/resources-section";
+@import "./layout/cta-section";

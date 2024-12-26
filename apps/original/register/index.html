@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <meta name="author" content="" />
+    <meta name="viewport"content="initial-scale=1.0, user-scalable=no, width=device-width"/>
+    <meta property="og:title" content="WeProDev" />
+    <meta property="og:site_name" content="WeProDev" />
+    <meta property="og:description" content="WeProDev" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://WeProDev.com" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="WeProDev" />
+    <meta name="robots" content="WeProDev" />
+    <meta name="copyright" content="2017-2018" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="twitter:card" content="WeProDev" />
+    <meta name="twitter:url" content="http://WeProDev.com" />
+    <meta name="twitter:domain" content="http://WeProDev.com" />
+    <meta name="twitter:title" content="WeProDev" />
+    <meta name="twitter:description" content="WeProDev" />
+    <meta name="twitter:image" content="http://WeProDev.com" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="WeProDev.com" />
+    <meta name="apple-mobile-web-app-capable" content="WeProDev" />
+    <link rel="icon" href="../../../shared/assets/images/weprodev-favicon.png" />
+    <link rel="apple-touch-icon-precomposed"sizes="144x144"href="img/apple-touch-icon-144x144.png"/>
+    <link rel="apple-touch-icon-precomposed"sizes="72x72"href="img/apple-touch-icon-72x72.png"/>
+    <link rel="stylesheet" href="scss/lib/tiny-slider.css" />
+    <link rel="stylesheet" href="css/style.css" media="all" />
+  </head>
+  <body>
+    <section class="register-form">
+      <img src="img/bg-registerpage.jpg" alt="loptop" class="pic-register">
+      <div class="section-login">
+        <form class="section-label-input">
+          <h1>Sign up</h1>
+          <div class="underborder"></div>
+
+          <div>
+            <label for="firstname">First Name :</label>
+            <input type="text" id="first Name" placeholder="First Name" />
+          </div>
+          <div>
+            <label for="lastname">Last Name :</label>
+            <input type="text" id="lastname" placeholder="Last Name" />
+          </div>
+          <div>
+            <label for="email">Email :</label>
+            <input type="text" id="email" placeholder="Email" />
+          </div>
+
+          <div>
+            <label for="password">Password :</label>
+            <input type="password" id="myInput" placeholder="Password" />
+          </div>
+
+          <label class="showpass"
+            >show password
+            <input type="checkbox" onclick="showPassword()" />
+            <span class="checkmark"></span>
+          </label>
+
+          <input type="submit" value="Sign up" class="button" />
+        </form>
+      </div>
+    </section>
+  </body>
+  <script src="js/show-password.js"></script>
+</html>
