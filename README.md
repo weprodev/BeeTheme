@@ -1,11 +1,48 @@
 # BeeTheme
+
 Beetheme is a free and open source template developed by students from [WeProDev Academy](https://weprodev.com).
 This project is part of the first phase of the BootCamp that WeProDev Academy provide, you can find the details of the BootCamp here in the [WeProDev Academy Repository](https://github.com/weprodev/Academy)
 
-# Support 
+## File & Folder Structure
+
+To help you navigate through the BeeTheme project, below is an overview of the main file and folder structure.
+
+```shell
+root/
+├── apps/
+│   ├── original/                   # Original Project
+│   ├── react/                      # React Version
+│   │   ├── project-name/
+|   |   |   ├── components/         # Project-specific components
+│   │   |   ├── images/             # Images used for that project
+│   │   |   ├── App.tsx             # Page of that project
+│   │   |   └── README.md           # Including licenses for used images, etc.
+│   │   ├── shared/                 # Shared react components, variables, etc.
+│   │   ├── App.tsx                 # Load all templates (React)
+│   │   ├── main.tsx                # Routing of react app
+│   │   ├── index.html              # Entry point of react app
+|   |   |
+│   │   ├── eslint.config.js        # eslint configuration for react app
+│   │   ├── package.json            # Managing packages, scripts of react app
+│   │   ├── tsconfig.json           # Typesctipt configuration for react app
+│   │   └── vite.config.ts          # Vite configuration for react app
+│   └── vue/                        # Vue Version (for future)
+├── shared/
+|   ├── assets/                     # Shared static files (images, fonts)
+|   ├── scripts/                    # Shared vanilla JavaScript utilities
+|   └── styles/                     # Common styles (CSS, Sass)
+├── index.html                      # Load all templates (Original)
+├── index-script.js                 # JS file for index file
+├── .gitignore                      # Exclude unnecessary files
+└── README.md                       # Project overview
+```
+
+# Support
+
 ⭐ If you find this template useful, please consider sharing it on social media to help others discover it.
 
 # License
+
 MIT License
 Copyright (c) [2024] [WeProDev Academy]
 
