@@ -17,7 +17,7 @@ root/
 │   │   |   ├── images/             # Images used for that project
 │   │   |   ├── App.tsx             # Page of that project
 │   │   |   └── README.md           # Including licenses for used images, etc.
-│   │   ├── shared/                 # Shared react components, variables, etc.
+│   │   ├── components/             # Shared react components
 │   │   ├── App.tsx                 # Load all templates (React)
 │   │   ├── main.tsx                # Routing of react app
 │   │   ├── index.html              # Entry point of react app
