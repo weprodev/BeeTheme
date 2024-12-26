@@ -292,6 +292,8 @@
       .box3 {
         grid-template-columns: 1fr;
         grid-gap: nth($spaces, 4);
+        margin: 0 auto;
+        width: 75%;
 
         .blog__highlights {
           height: 26.1rem;

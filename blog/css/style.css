@@ -408,8 +408,36 @@ html {
   **	MIN-WIDTH : 2560px OR 160em
   */
   /*--------------------------------
+  *** LAPTOP OR DESKTOP 
+  **	MIN-WIDTH : 1400px OR 87.5em
+  */
+  /*--------------------------------
+  *** FOR SOM OF THE DEVICES
+  **	MIN-WIDTH : 1201px OR 75.0625em
+  */
+  /*--------------------------------
+  *** FOR ANY DEVICE MAX SIZE UNTIL
+  **	MAX-WIDTH : 1200px OR 75em
+  */
+  /*--------------------------------
+  *** FOR ANY DEVICE MAX SIZE UNTIL
+  **	MAX-WIDTH : 1024px OR 64em
+  */
+  /*--------------------------------
   *** FOR ANY DEVICE MAX SIZE UNTIL
   **	MAX-WIDTH : 992px OR 62em
+  */
+  /*--------------------------------
+  *** FOR RETINA MOBILE AND LANSCAPE
+  **	MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
+  */
+  /*--------------------------------
+  *** FOR MOBILE
+  **	MAX : 640PX / 40em
+  */
+  /*--------------------------------
+  *** FOR MINI MOBILE
+  **	MAX : 400PX / 25em
   */
 }
 html body {
@@ -429,7 +457,7 @@ html body * {
   font: revert;
 }
 html body hr {
-  width: 43rem;
+  width: 50rem;
   margin: 0 auto;
   display: none;
   border-color: rgb(0, 0, 0);
@@ -440,18 +468,59 @@ html body .hr {
   top: 2rem;
   position: relative;
 }
+html body .weprodev-header {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 0;
+}
 @media screen and (min-width: 160em) {
   html {
     font-size: 2rem;
   }
 }
-@media screen and (max-width: 62em) {
-  html body hr {
-    display: block;
-    width: 100%;
+@media screen and (min-width: 75.0625em) {
+  html {
+    font-size: 1.5rem;
   }
-  html body .hr {
-    width: 100%;
+}
+@media screen and (max-width: 75em) {
+  html {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 64em) {
+  html {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 62em) {
+  html {
+    font-size: 1.5rem;
+  }
+  html body .hr,
+  html body hr {
+    width: 20rem;
+    display: block;
+  }
+  html body hr {
+    top: -2.5rem;
+    position: relative;
+  }
+}
+@media screen and (min-width: 31.25em) and (max-width: 47.9375em) {
+  html {
+    font-size: 0.7rem;
+  }
+}
+@media screen and (max-width: 40em) {
+  html {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 25em) {
+  html {
+    font-size: 0.8rem;
   }
 }
 
@@ -2323,8 +2392,20 @@ a {
   .blog-layout .container .main-post {
     width: 75%;
   }
+  .blog-layout .container .main-post__informations {
+    width: 18rem;
+  }
+  .blog-layout .container .main-post__informations .img__box {
+    width: 18rem;
+  }
   .blog-layout .container .main-post__informations .img__box img {
-    width: 28rem;
+    width: 18rem;
+    height: 17rem;
+  }
+  .blog-layout .container .main-post__informations .title-box {
+    padding-top: 0;
+    top: -1rem;
+    position: relative;
   }
   .blog-layout .container .sidebar {
     width: 75%;
@@ -2667,6 +2748,8 @@ a {
   .featured_articles_aubscription .container .box3 {
     grid-template-columns: 1fr;
     grid-gap: 1em;
+    margin: 0 auto;
+    width: 75%;
   }
   .featured_articles_aubscription .container .box1 .blog__highlights,
   .featured_articles_aubscription .container .box2 .blog__highlights,
@@ -2898,6 +2981,9 @@ a {
   **	MAX : 400PX / 25em
   */
 }
+.topics .container {
+  width: 62%;
+}
 .topics .container h2 {
   margin: 0 auto;
   text-align: center;
@@ -2924,8 +3010,7 @@ a {
 }
 .topics .container .more-topics .topic a {
   padding: 1.5em 1em;
-  width: 27%;
-  min-width: 16rem;
+  width: 14.4rem;
   height: 1em;
   margin: 0.5em 0.5em;
   background-color: rgb(245, 248, 250);

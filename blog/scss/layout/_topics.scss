@@ -5,6 +5,8 @@
   padding-bottom: nth($spaces, 12);
 
   .container {
+    width: 62%;
+
     h2 {
       margin: 0 auto;
       text-align: center;
@@ -33,8 +35,7 @@
 
         a {
           padding: nth($spaces, 6) nth($spaces, 4);
-          width: 27%;
-          min-width: 16rem;
+          width: 14.4rem;
           height: 1em;
           margin: nth($spaces, 2) nth($spaces, 2);
           background-color: $paleSky;

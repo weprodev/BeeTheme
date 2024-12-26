@@ -20,7 +20,7 @@ html {
     }
 
     hr {
-      width: 43rem;
+      width: 50rem;
       margin: 0 auto;
       display: none;
       border-color: $black;
@@ -32,11 +32,18 @@ html {
       top: 2rem;
       position: relative;
     }
+
+    .weprodev-header {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      top: 0;
+    }
   }
 
- /*========================================================================================*\
- *----------------------------          MEDIA QUERY              ----------------------------        
- \*========================================================================================*/
+  /*========================================================================================*\
+  *----------------------------          MEDIA QUERY              ----------------------------        
+  \*========================================================================================*/
 
   /*--------------------------------
 	*** 4K AND HIGH RESOULOTIONS 
@@ -48,20 +55,87 @@ html {
   }
 
   /*--------------------------------
+	*** LAPTOP OR DESKTOP 
+	**	MIN-WIDTH : 1400px OR 87.5em
+	*/
+
+  @include led {
+    // font-size: 1rem;
+  }
+
+  /*--------------------------------
+	*** FOR SOM OF THE DEVICES
+	**	MIN-WIDTH : 1201px OR 75.0625em
+	*/
+
+  @include lcd {
+    font-size: 1.5rem;
+  }
+
+  /*--------------------------------
+	*** FOR ANY DEVICE MAX SIZE UNTIL
+	**	MAX-WIDTH : 1200px OR 75em
+	*/
+
+  @include laptop {
+    font-size: 1rem;
+  }
+
+  /*--------------------------------
+	*** FOR ANY DEVICE MAX SIZE UNTIL
+	**	MAX-WIDTH : 1024px OR 64em
+	*/
+
+  @include miniLaptop {
+    font-size: 1rem;
+  }
+
+  /*--------------------------------
 	*** FOR ANY DEVICE MAX SIZE UNTIL
 	**	MAX-WIDTH : 992px OR 62em
 	*/
 
   @include tablet {
+    font-size: 1.5rem;
+
     body {
+      .hr,
       hr {
+        width: 20rem;
         display: block;
-        width: 100%;
       }
 
-      .hr {
-        width: 100%;
+      hr {
+        top: -2.5rem;
+        position: relative;
       }
     }
+  }
+
+  /*--------------------------------
+	*** FOR RETINA MOBILE AND LANSCAPE
+	**	MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
+	*/
+
+  @include retinaMobile {
+    font-size: 0.7rem;
+  }
+
+  /*--------------------------------
+	*** FOR MOBILE
+	**	MAX : 640PX / 40em
+	*/
+
+  @include mobile {
+    font-size: 1rem;
+  }
+
+  /*--------------------------------
+	*** FOR MINI MOBILE
+	**	MAX : 400PX / 25em
+	*/
+
+  @include miniMobile {
+    font-size: 0.8rem;
   }
 }
