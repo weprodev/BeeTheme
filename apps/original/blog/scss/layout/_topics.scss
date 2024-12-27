@@ -5,6 +5,8 @@
   padding-bottom: nth($spaces, 12);
 
   .container {
+    width: 62%;
+
     h2 {
       margin: 0 auto;
       text-align: center;
@@ -33,8 +35,7 @@
 
         a {
           padding: nth($spaces, 6) nth($spaces, 4);
-          width: 27%;
-          min-width: 16rem;
+          width: 14.4rem;
           height: 1em;
           margin: nth($spaces, 2) nth($spaces, 2);
           background-color: $paleSky;
@@ -77,6 +78,57 @@
   \*========================================================================================*/
 
   /*--------------------------------
+  *** FOR SOM OF THE DEVICES
+  **	MIN-WIDTH : 1201px OR 75.0625em
+  */
+
+  @include lcd {
+    .container {
+      .more-topics {
+        .topic {
+          a {
+            width: 13.38rem;
+          }
+        }
+      }
+    }
+  }
+
+  /*--------------------------------
+  *** LAPTOP OR DESKTOP 
+  **	MIN-WIDTH : 1400px OR 87.5em
+  */
+
+  @include led {
+    .container {
+      .more-topics {
+        .topic {
+          a {
+            width: 15.95rem;
+          }
+        }
+      }
+    }
+  }
+
+  /*--------------------------------
+  *** 4K AND HIGH RESOULOTIONS 
+  **	MIN-WIDTH : 2560px OR 160em
+  */
+
+  @include led4k {
+    .container {
+      .more-topics {
+        .topic {
+          a {
+            width: 14.4rem;
+          }
+        }
+      }
+    }
+  }
+
+  /*--------------------------------
 	*** FOR ANY DEVICE MAX SIZE UNTIL
 	**	MAX-WIDTH : 1200px OR 75em
 	*/
@@ -85,7 +137,9 @@
     .container {
       .more-topics {
         .topic {
-          justify-content: center;
+          a {
+            width: 13.3rem;
+          }
         }
       }
     }
@@ -98,13 +152,11 @@
 
   @include miniLaptop {
     .container {
-      p {
-        padding: 1.4375rem nth($spaces, 30) 2.7rem nth($spaces, 30);
-      }
-
       .more-topics {
         .topic {
-          justify-content: center;
+          a {
+            width: 11rem;
+          }
         }
       }
     }
