@@ -1,0 +1,143 @@
+@use "sass:list";
+@use "sass:color";
+@import "../../../../../shared/styles/scss/components/button";
+
+.trusted {
+  margin: 0 auto;
+
+  .trusted-main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: list.nth($spaces, 1) list.nth($spaces, 10);
+    padding: list.nth($spaces, 12) 0;
+
+    .trusted-header {
+      grid-area: 1 / 1 / 3 / 3;
+
+      .trusted-title {
+        font-size: $fontSize6Xl;
+        font-weight: $fontWeightBold;
+        margin-bottom: list.nth($spaces, 4);
+
+        span {
+          color: $secondaryColor;
+        }
+      }
+
+      .trusted-button {
+        @include button(
+          $bg: $primaryColor,
+          $color: $darkColor,
+          $border: none,
+          $radius: $roundedFull,
+          $padding: list.nth($spaces, 4),
+          $hoverBgColor: color.adjust($primaryColor, $lightness: 10%),
+          $transition: map-get($durations, 150)
+        );
+
+        .arrow-icon {
+          width: 1.2em;
+          height: 1.2em;
+          padding-left: list.nth($spaces, 1);
+          padding-top: list.nth($spaces, 1);
+          display: inline-block;
+        }
+      }
+    }
+
+    .trusted-cards {
+      font-size: $fontSize2Xl;
+      grid-area: 3 / 1 / 6 / 3;
+      margin-top: list.nth($spaces, 4);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: list.nth($spaces, 4);
+
+      .trusted-card {
+        padding: list.nth($spaces, 4);
+        border: 1px solid color.adjust($secondaryColor, $lightness: 30%);
+        border-radius: $rounded2Xl;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        span {
+          color: $secondaryColor;
+        }
+
+        a {
+          font-size: $fontSizeSm;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .trusted-img {
+      grid-area: 1 / 3 / 6 / 5;
+
+      img {
+        border-radius: $rounded2Xl;
+        object-fit: cover;
+        width: 100%;
+        height: 63em;
+      }
+    }
+  }
+}
+
+@media (max-width: $beta) {
+  .trusted {
+    .trusted-main {
+      grid-template-rows: repeat(4, 1fr);
+      gap: list.nth($spaces, 2);
+
+      .trusted-header {
+        grid-area: 1 / 1 / 2 / 3;
+
+        .trusted-title {
+          font-size: $fontSize4Xl;
+        }
+      }
+
+      .trusted-cards {
+        margin-top: 0;
+        grid-area: 2 / 1 / 5 / 3;
+        gap: list.nth($spaces, 2);
+
+        .trusted-card {
+          padding: list.nth($spaces, 2);
+        }
+      }
+
+      .trusted-img {
+        img {
+          height: 46.5em;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $eta) {
+  .trusted {
+    .trusted-main {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      padding: list.nth($spaces, 4) list.nth($spaces, 2);
+
+      .trusted-header {
+        grid-area: 1 / 1 / 2 / 3;
+      }
+
+      .trusted-cards {
+        grid-area: 2/1/4/3;
+        margin-top: 0;
+      }
+
+      .trusted-img {
+        display: none;
+      }
+    }
+  }
+}

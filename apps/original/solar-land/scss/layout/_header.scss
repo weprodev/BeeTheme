@@ -1,0 +1,142 @@
+@use "sass:list";
+@use "sass:color";
+@import "../../../../../shared/styles/scss/components/button";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: list.nth($spaces, 4) list.nth($spaces, 8);
+  background-color: #fff;
+  margin: 0 auto;
+
+  .logo {
+    img {
+      height: 2.5rem;
+      width: auto;
+    }
+  }
+
+  .navigation {
+    ul {
+      display: flex;
+      list-style: none;
+      gap: list.nth($spaces, 8);
+
+      li {
+        a {
+          text-decoration: none;
+          color: $darkColor;
+          font-weight: $fontWeightRegular;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: $primaryColor;
+          }
+        }
+      }
+    }
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 0.3rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    span {
+      display: block;
+      width: 1.5rem;
+      height: 0.2rem;
+      background-color: $darkColor;
+      transition: transform 0.3s ease;
+    }
+
+    &.active span:nth-child(1) {
+      transform: translateY(0.5rem) rotate(45deg);
+    }
+    &.active span:nth-child(2) {
+      opacity: 0;
+    }
+    &.active span:nth-child(3) {
+      transform: translateY(-0.5rem) rotate(-45deg);
+    }
+  }
+
+  .action-buttons {
+    display: flex;
+    gap: 1rem;
+
+    .login {
+      @include button(
+        $bg: none,
+        $color: $darkColor,
+        $border: 1px solid $lightColor,
+        $radius: $roundedFull,
+        $fontWeight: $fontWeightRegular,
+        $hoverBgColor: $lightColor,
+        $padding: list.nth($spaces, 2) list.nth($spaces, 4)
+      );
+    }
+
+    .get-in-touch {
+      @include button(
+        $bg: $primaryColor,
+        $color: $darkColor,
+        $radius: $roundedFull,
+        $hoverBgColor: color.adjust($primaryColor, $lightness: 10%),
+        $padding: list.nth($spaces, 2) list.nth($spaces, 4)
+      );
+    }
+  }
+
+  @media (max-width: $gamma) {
+    .header {
+      padding: list.nth($spaces, 2);
+    }
+    .navigation {
+      display: none;
+      flex-direction: column;
+      gap: list.nth($spaces, 2);
+
+      &.active {
+        display: flex;
+        position: absolute;
+        top: 4em;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        padding: list.nth($spaces, 4);
+        padding-bottom: list.nth($spaces, 16);
+        width: 100%;
+        z-index: 10;
+      }
+
+      ul {
+        flex-direction: column;
+      }
+    }
+
+    .hamburger {
+      display: flex;
+    }
+
+    .action-buttons {
+      display: none;
+
+      &.active {
+        display: flex;
+        flex-direction: row;
+        gap: list.nth($spaces, 2);
+        width: 100%;
+        padding-top: list.nth($spaces, 2);
+        align-items: center;
+        position: absolute;
+        top: 20em;
+        z-index: 11;
+      }
+    }
+  }
+}

@@ -1,0 +1,81 @@
+@use "sass:list";
+
+.footer {
+  background-color: $tertiaryColor;
+  color: $forthColorDarker2;
+  display: flex;
+  flex-direction: column;
+  gap: list.nth($spaces, 12);
+  padding: list.nth($spaces, 15) $containerSidePadding;
+  font-size: $fontSizeLg;
+  @include mobile {
+    font-size: $fontSizeSm;
+    padding: list.nth($spaces, 15) $containerSidePaddingMobile;
+  }
+
+  a {
+    transition: all map-get($durations, 150);
+    text-transform: capitalize;
+    &:hover {
+      opacity: 70%;
+    }
+  }
+
+  &__logo {
+    width: 15rem;
+  }
+  &__columns {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: $borderSecondary;
+    padding-bottom: list.nth($spaces, 16);
+    gap: list.nth($spaces, 8);
+    @include laptop {
+      gap: list.nth($spaces, 16);
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: list.nth($spaces, 6);
+  }
+  &__column-heading {
+    font-size: $fontSizeXl;
+    font-weight: $fontWeightBold;
+    text-transform: uppercase;
+    color: $secondaryColor;
+  }
+  &__column-list {
+    display: flex;
+    flex-direction: column;
+    gap: list.nth($spaces, 4);
+  }
+  &__contact {
+    display: flex;
+    gap: list.nth($spaces, 8);
+  }
+  &__input-group {
+    input {
+      @include miniMobile {
+        max-width: 10rem;
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    gap: list.nth($spaces, 6);
+    line-height: 1.8;
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+  &__copyright {
+    margin-right: auto;
+    @include mobile {
+      margin-bottom: list.nth($spaces, 6);
+    }
+  }
+}
