@@ -1,19 +1,12 @@
-.blog-layout {
-  display: flex;
-  gap: nth($spaces, 3);
-  justify-content: center;
+.content-section {
   padding-top: nth($spaces, 8);
-  flex-direction: column;
   margin: 0 auto;
 
   .wrapper {
     display: flex;
-    width: 66%;
     gap: nth($spaces, 3);
-    // flex-direction: column;
-    margin: 0 auto;
 
-    .main-post {
+    .post {
       background: $softSky;
       width: 33.5rem;
       height: 30.5rem;
@@ -30,19 +23,19 @@
         transform: scale(1.01);
       }
 
-      &__informations {
+      &__details {
         display: flex;
         flex-direction: column;
         width: 32.5rem;
         height: 30rem;
 
-        .img__box {
+        .post__image-container {
           width: 29.8rem;
           height: 19.6rem;
           margin: 0 auto;
           padding-top: 0.9rem;
 
-          &-img {
+          .post__image {
             width: 29.8rem;
             height: 18.7rem;
             object-fit: cover;
@@ -50,13 +43,13 @@
           }
         }
 
-        .title-box {
+        .post__title-container {
           text-align: start;
           padding-top: nth($spaces, 2);
           display: flex;
           flex-direction: column;
 
-          .main-post__title {
+          .post__title {
             font-size: 1.0625rem;
             top: 0.8125rem;
             position: relative;
@@ -68,7 +61,7 @@
           }
         }
 
-        .main-post__info {
+        .post__meta {
           color: $black;
           display: flex;
           flex-direction: row;
@@ -110,7 +103,7 @@
         padding: 0;
         padding-top: 0.99rem;
 
-        .sidebar__item {
+        &-item {
           margin-bottom: nth($spaces, 4);
           background: $softSky;
           height: 5.2rem;
@@ -118,7 +111,7 @@
           border-radius: 0.1875rem;
           cursor: pointer;
 
-          h4 {
+          &-title {
             font-size: 0.625rem;
           }
 
@@ -137,7 +130,7 @@
             }
           }
 
-          .blog-meta {
+          .sidebar__meta {
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
@@ -156,10 +149,10 @@
             font-size: $fontSizeSm;
           }
 
-          &-b {
+          &--highlighted {
             height: 6.2rem;
 
-            .blog-meta a {
+            .sidebar__meta a {
               padding-top: nth($spaces, 5);
             }
           }
@@ -173,20 +166,20 @@
   \*========================================================================================*/
 
   /*--------------------------------
-	*** FOR SOM OF THE DEVICES
-	**	MIN-WIDTH : 1201px OR 75.0625em
-	*/
+  *** FOR SOME OF THE DEVICES
+  ** MIN-WIDTH : 1201px OR 75.0625em
+  */
 
   @include lcd {
-    .container {
+    .wrapper {
       .sidebar {
         .sidebar__list {
           & > :first-child {
-            .sidebar__item-title {
+            .sidebar__list-item-title {
               top: -0.5rem;
               position: relative;
             }
-            .blog-meta {
+            .sidebar__meta {
               top: -0.5rem;
             }
           }
@@ -196,20 +189,20 @@
   }
 
   /*--------------------------------
-	*** FOR ANY DEVICE MAX SIZE UNTIL
-	**	MAX-WIDTH : 1200px OR 75em
-	*/
+*** FOR ANY DEVICE MAX SIZE UNTIL
+** MAX-WIDTH : 1200px OR 75em
+*/
 
   @include laptop {
-    .container {
+    .wrapper {
       .sidebar {
         .sidebar__list {
           & > :first-child {
-            .sidebar__item-title {
+            .sidebar__list-item-title {
               top: -0.5rem;
               position: relative;
             }
-            .blog-meta {
+            .sidebar__meta {
               top: -0.5rem;
             }
           }
@@ -219,17 +212,17 @@
   }
 
   /*--------------------------------
-	*** FOR ANY DEVICE MAX SIZE UNTIL
-	**	MAX-WIDTH : 1024px OR 64em
-	*/
+*** FOR ANY DEVICE MAX SIZE UNTIL
+** MAX-WIDTH : 1024px OR 64em
+*/
 
   @include miniLaptop {
-    .container {
+    .wrapper {
       display: flex;
       flex-direction: column;
       align-items: center;
 
-      .main-post {
+      .post {
         width: 75%;
       }
 
@@ -242,7 +235,7 @@
             // background-color: red;
             // color: red;
           }
-          .sidebar__item {
+          &-item {
             width: 100%;
           }
         }
@@ -251,29 +244,29 @@
   }
 
   /*--------------------------------
-	*** FOR ANY DEVICE MAX SIZE UNTIL
-	**	MAX-WIDTH : 992px OR 62em
-	*/
+*** FOR ANY DEVICE MAX SIZE UNTIL
+** MAX-WIDTH : 992px OR 62em
+*/
 
   @include tablet {
-    .container {
+    .wrapper {
       display: flex;
       flex-direction: column;
       align-items: center;
 
-      .main-post {
+      .post {
         width: 75%;
 
-        &__informations {
+        &__details {
           width: 18rem;
-          .img__box {
+          .post__image-container {
             width: 18rem;
             img {
               width: 18rem;
               height: 17rem;
             }
           }
-          .title-box {
+          .post__title-container {
             padding-top: 0;
             top: -1rem;
             position: relative;
@@ -285,7 +278,7 @@
         width: 75%;
         padding-top: nth($spaces, 8);
 
-        .sidebar__list .sidebar__item {
+        .sidebar__list .sidebar__list-item {
           width: 100%;
         }
       }
@@ -293,29 +286,29 @@
   }
 
   /*--------------------------------
-	*** FOR RETINA MOBILE AND LANSCAPE
-	**	MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
-	*/
+*** FOR RETINA MOBILE AND LANDSCAPE
+** MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
+*/
 
   @include retinaMobile {
-    .container {
+    .wrapper {
       width: 100%;
 
-      .main-post {
+      .post {
         width: 100%;
         border-radius: 0;
         max-height: 37rem;
 
-        &__informations {
+        &__details {
           width: 95%;
 
-          .img__box {
+          .post__image-container {
             img {
               width: 23.2rem;
             }
           }
 
-          .title-box {
+          .post__title-container {
             width: 90%;
           }
         }
@@ -329,7 +322,7 @@
           position: relative;
         }
 
-        .sidebar__list .sidebar__item {
+        .sidebar__list .sidebar__list-item {
           border-radius: 0;
         }
       }
@@ -337,22 +330,22 @@
   }
 
   /*--------------------------------
-	*** FOR MOBILE
-	**	MAX : 640PX / 40em
-	*/
+*** FOR MOBILE
+** MAX : 640PX / 40em
+*/
 
   @include mobile {
-    .container {
+    .wrapper {
       width: 62%;
 
-      .main-post {
+      .post {
         width: 23rem;
         height: 30rem;
 
-        .main-post__informations {
+        .post__details {
           width: 95%;
 
-          .img__box {
+          .post__image-container {
             width: 20rem;
 
             img {
@@ -360,7 +353,7 @@
             }
           }
 
-          .title-box {
+          .post__title-container {
             width: 90%;
           }
         }
@@ -377,20 +370,20 @@
   }
 
   /*--------------------------------
-	*** FOR MINI MOBILE
-	**	MAX : 400PX / 25em
-	*/
+*** FOR MINI MOBILE
+** MAX : 400PX / 25em
+*/
 
   @include miniMobile {
-    .container {
+    .wrapper {
       width: 62%;
 
-      .main-post {
+      .post {
         width: 100%;
         height: 31rem;
         border-radius: 0;
 
-        &__informations {
+        &__details {
           width: 90%;
         }
       }
@@ -403,7 +396,7 @@
           position: relative;
         }
 
-        .sidebar__list .sidebar__item {
+        .sidebar__list .sidebar__list-item {
           border-radius: 0;
         }
       }
