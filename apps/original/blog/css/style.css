@@ -2223,6 +2223,8 @@ a {
   gap: 0.75em;
   justify-content: center;
   padding-top: 2em;
+  flex-direction: column;
+  margin: 0 auto;
   /*========================================================================================*\
   *----------------------------          MEDIA QUERY              ----------------------------        
   \*========================================================================================*/
@@ -2255,12 +2257,13 @@ a {
   **	MAX : 400PX / 25em
   */
 }
-.blog-layout .container {
+.blog-layout .wrapper {
   display: flex;
   width: 66%;
   gap: 0.75em;
+  margin: 0 auto;
 }
-.blog-layout .container .main-post {
+.blog-layout .wrapper .main-post {
   background: rgb(236, 240, 241);
   width: 33.5rem;
   height: 30.5rem;
@@ -2271,36 +2274,36 @@ a {
   top: 0.5rem;
   position: relative;
 }
-.blog-layout .container .main-post:hover {
+.blog-layout .wrapper .main-post:hover {
   box-shadow: 0 0.625rem 3.125rem -0.3125rem rgba(51, 71, 91, 0.12);
   transition: all 0.6s;
   transform: scale(1.01);
 }
-.blog-layout .container .main-post__informations {
+.blog-layout .wrapper .main-post__informations {
   display: flex;
   flex-direction: column;
   width: 32.5rem;
   height: 30rem;
 }
-.blog-layout .container .main-post__informations .img__box {
+.blog-layout .wrapper .main-post__informations .img__box {
   width: 29.8rem;
   height: 19.6rem;
   margin: 0 auto;
   padding-top: 0.9rem;
 }
-.blog-layout .container .main-post__informations .img__box-img {
+.blog-layout .wrapper .main-post__informations .img__box-img {
   width: 29.8rem;
   height: 18.7rem;
   object-fit: cover;
   border-top: 0.3125rem;
 }
-.blog-layout .container .main-post__informations .title-box {
+.blog-layout .wrapper .main-post__informations .title-box {
   text-align: start;
   padding-top: 0.5em;
   display: flex;
   flex-direction: column;
 }
-.blog-layout .container .main-post__informations .title-box .main-post__title {
+.blog-layout .wrapper .main-post__informations .title-box .main-post__title {
   font-size: 1.0625rem;
   top: 0.8125rem;
   position: relative;
@@ -2310,7 +2313,7 @@ a {
   line-height: 1.4;
   font-weight: 600;
 }
-.blog-layout .container .main-post__informations .main-post__info {
+.blog-layout .wrapper .main-post__informations .main-post__info {
   color: #000;
   display: flex;
   flex-direction: row;
@@ -2319,14 +2322,14 @@ a {
   font-size: 0.5625rem;
   position: relative;
 }
-.blog-layout .container .sidebar {
+.blog-layout .wrapper .sidebar {
   padding-top: 1em;
   text-align: start;
   width: 17.5rem;
   position: relative;
   height: 31rem;
 }
-.blog-layout .container .sidebar .sidebar__title {
+.blog-layout .wrapper .sidebar .sidebar__title {
   display: inline-block;
   background: rgb(255, 94, 87);
   font-size: 0.875rem;
@@ -2337,16 +2340,16 @@ a {
   position: relative;
   height: 1.7rem;
 }
-.blog-layout .container .sidebar .sidebar__title p {
+.blog-layout .wrapper .sidebar .sidebar__title p {
   padding: 0.3125rem 0px 0px 0.4375rem;
   font-weight: 100;
 }
-.blog-layout .container .sidebar .sidebar__list {
+.blog-layout .wrapper .sidebar .sidebar__list {
   list-style: none;
   padding: 0;
   padding-top: 0.99rem;
 }
-.blog-layout .container .sidebar .sidebar__list .sidebar__item {
+.blog-layout .wrapper .sidebar .sidebar__list .sidebar__item {
   margin-bottom: 1em;
   background: rgb(236, 240, 241);
   height: 5.2rem;
@@ -2354,21 +2357,21 @@ a {
   border-radius: 0.1875rem;
   cursor: pointer;
 }
-.blog-layout .container .sidebar .sidebar__list .sidebar__item h4 {
+.blog-layout .wrapper .sidebar .sidebar__list .sidebar__item h4 {
   font-size: 0.625rem;
 }
-.blog-layout .container .sidebar .sidebar__list .sidebar__item:hover {
+.blog-layout .wrapper .sidebar .sidebar__list .sidebar__item:hover {
   box-shadow: 0 0.625rem 3.125rem -0.3125rem rgba(51, 71, 91, 0.12);
   transition: all 0.6s;
   transform: scale(1.01);
 }
-.blog-layout .container .sidebar .sidebar__list .sidebar__item .sidebar__item-title h4 {
+.blog-layout .wrapper .sidebar .sidebar__list .sidebar__item .sidebar__item-title h4 {
   padding: 1em;
   font-size: 1.25em;
   margin-bottom: 1em;
   padding-bottom: 1em;
 }
-.blog-layout .container .sidebar .sidebar__list .sidebar__item .blog-meta {
+.blog-layout .wrapper .sidebar .sidebar__list .sidebar__item .blog-meta {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -2376,18 +2379,18 @@ a {
   left: -1rem;
   position: relative;
 }
-.blog-layout .container .sidebar .sidebar__list .sidebar__item .blog-meta a {
+.blog-layout .wrapper .sidebar .sidebar__list .sidebar__item .blog-meta a {
   font-size: 0.5625rem;
   padding: 0.9375rem 0em 0em 0.8125rem;
 }
-.blog-layout .container .sidebar .sidebar__list .sidebar__item .sidebar__item-info {
+.blog-layout .wrapper .sidebar .sidebar__list .sidebar__item .sidebar__item-info {
   color: rgb(128, 128, 128);
   font-size: 0.875em;
 }
-.blog-layout .container .sidebar .sidebar__list .sidebar__item-b {
+.blog-layout .wrapper .sidebar .sidebar__list .sidebar__item-b {
   height: 6.2rem;
 }
-.blog-layout .container .sidebar .sidebar__list .sidebar__item-b .blog-meta a {
+.blog-layout .wrapper .sidebar .sidebar__list .sidebar__item-b .blog-meta a {
   padding-top: 1.25em;
 }
 @media screen and (min-width: 75.0625em) {
@@ -3093,66 +3096,27 @@ a {
   display: flex;
   padding-top: 3em;
   padding-bottom: 3em;
-  /*========================================================================================*\
-  *----------------------------          MEDIA QUERY              ----------------------------        
-  \*========================================================================================*/
-  /*--------------------------------
-  *** FOR SOM OF THE DEVICES
-  **	MIN-WIDTH : 1201px OR 75.0625em
-  */
-  /*--------------------------------
-  *** LAPTOP OR DESKTOP 
-  **	MIN-WIDTH : 1400px OR 87.5em
-  */
-  /*--------------------------------
-  *** 4K AND HIGH RESOULOTIONS 
-  **	MIN-WIDTH : 2560px OR 160em
-  */
-  /*--------------------------------
-  *** FOR ANY DEVICE MAX SIZE UNTIL
-  **	MAX-WIDTH : 1200px OR 75em
-  */
-  /*--------------------------------
-  *** FOR ANY DEVICE MAX SIZE UNTIL
-  **	MAX-WIDTH : 1024px OR 64em
-  */
-  /*--------------------------------
-  *** FOR ANY DEVICE MAX SIZE UNTIL
-  **	MAX-WIDTH : 992px OR 62em
-  */
-  /*--------------------------------
-  *** FOR RETINA MOBILE AND LANSCAPE
-  **	MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
-  */
-  /*--------------------------------
-  *** FOR MOBILE
-  **	MAX : 640PX / 40em
-  */
-  /*--------------------------------
-  *** FOR MINI MOBILE
-  **	MAX : 400PX / 25em
-  */
-}
-.topics .container {
   width: 62%;
+  flex-direction: column;
+  margin: 0 auto;
 }
-.topics .container h2 {
+.topics h2 {
   margin: 0 auto;
   text-align: center;
   padding: 2.25em 0.625rem 0 0;
   font-size: 1.75rem;
   font-weight: bold;
 }
-.topics .container p {
+.topics p {
   margin: 0 auto;
   font-size: 1.0625rem;
   text-align: center;
   padding: 1.4375rem 8em 2.7rem 8em;
 }
-.topics .container .more-topics {
+.topics .more-topics {
   justify-content: center;
 }
-.topics .container .more-topics .topic {
+.topics .more-topics .topic {
   display: flex;
   flex-wrap: wrap;
   text-align: left;
@@ -3160,7 +3124,7 @@ a {
   gap: 0 1.4375rem;
   padding-left: 0.5em;
 }
-.topics .container .more-topics .topic a {
+.topics .more-topics .topic a {
   padding: 1.5em 1em;
   width: 14.4rem;
   height: 1em;
@@ -3176,37 +3140,37 @@ a {
   align-items: center;
   justify-content: space-between;
 }
-.topics .container .more-topics .topic a:nth-child(1) {
+.topics .more-topics .topic a:nth-child(1) {
   border-color: rgb(255, 0, 0);
 }
-.topics .container .more-topics .topic a:nth-child(2) {
+.topics .more-topics .topic a:nth-child(2) {
   border-color: rgb(0, 128, 0);
 }
-.topics .container .more-topics .topic a:nth-child(3) {
+.topics .more-topics .topic a:nth-child(3) {
   border-color: rgb(255, 255, 0);
 }
-.topics .container .more-topics .topic a:nth-child(4) {
+.topics .more-topics .topic a:nth-child(4) {
   border-color: rgb(255, 165, 0);
 }
-.topics .container .more-topics .topic a:nth-child(5) {
+.topics .more-topics .topic a:nth-child(5) {
   border-color: rgb(0, 0, 255);
 }
-.topics .container .more-topics .topic a:nth-child(6) {
+.topics .more-topics .topic a:nth-child(6) {
   border-color: rgb(255, 0, 0);
 }
-.topics .container .more-topics .topic a:nth-child(7) {
+.topics .more-topics .topic a:nth-child(7) {
   border-color: rgb(255, 255, 0);
 }
-.topics .container .more-topics .topic a:nth-child(8) {
+.topics .more-topics .topic a:nth-child(8) {
   border-color: rgb(255, 165, 0);
 }
-.topics .container .more-topics .topic a:nth-child(9) {
+.topics .more-topics .topic a:nth-child(9) {
   border-color: rgb(0, 128, 0);
 }
-.topics .container .more-topics .topic a:nth-child(10) {
+.topics .more-topics .topic a:nth-child(10) {
   border-color: rgb(0, 0, 255);
 }
-.topics .container .more-topics .topic a .cart {
+.topics .more-topics .topic a .cart {
   width: 0;
   height: 0;
   border-left: 0.375em solid transparent;
@@ -3214,61 +3178,100 @@ a {
   border-top: 0.375em solid #000;
   transition: 0.3s;
 }
+
+/*========================================================================================*\
+  *----------------------------          MEDIA QUERY              ----------------------------        
+  \*========================================================================================*/
+/*--------------------------------
+  *** FOR SOM OF THE DEVICES
+  **	MIN-WIDTH : 1201px OR 75.0625em
+  */
 @media screen and (min-width: 75.0625em) {
-  .topics .container .more-topics .topic a {
+  .container .more-topics .topic a {
     width: 13.38rem;
   }
 }
+/*--------------------------------
+  *** LAPTOP OR DESKTOP 
+  **	MIN-WIDTH : 1400px OR 87.5em
+  */
 @media screen and (min-width: 87.5em) {
-  .topics .container .more-topics .topic a {
+  .container .more-topics .topic a {
     width: 15.95rem;
   }
 }
+/*--------------------------------
+  *** 4K AND HIGH RESOULOTIONS 
+  **	MIN-WIDTH : 2560px OR 160em
+  */
 @media screen and (min-width: 160em) {
-  .topics .container .more-topics .topic a {
+  .container .more-topics .topic a {
     width: 14.4rem;
   }
 }
+/*--------------------------------
+	*** FOR ANY DEVICE MAX SIZE UNTIL
+	**	MAX-WIDTH : 1200px OR 75em
+	*/
 @media screen and (max-width: 75em) {
-  .topics .container .more-topics .topic a {
+  .container .more-topics .topic a {
     width: 13.3rem;
   }
 }
+/*--------------------------------
+	*** FOR ANY DEVICE MAX SIZE UNTIL
+	**	MAX-WIDTH : 1024px OR 64em
+	*/
 @media screen and (max-width: 64em) {
-  .topics .container .more-topics .topic a {
+  .container .more-topics .topic a {
     width: 11rem;
   }
 }
+/*--------------------------------
+	*** FOR ANY DEVICE MAX SIZE UNTIL
+	**	MAX-WIDTH : 992px OR 62em
+	*/
 @media screen and (max-width: 62em) {
-  .topics .container p {
+  .container p {
     padding: 1.4375rem 6em 2.7rem 6em;
   }
-  .topics .container .more-topics .topic {
+  .container .more-topics .topic {
     justify-content: center;
   }
 }
+/*--------------------------------
+	*** FOR RETINA MOBILE AND LANSCAPE
+	**	MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
+	*/
 @media screen and (min-width: 31.25em) and (max-width: 47.9375em) {
-  .topics .container p {
+  .container p {
     padding: 1.4375rem 3em 2.7rem 3em;
   }
-  .topics .container .more-topics .topic {
+  .container .more-topics .topic {
     justify-content: center;
   }
 }
+/*--------------------------------
+	*** FOR MOBILE
+	**	MAX : 640PX / 40em
+	*/
 @media screen and (max-width: 40em) {
-  .topics .container .more-topics .topic {
+  .container .more-topics .topic {
     justify-content: center;
   }
 }
+/*--------------------------------
+	*** FOR MINI MOBILE
+	**	MAX : 400PX / 25em
+	*/
 @media screen and (max-width: 25em) {
-  .topics .container p {
+  .container p {
     padding: 1.4375rem 2em 2.7rem 2em;
   }
-  .topics .container .more-topics .topic {
+  .container .more-topics .topic {
     justify-content: center;
   }
 }
-
 .footer {
   padding-top: 6em;
   color: #fff;
