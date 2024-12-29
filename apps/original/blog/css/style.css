@@ -2549,7 +2549,7 @@ a {
   line-height: 0.9;
 }
 .featured-articles-subscription .wrapper .featured-articles .featured-article__content .featured-article__title a {
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: unset;
 }
 .featured-articles-subscription .wrapper .featured-articles .featured-article__content .featured-article__meta {
@@ -2612,7 +2612,6 @@ a {
   grid-template-columns: 2fr 4fr;
 }
 .featured-articles-subscription .wrapper .featured-report__content {
-  height: 32.1rem;
   background-color: rgb(255, 94, 87);
   padding: 0.5em;
   cursor: pointer;
@@ -2794,7 +2793,7 @@ a {
   line-height: 0.9;
 }
 .featured-articles-subscription .wrapper .featured-experience .featured-article__content .featured-article__title a {
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: unset;
 }
 .featured-articles-subscription .wrapper .featured-experience .featured-article__content .featured-article__meta {

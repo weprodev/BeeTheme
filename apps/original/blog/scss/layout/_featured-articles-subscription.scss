@@ -61,7 +61,7 @@
             line-height: 0.9;
 
             a {
-              font-size: $fontSizeBase;
+              font-size: 1rem;
               font-weight: unset;
             }
           }
@@ -139,7 +139,6 @@
       grid-template-columns: 2fr 4fr;
 
       &__content {
-        height: 32.1rem;
         background-color: $coralRed;
         padding: nth($spaces, 2);
         cursor: pointer;
@@ -349,7 +348,7 @@
             line-height: 0.9;
 
             a {
-              font-size: $fontSizeBase;
+              font-size: 1rem;
               font-weight: unset;
             }
           }
