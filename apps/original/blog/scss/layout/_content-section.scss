@@ -1,6 +1,8 @@
 .content-section {
   padding-top: nth($spaces, 8);
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
 
   .wrapper {
     display: flex;
@@ -26,18 +28,14 @@
       &__details {
         display: flex;
         flex-direction: column;
-        width: 32.5rem;
+        width: 95%;
         height: 30rem;
 
         .post__image-container {
-          width: 29.8rem;
-          height: 19.6rem;
           margin: 0 auto;
           padding-top: 0.9rem;
 
           .post__image {
-            width: 29.8rem;
-            height: 18.7rem;
             object-fit: cover;
             border-top: 0.3125rem;
           }
@@ -63,8 +61,6 @@
 
         .post__meta {
           color: $black;
-          display: flex;
-          flex-direction: row;
           top: 5.875rem;
           left: 0.25rem;
           font-size: 0.5625rem;
@@ -189,9 +185,9 @@
   }
 
   /*--------------------------------
-*** FOR ANY DEVICE MAX SIZE UNTIL
-** MAX-WIDTH : 1200px OR 75em
-*/
+  *** FOR ANY DEVICE MAX SIZE UNTIL
+  ** MAX-WIDTH : 1200px OR 75em
+  */
 
   @include laptop {
     .wrapper {
@@ -212,9 +208,9 @@
   }
 
   /*--------------------------------
-*** FOR ANY DEVICE MAX SIZE UNTIL
-** MAX-WIDTH : 1024px OR 64em
-*/
+  *** FOR ANY DEVICE MAX SIZE UNTIL
+  ** MAX-WIDTH : 1024px OR 64em
+  */
 
   @include miniLaptop {
     .wrapper {
@@ -224,6 +220,13 @@
 
       .post {
         width: 75%;
+        &__details {
+          .post__title-container {
+            .post__meta {
+              top: 8.875rem;
+            }
+          }
+        }
       }
 
       .sidebar {
@@ -231,10 +234,6 @@
         padding-top: nth($spaces, 8);
 
         .sidebar__list {
-          & > :first-child {
-            // background-color: red;
-            // color: red;
-          }
           &-item {
             width: 100%;
           }
@@ -244,9 +243,9 @@
   }
 
   /*--------------------------------
-*** FOR ANY DEVICE MAX SIZE UNTIL
-** MAX-WIDTH : 992px OR 62em
-*/
+  *** FOR ANY DEVICE MAX SIZE UNTIL
+  ** MAX-WIDTH : 992px OR 62em
+  */
 
   @include tablet {
     .wrapper {
@@ -255,27 +254,26 @@
       align-items: center;
 
       .post {
-        width: 75%;
+        width: 90%;
 
         &__details {
-          width: 18rem;
-          .post__image-container {
-            width: 18rem;
-            img {
-              width: 18rem;
-              height: 17rem;
+          .post__title-container {
+            .post__title {
+              font-size: 1rem;
+            }
+
+            .post__meta {
+              top: 6.5rem;
             }
           }
-          .post__title-container {
-            padding-top: 0;
-            top: -1rem;
-            position: relative;
+          .post__image-container img {
+            height: 17rem;
           }
         }
       }
 
       .sidebar {
-        width: 75%;
+        width: 90%;
         padding-top: nth($spaces, 8);
 
         .sidebar__list .sidebar__list-item {
@@ -286,14 +284,12 @@
   }
 
   /*--------------------------------
-*** FOR RETINA MOBILE AND LANDSCAPE
-** MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
-*/
+  *** FOR RETINA MOBILE AND LANDSCAPE
+  ** MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
+  */
 
   @include retinaMobile {
     .wrapper {
-      width: 100%;
-
       .post {
         width: 100%;
         border-radius: 0;
@@ -313,44 +309,25 @@
           }
         }
       }
-
-      .sidebar {
-        width: 100%;
-
-        .sidebar__title {
-          left: 1rem;
-          position: relative;
-        }
-
-        .sidebar__list .sidebar__list-item {
-          border-radius: 0;
-        }
-      }
     }
   }
 
   /*--------------------------------
-*** FOR MOBILE
-** MAX : 640PX / 40em
-*/
+  *** FOR MOBILE
+  ** MAX : 640PX / 40em
+  */
 
   @include mobile {
     .wrapper {
-      width: 62%;
-
       .post {
         width: 23rem;
         height: 30rem;
 
-        .post__details {
+        &__details {
           width: 95%;
 
-          .post__image-container {
-            width: 20rem;
-
-            img {
-              width: 20rem;
-            }
+          .post__image-container img {
+            width: 100%;
           }
 
           .post__title-container {
@@ -364,40 +341,6 @@
 
         .sidebar__title {
           left: 0;
-        }
-      }
-    }
-  }
-
-  /*--------------------------------
-*** FOR MINI MOBILE
-** MAX : 400PX / 25em
-*/
-
-  @include miniMobile {
-    .wrapper {
-      width: 62%;
-
-      .post {
-        width: 100%;
-        height: 31rem;
-        border-radius: 0;
-
-        &__details {
-          width: 90%;
-        }
-      }
-
-      .sidebar {
-        width: 100%;
-
-        .sidebar__title {
-          left: 1rem;
-          position: relative;
-        }
-
-        .sidebar__list .sidebar__list-item {
-          border-radius: 0;
         }
       }
     }
