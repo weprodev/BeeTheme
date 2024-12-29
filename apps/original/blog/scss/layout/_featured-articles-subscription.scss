@@ -52,7 +52,7 @@
           .featured-article__type {
             padding: 0.6rem nth($spaces, 4) nth($spaces, 8) nth($spaces, 4);
             font-size: 0.7em;
-            padding-left: 12px;
+            padding-left: nth($spaces, 3);
           }
 
           .featured-article__title {
@@ -61,7 +61,7 @@
             line-height: 0.9;
 
             a {
-              font-size: 1rem;
+              font-size: $fontSizeBase;
               font-weight: unset;
             }
           }
@@ -254,14 +254,14 @@
 
     .featured-experience {
       grid-template-columns: 4fr 2fr;
-      padding-top: 1em;
+      padding-top: nth($spaces, 4);
       display: grid;
       grid-gap: 0 1em;
 
       .featured-content {
         height: 32rem;
-        background-color: rgb(236, 240, 241);
-        padding: 0.5em;
+        background-color: $softSky;
+        padding: nth($spaces, 2);
         cursor: pointer;
 
         &__image-container {
@@ -340,7 +340,7 @@
           .featured-article__type {
             padding: 0.6rem nth($spaces, 4) nth($spaces, 8) nth($spaces, 4);
             font-size: 0.7em;
-            padding-left: 12px;
+            padding-left: nth($spaces, 3);
           }
 
           .featured-article__title {
@@ -349,7 +349,7 @@
             line-height: 0.9;
 
             a {
-              font-size: 1rem;
+              font-size: $fontSizeBase;
               font-weight: unset;
             }
           }
