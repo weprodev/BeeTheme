@@ -3,6 +3,8 @@
   align-items: center;
   display: flex;
   justify-content: center;
+  width: clamp(20rem, 100%, 52rem);
+  margin: 0 auto;
 
   .wrapper {
     display: flex;
@@ -12,7 +14,8 @@
     .featured-articles {
       display: grid;
       justify-content: space-between;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: repeat(3, minmax(16rem, 1fr));
+
       grid-gap: 0 nth($spaces, 4);
 
       .featured-article {
@@ -32,11 +35,10 @@
         &__image-container {
           display: flex;
           justify-content: center;
-          height: 11.5rem;
-          width: 14.5rem;
+          height: 40%;
+          width: 100%;
 
           img {
-            width: 95%;
             object-fit: cover;
             border-radius: 0.3125rem 0.3125rem 0 0;
           }
@@ -45,7 +47,7 @@
         &__content {
           padding-top: nth($spaces, 4);
           display: grid;
-          grid-template-rows: 0.5fr 3.5fr 0.5fr;
+          grid-template-rows: 0.5fr 5fr 0.5fr;
 
           .featured-article__type {
             padding: 0.6rem nth($spaces, 4) nth($spaces, 8) nth($spaces, 4);
@@ -54,7 +56,7 @@
           }
 
           .featured-article__title {
-            padding: 0 0.875rem 10rem 0.875rem;
+            padding: 0 0.875rem 0 0.875rem;
             margin: 0;
             line-height: 0.9;
 
@@ -88,33 +90,27 @@
         }
 
         &__content {
-          display: flex;
-          flex-direction: column;
           text-align: center;
           justify-content: center;
           width: 90%;
+          display: grid;
+          grid-template-rows: 1fr 1fr 2fr 0.25fr;
 
           .subscription__title {
             font-size: $fontSize2Xl;
             font-weight: bold;
-            padding: nth($spaces, 20) 0 nth($spaces, 4) 0;
-            width: 80%;
             margin: 0 auto;
-            top: -5rem;
             position: relative;
           }
 
           .subscription__description {
-            font-size: 0.9em;
+            font-size: 1.2rem;
             margin: 0 auto;
-            padding: 0 nth($spaces, 2);
-            top: -1rem;
             position: relative;
+            padding: 0;
           }
 
           .subscription__buttons {
-            padding: nth($spaces, 8) 0 0 0;
-
             .subscription__button {
               width: 100%;
               font-size: 0.8em;
@@ -138,7 +134,6 @@
     .featured-report {
       display: grid;
       justify-content: space-between;
-      grid-template-columns: 1fr 1fr 1fr;
       grid-gap: 0 nth($spaces, 4);
       padding-top: nth($spaces, 4);
       grid-template-columns: 2fr 4fr;
@@ -152,7 +147,6 @@
         justify-content: center;
         display: flex;
         border-radius: 0.3125rem;
-        height: 33.8rem;
 
         &:hover {
           box-shadow: 0 0.625rem 3.125rem -0.3125rem $frostedSlate;
@@ -161,11 +155,11 @@
         }
 
         .featured-report__info {
-          display: flex;
-          flex-direction: column;
           text-align: center;
           justify-content: center;
           width: 90%;
+          display: grid;
+          grid-template-rows: 0.2fr 1fr 0.25fr;
 
           .featured-report__title {
             width: 70%;
@@ -219,9 +213,9 @@
           display: flex;
           justify-content: center;
           height: 58%;
+          width: 100%;
 
           .featured-content__image {
-            width: 94%;
             object-fit: cover;
             object-position: top;
             border-radius: 0.3125rem 0.3125rem 0 0;
@@ -274,9 +268,9 @@
           display: flex;
           justify-content: center;
           height: 58%;
+          width: 100%;
 
           .featured-content__image {
-            width: 94%;
             object-fit: cover;
             object-position: top;
             border-radius: 0.3125rem 0.3125rem 0 0;
@@ -285,10 +279,10 @@
 
         &__content {
           text-align: start;
-          display: flex;
-          flex-direction: column;
           height: 40%;
           width: 100%;
+          display: grid;
+          grid-template-rows: 0.5fr 5fr 0.5fr;
 
           .featured-content__type {
             padding: 2.2em 0 1.375rem 0;
@@ -296,7 +290,7 @@
           }
 
           .featured-content__title {
-            padding: 0.5625rem 0 4.8rem 0.1875rem;
+            padding: 0.5625rem 0 0.1875rem;
             margin: 0;
             font-size: 1.0625rem;
             font-weight: bold;
@@ -329,11 +323,10 @@
         &__image-container {
           display: flex;
           justify-content: center;
-          height: 11.5rem;
-          width: 14.5rem;
+          height: 40%;
+          width: 100%;
 
           img {
-            width: 95%;
             object-fit: cover;
             border-radius: 0.3125rem 0.3125rem 0 0;
           }
@@ -341,8 +334,8 @@
 
         &__content {
           padding-top: nth($spaces, 4);
-          display: flex;
-          flex-direction: column;
+          display: grid;
+          grid-template-rows: 0.5fr 5fr 0.5fr;
 
           .featured-article__type {
             padding: 0.6rem nth($spaces, 4) nth($spaces, 8) nth($spaces, 4);
@@ -351,7 +344,7 @@
           }
 
           .featured-article__title {
-            padding: 0 0.875rem 10rem 0.875rem;
+            padding: 0 0.875rem 0rem 0.875rem;
             margin: 0;
             line-height: 0.9;
 
@@ -380,6 +373,37 @@
 	*/
 
   @include miniLaptop {
+    .wrapper {
+      .featured-articles,
+      .featured-report,
+      .featured-experience {
+        grid-template-columns: 1fr;
+        grid-gap: 1rem 0;
+        width: clamp(20rem, 50%, 49rem);
+        margin: 0 auto;
+      }
+
+      .featured-articles > *,
+      .featured-report > *,
+      .featured-experience > * {
+        height: 32.1rem;
+      }
+
+      .featured-report,
+      .featured-experience {
+        .featured-content {
+          &__image-container {
+            height: 40%;
+          }
+
+          &__content {
+            .featured-content__title {
+              padding-bottom: 9.8rem;
+            }
+          }
+        }
+      }
+    }
   }
 
   /*--------------------------------
@@ -387,28 +411,31 @@
 	**	MAX-WIDTH : 992px OR 62em
 	*/
   @include tablet {
-  }
+    .wrapper {
+      .featured-articles {
+        position: relative;
+      }
 
-  /*--------------------------------
-	*** FOR RETINA MOBILE AND LANSCAPE
-	**	MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
-	*/
+      .featured-articles > *,
+      .featured-report > *,
+      .featured-experience > * {
+        height: 32.1rem;
+      }
 
-  @include retinaMobile {
-  }
+      .featured-report,
+      .featured-experience {
+        .featured-content {
+          &__image-container {
+            height: 40%;
+          }
 
-  /*--------------------------------
-	*** FOR MOBILE
-	**	MAX : 640PX / 40em
-	*/
-
-  @include mobile {
-  }
-
-  /*--------------------------------
-  *** FOR MINI MOBILE
-  ** MAX: 375px / 23.4375em
-  --------------------------------*/
-  @include miniMobile {
+          &__content {
+            .featured-content__title {
+              padding-bottom: 9.8rem;
+            }
+          }
+        }
+      }
+    }
   }
 }
