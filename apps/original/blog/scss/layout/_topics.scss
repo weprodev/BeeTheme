@@ -1,13 +1,9 @@
 .topics {
-  justify-content: center;
-  display: flex;
   padding-top: nth($spaces, 12);
   padding-bottom: nth($spaces, 12);
-  width: 62%;
-  flex-direction: column;
   margin: 0 auto;
 
-  h2 {
+  &__title {
     margin: 0 auto;
     text-align: center;
     padding: nth($spaces, 9) 0.625rem 0 0;
@@ -15,27 +11,20 @@
     font-weight: bold;
   }
 
-  p {
+  &__description {
     margin: 0 auto;
     font-size: 1.0625rem;
     text-align: center;
     padding: 1.4375rem nth($spaces, 32) 2.7rem nth($spaces, 32);
   }
 
-  .more-topics {
+  &__grid {
     justify-content: center;
+    display: grid;
 
-    .topic {
-      display: flex;
-      flex-wrap: wrap;
-      text-align: left;
-      align-items: center;
-      gap: 0 1.4375rem;
-      padding-left: nth($spaces, 2);
-
-      a {
+    .topics__item {
+      .topics__link {
         padding: nth($spaces, 6) nth($spaces, 4);
-        width: 14.4rem;
         height: 1em;
         margin: nth($spaces, 2) nth($spaces, 2);
         background-color: $paleSky;
@@ -71,162 +60,80 @@
       }
     }
   }
-}
 
-/*========================================================================================*\
+  /*========================================================================================*\
   *----------------------------          MEDIA QUERY              ----------------------------        
   \*========================================================================================*/
 
-/*--------------------------------
+  /*--------------------------------
   *** FOR SOM OF THE DEVICES
   **	MIN-WIDTH : 1201px OR 75.0625em
   */
 
-@include lcd {
-  .container {
-    .more-topics {
-      .topic {
-        a {
-          width: 13.38rem;
-        }
-      }
-    }
+  @include lcd {
   }
-}
 
-/*--------------------------------
+  /*--------------------------------
   *** LAPTOP OR DESKTOP 
   **	MIN-WIDTH : 1400px OR 87.5em
   */
 
-@include led {
-  .container {
-    .more-topics {
-      .topic {
-        a {
-          width: 15.95rem;
-        }
-      }
-    }
+  @include led {
   }
-}
 
-/*--------------------------------
+  /*--------------------------------
   *** 4K AND HIGH RESOULOTIONS 
   **	MIN-WIDTH : 2560px OR 160em
   */
 
-@include led4k {
-  .container {
-    .more-topics {
-      .topic {
-        a {
-          width: 14.4rem;
-        }
-      }
-    }
+  @include led4k {
   }
-}
 
-/*--------------------------------
+  /*--------------------------------
 	*** FOR ANY DEVICE MAX SIZE UNTIL
 	**	MAX-WIDTH : 1200px OR 75em
 	*/
 
-@include laptop {
-  .container {
-    .more-topics {
-      .topic {
-        a {
-          width: 13.3rem;
-        }
-      }
-    }
+  @include laptop {
   }
-}
 
-/*--------------------------------
+  /*--------------------------------
 	*** FOR ANY DEVICE MAX SIZE UNTIL
 	**	MAX-WIDTH : 1024px OR 64em
 	*/
 
-@include miniLaptop {
-  .container {
-    .more-topics {
-      .topic {
-        a {
-          width: 11rem;
-        }
-      }
-    }
+  @include miniLaptop {
   }
-}
 
-/*--------------------------------
+  /*--------------------------------
 	*** FOR ANY DEVICE MAX SIZE UNTIL
 	**	MAX-WIDTH : 992px OR 62em
 	*/
 
-@include tablet {
-  .container {
-    p {
-      padding: 1.4375rem nth($spaces, 24) 2.7rem nth($spaces, 24);
-    }
-    .more-topics {
-      .topic {
-        justify-content: center;
-      }
-    }
+  @include tablet {
   }
-}
 
-/*--------------------------------
+  /*--------------------------------
 	*** FOR RETINA MOBILE AND LANSCAPE
 	**	MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
 	*/
 
-@include retinaMobile {
-  .container {
-    p {
-      padding: 1.4375rem nth($spaces, 12) 2.7rem nth($spaces, 12);
-    }
-    .more-topics {
-      .topic {
-        justify-content: center;
-      }
-    }
+  @include retinaMobile {
   }
-}
 
-/*--------------------------------
+  /*--------------------------------
 	*** FOR MOBILE
 	**	MAX : 640PX / 40em
 	*/
 
-@include mobile {
-  .container {
-    .more-topics {
-      .topic {
-        justify-content: center;
-      }
-    }
+  @include mobile {
   }
-}
 
-/*--------------------------------
+  /*--------------------------------
 	*** FOR MINI MOBILE
 	**	MAX : 400PX / 25em
 	*/
 
-@include miniMobile {
-  .container {
-    p {
-      padding: 1.4375rem nth($spaces, 8) 2.7rem nth($spaces, 8);
-    }
-    .more-topics {
-      .topic {
-        justify-content: center;
-      }
-    }
+  @include miniMobile {
   }
 }
