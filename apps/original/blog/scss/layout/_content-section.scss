@@ -3,11 +3,15 @@
   gap: nth($spaces, 3);
   justify-content: center;
   padding-top: nth($spaces, 8);
+  flex-direction: column;
+  margin: 0 auto;
 
-  .container {
+  .wrapper {
     display: flex;
     width: 66%;
     gap: nth($spaces, 3);
+    // flex-direction: column;
+    margin: 0 auto;
 
     .main-post {
       background: $softSky;
@@ -174,7 +178,6 @@
 	*/
 
   @include lcd {
-
     .container {
       .sidebar {
         .sidebar__list {
