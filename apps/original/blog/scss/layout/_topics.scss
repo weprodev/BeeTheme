@@ -2,61 +2,67 @@
   padding-top: nth($spaces, 12);
   padding-bottom: nth($spaces, 12);
   margin: 0 auto;
+  width: clamp(10rem, 85%, 52rem);
 
-  &__title {
-    margin: 0 auto;
-    text-align: center;
-    padding: nth($spaces, 9) 0.625rem 0 0;
-    font-size: 1.75rem;
-    font-weight: bold;
-  }
+  &__intro {
+    padding: nth($spaces, 9) 0 nth($spaces, 11) 0;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: nth($spaces, 8);
 
-  &__description {
-    margin: 0 auto;
-    font-size: 1.0625rem;
-    text-align: center;
-    padding: 1.4375rem nth($spaces, 32) 2.7rem nth($spaces, 32);
+    .topics__title {
+      margin: 0 auto;
+      text-align: center;
+      font-size: 1.75rem;
+      font-weight: bold;
+    }
+
+    .topics__description {
+      margin: 0 auto;
+      text-align: justify;
+      font-weight: $fontWeightRegular;
+      width: 60%;
+    }
   }
 
   &__grid {
-    justify-content: center;
     display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
 
-    .topics__item {
-      .topics__link {
-        padding: nth($spaces, 6) nth($spaces, 4);
-        height: 1em;
-        margin: nth($spaces, 2) nth($spaces, 2);
-        background-color: $paleSky;
-        float: left;
-        text-align: left;
-        border: 0.0625rem solid;
-        border-left: 0.3125rem solid;
-        border-radius: 0.4375rem;
-        font-weight: bold;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+    a {
+      padding: nth($spaces, 6) nth($spaces, 4);
+      width: 16.2rem;
+      height: 1em;
+      margin: nth($spaces, 2) nth($spaces, 2);
+      background-color: $paleSky;
+      float: left;
+      text-align: left;
+      border: 0.0625rem solid;
+      border-left: 0.3125rem solid;
+      border-radius: 0.4375rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
 
-        $colors: $red, $green, $yellow, $orange, $blue, $red, $yellow, $orange,
-          $green, $blue;
-
-        & {
-          @for $i from 1 through length($colors) {
-            &:nth-child(#{$i}) {
-              border-color: nth($colors, $i);
-            }
+      $colors: $red, $green, $yellow, $orange, $blue, $red, $yellow, $orange,
+        $green, $blue;
+      & {
+        @for $i from 1 through length($colors) {
+          &:nth-child(#{$i}) {
+            border-color: nth($colors, $i);
           }
         }
+      }
 
-        .cart {
-          width: 0;
-          height: 0;
-          border-left: $roundedMd solid transparent;
-          border-right: $roundedMd solid transparent;
-          border-top: $roundedMd solid $black;
-          transition: 0.3s;
-        }
+      .topics__cart {
+        width: 0;
+        height: 0;
+        border-left: $roundedMd solid transparent;
+        border-right: $roundedMd solid transparent;
+        border-top: $roundedMd solid $black;
+        transition: 0.3s;
       }
     }
   }
@@ -66,74 +72,25 @@
   \*========================================================================================*/
 
   /*--------------------------------
-  *** FOR SOM OF THE DEVICES
-  **	MIN-WIDTH : 1201px OR 75.0625em
-  */
-
-  @include lcd {
-  }
-
-  /*--------------------------------
-  *** LAPTOP OR DESKTOP 
-  **	MIN-WIDTH : 1400px OR 87.5em
-  */
-
-  @include led {
-  }
-
-  /*--------------------------------
-  *** 4K AND HIGH RESOULOTIONS 
-  **	MIN-WIDTH : 2560px OR 160em
-  */
-
-  @include led4k {
-  }
-
-  /*--------------------------------
-	*** FOR ANY DEVICE MAX SIZE UNTIL
-	**	MAX-WIDTH : 1200px OR 75em
-	*/
-
-  @include laptop {
-  }
-
-  /*--------------------------------
 	*** FOR ANY DEVICE MAX SIZE UNTIL
 	**	MAX-WIDTH : 1024px OR 64em
 	*/
 
   @include miniLaptop {
+    &__grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
   /*--------------------------------
-	*** FOR ANY DEVICE MAX SIZE UNTIL
-	**	MAX-WIDTH : 992px OR 62em
-	*/
-
-  @include tablet {
-  }
-
-  /*--------------------------------
-	*** FOR RETINA MOBILE AND LANSCAPE
-	**	MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
-	*/
-
-  @include retinaMobile {
-  }
-
-  /*--------------------------------
-	*** FOR MOBILE
-	**	MAX : 640PX / 40em
-	*/
-
-  @include mobile {
-  }
-
-  /*--------------------------------
-	*** FOR MINI MOBILE
-	**	MAX : 400PX / 25em
-	*/
-
+  *** FOR MINI MOBILE
+  **	MAX : 400PX / 25em
+  --------------------------------*/
   @include miniMobile {
+    .topics__intro .topics__description {
+      width: 100%;
+    }
   }
 }
