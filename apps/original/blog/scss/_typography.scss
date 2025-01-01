@@ -46,22 +46,11 @@ html {
   \*========================================================================================*/
 
   /*--------------------------------
-	*** 4K AND HIGH RESOULOTIONS 
-	**	MIN-WIDTH : 2560px OR 160em
-	*/
-
-  @include led4k {
-    // font-size: 2rem;
-  }
-
-  /*--------------------------------
 	*** FOR ANY DEVICE MAX SIZE UNTIL
 	**	MAX-WIDTH : 1200px OR 75em
 	*/
 
   @include laptop {
-    font-size: 1rem;
-
     body {
       .hr {
         width: 47rem;
@@ -75,8 +64,6 @@ html {
 	*/
 
   @include miniLaptop {
-    font-size: 1rem;
-
     body {
       .hr {
         width: 27rem;
@@ -92,45 +79,24 @@ html {
   }
 
   /*--------------------------------
-  *** FOR MINI MOBILE
-  **	MAX : 400PX / 25em
+  *** FOR TABLET
+  **	MAX-WIDTH : 992px OR 62em
   --------------------------------*/
-  @include miniMobile {
-    font-size: 0.8rem;
-
+  @include tablet {
     body {
       .hr {
-        width: 18rem;
+        width: 17.5rem;
+        display: block;
       }
 
       hr {
-        width: 19.5rem;
-        display: block;
+        width: 21rem;
+        top: -2.5rem;
+        position: relative;
       }
 
       .container {
         width: 70%;
-      }
-    }
-  }
-
-  /*--------------------------------
-  *** FOR MOBILE
-  **	MAX : 640PX / 40em
-  --------------------------------*/
-  @include mobile {
-    @media (min-width: 401px) and (max-width: 640px) {
-      // font-size: 1rem;
-
-      body {
-        .hr {
-          width: 20rem;
-        }
-
-        hr {
-          width: 23rem;
-          display: block;
-        }
       }
     }
   }
@@ -144,34 +110,49 @@ html {
       font-size: 0.7rem;
 
       .hr {
-        width: 16rem !important;
+        width: 16rem;
       }
     }
   }
 
   /*--------------------------------
-  *** FOR TABLET
-  **	MAX-WIDTH : 992px OR 62em
+  *** FOR MOBILE
+  **	MAX : 640PX / 40em
   --------------------------------*/
-  @include tablet {
-    @media (min-width: 768px) and (max-width: 992px) {
-      font-size: 1.5rem;
+  @include mobile {
+    body {
+      .hr {
+        width: 20rem;
+      }
 
-      body {
-        .hr {
-          width: 17.5rem;
-          display: block;
-        }
+      hr {
+        width: 23rem;
+        display: block;
+      }
 
-        hr {
-          width: 21rem;
-          top: -2.5rem;
-          position: relative;
-        }
+      .container {
+        width: 100%;
+      }
+    }
+  }
 
-        .container {
-          width: 70%;
-        }
+  /*--------------------------------
+  *** FOR MINI MOBILE
+  **	MAX : 400PX / 25em
+  --------------------------------*/
+  @include miniMobile {
+    body {
+      .hr {
+        width: 18rem;
+      }
+
+      hr {
+        width: 19.5rem;
+        display: block;
+      }
+
+      .container {
+        width: 100%;
       }
     }
   }

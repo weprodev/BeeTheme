@@ -404,10 +404,6 @@ html {
   *----------------------------          MEDIA QUERY              ----------------------------        
   \*========================================================================================*/
   /*--------------------------------
-  *** 4K AND HIGH RESOULOTIONS 
-  **	MIN-WIDTH : 2560px OR 160em
-  */
-  /*--------------------------------
   *** FOR ANY DEVICE MAX SIZE UNTIL
   **	MAX-WIDTH : 1200px OR 75em
   */
@@ -416,20 +412,20 @@ html {
   **	MAX-WIDTH : 1024px OR 64em
   */
   /*--------------------------------
-  *** FOR MINI MOBILE
-  **	MAX : 400PX / 25em
-  --------------------------------*/
-  /*--------------------------------
-  *** FOR MOBILE
-  **	MAX : 640PX / 40em
+  *** FOR TABLET
+  **	MAX-WIDTH : 992px OR 62em
   --------------------------------*/
   /*--------------------------------
   *** FOR RETINA MOBILE AND LANDSCAPE
   **	MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
   --------------------------------*/
   /*--------------------------------
-  *** FOR TABLET
-  **	MAX-WIDTH : 992px OR 62em
+  *** FOR MOBILE
+  **	MAX : 640PX / 40em
+  --------------------------------*/
+  /*--------------------------------
+  *** FOR MINI MOBILE
+  **	MAX : 400PX / 25em
   --------------------------------*/
 }
 html body {
@@ -467,17 +463,11 @@ html body .weprodev-header {
   top: 0;
 }
 @media screen and (max-width: 75em) {
-  html {
-    font-size: 1rem;
-  }
   html body .hr {
     width: 47rem;
   }
 }
 @media screen and (max-width: 64em) {
-  html {
-    font-size: 1rem;
-  }
   html body .hr {
     width: 27rem;
   }
@@ -488,42 +478,7 @@ html body .weprodev-header {
     position: relative;
   }
 }
-@media screen and (max-width: 25em) {
-  html {
-    font-size: 0.8rem;
-  }
-  html body .hr {
-    width: 18rem;
-  }
-  html body hr {
-    width: 19.5rem;
-    display: block;
-  }
-  html body .container {
-    width: 70%;
-  }
-}
-@media screen and (max-width: 40em) and (min-width: 401px) and (max-width: 640px) {
-  html body .hr {
-    width: 20rem;
-  }
-  html body hr {
-    width: 23rem;
-    display: block;
-  }
-}
-@media screen and (min-width: 31.25em) and (max-width: 47.9375em) and (min-width: 641px) and (max-width: 767px) {
-  html {
-    font-size: 0.7rem;
-  }
-  html .hr {
-    width: 16rem !important;
-  }
-}
-@media screen and (max-width: 62em) and (min-width: 768px) and (max-width: 992px) {
-  html {
-    font-size: 1.5rem;
-  }
+@media screen and (max-width: 62em) {
   html body .hr {
     width: 17.5rem;
     display: block;
@@ -535,6 +490,38 @@ html body .weprodev-header {
   }
   html body .container {
     width: 70%;
+  }
+}
+@media screen and (min-width: 31.25em) and (max-width: 47.9375em) and (min-width: 641px) and (max-width: 767px) {
+  html {
+    font-size: 0.7rem;
+  }
+  html .hr {
+    width: 16rem;
+  }
+}
+@media screen and (max-width: 40em) {
+  html body .hr {
+    width: 20rem;
+  }
+  html body hr {
+    width: 23rem;
+    display: block;
+  }
+  html body .container {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 25em) {
+  html body .hr {
+    width: 18rem;
+  }
+  html body hr {
+    width: 19.5rem;
+    display: block;
+  }
+  html body .container {
+    width: 100%;
   }
 }
 
@@ -2843,41 +2830,48 @@ a {
 }
 
 .topics {
-  justify-content: center;
-  display: flex;
   padding-top: 3em;
   padding-bottom: 3em;
-  width: 62%;
-  flex-direction: column;
   margin: 0 auto;
+  width: clamp(10rem, 85%, 52rem);
+  /*========================================================================================*\
+  *----------------------------          MEDIA QUERY              ----------------------------        
+  \*========================================================================================*/
+  /*--------------------------------
+  *** FOR ANY DEVICE MAX SIZE UNTIL
+  **	MAX-WIDTH : 1024px OR 64em
+  */
+  /*--------------------------------
+  *** FOR MINI MOBILE
+  **	MAX : 400PX / 25em
+  --------------------------------*/
 }
-.topics h2 {
+.topics__intro {
+  padding: 2.25em 0 2.75em 0;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 2em;
+}
+.topics__intro .topics__title {
   margin: 0 auto;
   text-align: center;
-  padding: 2.25em 0.625rem 0 0;
   font-size: 1.75rem;
   font-weight: bold;
 }
-.topics p {
+.topics__intro .topics__description {
   margin: 0 auto;
-  font-size: 1.0625rem;
-  text-align: center;
-  padding: 1.4375rem 8em 2.7rem 8em;
+  text-align: justify;
+  font-weight: 400;
+  width: 60%;
 }
-.topics .more-topics {
+.topics__grid {
+  display: grid;
   justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
 }
-.topics .more-topics .topic {
-  display: flex;
-  flex-wrap: wrap;
-  text-align: left;
-  align-items: center;
-  gap: 0 1.4375rem;
-  padding-left: 0.5em;
-}
-.topics .more-topics .topic a {
+.topics__grid a {
   padding: 1.5em 1em;
-  width: 14.4rem;
+  width: 16.2rem;
   height: 1em;
   margin: 0.5em 0.5em;
   background-color: rgb(245, 248, 250);
@@ -2891,37 +2885,37 @@ a {
   align-items: center;
   justify-content: space-between;
 }
-.topics .more-topics .topic a:nth-child(1) {
+.topics__grid a:nth-child(1) {
   border-color: rgb(255, 0, 0);
 }
-.topics .more-topics .topic a:nth-child(2) {
+.topics__grid a:nth-child(2) {
   border-color: rgb(0, 128, 0);
 }
-.topics .more-topics .topic a:nth-child(3) {
+.topics__grid a:nth-child(3) {
   border-color: rgb(255, 255, 0);
 }
-.topics .more-topics .topic a:nth-child(4) {
+.topics__grid a:nth-child(4) {
   border-color: rgb(255, 165, 0);
 }
-.topics .more-topics .topic a:nth-child(5) {
+.topics__grid a:nth-child(5) {
   border-color: rgb(0, 0, 255);
 }
-.topics .more-topics .topic a:nth-child(6) {
+.topics__grid a:nth-child(6) {
   border-color: rgb(255, 0, 0);
 }
-.topics .more-topics .topic a:nth-child(7) {
+.topics__grid a:nth-child(7) {
   border-color: rgb(255, 255, 0);
 }
-.topics .more-topics .topic a:nth-child(8) {
+.topics__grid a:nth-child(8) {
   border-color: rgb(255, 165, 0);
 }
-.topics .more-topics .topic a:nth-child(9) {
+.topics__grid a:nth-child(9) {
   border-color: rgb(0, 128, 0);
 }
-.topics .more-topics .topic a:nth-child(10) {
+.topics__grid a:nth-child(10) {
   border-color: rgb(0, 0, 255);
 }
-.topics .more-topics .topic a .cart {
+.topics__grid a .topics__cart {
   width: 0;
   height: 0;
   border-left: 0.375em solid transparent;
@@ -2929,100 +2923,19 @@ a {
   border-top: 0.375em solid #000;
   transition: 0.3s;
 }
-
-/*========================================================================================*\
-  *----------------------------          MEDIA QUERY              ----------------------------        
-  \*========================================================================================*/
-/*--------------------------------
-  *** FOR SOM OF THE DEVICES
-  **	MIN-WIDTH : 1201px OR 75.0625em
-  */
-@media screen and (min-width: 75.0625em) {
-  .container .more-topics .topic a {
-    width: 13.38rem;
-  }
-}
-/*--------------------------------
-  *** LAPTOP OR DESKTOP 
-  **	MIN-WIDTH : 1400px OR 87.5em
-  */
-@media screen and (min-width: 87.5em) {
-  .container .more-topics .topic a {
-    width: 15.95rem;
-  }
-}
-/*--------------------------------
-  *** 4K AND HIGH RESOULOTIONS 
-  **	MIN-WIDTH : 2560px OR 160em
-  */
-@media screen and (min-width: 160em) {
-  .container .more-topics .topic a {
-    width: 14.4rem;
-  }
-}
-/*--------------------------------
-	*** FOR ANY DEVICE MAX SIZE UNTIL
-	**	MAX-WIDTH : 1200px OR 75em
-	*/
-@media screen and (max-width: 75em) {
-  .container .more-topics .topic a {
-    width: 13.3rem;
-  }
-}
-/*--------------------------------
-	*** FOR ANY DEVICE MAX SIZE UNTIL
-	**	MAX-WIDTH : 1024px OR 64em
-	*/
 @media screen and (max-width: 64em) {
-  .container .more-topics .topic a {
-    width: 11rem;
-  }
-}
-/*--------------------------------
-	*** FOR ANY DEVICE MAX SIZE UNTIL
-	**	MAX-WIDTH : 992px OR 62em
-	*/
-@media screen and (max-width: 62em) {
-  .container p {
-    padding: 1.4375rem 6em 2.7rem 6em;
-  }
-  .container .more-topics .topic {
+  .topics__grid {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
   }
 }
-/*--------------------------------
-	*** FOR RETINA MOBILE AND LANSCAPE
-	**	MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
-	*/
-@media screen and (min-width: 31.25em) and (max-width: 47.9375em) {
-  .container p {
-    padding: 1.4375rem 3em 2.7rem 3em;
-  }
-  .container .more-topics .topic {
-    justify-content: center;
-  }
-}
-/*--------------------------------
-	*** FOR MOBILE
-	**	MAX : 640PX / 40em
-	*/
-@media screen and (max-width: 40em) {
-  .container .more-topics .topic {
-    justify-content: center;
-  }
-}
-/*--------------------------------
-	*** FOR MINI MOBILE
-	**	MAX : 400PX / 25em
-	*/
 @media screen and (max-width: 25em) {
-  .container p {
-    padding: 1.4375rem 2em 2.7rem 2em;
-  }
-  .container .more-topics .topic {
-    justify-content: center;
+  .topics .topics__intro .topics__description {
+    width: 100%;
   }
 }
+
 .footer {
   padding-top: 6em;
   color: #fff;
