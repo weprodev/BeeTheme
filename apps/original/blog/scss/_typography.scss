@@ -107,6 +107,10 @@ html {
         width: 19.5rem;
         display: block;
       }
+
+      .container {
+        width: 70%;
+      }
     }
   }
 
@@ -116,7 +120,7 @@ html {
   --------------------------------*/
   @include mobile {
     @media (min-width: 401px) and (max-width: 640px) {
-      font-size: 1rem;
+      // font-size: 1rem;
 
       body {
         .hr {
@@ -163,6 +167,10 @@ html {
           width: 21rem;
           top: -2.5rem;
           position: relative;
+        }
+
+        .container {
+          width: 70%;
         }
       }
     }
