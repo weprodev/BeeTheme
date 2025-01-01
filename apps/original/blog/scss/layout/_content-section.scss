@@ -34,6 +34,7 @@
         .post__image-container {
           margin: 0 auto;
           padding-top: 0.9rem;
+          width: 100%;
 
           .post__image {
             object-fit: cover;
@@ -223,7 +224,7 @@
         &__details {
           .post__title-container {
             .post__meta {
-              top: 8.875rem;
+              top: 8rem;
             }
           }
         }
@@ -332,6 +333,10 @@
 
           .post__title-container {
             width: 90%;
+
+            .post__meta {
+              top: 6rem;
+            }
           }
         }
       }

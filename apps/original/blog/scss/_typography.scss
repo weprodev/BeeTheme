@@ -1,4 +1,6 @@
 html {
+  font-size: clamp(1rem, 1vw, 10rem);
+
   body {
     font-family: $primaryFontFamily;
 
@@ -26,13 +28,6 @@ html {
       border-color: $black;
     }
 
-    .hr {
-      width: 50rem;
-      display: block;
-      top: 2rem;
-      position: relative;
-    }
-
     .weprodev-header {
       display: flex;
       flex-direction: column;
@@ -47,31 +42,14 @@ html {
 
   /*--------------------------------
 	*** FOR ANY DEVICE MAX SIZE UNTIL
-	**	MAX-WIDTH : 1200px OR 75em
-	*/
-
-  @include laptop {
-    body {
-      .hr {
-        width: 47rem;
-      }
-    }
-  }
-
-  /*--------------------------------
-	*** FOR ANY DEVICE MAX SIZE UNTIL
 	**	MAX-WIDTH : 1024px OR 64em
 	*/
 
   @include miniLaptop {
     body {
-      .hr {
-        width: 27rem;
-      }
-
       hr {
         display: block;
-        width: 32rem;
+        width: 31rem;
         top: -2.5rem;
         position: relative;
       }
@@ -102,29 +80,11 @@ html {
   }
 
   /*--------------------------------
-  *** FOR RETINA MOBILE AND LANDSCAPE
-  **	MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
-  --------------------------------*/
-  @include retinaMobile {
-    @media (min-width: 641px) and (max-width: 767px) {
-      font-size: 0.7rem;
-
-      .hr {
-        width: 16rem;
-      }
-    }
-  }
-
-  /*--------------------------------
   *** FOR MOBILE
   **	MAX : 640PX / 40em
   --------------------------------*/
   @include mobile {
     body {
-      .hr {
-        width: 20rem;
-      }
-
       hr {
         width: 23rem;
         display: block;
@@ -142,10 +102,6 @@ html {
   --------------------------------*/
   @include miniMobile {
     body {
-      .hr {
-        width: 18rem;
-      }
-
       hr {
         width: 19.5rem;
         display: block;

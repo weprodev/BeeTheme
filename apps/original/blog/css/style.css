@@ -400,13 +400,10 @@ a {
 **   Import typography settings
 */
 html {
+  font-size: clamp(1rem, 1vw, 10rem);
   /*========================================================================================*\
   *----------------------------          MEDIA QUERY              ----------------------------        
   \*========================================================================================*/
-  /*--------------------------------
-  *** FOR ANY DEVICE MAX SIZE UNTIL
-  **	MAX-WIDTH : 1200px OR 75em
-  */
   /*--------------------------------
   *** FOR ANY DEVICE MAX SIZE UNTIL
   **	MAX-WIDTH : 1024px OR 64em
@@ -414,10 +411,6 @@ html {
   /*--------------------------------
   *** FOR TABLET
   **	MAX-WIDTH : 992px OR 62em
-  --------------------------------*/
-  /*--------------------------------
-  *** FOR RETINA MOBILE AND LANDSCAPE
-  **	MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
   --------------------------------*/
   /*--------------------------------
   *** FOR MOBILE
@@ -450,30 +443,16 @@ html body hr {
   display: none;
   border-color: rgb(0, 0, 0);
 }
-html body .hr {
-  width: 50rem;
-  display: block;
-  top: 2rem;
-  position: relative;
-}
 html body .weprodev-header {
   display: flex;
   flex-direction: column;
   position: relative;
   top: 0;
 }
-@media screen and (max-width: 75em) {
-  html body .hr {
-    width: 47rem;
-  }
-}
 @media screen and (max-width: 64em) {
-  html body .hr {
-    width: 27rem;
-  }
   html body hr {
     display: block;
-    width: 32rem;
+    width: 31rem;
     top: -2.5rem;
     position: relative;
   }
@@ -492,18 +471,7 @@ html body .weprodev-header {
     width: 70%;
   }
 }
-@media screen and (min-width: 31.25em) and (max-width: 47.9375em) and (min-width: 641px) and (max-width: 767px) {
-  html {
-    font-size: 0.7rem;
-  }
-  html .hr {
-    width: 16rem;
-  }
-}
 @media screen and (max-width: 40em) {
-  html body .hr {
-    width: 20rem;
-  }
   html body hr {
     width: 23rem;
     display: block;
@@ -513,9 +481,6 @@ html body .weprodev-header {
   }
 }
 @media screen and (max-width: 25em) {
-  html body .hr {
-    width: 18rem;
-  }
   html body hr {
     width: 19.5rem;
     display: block;
@@ -2266,6 +2231,7 @@ a {
 .content-section .wrapper .post__details .post__image-container {
   margin: 0 auto;
   padding-top: 0.9rem;
+  width: 100%;
 }
 .content-section .wrapper .post__details .post__image-container .post__image {
   object-fit: cover;
@@ -2393,7 +2359,7 @@ a {
     width: 75%;
   }
   .content-section .wrapper .post__details .post__title-container .post__meta {
-    top: 8.875rem;
+    top: 8rem;
   }
   .content-section .wrapper .sidebar {
     width: 75%;
@@ -2458,6 +2424,9 @@ a {
   }
   .content-section .wrapper .post__details .post__title-container {
     width: 90%;
+  }
+  .content-section .wrapper .post__details .post__title-container .post__meta {
+    top: 6rem;
   }
   .content-section .wrapper .sidebar {
     width: 23rem;
@@ -2842,6 +2811,10 @@ a {
   **	MAX-WIDTH : 1024px OR 64em
   */
   /*--------------------------------
+  *** FOR RETINA MOBILE AND LANDSCAPE
+  **	MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
+  --------------------------------*/
+  /*--------------------------------
   *** FOR MINI MOBILE
   **	MAX : 400PX / 25em
   --------------------------------*/
@@ -2853,14 +2826,28 @@ a {
   grid-gap: 2em;
 }
 .topics__intro .topics__title {
-  margin: 0 auto;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  height: 2rem;
+}
+.topics__intro .topics__title h2 {
   font-size: 1.75rem;
   font-weight: bold;
+  background-color: #fff;
+  width: 20rem;
+  position: absolute;
+  z-index: 999999;
+}
+.topics__intro .topics__title span {
+  width: 100%;
+  height: 2px;
+  top: 50%;
+  position: relative;
+  background-color: #000;
 }
 .topics__intro .topics__description {
   margin: 0 auto;
-  text-align: justify;
   font-weight: 400;
   width: 60%;
 }
@@ -2928,6 +2915,11 @@ a {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+  }
+}
+@media screen and (min-width: 31.25em) and (max-width: 47.9375em) {
+  .topics__intro .topics__title span {
+    display: none;
   }
 }
 @media screen and (max-width: 25em) {
