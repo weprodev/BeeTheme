@@ -2826,14 +2826,28 @@ a {
   grid-gap: 2em;
 }
 .topics__intro .topics__title {
-  margin: 0 auto;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  height: 2rem;
+}
+.topics__intro .topics__title h2 {
   font-size: 1.75rem;
   font-weight: bold;
+  background-color: #fff;
+  width: 20rem;
+  position: absolute;
+  z-index: 999999;
+}
+.topics__intro .topics__title span {
+  width: 100%;
+  height: 2px;
+  top: 50%;
+  position: relative;
+  background-color: #000;
 }
 .topics__intro .topics__description {
   margin: 0 auto;
-  text-align: justify;
   font-weight: 400;
   width: 60%;
 }
