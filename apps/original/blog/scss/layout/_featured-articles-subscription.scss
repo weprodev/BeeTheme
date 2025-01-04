@@ -1,8 +1,6 @@
 .featured-articles-subscription {
   padding-top: nth($spaces, 4);
-  align-items: center;
-  display: flex;
-  justify-content: center;
+  @include flex-center;
   width: clamp(20rem, 100%, 52rem);
   margin: 0 auto;
 
@@ -15,16 +13,19 @@
       display: grid;
       justify-content: space-between;
       grid-template-columns: repeat(3, minmax(16rem, 1fr));
-
       grid-gap: 0 nth($spaces, 4);
 
       .featured-article {
-        height: 32.1rem;
+        height: 26rem;
         background-color: $softSky;
-        padding: nth($spaces, 2);
         cursor: pointer;
         position: relative;
         border-radius: 0.3125rem;
+
+        p,
+        a {
+          color: $midnightTeal;
+        }
 
         &:hover {
           box-shadow: 0 0.625rem 3.125rem -0.3125rem $frostedSlate;
@@ -33,8 +34,7 @@
         }
 
         &__image-container {
-          display: flex;
-          justify-content: center;
+          @include flex-center;
           height: 40%;
           width: 100%;
 
@@ -47,40 +47,37 @@
         &__content {
           padding-top: nth($spaces, 4);
           display: grid;
-          grid-template-rows: 0.5fr 5fr 0.5fr;
+          grid-template-rows: 0.5fr 3.9fr 0.5fr;
 
           .featured-article__type {
-            padding: 0.6rem nth($spaces, 4) nth($spaces, 8) nth($spaces, 4);
-            font-size: 0.7em;
+            padding: 0.6rem nth($spaces, 4) nth($spaces, 4) nth($spaces, 4);
             padding-left: nth($spaces, 3);
+            font-size: 0.9375rem;
           }
 
           .featured-article__title {
             padding: 0 0.875rem 0 0.875rem;
-            margin: 0;
-            line-height: 0.9;
 
             a {
-              font-size: 1rem;
-              font-weight: unset;
+              line-height: 1.3125em;
+              font-size: $fontSizeXXL;
+              font-weight: 500;
             }
           }
 
           .featured-article__meta {
-            font-size: 0.5625rem;
+            font-size: $fontSizeXs;
             padding-left: nth($spaces, 2);
           }
         }
       }
 
       .subscription {
-        height: 32.1rem;
+        height: 26rem;
         background-color: $coralRed;
-        padding: nth($spaces, 2);
         cursor: pointer;
         color: $white;
-        justify-content: center;
-        display: flex;
+        @include flex-center;
         border-radius: 0.3125rem;
 
         &:hover {
@@ -94,26 +91,21 @@
           justify-content: center;
           width: 90%;
           display: grid;
-          grid-template-rows: 1fr 1fr 2fr 0.25fr;
+          grid-template-rows: 0.1fr 1fr 1.3fr 0.25fr;
 
           .subscription__title {
-            font-size: $fontSize2Xl;
+            font-size: 2rem;
             font-weight: bold;
-            margin: 0 auto;
-            position: relative;
           }
 
           .subscription__description {
-            font-size: 1.2rem;
-            margin: 0 auto;
-            position: relative;
-            padding: 0;
+            font-size: 1.4rem;
           }
 
           .subscription__buttons {
             .subscription__button {
               width: 100%;
-              font-size: 0.8em;
+              font-size: $fontSizeS;
               height: 3.5em;
               background: transparent;
               border-color: $white;
@@ -143,8 +135,7 @@
         padding: nth($spaces, 2);
         cursor: pointer;
         color: $white;
-        justify-content: center;
-        display: flex;
+        @include flex-center;
         border-radius: 0.3125rem;
 
         &:hover {
@@ -155,20 +146,17 @@
 
         .featured-report__info {
           text-align: center;
+
           justify-content: center;
           width: 90%;
           display: grid;
           grid-template-rows: 0.2fr 1fr 0.25fr;
 
           .featured-report__title {
-            width: 70%;
-            margin: 0 auto;
-            line-height: 1.9;
-
             width: 90%;
             margin: 0 auto;
             line-height: 1.8;
-            font-size: 2rem;
+            font-size: $fontSizeXXL;
             padding: nth($spaces, 6) 0;
             font-weight: 100;
           }
@@ -178,7 +166,7 @@
 
             .featured-report__button {
               width: 100%;
-              font-size: 0.8em;
+              font-size: $fontSizeS;
               height: 4.5em;
               background: transparent;
               border-color: $white;
@@ -209,8 +197,7 @@
         }
 
         &__image-container {
-          display: flex;
-          justify-content: center;
+          @include flex-center;
           height: 58%;
           width: 100%;
 
@@ -230,7 +217,7 @@
 
           .featured-content__type {
             padding: 2.2em 0 1.375rem 0;
-            font-size: 0.7rem;
+            font-size: $fontSizeXXS;
           }
 
           .featured-content__title {
@@ -285,7 +272,7 @@
 
           .featured-content__type {
             padding: 2.2em 0 1.375rem 0;
-            font-size: 0.7rem;
+            font-size: $fontSizeXXS;
           }
 
           .featured-content__title {
@@ -338,7 +325,7 @@
 
           .featured-article__type {
             padding: 0.6rem nth($spaces, 4) nth($spaces, 8) nth($spaces, 4);
-            font-size: 0.7em;
+            font-size: $fontSizeXXS;
             padding-left: nth($spaces, 3);
           }
 
@@ -348,7 +335,7 @@
             line-height: 0.9;
 
             a {
-              font-size: 1rem;
+              font-size: $fontSizeBase;
               font-weight: unset;
             }
           }

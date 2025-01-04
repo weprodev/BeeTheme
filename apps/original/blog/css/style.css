@@ -384,11 +384,31 @@ a {
 **  flatuicolors.com/palette/defo
 */
 /*========================================================================================*\
-*----------------------------               SHADOW              ----------------------------        
+*----------------------------               SHADOW             ----------------------------        
 \*========================================================================================*/
 /*========================================================================================*\
 *----------------------------               FONTS              ----------------------------        
 \*========================================================================================*/
+/*========================================================================================*\
+*----------------------------            FONT SIZE           ----------------------------        
+\*========================================================================================*/
+/*--------------------------------
+***  Additional sizes for specific purposes
+*/
+/*========================================================================================*\
+*----------------------------          Frequent codes         ----------------------------        
+\*========================================================================================*/
+/*--------------------------------
+*********   COMMONLY USED CODES
+*******     REPEATED CSS UTILITIES
+*****       CENTERING, SPACING, ALIGNMENTS, ETC.
+
+/*--------------------------------
+*** Centering and Alignment 
+*/
+/*--------------------------------
+*** Flexbox Utilities
+*/
 /*
 ***         
 *****      
@@ -433,9 +453,6 @@ html body a:hover {
 }
 html body li {
   list-style-type: none;
-}
-html body * {
-  font: revert;
 }
 html body hr {
   width: 50rem;
@@ -2207,7 +2224,7 @@ a {
   gap: 0.75em;
 }
 .content-section .wrapper .post {
-  background: rgb(236, 240, 241);
+  background: rgb(234, 240, 246);
   width: 33.5rem;
   height: 30.5rem;
   border-radius: 0.375em;
@@ -2289,7 +2306,7 @@ a {
 }
 .content-section .wrapper .sidebar .sidebar__list-item {
   margin-bottom: 1em;
-  background: rgb(236, 240, 241);
+  background: rgb(234, 240, 246);
   height: 5.2rem;
   padding: 2.4em 0.8em 0px 1em;
   border-radius: 0.1875rem;
@@ -2438,9 +2455,9 @@ a {
 
 .featured-articles-subscription {
   padding-top: 1em;
-  align-items: center;
   display: flex;
   justify-content: center;
+  align-items: center;
   width: clamp(20rem, 100%, 52rem);
   margin: 0 auto;
   /*========================================================================================*\
@@ -2467,12 +2484,15 @@ a {
   grid-gap: 0 1em;
 }
 .featured-articles-subscription .wrapper .featured-articles .featured-article {
-  height: 32.1rem;
-  background-color: rgb(236, 240, 241);
-  padding: 0.5em;
+  height: 26rem;
+  background-color: rgb(234, 240, 246);
   cursor: pointer;
   position: relative;
   border-radius: 0.3125rem;
+}
+.featured-articles-subscription .wrapper .featured-articles .featured-article p,
+.featured-articles-subscription .wrapper .featured-articles .featured-article a {
+  color: rgb(51, 71, 91);
 }
 .featured-articles-subscription .wrapper .featured-articles .featured-article:hover {
   box-shadow: 0 0.625rem 3.125rem -0.3125rem rgba(51, 71, 91, 0.12);
@@ -2482,6 +2502,7 @@ a {
 .featured-articles-subscription .wrapper .featured-articles .featured-article__image-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   height: 40%;
   width: 100%;
 }
@@ -2492,34 +2513,33 @@ a {
 .featured-articles-subscription .wrapper .featured-articles .featured-article__content {
   padding-top: 1em;
   display: grid;
-  grid-template-rows: 0.5fr 5fr 0.5fr;
+  grid-template-rows: 0.5fr 3.9fr 0.5fr;
 }
 .featured-articles-subscription .wrapper .featured-articles .featured-article__content .featured-article__type {
-  padding: 0.6rem 1em 2em 1em;
-  font-size: 0.7em;
+  padding: 0.6rem 1em 1em 1em;
   padding-left: 0.75em;
+  font-size: 0.9375rem;
 }
 .featured-articles-subscription .wrapper .featured-articles .featured-article__content .featured-article__title {
   padding: 0 0.875rem 0 0.875rem;
-  margin: 0;
-  line-height: 0.9;
 }
 .featured-articles-subscription .wrapper .featured-articles .featured-article__content .featured-article__title a {
-  font-size: 1rem;
-  font-weight: unset;
+  line-height: 1.3125em;
+  font-size: 2rem;
+  font-weight: 500;
 }
 .featured-articles-subscription .wrapper .featured-articles .featured-article__content .featured-article__meta {
-  font-size: 0.5625rem;
+  font-size: 0.75em;
   padding-left: 0.5em;
 }
 .featured-articles-subscription .wrapper .featured-articles .subscription {
-  height: 32.1rem;
+  height: 26rem;
   background-color: rgb(255, 94, 87);
-  padding: 0.5em;
   cursor: pointer;
   color: #fff;
-  justify-content: center;
   display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 0.3125rem;
 }
 .featured-articles-subscription .wrapper .featured-articles .subscription:hover {
@@ -2532,23 +2552,18 @@ a {
   justify-content: center;
   width: 90%;
   display: grid;
-  grid-template-rows: 1fr 1fr 2fr 0.25fr;
+  grid-template-rows: 0.1fr 1fr 1.3fr 0.25fr;
 }
 .featured-articles-subscription .wrapper .featured-articles .subscription__content .subscription__title {
-  font-size: 1.5em;
+  font-size: 2rem;
   font-weight: bold;
-  margin: 0 auto;
-  position: relative;
 }
 .featured-articles-subscription .wrapper .featured-articles .subscription__content .subscription__description {
-  font-size: 1.2rem;
-  margin: 0 auto;
-  position: relative;
-  padding: 0;
+  font-size: 1.4rem;
 }
 .featured-articles-subscription .wrapper .featured-articles .subscription__content .subscription__buttons .subscription__button {
   width: 100%;
-  font-size: 0.8em;
+  font-size: 0.8rem;
   height: 3.5em;
   background: transparent;
   border-color: #fff;
@@ -2572,8 +2587,9 @@ a {
   padding: 0.5em;
   cursor: pointer;
   color: #fff;
-  justify-content: center;
   display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 0.3125rem;
 }
 .featured-articles-subscription .wrapper .featured-report__content:hover {
@@ -2589,9 +2605,6 @@ a {
   grid-template-rows: 0.2fr 1fr 0.25fr;
 }
 .featured-articles-subscription .wrapper .featured-report__content .featured-report__info .featured-report__title {
-  width: 70%;
-  margin: 0 auto;
-  line-height: 1.9;
   width: 90%;
   margin: 0 auto;
   line-height: 1.8;
@@ -2604,7 +2617,7 @@ a {
 }
 .featured-articles-subscription .wrapper .featured-report__content .featured-report__info .featured-report__buttons .featured-report__button {
   width: 100%;
-  font-size: 0.8em;
+  font-size: 0.8rem;
   height: 4.5em;
   background: transparent;
   border-color: #fff;
@@ -2618,7 +2631,7 @@ a {
   background-color: rgba(255, 94, 87, 0.5);
 }
 .featured-articles-subscription .wrapper .featured-report .featured-content {
-  background-color: rgb(236, 240, 241);
+  background-color: rgb(234, 240, 246);
   height: 33.8rem;
   padding: 0.5em;
   cursor: pointer;
@@ -2631,6 +2644,7 @@ a {
 .featured-articles-subscription .wrapper .featured-report .featured-content__image-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   height: 58%;
   width: 100%;
 }
@@ -2671,7 +2685,7 @@ a {
 }
 .featured-articles-subscription .wrapper .featured-experience .featured-content {
   height: 32rem;
-  background-color: rgb(236, 240, 241);
+  background-color: rgb(234, 240, 246);
   padding: 0.5em;
   cursor: pointer;
 }
@@ -2712,7 +2726,7 @@ a {
 }
 .featured-articles-subscription .wrapper .featured-experience .featured-article {
   height: 32.1rem;
-  background-color: rgb(236, 240, 241);
+  background-color: rgb(234, 240, 246);
   padding: 0.5em;
   cursor: pointer;
   position: relative;
@@ -2740,7 +2754,7 @@ a {
 }
 .featured-articles-subscription .wrapper .featured-experience .featured-article__content .featured-article__type {
   padding: 0.6rem 1em 2em 1em;
-  font-size: 0.7em;
+  font-size: 0.7rem;
   padding-left: 0.75em;
 }
 .featured-articles-subscription .wrapper .featured-experience .featured-article__content .featured-article__title {
@@ -2749,7 +2763,7 @@ a {
   line-height: 0.9;
 }
 .featured-articles-subscription .wrapper .featured-experience .featured-article__content .featured-article__title a {
-  font-size: 1rem;
+  font-size: 1em;
   font-weight: unset;
 }
 .featured-articles-subscription .wrapper .featured-experience .featured-article__content .featured-article__meta {
