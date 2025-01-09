@@ -435,10 +435,6 @@ html {
   *** FOR MOBILE
   **	MAX : 640PX / 40em
   --------------------------------*/
-  /*--------------------------------
-  *** FOR MINI MOBILE
-  **	MAX : 400PX / 25em
-  --------------------------------*/
 }
 html body {
   font-family: "Poppins", sans-serif;
@@ -454,10 +450,17 @@ html body li {
   list-style-type: none;
 }
 html body hr {
-  width: 50rem;
+  width: 26rem;
   margin: 0 auto;
   display: none;
   border-color: rgb(0, 0, 0);
+}
+html body .hr {
+  top: 3rem;
+  width: 26rem;
+  margin: 0 auto;
+  border-color: rgb(0, 0, 0);
+  position: relative;
 }
 html body .weprodev-header {
   display: flex;
@@ -466,31 +469,19 @@ html body .weprodev-header {
   top: 0;
 }
 @media screen and (max-width: 62em) {
-  html body .hr {
-    width: 17.5rem;
-    display: block;
-  }
   html body hr {
-    width: 21rem;
     top: -2.5rem;
     position: relative;
+    display: block;
   }
   html body .container {
     width: 70%;
   }
 }
 @media screen and (max-width: 40em) {
-  html body hr {
-    width: 23rem;
-    display: block;
-  }
-  html body .container {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 25em) {
-  html body hr {
-    width: 19.5rem;
+  html body hr,
+  html body .hr {
+    width: 20rem;
     display: block;
   }
   html body .container {

@@ -18,15 +18,22 @@ html {
     }
 
     hr {
-      width: 50rem;
+      width: 26rem;
       margin: 0 auto;
       display: none;
       border-color: $black;
     }
 
+    .hr {
+      top: 3rem;
+      width: 26rem;
+      margin: 0 auto;
+      border-color: $black;
+      position: relative;
+    }
+
     .weprodev-header {
-      display: flex;
-      flex-direction: column;
+      @include flex-column;
       position: relative;
       top: 0;
     }
@@ -42,15 +49,10 @@ html {
   --------------------------------*/
   @include tablet {
     body {
-      .hr {
-        width: 17.5rem;
-        display: block;
-      }
-
       hr {
-        width: 21rem;
         top: -2.5rem;
         position: relative;
+        display: block;
       }
 
       .container {
@@ -65,25 +67,9 @@ html {
   --------------------------------*/
   @include mobile {
     body {
-      hr {
-        width: 23rem;
-        display: block;
-      }
-
-      .container {
-        width: 100%;
-      }
-    }
-  }
-
-  /*--------------------------------
-  *** FOR MINI MOBILE
-  **	MAX : 400PX / 25em
-  --------------------------------*/
-  @include miniMobile {
-    body {
-      hr {
-        width: 19.5rem;
+      hr,
+      .hr {
+        width: 20rem;
         display: block;
       }
 
