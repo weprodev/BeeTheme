@@ -1,8 +1,8 @@
 .topics {
   padding-top: nth($spaces, 12);
   padding-bottom: nth($spaces, 12);
-  margin: 0 auto;
   width: clamp(10rem, 85%, 52rem);
+  margin: 0 auto;
 
   &__intro {
     padding: nth($spaces, 9) 0 nth($spaces, 11) 0;
@@ -10,34 +10,22 @@
     grid-template-rows: repeat(2, 1fr);
     grid-gap: nth($spaces, 8);
 
-    .topics__title {
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      height: 2rem;
+    .topics {
+      &__title {
+        @include flex-center;
+        height: 2rem;
 
-      h2 {
-        font-size: 1.75rem;
-        font-weight: bold;
-        background-color: $white;
-        width: 20rem;
-        position: absolute;
-        z-index: 999999;
+        h2 {
+          font-size: $fontSize3Xl;
+          background-color: $white;
+          font-weight: bold;
+        }
       }
 
-      span {
-        width: 100%;
-        height: 2px;
-        top: 50%;
-        position: relative;
-        background-color: $black;
+      &__description {
+        font-size: $fontSize2Xl;
+        text-align: center;
       }
-    }
-
-    .topics__description {
-      margin: 0 auto;
-      font-weight: $fontWeightRegular;
-      width: 60%;
     }
   }
 
@@ -73,8 +61,6 @@
       }
 
       .topics__cart {
-        width: 0;
-        height: 0;
         border-left: $roundedMd solid transparent;
         border-right: $roundedMd solid transparent;
         border-top: $roundedMd solid $black;
@@ -89,34 +75,14 @@
 
   /*--------------------------------
 	*** FOR ANY DEVICE MAX SIZE UNTIL
-	**	MAX-WIDTH : 1024px OR 64em
+	**	MAX-WIDTH : 992px OR 62em
 	*/
 
-  @include miniLaptop {
+  @include tablet {
     &__grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-    }
-  }
-
-  /*--------------------------------
-  *** FOR RETINA MOBILE AND LANDSCAPE
-  **	MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
-  --------------------------------*/
-  @include retinaMobile {
-    &__intro .topics__title span {
-      display: none;
-    }
-  }
-
-  /*--------------------------------
-  *** FOR MINI MOBILE
-  **	MAX : 400PX / 25em
-  --------------------------------*/
-  @include miniMobile {
-    .topics__intro .topics__description {
-      width: 100%;
     }
   }
 }

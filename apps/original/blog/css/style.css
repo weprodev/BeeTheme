@@ -2676,23 +2676,15 @@ a {
 .topics {
   padding-top: 3em;
   padding-bottom: 3em;
-  margin: 0 auto;
   width: clamp(10rem, 85%, 52rem);
+  margin: 0 auto;
   /*========================================================================================*\
   *----------------------------          MEDIA QUERY              ----------------------------        
   \*========================================================================================*/
   /*--------------------------------
   *** FOR ANY DEVICE MAX SIZE UNTIL
-  **	MAX-WIDTH : 1024px OR 64em
+  **	MAX-WIDTH : 992px OR 62em
   */
-  /*--------------------------------
-  *** FOR RETINA MOBILE AND LANDSCAPE
-  **	MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
-  --------------------------------*/
-  /*--------------------------------
-  *** FOR MINI MOBILE
-  **	MAX : 400PX / 25em
-  --------------------------------*/
 }
 .topics__intro {
   padding: 2.25em 0 2.75em 0;
@@ -2701,30 +2693,19 @@ a {
   grid-gap: 2em;
 }
 .topics__intro .topics__title {
-  text-align: center;
   display: flex;
   justify-content: center;
+  align-items: center;
   height: 2rem;
 }
 .topics__intro .topics__title h2 {
-  font-size: 1.75rem;
-  font-weight: bold;
+  font-size: 1.875em;
   background-color: #fff;
-  width: 20rem;
-  position: absolute;
-  z-index: 999999;
-}
-.topics__intro .topics__title span {
-  width: 100%;
-  height: 2px;
-  top: 50%;
-  position: relative;
-  background-color: #000;
+  font-weight: bold;
 }
 .topics__intro .topics__description {
-  margin: 0 auto;
-  font-weight: 400;
-  width: 60%;
+  font-size: 1.5em;
+  text-align: center;
 }
 .topics__grid {
   display: grid;
@@ -2778,28 +2759,16 @@ a {
   border-color: rgb(0, 0, 255);
 }
 .topics__grid a .topics__cart {
-  width: 0;
-  height: 0;
   border-left: 0.375em solid transparent;
   border-right: 0.375em solid transparent;
   border-top: 0.375em solid #000;
   transition: 0.3s;
 }
-@media screen and (max-width: 64em) {
+@media screen and (max-width: 62em) {
   .topics__grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-  }
-}
-@media screen and (min-width: 31.25em) and (max-width: 47.9375em) {
-  .topics__intro .topics__title span {
-    display: none;
-  }
-}
-@media screen and (max-width: 25em) {
-  .topics .topics__intro .topics__description {
-    width: 100%;
   }
 }
 
