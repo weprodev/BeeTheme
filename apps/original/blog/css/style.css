@@ -407,6 +407,9 @@ a {
 *** Centering and Alignment 
 */
 /*--------------------------------
+*** Centering and Alignment 
+*/
+/*--------------------------------
 *** Flexbox Utilities
 */
 /*
@@ -424,10 +427,6 @@ html {
   /*========================================================================================*\
   *----------------------------          MEDIA QUERY              ----------------------------        
   \*========================================================================================*/
-  /*--------------------------------
-  *** FOR ANY DEVICE MAX SIZE UNTIL
-  **	MAX-WIDTH : 1024px OR 64em
-  */
   /*--------------------------------
   *** FOR TABLET
   **	MAX-WIDTH : 992px OR 62em
@@ -465,14 +464,6 @@ html body .weprodev-header {
   flex-direction: column;
   position: relative;
   top: 0;
-}
-@media screen and (max-width: 64em) {
-  html body hr {
-    display: block;
-    width: 31rem;
-    top: -2.5rem;
-    position: relative;
-  }
 }
 @media screen and (max-width: 62em) {
   html body .hr {
@@ -2200,10 +2191,6 @@ a {
   */
   /*--------------------------------
   *** FOR ANY DEVICE MAX SIZE UNTIL
-  ** MAX-WIDTH : 1024px OR 64em
-  */
-  /*--------------------------------
-  *** FOR ANY DEVICE MAX SIZE UNTIL
   ** MAX-WIDTH : 992px OR 62em
   */
   /*--------------------------------
@@ -2337,35 +2324,6 @@ a {
   color: rgb(128, 128, 128);
   font-size: 0.875em;
 }
-@media screen and (max-width: 75em) {
-  .content-section .wrapper .sidebar .sidebar__list > :first-child .sidebar__list-item-title {
-    top: -0.5rem;
-    position: relative;
-  }
-  .content-section .wrapper .sidebar .sidebar__list > :first-child .sidebar__meta {
-    top: -0.5rem;
-  }
-}
-@media screen and (max-width: 64em) {
-  .content-section .wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .content-section .wrapper .post {
-    width: 75%;
-  }
-  .content-section .wrapper .post__details .post__title-container .post__meta {
-    top: 8rem;
-  }
-  .content-section .wrapper .sidebar {
-    width: 75%;
-    padding-top: 2em;
-  }
-  .content-section .wrapper .sidebar .sidebar__list-item {
-    width: 100%;
-  }
-}
 @media screen and (max-width: 62em) {
   .content-section .wrapper {
     display: flex;
@@ -2440,11 +2398,22 @@ a {
   align-items: center;
   width: clamp(20rem, 100%, 52rem);
   margin: 0 auto;
+  /*========================================================================================*\
+  *----------------------------          MEDIA QUERY              ----------------------------        
+  \*========================================================================================*/
+  /*--------------------------------
+  *** FOR ANY DEVICE MAX SIZE UNTIL
+  ** MAX-WIDTH : 992px OR 62em
+  */
+  /*--------------------------------
+  *** FOR MOBILE
+  **	MAX : 640PX / 40em
+  */
 }
 .featured-articles-subscription .wrapper {
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
+  justify-content: space-between;
 }
 .featured-articles-subscription .wrapper .featured-articles {
   display: grid;
@@ -2473,32 +2442,22 @@ a {
   justify-content: center;
   align-items: center;
   height: 10.5rem;
-  width: 100%;
 }
 .featured-articles-subscription .wrapper .featured-articles .featured-article__image-container img {
-  object-fit: cover;
+  height: 100%;
   border-radius: 0.3125rem 0.3125rem 0 0;
 }
 .featured-articles-subscription .wrapper .featured-articles .featured-article__content {
-  padding-top: 1em;
+  padding: 0.5em;
   display: grid;
-  grid-template-rows: 0.5fr 3.9fr 0.5fr;
-}
-.featured-articles-subscription .wrapper .featured-articles .featured-article__content .featured-article__type {
-  padding: 0.6rem 1em 1em 1em;
-  padding-left: 0.75em;
-  font-size: 0.9375rem;
-}
-.featured-articles-subscription .wrapper .featured-articles .featured-article__content .featured-article__title {
-  padding: 0 0.875rem 0 0.875rem;
+  grid-template-rows: 2rem 11rem 1rem;
 }
 .featured-articles-subscription .wrapper .featured-articles .featured-article__content .featured-article__title a {
-  line-height: 1.3125em;
+  line-height: 1.3;
   font-size: 2rem;
 }
 .featured-articles-subscription .wrapper .featured-articles .featured-article__content .featured-article__meta {
   font-size: 0.75em;
-  padding-left: 0.5em;
 }
 .featured-articles-subscription .wrapper .featured-articles .subscription {
   height: 26rem;
@@ -2516,15 +2475,16 @@ a {
   transform: scale(1.01);
 }
 .featured-articles-subscription .wrapper .featured-articles .subscription__content {
-  text-align: center;
-  justify-content: center;
-  width: 90%;
   display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
   grid-template-rows: 0.1fr 1fr 1.3fr 0.25fr;
 }
 .featured-articles-subscription .wrapper .featured-articles .subscription__content .subscription__title {
   font-size: 2rem;
   font-weight: bold;
+  text-align: center;
 }
 .featured-articles-subscription .wrapper .featured-articles .subscription__content .subscription__description {
   font-size: 1.4rem;
@@ -2570,7 +2530,7 @@ a {
   width: 90%;
   margin: 0 auto;
   line-height: 1.3;
-  font-size: 3rem;
+  font-size: 3em;
   padding: 1.5em 0;
 }
 .featured-articles-subscription .wrapper .shared-featured .featured-report__info .featured-report__buttons {
@@ -2608,8 +2568,7 @@ a {
   height: 18.6rem;
 }
 .featured-articles-subscription .wrapper .shared-featured .featured-content__image-container .featured-content__image {
-  object-fit: cover;
-  object-position: top;
+  height: 100%;
   border-radius: 0.3125rem 0.3125rem 0 0;
 }
 .featured-articles-subscription .wrapper .shared-featured .featured-content__content {
@@ -2618,12 +2577,11 @@ a {
   padding: 0.5em;
 }
 .featured-articles-subscription .wrapper .shared-featured .featured-content__content .featured-content__title {
-  line-height: 1.3125em;
+  line-height: 1.3;
   font-size: 2rem;
 }
 .featured-articles-subscription .wrapper .shared-featured .featured-content__content .featured-content__meta {
   font-size: 0.75em;
-  padding-left: 0.5em;
 }
 .featured-articles-subscription .wrapper .featured-report {
   grid-template-columns: 4fr 2fr;
@@ -2651,8 +2609,7 @@ a {
   color: rgb(51, 71, 91);
 }
 .featured-articles-subscription .wrapper .featured-report .featured-article__content .featured-article__title {
-  word-spacing: 0.1875rem;
-  line-height: 1.3125em;
+  line-height: 1.3;
   font-size: 2rem;
 }
 .featured-articles-subscription .wrapper .featured-report .featured-article__content .featured-article__title a {
@@ -2664,6 +2621,81 @@ a {
 }
 .featured-articles-subscription .wrapper .featured-report .featured-article__content .featured-article__meta a {
   color: rgb(51, 71, 91);
+}
+@media screen and (max-width: 62em) {
+  .featured-articles-subscription .wrapper {
+    width: 32rem;
+  }
+  .featured-articles-subscription .wrapper .featured-articles,
+  .featured-articles-subscription .wrapper .shared-featured,
+  .featured-articles-subscription .wrapper .featured-report {
+    margin: 0 auto;
+  }
+  .featured-articles-subscription .wrapper .shared-featured,
+  .featured-articles-subscription .wrapper .featured-articles {
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
+  .featured-articles-subscription .wrapper .shared-featured .featured-report__content,
+  .featured-articles-subscription .wrapper .featured-articles .featured-report__content {
+    width: 26rem;
+    height: 30rem;
+  }
+  .featured-articles-subscription .wrapper .shared-featured .featured-content,
+  .featured-articles-subscription .wrapper .featured-articles .featured-content {
+    width: 26rem;
+    height: 30rem;
+  }
+  .featured-articles-subscription .wrapper .shared-featured .featured-content__image-container,
+  .featured-articles-subscription .wrapper .featured-articles .featured-content__image-container {
+    height: 14rem;
+  }
+  .featured-articles-subscription .wrapper .shared-featured .featured-article,
+  .featured-articles-subscription .wrapper .featured-articles .featured-article {
+    width: 26rem;
+    height: 30rem;
+  }
+  .featured-articles-subscription .wrapper .shared-featured .featured-article__content,
+  .featured-articles-subscription .wrapper .featured-articles .featured-article__content {
+    grid-template-rows: 0.5fr 2.5fr 0fr;
+  }
+  .featured-articles-subscription .wrapper .shared-featured .featured-article__image-container,
+  .featured-articles-subscription .wrapper .featured-articles .featured-article__image-container {
+    height: 14rem;
+  }
+  .featured-articles-subscription .wrapper .shared-featured .featured-article__image-container img,
+  .featured-articles-subscription .wrapper .featured-articles .featured-article__image-container img {
+    height: 100%;
+  }
+  .featured-articles-subscription .wrapper .featured-articles .featured-article__content {
+    grid-template-rows: 2rem 10.5rem 1rem;
+  }
+  .featured-articles-subscription .wrapper .featured-articles .subscription {
+    width: 26rem;
+    height: 30rem;
+  }
+}
+@media screen and (max-width: 40em) {
+  .featured-articles-subscription .wrapper {
+    width: 32rem;
+  }
+  .featured-articles-subscription .wrapper .shared-featured .featured-content__image-container .featured-content__image {
+    height: 100%;
+  }
+  .featured-articles-subscription .wrapper .featured-articles .featured-report__content,
+  .featured-articles-subscription .wrapper .featured-articles .featured-content,
+  .featured-articles-subscription .wrapper .featured-articles .featured-article,
+  .featured-articles-subscription .wrapper .featured-articles .subscription,
+  .featured-articles-subscription .wrapper .shared-featured .featured-report__content,
+  .featured-articles-subscription .wrapper .shared-featured .featured-content,
+  .featured-articles-subscription .wrapper .shared-featured .featured-article,
+  .featured-articles-subscription .wrapper .shared-featured .subscription,
+  .featured-articles-subscription .wrapper .featured-report .featured-report__content,
+  .featured-articles-subscription .wrapper .featured-report .featured-content,
+  .featured-articles-subscription .wrapper .featured-report .featured-article,
+  .featured-articles-subscription .wrapper .featured-report .subscription {
+    width: 20rem;
+  }
 }
 
 .topics {

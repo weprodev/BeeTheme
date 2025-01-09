@@ -37,22 +37,6 @@ html {
   \*========================================================================================*/
 
   /*--------------------------------
-	*** FOR ANY DEVICE MAX SIZE UNTIL
-	**	MAX-WIDTH : 1024px OR 64em
-	*/
-
-  @include miniLaptop {
-    body {
-      hr {
-        display: block;
-        width: 31rem;
-        top: -2.5rem;
-        position: relative;
-      }
-    }
-  }
-
-  /*--------------------------------
   *** FOR TABLET
   **	MAX-WIDTH : 992px OR 62em
   --------------------------------*/

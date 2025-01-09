@@ -101,12 +101,17 @@
     }
   
     /*--------------------------------
+    *** Centering and Alignment 
+    */  
+    @mixin grid-center {
+      display: grid;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    /*--------------------------------
     *** Flexbox Utilities
     */
-    @mixin flex-row {
-      display: flex;
-      flex-direction: row;
-    }
   
     @mixin flex-column {
       display: flex;
