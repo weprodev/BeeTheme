@@ -102,7 +102,6 @@
           padding: nth($spaces, 2);
           border-radius: 0.1875rem;
           cursor: pointer;
-          // height: 6.2rem;
 
           .sidebar__meta a {
             padding-top: nth($spaces, 5);
@@ -157,11 +156,6 @@
 
   /*--------------------------------
   *** FOR ANY DEVICE MAX SIZE UNTIL
-  ** MAX-WIDTH : 1200px OR 75em
-  */
-
-  /*--------------------------------
-  *** FOR ANY DEVICE MAX SIZE UNTIL
   ** MAX-WIDTH : 992px OR 62em
   */
 
@@ -172,7 +166,7 @@
       align-items: center;
 
       .post {
-        width: 90%;
+        width: 26rem;
 
         &__details {
           .post__title-container {
@@ -181,7 +175,7 @@
             }
 
             .post__meta {
-              top: 6.5rem;
+              top: 3.5rem;
             }
           }
           .post__image-container img {
@@ -191,40 +185,11 @@
       }
 
       .sidebar {
-        width: 90%;
+        width: 26rem;
         padding-top: nth($spaces, 8);
 
         .sidebar__list .sidebar__list-item {
           width: 100%;
-        }
-      }
-    }
-  }
-
-  /*--------------------------------
-  *** FOR RETINA MOBILE AND LANDSCAPE
-  ** MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
-  */
-
-  @include retinaMobile {
-    .wrapper {
-      .post {
-        width: 100%;
-        border-radius: 0;
-        max-height: 37rem;
-
-        &__details {
-          width: 95%;
-
-          .post__image-container {
-            img {
-              width: 23.2rem;
-            }
-          }
-
-          .post__title-container {
-            width: 90%;
-          }
         }
       }
     }
@@ -238,31 +203,36 @@
   @include mobile {
     .wrapper {
       .post {
-        width: 23rem;
-        height: 30rem;
+        width: 20rem;
 
         &__details {
           width: 95%;
 
-          .post__image-container img {
-            width: 100%;
-          }
+          .post__title {
+            &-container {
+              width: 90%;
 
-          .post__title-container {
-            width: 90%;
+              img {
+                width: 100%;
+              }
 
-            .post__meta {
-              top: 6rem;
+              .post__title a {
+                font-size: 1.5rem;
+              }
+
+              .post__meta {
+                top: 3.5rem;
+              }
             }
           }
         }
       }
 
       .sidebar {
-        width: 23rem;
+        width: 20rem;
 
         .sidebar__title {
-          left: 0;
+          // left: 0;
         }
       }
     }

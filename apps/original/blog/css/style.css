@@ -2187,15 +2187,7 @@ a {
   \*========================================================================================*/
   /*--------------------------------
   *** FOR ANY DEVICE MAX SIZE UNTIL
-  ** MAX-WIDTH : 1200px OR 75em
-  */
-  /*--------------------------------
-  *** FOR ANY DEVICE MAX SIZE UNTIL
   ** MAX-WIDTH : 992px OR 62em
-  */
-  /*--------------------------------
-  *** FOR RETINA MOBILE AND LANDSCAPE
-  ** MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
   */
   /*--------------------------------
   *** FOR MOBILE
@@ -2331,63 +2323,46 @@ a {
     align-items: center;
   }
   .content-section .wrapper .post {
-    width: 90%;
+    width: 26rem;
   }
   .content-section .wrapper .post__details .post__title-container .post__title {
     font-size: 1em;
   }
   .content-section .wrapper .post__details .post__title-container .post__meta {
-    top: 6.5rem;
+    top: 3.5rem;
   }
   .content-section .wrapper .post__details .post__image-container img {
     height: 17rem;
   }
   .content-section .wrapper .sidebar {
-    width: 90%;
+    width: 26rem;
     padding-top: 2em;
   }
   .content-section .wrapper .sidebar .sidebar__list .sidebar__list-item {
     width: 100%;
   }
 }
-@media screen and (min-width: 31.25em) and (max-width: 47.9375em) {
-  .content-section .wrapper .post {
-    width: 100%;
-    border-radius: 0;
-    max-height: 37rem;
-  }
-  .content-section .wrapper .post__details {
-    width: 95%;
-  }
-  .content-section .wrapper .post__details .post__image-container img {
-    width: 23.2rem;
-  }
-  .content-section .wrapper .post__details .post__title-container {
-    width: 90%;
-  }
-}
 @media screen and (max-width: 40em) {
   .content-section .wrapper .post {
-    width: 23rem;
-    height: 30rem;
+    width: 20rem;
   }
   .content-section .wrapper .post__details {
     width: 95%;
   }
-  .content-section .wrapper .post__details .post__image-container img {
-    width: 100%;
-  }
   .content-section .wrapper .post__details .post__title-container {
     width: 90%;
   }
+  .content-section .wrapper .post__details .post__title-container img {
+    width: 100%;
+  }
+  .content-section .wrapper .post__details .post__title-container .post__title a {
+    font-size: 1.5rem;
+  }
   .content-section .wrapper .post__details .post__title-container .post__meta {
-    top: 6rem;
+    top: 3.5rem;
   }
   .content-section .wrapper .sidebar {
-    width: 23rem;
-  }
-  .content-section .wrapper .sidebar .sidebar__title {
-    left: 0;
+    width: 20rem;
   }
 }
 
