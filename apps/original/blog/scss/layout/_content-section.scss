@@ -28,14 +28,9 @@
       &__details {
         display: flex;
         flex-direction: column;
-        width: 95%;
         height: 30rem;
 
         .post__image-container {
-          margin: 0 auto;
-          padding-top: 0.9rem;
-          width: 100%;
-
           .post__image {
             object-fit: cover;
             border-top: 0.3125rem;
@@ -44,28 +39,29 @@
 
         .post__title-container {
           text-align: start;
-          padding-top: nth($spaces, 2);
-          display: flex;
-          flex-direction: column;
+          padding: nth($spaces, 2);
+          @include flex-column;
 
           .post__title {
-            font-size: 1.0625rem;
             top: 0.8125rem;
             position: relative;
             text-align: start;
-            padding: 0 0.625rem 0 0.625rem;
             word-spacing: 0.0625rem;
-            line-height: 1.4;
-            font-weight: 600;
+            line-height: 1.3;
+
+            a {
+              font-size: $fontSizeXXL;
+              color: $midnightTeal;
+            }
           }
         }
 
         .post__meta {
           color: $black;
-          top: 5.875rem;
-          left: 0.25rem;
-          font-size: 0.5625rem;
+          top: 2rem;
+          font-size: $fontSizeXs;
           position: relative;
+          color: $midnightTeal;
         }
       }
     }
@@ -73,7 +69,6 @@
     .sidebar {
       padding-top: nth($spaces, 4);
       text-align: start;
-
       width: 17.5rem;
       position: relative;
       height: 31rem;
@@ -97,19 +92,25 @@
 
       .sidebar__list {
         list-style: none;
-        padding: 0;
-        padding-top: 0.99rem;
+        padding: 0.99rem 0;
 
         &-item {
+          display: grid;
+          grid-template-rows: 2fr 0.5fr;
           margin-bottom: nth($spaces, 4);
           background: $softSky;
-          height: 5.2rem;
-          padding: 2.4em 0.8em 0px nth($spaces, 4);
+          padding: nth($spaces, 2);
           border-radius: 0.1875rem;
           cursor: pointer;
+          // height: 6.2rem;
+
+          .sidebar__meta a {
+            padding-top: nth($spaces, 5);
+          }
 
           &-title {
-            font-size: 0.625rem;
+            font-size: $fontSizeBase;
+            line-height: 1.3;
           }
 
           &:hover {
@@ -145,14 +146,6 @@
             color: $gray;
             font-size: $fontSizeSm;
           }
-
-          &--highlighted {
-            height: 6.2rem;
-
-            .sidebar__meta a {
-              padding-top: nth($spaces, 5);
-            }
-          }
         }
       }
     }
@@ -161,29 +154,6 @@
   /*========================================================================================*\
   *----------------------------          MEDIA QUERY              ----------------------------        
   \*========================================================================================*/
-
-  /*--------------------------------
-  *** FOR SOME OF THE DEVICES
-  ** MIN-WIDTH : 1201px OR 75.0625em
-  */
-
-  @include lcd {
-    .wrapper {
-      .sidebar {
-        .sidebar__list {
-          & > :first-child {
-            .sidebar__list-item-title {
-              top: -0.5rem;
-              position: relative;
-            }
-            .sidebar__meta {
-              top: -0.5rem;
-            }
-          }
-        }
-      }
-    }
-  }
 
   /*--------------------------------
   *** FOR ANY DEVICE MAX SIZE UNTIL
@@ -260,7 +230,7 @@
         &__details {
           .post__title-container {
             .post__title {
-              font-size: 1rem;
+              font-size: $fontSizeBase;
             }
 
             .post__meta {
