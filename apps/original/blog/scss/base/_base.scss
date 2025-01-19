@@ -7,7 +7,10 @@ body {
   }
 
   .container {
-    width: 70%;
+    width: clamp(65%, 1vw, 80%);
+    margin: 0 auto;
+
+    
   }
 
   .separator {

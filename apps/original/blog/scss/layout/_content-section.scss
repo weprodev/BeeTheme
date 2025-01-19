@@ -1,15 +1,14 @@
-.blog-layout {
-  display: flex;
-  gap: nth($spaces, 3);
-  justify-content: center;
+.content-section {
   padding-top: nth($spaces, 8);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 
-  .container {
+  .wrapper {
     display: flex;
-    width: 66%;
     gap: nth($spaces, 3);
 
-    .main-post {
+    .post {
       background: $softSky;
       width: 33.5rem;
       height: 30.5rem;
@@ -26,52 +25,43 @@
         transform: scale(1.01);
       }
 
-      &__informations {
+      &__details {
         display: flex;
         flex-direction: column;
-        width: 32.5rem;
         height: 30rem;
 
-        .img__box {
-          width: 29.8rem;
-          height: 19.6rem;
-          margin: 0 auto;
-          padding-top: 0.9rem;
-
-          &-img {
-            width: 29.8rem;
-            height: 18.7rem;
+        .post__image-container {
+          .post__image {
             object-fit: cover;
             border-top: 0.3125rem;
           }
         }
 
-        .title-box {
+        .post__title-container {
           text-align: start;
-          padding-top: nth($spaces, 2);
-          display: flex;
-          flex-direction: column;
+          padding: nth($spaces, 2);
+          @include flex-column;
 
-          .main-post__title {
-            font-size: 1.0625rem;
+          .post__title {
             top: 0.8125rem;
             position: relative;
             text-align: start;
-            padding: 0 0.625rem 0 0.625rem;
             word-spacing: 0.0625rem;
-            line-height: 1.4;
-            font-weight: 600;
+            line-height: 1.3;
+
+            a {
+              font-size: $fontSizeXXL;
+              color: $midnightTeal;
+            }
           }
         }
 
-        .main-post__info {
+        .post__meta {
           color: $black;
-          display: flex;
-          flex-direction: row;
-          top: 5.875rem;
-          left: 0.25rem;
-          font-size: 0.5625rem;
+          top: 2rem;
+          font-size: $fontSizeXs;
           position: relative;
+          color: $midnightTeal;
         }
       }
     }
@@ -79,7 +69,6 @@
     .sidebar {
       padding-top: nth($spaces, 4);
       text-align: start;
-
       width: 17.5rem;
       position: relative;
       height: 31rem;
@@ -103,19 +92,24 @@
 
       .sidebar__list {
         list-style: none;
-        padding: 0;
-        padding-top: 0.99rem;
+        padding: 0.99rem 0;
 
-        .sidebar__item {
+        &-item {
+          display: grid;
+          grid-template-rows: 2fr 0.5fr;
           margin-bottom: nth($spaces, 4);
           background: $softSky;
-          height: 5.2rem;
-          padding: 2.4em 0.8em 0px nth($spaces, 4);
+          padding: nth($spaces, 2);
           border-radius: 0.1875rem;
           cursor: pointer;
 
-          h4 {
-            font-size: 0.625rem;
+          .sidebar__meta a {
+            padding-top: nth($spaces, 5);
+          }
+
+          &-title {
+            font-size: $fontSizeBase;
+            line-height: 1.3;
           }
 
           &:hover {
@@ -133,7 +127,7 @@
             }
           }
 
-          .blog-meta {
+          .sidebar__meta {
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
@@ -151,14 +145,6 @@
             color: $gray;
             font-size: $fontSizeSm;
           }
-
-          &-b {
-            height: 6.2rem;
-
-            .blog-meta a {
-              padding-top: nth($spaces, 5);
-            }
-          }
         }
       }
     }
@@ -169,120 +155,40 @@
   \*========================================================================================*/
 
   /*--------------------------------
-	*** FOR SOM OF THE DEVICES
-	**	MIN-WIDTH : 1201px OR 75.0625em
-	*/
-
-  @include lcd {
-
-    .container {
-      .sidebar {
-        .sidebar__list {
-          & > :first-child {
-            .sidebar__item-title {
-              top: -0.5rem;
-              position: relative;
-            }
-            .blog-meta {
-              top: -0.5rem;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  /*--------------------------------
-	*** FOR ANY DEVICE MAX SIZE UNTIL
-	**	MAX-WIDTH : 1200px OR 75em
-	*/
-
-  @include laptop {
-    .container {
-      .sidebar {
-        .sidebar__list {
-          & > :first-child {
-            .sidebar__item-title {
-              top: -0.5rem;
-              position: relative;
-            }
-            .blog-meta {
-              top: -0.5rem;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  /*--------------------------------
-	*** FOR ANY DEVICE MAX SIZE UNTIL
-	**	MAX-WIDTH : 1024px OR 64em
-	*/
-
-  @include miniLaptop {
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      .main-post {
-        width: 75%;
-      }
-
-      .sidebar {
-        width: 75%;
-        padding-top: nth($spaces, 8);
-
-        .sidebar__list {
-          & > :first-child {
-            // background-color: red;
-            // color: red;
-          }
-          .sidebar__item {
-            width: 100%;
-          }
-        }
-      }
-    }
-  }
-
-  /*--------------------------------
-	*** FOR ANY DEVICE MAX SIZE UNTIL
-	**	MAX-WIDTH : 992px OR 62em
-	*/
+  *** FOR ANY DEVICE MAX SIZE UNTIL
+  ** MAX-WIDTH : 992px OR 62em
+  */
 
   @include tablet {
-    .container {
+    .wrapper {
       display: flex;
       flex-direction: column;
       align-items: center;
 
-      .main-post {
-        width: 75%;
+      .post {
+        width: 26rem;
 
-        &__informations {
-          width: 18rem;
-          .img__box {
-            width: 18rem;
-            img {
-              width: 18rem;
-              height: 17rem;
+        &__details {
+          .post__title-container {
+            .post__title {
+              font-size: $fontSizeBase;
+            }
+
+            .post__meta {
+              top: 3.5rem;
             }
           }
-          .title-box {
-            padding-top: 0;
-            top: -1rem;
-            position: relative;
+          .post__image-container img {
+            height: 17rem;
           }
         }
       }
 
       .sidebar {
-        width: 75%;
+        width: 26rem;
         padding-top: nth($spaces, 8);
 
-        .sidebar__list .sidebar__item {
+        .sidebar__list .sidebar__list-item {
           width: 100%;
         }
       }
@@ -290,119 +196,40 @@
   }
 
   /*--------------------------------
-	*** FOR RETINA MOBILE AND LANSCAPE
-	**	MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
-	*/
-
-  @include retinaMobile {
-    .container {
-      width: 100%;
-
-      .main-post {
-        width: 100%;
-        border-radius: 0;
-        max-height: 37rem;
-
-        &__informations {
-          width: 95%;
-
-          .img__box {
-            img {
-              width: 23.2rem;
-            }
-          }
-
-          .title-box {
-            width: 90%;
-          }
-        }
-      }
-
-      .sidebar {
-        width: 100%;
-
-        .sidebar__title {
-          left: 1rem;
-          position: relative;
-        }
-
-        .sidebar__list .sidebar__item {
-          border-radius: 0;
-        }
-      }
-    }
-  }
-
-  /*--------------------------------
-	*** FOR MOBILE
-	**	MAX : 640PX / 40em
-	*/
+  *** FOR MOBILE
+  ** MAX : 640PX / 40em
+  */
 
   @include mobile {
-    .container {
-      width: 62%;
+    .wrapper {
+      .post {
+        width: 20rem;
 
-      .main-post {
-        width: 23rem;
-        height: 30rem;
-
-        .main-post__informations {
+        &__details {
           width: 95%;
 
-          .img__box {
-            width: 20rem;
+          .post__title {
+            &-container {
+              width: 90%;
 
-            img {
-              width: 20rem;
+              img {
+                width: 100%;
+              }
+
+              .post__title a {
+                font-size: 1.5rem;
+              }
+
+              .post__meta {
+                top: 3.5rem;
+              }
             }
           }
-
-          .title-box {
-            width: 90%;
-          }
         }
       }
 
       .sidebar {
-        width: 23rem;
-
-        .sidebar__title {
-          left: 0;
-        }
-      }
-    }
-  }
-
-  /*--------------------------------
-	*** FOR MINI MOBILE
-	**	MAX : 400PX / 25em
-	*/
-
-  @include miniMobile {
-    .container {
-      width: 62%;
-
-      .main-post {
-        width: 100%;
-        height: 31rem;
-        border-radius: 0;
-
-        &__informations {
-          width: 90%;
-        }
-      }
-
-      .sidebar {
-        width: 100%;
-
-        .sidebar__title {
-          left: 1rem;
-          position: relative;
-        }
-
-        .sidebar__list .sidebar__item {
-          border-radius: 0;
-        }
+        width: 20rem;
       }
     }
   }
