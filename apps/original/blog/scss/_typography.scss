@@ -1,4 +1,6 @@
 html {
+  font-size: clamp(1rem, 1vw, 100rem);
+
   body {
     font-family: $primaryFontFamily;
 
@@ -15,27 +17,23 @@ html {
       list-style-type: none;
     }
 
-    * {
-      font: revert;
-    }
-
     hr {
-      width: 50rem;
+      width: 26rem;
       margin: 0 auto;
       display: none;
       border-color: $black;
     }
 
     .hr {
-      width: 50rem;
-      display: block;
-      top: 2rem;
+      top: 3rem;
+      width: 26rem;
+      margin: 0 auto;
+      border-color: $black;
       position: relative;
     }
 
     .weprodev-header {
-      display: flex;
-      flex-direction: column;
+      @include flex-column;
       position: relative;
       top: 0;
     }
@@ -46,71 +44,19 @@ html {
   \*========================================================================================*/
 
   /*--------------------------------
-	*** FOR ANY DEVICE MAX SIZE UNTIL
-	**	MAX-WIDTH : 1200px OR 75em
-	*/
-
-  @include laptop {
-    body {
-      .hr {
-        width: 47rem;
-      }
-    }
-  }
-
-  /*--------------------------------
-	*** FOR ANY DEVICE MAX SIZE UNTIL
-	**	MAX-WIDTH : 1024px OR 64em
-	*/
-
-  @include miniLaptop {
-    body {
-      .hr {
-        width: 27rem;
-      }
-
-      hr {
-        display: block;
-        width: 32rem;
-        top: -2.5rem;
-        position: relative;
-      }
-    }
-  }
-
-  /*--------------------------------
   *** FOR TABLET
   **	MAX-WIDTH : 992px OR 62em
   --------------------------------*/
   @include tablet {
     body {
-      .hr {
-        width: 17.5rem;
-        display: block;
-      }
-
       hr {
-        width: 21rem;
         top: -2.5rem;
         position: relative;
+        display: block;
       }
 
       .container {
         width: 70%;
-      }
-    }
-  }
-
-  /*--------------------------------
-  *** FOR RETINA MOBILE AND LANDSCAPE
-  **	MIN : 500px / 31.25em | MAX : 767PX / 47.9375em
-  --------------------------------*/
-  @include retinaMobile {
-    @media (min-width: 641px) and (max-width: 767px) {
-      font-size: 0.7rem;
-
-      .hr {
-        width: 16rem;
       }
     }
   }
@@ -121,33 +67,9 @@ html {
   --------------------------------*/
   @include mobile {
     body {
+      hr,
       .hr {
         width: 20rem;
-      }
-
-      hr {
-        width: 23rem;
-        display: block;
-      }
-
-      .container {
-        width: 100%;
-      }
-    }
-  }
-
-  /*--------------------------------
-  *** FOR MINI MOBILE
-  **	MAX : 400PX / 25em
-  --------------------------------*/
-  @include miniMobile {
-    body {
-      .hr {
-        width: 18rem;
-      }
-
-      hr {
-        width: 19.5rem;
         display: block;
       }
 
