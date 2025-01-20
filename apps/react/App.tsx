@@ -5,7 +5,9 @@ const App: React.FC = () => {
   return (
     <>
       Hello, World! <br />
-      <Link to={"/event-land"}> Event Land </Link>
+      <Link to={"/event-land"}> Event Land </Link> 
+      <br/>
+      <Link to={"/show-land"}> Show Land </Link> 
     </>
   );
 };
