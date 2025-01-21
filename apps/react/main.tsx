@@ -2,8 +2,10 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./shared/reset.css";
+        
 import MainPage from "./App.tsx";
 import EventLand from "./event-land/App.tsx";
+import ShowLand from "./show-land/App.tsx";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +15,10 @@ const router = createBrowserRouter([
   {
     path: "/event-land",
     element: <EventLand />,
+  },
+  {
+    path: "/show-land",
+    element: <ShowLand />,
   },
 ]);
 
