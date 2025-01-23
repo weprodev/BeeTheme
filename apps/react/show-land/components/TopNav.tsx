@@ -1,49 +1,47 @@
-import styled from "styled-components";
 import { useState } from "react";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { fontSizes, fontWeights, spaces } from "../../shared/styleVariables";
-import NavLinks from "./NavLinks";
-import ToggleNavButton from "./ToggleNavButton"
-
-/*------------------------------------*\
-  #STYLES
-\*------------------------------------*/
-
-const StyledNav = styled.nav`
-  font-weight: ${fontWeights.bold};
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-block: ${spaces[4]};
-  gap: ${spaces[4]};
-  & * {
-    flex-shrink: 0;
-  }
-`;
-const Logo = styled.span`
-  font-size: ${fontSizes.xl4};
-`;
-
-/*------------------------------------*\
-  #MARKUP
-\*------------------------------------*/
+import {
+  StyledTopNav,
+  Logo,
+  CloseButton,
+  NavLink,
+  NavLinks,
+  ToggleNavButton,
+} from "./TopNav.styles";
+import Button from "./Button";
 
 const TopNav: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <StyledNav>
+    <StyledTopNav>
       <Logo>WeProDev</Logo>
-      <NavLinks isOpen={isOpen} setIsOpen={setIsOpen} />
-      <ToggleNavButton onClick={() => setIsOpen(true)} type="open">
+
+      <NavLinks isOpen={isOpen}>
+        <CloseButton onClick={() => setIsOpen(false)}>
+          <FontAwesomeIcon
+            icon={faClose}
+            size="3x"
+            color="var(--color-grey-dark-3)"
+          ></FontAwesomeIcon>
+        </CloseButton>
+
+        <NavLink to="">Demos</NavLink>
+        <NavLink to="">Mobile view</NavLink>
+        <NavLink to="">Features</NavLink>
+        <NavLink to="">Help & Support</NavLink>
+        <Button>Purchase now</Button>
+      </NavLinks>
+
+      <ToggleNavButton onClick={() => setIsOpen(true)}>
         <FontAwesomeIcon
           icon={faBars}
           size="3x"
           color="var(--color-grey-dark-3)"
         />
       </ToggleNavButton>
-    </StyledNav>
+    </StyledTopNav>
   );
 };
 
