@@ -1,10 +1,12 @@
 import styled from "styled-components";
-import { borderRadius, spaces } from "../../shared/styleVariables";
+import { borderRadius, fontWeights, spaces } from "../../shared/styleVariables";
 import { Button as GeneralButton } from "../../components";
 
 const Button = styled(GeneralButton)`
   background: var(--gradient-primary);
   color: white;
+  font-size: inherit;
+  font-weight: ${fontWeights.bold};
   padding: ${spaces[4]} ${spaces[8]};
   text-transform: uppercase;
   border-radius: ${borderRadius.xl};
