@@ -8,6 +8,8 @@ const App: React.FC = () => {
       <Link to={"/event-land"}> Event Land </Link> 
       <br/>
       <Link to={"/show-land"}> Show Land </Link> 
+      <br/>
+      <Link to={"/solar-land"}> Solar Land </Link> 
     </>
   );
 };

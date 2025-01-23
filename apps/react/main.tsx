@@ -6,6 +6,7 @@ import "./shared/reset.css";
 import MainPage from "./App.tsx";
 import EventLand from "./event-land/App.tsx";
 import ShowLand from "./show-land/App.tsx";
+import SolarLand from "./solar-land/App.tsx";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "/show-land",
     element: <ShowLand />,
+  },
+  {
+    path: "/solar-land",
+    element: <SolarLand />,
   },
 ]);
 
