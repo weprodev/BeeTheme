@@ -1,8 +1,21 @@
 import styled, { css } from "styled-components";
-import Section from "../components/Section";
-import { borderRadius, fontSizes, fontWeights, spaces } from "../../shared/styleVariables";
+import { NavLink as ReactRouterNavLink } from "react-router-dom";
+import { ReactElement } from "react";
+
+import {
+  borderRadius,
+  fontSizes,
+  fontWeights,
+  spaces,
+} from "../../shared/styleVariables";
 import generateMediaQuery from "../../shared/generateMediaQuery";
+import Section from "../components/Section";
 import Heading from "../components/Heading";
+
+interface NavLinksProps {
+  isOpen: boolean;
+  children?: ReactElement[];
+}
 
 export const StyledHeader = styled(Section)`
   background-image: var(--gradient-primary);
@@ -11,6 +24,61 @@ export const StyledHeader = styled(Section)`
   height: 100dvh;
   overflow: hidden;
 `;
+
+export const Nav = styled.nav`
+  font-weight: ${fontWeights.bold};
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: ${spaces[4]};
+  gap: ${spaces[4]};
+  & * {
+    flex-shrink: 0;
+  }
+`;
+export const Logo = styled.span`
+  font-size: ${fontSizes.xl4};
+`;
+export const NavLinks = styled.ul<NavLinksProps>`
+  display: flex;
+  align-items: center;
+  gap: ${spaces[6]};
+  ${generateMediaQuery(
+    "tablet",
+    css`
+      display: ${(props: NavLinksProps) => (props.isOpen ? "flex" : "none")};
+      flex-direction: column;
+      width: 100%;
+      height: 100dvh;
+      justify-content: center;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      position: fixed;
+      background-color: var(--color-fifth);
+      z-index: 10;
+      font-size: ${fontSizes.xl};
+      gap: ${spaces[8]};
+    `
+  )}
+`;
+export const NavLink = styled(ReactRouterNavLink)`
+  text-transform: uppercase;
+`;
+export const NavButtonToggle = styled.button`
+  background-color: transparent;
+  display: none;
+  border: none;
+  cursor: pointer;
+  ${generateMediaQuery("tablet", `display:block`)}
+`;
+export const NavCloseButton = styled(NavButtonToggle)`
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+`;
+
 export const Hero = styled.div`
   display: flex;
   flex-direction: column;
@@ -20,7 +88,7 @@ export const Hero = styled.div`
   text-align: center;
   flex-grow: 1;
 `;
-export const HeroText = styled.div`
+export const HeroTextContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,7 +102,7 @@ export const HeroText = styled.div`
     `
   )}
 `;
-export const Tag = styled.span`
+export const HeroTag = styled.span`
   font-size: ${fontSizes.sm};
   font-weight: ${fontWeights.bold};
   text-transform: uppercase;
@@ -54,6 +122,7 @@ export const HeroHeading = styled(Heading)`
     `
   )}
 `;
+
 export const MiniGallery = styled.div`
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -80,7 +149,7 @@ export const MiniGallery = styled.div`
     `
   )}
 `;
-export const ImgGallery = styled.img`
+export const MiniGalleryImg = styled.img`
   object-fit: cover;
   border-radius: ${borderRadius.xl};
   &:nth-child(1) {
