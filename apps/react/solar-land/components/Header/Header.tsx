@@ -14,7 +14,7 @@ import {
   Span,
   StyleHeader,
   Ul,
-} from "./Header.styles";
+} from "./Header.Styles";
 
 const Header: React.FC = () => {
   return (
