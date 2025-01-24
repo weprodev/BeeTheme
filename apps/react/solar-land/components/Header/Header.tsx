@@ -7,9 +7,7 @@ import {
   GetInTouch,
   Hamburger,
   Img,
-  Li,
   Login,
-  Logo,
   Navigation,
   Span,
   StyleHeader,
@@ -22,9 +20,9 @@ const Header: React.FC = () => {  const [isActive, setIsActive] = useState(false
   };
   return (
     <StyleHeader>
-      <Logo>
+      <div>
         <Img src={solarlandLogo} alt="SolarLand Logo" />
-      </Logo>
+      </div>
 
       <Hamburger
         aria-label="Toggle navigation"
@@ -38,21 +36,21 @@ const Header: React.FC = () => {  const [isActive, setIsActive] = useState(false
 
       <Navigation className={`${isActive ? "active" : ""}`}>
         <Ul>
-          <Li>
+          <li>
             <A href="#home">Home</A>
-          </Li>
-          <Li>
+          </li>
+          <li>
             <A href="#about">About Us</A>
-          </Li>
-          <Li>
+          </li>
+          <li>
             <A href="#features">Features</A>
-          </Li>
-          <Li>
+          </li>
+          <li>
             <A href="#services">Services</A>
-          </Li>
-          <Li>
+          </li>
+          <li>
             <A href="#contact">Contact</A>
-          </Li>
+          </li>
         </Ul>
       </Navigation>
 

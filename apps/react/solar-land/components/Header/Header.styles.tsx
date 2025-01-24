@@ -167,7 +167,3 @@ export const GetInTouch = styled.button`
     background-color: rgb(34.52, 241.48, 152.04);
   }
 `;
-
-export const Li = styled.li``;
-
-export const Logo = styled.div``;
