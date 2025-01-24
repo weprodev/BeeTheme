@@ -1,4 +1,4 @@
-import * as React from "react";
+import { useState } from "react";
 import solarlandLogo from "../../images/solarland-logo.png";
 
 import {
@@ -16,20 +16,27 @@ import {
   Ul,
 } from "./Header.styles";
 
-const Header: React.FC = () => {
+const Header: React.FC = () => {  const [isActive, setIsActive] = useState(false);
+  const toggleHamburger = () => {
+    setIsActive((prev) => !prev);
+  };
   return (
     <StyleHeader>
       <Logo>
         <Img src={solarlandLogo} alt="SolarLand Logo" />
       </Logo>
 
-      <Hamburger aria-label="Toggle navigation">
+      <Hamburger
+        aria-label="Toggle navigation"
+        onClick={toggleHamburger}
+        className={`${isActive ? "active" : ""}`}
+      >
         <Span></Span>
         <Span></Span>
         <Span></Span>
       </Hamburger>
 
-      <Navigation>
+      <Navigation className={`${isActive ? "active" : ""}`}>
         <Ul>
           <Li>
             <A href="#home">Home</A>
@@ -49,7 +56,7 @@ const Header: React.FC = () => {
         </Ul>
       </Navigation>
 
-      <ActionButtons>
+      <ActionButtons className={`${isActive ? "active" : ""}`}>
         <Login>Login</Login>
         <GetInTouch>Get in Touch</GetInTouch>
       </ActionButtons>
