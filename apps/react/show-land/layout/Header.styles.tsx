@@ -27,6 +27,7 @@ export const StyledHeader = styled(Section)`
 
 export const Nav = styled.nav`
   font-weight: ${fontWeights.bold};
+  font-size: ${fontSizes.sm};
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -116,7 +117,7 @@ export const HeroTag = styled.span`
 export const HeroHeading = styled(Heading)`
   width: 60%;
   ${generateMediaQuery(
-    "mobile",
+    "laptop",
     css`
       width: auto;
     `
@@ -133,8 +134,7 @@ export const MiniGallery = styled.div`
   gap: ${spaces[4]};
   align-items: stretch;
   margin-bottom: -8rem;
-  height: 50vh;
-  width: 70%;
+  height: 60vh;
   ${generateMediaQuery(
     "laptop",
     css`
