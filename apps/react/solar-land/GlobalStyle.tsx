@@ -49,6 +49,7 @@ const GlobalStyle = createGlobalStyle`
           max-width: 1536px;
         }
     }
+
 `;
 
 export default GlobalStyle;
