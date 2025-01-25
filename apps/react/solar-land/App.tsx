@@ -1,7 +1,14 @@
-import React from "react";
+import * as React from "react";
+import Header from "./components/Header/Header";
+import GlobalStyle from "./GlobalStyle";
 
 const App: React.FC = () => {
-  return <div>Hello world! Solar Land this is new</div>;
+  return (
+    <>
+      <GlobalStyle />
+      <Header />
+    </>
+  );
 };
 
 export default App;
