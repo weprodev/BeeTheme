@@ -2,6 +2,7 @@ import * as React from "react";
 import Header from "./components/Header/Header";
 import GlobalStyle from "./GlobalStyle";
 import Main from "./components/main/Main";
+import Footer from "./components/Footer/Footer";
 
 const App: React.FC = () => {
   return (
@@ -9,6 +10,7 @@ const App: React.FC = () => {
       <GlobalStyle />
       <Header />
       <Main />
+      <Footer />
     </>
   );
 };
