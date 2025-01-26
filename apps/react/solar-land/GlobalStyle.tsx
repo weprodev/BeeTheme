@@ -18,11 +18,18 @@ const GlobalStyle = createGlobalStyle`
         \*------------------------------------*/
         --primaryFontFamily: "Quicksand";
     
-    }
+      }
 
     body {
       font-family: sans-serif;
       font-weight: ${fontWeights.medium};
+      font-optical-sizing: auto;
+      font-style: normal;
+    }
+
+    .quicksand-bold {
+      font-family: "Quicksand", sans-serif;
+      font-weight: 700;
       font-optical-sizing: auto;
       font-style: normal;
     }
