@@ -5,18 +5,37 @@ import { fontSizes, fontWeights } from "../../shared/styleVariables";
 const variations = {
   primary: css`
     color: var(--color-white);
-    font-weight: ${fontWeights.semiBold};
-    line-height: 1.4;
+  `,
+  secondary: css`
+    color: transparent;
+    background-image: var(--gradient-secondary);
+    -webkit-background-clip: text;
+    background-clip: text;
   `,
 };
 
 const Heading = styled.h1<{ variation?: keyof typeof variations }>`
+  line-height: 1.4;
+  font-weight: ${fontWeights.bold};
+
   ${(props) => variations[props.variation || "primary"]}
 
   ${(props) =>
     props.as === "h1" &&
     css`
-      font-size: ${fontSizes.xl7};
+      font-size: ${fontSizes.xl6};
+    `}
+
+    ${(props) =>
+    props.as === "h2" &&
+    css`
+      font-size: ${fontSizes.xl5};
+    `}
+
+    ${(props) =>
+    props.as === "h3" &&
+    css`
+      font-size: 2.5rem;
     `}
 `;
 
