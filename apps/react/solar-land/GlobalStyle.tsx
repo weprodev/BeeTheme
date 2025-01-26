@@ -11,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
         --secondary-color: #8d959d;
         --dark-color: #1e1e1e;
         --light-color: #f2f4f4;
+        --white-color: #fff
 
         /*------------------------------------*\
             #FONTS
