@@ -7,7 +7,7 @@ import {
   spaces,
 } from "../../../shared/styleVariables";
 
-export const StyleHeader = styled.header`
+export const HeaderList = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;

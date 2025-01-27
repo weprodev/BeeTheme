@@ -12,13 +12,13 @@ import {
   Logo,
   Navigation,
   Span,
-  StyleHeader,
+  HeaderList,
   Ul,
 } from "./Header.Styles";
 
 const Header: React.FC = () => {
   return (
-    <StyleHeader>
+    <HeaderList className="container">
       <Logo>
         <Img src={solarlandLogo} alt="SolarLand Logo" />
       </Logo>
@@ -53,7 +53,7 @@ const Header: React.FC = () => {
         <Login>Login</Login>
         <GetInTouch>Get in Touch</GetInTouch>
       </ActionButtons>
-    </StyleHeader>
+    </HeaderList>
   );
 };
 
