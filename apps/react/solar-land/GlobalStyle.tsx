@@ -38,19 +38,19 @@ const GlobalStyle = createGlobalStyle`
       width: 100%;
 
         @media (min-width: 640px) {
-          max-width: 640px;
+          max-width: 630px;
         }
 
         @media (min-width: 768px) {
-          max-width: 768px;
+          max-width: 758px;
         }
 
         @media (min-width: 1024px) {
-          max-width: 1024px;
+          max-width: 1014px;
         }
 
         @media (min-width: 1280px) {
-          max-width: 1280px;
+          max-width: 1260px;
         }
 
         @media (min-width: 1536px) {
