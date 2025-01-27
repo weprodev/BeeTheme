@@ -28,7 +28,7 @@ export const HeroStyle = styled.section`
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.3);
+    background: var(--shadow-mist);
     z-index: 0;
     border-radius: ${borderRadius.xl3};
   }
@@ -74,7 +74,7 @@ export const Tagline = styled.div`
   font-size: ${fontSizes.lg};
   font-weight: ${fontWeights.medium};
   margin-bottom: ${spaces[2]};
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--misty-white);
 `;
 
 export const Title = styled.h1`
@@ -124,7 +124,7 @@ export const GetInTouch = styled.button`
   transition: none;
 
   &:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--soft-whisper-white);
   }
 `;
 
@@ -149,7 +149,7 @@ export const OurServices = styled.button`
   transition: none;
 
   &:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--soft-whisper-white);
   }
 `;
 
@@ -176,7 +176,7 @@ export const RecentProject = styled.div`
 `;
 
 export const RecentProjectItem = styled.div`
-  background-color: rgba(255, 255, 255, 0.18);
+  background-color: var(--ethereal-white);
   backdrop-filter: blur(5px);
   padding: ${spaces[2]};
   border-radius: ${borderRadius.xl2};
@@ -222,7 +222,7 @@ export const RecentProjectOptionsButton = styled.button`
   height: 2.625em;
 
   &:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--soft-whisper-white);
   }
 `;
 
@@ -242,7 +242,7 @@ export const RecentProjectButton = styled.button`
   cursor: pointer;
 
   &:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--soft-whisper-white);
   }
 `;
 
@@ -252,7 +252,7 @@ export const ArrowIcon = styled.svg`
 `;
 
 export const RecentProjectCaption = styled.div`
-  color: #fff;
+  color: var(--white-color);
   font-size: ${fontSizes.sm};
   text-align: center;
   margin-top: ${spaces[2]};
