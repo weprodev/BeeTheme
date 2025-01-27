@@ -19,8 +19,8 @@ import Logo6 from "../../../images/logo-6.png";
 
 const Customers: React.FC = () => {
   return (
-    <CustomersList>
-      <CustomersHeader className="container">
+    <CustomersList className="container">
+      <CustomersHeader>
         <CustomersTitle>
           Focusing on quality, <Span> we maintain customer trust</Span>
         </CustomersTitle>
