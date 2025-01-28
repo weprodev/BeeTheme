@@ -37,6 +37,12 @@ const Heading = styled.h1<{ variation?: keyof typeof variations }>`
     css`
       font-size: 2.5rem;
     `}
+
+    ${(props) =>
+    props.as === "h5" &&
+    css`
+      font-size: ${fontSizes.xl2};
+    `}
 `;
 
 export default Heading;
