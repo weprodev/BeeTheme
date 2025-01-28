@@ -1,22 +1,98 @@
-import styled from "styled-components";
+import { useState } from "react";
+import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import Section from "./Section";
-import TopNav from "../components/TopNav";
-import Hero from "../components/Hero";
-
-const StyledHeader = styled(Section)`
-  background-image: var(--gradient-primary);
-  display: flex;
-  flex-direction: column;
-  height: 100dvh;
-  overflow: hidden;
-`;
+import {
+  NavCloseButton,
+  Hero,
+  HeroHeading,
+  HeroTextContainer,
+  MiniGalleryImg,
+  Logo,
+  MiniGallery,
+  NavLink,
+  NavLinks,
+  StyledHeader,
+  HeroTag,
+  NavButtonToggle,
+  Nav,
+} from "./Header.styles";
+import Button from "../components/Button";
 
 const Header: React.FC = () => {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const closeNav = () => setIsNavOpen(false);
+  const openNav = () => setIsNavOpen(true);
+
   return (
     <StyledHeader as="header">
-      <TopNav />
-      <Hero />
+      <Nav>
+        <Logo>WeProDev</Logo>
+
+        <NavLinks isOpen={isNavOpen}>
+          <NavCloseButton onClick={closeNav}>
+            <FontAwesomeIcon
+              icon={faClose}
+              size="3x"
+              color="var(--color-grey-dark-3)"
+            ></FontAwesomeIcon>
+          </NavCloseButton>
+
+          <NavLink to="">Demos</NavLink>
+          <NavLink to="">Mobile view</NavLink>
+          <NavLink to="">Features</NavLink>
+          <NavLink to="">Help & Support</NavLink>
+          <Button>Purchase now</Button>
+        </NavLinks>
+
+        <NavButtonToggle onClick={openNav}>
+          <FontAwesomeIcon
+            icon={faBars}
+            size="3x"
+            color="var(--color-grey-dark-3)"
+          />
+        </NavButtonToggle>
+      </Nav>
+
+      <Hero>
+        <HeroTextContainer>
+          <HeroTag>ultimate wordpress solurton</HeroTag>
+          <HeroHeading as="h1">Top-Notch Beautiful Design</HeroHeading>
+          <Button>Go to your store</Button>
+        </HeroTextContainer>
+
+        <MiniGallery>
+          <MiniGalleryImg
+            src="https://placehold.co/600x400/png"
+            alt="Placeholder Image"
+          />
+          <MiniGalleryImg
+            src="https://placehold.co/600x400/png"
+            alt="Placeholder Image"
+          />
+          <MiniGalleryImg
+            src="https://placehold.co/600x400/png"
+            alt="Placeholder Image"
+          />
+          <MiniGalleryImg
+            src="https://placehold.co/600x400/png"
+            alt="Placeholder Image"
+          />
+          <MiniGalleryImg
+            src="https://placehold.co/600x400/png"
+            alt="Placeholder Image"
+          />
+          <MiniGalleryImg
+            src="https://placehold.co/600x400/png"
+            alt="Placeholder Image"
+          />
+          <MiniGalleryImg
+            src="https://placehold.co/600x400/png"
+            alt="Placeholder Image"
+          />
+        </MiniGallery>
+      </Hero>
     </StyledHeader>
   );
 };

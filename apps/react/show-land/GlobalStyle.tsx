@@ -34,6 +34,7 @@ const GlobalStyle = createGlobalStyle`
         --color-grey-dark-3: #333;
 
         --gradient-primary: linear-gradient(to right, var(--color-secondary), var(--color-primary));
+        --gradient-secondary: linear-gradient(to right, var(--color-eighth), var(--color-seventh));
 
         /*------------------------------------*\
             #FONTS
@@ -48,6 +49,7 @@ const GlobalStyle = createGlobalStyle`
         ${generateMediaQuery("led", "font-size: 110%")}
         ${generateMediaQuery("led4k", "font-size: 130%")}
         ${generateMediaQuery("laptop", "font-size: 80%")}
+        ${generateMediaQuery("mobile", "font-size: 90%")}
     }
 
     body{
