@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Customers from "./Customers/Customers";
 import Features from "./Features/Features";
 import Trusted from "./Trusted/Trusted";
+import CaseStudy from "./CaseStudy/CaseStudy";
 
 export const MainStyle = styled.main``;
 
@@ -14,6 +15,7 @@ const Main: React.FC = () => {
       <Customers />
       <Features />
       <Trusted />
+      <CaseStudy />
     </MainStyle>
   );
 };
