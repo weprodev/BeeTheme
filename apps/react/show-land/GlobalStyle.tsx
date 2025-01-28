@@ -59,6 +59,9 @@ const GlobalStyle = createGlobalStyle`
         color: var(--color-white); 
     }
 
+    svg{
+        width: auto;
+    }
 
 `;
 

@@ -4,6 +4,7 @@ import GlobalStyle from "./GlobalStyle";
 import Header from "./layout/Header";
 import SuperFast from "./layout/SuperFast";
 import HomePages from "./layout/HomePages";
+import PageBuilder from "./layout/PageBuilder";
 
 const App: React.FC = () => {
   return (
@@ -11,7 +12,8 @@ const App: React.FC = () => {
       <GlobalStyle />
       <Header />
       <SuperFast />
-      <HomePages/>
+      <HomePages />
+      <PageBuilder />
     </>
   );
 };
