@@ -9,7 +9,7 @@ const variations = {
 };
 
 const Paragraph = styled.p<{ variation?: keyof typeof variations }>`
-  font-weight: ${fontWeights.semiBold};
+  font-weight: ${fontWeights.medium};
   font-size: ${fontSizes.lg};
   ${(props) => variations[props.variation || "primary"]}
 `;

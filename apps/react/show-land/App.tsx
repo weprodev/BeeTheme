@@ -5,6 +5,7 @@ import Header from "./layout/Header";
 import SuperFast from "./layout/SuperFast";
 import HomePages from "./layout/HomePages";
 import PageBuilder from "./layout/PageBuilder";
+import Benefits from "./layout/Benefits";
 
 const App: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const App: React.FC = () => {
       <SuperFast />
       <HomePages />
       <PageBuilder />
+      <Benefits />
     </>
   );
 };
