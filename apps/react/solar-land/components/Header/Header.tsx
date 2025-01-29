@@ -10,19 +10,20 @@ import {
   Login,
   Navigation,
   Span,
-  StyleHeader,
+  HeaderList,
   Ul,
-} from "./Header.styles";
+  Logo,
+} from "./Header.Styles";
 
 const Header: React.FC = () => {  const [isActive, setIsActive] = useState(false);
   const toggleHamburger = () => {
     setIsActive((prev) => !prev);
   };
   return (
-    <StyleHeader>
-      <div>
+    <HeaderList className="container">
+      <Logo>
         <Img src={solarlandLogo} alt="SolarLand Logo" />
-      </div>
+      </Logo>
 
       <Hamburger
         aria-label="Toggle navigation"
@@ -58,7 +59,7 @@ const Header: React.FC = () => {  const [isActive, setIsActive] = useState(false
         <Login>Login</Login>
         <GetInTouch>Get in Touch</GetInTouch>
       </ActionButtons>
-    </StyleHeader>
+    </HeaderList>
   );
 };
 

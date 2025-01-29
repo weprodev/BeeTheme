@@ -12,6 +12,10 @@ const GlobalStyle = createGlobalStyle`
         --dark-color: #1e1e1e;
         --light-color: #f2f4f4;
         --white-color: #fff
+        --misty-white: rgba(255, 255, 255, 0.7)
+        --soft-whisper-white: rgba(255, 255, 255, 0.1);
+        --ethereal-white: rgba(255, 255, 255, 0.18);
+        --shadow-mist: rgba(0, 0, 0, 0.3);
 
         /*------------------------------------*\
             #FONTS
@@ -38,19 +42,19 @@ const GlobalStyle = createGlobalStyle`
       width: 100%;
 
         @media (min-width: 640px) {
-          max-width: 640px;
+          max-width: 630px;
         }
 
         @media (min-width: 768px) {
-          max-width: 768px;
+          max-width: 758px;
         }
 
         @media (min-width: 1024px) {
-          max-width: 1024px;
+          max-width: 1014px;
         }
 
         @media (min-width: 1280px) {
-          max-width: 1280px;
+          max-width: 1260px;
         }
 
         @media (min-width: 1536px) {

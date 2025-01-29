@@ -96,8 +96,8 @@ export const FooterTopDescriptionP = styled.p`
 `;
 
 export const Button = styled.button`
-  background: #f2f4f4;
-  color: #1e1e1e;
+  background: var(--light-color);
+  color: var(--dark-color);
   border-radius: 9999px;
   border: none;
   padding: 1em;
@@ -108,7 +108,7 @@ export const Button = styled.button`
   cursor: pointer;
 
   &:hover {
-    background-color: #8d959d;
+    background-color: var(--secondary-color);
   }
 `;
 

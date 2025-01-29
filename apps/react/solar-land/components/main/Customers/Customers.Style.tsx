@@ -1,5 +1,9 @@
 import generateMediaQuery from "../../../../shared/generateMediaQuery";
-import { borderRadius, fontSizes, spaces } from "../../../../shared/styleVariables";
+import {
+  borderRadius,
+  fontSizes,
+  spaces,
+} from "../../../../shared/styleVariables";
 import styled, { css } from "styled-components";
 
 export const CustomersList = styled.section`
@@ -71,6 +75,11 @@ export const CustomersIcon = styled.div`
   transition: all 0.3s ease-in;
   box-sizing: border-box;
 
+  &:hover {
+    background-color: var(--white-color);
+    border: 2px solid var(--light-color);
+  }
+
   ${generateMediaQuery(
     "mobile",
     css`
@@ -85,9 +94,4 @@ export const Img = styled.img`
   top: 25%;
   position: relative;
   padding: ${spaces[4]};
-
-  &:hover {
-    background-color: var(--white-color);
-    border: 2px solid var(--light-color);
-  }
 `;

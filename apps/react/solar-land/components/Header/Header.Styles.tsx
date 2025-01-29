@@ -7,12 +7,12 @@ import {
   spaces,
 } from "../../../shared/styleVariables";
 
-export const StyleHeader = styled.header`
+export const HeaderList = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: ${spaces[4]} ${spaces[8]};
-  background-color: #fff;
+  background-color: var(--white-color);
   margin: 0 auto;
 
   ${generateMediaQuery(
@@ -42,7 +42,7 @@ export const Navigation = styled.nav`
         top: 4em;
         left: 0;
         right: 0;
-        background-color: #fff;
+        background-color: var(--white-color);
         padding: ${spaces[4]};
         padding-bottom: ${spaces[16]};
         width: 100%;
