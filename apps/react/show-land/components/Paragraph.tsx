@@ -6,6 +6,9 @@ const variations = {
   primary: css`
     color: var(--color-white);
   `,
+  secondary: css`
+    color: var(--color-fifteenth);
+  `,
 };
 
 const Paragraph = styled.p<{ variation?: keyof typeof variations }>`
