@@ -14,7 +14,8 @@ import {
   Ul,
 } from "./Header.styles";
 
-const Header: React.FC = () => {  const [isActive, setIsActive] = useState(false);
+const Header: React.FC = () => {
+  const [isActive, setIsActive] = useState(false);
   const toggleHamburger = () => {
     setIsActive((prev) => !prev);
   };
