@@ -1,17 +1,17 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheckCircle, faList } from "@fortawesome/free-solid-svg-icons";
+import { faList } from "@fortawesome/free-solid-svg-icons";
 
 import Heading from "../components/Heading";
 import {
   Elementor,
   ElementorIcon,
-  Feature,
   FeaturesContainer,
   Info,
   StyledPageBuilder,
 } from "./PageBuilder.styles";
 import Paragraph from "../components/Paragraph";
 import Button from "../components/Button";
+import FeatureTag from "../components/FeatureTag";
 
 const PageBuilder: React.FC = () => {
   return (
@@ -35,22 +35,10 @@ const PageBuilder: React.FC = () => {
         </Paragraph>
 
         <FeaturesContainer>
-          <Feature>
-            <FontAwesomeIcon icon={faCheckCircle} />
-            Drag And Drop Editor
-          </Feature>
-          <Feature>
-            <FontAwesomeIcon icon={faCheckCircle} />
-            Great options
-          </Feature>
-          <Feature>
-            <FontAwesomeIcon icon={faCheckCircle} />
-            100+ Custom Elements
-          </Feature>
-          <Feature>
-            <FontAwesomeIcon icon={faCheckCircle} />
-            Coding Required
-          </Feature>
+          <FeatureTag>Drag And Drop Editor</FeatureTag>
+          <FeatureTag>Great options</FeatureTag>
+          <FeatureTag>100+ Custom Elements</FeatureTag>
+          <FeatureTag>Coding Required</FeatureTag>
         </FeaturesContainer>
 
         <Button style={{ alignSelf: "flex-start" }}>View demo</Button>
