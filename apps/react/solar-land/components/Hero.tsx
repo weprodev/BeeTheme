@@ -5,7 +5,7 @@ import {
   ArrowIcon,
   GetInTouch,
   HeroContent,
-  HeroStyle,
+  HeroList,
   Img,
   OurServices,
   RecentProject,
@@ -20,8 +20,8 @@ import {
   StatValue,
   Tagline,
   Title,
-} from "./Hero.Style";
-import ImgSrc from "../../../images/main-hero.jpg";
+} from "../layout/Hero.Style";
+import ImgSrc from "../images/main-hero.jpg";
 
 interface SvgPathProps {
   xmlns?: string;
@@ -51,7 +51,7 @@ const SvgPath: React.FC<SvgPathProps> = ({
 
 const Hero: React.FC = () => {
   return (
-    <HeroStyle className="container">
+    <HeroList className="container">
       <HeroContent>
         <Tagline>#1 Energy provider in the world</Tagline>
         <Title>New Energy for the Future</Title>
@@ -116,7 +116,7 @@ const Hero: React.FC = () => {
           <StatLabel>Employees work in all parts of the world</StatLabel>
         </StatItem>
       </Statistics>
-    </HeroStyle>
+    </HeroList>
   );
 };
 

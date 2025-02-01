@@ -13,9 +13,9 @@ import {
   TrustedList,
   TrustedMain,
   TrustedTitle,
-} from "./Trusted.Style";
+} from "../layout/Trusted.Style";
 
-import ImgSrc from "../../../images/trusted.jpg";
+import ImgSrc from "../images/trusted.jpg";
 
 interface SvgPathProps {
   xmlns?: string;

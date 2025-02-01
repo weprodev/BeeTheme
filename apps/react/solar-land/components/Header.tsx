@@ -1,5 +1,5 @@
 import { useState } from "react";
-import solarlandLogo from "../../images/solarland-logo.png";
+import solarlandLogo from "../images/solarland-logo.png";
 
 import {
   A,
@@ -13,9 +13,10 @@ import {
   HeaderList,
   Ul,
   Logo,
-} from "./Header.Styles";
+} from "../layout/Header.Styles";
 
-const Header: React.FC = () => {  const [isActive, setIsActive] = useState(false);
+const Header: React.FC = () => {
+  const [isActive, setIsActive] = useState(false);
   const toggleHamburger = () => {
     setIsActive((prev) => !prev);
   };

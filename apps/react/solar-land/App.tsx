@@ -1,15 +1,27 @@
 import * as React from "react";
-import Header from "./components/Header/Header";
 import GlobalStyle from "./GlobalStyle";
-import Main from "./components/main/Main";
-import Footer from "./components/Footer/Footer";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import styled from "styled-components";
+import Hero from "./components/Hero";
+import Customers from "./components/Customers";
+import Features from "./components/Features";
+import Trusted from "./components/Trusted";
+import CaseStudy from "./components/CaseStudy";
+export const Main = styled.main``;
 
 const App: React.FC = () => {
   return (
     <>
       <GlobalStyle />
       <Header />
-      <Main />
+      <Main>
+        <Hero />
+        <Customers />
+        <Features />
+        <Trusted />
+        <CaseStudy />
+      </Main>
       <Footer />
     </>
   );
