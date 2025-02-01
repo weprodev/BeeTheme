@@ -56,19 +56,14 @@ export const FeaturesContainer = styled.div`
   flex-wrap: wrap;
   gap: ${spaces[4]};
   justify-content: space-between;
-`;
-export const Feature = styled.span`
-  display: flex;
-  flex-grow: 1;
-  align-items: center;
-  border: 0.1rem solid var(--color-eleventh);
-  gap: ${spaces[2]};
-  padding: ${spaces[2]} ${spaces[4]};
-  border-radius: ${borderRadius.full};
-  ${generateMediaQuery(
-    "led",
-    css`
-      width: 45%;
-    `
-  )}
+
+  & > * {
+    flex-grow: 1;
+    ${generateMediaQuery(
+      "led",
+      css`
+        width: 45%;
+      `
+    )}
+  }
 `;
