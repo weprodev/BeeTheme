@@ -29,6 +29,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Header: React.FC = () => {
   const [IsOpen, SetIsOpen] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
+
   return (
     <>
       <StyleHeader>
@@ -40,10 +41,7 @@ const Header: React.FC = () => {
                 <FontAwesomeIcon icon={faGlobe} size="lg" />
               </IconLanguage>
               Language
-              <IconDown
-                onMouseEnter={() => SetIsOpen(true)}
-                onMouseDownCapture={() => SetIsOpen(false)}
-              >
+              <IconDown onClick={() => SetIsOpen((o) => !o)}>
                 <FontAwesomeIcon icon={faChevronDown} size="sm" />
               </IconDown>
             </LanguageTitle>
@@ -67,13 +65,12 @@ const Header: React.FC = () => {
             </ListInfo>
           </Language>
           <SearchBox>
-            {isFocused && (
-              <Search
-                type={"text"}
-                placeholder="Search..."
-                onBlur={() => setIsFocused(false)}
-              />
-            )}
+            <Search
+              type={"text"}
+              placeholder="Search..."
+              onBlur={() => setIsFocused(false)}
+              isOpen={isFocused}
+            />
             <IconSearch onClick={() => setIsFocused(!isFocused)}>
               <FontAwesomeIcon
                 icon={faMagnifyingGlass}

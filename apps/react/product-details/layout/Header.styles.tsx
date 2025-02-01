@@ -113,9 +113,9 @@ export const SearchBox = styled.div`
     `
   )}
 `;
-export const Search = styled.input`
-  transition: 300s;
-  width: 10rem;
+export const Search = styled.input<{ isOpen: boolean }>`
+  transition: 300ms;
+  width: ${(props) => (props.isOpen ? "10rem" : 0)};
   color: var(--color-white);
   border: none;
   background-color: transparent;
@@ -183,7 +183,7 @@ export const ButtonFree = styled.button`
   color: var(--color-fourth);
   margin-left: ${spaces[1]};
   ${generateMediaQuery(
-    "mobile",
+    "retinaMobile",
     css`
       display: none;
     `
