@@ -36,6 +36,7 @@ const GlobalStyle = createGlobalStyle`
         --gradient-primary: linear-gradient(to right, var(--color-secondary), var(--color-primary));
         --gradient-secondary: linear-gradient(to right, var(--color-eighth), var(--color-seventh));
         --gradient-tertiary : linear-gradient(to right, var(--color-tertiary), var(--color-fourteenth));    
+        --gradient-fourth :  linear-gradient(to right, var(--color-white), var(--color-seventh));;
 
         /*------------------------------------*\
             #FONTS
