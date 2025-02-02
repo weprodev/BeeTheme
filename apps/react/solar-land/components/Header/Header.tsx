@@ -15,7 +15,8 @@ import {
   Logo,
 } from "./Header.Styles";
 
-const Header: React.FC = () => {  const [isActive, setIsActive] = useState(false);
+const Header: React.FC = () => {
+  const [isActive, setIsActive] = useState(false);
   const toggleHamburger = () => {
     setIsActive((prev) => !prev);
   };
