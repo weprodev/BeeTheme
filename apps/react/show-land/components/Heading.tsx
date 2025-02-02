@@ -39,10 +39,19 @@ const Heading = styled.h1<{ variation?: keyof typeof variations }>`
     `}
 
     ${(props) =>
+    props.as === "h4" &&
+    css`
+      font-size: ${fontSizes.xl3};
+    `}
+
+
+    ${(props) =>
     props.as === "h5" &&
     css`
       font-size: ${fontSizes.xl2};
     `}
+
+  
 
     ${(props) =>
     props.as === "h6" &&
