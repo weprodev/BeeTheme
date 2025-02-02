@@ -13,7 +13,7 @@ import {
   TrustedList,
   TrustedMain,
   TrustedTitle,
-} from "../layout/Trusted.Style";
+} from "./Trusted.Style";
 
 import ImgSrc from "../images/trusted.jpg";
 

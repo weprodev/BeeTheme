@@ -8,7 +8,7 @@ import {
   FeaturesTitle,
   Span,
   Svg,
-} from "../layout/Features.Style";
+} from "./Features.Style";
 
 interface SvgPathProps {
   xmlns?: string;

@@ -22,10 +22,10 @@ import {
   NavigationA,
   NavigationUl,
   Social,
-} from "../layout/Footer.Style";
+} from "./Footer.Style";
 
 import ImgSrc from "../images/solarland-logo.png";
-import { Li } from "../layout/Header.Styles";
+import { Li } from "./Header.Styles";
 
 interface SvgPathProps {
   xmlns?: string;

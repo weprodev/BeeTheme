@@ -20,7 +20,7 @@ import {
   StatValue,
   Tagline,
   Title,
-} from "../layout/Hero.Style";
+} from "./Hero.Style";
 import ImgSrc from "../images/main-hero.jpg";
 
 interface SvgPathProps {

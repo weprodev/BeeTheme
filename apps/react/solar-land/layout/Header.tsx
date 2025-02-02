@@ -13,7 +13,7 @@ import {
   HeaderList,
   Ul,
   Logo,
-} from "../layout/Header.Styles";
+} from "./Header.Styles";
 
 const Header: React.FC = () => {
   const [isActive, setIsActive] = useState(false);

@@ -8,7 +8,7 @@ import {
   CustomersTitle,
   Img,
   Span,
-} from "../layout/Customers.Style";
+} from "./Customers.Style";
 
 import WeprodevLogo from "../images/weprodev-logo.png";
 import Logo2 from "../images/logo-2.png";

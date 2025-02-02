@@ -12,7 +12,7 @@ import {
   CaseStudyTitle,
   Img,
   Span,
-} from "../layout/CaseStudy.Style";
+} from "./CaseStudy.Style";
 
 import ImgSrc from "../images/case-study-1.jpg";
 
