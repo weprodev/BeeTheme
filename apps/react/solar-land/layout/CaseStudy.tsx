@@ -14,7 +14,7 @@ import {
   Span,
 } from "./CaseStudy.Style";
 
-import ImgSrc from "../../../images/case-study-1.jpg";
+import ImgSrc from "../images/case-study-1.jpg";
 
 const CaseStudy: React.FC = () => {
   return (

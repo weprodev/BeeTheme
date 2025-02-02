@@ -1,5 +1,5 @@
 import { useState } from "react";
-import solarlandLogo from "../../images/solarland-logo.png";
+import solarlandLogo from "../images/solarland-logo.png";
 
 import {
   A,

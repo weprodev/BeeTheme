@@ -1,9 +1,5 @@
-import generateMediaQuery from "../../../../shared/generateMediaQuery";
-import {
-  borderRadius,
-  fontSizes,
-  spaces,
-} from "../../../../shared/styleVariables";
+import generateMediaQuery from "../../shared/generateMediaQuery";
+import { borderRadius, fontSizes, spaces } from "../../shared/styleVariables";
 import styled, { css } from "styled-components";
 
 export const FeaturesList = styled.section`

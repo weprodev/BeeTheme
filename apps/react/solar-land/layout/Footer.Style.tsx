@@ -1,10 +1,10 @@
-import generateMediaQuery from "../../../shared/generateMediaQuery";
+import generateMediaQuery from "../../shared/generateMediaQuery";
 import {
   borderRadius,
   fontSizes,
   fontWeights,
   spaces,
-} from "../../../shared/styleVariables";
+} from "../../shared/styleVariables";
 import styled, { css } from "styled-components";
 
 export const FooterList = styled.footer`

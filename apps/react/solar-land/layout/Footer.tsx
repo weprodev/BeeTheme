@@ -24,8 +24,8 @@ import {
   Social,
 } from "./Footer.Style";
 
-import ImgSrc from "../../images/solarland-logo.png";
-import { Li } from "../Header/Header.Styles";
+import ImgSrc from "../images/solarland-logo.png";
+import { Li } from "./Header.Styles";
 
 interface SvgPathProps {
   xmlns?: string;

@@ -1,14 +1,14 @@
 import styled, { css } from "styled-components";
-import generateMediaQuery from "../../../../shared/generateMediaQuery";
+import generateMediaQuery from "../../shared/generateMediaQuery";
 import {
   borderRadius,
   fontSizes,
   fontWeights,
   spaces,
-} from "../../../../shared/styleVariables";
-import ImgSrc from "../../../images/main-hero.jpg";
+} from "../../shared/styleVariables";
+import ImgSrc from "../images/main-hero.jpg";
 
-export const HeroStyle = styled.section`
+export const HeroList = styled.section`
   position: relative;
   display: flex;
   align-items: center;

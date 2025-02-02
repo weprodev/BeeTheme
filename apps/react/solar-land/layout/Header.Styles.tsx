@@ -1,11 +1,11 @@
 import styled, { css } from "styled-components";
-import generateMediaQuery from "../../../shared/generateMediaQuery";
+import generateMediaQuery from "../../shared/generateMediaQuery";
 import {
   borderRadius,
   fontSizes,
   fontWeights,
   spaces,
-} from "../../../shared/styleVariables";
+} from "../../shared/styleVariables";
 
 export const HeaderList = styled.header`
   display: flex;
