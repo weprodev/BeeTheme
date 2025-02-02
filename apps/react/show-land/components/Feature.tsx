@@ -1,4 +1,9 @@
-import { borderRadius, spaces } from "../../shared/styleVariables";
+import {
+  borderRadius,
+  fontSizes,
+  fontWeights,
+  spaces,
+} from "../../shared/styleVariables";
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
@@ -23,13 +28,24 @@ const Circle = styled.span`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: ${spaces[6]};
+  padding: ${spaces[4]};
 `;
 
 const Info = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${spaces[2]};
+`;
+
+export const FeatureLink = styled.a`
+  border-bottom: 1px solid var(--color-white);
+  cursor: pointer;
+  align-self: flex-start;
+  font-size: ${fontSizes.sm};
+  font-weight: ${fontWeights.bold};
+  &:hover {
+    border-bottom: 1px solid transparent;
+  }
 `;
 
 const Feature: React.FC<FeatureProps> = ({
@@ -43,7 +59,7 @@ const Feature: React.FC<FeatureProps> = ({
         <FontAwesomeIcon
           color="var(--color-white)"
           icon={icon}
-          style={{ width: "2.5rem", height: "2.5rem" }}
+          style={{ width: "2rem", height: "2rem" }}
         />
       </Circle>
       <Info>{children}</Info>

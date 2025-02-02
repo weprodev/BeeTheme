@@ -11,9 +11,12 @@ const variations = {
   `,
 };
 
-const Paragraph = styled.p<{ variation?: keyof typeof variations }>`
+const Paragraph = styled.p<{
+  variation?: keyof typeof variations;
+  fontSize?: string;
+}>`
   font-weight: ${fontWeights.medium};
-  font-size: ${fontSizes.lg};
+  font-size: ${(props) => props.fontSize || fontSizes.lg};
   ${(props) => variations[props.variation || "primary"]}
 `;
 
