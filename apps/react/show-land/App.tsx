@@ -10,6 +10,7 @@ import Features from "./layout/Features";
 import PowerfulFeatures from "./layout/PowerfulFeatures";
 import HelpUsers from "./layout/HelpUsers";
 import Trusted from "./layout/Trusted";
+import Footer from "./layout/Footer";
 
 const App: React.FC = () => {
   return (
@@ -23,7 +24,8 @@ const App: React.FC = () => {
       <Features />
       <PowerfulFeatures />
       <HelpUsers />
-      <Trusted></Trusted>
+      <Trusted />
+      <Footer />
     </>
   );
 };
