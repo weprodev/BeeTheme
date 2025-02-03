@@ -44,6 +44,19 @@ font-family: var(--primary-font-family);
 color: var(--color-white) ;
 }
     
+::-webkit-scrollbar {
+  width: 0.4rem;
+  height: 0.4rem;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-secondary);
+  border-radius: 0.75rem;
+  &:hover {
+    background: #ff5f57d0
+  }
+}
 
 `;
 export default GlobalStyle;
