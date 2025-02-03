@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
       #d65db1,
       #ff6f91,
       #ff9671,
-      #ffc75f;
+      #ffc75f
   );
   --color-secondary: #ff5e57;
   --color-tertiary:#59468c;
