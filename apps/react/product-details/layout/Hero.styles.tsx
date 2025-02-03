@@ -8,7 +8,6 @@ import {
 } from "../../shared/styleVariables";
 export const Div = styled.div`
   background-image: var(--color-primary);
-  height: 144vh;
   background-size: 500%;
   transition: animation 4s;
   animation: background-movement 5s infinite alternate;
