@@ -5,6 +5,8 @@ import Hero from "./layout/Hero";
 import Built from "./layout/Built";
 import Create from "./layout/Create";
 import Elementor from "./layout/Elementor";
+import Phenomenon from "./layout/Phenomenon";
+import Resources from "./layout/Resources";
 const App: React.FC = () => {
   return (
     <>
@@ -14,6 +16,8 @@ const App: React.FC = () => {
       <Built />
       <Create />
       <Elementor />
+      <Phenomenon />
+      <Resources />
     </>
   );
 };
