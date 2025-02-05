@@ -18,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
   --color-fourth:#ecf0f1;
   --color-fifth:#2fdc81;
   --color-sixth: rgb(0 0 0 / 0.05);
-  --color-seventh: rgba(0, 0, 0, 0.5);;
+  --color-seventh: rgba(0, 0, 0, 0.5);
   --color-white: #fff;
   --color-black: #000;
 
@@ -39,6 +39,7 @@ const GlobalStyle = createGlobalStyle`
 \*------------------------------------*/
 
 --shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+--shadow-secondary: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
 }
 body{
 font-family: var(--primary-font-family);
