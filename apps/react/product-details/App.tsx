@@ -7,6 +7,7 @@ import Create from "./layout/Create";
 import Elementor from "./layout/Elementor";
 import Phenomenon from "./layout/Phenomenon";
 import Resources from "./layout/Resources";
+import GetStarted from "./layout/GetStarted";
 const App: React.FC = () => {
   return (
     <>
@@ -18,6 +19,7 @@ const App: React.FC = () => {
       <Elementor />
       <Phenomenon />
       <Resources />
+      <GetStarted />
     </>
   );
 };
