@@ -19,6 +19,9 @@ const GlobalStyle = createGlobalStyle`
   --color-fifth:#2fdc81;
   --color-sixth: rgb(0 0 0 / 0.05);
   --color-seventh: rgba(0, 0, 0, 0.5);
+  --color-eighth:  #141414e6;
+  --color-tenth: #adb5bd;
+  --color-eleventh: #ff5f57a8 ;
   --color-white: #fff;
   --color-black: #000;
 
